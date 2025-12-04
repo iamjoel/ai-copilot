@@ -6,6 +6,7 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "tsx src/index.ts",
+    "s2": "tsx src/test.ts",
     "build": "tsc --noEmit"
   },
   "keywords": [],
@@ -16,7 +17,9 @@
     "@ai-sdk/openai": "^2.0.77",
     "ai": "^5.0.106",
     "cheerio": "^1.1.2",
-    "dotenv": "^17.2.3"
+    "dotenv": "^17.2.3",
+    "openai": "^6.9.1",
+    "undici": "^7.16.0"
   },
   "devDependencies": {
     "@types/node": "^24.10.1",

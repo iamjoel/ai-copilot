@@ -7,6 +7,7 @@
   "scripts": {
     "start": "tsx src/index.ts",
     "s2": "tsx src/test.ts",
+    "fetch": "tsx src/fetch-website.ts",
     "build": "tsc --noEmit"
   },
   "keywords": [],

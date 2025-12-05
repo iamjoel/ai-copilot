@@ -8,6 +8,8 @@
     "start": "tsx src/index.ts",
     "s2": "tsx src/test.ts",
     "fetch": "tsx src/fetch-website.ts",
+    "fetch-json": "tsx src/fetch-website-return-json.ts",
+    "qn": "tsx src/test-qiu.ts",
     "build": "tsc --noEmit"
   },
   "keywords": [],
@@ -16,6 +18,7 @@
   "dependencies": {
     "@ai-sdk/google": "^2.0.44",
     "@ai-sdk/openai": "^2.0.77",
+    "@ai-sdk/openai-compatible": "^1.0.28",
     "ai": "^5.0.106",
     "cheerio": "^1.1.2",
     "dotenv": "^17.2.3",

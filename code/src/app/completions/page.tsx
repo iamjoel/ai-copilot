@@ -10,7 +10,13 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
-import { Select } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 
 const modelOptions = [
@@ -86,17 +92,24 @@ export default function CompletionsPage() {
                 <Label htmlFor="model" className="text-slate-200">
                   模型
                 </Label>
-                <Select
-                  id="model"
-                  value={model}
-                  onChange={event => setModel(event.target.value)}
-                  className="bg-slate-950/60 text-white"
-                >
-                  {modelOptions.map(option => (
-                    <option key={option.value} value={option.value}>
-                      {option.label}
-                    </option>
-                  ))}
+                <Select value={model} onValueChange={setModel}>
+                  <SelectTrigger
+                    id="model"
+                    className="border-white/10 bg-slate-950/60 text-white"
+                  >
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent className="border-white/10 bg-slate-950/90 text-white backdrop-blur">
+                    {modelOptions.map(option => (
+                      <SelectItem
+                        key={option.value}
+                        value={option.value}
+                        className="cursor-pointer focus:bg-slate-800/60 focus:text-white"
+                      >
+                        {option.label}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
                 </Select>
               </div>
 

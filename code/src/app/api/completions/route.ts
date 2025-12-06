@@ -1,12 +1,7 @@
-import { createGoogleGenerativeAI } from "@ai-sdk/google";
-// import { createOpenAI } from "@ai-sdk/openai";
+import { getModel, type Provider } from "@/lib/model-factory";
 import { generateText } from "ai";
-// import '@/lib/add-proxy';
-// export const runtime = "edge";
 
-import { ProxyAgent, setGlobalDispatcher } from 'undici';
-
-type Provider = "google" | "openai";
+export const runtime = "nodejs"; // 'edge' runtime does not support undici yet
 
 const MODEL_MAP: Record<
   string,
@@ -28,11 +23,6 @@ const MODEL_MAP: Record<
 };
 
 export async function POST(req: Request) {
-  // const res = await fetch('https://ifconfig.me/ip');
-  // console.log(await res.text());
-
-  const proxy = new ProxyAgent('http://127.0.0.1:7890')
-  setGlobalDispatcher(proxy);
   try {
     const { prompt, model } = (await req.json()) as {
       prompt?: string;
@@ -49,47 +39,11 @@ export async function POST(req: Request) {
     }
 
     const target = MODEL_MAP[model];
-    if (!target) {
-      return new Response(
-        JSON.stringify({ error: "Unsupported model choice." }),
-        { status: 400, headers: { "Content-Type": "application/json" } },
-      );
-    }
-
-    if (target.provider === "google" && !process.env.GOOGLE_GENERATIVE_AI_API_KEY) {
-      return new Response(
-        JSON.stringify({
-          error:
-            "Missing GOOGLE_GENERATIVE_AI_API_KEY. Add it to your environment to call Gemini models.",
-        }),
-        { status: 400, headers: { "Content-Type": "application/json" } },
-      );
-    }
-
-    if (target.provider === "openai" && !process.env.OPENAI_API_KEY) {
-      return new Response(
-        JSON.stringify({
-          error:
-            "Missing OPENAI_API_KEY. Add it to your environment to call OpenAI models.",
-        }),
-        { status: 400, headers: { "Content-Type": "application/json" } },
-      );
-    }
-
-    // const modelClient =
-    //   target.provider === "google"
-    //     ? createGoogleGenerativeAI({
-    //       apiKey: process.env.GOOGLE_GENERATIVE_AI_API_KEY!,
-    //     })
-    //     : createOpenAI({ apiKey: process.env.OPENAI_API_KEY! });
-
-    const modelClient = createGoogleGenerativeAI({
-      apiKey: process.env.GOOGLE_GENERATIVE_AI_API_KEY!,
-    })
 
     const result = await generateText({
-      model: modelClient(target.model),
+      model: getModel(target.provider, target.model),
       prompt,
+      maxRetries: 1,
     });
     console.log("Completion result:", result);
 

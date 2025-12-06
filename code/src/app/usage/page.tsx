@@ -56,8 +56,20 @@ Output tokens: 56
 URL tokens: 14694
 Total tokens: 14796
 */
-const defaultPrompt = `Based on the document: https://en.wikipedia.org/wiki/Hawf_National_Reserve
-          Which year did the park get established? If find the answer, provide the original sentence or paragraph as well.`;
+const defaultPrompt = `You are an expert in extracting structured information from unstructured text.
+
+Only use the content from the given webpage. Do not rely on common knowledge, memory, or any other external sources.
+
+Document: https://en.wikipedia.org/wiki/Hawf_National_Reserve
+
+Task:
+Extract the year when the park was established (“Established” year).
+
+Requirements:
+- Return a single four-digit year.
+- If the webpage does not explicitly provide an establishment year, return -1.
+- Do not guess or infer information that is not directly stated in the document.
+`;
 
 export default function UsagePage() {
   const [prompt, setPrompt] = useState(defaultPrompt);
@@ -103,84 +115,65 @@ export default function UsagePage() {
   };
 
   return (
-    <main style={{ maxWidth: 720, margin: "2rem auto", padding: "0 1rem" }}>
-      <h1 style={{ fontSize: "1.75rem", marginBottom: "1rem" }}>
-        Gemini Flash Usage Demo
-      </h1>
-      <p style={{ marginBottom: "1.5rem", color: "#555" }}>
-        Submit a prompt to call <code>/api/usage</code> and view the model response,
-        response time, and usage details.
+    <main className="mx-auto max-w-3xl px-4 py-8 text-gray-100">
+      <h1 className="mb-3 text-3xl font-semibold text-white">Gemini Flash Usage Demo</h1>
+      <p className="mb-6 text-sm text-gray-300">
+        Submit a prompt to call{" "}
+        <code className="rounded bg-white/10 px-1.5 py-0.5 font-mono text-[0.95em] text-gray-100">/api/usage</code>{" "}
+        and view the model response, response time, and usage details.
       </p>
 
-      <form onSubmit={handleSubmit} style={{ display: "grid", gap: "0.75rem" }}>
+      <form onSubmit={handleSubmit} className="grid gap-3">
         <textarea
           value={prompt}
           onChange={e => setPrompt(e.target.value)}
           rows={4}
           placeholder="Enter your prompt"
-          style={{ padding: "0.75rem", fontSize: "1rem", resize: "vertical" }}
+          className="w-full resize-y rounded border border-white/10 bg-white/5 p-3 text-base text-gray-100 placeholder:text-gray-500 focus:border-white/30 focus:outline-none disabled:opacity-60"
           disabled={isLoading}
         />
         <button
           type="submit"
           disabled={isLoading}
-          style={{
-            padding: "0.75rem 1rem",
-            fontSize: "1rem",
-            cursor: isLoading ? "not-allowed" : "pointer",
-          }}
+          className="inline-flex items-center justify-center rounded bg-white px-4 py-3 text-base font-semibold text-gray-900 transition hover:bg-gray-200 disabled:cursor-not-allowed disabled:opacity-60"
         >
           {isLoading ? "Sending..." : "Send to Gemini 2.5 Flash Lite"}
         </button>
       </form>
 
-      {error && (
-        <p style={{ marginTop: "1rem", color: "#c00" }}>
-          {error}
-        </p>
-      )}
+      {error && <p className="mt-4 text-sm text-red-400">{error}</p>}
 
       {result && (
-        <section
-          style={{
-            marginTop: "1.5rem",
-            padding: "1rem",
-            border: "1px solid #ddd",
-            borderRadius: "8px",
-            background: "#fafafa",
-          }}
-        >
-          <h2 style={{ fontSize: "1.25rem", marginBottom: "0.5rem" }}>
-            Response
-          </h2>
+        <section className="mt-6 rounded-lg border border-white/10 bg-white/5 p-4 shadow-sm">
+          <h2 className="mb-2 text-lg font-semibold text-white">Response</h2>
           {result.text && (
-            <p style={{ whiteSpace: "pre-wrap", marginBottom: "0.5rem" }}>
+            <p className="mb-2 whitespace-pre-wrap text-sm leading-relaxed text-gray-200">
               {result.text}
             </p>
           )}
           {result.cost && (
-            <div style={{ marginTop: "0.75rem" }}>
-              <strong>Estimated cost:</strong>
-              <div style={{ display: "flex", marginTop: "0.35rem" }}>
+            <div className="mt-4">
+              <div className="text-xs uppercase tracking-[0.08em] text-gray-400">Estimated cost</div>
+              <div className="mt-3 flex gap-10 text-sm text-gray-200">
                 <div>
-                  <em style={{ fontStyle: "normal", color: "#444" }}>USD</em>
-                  <ul style={{ listStyle: "disc", marginLeft: "1.25rem" }}>
+                  <span className="text-gray-300">USD</span>
+                  <ul className="mt-1 list-disc pl-5">
                     <li>Input: {formatUsd(result.cost.usd.input)}</li>
                     <li>Output: {formatUsd(result.cost.usd.output)}</li>
                     <li>URL: {formatUsd(result.cost.usd.url)}</li>
                     <li>
-                      Total: <strong>{formatUsd(result.cost.usd.total)}</strong>
+                      Total: <strong className="text-white">{formatUsd(result.cost.usd.total)}</strong>
                     </li>
                   </ul>
                 </div>
                 <div>
-                  <em style={{ fontStyle: "normal", color: "#444" }}>RMB</em>
-                  <ul style={{ listStyle: "disc", marginLeft: "1.25rem" }}>
+                  <span className="text-gray-300">RMB</span>
+                  <ul className="mt-1 list-disc pl-5">
                     <li>Input: {formatCny(result.cost.cny.input)}</li>
                     <li>Output: {formatCny(result.cost.cny.output)}</li>
                     <li>URL: {formatCny(result.cost.cny.url)}</li>
                     <li>
-                      Total: <strong>{formatCny(result.cost.cny.total)}</strong>
+                      Total: <strong className="text-white">{formatCny(result.cost.cny.total)}</strong>
                     </li>
                   </ul>
                 </div>
@@ -188,14 +181,14 @@ export default function UsagePage() {
             </div>
           )}
           {typeof result.responseTimeMs === "number" && (
-            <p style={{ margin: "0.25rem 0" }}>
-              <strong>Response time:</strong> {result.responseTimeMs} ms
+            <p className="my-2 text-sm text-gray-200">
+              <strong className="text-white">Response time:</strong> {result.responseTimeMs} ms
             </p>
           )}
           {result.usage && (
-            <div style={{ marginTop: "0.75rem" }}>
-              <strong>Usage:</strong>
-              <ul style={{ listStyle: "disc", marginLeft: "1.25rem" }}>
+            <div className="mt-3 text-gray-200">
+              <div className="text-xs uppercase tracking-[0.08em] text-gray-400">Usage</div>
+              <ul className="mt-1 list-disc pl-5 text-sm">
                 <li>
                   Input tokens: {result.usage.inputTokens ?? "N/A"}
                 </li>
@@ -209,17 +202,11 @@ export default function UsagePage() {
                   Total tokens: {result.usage.totalTokens ?? "N/A"}
                 </li>
               </ul>
-              <details style={{ marginTop: "0.5rem" }}>
-                <summary style={{ cursor: "pointer" }}>Raw usage payload</summary>
-                <pre
-                  style={{
-                    background: "#fff",
-                    border: "1px solid #eee",
-                    padding: "0.75rem",
-                    overflow: "auto",
-                    marginTop: "0.5rem",
-                  }}
-                >
+              <details className="mt-2 text-sm">
+                <summary className="cursor-pointer font-medium text-gray-100">
+                  Raw usage payload
+                </summary>
+                <pre className="mt-2 overflow-auto rounded border border-white/10 bg-black/40 p-3 text-xs text-gray-100">
                   {JSON.stringify(result.usage.raw, null, 2)}
                 </pre>
               </details>

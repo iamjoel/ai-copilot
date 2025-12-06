@@ -82,7 +82,7 @@ export default function UsagePage() {
             cursor: isLoading ? "not-allowed" : "pointer",
           }}
         >
-          {isLoading ? "Sending..." : "Send to Gemini 2.5 Flash"}
+          {isLoading ? "Sending..." : "Send to Gemini 2.5 Flash Lite"}
         </button>
       </form>
 

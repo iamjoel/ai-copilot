@@ -11,11 +11,16 @@ Token 分为 Input Token 和 Output Token。Input Token 是指发送给模型的
 |                      |                | $2（> 20万 输入）      | $9（> 20万 输出）        |
 | Gemini 2.5 Pro       | 标准       | $1.25（≤ 20万 输入）      | $10（≤ 20万 输出）        |
 |                      |                | $2.50（> 20万 输入）      | $15（> 20万 输出）        |
-|                      | 批量          | $0.3125                   | $2.50                     |
 | Gemini 2.5 Flash     | 标准       | $0.30                     | $2.50                     |
-|                      | 批量          | $0.075                    | $0.625                    |
+|                      | 批量          | $0.15                    | $1.25                    |
 | Gemini 2.5 Flash-Lite| 标准       | $0.10                     | $0.40                     |
-|                      | 批量          | $0.025                    | $0.10                     |
+|                      | 批量          | $0.05                    | $0.20                     |
+
+
+网址上下文 按各模型的输入 token 价格收费。
+Google 搜索 免费使用 1,500 RPD（Flash 和 Flash-Lite 共用此限额）。
+然后，每 1,000 次接地提示收费 35 美元
+
 [详情](https://ai.google.dev/gemini-api/docs/pricing?hl=zh-cn)
 
 ## OpenAI 计费

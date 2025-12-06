@@ -1,10 +1,10 @@
 import { createOpenAI } from "@ai-sdk/openai";
-import { CoreMessage, streamText } from "ai";
+import { streamText, UIMessage, convertToModelMessages } from "ai";
 
 export const runtime = "edge";
 
 export async function POST(req: Request) {
-  const { messages }: { messages?: CoreMessage[] } = await req.json();
+  const { messages }: { messages: UIMessage[] } = await req.json();
 
   if (!process.env.OPENAI_API_KEY) {
     return new Response(
@@ -23,8 +23,8 @@ export async function POST(req: Request) {
     model: openai("gpt-4o-mini"),
     system:
       "You are a helpful assistant that keeps replies concise and friendly.",
-    messages,
+    messages: convertToModelMessages(messages),
   });
 
-  return result.toAIStreamResponse();
+  return result.toUIMessageStreamResponse();
 }

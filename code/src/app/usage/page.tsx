@@ -10,11 +10,24 @@ type UsageDetails = {
   raw?: unknown;
 };
 
+type CurrencyCost = {
+  input: number;
+  output: number;
+  url: number;
+  total: number;
+};
+
 type CostDetails = {
-  input?: number;
-  output?: number;
-  url?: number;
-  total?: number;
+  usd: CurrencyCost;
+  cny: CurrencyCost;
+  rates: {
+    usdPerToken: {
+      input: number;
+      output: number;
+      url: number;
+    };
+    usdToCny: number;
+  };
 };
 
 type UsageResponse = {
@@ -37,6 +50,11 @@ Input tokens: 46
 Output tokens: 76
 URL tokens: 14694
 Total tokens: 14816
+
+Input tokens: 46
+Output tokens: 56
+URL tokens: 14694
+Total tokens: 14796
 */
 const defaultPrompt = `Based on the document: https://en.wikipedia.org/wiki/Hawf_National_Reserve
           Which year did the park get established? If find the answer, provide the original sentence or paragraph as well.`;
@@ -49,6 +67,8 @@ export default function UsagePage() {
 
   const formatUsd = (value?: number) =>
     value === undefined ? "N/A" : `$${value.toFixed(6)}`;
+  const formatCny = (value?: number) =>
+    value === undefined ? "N/A" : `¥${value.toFixed(6)}`;
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -140,12 +160,31 @@ export default function UsagePage() {
           )}
           {result.cost && (
             <div style={{ marginTop: "0.75rem" }}>
-              <strong>Estimated cost (USD):</strong>
-              <ul style={{ listStyle: "disc", marginLeft: "1.25rem" }}>
-                <li>
-                  Total: <strong>{formatUsd(result.cost.total)}</strong>
-                </li>
-              </ul>
+              <strong>Estimated cost:</strong>
+              <div style={{ display: "flex", marginTop: "0.35rem" }}>
+                <div>
+                  <em style={{ fontStyle: "normal", color: "#444" }}>USD</em>
+                  <ul style={{ listStyle: "disc", marginLeft: "1.25rem" }}>
+                    <li>Input: {formatUsd(result.cost.usd.input)}</li>
+                    <li>Output: {formatUsd(result.cost.usd.output)}</li>
+                    <li>URL: {formatUsd(result.cost.usd.url)}</li>
+                    <li>
+                      Total: <strong>{formatUsd(result.cost.usd.total)}</strong>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <em style={{ fontStyle: "normal", color: "#444" }}>RMB</em>
+                  <ul style={{ listStyle: "disc", marginLeft: "1.25rem" }}>
+                    <li>Input: {formatCny(result.cost.cny.input)}</li>
+                    <li>Output: {formatCny(result.cost.cny.output)}</li>
+                    <li>URL: {formatCny(result.cost.cny.url)}</li>
+                    <li>
+                      Total: <strong>{formatCny(result.cost.cny.total)}</strong>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           )}
           {typeof result.responseTimeMs === "number" && (

@@ -1,4 +1,8 @@
 import { getModel } from "@/lib/model-factory";
+import {
+  computeGeminiFlashLiteCost,
+  computeUsageDetail,
+} from "@/lib/usage-utils";
 import { google } from "@ai-sdk/google";
 import { generateText } from "ai";
 
@@ -28,50 +32,8 @@ export async function POST(req: Request) {
 
     const responseTimeMs = Date.now() - startedAt;
     const usage = result.totalUsage ?? result.usage;
-    const usageWithTokens = usage as
-      | {
-          promptTokens?: number;
-          completionTokens?: number;
-          totalTokens?: number;
-          inputTokens?: number;
-          outputTokens?: number;
-          urlTokens?: number;
-        }
-      | undefined;
-
-    const inputTokens = usageWithTokens ? usageWithTokens.promptTokens ?? usageWithTokens.inputTokens : undefined;
-    const outputTokens = usageWithTokens ? usageWithTokens.completionTokens ?? usageWithTokens.outputTokens : undefined;
-    const totalTokens = usageWithTokens ? usageWithTokens.totalTokens : undefined;
-    const urlTokens =
-      usageWithTokens?.urlTokens ??
-      (totalTokens ? totalTokens - ((inputTokens ?? 0) + (outputTokens ?? 0)) : undefined);
-    const usageDetail = usageWithTokens
-      ? {
-          inputTokens,
-          outputTokens,
-          totalTokens,
-          urlTokens,
-          raw: usageWithTokens,
-        }
-      : undefined;
-
-    const INPUT_RATE = 0.1 / 1_000_000; // USD per input/url token
-    const OUTPUT_RATE = 0.4 / 1_000_000; // USD per output token
-    const costDetail = usageDetail
-      ? {
-          input: (inputTokens ?? 0) * INPUT_RATE,
-          output: (outputTokens ?? 0) * OUTPUT_RATE,
-          url: (urlTokens ?? 0) * INPUT_RATE,
-          total:
-            (inputTokens ?? 0) * INPUT_RATE +
-            (outputTokens ?? 0) * OUTPUT_RATE +
-            (urlTokens ?? 0) * INPUT_RATE,
-          ratePerToken: {
-            input: INPUT_RATE,
-            output: OUTPUT_RATE,
-          },
-        }
-      : undefined;
+    const usageDetail = computeUsageDetail(usage);
+    const costDetail = computeGeminiFlashLiteCost(usageDetail);
 
     return new Response(
       JSON.stringify({

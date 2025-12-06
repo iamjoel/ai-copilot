@@ -31,6 +31,41 @@ export async function POST(req: Request) {
 
     const textUsage = computeUsageDetail(textResponse.totalUsage ?? textResponse.usage);
     const textCost = computeGeminiFlashLiteCost(textUsage);
+    const rawGrounding = textResponse.providerMetadata?.google?.groundingMetadata;
+    const groundingMetadata = rawGrounding as unknown
+      ? {
+        urls: Array.isArray(rawGrounding.groundingChunks)
+          ? rawGrounding.groundingChunks
+            .map((chunk: unknown) => (chunk as { retrievedContext?: { uri?: string } })?.retrievedContext?.uri)
+            .filter((uri): uri is string => typeof uri === "string")
+          : [],
+        support: Array.isArray(rawGrounding.groundingSupports)
+          ? rawGrounding.groundingSupports.map((item: unknown) => {
+            const support = item as {
+              confidenceScores?: unknown;
+              segment?: { text?: string };
+              groundingChunkIndices?: number[];
+            };
+
+            const cs = support.confidenceScores;
+            const confidenceScores =
+              typeof cs === "number"
+                ? cs
+                : (Array.isArray(cs) ? cs[0] : undefined);
+
+            const urlIndex = Array.isArray(support.groundingChunkIndices)
+              ? support.groundingChunkIndices[0]
+              : undefined;
+
+            return {
+              text: support.segment?.text,
+              urlIndex,
+              confidenceScores,
+            };
+          })
+          : [],
+      }
+      : undefined;
 
     const resJSONSchema = z.object({
       establishedYear: z
@@ -62,6 +97,8 @@ export async function POST(req: Request) {
         jsonUsage,
         textCost,
         jsonCost,
+        rawGrounding,
+        groundingMetadata,
       }),
       { status: 200, headers: { "Content-Type": "application/json" } },
     );

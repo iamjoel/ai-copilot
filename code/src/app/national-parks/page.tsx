@@ -22,6 +22,15 @@ type CostDetails = {
   cny: CurrencyCost;
 };
 
+type GroundingMetadata = {
+  urls?: string[];
+  support?: {
+    text?: string;
+    urlIndex?: number;
+    confidenceScores?: number;
+  }[];
+};
+
 type ExtractResponse = {
   text?: string;
   json?: unknown;
@@ -29,6 +38,7 @@ type ExtractResponse = {
   jsonUsage?: UsageDetails;
   textCost?: CostDetails;
   jsonCost?: CostDetails;
+  groundingMetadata?: GroundingMetadata;
   error?: string;
 };
 
@@ -76,6 +86,65 @@ function UsageList({ usage }: { usage?: UsageDetails }) {
       <li>URL tokens: {usage.urlTokens ?? "N/A"}</li>
       <li>Total tokens: {usage.totalTokens ?? "N/A"}</li>
     </ul>
+  );
+}
+
+function GroundingSupports({ metadata }: { metadata?: GroundingMetadata }) {
+  const supports = Array.isArray(metadata?.support) ? metadata.support : null;
+  const urls = Array.isArray(metadata?.urls) ? metadata.urls : null;
+
+  if ((!supports || supports.length === 0) && (!urls || urls.length === 0)) return null;
+
+  return (
+    <div className="mt-3 text-sm">
+      <div className="text-xs uppercase tracking-[0.08em] text-gray-400">Grounding Supports</div>
+      {urls && urls.length > 0 && (
+        <div className="mt-1 space-y-2">
+          {urls.map((uri, idx) => {
+            return (
+              <div key={idx} className="rounded border border-white/10 bg-black/40 p-3">
+                <div className="mt-1 text-gray-200">
+                  <span className="text-gray-400">url[{idx}]:</span>{" "}
+                  <span className="font-mono text-xs text-gray-100 break-words">{String(uri ?? "N/A")}</span>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
+
+      <div className="mt-2 space-y-2">
+        {supports?.map((support, idx) => {
+          const confidenceScores = support.confidenceScores;
+          const segmentText = support.text;
+
+          return (
+            <div key={idx} className="rounded border border-white/10 bg-black/40 p-3">
+              {typeof support.urlIndex === "number" && (
+                <div className="text-gray-200">
+                  <span className="text-gray-400">urlIndex:</span>{" "}
+                  <span className="font-mono text-xs text-gray-100">{support.urlIndex}</span>
+                </div>
+              )}
+              {confidenceScores && (
+                <div className="text-gray-200">
+                  <span className="text-gray-400">confidenceScores:</span>{" "}
+                  <span className="font-mono text-xs text-gray-100">
+                    {JSON.stringify(confidenceScores)}
+                  </span>
+                </div>
+              )}
+              {segmentText && (
+                <div className="mt-1 text-gray-200">
+                  <span className="text-gray-400">segment.text:</span>{" "}
+                  <span className="font-mono text-xs text-gray-100">{segmentText}</span>
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </div>
   );
 }
 
@@ -152,6 +221,15 @@ export default function NationalParksPage() {
               <p className="whitespace-pre-wrap text-sm leading-relaxed text-gray-200">
                 {result.text}
               </p>
+              {result.groundingMetadata && (
+                <div className="mt-3 text-sm">
+                  <div className="text-xs uppercase tracking-[0.08em] text-gray-400">Grounding Metadata</div>
+                  <pre className="mt-1 overflow-auto rounded border border-white/10 bg-black/40 p-3 text-xs text-gray-100">
+                    {JSON.stringify(result.groundingMetadata, null, 2)}
+                  </pre>
+                </div>
+              )}
+              <GroundingSupports metadata={result.groundingMetadata} />
               <div className="mt-3 text-sm text-gray-200">
                 <div className="text-xs uppercase tracking-[0.08em] text-gray-400">费用</div>
                 <p className="mt-1">RMB 总费用: <strong className="text-white">{formatCny(result.textCost?.cny.total)}</strong></p>

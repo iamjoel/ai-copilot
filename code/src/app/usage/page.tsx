@@ -6,21 +6,49 @@ type UsageDetails = {
   inputTokens?: number;
   outputTokens?: number;
   totalTokens?: number;
+  urlTokens?: number;
   raw?: unknown;
+};
+
+type CostDetails = {
+  input?: number;
+  output?: number;
+  url?: number;
+  total?: number;
 };
 
 type UsageResponse = {
   text?: string;
   responseTimeMs?: number;
   usage?: UsageDetails;
+  cost?: CostDetails;
   error?: string;
 };
 
+/*
+* The document does not mention the establishment year of Hawf National Reserve. However, it states that "The Hawf Area was nominated as a natural UNESCO World Heritage Site in August 2002. Currently, it is listed as a tentative World Heritage Site."
+
+Estimated cost (USD):
+Total: $0.001504
+Response time: 3138 ms
+
+Usage:
+Input tokens: 46
+Output tokens: 76
+URL tokens: 14694
+Total tokens: 14816
+*/
+const defaultPrompt = `Based on the document: https://en.wikipedia.org/wiki/Hawf_National_Reserve
+          Which year did the park get established? If find the answer, provide the original sentence or paragraph as well.`;
+
 export default function UsagePage() {
-  const [prompt, setPrompt] = useState("");
+  const [prompt, setPrompt] = useState(defaultPrompt);
   const [result, setResult] = useState<UsageResponse | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  const formatUsd = (value?: number) =>
+    value === undefined ? "N/A" : `$${value.toFixed(6)}`;
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -110,6 +138,16 @@ export default function UsagePage() {
               {result.text}
             </p>
           )}
+          {result.cost && (
+            <div style={{ marginTop: "0.75rem" }}>
+              <strong>Estimated cost (USD):</strong>
+              <ul style={{ listStyle: "disc", marginLeft: "1.25rem" }}>
+                <li>
+                  Total: <strong>{formatUsd(result.cost.total)}</strong>
+                </li>
+              </ul>
+            </div>
+          )}
           {typeof result.responseTimeMs === "number" && (
             <p style={{ margin: "0.25rem 0" }}>
               <strong>Response time:</strong> {result.responseTimeMs} ms
@@ -124,6 +162,9 @@ export default function UsagePage() {
                 </li>
                 <li>
                   Output tokens: {result.usage.outputTokens ?? "N/A"}
+                </li>
+                <li>
+                  URL tokens: {result.usage.urlTokens ?? "N/A"}
                 </li>
                 <li>
                   Total tokens: {result.usage.totalTokens ?? "N/A"}

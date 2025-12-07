@@ -37,31 +37,21 @@ Identify how this page specifies key details about "${name}".
 Instructions:
 1. Use the url_context tool to read the page.
 2. Search for any part of the page that explicitly mentions:
-  1 The official website
-  2 Any mention of World Heritage status (used to determine level 2 vs 1)
-  3 Total number of species
-  4 Number of endangered species recorded in the IUCN Red List
-  5 Forest coverage percentage
-  6 The park's total area (prefer km²; include the source unit if different)
-  7 When the park was established (an "Established" year)
-  8 Whether it is a World Heritage site or a Biosphere Reserve
-  9 Annual visitors (convert to units of ten-thousands of people as an integer if needed)
+  1 The official website. If not found, respond with NO_OFFICIAL_WEBSITE_FOUND
+  2 Whether it is a World Heritage site. If not found, respond with NOT_A_WORLD_HERITAGE_SITE
+  3 Total number of species. If not found, respond with NO_SPECIES_COUNT_FOUND
+  4 Number of endangered species recorded in the IUCN Red List. If not found, respond with NO_ENDANGERED_SPECIES_FOUND
+  5 Forest coverage percentage. If not found, respond with NO_FOREST_COVERAGE_FOUND
+  6 The park's total area (prefer km²; include the source unit if different). If not found, respond with NO_PARK_TOTAL_AREA_FOUND
+  7 When the park was established (an "Established" year). If not found, respond with NO_ESTABLISHED_YEAR_FOUND
+  8 Whether it is a World Heritage site or a Biosphere Reserve. If not found, respond with NO_INTL_CERT_FOUND
+  9 Annual visitors (convert to units of ten-thousands of people as an integer if needed). If not found, respond with NO_ANNUAL_VISITORS_FOUND
 3. Copy the minimal surrounding text VERBATIM from the page for each item you find:
   - Prefer concise rows/sentences (infobox rows, short sentences).
   - Include at most 4 short lines or 1–2 sentences per item.
-4. If an item is NOT explicitly stated on the page, write a single line for that item:
-  - Established year: NO_ESTABLISHED_YEAR_FOUND
-  - Official website: NO_OFFICIAL_WEBSITE_FOUND
-  - Area: NO_AREA_FOUND
-  - International certification: NO_INTL_CERT_FOUND
-  - Level: NO_LEVEL_FOUND
-  - Species count: NO_SPECIES_COUNT_FOUND
-  - Endangered species: NO_ENDANGERED_SPECIES_FOUND
-  - Forest coverage: NO_FOREST_COVERAGE_FOUND
-  - Annual visitors: NO_ANNUAL_VISITORS_FOUND
 
 Output format:
-- Provide a short section for each item (Established year, Official website, Area, International certification, Level, Species count, Endangered species, Forest coverage, Annual visitors).
+- Provide a short section for each item (Official website, World Heritage site, Species count, Endangered species, Forest coverage, Area, Established year, International certification, Annual visitors).
 - For each section, include the verbatim excerpt or the corresponding NO_* message.
 
 Hard constraints:

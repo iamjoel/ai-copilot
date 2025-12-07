@@ -5,6 +5,7 @@ import {
 } from "@/lib/usage-utils";
 import { google } from "@ai-sdk/google";
 import { generateObject, generateText } from "ai";
+import test from "node:test";
 import { unknown, z } from "zod";
 
 export const runtime = "nodejs";
@@ -61,6 +62,13 @@ Hard constraints:
         url_context: google.tools.urlContext({}),
       },
     });
+
+    if (!textResponse.text) {
+      return new Response(
+        JSON.stringify({ error: "Missing text response from model." }),
+        { status: 400, headers: { "Content-Type": "application/json" } },
+      );
+    }
     const textDurationSec = Number(((Date.now() - textStart) / 1000).toFixed(1));
 
     const textUsage = computeUsageDetail(textResponse.totalUsage ?? textResponse.usage);

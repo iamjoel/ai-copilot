@@ -119,9 +119,6 @@ function GroundingSupports({ metadata }: { metadata?: GroundingMetadata }) {
 }
 
 
-
-const testIndex = 1
-
 export default function NationalParksPage() {
   const [parkName, setParkName] = useState(testPark.name);
   const [wikiUrl, setWikiUrl] = useState(testPark.wiki);

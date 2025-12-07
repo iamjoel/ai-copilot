@@ -130,7 +130,7 @@ export default function NationalParksPage() {
     setError(null);
     setResult(null);
     if (!parkName.trim() || !wikiUrl.trim()) {
-      setError("请填写公园名称和 Wikipedia 链接。");
+      setError("Please provide both the park name and its Wikipedia link.");
       return;
     }
 
@@ -159,23 +159,24 @@ export default function NationalParksPage() {
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-8 text-gray-100">
-      <h1 className="mb-3 text-3xl font-semibold text-white">国家公园信息提取</h1>
+      <h1 className="mb-3 text-3xl font-semibold text-white">National Park Info Extractor</h1>
       <p className="mb-6 text-sm text-gray-300">
-        输入公园名称和其 Wikipedia 链接，API 会联网获取页面文字，提取建立时间并转换成 JSON。每个输出块都会展示用量和人民币总费用。
+        Enter a park name and its Wikipedia link. The API will fetch the page, extract the establishment year,
+        and return JSON. Each output block shows usage and total cost in RMB.
       </p>
 
       <form onSubmit={handleSubmit} className="grid gap-3">
         <input
           value={parkName}
           onChange={e => setParkName(e.target.value)}
-          placeholder="公园名称，如：Hawf National Reserve"
+          placeholder="Park name, e.g., Hawf National Reserve"
           className="w-full rounded border border-white/10 bg-white/5 p-3 text-base text-gray-100 placeholder:text-gray-500 focus:border-white/30 focus:outline-none disabled:opacity-60"
           disabled={isLoading}
         />
         <input
           value={wikiUrl}
           onChange={e => setWikiUrl(e.target.value)}
-          placeholder="Wikipedia 链接，如：https://en.wikipedia.org/wiki/Hawf_National_Reserve"
+          placeholder="Wikipedia URL, e.g., https://en.wikipedia.org/wiki/Hawf_National_Reserve"
           className="w-full rounded border border-white/10 bg-white/5 p-3 text-base text-gray-100 placeholder:text-gray-500 focus:border-white/30 focus:outline-none disabled:opacity-60"
           disabled={isLoading}
           type="url"
@@ -185,7 +186,7 @@ export default function NationalParksPage() {
           disabled={isLoading}
           className="inline-flex items-center justify-center rounded bg-white px-4 py-3 text-base font-semibold text-gray-900 transition hover:bg-gray-200 disabled:cursor-not-allowed disabled:opacity-60"
         >
-          {isLoading ? "Processing..." : "提取国家公园信息"}
+          {isLoading ? "Processing..." : "Extract National Park Info"}
         </button>
       </form>
 
@@ -195,14 +196,14 @@ export default function NationalParksPage() {
         <section className="mt-6 space-y-5">
           {result.text && (
             <div className="rounded-lg border border-white/10 bg-white/5 p-4 shadow-sm">
-              <h2 className="mb-2 text-lg font-semibold text-white">文字内容</h2>
+              <h2 className="mb-2 text-lg font-semibold text-white">Extracted Text</h2>
               <p className="whitespace-pre-wrap text-sm leading-relaxed text-gray-200">
                 {result.text}
               </p>
               <GroundingSupports metadata={result.groundingMetadata} />
               <div className="mt-3 text-sm text-gray-200">
-                <div className="text-xs uppercase tracking-[0.08em] text-gray-400">费用</div>
-                <p className="mt-1">RMB 总费用: <strong className="text-white">{formatCny(result.textCost?.cny.total)}</strong></p>
+                <div className="text-xs uppercase tracking-[0.08em] text-gray-400">Cost</div>
+                <p className="mt-1">Total RMB cost: <strong className="text-white">{formatCny(result.textCost?.cny.total)}</strong></p>
               </div>
               <div className="mt-2">
                 <div className="text-xs uppercase tracking-[0.08em] text-gray-400">Usage</div>
@@ -218,8 +219,8 @@ export default function NationalParksPage() {
                 {JSON.stringify(result.json, null, 2)}
               </pre>
               <div className="mt-3 text-sm text-gray-200">
-                <div className="text-xs uppercase tracking-[0.08em] text-gray-400">费用</div>
-                <p className="mt-1">RMB 总费用: <strong className="text-white">{formatCny(result.jsonCost?.cny.total)}</strong></p>
+                <div className="text-xs uppercase tracking-[0.08em] text-gray-400">Cost</div>
+                <p className="mt-1">Total RMB cost: <strong className="text-white">{formatCny(result.jsonCost?.cny.total)}</strong></p>
               </div>
               <div className="mt-2">
                 <div className="text-xs uppercase tracking-[0.08em] text-gray-400">Usage</div>

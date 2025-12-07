@@ -46,9 +46,6 @@ Instructions:
   7 When the park was established (an "Established" year).
   8 Whether it is a World Heritage site or a Biosphere Reserve.
   9 Annual visitors (convert to units of ten-thousands of people as an integer if needed).
-3. Copy the minimal surrounding text VERBATIM from the page for each item you find:
-  - Prefer concise rows/sentences (infobox rows, short sentences).
-  - Include at most 4 short lines or 1–2 sentences per item.
 
 Output format(strict):
 For each of the nine keys, output a section with: <A one-sentence summary. If not found, say not specify>

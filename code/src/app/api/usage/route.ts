@@ -27,6 +27,7 @@ export async function POST(req: Request) {
       maxRetries: 1,
       tools: {
         url_context: google.tools.urlContext({}),
+        google_search: google.tools.googleSearch({}),
       },
     });
 
@@ -41,6 +42,7 @@ export async function POST(req: Request) {
         responseTimeMs,
         usage: usageDetail,
         cost: costDetail,
+        groundingMetadata: result.providerMetadata?.google?.groundingMetadata,
       }),
       { status: 200, headers: { "Content-Type": "application/json" } },
     );

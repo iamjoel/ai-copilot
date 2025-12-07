@@ -35,6 +35,7 @@ type UsageResponse = {
   responseTimeMs?: number;
   usage?: UsageDetails;
   cost?: CostDetails;
+  groundingMetadata: Record<string, unknown>;
   error?: string;
 };
 
@@ -208,6 +209,14 @@ export default function UsagePage() {
                 </summary>
                 <pre className="mt-2 overflow-auto rounded border border-white/10 bg-black/40 p-3 text-xs text-gray-100">
                   {JSON.stringify(result.usage.raw, null, 2)}
+                </pre>
+              </details>
+              <details className="mt-2 text-sm">
+                <summary className="cursor-pointer font-medium text-gray-100">
+                  Raw grounding metadata
+                </summary>
+                <pre className="mt-2 overflow-auto rounded border border-white/10 bg-black/40 p-3 text-xs text-gray-100">
+                  {JSON.stringify(result.groundingMetadata, null, 2)}
                 </pre>
               </details>
             </div>

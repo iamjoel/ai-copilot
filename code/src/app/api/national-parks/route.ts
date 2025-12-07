@@ -5,7 +5,6 @@ import {
 } from "@/lib/usage-utils";
 import { google } from "@ai-sdk/google";
 import { generateObject, generateText } from "ai";
-import test from "node:test";
 import { unknown, z } from "zod";
 
 export const runtime = "nodejs";
@@ -25,7 +24,7 @@ export async function POST(req: Request) {
 
     const prompt = `You are a data extraction assistant.
 
-Your ONLY knowledge source is the content of the webpage loaded via the url_context tool.
+Your ONLY knowledge sources are the contents returned by the tools (url_context and google_search).
 Treat anything outside the tool output as UNKNOWN.
 
 Document URL:
@@ -46,6 +45,10 @@ Instructions:
   7 When the park was established (an "Established" year).
   8 Whether it is a World Heritage site or a Biosphere Reserve.
   9 Annual visitors (convert to units of ten-thousands of people as an integer if needed).
+3. If you cannot find an explicit "Total number of species" value on the page:
+- Use the google_search tool to search the web for the species count of "${name}".
+- Then use the url_context tool to open the most relevant result and extract the value from that page.
+- If you still cannot find an explicit number, output "not specify" for Species count and do NOT invent a value.
 
 Output format(strict):
 For each of the nine keys, output a section with: <A one-sentence summary. If not found, say not specify>
@@ -82,8 +85,8 @@ Rules:
 
 Hard constraints:
 - Do NOT guess or infer any values.
-- Do NOT use common knowledge, training data, or other websites.
-- Base your answer strictly on the text returned by url_context.`;
+- Do NOT use common knowledge or training data.
+- Base your answer strictly on the text returned by url_context (including any Google pages you load).`;
 
     const textStart = Date.now();
     const textResponse = await generateText({
@@ -92,6 +95,7 @@ Hard constraints:
       maxRetries: 1,
       tools: {
         url_context: google.tools.urlContext({}),
+        google_search: google.tools.googleSearch({}),
       },
     });
 

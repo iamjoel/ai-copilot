@@ -37,22 +37,51 @@ Identify how this page specifies key details about "${name}".
 Instructions:
 1. Use the url_context tool to read the page.
 2. Search for any part of the page that explicitly mentions:
-  1 The official website. If not found, respond with NO_OFFICIAL_WEBSITE_FOUND
-  2 Whether it is a World Heritage site. If not found, respond with NOT_A_WORLD_HERITAGE_SITE
-  3 Total number of species. If not found, respond with NO_SPECIES_COUNT_FOUND
-  4 Number of endangered species recorded in the IUCN Red List. If not found, respond with NO_ENDANGERED_SPECIES_FOUND
-  5 Forest coverage percentage. If not found, respond with NO_FOREST_COVERAGE_FOUND
-  6 The park's total area (prefer km²; include the source unit if different). If not found, respond with NO_PARK_TOTAL_AREA_FOUND
-  7 When the park was established (an "Established" year). If not found, respond with NO_ESTABLISHED_YEAR_FOUND
-  8 Whether it is a World Heritage site or a Biosphere Reserve. If not found, respond with NO_INTL_CERT_FOUND
-  9 Annual visitors (convert to units of ten-thousands of people as an integer if needed). If not found, respond with NO_ANNUAL_VISITORS_FOUND
+  1 The official website. 
+  2 Whether it is a World Heritage site. 
+  3 Total number of species.
+  4 Number of endangered species recorded in the IUCN Red List.
+  5 Forest coverage percentage.
+  6 The park's total area (prefer km²; include the source unit if different).
+  7 When the park was established (an "Established" year).
+  8 Whether it is a World Heritage site or a Biosphere Reserve.
+  9 Annual visitors (convert to units of ten-thousands of people as an integer if needed).
 3. Copy the minimal surrounding text VERBATIM from the page for each item you find:
   - Prefer concise rows/sentences (infobox rows, short sentences).
   - Include at most 4 short lines or 1–2 sentences per item.
 
-Output format:
-- Provide a short section for each item (Official website, World Heritage site, Species count, Endangered species, Forest coverage, Area, Established year, International certification, Annual visitors).
-- For each section, include the verbatim excerpt or the corresponding NO_* message.
+Output format(strict):
+For each of the nine keys, output a section with: <A one-sentence summary. If not found, say not specify>
+
+If is found, also include:
+  Evidence: <verbatim text copied from the page>
+
+For example:
+\`\`\`
+1. Official website: The official website is www.examplepark.org.
+Evidence: Official website: www.examplepark.org
+
+2. World Heritage site: Not specify.
+\`\`\`
+
+Sections must appear in this exact order:
+
+1. Official website:
+2. World Heritage site:
+3. Species count:
+4. Endangered species:
+5. Forest coverage:
+6. Area:
+7. Established year:
+8. International certification:
+9. Annual visitors:
+
+Rules:
+- "Summary" must be a short neutral rewrite of the content (1 sentence max).
+- "Evidence" must be a verbatim excerpt from the webpage (up to 4 short lines).
+- Do NOT add any extra text, titles, commentary, or reasoning.
+- Do NOT change the key names or the order.
+- There should be a blank line between sections.
 
 Hard constraints:
 - Do NOT guess or infer any values.

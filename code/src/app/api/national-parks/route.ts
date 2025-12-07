@@ -68,7 +68,7 @@ Hard constraints:
       ? {
         urls: Array.isArray(rawGrounding.groundingChunks)
           ? rawGrounding.groundingChunks
-            .map((chunk: unknown) => (chunk as { retrievedContext?: { uri?: string } })?.retrievedContext?.uri)
+            .map((chunk: unknown) => (chunk as any)?.retrievedContext?.uri || (chunk as any)?.web?.uri)
             .filter((uri): uri is string => typeof uri === "string")
           : [],
         support: Array.isArray(rawGrounding.groundingSupports)

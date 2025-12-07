@@ -69,17 +69,9 @@ function GroundingSupports({ metadata }: { metadata?: GroundingMetadata }) {
     <div className="mt-3 text-sm">
       <div className="text-xs uppercase tracking-[0.08em] text-gray-400">Grounding Supports</div>
       {urls && urls.length > 0 && (
-        <div className="mt-1 space-y-2">
-          {urls.map((uri, idx) => {
-            return (
-              <div key={idx} className="rounded border border-white/10 bg-black/40 p-3">
-                <div className="mt-1 text-gray-200">
-                  <span className="text-gray-400">url[{idx}]:</span>{" "}
-                  <span className="font-mono text-xs text-gray-100 break-words">{String(uri ?? "N/A")}</span>
-                </div>
-              </div>
-            );
-          })}
+        <div className="mt-1 rounded border border-white/10 bg-black/40 p-3">
+          <div className="mb-2 text-gray-400">All urls: </div>
+          <div className="mb-1 font-mono text-xs text-gray-100 break-words">{urls.join(',')}</div>
         </div>
       )}
 
@@ -92,8 +84,8 @@ function GroundingSupports({ metadata }: { metadata?: GroundingMetadata }) {
             <div key={idx} className="rounded border border-white/10 bg-black/40 p-3">
               {typeof support.urlIndex === "number" && (
                 <div className="text-gray-200">
-                  <span className="text-gray-400">urlIndex:</span>{" "}
-                  <span className="font-mono text-xs text-gray-100">{support.urlIndex}</span>
+                  <span className="text-gray-400">url:</span>{" "}
+                  <span className="font-mono text-xs text-gray-100">{urls?.[support.urlIndex]}</span>
                 </div>
               )}
               {confidenceScores && (
@@ -207,14 +199,6 @@ export default function NationalParksPage() {
               <p className="whitespace-pre-wrap text-sm leading-relaxed text-gray-200">
                 {result.text}
               </p>
-              {result.groundingMetadata && (
-                <div className="mt-3 text-sm">
-                  <div className="text-xs uppercase tracking-[0.08em] text-gray-400">Grounding Metadata</div>
-                  <pre className="mt-1 overflow-auto rounded border border-white/10 bg-black/40 p-3 text-xs text-gray-100">
-                    {JSON.stringify(result.groundingMetadata, null, 2)}
-                  </pre>
-                </div>
-              )}
               <GroundingSupports metadata={result.groundingMetadata} />
               <div className="mt-3 text-sm text-gray-200">
                 <div className="text-xs uppercase tracking-[0.08em] text-gray-400">费用</div>

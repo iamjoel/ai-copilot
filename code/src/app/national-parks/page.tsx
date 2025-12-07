@@ -42,36 +42,6 @@ type ExtractResponse = {
   error?: string;
 };
 
-const defaultPrompt = `You are a data extraction assistant.
-
-Your ONLY knowledge source is the content of the webpage loaded via the url_context tool.
-Treat anything outside the tool output as UNKNOWN.
-
-Document URL:
-- https://en.wikipedia.org/wiki/Hawf_National_Reserve
-
-Goal:
-Find how the park's establishment time ("Established" year) is described on this page.
-
-Instructions:
-1. Use the url_context tool to read the page.
-2. Search for any part of the page that explicitly mentions when the park was established
-  (for example, an infobox row named "Established" or a sentence stating the year).
-3. If you find such information, copy the minimal surrounding text VERBATIM from the page:
-  - Prefer the table row or sentence that contains the date.
-  - Include at most 3 short lines or 1–2 sentences.
-4. If the page does NOT explicitly state an establishment year, respond exactly with:
-  NO_ESTABLISHED_YEAR_FOUND
-
-Output format:
-- If found: only output the verbatim excerpt from the page, no extra explanation.
-- If not found: only output "NO_ESTABLISHED_YEAR_FOUND".
-
-Hard constraints:
-- Do NOT guess or infer any dates.
-- Do NOT use common knowledge, training data, or other websites.
-- Base your answer strictly on the text returned by url_context.`;
-
 function formatCny(value?: number) {
   return value === undefined ? "N/A" : `¥${value.toFixed(6)}`;
 }
@@ -148,8 +118,17 @@ function GroundingSupports({ metadata }: { metadata?: GroundingMetadata }) {
   );
 }
 
+const testParks = [
+  { name: 'Hawf National Reserve', wiki: 'https://en.wikipedia.org/wiki/Hawf_National_Reserve' },
+  { name: "Yellowstone National Park", wiki: "https://en.wikipedia.org/wiki/Yellowstone_National_Park" },
+  { name: "Yosemite National Park", wiki: "https://en.wikipedia.org/wiki/Yosemite_National_Park" },
+]
+
+const testIndex = 0
+
 export default function NationalParksPage() {
-  const [prompt, setPrompt] = useState(defaultPrompt);
+  const [parkName, setParkName] = useState(testParks[testIndex].name);
+  const [wikiUrl, setWikiUrl] = useState(testParks[testIndex].wiki);
   const [result, setResult] = useState<ExtractResponse | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -158,8 +137,8 @@ export default function NationalParksPage() {
     event.preventDefault();
     setError(null);
     setResult(null);
-    if (!prompt.trim()) {
-      setError("Prompt is required.");
+    if (!parkName.trim() || !wikiUrl.trim()) {
+      setError("请填写公园名称和 Wikipedia 链接。");
       return;
     }
 
@@ -168,7 +147,7 @@ export default function NationalParksPage() {
       const response = await fetch("/api/national-parks", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ prompt }),
+        body: JSON.stringify({ parkName, wikiUrl }),
       });
 
       const data = (await response.json()) as ExtractResponse;
@@ -190,17 +169,24 @@ export default function NationalParksPage() {
     <main className="mx-auto max-w-3xl px-4 py-8 text-gray-100">
       <h1 className="mb-3 text-3xl font-semibold text-white">国家公园信息提取</h1>
       <p className="mb-6 text-sm text-gray-300">
-        提交一个包含网页链接的 prompt，API 会先联网获取文字内容，然后将文字转换成 JSON。每个输出块都会展示用量和人民币总费用。
+        输入公园名称和其 Wikipedia 链接，API 会联网获取页面文字，提取建立时间并转换成 JSON。每个输出块都会展示用量和人民币总费用。
       </p>
 
       <form onSubmit={handleSubmit} className="grid gap-3">
-        <textarea
-          value={prompt}
-          onChange={e => setPrompt(e.target.value)}
-          rows={5}
-          placeholder="Enter your prompt"
-          className="w-full resize-y rounded border border-white/10 bg-white/5 p-3 text-base text-gray-100 placeholder:text-gray-500 focus:border-white/30 focus:outline-none disabled:opacity-60"
+        <input
+          value={parkName}
+          onChange={e => setParkName(e.target.value)}
+          placeholder="公园名称，如：Hawf National Reserve"
+          className="w-full rounded border border-white/10 bg-white/5 p-3 text-base text-gray-100 placeholder:text-gray-500 focus:border-white/30 focus:outline-none disabled:opacity-60"
           disabled={isLoading}
+        />
+        <input
+          value={wikiUrl}
+          onChange={e => setWikiUrl(e.target.value)}
+          placeholder="Wikipedia 链接，如：https://en.wikipedia.org/wiki/Hawf_National_Reserve"
+          className="w-full rounded border border-white/10 bg-white/5 p-3 text-base text-gray-100 placeholder:text-gray-500 focus:border-white/30 focus:outline-none disabled:opacity-60"
+          disabled={isLoading}
+          type="url"
         />
         <button
           type="submit"

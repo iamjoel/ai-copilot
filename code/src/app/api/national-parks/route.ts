@@ -11,14 +11,46 @@ export const runtime = "nodejs";
 
 export async function POST(req: Request) {
   try {
-    const { prompt } = (await req.json()) as { prompt?: string };
+    const { parkName, wikiUrl } = (await req.json()) as { parkName?: string; wikiUrl?: string };
+    const name = parkName?.trim();
+    const url = wikiUrl?.trim();
 
-    if (!prompt?.trim()) {
+    if (!name || !url) {
       return new Response(
-        JSON.stringify({ error: "Missing prompt." }),
+        JSON.stringify({ error: "Missing parkName or wikiUrl." }),
         { status: 400, headers: { "Content-Type": "application/json" } },
       );
     }
+
+    const prompt = `You are a data extraction assistant.
+
+Your ONLY knowledge source is the content of the webpage loaded via the url_context tool.
+Treat anything outside the tool output as UNKNOWN.
+
+Document URL:
+- ${url}
+
+Goal:
+Identify how this page specifies when the park "${name}" was established (the "Established" year).
+
+Instructions:
+1. Use the url_context tool to read the page.
+2. Search for any part of the page that explicitly mentions when the park was established
+  (for example, an infobox row named "Established" or a sentence stating the year).
+3. If you find such information, copy the minimal surrounding text VERBATIM from the page:
+  - Prefer the table row or sentence that contains the date.
+  - Include at most 3 short lines or 1–2 sentences.
+4. If the page does NOT explicitly state an establishment year, respond exactly with:
+  NO_ESTABLISHED_YEAR_FOUND
+
+Output format:
+- If found: only output the verbatim excerpt from the page, no extra explanation.
+- If not found: only output "NO_ESTABLISHED_YEAR_FOUND".
+
+Hard constraints:
+- Do NOT guess or infer any dates.
+- Do NOT use common knowledge, training data, or other websites.
+- Base your answer strictly on the text returned by url_context.`;
 
     const textResponse = await generateText({
       model: getModel("google", "models/gemini-2.5-flash-lite"),

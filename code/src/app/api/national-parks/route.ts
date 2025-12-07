@@ -5,7 +5,7 @@ import {
 } from "@/lib/usage-utils";
 import { google } from "@ai-sdk/google";
 import { generateObject, generateText } from "ai";
-import { z } from "zod";
+import { unknown, z } from "zod";
 
 export const runtime = "nodejs";
 
@@ -52,6 +52,7 @@ Hard constraints:
 - Do NOT use common knowledge, training data, or other websites.
 - Base your answer strictly on the text returned by url_context.`;
 
+    const textStart = Date.now();
     const textResponse = await generateText({
       model: getModel("google", "models/gemini-2.5-flash-lite"),
       prompt,
@@ -60,6 +61,7 @@ Hard constraints:
         url_context: google.tools.urlContext({}),
       },
     });
+    const textDurationSec = Number(((Date.now() - textStart) / 1000).toFixed(1));
 
     const textUsage = computeUsageDetail(textResponse.totalUsage ?? textResponse.usage);
     const textCost = computeGeminiFlashLiteCost(textUsage);
@@ -72,7 +74,7 @@ Hard constraints:
             .filter((uri): uri is string => typeof uri === "string")
           : [],
         support: Array.isArray(rawGrounding.groundingSupports)
-          ? rawGrounding.groundingSupports.map((item: unknown) => {
+          ? rawGrounding.groundingSupports.filter(item => !!item.segment?.text).map((item: unknown) => {
             const support = item as {
               confidenceScores?: unknown;
               segment?: { text?: string };
@@ -107,6 +109,7 @@ Hard constraints:
 
     type ParkDetails = z.infer<typeof resJSONSchema>;
 
+    const jsonStart = Date.now();
     const jsonResponse = await generateObject<ParkDetails>({
       model: getModel("google", "models/gemini-2.5-flash-lite"),
       schema: resJSONSchema,
@@ -116,6 +119,7 @@ Hard constraints:
         `Text:\n${textResponse.text ?? ""}`,
       maxRetries: 1,
     });
+    const jsonDurationSec = Number(((Date.now() - jsonStart) / 1000).toFixed(1));
 
     const jsonResult = jsonResponse.object as { establishedYear: number }
     const jsonUsage = computeUsageDetail(jsonResponse.usage);
@@ -131,6 +135,8 @@ Hard constraints:
         jsonCost,
         rawGrounding,
         groundingMetadata,
+        textDurationSec,
+        jsonDurationSec,
       }),
       { status: 200, headers: { "Content-Type": "application/json" } },
     );

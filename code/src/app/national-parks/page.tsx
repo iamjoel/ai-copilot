@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from "react";
+import { testPark } from "./test-parks";
 
 type UsageDetails = {
   inputTokens?: number;
@@ -39,11 +40,17 @@ type ExtractResponse = {
   textCost?: CostDetails;
   jsonCost?: CostDetails;
   groundingMetadata?: GroundingMetadata;
+  textDurationSec?: number;
+  jsonDurationSec?: number;
   error?: string;
 };
 
 function formatCny(value?: number) {
-  return value === undefined ? "N/A" : `¥${value.toFixed(6)}`;
+  return value === undefined ? "N/A" : `¥${value.toFixed(3)}`;
+}
+
+function formatSeconds(value?: number) {
+  return value === undefined ? "N/A" : `${value.toFixed(1)} s`;
 }
 
 function UsageList({ usage }: { usage?: UsageDetails }) {
@@ -70,7 +77,7 @@ function GroundingSupports({ metadata }: { metadata?: GroundingMetadata }) {
       <div className="text-xs uppercase tracking-[0.08em] text-gray-400">Grounding Supports</div>
       {urls && urls.length > 0 && (
         <div className="mt-1 rounded border border-white/10 bg-black/40 p-3">
-          <div className="mb-2 text-gray-400">All urls: </div>
+          <div className="mb-2 text-gray-400">All URLs: </div>
           <div className="mb-1 font-mono text-xs text-gray-100 break-words">{urls.join(',')}</div>
         </div>
       )}
@@ -84,24 +91,25 @@ function GroundingSupports({ metadata }: { metadata?: GroundingMetadata }) {
             <div key={idx} className="rounded border border-white/10 bg-black/40 p-3">
               {typeof support.urlIndex === "number" && (
                 <div className="text-gray-200">
-                  <span className="text-gray-400">url:</span>{" "}
+                  <span className="text-gray-400">URL:</span>{" "}
                   <span className="font-mono text-xs text-gray-100">{urls?.[support.urlIndex]}</span>
+                </div>
+              )}
+              {segmentText && (
+                <div className="mt-1 text-gray-200">
+                  <span className="text-gray-400">Source:</span>{" "}
+                  <span className="font-mono text-xs text-gray-100">{segmentText}</span>
                 </div>
               )}
               {confidenceScores && (
                 <div className="text-gray-200">
-                  <span className="text-gray-400">confidenceScores:</span>{" "}
+                  <span className="text-gray-400">Confidence Scores:</span>{" "}
                   <span className="font-mono text-xs text-gray-100">
                     {JSON.stringify(confidenceScores)}
                   </span>
                 </div>
               )}
-              {segmentText && (
-                <div className="mt-1 text-gray-200">
-                  <span className="text-gray-400">segment.text:</span>{" "}
-                  <span className="font-mono text-xs text-gray-100">{segmentText}</span>
-                </div>
-              )}
+
             </div>
           );
         })}
@@ -110,17 +118,13 @@ function GroundingSupports({ metadata }: { metadata?: GroundingMetadata }) {
   );
 }
 
-const testParks = [
-  { name: 'Hawf National Reserve', wiki: 'https://en.wikipedia.org/wiki/Hawf_National_Reserve' },
-  { name: "Yellowstone National Park", wiki: "https://en.wikipedia.org/wiki/Yellowstone_National_Park" },
-  { name: "Yosemite National Park", wiki: "https://en.wikipedia.org/wiki/Yosemite_National_Park" },
-]
 
-const testIndex = 0
+
+const testIndex = 1
 
 export default function NationalParksPage() {
-  const [parkName, setParkName] = useState(testParks[testIndex].name);
-  const [wikiUrl, setWikiUrl] = useState(testParks[testIndex].wiki);
+  const [parkName, setParkName] = useState(testPark.name);
+  const [wikiUrl, setWikiUrl] = useState(testPark.wiki);
   const [result, setResult] = useState<ExtractResponse | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -203,7 +207,8 @@ export default function NationalParksPage() {
               <GroundingSupports metadata={result.groundingMetadata} />
               <div className="mt-3 text-sm text-gray-200">
                 <div className="text-xs uppercase tracking-[0.08em] text-gray-400">Cost</div>
-                <p className="mt-1">Total RMB cost: <strong className="text-white">{formatCny(result.textCost?.cny.total)}</strong></p>
+                <p className="mt-1">Total RMB: <strong className="text-white">{formatCny(result.textCost?.cny.total)}</strong></p>
+                <p className="mt-1">Processing time: <strong className="text-white">{formatSeconds(result.textDurationSec)}</strong></p>
               </div>
               <div className="mt-2">
                 <div className="text-xs uppercase tracking-[0.08em] text-gray-400">Usage</div>
@@ -220,7 +225,8 @@ export default function NationalParksPage() {
               </pre>
               <div className="mt-3 text-sm text-gray-200">
                 <div className="text-xs uppercase tracking-[0.08em] text-gray-400">Cost</div>
-                <p className="mt-1">Total RMB cost: <strong className="text-white">{formatCny(result.jsonCost?.cny.total)}</strong></p>
+                <p className="mt-1">Total RMB: <strong className="text-white">{formatCny(result.jsonCost?.cny.total)}</strong></p>
+                <p className="mt-1">Processing time: <strong className="text-white">{formatSeconds(result.jsonDurationSec)}</strong></p>
               </div>
               <div className="mt-2">
                 <div className="text-xs uppercase tracking-[0.08em] text-gray-400">Usage</div>

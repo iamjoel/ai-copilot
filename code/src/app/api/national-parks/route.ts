@@ -1,7 +1,9 @@
-import { extractParkText } from "./extract-park-text";
-import { transformParkTextToJson } from "./transform-park-text";
+import { extractParkText } from "./extract/extract-park-text";
+import { transformParkTextToJson } from "./extract/transform-park-text";
 
 export const runtime = "nodejs";
+
+
 
 export async function POST(req: Request) {
   try {
@@ -30,7 +32,7 @@ export async function POST(req: Request) {
       jsonUsage,
       jsonCost,
       jsonDurationSec,
-    } = await transformParkTextToJson(text);
+    } = await transformParkTextToJson(text, url);
 
     return new Response(
       JSON.stringify({

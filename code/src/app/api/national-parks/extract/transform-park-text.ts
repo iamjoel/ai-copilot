@@ -3,6 +3,18 @@ import { computeGeminiFlashLiteCost, computeUsageDetail } from "@/lib/usage-util
 import { generateObject } from "ai";
 import { z } from "zod";
 
+const handleEvidenceText = ({
+  value,
+  evidenceText,
+  evidenceUrl,
+}: { value?: string | number; evidenceText: string; evidenceUrl: string }) => {
+  if (!value || value === -1 || value === '')
+    return ''
+  if (!evidenceUrl || !evidenceText)
+    return ''
+  return `${evidenceText}: ${evidenceUrl}`
+}
+
 export const parkDetailsSchema = z.object({
   officialWebsite: z
     .string()
@@ -85,9 +97,10 @@ export type TransformResult = {
   jsonDurationSec: number;
 };
 
-export async function transformParkTextToJson(text: string): Promise<TransformResult> {
+export async function transformParkTextToJson(text: string, evidenceUrl: string): Promise<TransformResult> {
   const jsonStart = Date.now();
-  const jsonResponse = await generateObject<ParkDetails>({
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const jsonResponse = await generateObject<any>({
     model: getModel("google", "models/gemini-2.5-flash-lite"),
     schema: parkDetailsSchema,
     prompt:
@@ -100,14 +113,26 @@ export async function transformParkTextToJson(text: string): Promise<TransformRe
   });
 
   const jsonResult = jsonResponse.object as ParkDetails;
+  const formattedJsonResult = {
+    ...jsonResult,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  } as any;
+  Object.keys(jsonResult).filter(key => !key.endsWith("Source")).forEach((key) => {
+    formattedJsonResult[`${key}Source`] = handleEvidenceText({
+      value: jsonResult[key as keyof ParkDetails],
+      evidenceText: jsonResult[`${key}Source` as keyof ParkDetails] as string,
+      evidenceUrl: evidenceUrl,
+    });
+  })
 
   const jsonDurationSec = Number(((Date.now() - jsonStart) / 1000).toFixed(1));
   const jsonUsage = computeUsageDetail(jsonResponse.usage);
   const jsonCost = computeGeminiFlashLiteCost(jsonUsage);
 
 
+
   return {
-    jsonResult,
+    jsonResult: formattedJsonResult,
     jsonUsage,
     jsonCost,
     jsonDurationSec,

@@ -3,6 +3,7 @@ import { computeGeminiFlashLiteCost, computeUsageDetail } from "@/lib/usage-util
 import { generateObject } from "ai";
 import { z } from "zod";
 import { parkDetailsSchema } from "./fields";
+import { textURLSplit } from "@/config";
 
 const handleEvidenceText = ({
   value,
@@ -13,7 +14,7 @@ const handleEvidenceText = ({
     return ''
   if (!evidenceUrl || !evidenceText)
     return ''
-  return `${evidenceText}: ${evidenceUrl}`
+  return `${evidenceText}${textURLSplit}${evidenceUrl}`
 }
 
 

@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { testPark } from "./test-parks";
 
+const TEXT_URL_SPLIT = "@@@@@";
+
 type UsageDetails = {
   inputTokens?: number;
   outputTokens?: number;
@@ -21,6 +23,23 @@ type CurrencyCost = {
 type CostDetails = {
   usd: CurrencyCost;
   cny: CurrencyCost;
+  rates?: {
+    usdPerToken: {
+      input: number;
+      output: number;
+      url: number;
+    };
+    usdToCny: number;
+  };
+};
+
+type GoogleSearchFieldResult = {
+  field: string;
+  value: Record<string, string | number>;
+  usage?: UsageDetails;
+  cost?: CostDetails;
+  durationSec: number;
+  textWithContext?: string;
 };
 
 type GroundingMetadata = {
@@ -43,6 +62,10 @@ type ExtractResponse = {
   textDurationSec?: number;
   jsonDurationSec?: number;
   error?: string;
+  googleSearchUsage?: UsageDetails;
+  googleSearchCost?: CostDetails;
+  googleSearchDurationSec?: number;
+  googleSearchDetails?: GoogleSearchFieldResult[];
 };
 
 function formatCny(value?: number) {
@@ -51,6 +74,25 @@ function formatCny(value?: number) {
 
 function formatSeconds(value?: number) {
   return value === undefined ? "N/A" : `${value.toFixed(1)} s`;
+}
+
+function sumNumbers(values: (number | undefined)[]) {
+  return values.reduce<number | undefined>((acc, curr) => {
+    if (typeof curr !== "number") return acc;
+    return (acc ?? 0) + curr;
+  }, undefined);
+}
+
+function formatFieldName(field: string) {
+  return field
+    .replace(/([A-Z])/g, " $1")
+    .replace(/^./, (char) => char.toUpperCase());
+}
+
+function parseEvidence(source?: string) {
+  if (!source) return { text: "", url: "" };
+  const [text, url] = source.split(TEXT_URL_SPLIT);
+  return { text: text?.trim() ?? "", url: url?.trim() ?? "" };
 }
 
 function UsageList({ usage }: { usage?: UsageDetails }) {
@@ -63,58 +105,6 @@ function UsageList({ usage }: { usage?: UsageDetails }) {
       <li>URL tokens: {usage.urlTokens ?? "N/A"}</li>
       <li>Total tokens: {usage.totalTokens ?? "N/A"}</li>
     </ul>
-  );
-}
-
-function GroundingSupports({ metadata }: { metadata?: GroundingMetadata }) {
-  const supports = Array.isArray(metadata?.support) ? metadata.support : null;
-  const urls = Array.isArray(metadata?.urls) ? metadata.urls : null;
-
-  if ((!supports || supports.length === 0) && (!urls || urls.length === 0)) return null;
-
-  return (
-    <div className="mt-3 text-sm">
-      <div className="text-xs uppercase tracking-[0.08em] text-gray-400">Grounding Supports</div>
-      {urls && urls.length > 0 && (
-        <div className="mt-1 rounded border border-white/10 bg-black/40 p-3">
-          <div className="mb-2 text-gray-400">All URLs: </div>
-          <div className="mb-1 font-mono text-xs text-gray-100 break-words">{urls.join(',')}</div>
-        </div>
-      )}
-
-      <div className="mt-2 space-y-2">
-        {supports?.map((support, idx) => {
-          const confidenceScores = support.confidenceScores;
-          const segmentText = support.text;
-
-          return (
-            <div key={idx} className="rounded border border-white/10 bg-black/40 p-3">
-              {typeof support.urlIndex === "number" && (
-                <div className="text-gray-200">
-                  <span className="text-gray-400">URL:</span>{" "}
-                  <span className="font-mono text-xs text-gray-100">{urls?.[support.urlIndex]}</span>
-                </div>
-              )}
-              {segmentText && (
-                <div className="mt-1 text-gray-200">
-                  <span className="text-gray-400">Source:</span>{" "}
-                  <span className="font-mono text-xs text-gray-100">{segmentText}</span>
-                </div>
-              )}
-              {confidenceScores && (
-                <div className="text-gray-200">
-                  <span className="text-gray-400">Confidence Scores:</span>{" "}
-                  <span className="font-mono text-xs text-gray-100">
-                    {JSON.stringify(confidenceScores)}
-                  </span>
-                </div>
-              )}
-
-            </div>
-          );
-        })}
-      </div>
-    </div>
   );
 }
 
@@ -194,14 +184,67 @@ export default function NationalParksPage() {
       {error && <p className="mt-4 text-sm text-red-400">{error}</p>}
 
       {result && (
+        <div className="mt-5 rounded-lg border border-white/10 bg-white/5 p-4 shadow-sm">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <div className="text-xs uppercase tracking-[0.08em] text-gray-400">总览</div>
+              <h2 className="text-lg font-semibold text-white">总时间 & 总成本</h2>
+            </div>
+            <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-gray-100">
+              汇总
+            </span>
+          </div>
+          <div className="mt-3 grid gap-3 sm:grid-cols-2">
+            <div className="rounded border border-white/10 bg-black/30 p-3">
+              <div className="text-xs uppercase tracking-[0.08em] text-gray-400">总成本 (RMB)</div>
+              <p className="mt-1 text-xl font-semibold text-white">
+                {formatCny(
+                  sumNumbers([
+                    result.textCost?.cny.total,
+                    result.jsonCost?.cny.total,
+                    result.googleSearchCost?.cny.total,
+                  ]),
+                )}
+              </p>
+            </div>
+            <div className="rounded border border-white/10 bg-black/30 p-3">
+              <div className="text-xs uppercase tracking-[0.08em] text-gray-400">总时间</div>
+              <p className="mt-1 text-xl font-semibold text-white">
+                {formatSeconds(
+                  sumNumbers([
+                    result.textDurationSec,
+                    result.jsonDurationSec,
+                    result.googleSearchDurationSec,
+                  ]),
+                )}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {result && (
         <section className="mt-6 space-y-5">
+          {result.json ? (
+            <div className="rounded-lg border border-white/10 bg-white/5 p-4 shadow-sm">
+              <h2 className="mb-2 text-lg font-semibold text-white">JSON</h2>
+              <pre className="overflow-auto rounded border border-white/10 bg-black/40 p-3 text-xs text-gray-100">
+                {JSON.stringify(result.json, null, 2)}
+              </pre>
+              <div className="mt-3 text-sm text-gray-200">
+                <div className="text-xs uppercase tracking-[0.08em] text-gray-400">Cost</div>
+                <p className="mt-1">Total RMB: <strong className="text-white">{formatCny(result.jsonCost?.cny.total)}</strong></p>
+                <p className="mt-1">Processing time: <strong className="text-white">{formatSeconds(result.jsonDurationSec)}</strong></p>
+              </div>
+            </div>
+          ) : null}
+
           {result.text && (
             <div className="rounded-lg border border-white/10 bg-white/5 p-4 shadow-sm">
               <h2 className="mb-2 text-lg font-semibold text-white">Extracted Text</h2>
               <p className="whitespace-pre-wrap text-sm leading-relaxed text-gray-200">
                 {result.text}
               </p>
-              <GroundingSupports metadata={result.groundingMetadata} />
               <div className="mt-3 text-sm text-gray-200">
                 <div className="text-xs uppercase tracking-[0.08em] text-gray-400">Cost</div>
                 <p className="mt-1">Total RMB: <strong className="text-white">{formatCny(result.textCost?.cny.total)}</strong></p>
@@ -214,21 +257,113 @@ export default function NationalParksPage() {
             </div>
           )}
 
-          {result.json ? (
-            <div className="rounded-lg border border-white/10 bg-white/5 p-4 shadow-sm">
-              <h2 className="mb-2 text-lg font-semibold text-white">JSON</h2>
-              <pre className="overflow-auto rounded border border-white/10 bg-black/40 p-3 text-xs text-gray-100">
-                {JSON.stringify(result.json, null, 2)}
-              </pre>
-              <div className="mt-3 text-sm text-gray-200">
-                <div className="text-xs uppercase tracking-[0.08em] text-gray-400">Cost</div>
-                <p className="mt-1">Total RMB: <strong className="text-white">{formatCny(result.jsonCost?.cny.total)}</strong></p>
-                <p className="mt-1">Processing time: <strong className="text-white">{formatSeconds(result.jsonDurationSec)}</strong></p>
+          {result.googleSearchDetails || result.googleSearchUsage ? (
+            <div className="rounded-lg border border-amber-200/30 bg-amber-200/5 p-4 shadow-sm">
+              <div className="flex items-start justify-between gap-3">
+                <div>
+                  <h2 className="text-lg font-semibold text-white">Google Search补充</h2>
+                  <p className="text-sm text-amber-100/80">
+                    当 Wikipedia 缺字段时，用 Google 搜索补齐。
+                  </p>
+                </div>
+                {result.googleSearchDetails?.length ? (
+                  <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-amber-100">
+                    {result.googleSearchDetails.length} 个字段
+                  </span>
+                ) : null}
               </div>
+
+              <div className="mt-3 text-sm text-gray-200">
+                <div className="text-xs uppercase tracking-[0.08em] text-gray-400">Summary</div>
+                <p className="mt-1">
+                  总成本（RMB）:{" "}
+                  <strong className="text-white">
+                    {formatCny(result.googleSearchCost?.cny.total)}
+                  </strong>
+                </p>
+                <p className="mt-1">
+                  耗时:{" "}
+                  <strong className="text-white">
+                    {formatSeconds(result.googleSearchDurationSec)}
+                  </strong>
+                </p>
+              </div>
+
               <div className="mt-2">
                 <div className="text-xs uppercase tracking-[0.08em] text-gray-400">Usage</div>
-                <UsageList usage={result.jsonUsage} />
+                <UsageList usage={result.googleSearchUsage} />
               </div>
+
+              {result.googleSearchDetails?.length ? (
+                <div className="mt-4 space-y-3">
+                  {result.googleSearchDetails.map((detail) => {
+                    const mainValue = detail.value[detail.field];
+                    const sourceRaw = detail.value[`${detail.field}Source`];
+                    const { text: evidenceText, url: evidenceUrl } =
+                      typeof sourceRaw === "string" ? parseEvidence(sourceRaw) : { text: "", url: "" };
+
+                    return (
+                      <div
+                        key={detail.field}
+                        className="rounded border border-amber-200/30 bg-black/40 p-3"
+                      >
+                        <div className="flex flex-wrap items-center justify-between gap-2">
+                          <div className="text-base font-semibold text-white">
+                            {formatFieldName(detail.field)}
+                          </div>
+                          <div className="text-xs text-amber-100/80">
+                            耗时 {formatSeconds(detail.durationSec)}
+                          </div>
+                        </div>
+
+                        <div className="mt-2 text-sm text-gray-200">
+                          <span className="text-gray-400">Value:</span>{" "}
+                          <span className="font-mono text-xs text-gray-100">
+                            {String(mainValue ?? "") || "未找到"}
+                          </span>
+                        </div>
+
+                        {evidenceText && (
+                          <div className="mt-2">
+                            <div className="text-xs uppercase tracking-[0.08em] text-gray-400">
+                              Evidence
+                            </div>
+                            <p className="mt-1 whitespace-pre-wrap font-mono text-xs text-gray-100">
+                              {evidenceText}
+                            </p>
+                            {evidenceUrl && (
+                              <a
+                                href={evidenceUrl}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="mt-1 inline-flex items-center text-xs text-amber-200 underline underline-offset-2"
+                              >
+                                来源链接
+                              </a>
+                            )}
+                          </div>
+                        )}
+
+                        {detail.textWithContext && (
+                          <details className="mt-2 rounded border border-white/5 bg-white/5 p-2">
+                            <summary className="cursor-pointer text-xs text-gray-300">
+                              查看 Google 搜索响应
+                            </summary>
+                            <pre className="mt-2 overflow-auto whitespace-pre-wrap text-[11px] leading-relaxed text-gray-100">
+                              {detail.textWithContext}
+                            </pre>
+                          </details>
+                        )}
+
+                        <div className="mt-2">
+                          <div className="text-xs uppercase tracking-[0.08em] text-gray-400">Usage</div>
+                          <UsageList usage={detail.usage} />
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              ) : null}
             </div>
           ) : null}
         </section>

@@ -1,9 +1,11 @@
+import { computeGeminiFlashLiteCost } from "@/lib/usage-utils";
+import type { CostDetail, UsageDetail } from "@/lib/usage-utils";
 import { extractParkText } from "./extract/extract-park-text";
 import { transformParkTextToJson } from "./extract/transform-park-text";
+import { findFieldsNeedingGoogleSearch, searchMissingFieldWithGoogle, sumUsageTotals } from "./extract/google-search-missing-fields";
+import type { GoogleSearchFieldResult } from "./extract/google-search-missing-fields";
 
 export const runtime = "nodejs";
-
-
 
 export async function POST(req: Request) {
   try {
@@ -34,10 +36,46 @@ export async function POST(req: Request) {
       jsonDurationSec,
     } = await transformParkTextToJson(text, url);
 
+    let finalJsonResult = jsonResult;
+    let googleSearchUsage: UsageDetail | undefined;
+    let googleSearchCost: CostDetail | undefined;
+    let googleSearchDurationSec: number | undefined;
+    let googleSearchDetails: GoogleSearchFieldResult[] | undefined;
+
+    const fieldsNeedingGoogle = findFieldsNeedingGoogleSearch(jsonResult);
+    if (fieldsNeedingGoogle.length > 0 && fieldsNeedingGoogle.length <= 3) {
+      const perFieldResults: GoogleSearchFieldResult[] = [];
+
+      for (const field of fieldsNeedingGoogle) {
+        const result = await searchMissingFieldWithGoogle({
+          parkName: name,
+          wikiUrl: url,
+          field,
+        });
+        perFieldResults.push(result);
+
+        const valueIsMissing = result.value === -1 || result.value === "";
+        if (!valueIsMissing) {
+          finalJsonResult = {
+            ...finalJsonResult,
+            [field]: result.value,
+            [`${field}Source`]: result.source ?? "",
+          };
+        }
+      }
+
+      googleSearchDetails = perFieldResults;
+      googleSearchUsage = sumUsageTotals(perFieldResults.map(item => item.usage));
+      googleSearchCost = computeGeminiFlashLiteCost(googleSearchUsage);
+      googleSearchDurationSec = Number(
+        perFieldResults.reduce((sum, item) => sum + item.durationSec, 0).toFixed(1),
+      );
+    }
+
     return new Response(
       JSON.stringify({
         text,
-        json: jsonResult,
+        json: finalJsonResult,
         textUsage,
         jsonUsage,
         textCost,
@@ -46,6 +84,10 @@ export async function POST(req: Request) {
         groundingMetadata,
         textDurationSec,
         jsonDurationSec,
+        googleSearchUsage,
+        googleSearchCost,
+        googleSearchDurationSec,
+        googleSearchDetails,
       }),
       { status: 200, headers: { "Content-Type": "application/json" } },
     );

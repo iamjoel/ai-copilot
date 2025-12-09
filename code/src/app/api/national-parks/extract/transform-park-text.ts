@@ -2,6 +2,7 @@ import { getModel } from "@/lib/model-factory";
 import { computeGeminiFlashLiteCost, computeUsageDetail } from "@/lib/usage-utils";
 import { generateObject } from "ai";
 import { z } from "zod";
+import { parkDetailsSchema } from "./fields";
 
 const handleEvidenceText = ({
   value,
@@ -15,67 +16,7 @@ const handleEvidenceText = ({
   return `${evidenceText}: ${evidenceUrl}`
 }
 
-export const parkDetailsSchema = z.object({
-  officialWebsite: z
-    .string()
-    .describe("Official website URL of the park. Return an empty string if not found."),
-  officialWebsiteSource: z
-    .string()
-    .describe("Evidence text for officialWebsite; empty string if not found."),
-  // Ecological Integrity
-  level: z
-    .number()
-    .describe("Level of the park: 2 if it is a World Heritage site, otherwise 1."),
-  levelSource: z
-    .string()
-    .describe("Evidence text for level; empty string if not found."),
-  speciesCount: z
-    .number()
-    .describe("Total number of species in the park. Return -1 if not stated."),
-  speciesCountSource: z
-    .string()
-    .describe("Evidence text for speciesCount; empty string if not found."),
-  endangeredSpecies: z
-    .number()
-    .describe("Count of endangered species listed in the IUCN Red List. Return -1 if not stated."),
-  endangeredSpeciesSource: z
-    .string()
-    .describe("Evidence text for endangeredSpecies; empty string if not found."),
-  forestCoverage: z
-    .number()
-    .describe("Forest coverage percentage with one decimal place (e.g., 95.9). Return -1 if not stated."),
-  forestCoverageSource: z
-    .string()
-    .describe("Evidence text for forestCoverage; empty string if not found."),
-  // Governance Resilience
-  area: z
-    .number()
-    .describe("Total area of the park in square kilometers. Convert to km² if another unit is provided. Return -1 if missing."),
-  areaSource: z
-    .string()
-    .describe("Evidence text for area; empty string if not found."),
-  establishedYear: z
-    .number()
-    .describe("Year the park was established; Use four digits format. Return -1 if the text does not contain it."),
-  establishedYearSource: z
-    .string()
-    .describe("Evidence text for establishedYear; empty string if not found."),
-  internationalCert: z
-    .number()
-    .describe("International certification flag: 1 if the park is a World Heritage site or a Biosphere Reserve, otherwise 0."),
-  internationalCertSource: z
-    .string()
-    .describe("Evidence text for internationalCert; empty string if not found."),
-  // Nature Immersion
-  annualVisitors: z
-    .number()
-    .describe(
-      "Annual visitors expressed as an integer count of ten-thousands of people. Convert from other units if needed, round to the nearest whole ten-thousand, otherwise return -1."
-    ),
-  annualVisitorsSource: z
-    .string()
-    .describe("Evidence text for annualVisitors; empty string if not found."),
-});
+
 
 export type ParkDetails = z.infer<typeof parkDetailsSchema>;
 export type ParkDetailSources = {

@@ -62,6 +62,30 @@ export function computeUsageDetail(rawUsage: unknown): UsageDetail | undefined {
   };
 }
 
+export function computeUsageDetailsSum(
+  rawUsages: (unknown)[],
+): (UsageDetail | undefined) {
+  return rawUsages.reduce<(UsageDetail | undefined)>((acc, rawUsage, index) => {
+    const usage = computeUsageDetail(rawUsage);
+    return {
+      inputTokens: (acc!.inputTokens ?? 0) + (usage?.inputTokens ?? 0),
+      outputTokens: (acc!.outputTokens ?? 0) + (usage?.outputTokens ?? 0),
+      totalTokens: (acc!.totalTokens ?? 0) + (usage?.totalTokens ?? 0),
+      urlTokens: (acc!.urlTokens ?? 0) + (usage?.urlTokens ?? 0),
+      raw: {
+        ...(acc!.raw ?? {}),
+        [index]: usage,
+      },
+    }
+  }, {
+    inputTokens: 0,
+    outputTokens: 0,
+    totalTokens: 0,
+    urlTokens: 0,
+    raw: rawUsages,
+  });
+}
+
 export function computeGeminiFlashLiteCost(
   usage: UsageDetail | undefined,
   rates = GEMINI_FLASH_LITE_RATES,

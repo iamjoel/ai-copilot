@@ -15,3 +15,5 @@ export function getModel(provider: Provider, modelName: string) {
   const client = createOpenAI({ apiKey: process.env.OPENAI_API_KEY! });
   return client(modelName);
 }
+
+export const gemini25FlashLiteModel = getModel("google", "models/gemini-2.5-flash-lite");

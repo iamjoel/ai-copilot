@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { getModel } from "@/lib/model-factory";
 import { computeGeminiFlashLiteCost, computeUsageDetail } from "@/lib/usage-utils";
 import { google } from "@ai-sdk/google";
@@ -103,16 +104,16 @@ Hard constraints:
 
   const textUsage = computeUsageDetail(textResponse.totalUsage ?? textResponse.usage);
   const textCost = computeGeminiFlashLiteCost(textUsage);
-  const rawGrounding = textResponse.providerMetadata?.google?.groundingMetadata;
+  const rawGrounding: any = textResponse.providerMetadata?.google?.groundingMetadata;
   const groundingMetadata = rawGrounding
     ? {
       urls: Array.isArray(rawGrounding.groundingChunks)
         ? rawGrounding.groundingChunks
           .map((chunk: unknown) => (chunk as any)?.retrievedContext?.uri || (chunk as any)?.web?.uri)
-          .filter((uri): uri is string => typeof uri === "string")
+          .filter((uri: string) => typeof uri === "string")
         : [],
       support: Array.isArray(rawGrounding.groundingSupports)
-        ? rawGrounding.groundingSupports.filter(item => !!item.segment?.text).map((item: unknown) => {
+        ? rawGrounding.groundingSupports.filter((item: any) => !!item.segment?.text).map((item: unknown) => {
           const support = item as {
             confidenceScores?: unknown;
             segment?: { text?: string };

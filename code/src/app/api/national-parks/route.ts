@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { computeGeminiFlashLiteCost } from "@/lib/usage-utils";
 import type { CostDetail, UsageDetail } from "@/lib/usage-utils";
 import { extractParkText } from "./extract/extract-park-text";
@@ -54,14 +55,10 @@ export async function POST(req: Request) {
         });
         perFieldResults.push(result);
 
-        const valueIsMissing = result.value === -1 || result.value === "";
-        if (!valueIsMissing) {
-          finalJsonResult = {
-            ...finalJsonResult,
-            [field]: result.value,
-            [`${field}Source`]: result.source ?? "",
-          };
-        }
+        finalJsonResult = {
+          ...finalJsonResult,
+          ...result.value as any,
+        };
       }
 
       googleSearchDetails = perFieldResults;

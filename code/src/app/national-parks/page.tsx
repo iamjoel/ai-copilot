@@ -120,8 +120,8 @@ function GroundingSupports({ metadata }: { metadata?: GroundingMetadata }) {
 
 
 export default function NationalParksPage() {
-  const [parkName, setParkName] = useState(testPark.name);
-  const [wikiUrl, setWikiUrl] = useState(testPark.wiki);
+  const [parkName, setParkName] = useState(testPark?.name);
+  const [wikiUrl, setWikiUrl] = useState(testPark?.wiki);
   const [result, setResult] = useState<ExtractResponse | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -130,7 +130,7 @@ export default function NationalParksPage() {
     event.preventDefault();
     setError(null);
     setResult(null);
-    if (!parkName.trim() || !wikiUrl.trim()) {
+    if (!parkName?.trim() || !wikiUrl?.trim()) {
       setError("Please provide both the park name and its Wikipedia link.");
       return;
     }
@@ -214,7 +214,7 @@ export default function NationalParksPage() {
             </div>
           )}
 
-          {result.json && (
+          {result.json ? (
             <div className="rounded-lg border border-white/10 bg-white/5 p-4 shadow-sm">
               <h2 className="mb-2 text-lg font-semibold text-white">JSON</h2>
               <pre className="overflow-auto rounded border border-white/10 bg-black/40 p-3 text-xs text-gray-100">
@@ -230,7 +230,7 @@ export default function NationalParksPage() {
                 <UsageList usage={result.jsonUsage} />
               </div>
             </div>
-          )}
+          ) : null}
         </section>
       )}
     </main>

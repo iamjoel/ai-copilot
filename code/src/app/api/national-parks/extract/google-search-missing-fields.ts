@@ -3,8 +3,9 @@ import { gemini25FlashLiteModel } from "@/lib/model-factory";
 import { computeGeminiFlashLiteCost, computeUsageDetailsSum, UsageDetail } from "@/lib/usage-utils";
 import { google } from "@ai-sdk/google";
 import { generateObject, generateText } from "ai";
-import { ParkDetailSources, ParkDetails } from "./transform-park-text";
-import fields, { getFieldSchema } from "./fields";
+import { ParkDetailSources, ParkDetails } from "./park-info-to-json";
+import fields, { getFieldSchema, parkDetailsSchema } from "./fields";
+import { z } from "zod";
 
 export type NonSourceKey = Exclude<keyof ParkDetails, keyof ParkDetailSources>;
 
@@ -14,6 +15,7 @@ export type GoogleSearchFieldResult = {
   usage?: UsageDetail;
   cost?: ReturnType<typeof computeGeminiFlashLiteCost>;
   durationSec: number;
+  textWithContext?: string;
 };
 
 const FIELD_ORDER: NonSourceKey[] = [
@@ -38,24 +40,7 @@ export function findFieldsNeedingGoogleSearch(jsonResult: ParkDetails): NonSourc
 
 
 function buildPrompt(parkName: string, field: NonSourceKey) {
-  const prompt = `You are a data extraction assistant.
-You are filling one missing field for the national park "${parkName}".
-The missing field: ${fields[field]}.
-Your goal is to find the most reliable, up-to-date value for this field using Google search.
-
-Output format(strict):
-${field}: <A one-sentence summary. If not found, say not specify>
-
-If is found, also include:
-  Evidence: <verbatim text copied from the page>
-
-For example:
-\`\`\`
-
-Official website: The official website is www.examplepark.org.
-Evidence: Official website: www.examplepark.org
-
-2. World Heritage site: Not specify.
+  const prompt = `
 \`\`\`
 `
   return prompt;
@@ -107,7 +92,35 @@ async function searchFieldWithGoogle({
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const response = await generateText<any>({
     model: gemini25FlashLiteModel,
-    prompt: buildPrompt(parkName, field),
+    prompt: `
+You are a data extraction assistant.
+
+You are filling one missing field for the national park "${parkName}".
+The missing field name is "${field}", and here is its field description:
+${fields[field]}
+
+Your goal is to find the most reliable, up-to-date value for this field using Google search.
+
+Formatting rules (STRICT):
+- You MUST output **exactly three lines**, nothing more.
+- Line 1 MUST start with: ${field}:
+- Line 2 MUST start with: Evidence:
+- Line 3 MUST start with: <the URL of the page where you found the evidence>
+- Do NOT add any explanation, comments, or extra text.
+- Do NOT wrap the answer in quotes or code blocks.
+- Do NOT output any text before or after these three lines.
+
+If the value IS found, use this exact format:
+${field}: <a one-sentence summary of the value. If multiple numbers are given for different groups (e.g. mammals, birds, fish, amphibians, reptiles, plants), sum them up and give the total species count here.>
+Evidence: <verbatim text copied from the page>
+EvidenceURL: <url of the page>
+
+If the value is NOT found, use this exact format:
+${field}: not specify
+Evidence:
+EvidenceURL:
+
+Now produce your answer following the rules above.`,
     // schema,
     maxRetries: 1,
     tools: {
@@ -116,27 +129,27 @@ async function searchFieldWithGoogle({
     },
   });
 
-  console.log(response)
+  const textWithContext = response.text;
 
-  const durationSec = Number(((Date.now() - searchStartedAt) / 1000).toFixed(1));
 
   const jsonResponse = await generateObject<any>({
     model: gemini25FlashLiteModel,
     schema: getFieldSchema(field),
-    prompt:
-      `You will receive text about a national park. Using only that text (do not browse the web), ` +
-      `return a JSON object that captures the park's details. If a field is not explicitly present, follow the fallback rule from its description. ` +
-      `For the field, also return the corresponding "...Source" string with the verbatim evidence text (everything after "Evidence:") or an empty string if not found. Preserve line breaks in evidence.\n\n` +
-      `Text:\n${response.text ?? ""}`,
+    prompt: `
+You will receive text about a national park. Using only that text (do not browse the web), 
+For the field, also return the corresponding "...Source" string with the verbatim evidence text (everything after "Evidence:") or an empty string if not found. Preserve line breaks in evidence.
+Text:\n${textWithContext ?? ""}`,
     maxRetries: 1,
   })
 
   const usage = computeUsageDetailsSum([response.usage, jsonResponse.usage]);
   const cost = computeGeminiFlashLiteCost(usage);
+  const durationSec = Number(((Date.now() - searchStartedAt) / 1000).toFixed(1));
 
   return {
     field,
-    value: jsonResponse.object.value as Record<NonSourceKey, string | number>,
+    textWithContext,
+    value: jsonResponse.object as Record<NonSourceKey, string | number>,
     usage,
     cost,
     durationSec,

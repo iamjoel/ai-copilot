@@ -4,7 +4,7 @@ const fields = {
   officialWebsite: 'Official website URL of the park. Return an empty string if not found.',
   // Ecological Integrity
   level: 'Level of the park: 2 if it is a World Heritage site, otherwise 1.',
-  speciesCount: 'Total number of species in the park. Return -1 if not stated.',
+  speciesCount: 'Total number of species in the park, including ALL ANIMAL and PLANT species.If the text gives separate counts for different groups (e.g. mammals, birds, fish, amphibians, reptiles, plants), sum them up.Return -1 if not stated.',
   endangeredSpecies: 'Count of endangered species listed in the IUCN Red List. Return -1 if not stated.',
   forestCoverage: 'Forest coverage percentage with one decimal place (e.g., 95.9). Return -1 if not stated.',
   // Governance Resilience
@@ -75,10 +75,25 @@ export const parkDetailsSchema = z.object({
     .describe("Evidence text for annualVisitors; empty string if not found."),
 });
 
+const fieldsSourceUrl = z.object({
+  officialWebsiteSourceUrl: z.string().url().describe("URL source for officialWebsite; empty string if not found."),
+  levelSourceUrl: z.string().url().describe("URL source for level; empty string if not found."),
+  speciesCountSourceUrl: z.string().url().describe("URL source for speciesCount; empty string if not found."),
+  endangeredSpeciesSourceUrl: z.string().url().describe("URL source for endangeredSpecies; empty string if not found."),
+  forestCoverageSourceUrl: z.string().url().describe("URL source for forestCoverage; empty string if not found."),
+  areaSourceUrl: z.string().url().describe("URL source for area; empty string if not found."),
+  establishedYearSourceUrl: z.string().url().describe("URL source for establishedYear; empty string if not found."),
+  internationalCertSourceUrl: z.string().url().describe("URL source for internationalCert; empty string if not found."),
+  annualVisitorsSourceUrl: z.string().url().describe("URL source for annualVisitors; empty string if not found."),
+})
+
+const parkDetailsWithSourceUrlSchema = parkDetailsSchema.merge(fieldsSourceUrl);
+
 export const getFieldSchema = (key: keyof typeof fields) => {
-  return parkDetailsSchema.pick({
+  return parkDetailsWithSourceUrlSchema.pick({
     [key]: true,
     [`${key}Source`]: true,
+    [`${key}SourceUrl`]: true,
   } as { [K in keyof typeof fields]?: true });
 }
 

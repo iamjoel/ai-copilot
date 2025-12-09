@@ -76,15 +76,15 @@ export const parkDetailsSchema = z.object({
 });
 
 const fieldsSourceUrl = z.object({
-  officialWebsiteSourceUrl: z.string().url().describe("URL source for officialWebsite; empty string if not found."),
-  levelSourceUrl: z.string().url().describe("URL source for level; empty string if not found."),
-  speciesCountSourceUrl: z.string().url().describe("URL source for speciesCount; empty string if not found."),
-  endangeredSpeciesSourceUrl: z.string().url().describe("URL source for endangeredSpecies; empty string if not found."),
-  forestCoverageSourceUrl: z.string().url().describe("URL source for forestCoverage; empty string if not found."),
-  areaSourceUrl: z.string().url().describe("URL source for area; empty string if not found."),
-  establishedYearSourceUrl: z.string().url().describe("URL source for establishedYear; empty string if not found."),
-  internationalCertSourceUrl: z.string().url().describe("URL source for internationalCert; empty string if not found."),
-  annualVisitorsSourceUrl: z.string().url().describe("URL source for annualVisitors; empty string if not found."),
+  officialWebsiteSourceUrl: z.string().describe("URL source for officialWebsite; empty string if not found."),
+  levelSourceUrl: z.string().describe("URL source for level; empty string if not found."),
+  speciesCountSourceUrl: z.string().describe("URL source for speciesCount; empty string if not found."),
+  endangeredSpeciesSourceUrl: z.string().describe("URL source for endangeredSpecies; empty string if not found."),
+  forestCoverageSourceUrl: z.string().describe("URL source for forestCoverage; empty string if not found."),
+  areaSourceUrl: z.string().describe("URL source for area; empty string if not found."),
+  establishedYearSourceUrl: z.string().describe("URL source for establishedYear; empty string if not found."),
+  internationalCertSourceUrl: z.string().describe("URL source for internationalCert; empty string if not found."),
+  annualVisitorsSourceUrl: z.string().describe("URL source for annualVisitors; empty string if not found."),
 })
 
 const parkDetailsWithSourceUrlSchema = parkDetailsSchema.merge(fieldsSourceUrl);

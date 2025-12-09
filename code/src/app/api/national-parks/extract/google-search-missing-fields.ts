@@ -4,8 +4,8 @@ import { computeGeminiFlashLiteCost, computeUsageDetailsSum, UsageDetail } from 
 import { google } from "@ai-sdk/google";
 import { generateObject, generateText } from "ai";
 import { ParkDetailSources, ParkDetails } from "./park-info-to-json";
-import fields, { getFieldSchema, parkDetailsSchema } from "./fields";
-import { z } from "zod";
+import fields, { getFieldSchema } from "./fields";
+import { textURLSplit } from "@/config";
 
 export type NonSourceKey = Exclude<keyof ParkDetails, keyof ParkDetailSources>;
 
@@ -36,14 +36,6 @@ export function findFieldsNeedingGoogleSearch(jsonResult: ParkDetails): NonSourc
     return value === -1 || value === "";
   });
   return missing;
-}
-
-
-function buildPrompt(parkName: string, field: NonSourceKey) {
-  const prompt = `
-\`\`\`
-`
-  return prompt;
 }
 
 export function sumUsageTotals(usages: (UsageDetail | undefined)[]): UsageDetail | undefined {
@@ -121,7 +113,6 @@ Evidence:
 EvidenceURL:
 
 Now produce your answer following the rules above.`,
-    // schema,
     maxRetries: 1,
     tools: {
       google_search: google.tools.googleSearch({}),
@@ -144,12 +135,17 @@ Text:\n${textWithContext ?? ""}`,
 
   const usage = computeUsageDetailsSum([response.usage, jsonResponse.usage]);
   const cost = computeGeminiFlashLiteCost(usage);
+  const json = jsonResponse.object
+  const jsonResult = {
+    [field]: json[field],
+    [`${field}Source`]: json[`${field}Source`] && json[`${field}SourceUrl`] ? `${json[`${field}Source`]}${textURLSplit}${json[`${field}SourceUrl`]}` : "",
+  }
   const durationSec = Number(((Date.now() - searchStartedAt) / 1000).toFixed(1));
 
   return {
     field,
     textWithContext,
-    value: jsonResponse.object as Record<NonSourceKey, string | number>,
+    value: jsonResult as Record<NonSourceKey, string | number>,
     usage,
     cost,
     durationSec,

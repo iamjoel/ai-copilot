@@ -37,7 +37,16 @@ export async function POST(req: Request) {
       jsonDurationSec,
     } = await transformParkTextToJson(text, url);
 
-    let finalJsonResult = jsonResult;
+    let finalJsonResult = (() => {
+      // sort the keys
+      const res: Record<string, any> = {}
+      Object.keys(jsonResult).filter(key => !key.endsWith("SourceText") && !key.endsWith("SourceUrl")).forEach((key) => {
+        res[key] = jsonResult[key as keyof typeof jsonResult];
+        res[`${key}SourceText`] = jsonResult[`${key}SourceText` as keyof typeof jsonResult];
+        res[`${key}SourceUrl`] = jsonResult[`${key}SourceUrl` as keyof typeof jsonResult];
+      });
+      return res;
+    })()
     let googleSearchUsage: UsageDetail | undefined;
     let googleSearchCost: CostDetail | undefined;
     let googleSearchDurationSec: number | undefined;

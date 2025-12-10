@@ -1,5 +1,5 @@
+import { FieldsType } from "../extract/fields";
 import { searchMissingFieldWithGoogle } from "../extract/google-search-missing-fields";
-import type { FieldsType } from "../extract/google-search-missing-fields";
 import { isGoogleSearchField } from "@/app/national-parks/google-search-fields";
 
 export const runtime = "nodejs";

@@ -30,7 +30,7 @@ export async function transformParkTextToJson(text: string, sourceUrl: string): 
     ...jsonResult,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } as any;
-  Object.keys(jsonResult).filter(key => !key.endsWith("Source")).forEach((key) => {
+  Object.keys(jsonResult).filter(key => !key.endsWith("SourceText")).forEach((key) => {
     formattedJsonResult[`${key}SourceUrl`] = sourceUrl;
   })
 

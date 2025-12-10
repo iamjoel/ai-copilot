@@ -15,86 +15,79 @@ const fields = {
   annualVisitors: "Annual visitors as an integer count of ten-thousands of people. Return -1 if not stated.",
 }
 
+export type FieldsType = keyof typeof fields;
+
+const getSourceTextFieldDescription = (key: keyof typeof fields) => {
+  return `Evidence text for ${key}; empty string if not found.` as const;
+}
+
+const getSourceUrlFieldDescription = (key: keyof typeof fields) => {
+  return `URL source for ${key}; empty string if not found.` as const;
+}
+
+
 export const parkDetailsSchema = z.object({
-  officialWebsite: z
-    .string()
-    .describe(fields.officialWebsite),
-  officialWebsiteSource: z
-    .string()
-    .describe("Evidence text for officialWebsite; empty string if not found."),
+  officialWebsite: z.string().describe(fields.officialWebsite),
   // Ecological Integrity
-  level: z
-    .number()
-    .describe(fields.level),
-  levelSource: z
-    .string()
-    .describe("Evidence text for level; empty string if not found."),
-  speciesCount: z
-    .number()
-    .describe(fields.speciesCount),
-  speciesCountSource: z
-    .string()
-    .describe("Evidence text for speciesCount; empty string if not found."),
-  endangeredSpecies: z
-    .number()
-    .describe(fields.endangeredSpecies),
-  endangeredSpeciesSource: z
-    .string()
-    .describe("Evidence text for endangeredSpecies; empty string if not found."),
-  forestCoverage: z
-    .number()
-    .describe(fields.forestCoverage),
-  forestCoverageSource: z
-    .string()
-    .describe("Evidence text for forestCoverage; empty string if not found."),
+  level: z.number().describe(fields.level),
+  speciesCount: z.number().describe(fields.speciesCount),
+  endangeredSpecies: z.number().describe(fields.endangeredSpecies),
+  forestCoverage: z.number().describe(fields.forestCoverage),
+
   // Governance Resilience
-  area: z
-    .number()
-    .describe(fields.area),
-  areaSource: z
-    .string()
-    .describe("Evidence text for area; empty string if not found."),
-  establishedYear: z
-    .number()
-    .describe(fields.establishedYear),
-  establishedYearSource: z
-    .string()
-    .describe("Evidence text for establishedYear; empty string if not found."),
-  internationalCert: z
-    .number()
-    .describe(fields.internationalCert),
-  internationalCertSource: z
-    .string()
-    .describe("Evidence text for internationalCert; empty string if not found."),
+  area: z.number().describe(fields.area),
+  establishedYear: z.number().describe(fields.establishedYear),
+  internationalCert: z.number().describe(fields.internationalCert),
+
   // Nature Immersion
-  annualVisitors: z
-    .number()
-    .describe(fields.annualVisitors),
-  annualVisitorsSource: z
-    .string()
-    .describe("Evidence text for annualVisitors; empty string if not found."),
+  annualVisitors: z.number().describe(fields.annualVisitors),
 });
 
-const fieldsSourceUrl = z.object({
-  officialWebsiteSourceUrl: z.string().describe("URL source for officialWebsite; empty string if not found."),
-  levelSourceUrl: z.string().describe("URL source for level; empty string if not found."),
-  speciesCountSourceUrl: z.string().describe("URL source for speciesCount; empty string if not found."),
-  endangeredSpeciesSourceUrl: z.string().describe("URL source for endangeredSpecies; empty string if not found."),
-  forestCoverageSourceUrl: z.string().describe("URL source for forestCoverage; empty string if not found."),
-  areaSourceUrl: z.string().describe("URL source for area; empty string if not found."),
-  establishedYearSourceUrl: z.string().describe("URL source for establishedYear; empty string if not found."),
-  internationalCertSourceUrl: z.string().describe("URL source for internationalCert; empty string if not found."),
-  annualVisitorsSourceUrl: z.string().describe("URL source for annualVisitors; empty string if not found."),
-})
+export type ParkDetail = z.infer<typeof parkDetailsSchema>;
 
-const parkDetailsWithSourceUrlSchema = parkDetailsSchema.merge(fieldsSourceUrl);
+type FieldKey = keyof typeof fields;
+type SourceSchemaKey = `${FieldKey}SourceText` | `${FieldKey}SourceUrl`;
+
+export const parkSchemaWithSourceText = (() => {
+  const schema = z.object(
+    (Object.keys(fields) as FieldKey[]).reduce((shape, key) => {
+      const textKey = `${key}SourceText` as SourceSchemaKey;
+      shape[textKey] = z.string().describe(getSourceTextFieldDescription(key));
+      return shape;
+    }, {} as Record<SourceSchemaKey, z.ZodString>))
+  return parkDetailsSchema.merge(schema);
+})();
+
+export const parkSchemaWithSourceUrl = (() => {
+  const schema = z.object(
+    (Object.keys(fields) as FieldKey[]).reduce((shape, key) => {
+      const urlKey = `${key}SourceUrl` as SourceSchemaKey;
+      shape[urlKey] = z.string().describe(getSourceUrlFieldDescription(key));
+      return shape;
+    }, {} as Record<SourceSchemaKey, z.ZodString>)
+  )
+  return parkDetailsSchema.merge(schema);
+})();
+
+export const parkSchemaWithSource = (() => {
+  const schema = z.object(
+    (Object.keys(fields) as FieldKey[]).reduce((shape, key) => {
+      const textKey = `${key}SourceText` as SourceSchemaKey;
+      const urlKey = `${key}SourceUrl` as SourceSchemaKey;
+      shape[textKey] = z.string().describe(getSourceTextFieldDescription(key));
+      shape[urlKey] = z.string().describe(getSourceUrlFieldDescription(key));
+      return shape;
+    }, {} as Record<SourceSchemaKey, z.ZodString>)
+  );
+  return parkDetailsSchema.merge(schema);
+})();
+
 
 export const getFieldSchema = (key: keyof typeof fields) => {
-  return parkDetailsWithSourceUrlSchema.pick({
-    [key]: true,
-    [`${key}Source`]: true,
+  return parkSchemaWithSource.pick({
+    [`${key}SourceText`]: true,
     [`${key}SourceUrl`]: true,
-  } as { [K in keyof typeof fields]?: true });
+  } as { [K in keyof typeof parkSchemaWithSource.shape]?: true });
 }
 
 export default fields;

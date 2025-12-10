@@ -1,50 +1,21 @@
 import { getModel } from "@/lib/model-factory";
 import { computeGeminiFlashLiteCost, computeUsageDetail } from "@/lib/usage-utils";
 import { generateObject } from "ai";
-import { z } from "zod";
-import { parkDetailsSchema } from "./fields";
-import { textURLSplit } from "@/config";
+import { ParkDetail, parkSchemaWithSourceText } from "./fields";
 
-const handleEvidenceText = ({
-  value,
-  evidenceText,
-  evidenceUrl,
-}: { value?: string | number; evidenceText: string; evidenceUrl: string }) => {
-  if (!value || value === -1 || value === '')
-    return ''
-  if (!evidenceUrl || !evidenceText)
-    return ''
-  return `${evidenceText}${textURLSplit}${evidenceUrl}`
-}
-
-
-
-export type ParkDetails = z.infer<typeof parkDetailsSchema>;
-export type ParkDetailSources = {
-  officialWebsiteSource: string;
-  levelSource: string;
-  speciesCountSource: string;
-  endangeredSpeciesSource: string;
-  forestCoverageSource: string;
-  areaSource: string;
-  establishedYearSource: string;
-  internationalCertSource: string;
-  annualVisitorsSource: string;
-};
-
-export type TransformResult = {
-  jsonResult: ParkDetails;
+export type Result = {
+  jsonResult: ParkDetail;
   jsonUsage: ReturnType<typeof computeUsageDetail>;
   jsonCost: ReturnType<typeof computeGeminiFlashLiteCost>;
   jsonDurationSec: number;
 };
 
-export async function transformParkTextToJson(text: string, evidenceUrl: string): Promise<TransformResult> {
+export async function transformParkTextToJson(text: string, sourceUrl: string): Promise<Result> {
   const jsonStart = Date.now();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const jsonResponse = await generateObject<any>({
     model: getModel("google", "models/gemini-2.5-flash-lite"),
-    schema: parkDetailsSchema,
+    schema: parkSchemaWithSourceText,
     prompt:
       `You will receive text about a national park. Using only that text (do not browse the web), ` +
       `return a JSON object that captures the park's details. If a field is not explicitly present, follow the fallback rule from its description. ` +
@@ -54,24 +25,18 @@ export async function transformParkTextToJson(text: string, evidenceUrl: string)
     maxRetries: 1,
   });
 
-  const jsonResult = jsonResponse.object as ParkDetails;
+  const jsonResult = jsonResponse.object as ParkDetail;
   const formattedJsonResult = {
     ...jsonResult,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } as any;
   Object.keys(jsonResult).filter(key => !key.endsWith("Source")).forEach((key) => {
-    formattedJsonResult[`${key}Source`] = handleEvidenceText({
-      value: jsonResult[key as keyof ParkDetails],
-      evidenceText: jsonResult[`${key}Source` as keyof ParkDetails] as string,
-      evidenceUrl: evidenceUrl,
-    });
+    formattedJsonResult[`${key}SourceUrl`] = sourceUrl;
   })
 
   const jsonDurationSec = Number(((Date.now() - jsonStart) / 1000).toFixed(1));
   const jsonUsage = computeUsageDetail(jsonResponse.usage);
   const jsonCost = computeGeminiFlashLiteCost(jsonUsage);
-
-
 
   return {
     jsonResult: formattedJsonResult,

@@ -3,22 +3,19 @@ import { gemini25FlashLiteModel } from "@/lib/model-factory";
 import { computeGeminiFlashLiteCost, computeUsageDetailsSum, UsageDetail } from "@/lib/usage-utils";
 import { google } from "@ai-sdk/google";
 import { generateObject, generateText } from "ai";
-import { ParkDetailSources, ParkDetails } from "./park-info-to-json";
-import fields, { getFieldSchema } from "./fields";
-import { textURLSplit } from "@/config";
-
-export type NonSourceKey = Exclude<keyof ParkDetails, keyof ParkDetailSources>;
+import fields, { getFieldSchema, ParkDetail } from "./fields";
+import { FieldsType } from "./fields";
 
 export type GoogleSearchFieldResult = {
-  field: NonSourceKey;
-  value: Record<NonSourceKey, string | number>;
+  field: FieldsType;
+  value: Record<FieldsType, string | number>;
   usage?: UsageDetail;
   cost?: ReturnType<typeof computeGeminiFlashLiteCost>;
   durationSec: number;
   textWithContext?: string;
 };
 
-const FIELD_ORDER: NonSourceKey[] = [
+const FIELD_ORDER: FieldsType[] = [
   // "officialWebsite", // officialWebsite not necessary
   "level",
   "speciesCount",
@@ -30,7 +27,7 @@ const FIELD_ORDER: NonSourceKey[] = [
   "annualVisitors",
 ];
 
-export function findFieldsNeedingGoogleSearch(jsonResult: ParkDetails): NonSourceKey[] {
+export function findFieldsNeedingGoogleSearch(jsonResult: ParkDetail): FieldsType[] {
   const missing = FIELD_ORDER.filter((field) => {
     const value = jsonResult[field];
     return value === -1 || value === "";
@@ -78,10 +75,9 @@ async function searchFieldWithGoogle({
   field,
 }: {
   parkName: string;
-  field: NonSourceKey;
+  field: FieldsType;
 }): Promise<GoogleSearchFieldResult> {
   const searchStartedAt = Date.now();
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const response = await generateText<any>({
     model: gemini25FlashLiteModel,
     prompt: `
@@ -135,17 +131,14 @@ Text:\n${textWithContext ?? ""}`,
 
   const usage = computeUsageDetailsSum([response.usage, jsonResponse.usage]);
   const cost = computeGeminiFlashLiteCost(usage);
-  const json = jsonResponse.object
-  const jsonResult = {
-    [field]: json[field],
-    [`${field}Source`]: json[`${field}Source`] && json[`${field}SourceUrl`] ? `${json[`${field}Source`]}${textURLSplit}${json[`${field}SourceUrl`]}` : "",
-  }
+  const jsonResult = jsonResponse.object
+
   const durationSec = Number(((Date.now() - searchStartedAt) / 1000).toFixed(1));
 
   return {
     field,
     textWithContext,
-    value: jsonResult as Record<NonSourceKey, string | number>,
+    value: jsonResult as Record<FieldsType, string | number>,
     usage,
     cost,
     durationSec,
@@ -157,7 +150,7 @@ export async function searchMissingFieldWithGoogle({
   field,
 }: {
   parkName: string;
-  field: NonSourceKey;
+  field: FieldsType;
 }): Promise<GoogleSearchFieldResult> {
   return searchFieldWithGoogle({ parkName, field });
 }

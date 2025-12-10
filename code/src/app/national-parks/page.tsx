@@ -187,11 +187,11 @@ export default function NationalParksPage() {
         <div className="mt-5 rounded-lg border border-white/10 bg-white/5 p-4 shadow-sm">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <div>
-              <div className="text-xs uppercase tracking-[0.08em] text-gray-400">总览</div>
-              <h2 className="text-lg font-semibold text-white">总时间 & 总成本</h2>
+              <div className="text-xs uppercase tracking-[0.08em] text-gray-400">Summary</div>
+              <h2 className="text-lg font-semibold text-white">Total Time & Total Cost</h2>
             </div>
             <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-gray-100">
-              汇总
+              Aggregate
             </span>
           </div>
           <div className="mt-3 grid gap-3 sm:grid-cols-2">
@@ -227,7 +227,7 @@ export default function NationalParksPage() {
         <section className="mt-6 space-y-5">
           {result.json ? (
             <div className="rounded-lg border border-white/10 bg-white/5 p-4 shadow-sm">
-              <h2 className="mb-2 text-lg font-semibold text-white">JSON</h2>
+              <h2 className="mb-2 text-lg font-semibold text-white">Final Result</h2>
               <pre className="overflow-auto rounded border border-white/10 bg-black/40 p-3 text-xs text-gray-100">
                 {JSON.stringify(result.json, null, 2)}
               </pre>
@@ -261,14 +261,14 @@ export default function NationalParksPage() {
             <div className="rounded-lg border border-amber-200/30 bg-amber-200/5 p-4 shadow-sm">
               <div className="flex items-start justify-between gap-3">
                 <div>
-                  <h2 className="text-lg font-semibold text-white">Google Search补充</h2>
+                  <h2 className="text-lg font-semibold text-white">Google Search</h2>
                   <p className="text-sm text-amber-100/80">
-                    当 Wikipedia 缺字段时，用 Google 搜索补齐。
+                    Use Google Search to find missing fields in the park info.
                   </p>
                 </div>
                 {result.googleSearchDetails?.length ? (
                   <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-amber-100">
-                    {result.googleSearchDetails.length} 个字段
+                    {result.googleSearchDetails.length} fields
                   </span>
                 ) : null}
               </div>
@@ -276,13 +276,13 @@ export default function NationalParksPage() {
               <div className="mt-3 text-sm text-gray-200">
                 <div className="text-xs uppercase tracking-[0.08em] text-gray-400">Summary</div>
                 <p className="mt-1">
-                  总成本（RMB）:{" "}
+                  Total Cost (RMB):{" "}
                   <strong className="text-white">
                     {formatCny(result.googleSearchCost?.cny.total)}
                   </strong>
                 </p>
                 <p className="mt-1">
-                  耗时:{" "}
+                  Total Time:{" "}
                   <strong className="text-white">
                     {formatSeconds(result.googleSearchDurationSec)}
                   </strong>
@@ -298,9 +298,8 @@ export default function NationalParksPage() {
                 <div className="mt-4 space-y-3">
                   {result.googleSearchDetails.map((detail) => {
                     const mainValue = detail.value[detail.field];
-                    const sourceRaw = detail.value[`${detail.field}Source`];
-                    const { text: evidenceText, url: evidenceUrl } =
-                      typeof sourceRaw === "string" ? parseEvidence(sourceRaw) : { text: "", url: "" };
+                    const sourceText = detail.value[`${detail.field}SourceText`];
+                    const sourceUrl = detail.value[`${detail.field}SourceUrl`];
 
                     return (
                       <div
@@ -312,7 +311,7 @@ export default function NationalParksPage() {
                             {formatFieldName(detail.field)}
                           </div>
                           <div className="text-xs text-amber-100/80">
-                            耗时 {formatSeconds(detail.durationSec)}
+                            Cost time: {formatSeconds(detail.durationSec)}
                           </div>
                         </div>
 
@@ -323,22 +322,22 @@ export default function NationalParksPage() {
                           </span>
                         </div>
 
-                        {evidenceText && (
+                        {sourceText && (
                           <div className="mt-2">
                             <div className="text-xs uppercase tracking-[0.08em] text-gray-400">
                               Evidence
                             </div>
                             <p className="mt-1 whitespace-pre-wrap font-mono text-xs text-gray-100">
-                              {evidenceText}
+                              {sourceText}
                             </p>
-                            {evidenceUrl && (
+                            {sourceUrl && (
                               <a
-                                href={evidenceUrl}
+                                href={sourceUrl as string}
                                 target="_blank"
                                 rel="noreferrer"
                                 className="mt-1 inline-flex items-center text-xs text-amber-200 underline underline-offset-2"
                               >
-                                来源链接
+                                Source Link
                               </a>
                             )}
                           </div>
@@ -347,7 +346,7 @@ export default function NationalParksPage() {
                         {detail.textWithContext && (
                           <details className="mt-2 rounded border border-white/5 bg-white/5 p-2">
                             <summary className="cursor-pointer text-xs text-gray-300">
-                              查看 Google 搜索响应
+                              View Google Search Response
                             </summary>
                             <pre className="mt-2 overflow-auto whitespace-pre-wrap text-[11px] leading-relaxed text-gray-100">
                               {detail.textWithContext}

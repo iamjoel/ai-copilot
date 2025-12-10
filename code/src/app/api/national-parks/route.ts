@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { computeGeminiFlashLiteCost } from "@/lib/usage-utils";
 import type { CostDetail, UsageDetail } from "@/lib/usage-utils";
-import { extractParkText } from "./extract/extract-park-text";
+import { extractParkText } from "./extract/park-info";
 import { transformParkTextToJson } from "./extract/park-info-to-json";
 import { findFieldsNeedingGoogleSearch, searchMissingFieldWithGoogle, sumUsageTotals } from "./extract/google-search-missing-fields";
 import type { GoogleSearchFieldResult } from "./extract/google-search-missing-fields";

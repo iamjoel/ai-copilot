@@ -1,4 +1,4 @@
-import { GroundingMetadata } from "@/app/api/national-parks/extract/extract-park-text";
+import { GroundingMetadata } from "@/app/api/national-parks/extract/park-info";
 
 function GroundingSupports({ metadata }: { metadata?: GroundingMetadata }) {
   const supports = Array.isArray(metadata?.support) ? metadata.support : null;

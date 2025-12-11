@@ -1,0 +1,65 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Test {
+  id   String @id @default(uuid())
+  name String
+}
+
+model NationalPark {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  name    String
+  country String
+
+  wiki            String @db.Text
+  wikiUrl         String
+  wikiInputToken  Int?
+  wikiOutputToken Int?
+  wikiUrlToken    Int?
+  wikiProcessTime Float?
+
+  officialWebsite           String
+  officialWebsiteSourceText String @db.Text
+  officialWebsiteSourceUrl  String
+
+  level           Int
+  levelSourceText String @db.Text
+  levelSourceUrl  String
+
+  speciesCount           Int
+  speciesCountSourceText String @db.Text
+  speciesCountSourceUrl  String
+
+  endangeredSpecies           Int
+  endangeredSpeciesSourceText String @db.Text
+  endangeredSpeciesSourceUrl  String
+
+  forestCoverage           Float
+  forestCoverageSourceText String @db.Text
+  forestCoverageSourceUrl  String
+
+  area           Float
+  areaSourceText String @db.Text
+  areaSourceUrl  String
+
+  establishedYear           Int
+  establishedYearSourceText String @db.Text
+  establishedYearSourceUrl  String
+
+  internationalCert           Int
+  internationalCertSourceText String @db.Text
+  internationalCertSourceUrl  String
+
+  annualVisitors           Int
+  annualVisitorsSourceText String @db.Text
+  annualVisitorsSourceUrl  String
+}

@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { prisma } from "../../../../lib/prisma";
 import { computeGeminiFlashLiteCost } from "@/lib/usage-utils";
 import type { CostDetail, UsageDetail } from "@/lib/usage-utils";
 import { extractParkText } from "./extract/park-info";
@@ -75,6 +76,67 @@ export async function POST(req: Request) {
       googleSearchDurationSec = Number(
         perFieldResults.reduce((sum, item) => sum + item.durationSec, 0).toFixed(1),
       );
+    }
+
+    const asNumber = (value: unknown, fallback = -1) =>
+      typeof value === "number" && !Number.isNaN(value) ? value : fallback;
+
+    const asString = (value: unknown) => (typeof value === "string" ? value : "");
+
+    const nationalParkData = {
+      wiki: asString(text),
+      wikiUrl: url,
+      wikiInputToken: textUsage?.inputTokens ?? null,
+      wikiOutputToken: textUsage?.outputTokens ?? null,
+      wikiUrlToken: textUsage?.urlTokens ?? null,
+      wikiProcessTime: textDurationSec ?? null,
+
+      officialWebsite: asString(finalJsonResult.officialWebsite),
+      officialWebsiteSourceText: asString(finalJsonResult.officialWebsiteSourceText),
+      officialWebsiteSourceUrl: asString(finalJsonResult.officialWebsiteSourceUrl),
+
+      level: asNumber(finalJsonResult.level),
+      levelSourceText: asString(finalJsonResult.levelSourceText),
+      levelSourceUrl: asString(finalJsonResult.levelSourceUrl),
+
+      speciesCount: asNumber(finalJsonResult.speciesCount),
+      speciesCountSourceText: asString(finalJsonResult.speciesCountSourceText),
+      speciesCountSourceUrl: asString(finalJsonResult.speciesCountSourceUrl),
+
+      endangeredSpecies: asNumber(finalJsonResult.endangeredSpecies),
+      endangeredSpeciesSourceText: asString(finalJsonResult.endangeredSpeciesSourceText),
+      endangeredSpeciesSourceUrl: asString(finalJsonResult.endangeredSpeciesSourceUrl),
+
+      forestCoverage: asNumber(finalJsonResult.forestCoverage),
+      forestCoverageSourceText: asString(finalJsonResult.forestCoverageSourceText),
+      forestCoverageSourceUrl: asString(finalJsonResult.forestCoverageSourceUrl),
+
+      area: asNumber(finalJsonResult.area),
+      areaSourceText: asString(finalJsonResult.areaSourceText),
+      areaSourceUrl: asString(finalJsonResult.areaSourceUrl),
+
+      establishedYear: asNumber(finalJsonResult.establishedYear),
+      establishedYearSourceText: asString(finalJsonResult.establishedYearSourceText),
+      establishedYearSourceUrl: asString(finalJsonResult.establishedYearSourceUrl),
+
+      internationalCert: asNumber(finalJsonResult.internationalCert),
+      internationalCertSourceText: asString(finalJsonResult.internationalCertSourceText),
+      internationalCertSourceUrl: asString(finalJsonResult.internationalCertSourceUrl),
+
+      annualVisitors: asNumber(finalJsonResult.annualVisitors),
+      annualVisitorsSourceText: asString(finalJsonResult.annualVisitorsSourceText),
+      annualVisitorsSourceUrl: asString(finalJsonResult.annualVisitorsSourceUrl),
+    };
+
+    const existingPark = await prisma.nationalPark.findUnique({
+      where: { wikiUrl: url },
+      select: { id: true },
+    });
+
+    if (!existingPark) {
+      await prisma.nationalPark.create({
+        data: nationalParkData,
+      });
     }
 
     return new Response(

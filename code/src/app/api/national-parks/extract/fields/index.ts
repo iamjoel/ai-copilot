@@ -85,6 +85,7 @@ export const parkSchemaWithSource = (() => {
 
 export const getFieldSchema = (key: keyof typeof fields) => {
   return parkSchemaWithSource.pick({
+    [key]: true,
     [`${key}SourceText`]: true,
     [`${key}SourceUrl`]: true,
   } as { [K in keyof typeof parkSchemaWithSource.shape]?: true });

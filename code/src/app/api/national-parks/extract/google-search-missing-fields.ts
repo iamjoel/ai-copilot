@@ -92,21 +92,21 @@ Your goal is to find the most reliable, up-to-date value for this field using Go
 Formatting rules (STRICT):
 - You MUST output **exactly three lines**, nothing more.
 - Line 1 MUST start with: ${field}:
-- Line 2 MUST start with: Evidence:
-- Line 3 MUST start with: <the URL of the page where you found the evidence>
+- Line 2 MUST start with: SourceText:
+- Line 3 MUST start with: SourceURL:
 - Do NOT add any explanation, comments, or extra text.
 - Do NOT wrap the answer in quotes or code blocks.
 - Do NOT output any text before or after these three lines.
 
 If the value IS found, use this exact format:
 ${field}: <a one-sentence summary of the value. If multiple numbers are given for different groups (e.g. mammals, birds, fish, amphibians, reptiles, plants), sum them up and give the total species count here.>
-Evidence: <verbatim text copied from the page>
-EvidenceURL: <url of the page>
+SourceText: <verbatim text copied from the page>
+SourceURL: <url of the page>
 
 If the value is NOT found, use this exact format:
 ${field}: not specify
-Evidence:
-EvidenceURL:
+SourceText:
+SourceURL:
 
 Now produce your answer following the rules above.`,
     maxRetries: 1,
@@ -124,7 +124,7 @@ Now produce your answer following the rules above.`,
     schema: getFieldSchema(field),
     prompt: `
 You will receive text about a national park. Using only that text (do not browse the web), 
-For the field, also return the corresponding "...Source" string with the verbatim evidence text (everything after "Evidence:") or an empty string if not found. Preserve line breaks in evidence.
+For the field, also return the corresponding "...SourceText" string with the verbatim evidence text (everything after "SourceText:") and "...SourceUrl" (everything after "SourceURL:") or an empty string if not found. Preserve line breaks in evidence.
 Text:\n${textWithContext ?? ""}`,
     maxRetries: 1,
   })

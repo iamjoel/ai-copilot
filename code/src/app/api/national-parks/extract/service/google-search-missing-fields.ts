@@ -3,8 +3,8 @@ import { gemini25FlashLiteModel } from "@/lib/model-factory";
 import { computeGeminiFlashLiteCost, computeUsageDetailsSum, UsageDetail } from "@/lib/usage-utils";
 import { google } from "@ai-sdk/google";
 import { generateObject, generateText } from "ai";
-import fields, { getFieldSchema, ParkDetail } from "./fields";
-import { FieldsType } from "./fields";
+import fields, { getFieldSchema, ParkDetail } from "../fields";
+import { FieldsType } from "../fields";
 
 export type GoogleSearchFieldResult = {
   field: FieldsType;

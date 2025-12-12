@@ -1,7 +1,7 @@
 import { getModel } from "@/lib/model-factory";
 import { computeGeminiFlashLiteCost, computeUsageDetail } from "@/lib/usage-utils";
 import { generateObject } from "ai";
-import { ParkDetail, parkSchemaWithSourceText } from "./fields";
+import { ParkDetail, parkSchemaWithSourceText } from "../fields";
 
 export type Result = {
   jsonResult: ParkDetail;

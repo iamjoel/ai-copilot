@@ -29,6 +29,20 @@ export async function getNationalParkByName(name: string): Promise<NationalPark 
   });
 }
 
+export async function getNationalParkByNation(country: string): Promise<{ items: NationalPark[]; total: number }> {
+  const where = { country };
+
+  const [items, total] = await prisma.$transaction([
+    prisma.nationalPark.findMany({
+      where,
+      orderBy: { createdAt: "desc" },
+    }),
+    prisma.nationalPark.count({ where }),
+  ]);
+
+  return { items, total };
+}
+
 export async function searchNationalParks({
   search,
   skip = 0,

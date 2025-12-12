@@ -1,11 +1,12 @@
 'use client';
 
 import { useState } from "react";
+import { progress } from "../list/progress";
 
 type BatchResult = unknown;
 
 export default function ExtractWikiBatchTester() {
-  const [countryName, setCountryName] = useState("Yemen");
+  const [countryName, setCountryName] = useState(progress[progress.findIndex(c => !c.done)].name);
   const [result, setResult] = useState<BatchResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);

@@ -3,6 +3,7 @@ import { createNationalPark, getNationalParkByName } from "@root/lib/db/nation-p
 import extractFormWiki from "../../service/extract-from-wiki";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
+import { logger } from "@/lib/logger";
 
 export const runtime = "nodejs";
 
@@ -137,7 +138,6 @@ export async function POST(req: Request) {
     }
 
     const filePath = path.join(process.cwd(), "src/app/api/national-parks/datas", `${normalizedCountry}.csv`);
-    console.log(filePath)
     let content: string;
     try {
       content = await readFile(filePath, "utf-8");
@@ -162,6 +162,7 @@ export async function POST(req: Request) {
       try {
         const parkResult = await processPark({ ...park, country: normalizedCountry! });
         results.push(parkResult as ParkProcessResult);
+        logger.info(`Processed park success: ${park.name}`);
       } catch (error) {
         results.push({
           status: "error",

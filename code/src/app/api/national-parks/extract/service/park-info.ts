@@ -3,6 +3,7 @@ import { getModel } from "@/lib/model-factory";
 import { computeGeminiFlashLiteCost, computeUsageDetail } from "@/lib/usage-utils";
 import { google } from "@ai-sdk/google";
 import { generateText } from "ai";
+import { logger } from '@/lib/logger'
 
 type GroundingSupport = {
   text?: string;
@@ -88,16 +89,24 @@ Hard constraints:
 - Base your answer strictly on the text returned by url_context (including any Google pages you load).`;
 
   const textStart = Date.now();
-  const textResponse = await generateText({
-    model: getModel("google", "models/gemini-2.5-flash-lite"),
-    prompt,
-    maxRetries: 1,
-    tools: {
-      url_context: google.tools.urlContext({}),
-    },
-  });
+  let textResponse
+  try {
+    textResponse = await generateText({
+      model: getModel("google", "models/gemini-2.5-flash-lite"),
+      prompt,
+      maxRetries: 1,
+      tools: {
+        url_context: google.tools.urlContext({}),
+      },
+    });
+  } catch (err) {
+    logger.error(`[Wiki Extract] park: ${parkName}, url: ${wikiUrl}`);
+    throw err;
+  }
+
 
   if (!textResponse.text) {
+    logger.error(`No text response for park: ${parkName}, url: ${wikiUrl}`);
     throw new Error("Missing text response from model.");
   }
   const textDurationSec = Number(((Date.now() - textStart) / 1000).toFixed(1));

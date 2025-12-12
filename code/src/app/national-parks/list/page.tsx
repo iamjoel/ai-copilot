@@ -2,8 +2,10 @@
 'use client';
 
 import { useMemo, useState } from "react";
+import { progress } from "./progress";
 
 type NationalParkRow = {
+  id: string;
   name: string;
   country: string;
 
@@ -57,12 +59,53 @@ type ListResponse = {
   error?: string;
 };
 
+const CSV_COLUMNS: Array<keyof NationalParkRow> = [
+  "id",
+  "name",
+  "country",
+  "wiki",
+  "wikiUrl",
+  "wikiInputToken",
+  "wikiOutputToken",
+  "wikiUrlToken",
+  "wikiProcessTime",
+  "officialWebsite",
+  "officialWebsiteSourceText",
+  "officialWebsiteSourceUrl",
+  "level",
+  "levelSourceText",
+  "levelSourceUrl",
+  "speciesCount",
+  "speciesCountSourceText",
+  "speciesCountSourceUrl",
+  "endangeredSpecies",
+  "endangeredSpeciesSourceText",
+  "endangeredSpeciesSourceUrl",
+  "forestCoverage",
+  "forestCoverageSourceText",
+  "forestCoverageSourceUrl",
+  "area",
+  "areaSourceText",
+  "areaSourceUrl",
+  "establishedYear",
+  "establishedYearSourceText",
+  "establishedYearSourceUrl",
+  "internationalCert",
+  "internationalCertSourceText",
+  "internationalCertSourceUrl",
+  "annualVisitors",
+  "annualVisitorsSourceText",
+  "annualVisitorsSourceUrl",
+];
+
 export default function NationalParkListPage() {
-  const [country, setCountry] = useState("United States");
+  const [country, setCountry] = useState(progress[progress.findIndex(c => !c.done)].name);
   const [name, setName] = useState("");
   const [result, setResult] = useState<ListResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [isDeduping, setIsDeduping] = useState(false);
+  const [dedupeMessage, setDedupeMessage] = useState<string | null>(null);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -95,13 +138,75 @@ export default function NationalParkListPage() {
   const columns = useMemo(
     () => [
       "name",
-      // "country",
       "wiki",
       "Ecological Integrity",
-      "GR & NI",
+      "Governance Resilience",
+      "Nature Immersion",
     ],
     [],
   );
+
+  const formatCsvValue = (value: unknown) => {
+    if (value === null || value === undefined) return "";
+    const strValue = String(value).replace(/"/g, '""');
+    return `"${strValue}"`;
+  };
+
+  const getCsvFileName = () => {
+    const trimmedCountry = country.trim();
+    if (!trimmedCountry) return "national-parks.csv";
+    const safeCountry = trimmedCountry.replace(/[\\/:*?"<>|]/g, "").trim();
+    return `${safeCountry || "national-parks"}.csv`;
+  };
+
+  const handleExportCsv = () => {
+    if (!result || result.items.length === 0) return;
+
+    const header = CSV_COLUMNS.join(",");
+    const rows = result.items.map(item =>
+      CSV_COLUMNS.map(col => formatCsvValue(item[col])).join(","),
+    );
+    const csvContent = [header, ...rows].join("\n");
+    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = getCsvFileName();
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+  };
+
+  const handleDedupeCountry = async () => {
+    const trimmedCountry = country.trim();
+    if (!trimmedCountry) {
+      setDedupeMessage("请输入国家名称再去重。");
+      return;
+    }
+
+    setIsDeduping(true);
+    setDedupeMessage(null);
+    try {
+      const response = await fetch("/api/national-parks/dedupe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ country: trimmedCountry }),
+      });
+      const data = await response.json();
+      if (!response.ok) {
+        setDedupeMessage(data.error ?? "去重失败，请稍后再试。");
+      } else {
+        setDedupeMessage(`国家 ${data.country} 移除 ${data.removed} 条重复记录。`);
+        await handleSubmit({ preventDefault: () => { } } as React.FormEvent<HTMLFormElement>);
+      }
+    } catch (dedupeError) {
+      console.error("Deduplicate country error:", dedupeError);
+      setDedupeMessage("网络错误，去重失败。");
+    } finally {
+      setIsDeduping(false);
+    }
+  };
 
   const renderField = (item: NationalParkRow, col: string) => {
     const value = (item as any)[col];
@@ -121,9 +226,10 @@ export default function NationalParkListPage() {
 
   const renderRow = (item: NationalParkRow) => {
     const official = item.officialWebsite;
+    const tdClassName = "border border-white/10 px-2 py-2 align-top"
     return (
       <tr key={item.name} className="odd:bg-white/5">
-        <td className="border border-white/10 px-2 py-2 align-top">
+        <td className={tdClassName}>
           {official ? (
             <a
               href={official}
@@ -145,14 +251,14 @@ export default function NationalParkListPage() {
             wiki
           </a>
         </td>
-        <td>
+        <td className="align-top">
           {item.wiki.split("\n").map((line, idx) => (
             <p key={idx} className="mb-1 last:mb-0">
               {line}
             </p>
           ))}
         </td>
-        <td>
+        <td className={tdClassName}>
           {/* Ecological Integrity */}
           <div className="space-y-2">
             {renderField(item, "level")}
@@ -161,14 +267,17 @@ export default function NationalParkListPage() {
             {renderField(item, "forestCoverage")}
           </div>
         </td>
-        <td>
-          {/* GR & NI*/}
+        <td className={tdClassName}>
+          {/* Governance Resilience */}
           <div className="space-y-2">
             {renderField(item, "area")}
             {renderField(item, "establishedYear")}
             {renderField(item, "internationalCert")}
-            {renderField(item, "annualVisitors")}
           </div>
+        </td>
+        <td className={tdClassName}>
+          {/* Nature Immersion */}
+          {renderField(item, "annualVisitors")}
         </td>
       </tr>
     )
@@ -213,12 +322,36 @@ export default function NationalParkListPage() {
         </div>
       </form>
 
+      <div className="mt-4 flex flex-wrap items-center gap-3 text-sm text-gray-200">
+        <button
+          type="button"
+          onClick={handleDedupeCountry}
+          disabled={isDeduping || isLoading || !country.trim()}
+          className="rounded border border-white/20 px-3 py-2 text-xs font-semibold text-white transition hover:border-white/40 disabled:cursor-not-allowed disabled:opacity-50"
+        >
+          {isDeduping ? "去重中..." : "去重当前国家重复项"}
+        </button>
+        {dedupeMessage && (
+          <span className="text-xs text-emerald-300">{dedupeMessage}</span>
+        )}
+      </div>
+
       {error && <p className="mt-4 text-sm text-red-400">{error}</p>}
 
       {result && (
         <div className="mt-6 space-y-3">
-          <div className="text-sm text-gray-200">
-            Total: <span className="font-semibold text-white">{result.total}</span>
+          <div className="flex flex-wrap items-center justify-between gap-3 text-sm text-gray-200">
+            <div>
+              Total: <span className="font-semibold text-white">{result.total}</span>
+            </div>
+            <button
+              type="button"
+              onClick={handleExportCsv}
+              disabled={!result.items.length}
+              className="rounded border border-white/20 px-3 py-2 text-xs font-semibold text-white transition hover:border-white/40 disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              Export CSV
+            </button>
           </div>
           <div className="overflow-auto rounded-lg border border-white/10 bg-white/5 p-4 shadow-sm">
             <h2 className="mb-2 text-lg font-semibold text-white">Results</h2>

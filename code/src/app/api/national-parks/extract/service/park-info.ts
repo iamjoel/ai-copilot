@@ -94,7 +94,7 @@ Hard constraints:
     textResponse = await generateText({
       model: getModel("google", "models/gemini-2.5-flash-lite"),
       prompt,
-      maxRetries: 1,
+      maxRetries: 3,
       tools: {
         url_context: google.tools.urlContext({}),
       },

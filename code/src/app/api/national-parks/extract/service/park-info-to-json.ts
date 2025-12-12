@@ -26,7 +26,7 @@ export async function transformParkTextToJson(text: string, sourceUrl: string): 
         `Normalize units: area -> square kilometers; forestCoverage -> percentage with one decimal place; annualVisitors -> convert to an integer count of ten-thousands of people (round to nearest) if another unit is provided. ` +
         `For each field, also return the corresponding "...Source" string with the verbatim evidence text (everything after "Evidence:") or an empty string if not found. Preserve line breaks in evidence.\n\n` +
         `Text:\n${text ?? ""}`,
-      maxRetries: 1,
+      maxRetries: 3,
     });
   } catch (error) {
     logger.error(`[Wiki JSON Transform] sourceUrl: ${sourceUrl}`);

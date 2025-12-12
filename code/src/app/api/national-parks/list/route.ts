@@ -5,6 +5,7 @@ export const runtime = "nodejs";
 
 function mapPark(park: any) {
   return {
+    id: park.id,
     name: park.name,
     country: park.country,
 

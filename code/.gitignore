@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Prisma
+generated/prisma/
+pgdata/
+
+src/app/api/national-parks/datas
+src/app/api/national-parks/results

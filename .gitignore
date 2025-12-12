@@ -142,8 +142,4 @@ vite.config.ts.timestamp-*
 
 .vscode/
 
-# Prisma
-code/generated/prisma/
-code/pgdata/
 
-code/src/app/api/national-parks/datas

@@ -99,7 +99,7 @@ const CSV_COLUMNS: Array<keyof NationalParkRow> = [
 ];
 
 export default function NationalParkListPage() {
-  const [country, setCountry] = useState(progress[progress.findIndex(c => !c.done)].name);
+  const [country, setCountry] = useState(progress[progress.findIndex(c => !c.done)]?.name || '');
   const [name, setName] = useState("");
   const [result, setResult] = useState<ListResponse | null>(null);
   const [error, setError] = useState<string | null>(null);

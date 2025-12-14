@@ -1,26 +1,10 @@
-import { getModel, type Provider } from "@/lib/model-factory";
+import { getModel } from "@/lib/model-factory";
+import { getModelPreset } from "@/lib/model-presets";
 import { generateText } from "ai";
 
 export const runtime = "nodejs"; // 'edge' runtime does not support undici yet
 
-const MODEL_MAP: Record<
-  string,
-  { provider: Provider; model: string }
-> = {
-  "gemini-2.5-flash": {
-    provider: "google",
-    model: "models/gemini-2.0-flash-exp",
-  },
-  "gemini-2.5-pro": {
-    provider: "google",
-    model: "models/gemini-2.0-pro-exp-02-05",
-  },
-  "gemini-3": {
-    provider: "google",
-    model: "models/gemini-1.5-pro",
-  },
-  "gpt-4o-mini": { provider: "openai", model: "gpt-4o-mini" },
-};
+const ALLOWED_MODELS = new Set(["gemini-2.5-flash", "gemini-2.5-pro", "gemini-3", "gpt-4o-mini"]);
 
 export async function POST(req: Request) {
   try {
@@ -38,7 +22,20 @@ export async function POST(req: Request) {
       );
     }
 
-    const target = MODEL_MAP[model];
+    if (!ALLOWED_MODELS.has(model)) {
+      return new Response(
+        JSON.stringify({ error: "Unsupported model." }),
+        { status: 400, headers: { "Content-Type": "application/json" } },
+      );
+    }
+
+    const target = getModelPreset(model);
+    if (!target) {
+      return new Response(
+        JSON.stringify({ error: "Model preset not found." }),
+        { status: 404, headers: { "Content-Type": "application/json" } },
+      );
+    }
 
     const result = await generateText({
       model: getModel(target.provider, target.model),

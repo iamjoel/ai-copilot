@@ -1,0 +1,45 @@
+[
+  {
+    "name": "多约束行程规划",
+    "input": "你是一位旅行顾问。我的朋友只有 3 天时间在四川甘孜州体验自然与文化，他对海拔敏感，徒步里程每天不超过 8 公里，晚上必须住有供暖的客栈。请给出每天上午/下午/晚上安排，并在最后列出需要提前预约的项目。",
+    "models": [
+      "gemini-2.5-flash-lite",
+      "gemini-2.5-flash",
+      "gpt-4o-mini"
+    ],
+    "outputs": {
+      "gemini-2.5-flash-lite": "Day1: 成都出发到康定，午后环城轻徒步，晚上入住木雅客栈。Day2: 早上前往新都桥摄影，下午塔公草原骑马 5 公里，晚上塔公镇供暖民宿。Day3: 甲根坝温泉放松，傍晚返回成都。",
+      "gemini-2.5-flash": "Day1 上午成都到康定，途中在折多山观景但控制停留 <30 分钟；下午在康定情歌广场-跑马山步道 6 公里，晚上木雅客栈(集中供暖)。Day2 上午驱车至新都桥短徒步并摄影；下午塔公草原安排牦牛文化体验 2 小时；晚入住塔公镇供暖藏家乐。Day3 上午甲根坝温泉+理疗，下午折返成都途中在泸定桥参观，晚上返程。需提前预约：塔公草原骑行向导、甲根坝温泉私汤。",
+      "gpt-4o-mini": "Day1: 飞抵成都后驱车前往康定，安排半天适应海拔，晚上入住带地暖酒店。Day2: 上午新都桥观景步道 5 公里，下午塔公草原体验藏族文化，晚上塔公镇供暖民宿。Day3: 上午甲根坝温泉+理疗，下午返回成都，途中可在泸定桥短暂停留。提前预约：塔公骑马/文化体验、甲根坝温泉。"
+    },
+    "expect": "每天需要上午/下午/晚上结构，提醒高海拔适应，并列出要提前预约的项目。"
+  },
+  {
+    "name": "多步骤资料核对",
+    "input": "阅读下面的三条新闻节选，判断它们描述的是否是同一个事件。若是，请归纳共同事实；若不是，请分别列出差异。\n1. 5 月 2 日上海杨浦大桥因货船碰撞临时封闭。2. 外媒称 5 月 2 日中国东部一座跨江大桥被货船撞断导致交通受影响。3. 市交通委消息：货船偏离航道撞击桥梁，暂无人员伤亡。\n用“是/否”给出判断，然后条目化说明理由。",
+    "models": [
+      "gemini-2.5-flash-lite",
+      "gemini-2.5-flash"
+    ],
+    "outputs": {
+      "gemini-2.5-flash-lite": "是。同一事件：5 月 2 日，一艘货船撞上跨江大桥（报道提到杨浦大桥），造成交通封闭但暂无伤亡。",
+      "gemini-2.5-flash": "是。共同事实：1) 时间为 5 月 2 日；2) 地点在中国东部跨江大桥（上海杨浦大桥）；3) 原因是货船碰撞桥梁；4) 导致临时封闭、交通受影响且尚无伤亡。由于三条报道仅细节措辞不同，不存在矛盾。"
+    },
+    "expect": "回答以“是/否”开头，再以条目列出理由，如果回答“否”则分别说明差异。"
+  },
+  {
+    "name": "鲁棒 SQL 生成",
+    "input": "我们有一张 orders 表，字段：id, user_id, amount, created_at。请写 SQL 查询出 2023 年每个月下单金额总和，且金额>1000 的用户数，同时返回同月环比增长(本月总金额-上月总金额)/上月总金额。注意闰年和无数据月份。",
+    "models": [
+      "gemini-2.5-flash-lite",
+      "gemini-2.5-flash",
+      "gpt-4o-mini"
+    ],
+    "outputs": {
+      "gemini-2.5-flash-lite": "SELECT date_trunc('month', created_at) AS month, SUM(amount) AS total_amount\nFROM orders WHERE created_at >= '2023-01-01' AND created_at < '2024-01-01'\nGROUP BY month ORDER BY month;",
+      "gemini-2.5-flash": "WITH monthly AS (\n  SELECT date_trunc('month', created_at) AS month,\n         SUM(amount) AS total_amount,\n         COUNT(DISTINCT CASE WHEN amount > 1000 THEN user_id END) AS high_value_users\n  FROM orders\n  WHERE created_at >= '2023-01-01' AND created_at < '2024-01-01'\n  GROUP BY 1\n), filled AS (\n  SELECT generate_series('2023-01-01'::date, '2023-12-01'::date, '1 month') AS month\n)\nSELECT f.month,\n       COALESCE(m.total_amount, 0) AS total_amount,\n       COALESCE(m.high_value_users, 0) AS high_value_users,\n       CASE WHEN LAG(m.total_amount) OVER (ORDER BY f.month) = 0 THEN NULL\n            ELSE (COALESCE(m.total_amount, 0) - LAG(m.total_amount) OVER (ORDER BY f.month)) / NULLIF(LAG(m.total_amount) OVER (ORDER BY f.month), 0)\n       END AS mom_growth\nFROM filled f\nLEFT JOIN monthly m ON m.month = f.month\nORDER BY f.month;",
+      "gpt-4o-mini": "SELECT DATE_TRUNC('month', created_at) AS month, SUM(amount) AS total_amount,\n       COUNT(DISTINCT CASE WHEN amount > 1000 THEN user_id END) AS high_value_users\nFROM orders\nWHERE created_at BETWEEN '2023-01-01' AND '2023-12-31'\nGROUP BY 1 ORDER BY 1;"
+    },
+    "expect": "需要补全空月，给出高价值用户数量，并计算环比增长，避免除以零。"
+  }
+]

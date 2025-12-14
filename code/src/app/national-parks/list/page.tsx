@@ -101,11 +101,13 @@ const CSV_COLUMNS: Array<keyof NationalParkRow> = [
 export default function NationalParkListPage() {
   const [country, setCountry] = useState(progress[progress.findIndex(c => !c.done)]?.name || '');
   const [name, setName] = useState("");
+  const [allEmptyOnly, setAllEmptyOnly] = useState(false);
   const [result, setResult] = useState<ListResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isDeduping, setIsDeduping] = useState(false);
   const [dedupeMessage, setDedupeMessage] = useState<string | null>(null);
+  const [deletingId, setDeletingId] = useState<string | null>(null);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -115,6 +117,7 @@ export default function NationalParkListPage() {
     const params = new URLSearchParams();
     if (country.trim()) params.set("country", country.trim());
     if (name.trim()) params.set("name", name.trim());
+    if (allEmptyOnly) params.set("allEmpty", "true");
 
     setIsLoading(true);
     try {
@@ -208,6 +211,53 @@ export default function NationalParkListPage() {
     }
   };
 
+  const logCurrentTotal = async () => {
+    try {
+      const response = await fetch("/api/national-parks/count");
+      if (!response.ok) throw new Error("Failed to fetch total count");
+      const data = await response.json();
+      console.log("当前 National Park 总数:", data.total);
+    } catch (countError) {
+      console.error("获取 National Park 总数失败:", countError);
+    }
+  };
+
+  const handleDeletePark = async (id: string) => {
+    setDeletingId(id);
+    setError(null);
+    try {
+      const response = await fetch(`/api/national-parks/${id}`, {
+        method: "DELETE",
+      });
+      let data: any = null;
+      try {
+        data = await response.json();
+      } catch {
+        // ignore non-JSON responses
+      }
+      if (!response.ok) {
+        setError(data?.error ?? "删除失败，请稍后再试。");
+        return;
+      }
+
+      setResult(prev => {
+        if (!prev) return prev;
+        const filteredItems = prev.items.filter(item => item.id !== id);
+        return {
+          ...prev,
+          total: Math.max(0, prev.total - 1),
+          items: filteredItems,
+        };
+      });
+      await logCurrentTotal();
+    } catch (deleteError) {
+      console.error("Delete national park error:", deleteError);
+      setError("删除失败，请稍后再试。");
+    } finally {
+      setDeletingId(null);
+    }
+  };
+
   const renderField = (item: NationalParkRow, col: string) => {
     const value = (item as any)[col];
     const sourceText = (item as any)[`${col}SourceText`];
@@ -242,14 +292,25 @@ export default function NationalParkListPage() {
           ) : (
             <div className="max-w-[300px] whitespace-pre-wrap break-words">{item.name}</div>
           )}
+          <div>国家: {item.country}</div>
           <a
-            href={item.wikiUrl}
+            href={item.wikiUrl.startsWith("http") ? item.wikiUrl : `https://en.wikipedia.org/wiki/${item.wikiUrl}`}
             target="_blank"
             rel="noreferrer"
             className="ml-2 text-blue-400 underline underline-offset-2"
           >
             wiki
           </a>
+          <div className="mt-2">
+            <button
+              type="button"
+              onClick={() => handleDeletePark(item.id)}
+              disabled={deletingId === item.id}
+              className="text-xs text-red-300 underline underline-offset-2 hover:text-red-200 disabled:cursor-not-allowed disabled:opacity-60"
+            >
+              {deletingId === item.id ? "删除中..." : "删除"}
+            </button>
+          </div>
         </td>
         <td className="align-top">
           {item.wiki.split("\n").map((line, idx) => (
@@ -311,6 +372,16 @@ export default function NationalParkListPage() {
             disabled={isLoading}
           />
         </div>
+        <label className="flex items-center gap-2 text-sm text-gray-300 sm:col-span-2">
+          <input
+            type="checkbox"
+            checked={allEmptyOnly}
+            onChange={e => setAllEmptyOnly(e.target.checked)}
+            disabled={isLoading}
+            className="h-4 w-4 rounded border-white/20 bg-white/5 text-white focus:ring-white"
+          />
+          <span>全空数据</span>
+        </label>
         <div className="sm:col-span-2">
           <button
             type="submit"

@@ -59,6 +59,7 @@ export async function GET(req: Request) {
     const { searchParams } = new URL(req.url);
     const name = searchParams.get("name")?.trim();
     const country = searchParams.get("country")?.trim();
+    const includeAllEmpty = searchParams.get("allEmpty") === "true";
 
     const where: any = {};
     if (name) {
@@ -66,6 +67,23 @@ export async function GET(req: Request) {
     }
     if (country) {
       where.country = { contains: country, mode: "insensitive" };
+    }
+    if (includeAllEmpty) {
+      const emptyMetricFields = [
+        "level",
+        "speciesCount",
+        "endangeredSpecies",
+        "forestCoverage",
+        "area",
+        "establishedYear",
+        "internationalCert",
+        "annualVisitors",
+      ];
+      const andConditions = where.AND ?? [];
+      where.AND = [
+        ...andConditions,
+        ...emptyMetricFields.map(field => ({ [field]: -1 })),
+      ];
     }
 
     const parks = await prisma.nationalPark.findMany({

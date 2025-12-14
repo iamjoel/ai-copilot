@@ -70,7 +70,7 @@ export function sumUsageTotals(usages: (UsageDetail | undefined)[]): UsageDetail
   };
 }
 
-async function searchFieldWithGoogle({
+export async function searchFieldWithGoogle({
   parkName,
   field,
 }: {
@@ -131,14 +131,20 @@ Text:\n${textWithContext ?? ""}`,
 
   const usage = computeUsageDetailsSum([response.usage, jsonResponse.usage]);
   const cost = computeGeminiFlashLiteCost(usage);
-  const jsonResult = jsonResponse.object
+  const jsonResult = jsonResponse.object as Record<string, string | number>;
+
+  const normalizedResult = { ...jsonResult };
+  const fieldValue = normalizedResult[field];
+  if (typeof fieldValue === "number" && fieldValue === -1) {
+    normalizedResult[field] = -2; // use -2 to indicate "not found" instead of -1 which means "not searched"
+  }
 
   const durationSec = Number(((Date.now() - searchStartedAt) / 1000).toFixed(1));
 
   return {
     field,
     textWithContext,
-    value: jsonResult as Record<FieldsType, string | number>,
+    value: normalizedResult as Record<FieldsType, string | number>,
     usage,
     cost,
     durationSec,

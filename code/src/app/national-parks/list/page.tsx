@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
-import { useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { progress } from "./progress";
 
 type NationalParkRow = {
@@ -155,14 +155,14 @@ export default function NationalParkListPage() {
     return `"${strValue}"`;
   };
 
-  const getCsvFileName = () => {
+  const getCsvFileName = useCallback(() => {
     const trimmedCountry = country.trim();
     if (!trimmedCountry) return "national-parks.csv";
     const safeCountry = trimmedCountry.replace(/[\\/:*?"<>|]/g, "").trim();
     return `${safeCountry || "national-parks"}.csv`;
-  };
+  }, [country]);
 
-  const handleExportCsv = () => {
+  const handleExportCsv = useCallback(() => {
     if (!result || result.items.length === 0) return;
 
     const header = CSV_COLUMNS.join(",");
@@ -179,7 +179,7 @@ export default function NationalParkListPage() {
     link.click();
     link.remove();
     URL.revokeObjectURL(url);
-  };
+  }, [result, getCsvFileName]);
 
   const handleDedupeCountry = async () => {
     const trimmedCountry = country.trim();

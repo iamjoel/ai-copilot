@@ -1,4 +1,4 @@
-const testName = 'Yellowstone National Park'
+const testName = 'Yosemite National Park'
 
 const testParks = [
   { country: 'Yemen', name: 'Hawf', wiki: 'https://en.wikipedia.org/wiki/Hawf_National_Reserve' }, // Has less info

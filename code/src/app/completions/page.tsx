@@ -74,8 +74,7 @@ export default function CompletionsPage() {
             Prompt once, compare across Gemini & GPT.
           </h1>
           <p className="max-w-2xl text-sm text-slate-200">
-            选择一个模型，输入文本，然后查看接口返回的补全结果。UI 使用
-            ShadUI 组件，方便快速实验不同模型的效果。
+            不同模型的模型补全。支持读取网页内容。
           </p>
         </header>
 

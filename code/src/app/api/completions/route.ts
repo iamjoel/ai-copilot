@@ -1,4 +1,4 @@
-import { getModel } from "@/lib/model-factory";
+import { commonWithContextTool, geminiWithContextTool } from "@/lib/model-factory";
 import { getModelPreset } from "@/lib/model-presets";
 import { generateText } from "ai";
 
@@ -36,13 +36,10 @@ export async function POST(req: Request) {
         { status: 404, headers: { "Content-Type": "application/json" } },
       );
     }
-
-    const result = await generateText({
-      model: getModel(target.provider, target.model),
-      prompt,
-      maxRetries: 1,
-    });
-    console.log("Completion result:", result);
+    const isGeminiModel = target.provider === "google";
+    const modelWithContextTool = isGeminiModel ? geminiWithContextTool : commonWithContextTool
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const result = await generateText(modelWithContextTool(target.provider, target.model, prompt) as any);
 
     return new Response(
       JSON.stringify({ text: result.text }),

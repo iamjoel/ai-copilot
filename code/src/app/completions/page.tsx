@@ -12,6 +12,8 @@ import {
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { MODEL_GROUPS } from "@/lib/model-presets";
+import { Streamdown } from "streamdown";
+import { Markdown } from "@/lib/markdown";
 
 const ALL_MODEL_OPTIONS = MODEL_GROUPS.flatMap(group => group.options);
 const DEFAULT_MODEL_VALUE = ALL_MODEL_OPTIONS[0]?.value ?? "";
@@ -142,7 +144,7 @@ export default function CompletionsPage() {
 
             <div className="space-y-2">
               <Label className="text-slate-200">接口返回</Label>
-              <div className="min-h-[140px] rounded-lg border border-white/10 bg-slate-950/40 px-4 py-3 text-sm text-slate-100 whitespace-pre-wrap">
+              <div className="min-h-[140px] rounded-lg border border-white/10 bg-slate-950/40 px-4 py-3 text-sm text-slate-100">
                 {loading ? (
                   <div className="animate-pulse space-y-2 text-slate-400">
                     <div className="h-3 w-3/5 rounded bg-white/10" />
@@ -150,7 +152,7 @@ export default function CompletionsPage() {
                     <div className="h-3 w-4/5 rounded bg-white/10" />
                   </div>
                 ) : response ? (
-                  response
+                  <Streamdown>{response}</Streamdown>
                 ) : (
                   <span className="text-slate-500">
                     等待发送请求，或试试提示：&ldquo;给我一条周末出游建议&rdquo;。
@@ -161,6 +163,22 @@ export default function CompletionsPage() {
           </CardContent>
         </Card>
       </div>
+
+      <Markdown content={`
+:::card{title="旅行预算速算" subtitle="输入目的地与天数，我给你一个可执行的预算框架" icon="🧾"}
+你可以按下面三类先填数字，缺的写“未知”也行。
+:::
+
+::kpi{label="住宿/晚" value="¥800" delta="中位数参考" trend="flat"}
+::kpi{label="餐饮/天" value="¥300" delta="可下调" trend="down"}
+
+:::steps
+- 确认天数与人数：写成 \`3天/2人\`
+- 选住宿档位：经济/舒适/高端
+- 列出固定项：机票、门票、交通卡
+- 留 10% 浮动：应急与临时升级
+:::
+        `} isAnimating={false} />
     </main>
   );
 }

@@ -5,7 +5,8 @@ export type ModelPresetKey =
   | "gemini-2.5-flash"
   | "gemini-2.5-pro"
   | "gemini-3"
-  | "gpt-4o-mini";
+  | "gpt-4o-mini"
+  | "deepseek-v3.1";
 
 export type ModelPreset = {
   provider: Provider;
@@ -38,6 +39,11 @@ export const MODEL_PRESETS: Record<ModelPresetKey, ModelPreset> = {
     provider: "openai",
     model: "gpt-4o-mini",
     label: "GPT-4o mini",
+  },
+  "deepseek-v3.1": {
+    provider: "deepseek",
+    model: "deepseek-v3.1",
+    label: "DeepSeek V3.1",
   },
 };
 

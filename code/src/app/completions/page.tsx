@@ -24,6 +24,7 @@ const modelOptions = [
   { label: "Gemini 2.5 Pro", value: "gemini-2.5-pro" },
   { label: "Gemini 3", value: "gemini-3" },
   { label: "GPT-4o mini", value: "gpt-4o-mini" },
+  { label: "DeepSeek V3.1", value: "deepseek-v3.1" },
 ];
 
 export default function CompletionsPage() {

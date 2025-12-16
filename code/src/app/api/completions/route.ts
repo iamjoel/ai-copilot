@@ -4,7 +4,13 @@ import { generateText } from "ai";
 
 export const runtime = "nodejs"; // 'edge' runtime does not support undici yet
 
-const ALLOWED_MODELS = new Set(["gemini-2.5-flash", "gemini-2.5-pro", "gemini-3", "gpt-4o-mini"]);
+const ALLOWED_MODELS = new Set([
+  "gemini-2.5-flash",
+  "gemini-2.5-pro",
+  "gemini-3",
+  "gpt-4o-mini",
+  "deepseek-v3.1",
+]);
 
 export async function POST(req: Request) {
   try {

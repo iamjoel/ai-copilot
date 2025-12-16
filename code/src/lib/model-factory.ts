@@ -4,7 +4,7 @@ import { createOpenAI } from "@ai-sdk/openai";
 import { jinaUrlContext } from "./tools/jina-reader";
 import { stepCountIs } from "ai";
 
-export type Provider = "google" | "openai";
+export type Provider = "google" | "openai" | "deepseek";
 
 export function getModel(provider: Provider, modelName: string) {
   if (provider === "google") {
@@ -12,6 +12,15 @@ export function getModel(provider: Provider, modelName: string) {
       apiKey: process.env.GOOGLE_GENERATIVE_AI_API_KEY!,
     });
     return client(modelName);
+  }
+
+  if (provider === "deepseek") {
+    const client = createOpenAI({
+      apiKey: process.env.QINIU_API_KEY!,
+      baseURL: "https://api.qnaigc.com/v1", // qiniu deepseek endpoint
+      name: "deepseek",
+    });
+    return client.chat(modelName);
   }
 
   const client = createOpenAI({ apiKey: process.env.OPENAI_API_KEY! });
@@ -53,4 +62,4 @@ export const commonWithContextTool = (provider: Provider, modelName: string, pro
 };
 
 // DeepSeek
-
+export const deepseekV31Model = getModel("deepseek", "deepseek-v3.1");

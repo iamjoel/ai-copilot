@@ -1,16 +1,14 @@
 import { commonWithContextTool, geminiWithContextTool } from "@/lib/model-factory";
-import { getModelPreset } from "@/lib/model-presets";
+import { MODEL_GROUPS, type ModelPresetKey, getModelPreset } from "@/lib/model-presets";
 import { generateText } from "ai";
 
 export const runtime = "nodejs"; // 'edge' runtime does not support undici yet
 
-const ALLOWED_MODELS = new Set([
-  "gemini-2.5-flash",
-  "gemini-2.5-pro",
-  "gemini-3",
-  "gpt-4o-mini",
-  "deepseek-v3.1",
-]);
+// Get the list of allowed models from Gemini API
+// curl "https://generativelanguage.googleapis.com/v1beta/models?key=$GEMINI_API_KEY"
+const ALLOWED_MODELS = new Set<ModelPresetKey>(
+  MODEL_GROUPS.flatMap(group => group.options.map(option => option.value)),
+);
 
 export async function POST(req: Request) {
   try {

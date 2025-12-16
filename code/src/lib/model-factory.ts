@@ -4,7 +4,18 @@ import { createOpenAI } from "@ai-sdk/openai";
 import { jinaUrlContext } from "./tools/jina-reader";
 import { stepCountIs } from "ai";
 
-export type Provider = "google" | "openai" | "deepseek";
+export type Provider = "google" | "openai" | "deepseek" | "qwen" | "kimi" | "minimax";
+
+const QINIU_BASE_URL = "https://api.qnaigc.com/v1";
+
+function getQiniuChatModel(providerName: string, modelName: string) {
+  const client = createOpenAI({
+    apiKey: process.env.QINIU_API_KEY!,
+    baseURL: QINIU_BASE_URL,
+    name: providerName,
+  });
+  return client.chat(modelName);
+}
 
 export function getModel(provider: Provider, modelName: string) {
   if (provider === "google") {
@@ -15,12 +26,23 @@ export function getModel(provider: Provider, modelName: string) {
   }
 
   if (provider === "deepseek") {
-    const client = createOpenAI({
-      apiKey: process.env.QINIU_API_KEY!,
-      baseURL: "https://api.qnaigc.com/v1", // qiniu deepseek endpoint
-      name: "deepseek",
-    });
-    return client.chat(modelName);
+    return getQiniuChatModel("deepseek", modelName);
+  }
+
+  if (provider === "qwen") {
+    return getQiniuChatModel("qwen", modelName);
+  }
+
+  if (provider === "kimi") {
+    return getQiniuChatModel("kimi", modelName);
+  }
+
+  if (provider === "minimax") {
+    return getQiniuChatModel("minimax", modelName);
+  }
+
+  if (provider === "openai" && modelName.startsWith("gpt-5.1")) {
+    return getQiniuChatModel("qiniu", modelName);
   }
 
   const client = createOpenAI({ apiKey: process.env.OPENAI_API_KEY! });

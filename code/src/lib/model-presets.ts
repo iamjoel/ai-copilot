@@ -1,12 +1,16 @@
 import { type Provider } from "./model-factory";
 
-export type ModelPresetKey =
-  | "gemini-2.5-flash-lite"
-  | "gemini-2.5-flash"
-  | "gemini-2.5-pro"
-  | "gemini-3"
-  | "gpt-4o-mini"
-  | "deepseek-v3.1";
+type ModelGroupOption = {
+  label: string;
+  value: string;
+  model: string;
+};
+
+export type ModelGroup = {
+  provider: Provider;
+  providerLabel: string;
+  options: readonly ModelGroupOption[];
+};
 
 export type ModelPreset = {
   provider: Provider;
@@ -14,38 +18,111 @@ export type ModelPreset = {
   label: string;
 };
 
-export const MODEL_PRESETS: Record<ModelPresetKey, ModelPreset> = {
-  "gemini-2.5-flash-lite": {
+export const MODEL_GROUPS = [
+  {
     provider: "google",
-    model: "models/gemini-2.5-flash-lite",
-    label: "Gemini 2.5 Flash Lite",
+    providerLabel: "Gemini",
+    options: [
+      {
+        label: "Gemini 2.5 Lite",
+        value: "gemini-2.5-flash-lite",
+        model: "models/gemini-2.5-flash-lite",
+      },
+      {
+        label: "Gemini 2.5 Flash",
+        value: "gemini-2.5-flash",
+        model: "models/gemini-2.0-flash-exp",
+      },
+      {
+        label: "Gemini 2.5 Pro",
+        value: "gemini-2.5-pro",
+        model: "models/gemini-2.0-pro-exp-02-05",
+      },
+      {
+        label: "Gemini 3 Pro",
+        value: "gemini-3-pro-preview",
+        model: "models/gemini-3-pro-preview",
+      },
+    ],
   },
-  "gemini-2.5-flash": {
-    provider: "google",
-    model: "models/gemini-2.0-flash-exp",
-    label: "Gemini 2.5 Flash",
-  },
-  "gemini-2.5-pro": {
-    provider: "google",
-    model: "models/gemini-2.0-pro-exp-02-05",
-    label: "Gemini 2.5 Pro",
-  },
-  "gemini-3": {
-    provider: "google",
-    model: "models/gemini-1.5-pro",
-    label: "Gemini 3",
-  },
-  "gpt-4o-mini": {
+  {
     provider: "openai",
-    model: "gpt-4o-mini",
-    label: "GPT-4o mini",
+    providerLabel: "OpenAI",
+    options: [
+      {
+        label: "GPT-4o mini",
+        value: "gpt-4o-mini",
+        model: "gpt-4o-mini",
+      },
+      {
+        label: "GPT-5.1",
+        value: "gpt-5.1",
+        model: "gpt-5.1",
+      },
+    ],
   },
-  "deepseek-v3.1": {
+  {
     provider: "deepseek",
-    model: "deepseek-v3.1",
-    label: "DeepSeek V3.1",
+    providerLabel: "DeepSeek",
+    options: [
+      {
+        label: "DeepSeek V3.1",
+        value: "deepseek-v3.1",
+        model: "deepseek-v3.1",
+      },
+    ],
   },
-};
+  {
+    provider: "qwen",
+    providerLabel: "Qwen",
+    options: [
+      {
+        label: "Qwen Turbo",
+        value: "qwen-turbo",
+        model: "qwen-turbo",
+      },
+    ],
+  },
+  {
+    provider: "kimi",
+    providerLabel: "Kimi",
+    options: [
+      {
+        label: "Kimi k2",
+        value: "kimi-k2",
+        model: "moonshotai/kimi-k2-0905",
+      },
+    ],
+  },
+  {
+    provider: "minimax",
+    providerLabel: "MiniMax",
+    options: [
+      {
+        label: "minimax-m2",
+        value: "minimax-m2",
+        model: "minimax/minimax-m2",
+      },
+    ],
+  },
+] as const satisfies readonly ModelGroup[];
+
+export type ModelPresetKey = (typeof MODEL_GROUPS)[number]["options"][number]["value"];
+
+const MODEL_PRESET_ENTRIES = MODEL_GROUPS.flatMap(group =>
+  group.options.map(option => [
+    option.value,
+    {
+      provider: group.provider,
+      model: option.model,
+      label: option.label,
+    } satisfies ModelPreset,
+  ]),
+) as Array<[ModelPresetKey, ModelPreset]>;
+
+export const MODEL_PRESETS: Record<ModelPresetKey, ModelPreset> = Object.fromEntries(
+  MODEL_PRESET_ENTRIES,
+) as Record<ModelPresetKey, ModelPreset>;
 
 export function getModelPreset(key: string) {
   return MODEL_PRESETS[key as ModelPresetKey];

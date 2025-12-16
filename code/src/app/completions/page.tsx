@@ -10,26 +10,15 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
+import { MODEL_GROUPS } from "@/lib/model-presets";
 
-const modelOptions = [
-  { label: "Gemini 2.5 Flash", value: "gemini-2.5-flash" },
-  { label: "Gemini 2.5 Pro", value: "gemini-2.5-pro" },
-  { label: "Gemini 3", value: "gemini-3" },
-  { label: "GPT-4o mini", value: "gpt-4o-mini" },
-  { label: "DeepSeek V3.1", value: "deepseek-v3.1" },
-];
+const ALL_MODEL_OPTIONS = MODEL_GROUPS.flatMap(group => group.options);
+const DEFAULT_MODEL_VALUE = ALL_MODEL_OPTIONS[0]?.value ?? "";
 
 export default function CompletionsPage() {
-  const [prompt, setPrompt] = useState("");
-  const [model, setModel] = useState(modelOptions[0].value);
+  const [prompt, setPrompt] = useState("When I was 6 my sister was half my age. Now I’m 70 how old is my sister?");
+  const [model, setModel] = useState(DEFAULT_MODEL_VALUE);
   const [response, setResponse] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -71,11 +60,8 @@ export default function CompletionsPage() {
           <p className="text-xs uppercase tracking-[0.28em] text-blue-200">
             Completions Studio
           </p>
-          <h1 className="text-4xl font-semibold leading-tight text-white">
-            Prompt once, compare across Gemini & GPT.
-          </h1>
           <p className="max-w-2xl text-sm text-slate-200">
-            不同模型的模型补全。支持读取网页内容。
+            不同模型效果测试。支持读取网页内容。
           </p>
         </header>
 
@@ -88,29 +74,41 @@ export default function CompletionsPage() {
           </CardHeader>
           <CardContent className="space-y-6">
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="space-y-2">
-                <Label htmlFor="model" className="text-slate-200">
-                  模型
-                </Label>
-                <Select value={model} onValueChange={setModel}>
-                  <SelectTrigger
-                    id="model"
-                    className="border-white/10 bg-slate-950/60 text-white"
-                  >
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent className="border-white/10 bg-slate-950/90 text-white backdrop-blur">
-                    {modelOptions.map(option => (
-                      <SelectItem
-                        key={option.value}
-                        value={option.value}
-                        className="cursor-pointer focus:bg-slate-800/60 focus:text-white"
-                      >
-                        {option.label}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
+              <div className="space-y-4">
+                <Label className="text-slate-200">模型</Label>
+                <div className="space-y-5">
+                  {MODEL_GROUPS.map(group => (
+                    <div key={group.providerLabel} className="space-y-3">
+                      <p className="text-xs uppercase tracking-[0.2em] text-slate-400">
+                        {group.providerLabel}
+                      </p>
+                      <div className="grid gap-3 sm:grid-cols-2">
+                        {group.options.map(option => {
+                          const isSelected = option.value === model;
+                          return (
+                            <label
+                              key={option.value}
+                              className={`cursor-pointer rounded-lg border px-4 py-3 text-sm transition ${isSelected
+                                ? "border-blue-400/80 bg-blue-500/10 text-white"
+                                : "border-white/10 bg-slate-950/30 text-slate-200 hover:border-white/30"
+                                }`}
+                            >
+                              <input
+                                type="radio"
+                                name="model"
+                                value={option.value}
+                                className="sr-only"
+                                checked={isSelected}
+                                onChange={() => setModel(option.value)}
+                              />
+                              {option.label}
+                            </label>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
 
               <div className="space-y-2">
@@ -128,7 +126,7 @@ export default function CompletionsPage() {
 
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                 <p className="text-xs text-slate-300">
-                  当前模型：{modelOptions.find(m => m.value === model)?.label}
+                  当前模型：{ALL_MODEL_OPTIONS.find(m => m.value === model)?.label ?? model}
                 </p>
                 <Button type="submit" size="lg" disabled={loading || !prompt}>
                   {loading ? "发送中..." : "发送请求"}

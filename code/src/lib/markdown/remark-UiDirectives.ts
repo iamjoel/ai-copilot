@@ -2,6 +2,7 @@
 // remarkUiDirectives.ts
 import type { Plugin } from "unified";
 import { visit } from "unist-util-visit";
+import { toHast } from "mdast-util-to-hast";
 
 type AnyNode = any;
 
@@ -36,6 +37,11 @@ export const remarkUiDirectives: Plugin = () => {
       const data = (node.data ??= {});
       data.hName = `ui-${name}`;
       data.hProperties = attrsToProps(node.attributes);
+      if (node.type === "containerDirective") {
+        data.hChildren = (node.children ?? [])
+          .map(child => toHast(child))
+          .filter(Boolean);
+      }
     });
   };
 };

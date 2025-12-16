@@ -18,9 +18,9 @@ export function Markdown({ content, isAnimating }: { content: string; isAnimatin
       isAnimating={!!isAnimating}
       remarkPlugins={[remarkDirective, remarkUiDirectives]}
       components={{
-        "ui-card": ({ node, ...props }: any) => <UiCard {...(props as any)} />,
-        "ui-kpi": ({ node, ...props }: any) => <UiKpi {...(props as any)} />,
-        "ui-steps": ({ node, ...props }: any) => <UiSteps {...(props as any)} />,
+        "ui-card": ({ children, ...rest }: any) => <UiCard {...(rest as any)}>{children}</UiCard>,
+        "ui-kpi": (props: any) => <UiKpi {...(props as any)} />,
+        "ui-steps": ({ children, ...rest }: any) => <UiSteps {...(rest as any)}>{children}</UiSteps>,
       } as any}
     >
       {content}

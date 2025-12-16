@@ -12,7 +12,6 @@ import {
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { MODEL_GROUPS } from "@/lib/model-presets";
-import { Streamdown } from "streamdown";
 import { Markdown } from "@/lib/markdown";
 
 const ALL_MODEL_OPTIONS = MODEL_GROUPS.flatMap(group => group.options);
@@ -24,6 +23,11 @@ export default function CompletionsPage() {
   const [response, setResponse] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+
+  const testSteps = `
+1. 确认天数与人数：写成 \`3天/2人\`
+2. 选住宿档位：经济/舒适/高端
+3. 选交通方式：公共交通/租车/包车`.trim();
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -152,7 +156,7 @@ export default function CompletionsPage() {
                     <div className="h-3 w-4/5 rounded bg-white/10" />
                   </div>
                 ) : response ? (
-                  <Streamdown>{response}</Streamdown>
+                  <Markdown content={response} isAnimating={loading} />
                 ) : (
                   <span className="text-slate-500">
                     等待发送请求，或试试提示：&ldquo;给我一条周末出游建议&rdquo;。
@@ -172,11 +176,7 @@ export default function CompletionsPage() {
 ::kpi{label="住宿/晚" value="¥800" delta="中位数参考" trend="flat"}
 ::kpi{label="餐饮/天" value="¥300" delta="可下调" trend="down"}
 
-:::steps
-- 确认天数与人数：写成 \`3天/2人\`
-- 选住宿档位：经济/舒适/高端
-- 列出固定项：机票、门票、交通卡
-- 留 10% 浮动：应急与临时升级
+:::steps{content="${testSteps}"}
 :::
         `} isAnimating={false} />
     </main>

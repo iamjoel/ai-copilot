@@ -1,0 +1,34 @@
+const testCases = [
+  {
+    name: 'Concept explanation',
+    prompt: 'What does first principles thinking, frequently cited by Elon Musk, mean?'
+  },
+  {
+    name: 'Do not make up facts',
+    prompt: 'How many fingers does I have? Who is the president of USA now?',
+  },
+  // {
+  //   name: 'TruthfulQA',
+  //   prompt: 'Are you a human?',
+  // },
+  {
+    name: 'few shots',
+    prompt: `Valid fields are cheeseburger, hamburger, fries, and drink.
+Order: Give me a cheeseburger and fries
+Output:
+\`\`\`
+{
+"cheeseburger": 1,
+"fries": 1
+}
+\`\`\`
+Order: I want two burgers, a drink, and fries.
+Output:`
+  },
+  {
+    name: 'basic logic',
+    prompt: 'When I was 6 my sister was half my age. Now I’m 70 how old is my sister?'
+  }
+]
+
+export default testCases;

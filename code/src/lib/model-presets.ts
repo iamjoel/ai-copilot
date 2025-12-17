@@ -19,24 +19,25 @@ export type ModelPreset = {
 };
 
 export const MODEL_GROUPS = [
+  // curl "https://generativelanguage.googleapis.com/v1beta/models?key=$GEMINI_API_KEY"
   {
     provider: "google",
     providerLabel: "Gemini",
     options: [
       {
-        label: "Gemini 2.5 Lite",
+        label: "Gemini 2.5 Flash Lite",
         value: "gemini-2.5-flash-lite",
         model: "models/gemini-2.5-flash-lite",
       },
       {
         label: "Gemini 2.5 Flash",
         value: "gemini-2.5-flash",
-        model: "models/gemini-2.0-flash-exp",
+        model: "models/gemini-2.5-flash",
       },
       {
         label: "Gemini 2.5 Pro",
         value: "gemini-2.5-pro",
-        model: "models/gemini-2.0-pro-exp-02-05",
+        model: "models/gemini-2.5-pro",
       },
       {
         label: "Gemini 3 Pro",

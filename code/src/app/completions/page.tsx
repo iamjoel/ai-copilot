@@ -12,13 +12,14 @@ import {
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { MODEL_GROUPS } from "@/lib/model-presets";
-
+import { Markdown } from "@/lib/markdown/streamdown";
+import testCases from "./test-cases";
 
 const ALL_MODEL_OPTIONS = MODEL_GROUPS.flatMap(group => group.options);
 const DEFAULT_MODEL_VALUE = ALL_MODEL_OPTIONS[0]?.value ?? "";
 
 export default function CompletionsPage() {
-  const [prompt, setPrompt] = useState("When I was 6 my sister was half my age. Now I’m 70 how old is my sister?");
+  const [prompt, setPrompt] = useState(testCases[0].prompt);
   const [model, setModel] = useState(DEFAULT_MODEL_VALUE);
   const [response, setResponse] = useState("");
   const [error, setError] = useState<string | null>(null);

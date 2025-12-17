@@ -3,6 +3,7 @@ import { createGoogleGenerativeAI, google } from "@ai-sdk/google";
 import { createOpenAI } from "@ai-sdk/openai";
 import { jinaUrlContext } from "./tools/jina-reader";
 import { stepCountIs } from "ai";
+import jinaReader from "@/prompts/jina-reader";
 
 export type Provider = "google" | "openai" | "deepseek" | "qwen" | "kimi" | "minimax";
 
@@ -75,7 +76,7 @@ export const gpt4oMiniModel = getModel("openai", "gpt-4o-mini");
 export const commonWithContextTool = (provider: Provider, modelName: string, prompt: string) => {
   return {
     model: getModel(provider, modelName),
-    prompt: `If there is a URL, use jina_url_context to get the content of url.\n ${prompt}`,
+    prompt: `${prompt}\n${jinaReader}`,
     tools: {
       jina_url_context: jinaUrlContext,
     },

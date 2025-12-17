@@ -12,7 +12,7 @@ import {
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { MODEL_GROUPS } from "@/lib/model-presets";
-import { Markdown } from "@/lib/markdown";
+
 
 const ALL_MODEL_OPTIONS = MODEL_GROUPS.flatMap(group => group.options);
 const DEFAULT_MODEL_VALUE = ALL_MODEL_OPTIONS[0]?.value ?? "";
@@ -23,11 +23,6 @@ export default function CompletionsPage() {
   const [response, setResponse] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
-
-  const testSteps = `
-1. 确认天数与人数：写成 \`3天/2人\`
-2. 选住宿档位：经济/舒适/高端
-3. 选交通方式：公共交通/租车/包车`.trim();
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -168,17 +163,7 @@ export default function CompletionsPage() {
         </Card>
       </div>
 
-      <Markdown content={`
-:::card{title="旅行预算速算" subtitle="输入目的地与天数，我给你一个可执行的预算框架" icon="🧾"}
-你可以按下面三类先填数字，缺的写“未知”也行。
-:::
 
-::kpi{label="住宿/晚" value="¥800" delta="中位数参考" trend="flat"}
-::kpi{label="餐饮/天" value="¥300" delta="可下调" trend="down"}
-
-:::steps{content="${testSteps}"}
-:::
-        `} isAnimating={false} />
     </main>
   );
 }

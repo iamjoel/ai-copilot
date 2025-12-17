@@ -13,6 +13,7 @@
     "@ai-sdk/google": "^2.0.44",
     "@ai-sdk/openai": "^2.0.77",
     "@ai-sdk/react": "^2.0.107",
+    "@markdoc/markdoc": "^0.5.4",
     "@prisma/adapter-pg": "^7.1.0",
     "@prisma/client": "7.1.0",
     "@prisma/client-runtime-utils": "^7.1.0",

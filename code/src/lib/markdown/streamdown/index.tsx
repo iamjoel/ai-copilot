@@ -8,9 +8,9 @@ import React from "react";
 import { Streamdown } from "streamdown";
 import remarkDirective from "remark-directive";
 import { remarkUiDirectives } from "./remark-UiDirectives";
-import UiCard from "./blocks/card";
-import UiKpi from "./blocks/kpi";
-import UiSteps from "./blocks/steps";
+import UiCard from "../blocks/card";
+import UiKpi from "../blocks/kpi";
+import UiSteps from "../blocks/steps";
 
 export function Markdown({ content, isAnimating }: { content: string; isAnimating?: boolean }) {
   return (

@@ -5,7 +5,7 @@ import { jinaUrlContext } from "./tools/jina-reader";
 import { stepCountIs } from "ai";
 import jinaReader from "@/prompts/jina-reader";
 
-export type Provider = "google" | "openai" | "deepseek" | "qwen" | "kimi" | "minimax";
+export type Provider = "google" | "openai" | "deepseek" | "qwen" | "kimi" | "minimax" | "xiaomi";
 
 const QINIU_BASE_URL = "https://api.qnaigc.com/v1";
 
@@ -44,6 +44,15 @@ export function getModel(provider: Provider, modelName: string) {
 
   if (provider === "openai" && modelName.startsWith("gpt-5.1")) {
     return getQiniuChatModel("qiniu", modelName);
+  }
+
+  if (provider === "xiaomi") {
+    const client = createOpenAI({
+      apiKey: process.env.XIAOMI_API_KEY!,
+      baseURL: 'https://api.xiaomimimo.com/v1',
+      name: 'xiaomi',
+    });
+    return client.chat(modelName);
   }
 
   const client = createOpenAI({ apiKey: process.env.OPENAI_API_KEY! });

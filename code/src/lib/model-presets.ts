@@ -40,6 +40,11 @@ export const MODEL_GROUPS = [
         model: "models/gemini-2.5-pro",
       },
       {
+        label: "Gemini 3 Flash",
+        value: "gemini-3-flash-preview",
+        model: "models/gemini-3-flash-preview",
+      },
+      {
         label: "Gemini 3 Pro",
         value: "gemini-3-pro-preview",
         model: "models/gemini-3-pro-preview",
@@ -106,6 +111,17 @@ export const MODEL_GROUPS = [
       },
     ],
   },
+  {
+    provider: "xiaomi",
+    providerLabel: "Xiaomi",
+    options: [
+      {
+        label: "mimo-v2-flash",
+        value: "mimo-v2-flash",
+        model: "mimo-v2-flash",
+      },
+    ],
+  }
 ] as const satisfies readonly ModelGroup[];
 
 export type ModelPresetKey = (typeof MODEL_GROUPS)[number]["options"][number]["value"];

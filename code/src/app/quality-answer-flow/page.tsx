@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
 import { FormEvent, useMemo, useState } from "react";
@@ -23,6 +24,7 @@ type QualityAnswerResponse = {
   strategyName: string | null;
   finalPrompt: string;
   answer: string;
+  directAnswer: string;
 };
 
 export default function QualityAnswerFlowPage() {
@@ -41,7 +43,7 @@ export default function QualityAnswerFlowPage() {
   const selectedModels = useMemo(() => (selectedModel ? [selectedModel] : []), [selectedModel]);
 
   const handleModelToggle = (value: string) => {
-    setSelectedModel(prev => (prev === value ? "" : value));
+    setSelectedModel((prev: string) => (prev === value ? "" : value) as any);
   };
 
   const handleTestCaseChange = (value: string) => {
@@ -166,6 +168,7 @@ export default function QualityAnswerFlowPage() {
             strategyName={result.strategyName}
             finalPrompt={result.finalPrompt}
             answer={result.answer}
+            directAnswer={result.directAnswer}
           />
         )}
       </div>
@@ -173,15 +176,22 @@ export default function QualityAnswerFlowPage() {
   );
 }
 
-const ALL_MODEL_OPTIONS = MODEL_GROUPS.flatMap(group => group.options);
+const ALL_MODEL_OPTIONS = MODEL_GROUPS.flatMap((group: any) => group.options);
 
 function getModelLabel(value: string) {
-  return ALL_MODEL_OPTIONS.find(option => option.value === value)?.label ?? value;
+  return ALL_MODEL_OPTIONS.find((option: any) => option.value === value)?.label ?? value;
 }
 
 type ResultPanelProps = QualityAnswerResponse;
 
-const ResultPanel = ({ classification, strategy, strategyName, finalPrompt, answer }: ResultPanelProps) => (
+const ResultPanel = ({
+  classification,
+  strategy,
+  strategyName,
+  finalPrompt,
+  answer,
+  directAnswer,
+}: ResultPanelProps) => (
   <section className="space-y-6 rounded-2xl border border-white/10 bg-slate-900/60 p-6 text-sm text-slate-100">
     <div>
       <h2 className="text-lg font-semibold text-white">意图识别</h2>
@@ -230,9 +240,16 @@ const ResultPanel = ({ classification, strategy, strategyName, finalPrompt, answ
     </div>
 
     <div>
-      <h2 className="text-lg font-semibold text-white">模型回答</h2>
-      <div className="mt-2 rounded-lg border border-green-500/20 bg-slate-950/30 p-4 text-sm text-slate-100">
-        <Markdown content={answer} />
+      <h2 className="text-lg font-semibold text-white">模型回答对比</h2>
+      <div className="mt-2 grid gap-4 md:grid-cols-2">
+        <div className="rounded-lg border border-green-500/20 bg-slate-950/30 p-4 text-sm text-slate-100">
+          <p className="mb-2 text-xs uppercase tracking-wide text-green-300">策略引导</p>
+          <Markdown content={answer} />
+        </div>
+        <div className="rounded-lg border border-yellow-500/20 bg-slate-950/30 p-4 text-sm text-slate-100">
+          <p className="mb-2 text-xs uppercase tracking-wide text-yellow-300">直接回答</p>
+          <Markdown content={directAnswer} />
+        </div>
       </div>
     </div>
   </section>

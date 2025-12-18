@@ -90,8 +90,18 @@ export async function POST(req: Request) {
     });
     stepLogger.info({ step: "final_prompt_ready" });
 
-    const answer = await runModel(finalPrompt);
-    stepLogger.info({ step: "final_answer_completed", answerLength: answer.length });
+    const [guidedAnswer, directAnswer] = await Promise.all([
+      runModel(finalPrompt),
+      runModel(question.trim()),
+    ]);
+    stepLogger.info({
+      step: "final_answer_completed",
+      guidedAnswerLength: guidedAnswer.length,
+    });
+    stepLogger.info({
+      step: "direct_answer_completed",
+      directAnswerLength: directAnswer.length,
+    });
 
     return new Response(
       JSON.stringify({
@@ -99,7 +109,8 @@ export async function POST(req: Request) {
         strategy: strategy ?? null,
         strategyName,
         finalPrompt,
-        answer,
+        answer: guidedAnswer,
+        directAnswer,
       }),
       { status: 200, headers: { "Content-Type": "application/json" } },
     );

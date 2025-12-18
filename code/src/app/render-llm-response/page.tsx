@@ -1,5 +1,7 @@
 import { Markdown } from "@/lib/markdown/streamdown";
 import { renderMarkdoc } from "@/lib/markdown/markdoc";
+
+// https://github.com/google/A2UI 描述 UI 结构。前端根据结构渲染对应组件。
 export default function RenderLLMResponsePage() {
   const testSteps = `
 1. 确认天数与人数：写成 \`3天/2人\`

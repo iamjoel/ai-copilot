@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Public+Sans:wght@400;700&display=swap');
+
+:root {
+  --pop-red: #FF2A2A;
+  --pop-yellow: #FFD700;
+  --pop-blue: #009DFF;
+  --pop-purple: #A020F0;
+  --pop-black: #1a1a1a;
+  --pop-white: #ffffff;
+  --border-width: 4px;
+  --shadow-offset: 6px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Public Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--pop-yellow);
+  background-image: radial-gradient(var(--pop-black) 10%, transparent 10%);
+  background-size: 20px 20px;
+  overflow: hidden; /* Hide scrollbars for presentation mode */
+  color: var(--pop-black);
+}
+
+h1, h2, h3 {
+  font-family: 'Bangers', cursive;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.1;
+  text-shadow: 3px 3px 0px var(--pop-white);
+}
+
+p, li {
+  line-height: 1.6;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Pop Art Utilities */
+.pop-box {
+  background: var(--pop-white);
+  border: var(--border-width) solid var(--pop-black);
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0px var(--pop-black);
+  transition: all 0.2s ease;
+}
+
+.pop-btn {
+  font-family: 'Bangers', cursive;
+  font-size: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  background: var(--pop-blue);
+  color: var(--pop-white);
+  border: var(--border-width) solid var(--pop-black);
+  box-shadow: 4px 4px 0px var(--pop-black);
+  text-transform: uppercase;
+}
+
+.pop-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--pop-black);
+}
+
+.pop-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px var(--pop-black);
+}
+
+.pop-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--pop-red);
+  color: var(--pop-white);
+  border: 3px solid var(--pop-black);
+  font-family: 'Bangers', cursive;
+  transform: rotate(-2deg);
+  font-size: 1.2rem;
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px var(--pop-black);
+  text-stroke: 1px var(--pop-black);
+}

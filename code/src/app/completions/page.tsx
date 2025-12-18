@@ -11,19 +11,41 @@ import {
 } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectSeparator,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { MODEL_GROUPS } from "@/lib/model-presets";
 import { Markdown } from "@/lib/markdown/streamdown";
 import testCases from "./test-cases";
 
 const ALL_MODEL_OPTIONS = MODEL_GROUPS.flatMap(group => group.options);
 const DEFAULT_MODEL_VALUE = ALL_MODEL_OPTIONS[0]?.value ?? "";
+const CUSTOM_PROMPT_VALUE = "__custom_prompt__";
 
 export default function CompletionsPage() {
   const [prompt, setPrompt] = useState(testCases[0].prompt);
   const [model, setModel] = useState(DEFAULT_MODEL_VALUE);
+  const [selectedPreset, setSelectedPreset] = useState(testCases[0].name);
   const [response, setResponse] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+
+  const handlePresetChange = (value: string) => {
+    if (value === CUSTOM_PROMPT_VALUE) {
+      setSelectedPreset(value);
+      return;
+    }
+
+    const preset = testCases.find(test => test.name === value);
+    if (!preset) return;
+    setSelectedPreset(value);
+    setPrompt(preset.prompt);
+  };
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -113,7 +135,34 @@ export default function CompletionsPage() {
                 </div>
               </div>
 
-              <div className="space-y-2">
+              <div className="space-y-4">
+                <div className="space-y-2">
+                  <Label className="text-slate-200">提示词模版</Label>
+                  <Select value={selectedPreset} onValueChange={handlePresetChange}>
+                    <SelectTrigger className="h-11 border-white/10 bg-slate-950/60 text-slate-100 focus:ring-blue-500 focus:ring-offset-0">
+                      <SelectValue placeholder="选择一个示例提示词" />
+                    </SelectTrigger>
+                    <SelectContent className="border-white/10 bg-slate-900 text-slate-100">
+                      <SelectItem
+                        value={CUSTOM_PROMPT_VALUE}
+                        className="text-slate-100 focus:bg-slate-800 focus:text-white"
+                      >
+                        自定义输入
+                      </SelectItem>
+                      <SelectSeparator className="bg-white/10" />
+                      {testCases.map(testCase => (
+                        <SelectItem
+                          key={testCase.name}
+                          value={testCase.name}
+                          className="text-slate-100 focus:bg-slate-800 focus:text-white"
+                        >
+                          {testCase.name}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+
                 <Label htmlFor="prompt" className="text-slate-200">
                   输入文本
                 </Label>
@@ -121,7 +170,12 @@ export default function CompletionsPage() {
                   id="prompt"
                   placeholder="描述你想让模型完成的内容..."
                   value={prompt}
-                  onChange={event => setPrompt(event.target.value)}
+                  onChange={event => {
+                    setPrompt(event.target.value);
+                    if (selectedPreset !== CUSTOM_PROMPT_VALUE) {
+                      setSelectedPreset(CUSTOM_PROMPT_VALUE);
+                    }
+                  }}
                   className="bg-slate-950/60 text-white placeholder:text-slate-400"
                 />
               </div>

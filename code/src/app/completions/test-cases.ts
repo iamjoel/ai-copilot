@@ -31,4 +31,6 @@ Output:`
   }
 ]
 
+export type TestCase = (typeof testCases)[number];
+
 export default testCases;

@@ -17,7 +17,7 @@ const ModelResponsesPanel = ({ responses }: ModelResponsesPanelProps) => {
   }
 
   return (
-    <div className="space-y-4">
+    <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
       {Object.entries(responses).map(([modelValue, result]) => (
         <div
           key={modelValue}

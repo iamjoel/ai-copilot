@@ -1,4 +1,6 @@
 # AI Copilot
+> AI doesn’t make you smarter, but it enables smart people to complete tasks more efficiently.
+
 1. What is the essence of large language models? What are the first-principles behind them? Choose the three most important ones.
 2. What are the capability boundaries of large language models? Limit the answer to no more than 100 words.
 3. What can large language models do for you? Choose the three most important things.

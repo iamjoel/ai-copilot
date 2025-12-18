@@ -1,4 +1,10 @@
+import getPrompt from "@/prompts/quality-answer-flow/intent-classify";
+
 const testCases = [
+  {
+    name: 'intent classification',
+    prompt: getPrompt('How can I learn LLMs from scratch?')
+  },
   {
     name: 'Concept explanation',
     prompt: 'What does first principles thinking, frequently cited by Elon Musk, mean?'

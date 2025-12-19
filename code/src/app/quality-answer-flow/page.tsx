@@ -13,15 +13,18 @@ const CUSTOM_TEST_CASE_ID = "__custom_prompt__";
 type QualityAnswerResponse = {
   classification: {
     category: string;
+    sub_category: string;
+    domain: string;
     complexity: number;
     methodology?: string;
     analysis_reasoning?: string;
   };
   strategy: {
-    constraints: string;
-    recommendedTone: string;
+    methodology: string;
+    rules: string;
   } | null;
   strategyName: string | null;
+  domainContext?: string;
   finalPrompt: string;
   answer: string;
   directAnswer: string;
@@ -102,7 +105,7 @@ export default function QualityAnswerFlowPage() {
           <p className="text-sm uppercase tracking-[0.25em] text-blue-300">Quality Answer Flow</p>
           <h1 className="text-3xl font-semibold">高质量回答流程调试面板</h1>
           <p className="text-sm text-slate-300">
-            输入问题并选择模型，API 将自动完成意图分类、策略匹配与最终回答生成。
+            输入问题并选择模型，API 将自动完成意图分类、策略匹配以及领域的限制与最终回答生成。
           </p>
         </header>
 
@@ -195,10 +198,18 @@ const ResultPanel = ({
   <section className="space-y-6 rounded-2xl border border-white/10 bg-slate-900/60 p-6 text-sm text-slate-100">
     <div>
       <h2 className="text-lg font-semibold text-white">意图识别</h2>
-      <dl className="mt-3 grid gap-2 sm:grid-cols-2">
+      <dl className="mt-3 grid gap-2 sm:grid-cols-3">
         <div className="rounded-lg border border-white/10 bg-slate-950/30 p-3">
           <dt className="text-xs uppercase tracking-wide text-slate-400">Category</dt>
           <dd className="text-base text-white">{classification.category}</dd>
+        </div>
+        <div className="rounded-lg border border-white/10 bg-slate-950/30 p-3">
+          <dt className="text-xs uppercase tracking-wide text-slate-400">Sub-category</dt>
+          <dd className="text-base text-white">{classification.sub_category}</dd>
+        </div>
+        <div className="rounded-lg border border-white/10 bg-slate-950/30 p-3">
+          <dt className="text-xs uppercase tracking-wide text-slate-400">Domain</dt>
+          <dd className="text-base text-white">{classification.domain}</dd>
         </div>
         <div className="rounded-lg border border-white/10 bg-slate-950/30 p-3">
           <dt className="text-xs uppercase tracking-wide text-slate-400">Complexity</dt>
@@ -222,10 +233,10 @@ const ResultPanel = ({
           {strategyName && (
             <p className="text-sm font-semibold text-white">{strategyName}</p>
           )}
-          <p className="text-xs uppercase tracking-wide text-slate-400">Recommended Tone</p>
-          <p className="text-white">{strategy.recommendedTone}</p>
-          <p className="text-xs uppercase tracking-wide text-slate-400">Constraints</p>
-          <p className="whitespace-pre-wrap text-slate-100">{strategy.constraints.trim()}</p>
+          <p className="text-xs uppercase tracking-wide text-slate-400">Methodology</p>
+          <p className="text-white">{strategy.methodology}</p>
+          <p className="text-xs uppercase tracking-wide text-slate-400">Rules</p>
+          <p className="whitespace-pre-wrap text-slate-100">{strategy.rules.trim()}</p>
         </div>
       ) : (
         <p className="mt-2 text-slate-400">未匹配到策略，使用默认回答约束。</p>

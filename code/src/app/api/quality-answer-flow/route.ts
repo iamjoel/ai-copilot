@@ -3,7 +3,7 @@ import { getModel } from "@/lib/model-factory";
 import { MODEL_GROUPS, type ModelPreset, type ModelPresetKey, getModelPreset } from "@/lib/model-presets";
 import composeFinalPrompt from "@/prompts/quality-answer-flow/final-prompt";
 import getIntentPrompt from "@/prompts/quality-answer-flow/intent-classify";
-import STRATEGY_LIBRARY from "@/prompts/quality-answer-flow/strategy-libs";
+import SYSTEM_CONFIG from "@/prompts/quality-answer-flow/strategy-libs";
 import { generateObject, generateText } from "ai";
 import { z } from "zod";
 
@@ -15,13 +15,17 @@ const ALLOWED_MODELS = new Set<ModelPresetKey>(
 
 type ClassificationResult = {
   category: string;
+  sub_category: string;
+  domain: string;
   complexity: number;
   methodology?: string;
   analysis_reasoning?: string;
 };
 
 const classificationSchema = z.object({
-  category: z.string().describe("Intent category label"),
+  category: z.string().min(1).describe("Intent category label"),
+  sub_category: z.string().min(1).describe("Sub-intent label"),
+  domain: z.string().min(1).describe("Domain or industry label"),
   complexity: z.coerce.number().min(1).max(5).describe("Complexity score between 1-5"),
   methodology: z.string().optional().describe("Recommended methodology or None"),
   analysis_reasoning: z.string().optional().describe("Brief explanation for the choice"),
@@ -71,21 +75,33 @@ export async function POST(req: Request) {
     const classification = await parseClassification(question, target);
     stepLogger.info({ step: "intent_classification_parsed", classification });
 
+    const normalizedCategory = classification.category.trim() || "General";
+    const normalizedSubCategory = classification.sub_category.trim() || "General";
+    const normalizedDomain = classification.domain.trim();
+    const domainContext =
+      SYSTEM_CONFIG.DOMAINS[normalizedDomain as keyof typeof SYSTEM_CONFIG.DOMAINS] ||
+      "Context: General professional reasoning and clear communication.";
+    const subStrategy =
+      SYSTEM_CONFIG.STRATEGIES[normalizedCategory]?.[normalizedSubCategory] ||
+      SYSTEM_CONFIG.STRATEGIES[normalizedCategory]?.General;
+
     const rawMethodology = classification.methodology?.trim();
     const methodologyKey =
       rawMethodology && rawMethodology.toLowerCase() !== "none" ? rawMethodology : "";
-    const strategy = methodologyKey ? STRATEGY_LIBRARY[methodologyKey] : undefined;
-    const strategyName = strategy ? methodologyKey || rawMethodology || "Default" : null;
+    const resolvedMethodology = methodologyKey || subStrategy?.methodology || "General";
+    const strategyName = subStrategy ? `${normalizedCategory}/${normalizedSubCategory}` : null;
     stepLogger.info({
       step: "strategy_lookup",
-      methodology: methodologyKey || rawMethodology || "None",
-      matched: Boolean(strategy),
+      methodology: resolvedMethodology,
+      matched: Boolean(subStrategy),
     });
 
     const finalPrompt = composeFinalPrompt({
-      category: classification.category,
+      category: normalizedCategory,
+      sub_category: normalizedSubCategory,
+      domain: normalizedDomain,
       complexity: classification.complexity,
-      methodology: methodologyKey || "None",
+      methodology: resolvedMethodology,
       userQuery: question.trim(),
     });
     stepLogger.info({ step: "final_prompt_ready" });
@@ -106,8 +122,9 @@ export async function POST(req: Request) {
     return new Response(
       JSON.stringify({
         classification,
-        strategy: strategy ?? null,
+        strategy: subStrategy ?? null,
         strategyName,
+        domainContext,
         finalPrompt,
         answer: guidedAnswer,
         directAnswer,
@@ -131,14 +148,17 @@ async function parseClassification(question: string, preset: ModelPreset): Promi
     maxRetries: 2,
   });
 
-  const { category, complexity, methodology, analysis_reasoning } = response.object;
+  const { category, sub_category, domain, complexity, methodology, analysis_reasoning } =
+    response.object;
 
-  if (!category) {
+  if (!category?.trim()) {
     throw new Error("Classification missing category.");
   }
 
   return {
-    category,
+    category: category.trim() || "General",
+    sub_category: sub_category?.trim() || "General",
+    domain: domain?.trim() || "General",
     complexity: normalizeComplexity(complexity),
     methodology,
     analysis_reasoning,

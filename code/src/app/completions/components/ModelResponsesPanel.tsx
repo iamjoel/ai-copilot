@@ -26,13 +26,12 @@ const ModelResponsesPanel = ({ responses }: ModelResponsesPanelProps) => {
           <div className="flex items-center justify-between border-b border-white/5 pb-2">
             <p className="font-medium text-slate-100">{getModelLabel(modelValue)}</p>
             <span
-              className={`text-xs ${
-                result.status === "loading"
-                  ? "text-blue-200"
-                  : result.status === "error"
-                    ? "text-red-200"
-                    : "text-emerald-200"
-              }`}
+              className={`text-xs ${result.status === "loading"
+                ? "text-blue-200"
+                : result.status === "error"
+                  ? "text-red-200"
+                  : "text-emerald-200"
+                }`}
             >
               {result.status === "loading"
                 ? "执行中..."

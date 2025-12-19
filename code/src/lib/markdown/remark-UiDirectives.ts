@@ -21,27 +21,14 @@ function attrsToProps(attrs: Record<string, unknown> | undefined) {
  */
 export const remarkUiDirectives: Plugin = () => {
   return (tree: AnyNode) => {
-    visit(tree, (node: AnyNode) => {
-      if (
-        node?.type !== "containerDirective" &&
-        node?.type !== "leafDirective" &&
-        node?.type !== "textDirective"
-      ) {
-        return;
-      }
-
+    visit(tree, ['containerDirective'], (node: AnyNode) => {
       const name = String(node.name || "");
       const supported = new Set(["card", "kpi", "steps"]);
       if (!supported.has(name)) return;
 
       const data = (node.data ??= {});
       data.hName = `ui-${name}`;
-      data.hProperties = attrsToProps(node.attributes);
-      if (node.type === "containerDirective") {
-        data.hChildren = (node.children ?? [])
-          .map(child => toHast(child))
-          .filter(Boolean);
-      }
+      data.hProperties = node.attributes ? node.attributes : {};
     });
   };
 };

@@ -1,4 +1,5 @@
-import { Markdown } from "@/lib/markdown/streamdown";
+// import { Markdown } from "@/lib/markdown/streamdown";
+import { Markdown } from "@/lib/markdown/react-markdown";
 import { renderMarkdoc } from "@/lib/markdown/markdoc";
 
 // https://github.com/google/A2UI 描述 UI 结构。前端根据结构渲染对应组件。
@@ -14,11 +15,18 @@ export default function RenderLLMResponsePage() {
 你可以按下面三类先填数字，缺的写“未知”也行。
 :::
 
-::kpi{label="住宿/晚" value="¥800" delta="中位数参考" trend="flat"}
-::kpi{label="餐饮/天" value="¥300" delta="可下调" trend="down"}
 
-:::steps{content="${testSteps}"}
+:::kpi{label="住宿/晚" value="¥800" delta="中位数参考" trend="flat"}
 :::
+:::kpi{label="餐饮/天" value="¥300" delta="可下调" trend="down"}
+:::
+
+streamdown have problem rendering steps
+:::steps
+${testSteps}
+:::
+
+
         `} isAnimating={false} />
 
 

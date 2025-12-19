@@ -141,7 +141,7 @@ export async function POST(req: Request) {
 }
 
 async function parseClassification(question: string, preset: ModelPreset): Promise<ClassificationResult> {
-  const response = await generateObject({
+  const response: { object: ClassificationResult } = await generateObject({
     model: getModel(preset.provider, preset.model),
     schema: classificationSchema,
     prompt: getIntentPrompt(question),

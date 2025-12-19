@@ -7,6 +7,8 @@ import ReactMarkdown from 'react-markdown'
 import UiCard from "./blocks/card";
 import UiKpi from "./blocks/kpi";
 import UiSteps from "./blocks/steps";
+import UiCards from "./blocks/cards";
+import UiChart from "./blocks/chart";
 
 export function Markdown({ content, isAnimating }: { content: string; isAnimating?: boolean }) {
   return (
@@ -17,6 +19,8 @@ export function Markdown({ content, isAnimating }: { content: string; isAnimatin
           "ui-card": ({ children, ...rest }: any) => <UiCard {...(rest as any)}>{children}</UiCard>,
           "ui-kpi": (props: any) => <UiKpi {...(props as any)} />,
           "ui-steps": ({ children, ...rest }: any) => <UiSteps {...(rest as any)}>{children}</UiSteps>,
+          "ui-cards": ({ children, ...rest }: any) => <UiCards {...(rest as any)}>{children}</UiCards>,
+          "ui-chart": ({ children, ...rest }: any) => <UiChart {...(rest as any)}>{children}</UiChart>,
         } as any}
       >
         {content}

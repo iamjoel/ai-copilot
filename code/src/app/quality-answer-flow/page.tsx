@@ -4,7 +4,7 @@
 import { FormEvent, useMemo, useState } from "react";
 import ModelSelector from "@/app/completions/components/ModelSelector";
 import { MODEL_GROUPS } from "@/lib/model-presets";
-import { Markdown } from "@/lib/markdown/streamdown";
+import { Markdown } from "@/lib/markdown/react-markdown";
 import { DEBUG_TEST_CASES } from "./test-case";
 
 const DEFAULT_MODEL = MODEL_GROUPS[0]?.options[0]?.value ?? "";

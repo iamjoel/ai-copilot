@@ -18,12 +18,14 @@ function attrsToProps(attrs: Record<string, unknown> | undefined) {
  * :::card title="A" :::  -> <ui-card title="A">...</ui-card>
  * :::kpi ... :::         -> <ui-kpi ... />
  * :::steps :::           -> <ui-steps>...</ui-steps>
+ * :::cards :::           -> <ui-cards>...</ui-cards>
+ * :::chart :::           -> <ui-chart>...</ui-chart>
  */
 export const remarkUiDirectives: Plugin = () => {
   return (tree: AnyNode) => {
     visit(tree, ['containerDirective'], (node: AnyNode) => {
       const name = String(node.name || "");
-      const supported = new Set(["card", "kpi", "steps"]);
+      const supported = new Set(["card", "kpi", "steps", "cards", "chart"]);
       if (!supported.has(name)) return;
 
       const data = (node.data ??= {});

@@ -1,3 +1,4 @@
+import beautifyOutput from "./beauty-output";
 import SYSTEM_CONFIG from "./strategy-libs";
 
 function composeFinalPrompt({
@@ -47,6 +48,9 @@ ${userQuery}
 - Use professional terminology suitable for ${normalizedDomain || "General Fields"}.
 - Ensure the ${resolvedMethodology} structure is clearly visible (e.g., using headings).
 - Maintain a tone that is ${complexity > 3 ? "analytical and thorough" : "direct and concise"}.
+
+# UI Implementation Protocols
+${beautifyOutput}
 
 # Execution Starts:
 `.trim();

@@ -26,6 +26,8 @@ streamdown have problem rendering steps
 ${testSteps}
 :::
 
+:::swot{strengths="Clear value proposition; Fast onboarding" weaknesses="Limited integrations; Small support team" opportunities="Growing SMB demand; New partner channels" threats="Aggressive incumbents; Price competition"}
+:::
 
         `} isAnimating={false} />
 

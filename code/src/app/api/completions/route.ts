@@ -27,7 +27,8 @@ export async function POST(req: Request) {
       );
     }
 
-    const prompt = `${rawPrompt.trim()}\n${outputRules}`;
+    // const prompt = `${rawPrompt.trim()}\n${outputRules}`;
+    const prompt = rawPrompt.trim();
 
     if (!ALLOWED_MODELS.has(model as ModelPresetKey)) {
       return new Response(

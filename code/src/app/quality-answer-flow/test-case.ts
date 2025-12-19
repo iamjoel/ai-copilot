@@ -126,5 +126,16 @@ export const DEBUG_TEST_CASES: TestCase[] = [
     userQuery: "Compare 'Material Design' vs 'Fluent Design' in terms of user psychology and adoption.",
     expectedMethodology: "MECE",
     debugFocus: "Product Design - Structured comparison without overlapping attributes."
+  },
+  // SWOT
+  {
+    id: "TC-014",
+    complexity: 5,
+    category: "Decide",
+    // sub_category: "Multi-Criteria",
+    // domain: "LLM_Expert",
+    userQuery: "我们是一家医疗初创公司，正在讨论是应该『自建私有化部署的开源 Llama-3 集群』，还是『直接调用加密版本的 GPT-4o API』？请从安全、成本、性能和维护维度给我们一个深度决策建议。",
+    expectedMethodology: "SWOT",
+    debugFocus: "验证系统是否能识别决策冲突，并自动触发 :::cards{type='swot'} 标记来渲染四宫格 UI。"
   }
 ];

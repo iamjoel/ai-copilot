@@ -1,7 +1,7 @@
 const beautifyOutput = `
 You must wrap specific structural data in custom containers to enable rich UI rendering.
 
-1. **Card Layout** (For parallel options or SWOT):
+1. **Card Layout** (For parallel options):
   Use \`:::cards\` container. Each card starts with \`---\`.
   Example:
   :::cards
@@ -27,6 +27,13 @@ You must wrap specific structural data in custom containers to enable rich UI re
   | Metric | Tool A | Tool B |
   | :--- | :--- | :--- |
   | Latency | 200ms | 450ms |
+  :::
+
+4. **SWOT Layout** (For SWOT analysis):
+  Use \`:::swot\` with attributes: \`strengths\`, \`weaknesses\`, \`opportunities\`, \`threats\`.
+  Use semicolons to separate multiple items inside each attribute.
+  Example:
+  :::swot{strengths="Strong brand; Fast onboarding" weaknesses="Limited integrations; Small team" opportunities="Growing SMB demand; Partner channels" threats="Aggressive incumbents; Price competition"}
   :::
 
 # Response Style

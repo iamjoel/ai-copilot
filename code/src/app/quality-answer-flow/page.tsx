@@ -36,7 +36,7 @@ export default function QualityAnswerFlowPage() {
     defaultTestCase?.id ?? CUSTOM_TEST_CASE_ID,
   );
   const [question, setQuestion] = useState(
-    defaultTestCase?.userQuery ?? "请输入需要分析的问题...",
+    defaultTestCase?.userQuery ?? "Enter the question to analyze...",
   );
   const [selectedModel, setSelectedModel] = useState(DEFAULT_MODEL);
   const [result, setResult] = useState<QualityAnswerResponse | null>(null);
@@ -68,11 +68,11 @@ export default function QualityAnswerFlowPage() {
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (!question.trim()) {
-      setError("请先输入问题");
+      setError("Please enter a question first.");
       return;
     }
     if (!selectedModel) {
-      setError("请选择一个模型");
+      setError("Please select a model.");
       return;
     }
 
@@ -88,11 +88,11 @@ export default function QualityAnswerFlowPage() {
       });
       const data = (await response.json()) as QualityAnswerResponse & { error?: string };
       if (!response.ok) {
-        throw new Error(data.error ?? "请求失败");
+        throw new Error(data.error ?? "Request failed.");
       }
       setResult(data);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "请求失败");
+      setError(err instanceof Error ? err.message : "Request failed.");
     } finally {
       setLoading(false);
     }
@@ -103,9 +103,10 @@ export default function QualityAnswerFlowPage() {
       <div className="mx-auto flex max-w-5xl flex-col gap-8 px-4">
         <header className="space-y-3">
           <p className="text-sm uppercase tracking-[0.25em] text-blue-300">Quality Answer Flow</p>
-          <h1 className="text-3xl font-semibold">高质量回答流程调试面板</h1>
+          <h1 className="text-3xl font-semibold">Quality Answer Flow Debug Panel</h1>
           <p className="text-sm text-slate-300">
-            输入问题并选择模型，API 将自动完成意图分类、策略匹配以及领域的限制与最终回答生成。
+            Enter a question and select a model. The API will run intent classification, strategy
+            matching, domain constraints, and final answer generation.
           </p>
         </header>
 
@@ -115,7 +116,7 @@ export default function QualityAnswerFlowPage() {
         >
           <section className="space-y-2">
             <label htmlFor="test-case" className="text-sm font-medium text-slate-200">
-              测试用例
+              Test case
             </label>
             <select
               id="test-case"
@@ -128,28 +129,35 @@ export default function QualityAnswerFlowPage() {
                   {test.id} · {test.category} · {test.debugFocus}
                 </option>
               ))}
-              <option value={CUSTOM_TEST_CASE_ID}>自定义输入</option>
+              <option value={CUSTOM_TEST_CASE_ID}>Custom input</option>
             </select>
             <label htmlFor="question" className="text-sm font-medium text-slate-200">
-              用户问题
+              User question
             </label>
             <textarea
               id="question"
               className="min-h-[120px] w-full rounded-xl border border-white/10 bg-slate-950/60 p-4 text-sm text-white outline-none transition focus:border-blue-400 focus:ring-1 focus:ring-blue-400/60"
-              placeholder="例如：帮我设计一个新产品的上市策略..."
+              placeholder="Example: Design a go-to-market strategy for a new product..."
               value={question}
               onChange={event => handleQuestionInput(event.target.value)}
             />
           </section>
 
           <section className="space-y-4">
-            <div className="flex items-center justify-between gap-4">
-              <p className="text-sm font-medium text-slate-200">选择模型</p>
-              {selectedModel && (
-                <p className="text-xs text-slate-400">当前模型：{getModelLabel(selectedModel)}</p>
-              )}
-            </div>
-            <ModelSelector selectedModels={selectedModels} onToggle={handleModelToggle} />
+            <details className="rounded-xl border border-white/10 bg-slate-950/40 p-4">
+              <summary className="flex cursor-pointer select-none items-center justify-between gap-4 text-sm font-medium text-slate-200">
+                <span>Select model</span>
+                <span className="text-xs text-slate-400">
+                  {selectedModel ? `Selected: ${getModelLabel(selectedModel)}` : "No model selected"}
+                </span>
+              </summary>
+              <div className="mt-4 flex items-center justify-between gap-4">
+                <p className="text-sm font-medium text-slate-200">Available models</p>
+              </div>
+              <div className="mt-3">
+                <ModelSelector selectedModels={selectedModels} onToggle={handleModelToggle} />
+              </div>
+            </details>
           </section>
 
           <div className="flex flex-wrap gap-3">
@@ -158,7 +166,7 @@ export default function QualityAnswerFlowPage() {
               disabled={loading}
               className="rounded-xl bg-blue-500 px-5 py-2 text-sm font-medium text-white transition hover:bg-blue-400 disabled:cursor-not-allowed disabled:bg-blue-500/60"
             >
-              {loading ? "生成中..." : "生成答案"}
+              {loading ? "Generating..." : "Generate answer"}
             </button>
             {error && <p className="text-sm text-red-400">{error}</p>}
           </div>
@@ -197,8 +205,11 @@ const ResultPanel = ({
 }: ResultPanelProps) => (
   <section className="space-y-6 rounded-2xl border border-white/10 bg-slate-900/60 p-6 text-sm text-slate-100">
     <div>
-      <h2 className="text-lg font-semibold text-white">意图识别</h2>
-      <dl className="mt-3 grid gap-2 sm:grid-cols-3">
+      <details className="rounded-xl border border-white/10 bg-slate-950/40 p-4">
+        <summary className="cursor-pointer select-none text-lg font-semibold text-white">
+          Intent classification
+        </summary>
+        <dl className="mt-3 grid gap-2 sm:grid-cols-3">
         <div className="rounded-lg border border-white/10 bg-slate-950/30 p-3">
           <dt className="text-xs uppercase tracking-wide text-slate-400">Category</dt>
           <dd className="text-base text-white">{classification.category}</dd>
@@ -215,50 +226,59 @@ const ResultPanel = ({
           <dt className="text-xs uppercase tracking-wide text-slate-400">Complexity</dt>
           <dd className="text-base text-white">{classification.complexity}</dd>
         </div>
-      </dl>
-      {classification.methodology && (
-        <p className="mt-2 text-xs text-slate-400">Methodology: {classification.methodology}</p>
-      )}
-      {classification.analysis_reasoning && (
-        <p className="mt-1 text-xs text-slate-500">
-          {classification.analysis_reasoning}
-        </p>
-      )}
+        </dl>
+        {classification.methodology && (
+          <p className="mt-2 text-xs text-slate-400">Methodology: {classification.methodology}</p>
+        )}
+        {classification.analysis_reasoning && (
+          <p className="mt-1 text-xs text-slate-500">
+            {classification.analysis_reasoning}
+          </p>
+        )}
+      </details>
     </div>
 
     <div>
-      <h2 className="text-lg font-semibold text-white">策略详情</h2>
-      {strategy ? (
-        <div className="mt-2 space-y-2 rounded-lg border border-blue-500/20 bg-slate-950/30 p-4">
-          {strategyName && (
-            <p className="text-sm font-semibold text-white">{strategyName}</p>
-          )}
-          <p className="text-xs uppercase tracking-wide text-slate-400">Methodology</p>
-          <p className="text-white">{strategy.methodology}</p>
-          <p className="text-xs uppercase tracking-wide text-slate-400">Rules</p>
-          <p className="whitespace-pre-wrap text-slate-100">{strategy.rules.trim()}</p>
+      <details className="rounded-xl border border-white/10 bg-slate-950/40 p-4">
+        <summary className="cursor-pointer select-none text-lg font-semibold text-white">
+          Strategy details
+        </summary>
+        {strategy ? (
+          <div className="mt-2 space-y-2 rounded-lg border border-blue-500/20 bg-slate-950/30 p-4">
+            {strategyName && (
+              <p className="text-sm font-semibold text-white">{strategyName}</p>
+            )}
+            <p className="text-xs uppercase tracking-wide text-slate-400">Methodology</p>
+            <p className="text-white">{strategy.methodology}</p>
+            <p className="text-xs uppercase tracking-wide text-slate-400">Rules</p>
+            <p className="whitespace-pre-wrap text-slate-100">{strategy.rules.trim()}</p>
+          </div>
+        ) : (
+          <p className="mt-2 text-slate-400">No strategy matched. Using default constraints.</p>
+        )}
+      </details>
+    </div>
+
+    <div>
+      <details className="rounded-xl border border-white/10 bg-slate-950/40 p-4">
+        <summary className="cursor-pointer select-none text-lg font-semibold text-white">
+          Final prompt
+        </summary>
+        <div className="mt-2 rounded-lg border border-white/10 bg-slate-950/40 p-4 text-xs text-slate-200">
+          <Markdown content={finalPrompt} />
         </div>
-      ) : (
-        <p className="mt-2 text-slate-400">未匹配到策略，使用默认回答约束。</p>
-      )}
+      </details>
     </div>
 
     <div>
-      <h2 className="text-lg font-semibold text-white">最终 Prompt</h2>
-      <div className="mt-2 rounded-lg border border-white/10 bg-slate-950/40 p-4 text-xs text-slate-200">
-        <Markdown content={finalPrompt} />
-      </div>
-    </div>
-
-    <div>
-      <h2 className="text-lg font-semibold text-white">模型回答对比</h2>
+      <h2 className="text-lg font-semibold text-white">Answer comparison</h2>
       <div className="mt-2 grid gap-4 md:grid-cols-2">
         <div className="rounded-lg border border-green-500/20 bg-slate-950/30 p-4 text-sm text-slate-100">
-          <p className="mb-2 text-xs uppercase tracking-wide text-green-300">策略引导</p>
+          <p className="mb-2 text-xs uppercase tracking-wide text-green-300">Guided</p>
           <Markdown content={answer} />
         </div>
         <div className="rounded-lg border border-yellow-500/20 bg-slate-950/30 p-4 text-sm text-slate-100">
-          <p className="mb-2 text-xs uppercase tracking-wide text-yellow-300">直接回答</p>
+          <p className="mb-2 text-xs uppercase tracking-wide text-yellow-300">Direct</p>
           <Markdown content={directAnswer} />
         </div>
       </div>

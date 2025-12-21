@@ -1,8 +1,11 @@
 import { logger } from "@/lib/logger";
 import { commonWithContextTool, geminiWithContextTool } from "@/lib/model-factory";
 import { MODEL_GROUPS, type ModelPresetKey, getModelPreset } from "@/lib/model-presets";
-import outputRules from "@/prompts/output-rule";
 import { generateText } from "ai";
+import checkInput from "@/app/api/utils/check-input";
+import { promptConfigSchema, buildPrompt } from "@/app/api/completions/utils";
+import { z } from "zod";
+
 
 export const runtime = "nodejs"; // 'edge' runtime does not support undici yet
 
@@ -11,44 +14,42 @@ const ALLOWED_MODELS = new Set<ModelPresetKey>(
   MODEL_GROUPS.flatMap(group => group.options.map(option => option.value)),
 );
 
+const ParamsSchema = z.object({
+  prompt: z.string().trim().min(1, "prompt is required"),
+  model: z
+    .string()
+    .trim()
+    .min(1, "model is required")
+    .refine(value => ALLOWED_MODELS.has(value as ModelPresetKey), {
+      message: "Unsupported model.",
+    }),
+  config: promptConfigSchema,
+});
+
+type Params = z.infer<typeof ParamsSchema>;
+
 export async function POST(req: Request) {
   try {
-    const { prompt: rawPrompt, model } = (await req.json()) as {
-      prompt?: string;
-      model?: string;
-    };
-
-    if (!rawPrompt || !model) {
-      return new Response(
-        JSON.stringify({
-          error: "Missing prompt or model selection.",
-        }),
-        { status: 400, headers: { "Content-Type": "application/json" } },
-      );
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const body: Record<string, any> = await req.json();
+    const { isValid, response, data } = checkInput(body, ParamsSchema);
+    if (!isValid) {
+      return response;
     }
 
-    // const prompt = `${rawPrompt.trim()}\n${outputRules}`;
-    const prompt = rawPrompt.trim();
+    const { prompt: rawPrompt, model, config } = data as Params;
 
-    if (!ALLOWED_MODELS.has(model as ModelPresetKey)) {
-      return new Response(
-        JSON.stringify({ error: "Unsupported model." }),
-        { status: 400, headers: { "Content-Type": "application/json" } },
-      );
-    }
+    const prompt = buildPrompt(rawPrompt, config);
+    const modelPreset = getModelPreset(model);
 
-    const target = getModelPreset(model);
-    if (!target) {
-      return new Response(
-        JSON.stringify({ error: "Model preset not found." }),
-        { status: 404, headers: { "Content-Type": "application/json" } },
-      );
+    if (!modelPreset) {
+      throw new Error(`Model preset not found: ${model}`);
     }
-    const isGeminiModel = target.provider === "google";
-    logger.info(`LLM info: ${JSON.stringify(target, null, 2)}`);
+    const isGeminiModel = modelPreset.provider === "google";
+    logger.info(`LLM info: ${JSON.stringify(modelPreset, null, 2)}`);
     const modelWithContextTool = isGeminiModel ? geminiWithContextTool : commonWithContextTool
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const result = await generateText(modelWithContextTool(target.provider, target.model, prompt) as any);
+    const result = await generateText(modelWithContextTool(modelPreset.provider, modelPreset.model, prompt) as any);
 
     return new Response(
       JSON.stringify({ text: result.text }),

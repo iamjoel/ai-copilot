@@ -3,7 +3,7 @@ const outputRules = `
 ## Output Rules (STRICT)
 
 ### Language
-- Output **English only**.
+- Output **{language} only**.
 
 ---
 

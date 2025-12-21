@@ -18,6 +18,11 @@ export type ModelResponse = {
   error?: string;
 };
 
+export type PromptConfig = {
+  applyOutputRules: boolean;
+  language: string;
+};
+
 export type CompletionsController = {
   prompt: string;
   handlePromptChange: (value: string) => void;
@@ -25,6 +30,8 @@ export type CompletionsController = {
   handlePresetChange: (value: string) => void;
   selectedModels: string[];
   toggleModelSelection: (value: string) => void;
+  promptConfig: PromptConfig;
+  handlePromptConfigChange: (value: Partial<PromptConfig>) => void;
   modelResponses: Record<string, ModelResponse>;
   error: string | null;
   loading: boolean;
@@ -37,6 +44,10 @@ export const useCompletions = (): CompletionsController => {
   const [selectedModels, setSelectedModels] = useState(
     DEFAULT_MODEL_VALUE ? [DEFAULT_MODEL_VALUE] : [],
   );
+  const [promptConfig, setPromptConfig] = useState<PromptConfig>({
+    applyOutputRules: true,
+    language: "中文",
+  });
   const [modelResponses, setModelResponses] = useState<Record<string, ModelResponse>>({});
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -69,6 +80,13 @@ export const useCompletions = (): CompletionsController => {
     });
   };
 
+  const handlePromptConfigChange = (value: Partial<PromptConfig>) => {
+    setPromptConfig(prev => ({
+      ...prev,
+      ...value,
+    }));
+  };
+
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (!prompt.trim()) return;
@@ -97,7 +115,14 @@ export const useCompletions = (): CompletionsController => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ prompt, model: modelValue }),
+          body: JSON.stringify({
+            prompt,
+            model: modelValue,
+            config: {
+              applyOutputRules: promptConfig.applyOutputRules,
+              language: promptConfig.language.trim() || undefined,
+            },
+          }),
         });
 
         const data = (await res.json()) as { text?: string; error?: string };
@@ -131,6 +156,8 @@ export const useCompletions = (): CompletionsController => {
     handlePresetChange,
     selectedModels,
     toggleModelSelection,
+    promptConfig,
+    handlePromptConfigChange,
     modelResponses,
     error,
     loading,

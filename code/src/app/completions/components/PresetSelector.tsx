@@ -24,7 +24,10 @@ const PresetSelector = ({ selectedPreset, onChange, presets }: PresetSelectorPro
         <SelectValue placeholder="选择一个示例提示词" />
       </SelectTrigger>
       <SelectContent className="border-white/10 bg-slate-900 text-slate-100">
-        <SelectItem value={CUSTOM_PROMPT_VALUE} className="text-slate-100 focus:bg-slate-800 focus:text-white">
+        <SelectItem
+          value={CUSTOM_PROMPT_VALUE}
+          className="pl-8 pr-3 text-slate-100 focus:bg-slate-800 focus:text-white"
+        >
           自定义输入
         </SelectItem>
         <SelectSeparator className="bg-white/10" />
@@ -32,7 +35,7 @@ const PresetSelector = ({ selectedPreset, onChange, presets }: PresetSelectorPro
           <SelectItem
             key={testCase.name}
             value={testCase.name}
-            className="text-slate-100 focus:bg-slate-800 focus:text-white"
+            className="pl-8 pr-3 text-slate-100 focus:bg-slate-800 focus:text-white"
           >
             {testCase.name}
           </SelectItem>

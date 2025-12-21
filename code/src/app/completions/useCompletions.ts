@@ -1,10 +1,15 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
+import { useCompletion } from '@ai-sdk/react'
 import { MODEL_GROUPS } from "@/lib/model-presets";
 import testCases from "./test-cases";
 
-const ALL_MODEL_OPTIONS = MODEL_GROUPS.flatMap(group => group.options);
+type ModelOption = (typeof MODEL_GROUPS)[number]["options"][number];
+const ALL_MODEL_OPTIONS: ModelOption[] = MODEL_GROUPS.flatMap(group => [
+  ...group.options,
+]);
 const DEFAULT_MODEL_VALUE = ALL_MODEL_OPTIONS[0]?.value ?? "";
 
 export const CUSTOM_PROMPT_VALUE = "__custom_prompt__";
@@ -29,7 +34,7 @@ export type CompletionsController = {
   selectedPreset: string;
   handlePresetChange: (value: string) => void;
   selectedModels: string[];
-  toggleModelSelection: (value: string) => void;
+  toggleModelSelection: (value: (typeof ALL_MODEL_OPTIONS)[number]["value"]) => void;
   promptConfig: PromptConfig;
   handlePromptConfigChange: (value: Partial<PromptConfig>) => void;
   modelResponses: Record<string, ModelResponse>;
@@ -39,11 +44,14 @@ export type CompletionsController = {
 };
 
 export const useCompletions = (): CompletionsController => {
+  const { completion, complete, setCompletion } = useCompletion({
+    api: '/api/completions',
+  })
   const [prompt, setPrompt] = useState(testCases[0].prompt);
   const [selectedPreset, setSelectedPreset] = useState(testCases[0].name);
-  const [selectedModels, setSelectedModels] = useState(
-    DEFAULT_MODEL_VALUE ? [DEFAULT_MODEL_VALUE] : [],
-  );
+  const [selectedModels, setSelectedModels] = useState<
+    (typeof ALL_MODEL_OPTIONS)[number]["value"][]
+  >(DEFAULT_MODEL_VALUE ? [DEFAULT_MODEL_VALUE] : []);
   const [promptConfig, setPromptConfig] = useState<PromptConfig>({
     applyOutputRules: true,
     language: "中文",
@@ -51,6 +59,25 @@ export const useCompletions = (): CompletionsController => {
   const [modelResponses, setModelResponses] = useState<Record<string, ModelResponse>>({});
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+  const activeModelRef = useRef<string | null>(null);
+  const latestCompletionRef = useRef("");
+
+  useEffect(() => {
+    latestCompletionRef.current = completion;
+    const modelValue = activeModelRef.current;
+    if (!modelValue) return;
+    setModelResponses(prev => {
+      const current = prev[modelValue];
+      if (!current || current.text === completion) return prev;
+      return {
+        ...prev,
+        [modelValue]: {
+          status: "loading",
+          text: completion,
+        },
+      };
+    });
+  }, [completion]);
 
   const handlePresetChange = (value: string) => {
     if (value === CUSTOM_PROMPT_VALUE) {
@@ -71,10 +98,10 @@ export const useCompletions = (): CompletionsController => {
     }
   };
 
-  const toggleModelSelection = (value: string) => {
-    setSelectedModels(prev => {
+  const toggleModelSelection = (value: (typeof ALL_MODEL_OPTIONS)[number]["value"]) => {
+    setSelectedModels((prev: any) => {
       if (prev.includes(value)) {
-        return prev.filter(modelValue => modelValue !== value);
+        return prev.filter((modelValue: any) => modelValue !== value);
       }
       return [...prev, value];
     });
@@ -100,41 +127,30 @@ export const useCompletions = (): CompletionsController => {
     const modelsToRun = [...selectedModels];
     const initialResponses: Record<string, ModelResponse> = {};
     modelsToRun.forEach(modelValue => {
-      initialResponses[modelValue] = { status: "loading" };
+      initialResponses[modelValue] = { status: "loading", text: "" };
     });
     setModelResponses(initialResponses);
 
-    await Promise.all(modelsToRun.map(runModel));
-
-    setLoading(false);
-
-    async function runModel(modelValue: string) {
+    for (const modelValue of modelsToRun) {
       try {
-        const res = await fetch("/api/completions", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            prompt,
+        activeModelRef.current = modelValue;
+        setCompletion("");
+        latestCompletionRef.current = "";
+        await complete(prompt, {
+          body: {
             model: modelValue,
             config: {
               applyOutputRules: promptConfig.applyOutputRules,
               language: promptConfig.language.trim() || undefined,
             },
-          }),
+          },
         });
-
-        const data = (await res.json()) as { text?: string; error?: string };
-        if (!res.ok) {
-          throw new Error(data.error ?? "请求失败");
-        }
 
         setModelResponses(prev => ({
           ...prev,
           [modelValue]: {
             status: "success",
-            text: data.text ?? "",
+            text: latestCompletionRef.current,
           },
         }));
       } catch (err) {
@@ -147,6 +163,9 @@ export const useCompletions = (): CompletionsController => {
         }));
       }
     }
+
+    activeModelRef.current = null;
+    setLoading(false);
   };
 
   return {

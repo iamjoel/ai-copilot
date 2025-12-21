@@ -1,7 +1,7 @@
 import { logger } from "@/lib/logger";
 import { commonWithContextTool, geminiWithContextTool } from "@/lib/model-factory";
 import { MODEL_GROUPS, type ModelPresetKey, getModelPreset } from "@/lib/model-presets";
-import { generateText } from "ai";
+import { streamText } from "ai";
 import checkInput from "@/app/api/utils/check-input";
 import { promptConfigSchema, buildPrompt } from "@/app/api/completions/utils";
 import { z } from "zod";
@@ -50,12 +50,8 @@ export async function POST(req: Request) {
 
     const modelWithContextTool = isGeminiModel ? geminiWithContextTool : commonWithContextTool
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const result = await generateText(modelWithContextTool(modelPreset.provider, modelPreset.model, prompt) as any);
-
-    return new Response(
-      JSON.stringify({ text: result.text }),
-      { status: 200, headers: { "Content-Type": "application/json" } },
-    );
+    const result = await streamText(modelWithContextTool(modelPreset.provider, modelPreset.model, prompt) as any);
+    return result.toUIMessageStreamResponse();
   } catch (error) {
     console.error("Completion error:", error);
     return new Response(

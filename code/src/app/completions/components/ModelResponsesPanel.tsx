@@ -42,11 +42,15 @@ const ModelResponsesPanel = ({ responses }: ModelResponsesPanelProps) => {
           </div>
           <div className="pt-2">
             {result.status === "loading" ? (
-              <div className="animate-pulse space-y-2 text-slate-400">
-                <div className="h-3 w-3/5 rounded bg-white/10" />
-                <div className="h-3 w-2/5 rounded bg-white/10" />
-                <div className="h-3 w-4/5 rounded bg-white/10" />
-              </div>
+              result.text ? (
+                <Markdown content={result.text} isAnimating />
+              ) : (
+                <div className="animate-pulse space-y-2 text-slate-400">
+                  <div className="h-3 w-3/5 rounded bg-white/10" />
+                  <div className="h-3 w-2/5 rounded bg-white/10" />
+                  <div className="h-3 w-4/5 rounded bg-white/10" />
+                </div>
+              )
             ) : result.status === "error" ? (
               <p className="text-sm text-red-200">{result.error}</p>
             ) : (

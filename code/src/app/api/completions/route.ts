@@ -47,6 +47,7 @@ export async function POST(req: Request) {
     }
     const isGeminiModel = modelPreset.provider === "google";
     logger.info(`LLM info: ${JSON.stringify(modelPreset, null, 2)}`);
+
     const modelWithContextTool = isGeminiModel ? geminiWithContextTool : commonWithContextTool
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const result = await generateText(modelWithContextTool(modelPreset.provider, modelPreset.model, prompt) as any);

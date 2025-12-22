@@ -7,8 +7,6 @@ import {
 } from "@/components/ui/card";
 import type { CompletionsController } from "../useCompletions";
 import CompletionsForm from "./CompletionsForm";
-import ErrorNotice from "./ErrorNotice";
-import ResponsesSection from "./ResponsesSection";
 
 type CompletionsRequestCardProps = {
   controller: CompletionsController;
@@ -22,8 +20,6 @@ const CompletionsRequestCard = ({ controller }: CompletionsRequestCardProps) => 
     </CardHeader>
     <CardContent className="space-y-6">
       <CompletionsForm controller={controller} />
-      {controller.error ? <ErrorNotice message={controller.error} /> : null}
-      <ResponsesSection responses={controller.modelResponses} />
     </CardContent>
   </Card>
 );

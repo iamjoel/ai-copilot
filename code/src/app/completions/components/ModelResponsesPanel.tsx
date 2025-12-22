@@ -16,9 +16,17 @@ const ModelResponsesPanel = ({ responses }: ModelResponsesPanelProps) => {
     );
   }
 
+  const responseEntries = Object.entries(responses);
+  const columnClassName =
+    responseEntries.length >= 3
+      ? "sm:grid-cols-2 lg:grid-cols-3"
+      : responseEntries.length === 2
+        ? "sm:grid-cols-2"
+        : "";
+
   return (
-    <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-      {Object.entries(responses).map(([modelValue, result]) => (
+    <div className={`grid gap-4 ${columnClassName}`}>
+      {responseEntries.map(([modelValue, result]) => (
         <div
           key={modelValue}
           className="rounded-lg border border-white/10 bg-slate-950/40 px-4 py-3 text-sm text-slate-100"

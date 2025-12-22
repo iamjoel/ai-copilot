@@ -29,7 +29,7 @@ const ModelResponsesPanel = ({ responses }: ModelResponsesPanelProps) => {
       {responseEntries.map(([modelValue, result]) => (
         <div
           key={modelValue}
-          className="rounded-lg border border-white/10 bg-slate-950/40 px-4 py-3 text-sm text-slate-100"
+          className="min-w-0 rounded-lg border border-white/10 bg-slate-950/40 px-4 py-3 text-sm text-slate-100"
         >
           <div className="flex items-center justify-between border-b border-white/5 pb-2">
             <p className="font-medium text-slate-100">{getModelLabel(modelValue)}</p>
@@ -48,7 +48,7 @@ const ModelResponsesPanel = ({ responses }: ModelResponsesPanelProps) => {
                   : "完成"}
             </span>
           </div>
-          <div className="pt-2">
+          <div className="min-w-0 pt-2">
             {result.status === "loading" ? (
               result.text ? (
                 <Markdown content={result.text} isAnimating />

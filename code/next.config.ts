@@ -1,3 +1,5 @@
+const { codeInspectorPlugin } = require('code-inspector-plugin')
+
 import type { NextConfig } from "next";
 
 const allowedDevOrigins =
@@ -7,9 +9,14 @@ const allowedDevOrigins =
 
 const nextConfig: NextConfig = {
   reactCompiler: true,
-  experimental: {
-    ...(allowedDevOrigins?.length ? { allowedDevOrigins } : {}),
+  turbopack: {
+    rules: codeInspectorPlugin({
+      bundler: 'turbopack'
+    })
   },
+  // experimental: {
+  //   ...(allowedDevOrigins?.length ? { allowedDevOrigins } : {}),
+  // },
 };
 
 export default nextConfig;

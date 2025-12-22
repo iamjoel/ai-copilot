@@ -1,4 +1,4 @@
-import { Markdown } from "@/lib/markdown/streamdown";
+import { Markdown } from "@/lib/markdown/react-markdown";
 import { getModelLabel, type ModelResponse } from "../useCompletions";
 
 type ModelResponsesPanelProps = {

@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
-import { FormEvent, useEffect, useRef, useState } from "react";
-import { useCompletion } from '@ai-sdk/react'
+import { FormEvent, useState } from "react";
+import { callCompletionApi } from "ai";
 import { MODEL_GROUPS } from "@/lib/model-presets";
 import testCases from "./test-cases";
 
@@ -44,9 +44,6 @@ export type CompletionsController = {
 };
 
 export const useCompletions = (): CompletionsController => {
-  const { completion, complete, setCompletion } = useCompletion({
-    api: '/api/completions',
-  })
   const [prompt, setPrompt] = useState(testCases[0].prompt);
   const [selectedPreset, setSelectedPreset] = useState(testCases[0].name);
   const [selectedModels, setSelectedModels] = useState<
@@ -59,25 +56,6 @@ export const useCompletions = (): CompletionsController => {
   const [modelResponses, setModelResponses] = useState<Record<string, ModelResponse>>({});
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
-  const activeModelRef = useRef<string | null>(null);
-  const latestCompletionRef = useRef("");
-
-  useEffect(() => {
-    latestCompletionRef.current = completion;
-    const modelValue = activeModelRef.current;
-    if (!modelValue) return;
-    setModelResponses(prev => {
-      const current = prev[modelValue];
-      if (!current || current.text === completion) return prev;
-      return {
-        ...prev,
-        [modelValue]: {
-          status: "loading",
-          text: completion,
-        },
-      };
-    });
-  }, [completion]);
 
   const handlePresetChange = (value: string) => {
     if (value === CUSTOM_PROMPT_VALUE) {
@@ -133,10 +111,9 @@ export const useCompletions = (): CompletionsController => {
 
     for (const modelValue of modelsToRun) {
       try {
-        activeModelRef.current = modelValue;
-        setCompletion("");
-        latestCompletionRef.current = "";
-        await complete(prompt, {
+        const result = await callCompletionApi({
+          api: "/api/completions",
+          prompt,
           body: {
             model: modelValue,
             config: {
@@ -144,15 +121,52 @@ export const useCompletions = (): CompletionsController => {
               language: promptConfig.language.trim() || undefined,
             },
           },
+          setCompletion: completion => {
+            setModelResponses(prev => {
+              const current = prev[modelValue];
+              if (!current || current.status === "error" || current.text === completion) {
+                return prev;
+              }
+              return {
+                ...prev,
+                [modelValue]: {
+                  status: "loading",
+                  text: completion,
+                },
+              };
+            });
+          },
+          setLoading: () => undefined,
+          setError: err => {
+            if (!err) return;
+            setModelResponses(prev => ({
+              ...prev,
+              [modelValue]: {
+                status: "error",
+                error: err instanceof Error ? err.message : "请求失败",
+              },
+            }));
+          },
+          setAbortController: () => undefined,
         });
 
-        setModelResponses(prev => ({
-          ...prev,
-          [modelValue]: {
-            status: "success",
-            text: latestCompletionRef.current,
-          },
-        }));
+        if (typeof result === "string") {
+          setModelResponses(prev => ({
+            ...prev,
+            [modelValue]: {
+              status: "success",
+              text: result,
+            },
+          }));
+        } else if (result === null) {
+          setModelResponses(prev => ({
+            ...prev,
+            [modelValue]: {
+              status: "error",
+              error: "请求已取消",
+            },
+          }));
+        }
       } catch (err) {
         setModelResponses(prev => ({
           ...prev,
@@ -164,7 +178,6 @@ export const useCompletions = (): CompletionsController => {
       }
     }
 
-    activeModelRef.current = null;
     setLoading(false);
   };
 

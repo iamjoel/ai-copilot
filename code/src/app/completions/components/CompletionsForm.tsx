@@ -1,5 +1,11 @@
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
+import {
+  ResizableHandle,
+  ResizablePanel,
+  ResizablePanelGroup,
+} from "@/components/ui/resizable";
 import {
   Select,
   SelectContent,
@@ -35,9 +41,26 @@ const CompletionsForm = ({
     error,
     modelResponses,
   },
-}: CompletionsFormProps) => (
-  <form onSubmit={handleSubmit} className="grid gap-6 lg:grid-cols-2">
-    <section className="space-y-6">
+}: CompletionsFormProps) => {
+  const [isResizable, setIsResizable] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 1024px)");
+
+    const updateLayout = () => {
+      setIsResizable(mediaQuery.matches);
+    };
+
+    updateLayout();
+    mediaQuery.addEventListener("change", updateLayout);
+
+    return () => {
+      mediaQuery.removeEventListener("change", updateLayout);
+    };
+  }, []);
+
+  const leftPanel = (
+    <section className="space-y-6 lg:pr-4">
       <div className="space-y-4">
         <Label className="text-slate-200">模型</Label>
         <ModelSelector selectedModels={selectedModels} onToggle={toggleModelSelection} />
@@ -95,8 +118,10 @@ const CompletionsForm = ({
         </div>
       </div>
     </section>
+  );
 
-    <section className="space-y-6">
+  const rightPanel = (
+    <section className="space-y-6 lg:pl-4">
       <div className="space-y-4">
         <PresetSelector
           selectedPreset={selectedPreset}
@@ -115,21 +140,42 @@ const CompletionsForm = ({
         />
       </div>
 
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <span className="text-sm text-slate-400">准备好后发送请求</span>
-        <Button
-          type="submit"
-          size="lg"
-          disabled={loading || !prompt.trim() || selectedModels.length === 0}
-        >
-          {loading ? "发送中..." : "发送请求"}
-        </Button>
-      </div>
+      <Button
+        type="submit"
+        size="lg"
+        className="w-full"
+        disabled={loading || !prompt.trim() || selectedModels.length === 0}
+      >
+        {loading ? "发送中..." : "发送请求"}
+      </Button>
 
       {error ? <ErrorNotice message={error} /> : null}
       <ResponsesSection responses={modelResponses} />
     </section>
-  </form>
-);
+  );
+
+  if (!isResizable) {
+    return (
+      <form onSubmit={handleSubmit} className="grid gap-6 lg:grid-cols-2">
+        {leftPanel}
+        {rightPanel}
+      </form>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <ResizablePanelGroup direction="horizontal" className="w-full">
+        <ResizablePanel defaultSize={42} minSize={28} className="min-w-0">
+          {leftPanel}
+        </ResizablePanel>
+        <ResizableHandle withHandle className="mx-2" />
+        <ResizablePanel defaultSize={58} minSize={32} className="min-w-0">
+          {rightPanel}
+        </ResizablePanel>
+      </ResizablePanelGroup>
+    </form>
+  );
+};
 
 export default CompletionsForm;

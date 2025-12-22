@@ -109,74 +109,76 @@ export const useCompletions = (): CompletionsController => {
     });
     setModelResponses(initialResponses);
 
-    for (const modelValue of modelsToRun) {
-      try {
-        const result = await callCompletionApi({
-          api: "/api/completions",
-          prompt,
-          body: {
-            model: modelValue,
-            config: {
-              applyOutputRules: promptConfig.applyOutputRules,
-              language: promptConfig.language.trim() || undefined,
+    await Promise.all(
+      modelsToRun.map(async modelValue => {
+        try {
+          const result = await callCompletionApi({
+            api: "/api/completions",
+            prompt,
+            body: {
+              model: modelValue,
+              config: {
+                applyOutputRules: promptConfig.applyOutputRules,
+                language: promptConfig.language.trim() || undefined,
+              },
             },
-          },
-          setCompletion: completion => {
-            setModelResponses(prev => {
-              const current = prev[modelValue];
-              if (!current || current.status === "error" || current.text === completion) {
-                return prev;
-              }
-              return {
+            setCompletion: completion => {
+              setModelResponses(prev => {
+                const current = prev[modelValue];
+                if (!current || current.status === "error" || current.text === completion) {
+                  return prev;
+                }
+                return {
+                  ...prev,
+                  [modelValue]: {
+                    status: "loading",
+                    text: completion,
+                  },
+                };
+              });
+            },
+            setLoading: () => undefined,
+            setError: err => {
+              if (!err) return;
+              setModelResponses(prev => ({
                 ...prev,
                 [modelValue]: {
-                  status: "loading",
-                  text: completion,
+                  status: "error",
+                  error: err instanceof Error ? err.message : "请求失败",
                 },
-              };
-            });
-          },
-          setLoading: () => undefined,
-          setError: err => {
-            if (!err) return;
+              }));
+            },
+            setAbortController: () => undefined,
+          });
+
+          if (typeof result === "string") {
+            setModelResponses(prev => ({
+              ...prev,
+              [modelValue]: {
+                status: "success",
+                text: result,
+              },
+            }));
+          } else if (result === null) {
             setModelResponses(prev => ({
               ...prev,
               [modelValue]: {
                 status: "error",
-                error: err instanceof Error ? err.message : "请求失败",
+                error: "请求已取消",
               },
             }));
-          },
-          setAbortController: () => undefined,
-        });
-
-        if (typeof result === "string") {
-          setModelResponses(prev => ({
-            ...prev,
-            [modelValue]: {
-              status: "success",
-              text: result,
-            },
-          }));
-        } else if (result === null) {
+          }
+        } catch (err) {
           setModelResponses(prev => ({
             ...prev,
             [modelValue]: {
               status: "error",
-              error: "请求已取消",
+              error: err instanceof Error ? err.message : "请求失败",
             },
           }));
         }
-      } catch (err) {
-        setModelResponses(prev => ({
-          ...prev,
-          [modelValue]: {
-            status: "error",
-            error: err instanceof Error ? err.message : "请求失败",
-          },
-        }));
-      }
-    }
+      }),
+    );
 
     setLoading(false);
   };

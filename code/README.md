@@ -1,11 +1,38 @@
-Next.js 16 starter configured with Tailwind and the Vercel AI SDK (v5).
+# AI Copilot Playground
 
-## Getting started
-1) Copy `.env.local.example` to `.env.local` and set `OPENAI_API_KEY`.
-2) Install dependencies (already done): `npm install`.
-3) Run the dev server: `npm run dev` then open http://localhost:3000.
+A Next.js 16 playground for comparing model completions, running prompt flows, and testing AI utilities with the Vercel AI SDK v5.
 
-## What’s included
-- `/api/chat` uses `streamText` with OpenAI (`gpt-4o-mini`) on the Edge runtime.
-- Frontend chat UI in `src/app/page.tsx` powered by `useChat` from `ai/react`.
-- Tailwind CSS (v4) with the App Router, TypeScript, ESLint, and React Compiler enabled.
+## Features
+- Multi-model completion playground with side-by-side responses
+- Quality Answer Flow debug panel
+- Image generation demo (Gemini)
+- Model capability test runner
+- Usage/latency inspection and tool demos
+
+## Requirements
+- Node.js 18+ (recommended 20+)
+- npm, pnpm, or yarn
+
+## Getting Started
+1) Install dependencies:
+   ```bash
+   npm install
+   # or
+   pnpm install
+   ```
+2) Create your environment file:
+   ```bash
+   cp .env.example .env
+   ```
+3) Fill in the required API keys in `.env`.
+4) Start the dev server:
+   ```bash
+   npm run dev
+   ```
+5) Open http://localhost:3000
+
+## Useful Scripts
+- `npm run dev` — Start the dev server
+- `npm run build` — Build for production
+- `npm run start` — Start the production server
+- `npm run lint` — Run ESLint

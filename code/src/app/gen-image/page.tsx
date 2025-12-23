@@ -160,11 +160,10 @@ export default function GenImagePage() {
                       key={option.value}
                       type="button"
                       onClick={() => setAspectRatio(option.value)}
-                      className={`rounded-2xl border px-4 py-3 text-left text-sm transition ${
-                        aspectRatio === option.value
-                          ? "border-amber-400 bg-amber-50 text-slate-900 shadow-[0_10px_30px_-18px_rgba(245,158,11,0.6)]"
-                          : "border-slate-200 bg-white text-slate-600 hover:border-amber-200"
-                      }`}
+                      className={`rounded-2xl border px-4 py-3 text-left text-sm transition ${aspectRatio === option.value
+                        ? "border-amber-400 bg-amber-50 text-slate-900 shadow-[0_10px_30px_-18px_rgba(245,158,11,0.6)]"
+                        : "border-slate-200 bg-white text-slate-600 hover:border-amber-200"
+                        }`}
                     >
                       <span className="block text-xs uppercase tracking-[0.18em] text-slate-400">
                         Frame
@@ -178,10 +177,11 @@ export default function GenImagePage() {
               <div className="flex flex-wrap items-center gap-4">
                 <button
                   type="submit"
-                  disabled={isBusy}
+                  disabled // Not worked currently
                   className="rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:-translate-y-0.5 hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-60"
                 >
-                  {generatedLabel}
+                  {/* {generatedLabel} */}
+                  Not work currently
                 </button>
                 <span className="text-xs text-slate-500">
                   Powered by Gemini image generation (banana).

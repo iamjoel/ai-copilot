@@ -1,5 +1,5 @@
 import "@/lib/add-proxy";
-import { getModel } from "@/lib/model-factory";
+import { gemini25FlashLiteModel } from "@/lib/model-factory";
 import { listDirectoryTool } from "@/lib/tools/list-directory";
 import { streamText, UIMessage, convertToModelMessages } from "ai";
 
@@ -10,7 +10,7 @@ export async function POST(req: Request) {
 
 
   const result = await streamText({
-    model: getModel("openai", "gpt-4o-mini"),
+    model: gemini25FlashLiteModel,
     system:
       "You are a helpful assistant that keeps replies concise and friendly. " +
       "When the user asks about files or folders, inspect the repository by calling the list_directory tool with a relative path (default to '.' for the workspace root).",

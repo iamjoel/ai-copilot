@@ -1,11 +1,17 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
-import { FormEvent, useMemo, useState } from "react";
+import { FormEvent, useEffect, useMemo, useState } from "react";
 import ModelSelector from "@/app/completions/components/ModelSelector";
+import {
+  ResizableHandle,
+  ResizablePanel,
+  ResizablePanelGroup,
+} from "@/components/ui/resizable";
 import { MODEL_GROUPS } from "@/lib/model-presets";
 import { Markdown } from "@/lib/markdown/react-markdown";
 import { DEBUG_TEST_CASES } from "./test-case";
+import { Button } from "@/components/ui/button";
 
 const DEFAULT_MODEL = MODEL_GROUPS[0]?.options[0]?.value ?? "";
 const CUSTOM_TEST_CASE_ID = "__custom_prompt__";
@@ -42,6 +48,7 @@ export default function QualityAnswerFlowPage() {
   const [result, setResult] = useState<QualityAnswerResponse | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [isResizable, setIsResizable] = useState(false);
 
   const selectedModels = useMemo(() => (selectedModel ? [selectedModel] : []), [selectedModel]);
 
@@ -98,6 +105,21 @@ export default function QualityAnswerFlowPage() {
     }
   };
 
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 1024px)");
+
+    const updateLayout = () => {
+      setIsResizable(mediaQuery.matches);
+    };
+
+    updateLayout();
+    mediaQuery.addEventListener("change", updateLayout);
+
+    return () => {
+      mediaQuery.removeEventListener("change", updateLayout);
+    };
+  }, []);
+
   return (
     <main className="min-h-screen bg-slate-950 py-12 text-white">
       <div className="mx-auto flex max-w-5xl flex-col gap-8 px-4">
@@ -110,77 +132,174 @@ export default function QualityAnswerFlowPage() {
           </p>
         </header>
 
-        <form
-          onSubmit={handleSubmit}
-          className="space-y-6 rounded-2xl border border-white/10 bg-slate-900/60 p-6 shadow-2xl shadow-slate-950/40"
-        >
-          <section className="space-y-2">
-            <label htmlFor="test-case" className="text-sm font-medium text-slate-200">
-              Test case
-            </label>
-            <select
-              id="test-case"
-              className="w-full rounded-xl border border-white/10 bg-slate-950/60 p-3 text-sm text-white outline-none transition focus:border-blue-400 focus:ring-1 focus:ring-blue-400/60"
-              value={selectedTestCaseId}
-              onChange={event => handleTestCaseChange(event.target.value)}
-            >
-              {DEBUG_TEST_CASES.map(test => (
-                <option key={test.id} value={test.id}>
-                  {test.id} · {test.category} · {test.debugFocus}
-                </option>
-              ))}
-              <option value={CUSTOM_TEST_CASE_ID}>Custom input</option>
-            </select>
-            <label htmlFor="question" className="text-sm font-medium text-slate-200">
-              User question
-            </label>
-            <textarea
-              id="question"
-              className="min-h-[120px] w-full rounded-xl border border-white/10 bg-slate-950/60 p-4 text-sm text-white outline-none transition focus:border-blue-400 focus:ring-1 focus:ring-blue-400/60"
-              placeholder="Example: Design a go-to-market strategy for a new product..."
-              value={question}
-              onChange={event => handleQuestionInput(event.target.value)}
-            />
-          </section>
+        {isResizable ? (
+          <ResizablePanelGroup direction="horizontal" className="w-full">
+            <ResizablePanel defaultSize={44} minSize={28} className="min-w-0">
+              <form
+                onSubmit={handleSubmit}
+                className="space-y-6 rounded-2xl border border-white/10 bg-slate-900/60 p-6 shadow-2xl shadow-slate-950/40"
+              >
+                <section className="space-y-2">
+                  <label htmlFor="test-case" className="text-sm font-medium text-slate-200">
+                    Test case
+                  </label>
+                  <select
+                    id="test-case"
+                    className="w-full rounded-xl border border-white/10 bg-slate-950/60 p-3 text-sm text-white outline-none transition focus:border-blue-400 focus:ring-1 focus:ring-blue-400/60"
+                    value={selectedTestCaseId}
+                    onChange={event => handleTestCaseChange(event.target.value)}
+                  >
+                    {DEBUG_TEST_CASES.map(test => (
+                      <option key={test.id} value={test.id}>
+                        {test.id} · {test.category} · {test.debugFocus}
+                      </option>
+                    ))}
+                    <option value={CUSTOM_TEST_CASE_ID}>Custom input</option>
+                  </select>
+                  <label htmlFor="question" className="text-sm font-medium text-slate-200">
+                    User question
+                  </label>
+                  <textarea
+                    id="question"
+                    className="min-h-[120px] w-full rounded-xl border border-white/10 bg-slate-950/60 p-4 text-sm text-white outline-none transition focus:border-blue-400 focus:ring-1 focus:ring-blue-400/60"
+                    placeholder="Example: Design a go-to-market strategy for a new product..."
+                    value={question}
+                    onChange={event => handleQuestionInput(event.target.value)}
+                  />
+                </section>
 
-          <section className="space-y-4">
-            <details className="rounded-xl border border-white/10 bg-slate-950/40 p-4">
-              <summary className="flex cursor-pointer select-none items-center justify-between gap-4 text-sm font-medium text-slate-200">
-                <span>Select model</span>
-                <span className="text-xs text-slate-400">
-                  {selectedModel ? `Selected: ${getModelLabel(selectedModel)}` : "No model selected"}
-                </span>
-              </summary>
-              <div className="mt-4 flex items-center justify-between gap-4">
-                <p className="text-sm font-medium text-slate-200">Available models</p>
-              </div>
-              <div className="mt-3">
-                <ModelSelector selectedModels={selectedModels} onToggle={handleModelToggle} />
-              </div>
-            </details>
-          </section>
+                <section className="space-y-4">
+                  <details className="rounded-xl border border-white/10 bg-slate-950/40 p-4">
+                    <summary className="flex cursor-pointer select-none items-center justify-between gap-4 text-sm font-medium text-slate-200">
+                      <span>Select model</span>
+                      <span className="text-xs text-slate-400">
+                        {selectedModel
+                          ? `Selected: ${getModelLabel(selectedModel)}`
+                          : "No model selected"}
+                      </span>
+                    </summary>
+                    <div className="mt-4 flex items-center justify-between gap-4">
+                      <p className="text-sm font-medium text-slate-200">Available models</p>
+                    </div>
+                    <div className="mt-3">
+                      <ModelSelector selectedModels={selectedModels} onToggle={handleModelToggle} />
+                    </div>
+                  </details>
+                </section>
 
-          <div className="flex flex-wrap gap-3">
-            <button
-              type="submit"
-              disabled={loading}
-              className="rounded-xl bg-blue-500 px-5 py-2 text-sm font-medium text-white transition hover:bg-blue-400 disabled:cursor-not-allowed disabled:bg-blue-500/60"
+                <div className="flex flex-wrap gap-3">
+                  <Button
+                    type="submit"
+                    disabled={loading}
+                  >
+                    {loading ? "Generating..." : "Generate answer"}
+                  </Button>
+                  {error && <p className="text-sm text-red-400">{error}</p>}
+                </div>
+              </form>
+            </ResizablePanel>
+            <ResizableHandle withHandle className="mx-2" />
+            <ResizablePanel defaultSize={56} minSize={32} className="min-w-0">
+              <div className="rounded-2xl border border-white/10 bg-slate-900/60 p-6 shadow-2xl shadow-slate-950/40">
+                {result ? (
+                  <ResultPanel
+                    classification={result.classification}
+                    strategy={result.strategy}
+                    strategyName={result.strategyName}
+                    finalPrompt={result.finalPrompt}
+                    answer={result.answer}
+                    directAnswer={result.directAnswer}
+                  />
+                ) : (
+                  <div className="flex min-h-[220px] items-center justify-center text-sm text-slate-400">
+                    结果会显示在这里
+                  </div>
+                )}
+              </div>
+            </ResizablePanel>
+          </ResizablePanelGroup>
+        ) : (
+          <div className="grid gap-6 lg:grid-cols-2">
+            <form
+              onSubmit={handleSubmit}
+              className="space-y-6 rounded-2xl border border-white/10 bg-slate-900/60 p-6 shadow-2xl shadow-slate-950/40"
             >
-              {loading ? "Generating..." : "Generate answer"}
-            </button>
-            {error && <p className="text-sm text-red-400">{error}</p>}
+              <section className="space-y-2">
+                <label htmlFor="test-case" className="text-sm font-medium text-slate-200">
+                  Test case
+                </label>
+                <select
+                  id="test-case"
+                  className="w-full rounded-xl border border-white/10 bg-slate-950/60 p-3 text-sm text-white outline-none transition focus:border-blue-400 focus:ring-1 focus:ring-blue-400/60"
+                  value={selectedTestCaseId}
+                  onChange={event => handleTestCaseChange(event.target.value)}
+                >
+                  {DEBUG_TEST_CASES.map(test => (
+                    <option key={test.id} value={test.id}>
+                      {test.id} · {test.category} · {test.debugFocus}
+                    </option>
+                  ))}
+                  <option value={CUSTOM_TEST_CASE_ID}>Custom input</option>
+                </select>
+                <label htmlFor="question" className="text-sm font-medium text-slate-200">
+                  User question
+                </label>
+                <textarea
+                  id="question"
+                  className="min-h-[120px] w-full rounded-xl border border-white/10 bg-slate-950/60 p-4 text-sm text-white outline-none transition focus:border-blue-400 focus:ring-1 focus:ring-blue-400/60"
+                  placeholder="Example: Design a go-to-market strategy for a new product..."
+                  value={question}
+                  onChange={event => handleQuestionInput(event.target.value)}
+                />
+              </section>
+
+              <section className="space-y-4">
+                <details className="rounded-xl border border-white/10 bg-slate-950/40 p-4">
+                  <summary className="flex cursor-pointer select-none items-center justify-between gap-4 text-sm font-medium text-slate-200">
+                    <span>Select model</span>
+                    <span className="text-xs text-slate-400">
+                      {selectedModel
+                        ? `Selected: ${getModelLabel(selectedModel)}`
+                        : "No model selected"}
+                    </span>
+                  </summary>
+                  <div className="mt-4 flex items-center justify-between gap-4">
+                    <p className="text-sm font-medium text-slate-200">Available models</p>
+                  </div>
+                  <div className="mt-3">
+                    <ModelSelector selectedModels={selectedModels} onToggle={handleModelToggle} />
+                  </div>
+                </details>
+              </section>
+
+              <div className="flex flex-wrap gap-3">
+                <Button
+                  type="submit"
+                  disabled={loading}
+                >
+                  {loading ? "Generating..." : "Generate answer"}
+                </Button>
+                {error && <p className="text-sm text-red-400">{error}</p>}
+              </div>
+            </form>
+
+            <div className="rounded-2xl border border-white/10 bg-slate-900/60 p-6 shadow-2xl shadow-slate-950/40">
+              {result ? (
+                <ResultPanel
+                  classification={result.classification}
+                  strategy={result.strategy}
+                  strategyName={result.strategyName}
+                  finalPrompt={result.finalPrompt}
+                  answer={result.answer}
+                  directAnswer={result.directAnswer}
+                />
+              ) : (
+                <div className="flex min-h-[220px] items-center justify-center text-sm text-slate-400">
+                  结果会显示在这里
+                </div>
+              )}
+            </div>
           </div>
-        </form>
-
-        {result && (
-          <ResultPanel
-            classification={result.classification}
-            strategy={result.strategy}
-            strategyName={result.strategyName}
-            finalPrompt={result.finalPrompt}
-            answer={result.answer}
-            directAnswer={result.directAnswer}
-          />
         )}
       </div>
     </main>
@@ -203,29 +322,29 @@ const ResultPanel = ({
   answer,
   directAnswer,
 }: ResultPanelProps) => (
-  <section className="space-y-6 rounded-2xl border border-white/10 bg-slate-900/60 p-6 text-sm text-slate-100">
+  <section className="space-y-6 text-sm text-slate-100">
     <div>
       <details className="rounded-xl border border-white/10 bg-slate-950/40 p-4">
         <summary className="cursor-pointer select-none text-lg font-semibold text-white">
           Intent classification
         </summary>
         <dl className="mt-3 grid gap-2 sm:grid-cols-3">
-        <div className="rounded-lg border border-white/10 bg-slate-950/30 p-3">
-          <dt className="text-xs uppercase tracking-wide text-slate-400">Category</dt>
-          <dd className="text-base text-white">{classification.category}</dd>
-        </div>
-        <div className="rounded-lg border border-white/10 bg-slate-950/30 p-3">
-          <dt className="text-xs uppercase tracking-wide text-slate-400">Sub-category</dt>
-          <dd className="text-base text-white">{classification.sub_category}</dd>
-        </div>
-        <div className="rounded-lg border border-white/10 bg-slate-950/30 p-3">
-          <dt className="text-xs uppercase tracking-wide text-slate-400">Domain</dt>
-          <dd className="text-base text-white">{classification.domain}</dd>
-        </div>
-        <div className="rounded-lg border border-white/10 bg-slate-950/30 p-3">
-          <dt className="text-xs uppercase tracking-wide text-slate-400">Complexity</dt>
-          <dd className="text-base text-white">{classification.complexity}</dd>
-        </div>
+          <div className="rounded-lg border border-white/10 bg-slate-950/30 p-3">
+            <dt className="text-xs uppercase tracking-wide text-slate-400">Category</dt>
+            <dd className="text-base text-white">{classification.category}</dd>
+          </div>
+          <div className="rounded-lg border border-white/10 bg-slate-950/30 p-3">
+            <dt className="text-xs uppercase tracking-wide text-slate-400">Sub-category</dt>
+            <dd className="text-base text-white">{classification.sub_category}</dd>
+          </div>
+          <div className="rounded-lg border border-white/10 bg-slate-950/30 p-3">
+            <dt className="text-xs uppercase tracking-wide text-slate-400">Domain</dt>
+            <dd className="text-base text-white">{classification.domain}</dd>
+          </div>
+          <div className="rounded-lg border border-white/10 bg-slate-950/30 p-3">
+            <dt className="text-xs uppercase tracking-wide text-slate-400">Complexity</dt>
+            <dd className="text-base text-white">{classification.complexity}</dd>
+          </div>
         </dl>
         {classification.methodology && (
           <p className="mt-2 text-xs text-slate-400">Methodology: {classification.methodology}</p>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from "react";
+import { useMutation } from "@tanstack/react-query";
 
 type UsageDetails = {
   inputTokens?: number;
@@ -75,8 +76,31 @@ Requirements:
 export default function UsagePage() {
   const [prompt, setPrompt] = useState(defaultPrompt);
   const [result, setResult] = useState<UsageResponse | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  const usageMutation = useMutation({
+    mutationFn: async (promptText: string) => {
+      const response = await fetch("/api/usage", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ prompt: promptText }),
+      });
+
+      const data = (await response.json()) as UsageResponse;
+
+      if (!response.ok) {
+        throw new Error(data.error ?? "Request failed.");
+      }
+      return data;
+    },
+    onSuccess: data => {
+      setResult(data);
+    },
+    onError: err => {
+      console.error("Usage page error:", err);
+      setError(err instanceof Error ? err.message : "Network error. Please try again.");
+    },
+  });
 
   const formatUsd = (value?: number) =>
     value === undefined ? "N/A" : `$${value.toFixed(6)}`;
@@ -92,28 +116,10 @@ export default function UsagePage() {
       return;
     }
 
-    setIsLoading(true);
-    try {
-      const response = await fetch("/api/usage", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ prompt }),
-      });
-
-      const data = (await response.json()) as UsageResponse;
-
-      if (!response.ok) {
-        setError(data.error ?? "Request failed.");
-      } else {
-        setResult(data);
-      }
-    } catch (err) {
-      console.error("Usage page error:", err);
-      setError("Network error. Please try again.");
-    } finally {
-      setIsLoading(false);
-    }
+    usageMutation.mutate(prompt);
   };
+
+  const isLoading = usageMutation.isPending;
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-8 text-gray-100">

@@ -2,18 +2,18 @@
 'use client';
 
 import { FormEvent, useEffect, useMemo, useState } from "react";
+import { useMutation } from "@tanstack/react-query";
 import ModelSelector from "@/app/completions/components/ModelSelector";
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
 } from "@/components/ui/resizable";
-import { MODEL_GROUPS } from "@/lib/model-presets";
 import { Markdown } from "@/lib/markdown/react-markdown";
 import { DEBUG_TEST_CASES } from "./test-case";
 import { Button } from "@/components/ui/button";
+import { useModel } from "@/hooks/use-model";
 
-const DEFAULT_MODEL = MODEL_GROUPS[0]?.options[0]?.value ?? "";
 const CUSTOM_TEST_CASE_ID = "__custom_prompt__";
 
 type QualityAnswerResponse = {
@@ -37,6 +37,7 @@ type QualityAnswerResponse = {
 };
 
 export default function QualityAnswerFlowPage() {
+  const { getModelLabel, defaultModelValue } = useModel();
   const defaultTestCase = DEBUG_TEST_CASES[0];
   const [selectedTestCaseId, setSelectedTestCaseId] = useState<string>(
     defaultTestCase?.id ?? CUSTOM_TEST_CASE_ID,
@@ -44,9 +45,8 @@ export default function QualityAnswerFlowPage() {
   const [question, setQuestion] = useState(
     defaultTestCase?.userQuery ?? "Enter the question to analyze...",
   );
-  const [selectedModel, setSelectedModel] = useState(DEFAULT_MODEL);
+  const [selectedModel, setSelectedModel] = useState(defaultModelValue);
   const [result, setResult] = useState<QualityAnswerResponse | null>(null);
-  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [isResizable, setIsResizable] = useState(false);
 
@@ -84,26 +84,32 @@ export default function QualityAnswerFlowPage() {
     }
 
     setError(null);
-    setLoading(true);
     setResult(null);
+    qualityFlowMutation.mutate({ question, model: selectedModel });
+  };
 
-    try {
+  const qualityFlowMutation = useMutation({
+    mutationFn: async ({ question, model }: { question: string; model: string }) => {
       const response = await fetch("/api/quality-answer-flow", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ question, model: selectedModel }),
+        body: JSON.stringify({ question, model }),
       });
       const data = (await response.json()) as QualityAnswerResponse & { error?: string };
       if (!response.ok) {
         throw new Error(data.error ?? "Request failed.");
       }
+      return data;
+    },
+    onSuccess: data => {
       setResult(data);
-    } catch (err) {
+    },
+    onError: err => {
       setError(err instanceof Error ? err.message : "Request failed.");
-    } finally {
-      setLoading(false);
-    }
-  };
+    },
+  });
+
+  const loading = qualityFlowMutation.isPending;
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(min-width: 1024px)");
@@ -133,7 +139,7 @@ export default function QualityAnswerFlowPage() {
         </header>
 
         {isResizable ? (
-          <ResizablePanelGroup direction="horizontal" className="w-full">
+          <ResizablePanelGroup className="w-full">
             <ResizablePanel defaultSize={44} minSize={28} className="min-w-0">
               <form
                 onSubmit={handleSubmit}
@@ -304,12 +310,6 @@ export default function QualityAnswerFlowPage() {
       </div>
     </main>
   );
-}
-
-const ALL_MODEL_OPTIONS = MODEL_GROUPS.flatMap((group: any) => group.options);
-
-function getModelLabel(value: string) {
-  return ALL_MODEL_OPTIONS.find((option: any) => option.value === value)?.label ?? value;
 }
 
 type ResultPanelProps = QualityAnswerResponse;

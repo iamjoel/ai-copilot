@@ -1,13 +1,14 @@
 import "@/lib/add-proxy";
 import { createGoogleGenerativeAI, google } from "@ai-sdk/google";
 import { createOpenAI } from "@ai-sdk/openai";
+import { createOpenRouter } from '@openrouter/ai-sdk-provider'
 import { jinaUrlContext } from "./tools/jina-reader";
 import { stepCountIs } from "ai";
+import { QINIU_BASE_URL } from "@/config";
 import jinaReader from "@/prompts/jina-reader";
 
 export type Provider = "google" | "openai" | "deepseek" | "qwen" | "kimi" | "minimax" | "xiaomi";
 
-const QINIU_BASE_URL = "https://api.qnaigc.com/v1";
 
 function getQiniuChatModel(providerName: string, modelName: string) {
   const client = createOpenAI({
@@ -16,6 +17,21 @@ function getQiniuChatModel(providerName: string, modelName: string) {
     name: providerName,
   });
   return client.chat(modelName);
+}
+
+function getOpenRouterChatModel(modelName: string) {
+  const client = createOpenRouter({
+    apiKey: process.env.OPEN_ROUTER_API_KEY!,
+  });
+  return client.chat(modelName);
+}
+
+function getMaaSChatModel(providerName: string, modelName: string) {
+  const maasType = process.env.MAAS_TYPE?.trim().toUpperCase();
+  if (maasType === "OPEN_ROUTER") {
+    return getOpenRouterChatModel(modelName);
+  }
+  return getQiniuChatModel(providerName, modelName);
 }
 
 export function getModel(provider: Provider, modelName: string) {
@@ -27,23 +43,23 @@ export function getModel(provider: Provider, modelName: string) {
   }
 
   if (provider === "deepseek") {
-    return getQiniuChatModel("deepseek", modelName);
+    return getMaaSChatModel("deepseek", modelName);
   }
 
   if (provider === "qwen") {
-    return getQiniuChatModel("qwen", modelName);
+    return getMaaSChatModel("qwen", modelName);
   }
 
   if (provider === "kimi") {
-    return getQiniuChatModel("kimi", modelName);
+    return getMaaSChatModel("kimi", modelName);
   }
 
   if (provider === "minimax") {
-    return getQiniuChatModel("minimax", modelName);
+    return getMaaSChatModel("minimax", modelName);
   }
 
   if (provider === "openai" && modelName.startsWith("gpt-5.1")) {
-    return getQiniuChatModel("qiniu", modelName);
+    return getMaaSChatModel("qiniu", modelName);
   }
 
   if (provider === "xiaomi") {

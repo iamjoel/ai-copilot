@@ -3,19 +3,11 @@
 
 import { FormEvent, useState } from "react";
 import { callCompletionApi } from "ai";
-import { MODEL_GROUPS } from "@/lib/model-presets";
 import testCases from "./test-cases";
+import { useModel } from "@/hooks/use-model";
 
-type ModelOption = (typeof MODEL_GROUPS)[number]["options"][number];
-const ALL_MODEL_OPTIONS: ModelOption[] = MODEL_GROUPS.flatMap(group => [
-  ...group.options,
-]);
-const DEFAULT_MODEL_VALUE = ALL_MODEL_OPTIONS[0]?.value ?? "";
 
 export const CUSTOM_PROMPT_VALUE = "__custom_prompt__";
-
-export const getModelLabel = (value: string) =>
-  ALL_MODEL_OPTIONS.find(option => option.value === value)?.label ?? value;
 
 export type ModelResponse = {
   status: "loading" | "success" | "error";
@@ -34,7 +26,7 @@ export type CompletionsController = {
   selectedPreset: string;
   handlePresetChange: (value: string) => void;
   selectedModels: string[];
-  toggleModelSelection: (value: (typeof ALL_MODEL_OPTIONS)[number]["value"]) => void;
+  toggleModelSelection: (value: string) => void;
   promptConfig: PromptConfig;
   handlePromptConfigChange: (value: Partial<PromptConfig>) => void;
   modelResponses: Record<string, ModelResponse>;
@@ -44,11 +36,10 @@ export type CompletionsController = {
 };
 
 export const useCompletions = (): CompletionsController => {
+  const { defaultModelValue } = useModel();
   const [prompt, setPrompt] = useState(testCases[0].prompt);
   const [selectedPreset, setSelectedPreset] = useState(testCases[0].name);
-  const [selectedModels, setSelectedModels] = useState<
-    (typeof ALL_MODEL_OPTIONS)[number]["value"][]
-  >(DEFAULT_MODEL_VALUE ? [DEFAULT_MODEL_VALUE] : []);
+  const [selectedModels, setSelectedModels] = useState(defaultModelValue ? [defaultModelValue] : []);
   const [promptConfig, setPromptConfig] = useState<PromptConfig>({
     applyOutputRules: true,
     language: "中文",
@@ -76,7 +67,7 @@ export const useCompletions = (): CompletionsController => {
     }
   };
 
-  const toggleModelSelection = (value: (typeof ALL_MODEL_OPTIONS)[number]["value"]) => {
+  const toggleModelSelection = (value: string) => {
     setSelectedModels((prev: any) => {
       if (prev.includes(value)) {
         return prev.filter((modelValue: any) => modelValue !== value);
@@ -122,7 +113,7 @@ export const useCompletions = (): CompletionsController => {
                 language: promptConfig.language.trim() || undefined,
               },
             },
-            setCompletion: completion => {
+            setCompletion: (completion: string) => {
               setModelResponses(prev => {
                 const current = prev[modelValue];
                 if (!current || current.status === "error" || current.text === completion) {
@@ -138,7 +129,7 @@ export const useCompletions = (): CompletionsController => {
               });
             },
             setLoading: () => undefined,
-            setError: err => {
+            setError: (err: Error) => {
               if (!err) return;
               setModelResponses(prev => ({
                 ...prev,
@@ -149,7 +140,7 @@ export const useCompletions = (): CompletionsController => {
               }));
             },
             setAbortController: () => undefined,
-          });
+          } as any);
 
           if (typeof result === "string") {
             setModelResponses(prev => ({

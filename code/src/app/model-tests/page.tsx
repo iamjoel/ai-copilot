@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from "react";
+import { useMutation } from "@tanstack/react-query";
 import { getModelPreset } from "@/lib/model-presets";
 import rawTestCases from "@/data/model-capability-tests.json";
 
@@ -30,21 +31,27 @@ export default function ModelCapabilityTestsPage() {
 
   const caseCount = testCases.length;
 
-  const handleRun = async (test: ModelCapabilityTest, modelKey: string) => {
-    const rowKey = `${test.name}:${modelKey}`;
-    setRunning(prev => ({ ...prev, [rowKey]: true }));
-    setErrors(prev => ({ ...prev, [rowKey]: null }));
-    try {
+  const runTestMutation = useMutation({
+    mutationFn: async ({ prompt, modelKey }: { prompt: string; modelKey: string }) => {
       const response = await fetch("/api/model-tests/run", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ prompt: test.input, modelKey }),
+        body: JSON.stringify({ prompt, modelKey }),
       });
       const data = (await response.json()) as { output?: string; error?: string };
       if (!response.ok) {
         throw new Error(data.error ?? "运行失败");
       }
+      return data;
+    },
+  });
 
+  const handleRun = async (test: ModelCapabilityTest, modelKey: string) => {
+    const rowKey = `${test.name}:${modelKey}`;
+    setRunning(prev => ({ ...prev, [rowKey]: true }));
+    setErrors(prev => ({ ...prev, [rowKey]: null }));
+    try {
+      const data = await runTestMutation.mutateAsync({ prompt: test.input, modelKey });
       setOutputs(prev => ({
         ...prev,
         [test.name]: {

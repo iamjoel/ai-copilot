@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from "react";
+import { useMutation } from "@tanstack/react-query";
 
 type DirectoryEntry = {
   name: string;
@@ -18,35 +19,40 @@ type ListDirectoryResponse = {
 export default function ListFilesPage() {
   const [pathInput, setPathInput] = useState("src");
   const [result, setResult] = useState<ListDirectoryResponse | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setError(null);
-    setResult(null);
-    setIsLoading(true);
-    try {
+  const listDirectoryMutation = useMutation({
+    mutationFn: async (path: string) => {
       const response = await fetch("/api/tools/list-directory", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ path: pathInput }),
+        body: JSON.stringify({ path }),
       });
       const data = (await response.json()) as
         | ListDirectoryResponse
         | { error?: string };
       if (!response.ok || "error" in data) {
-        setError((data as { error?: string }).error ?? "请求失败。");
-        return;
+        throw new Error((data as { error?: string }).error ?? "请求失败。");
       }
+      return data as ListDirectoryResponse;
+    },
+    onSuccess: data => {
       setResult(data);
-    } catch (err) {
-      setError("网络错误，请稍后再试。");
+    },
+    onError: err => {
+      setError(err instanceof Error ? err.message : "网络错误，请稍后再试。");
       console.error("List directory request failed:", err);
-    } finally {
-      setIsLoading(false);
-    }
+    },
+  });
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setError(null);
+    setResult(null);
+    listDirectoryMutation.mutate(pathInput);
   };
+
+  const isLoading = listDirectoryMutation.isPending;
 
   return (
     <main className="mx-auto max-w-5xl px-5 py-10 text-gray-100">

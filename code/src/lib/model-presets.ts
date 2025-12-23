@@ -3,7 +3,7 @@ import { type Provider } from "./model-factory";
 type ModelGroupOption = {
   label: string;
   value: string;
-  model: string;
+  model: string | { open_router?: string; qiniu?: string; };
 };
 
 export type ModelGroup = {
@@ -18,7 +18,17 @@ export type ModelPreset = {
   label: string;
 };
 
-export const MODEL_GROUPS = [
+const isModelFromMaas = (model: ModelGroupOption["model"]): boolean => {
+  return typeof model === "object";
+}
+
+const getModelName = (model: ModelGroupOption["model"], massType: string): string | undefined => {
+  if (isModelFromMaas(model)) {
+    return (model as Record<string, string>)[massType];
+  }
+  return model as string;
+}
+const RAW_MODEL_GROUPS = [
   // curl "https://generativelanguage.googleapis.com/v1beta/models?key=$GEMINI_API_KEY"
   {
     provider: "google",
@@ -63,7 +73,9 @@ export const MODEL_GROUPS = [
       {
         label: "GPT-5.1",
         value: "gpt-5.1",
-        model: "gpt-5.1",
+        model: {
+          open_router: "gpt-5.1",
+        }
       },
     ],
   },
@@ -74,7 +86,16 @@ export const MODEL_GROUPS = [
       {
         label: "DeepSeek V3.1",
         value: "deepseek-v3.1",
-        model: "deepseek-v3.1",
+        model: {
+          qiniu: "deepseek-v3.1",
+        },
+      },
+      {
+        label: "DeepSeek V3.2",
+        value: "deepseek-v3.2",
+        model: {
+          open_router: "deepseek/deepseek-v3.2"
+        },
       },
     ],
   },
@@ -85,7 +106,10 @@ export const MODEL_GROUPS = [
       {
         label: "Qwen Turbo",
         value: "qwen-turbo",
-        model: "qwen-turbo",
+        model: {
+          qiniu: "qwen-turbo",
+          open_router: "qwen/qwen-turbo",
+        },
       },
     ],
   },
@@ -96,7 +120,10 @@ export const MODEL_GROUPS = [
       {
         label: "Kimi k2",
         value: "kimi-k2",
-        model: "moonshotai/kimi-k2-0905",
+        model: {
+          qiniu: "moonshotai/kimi-k2-0905",
+          open_router: "moonshotai/kimi-k2-0905",
+        },
       },
     ],
   },
@@ -107,7 +134,10 @@ export const MODEL_GROUPS = [
       {
         label: "minimax-m2",
         value: "minimax-m2",
-        model: "minimax/minimax-m2",
+        model: {
+          qiniu: "minimax/minimax-m2",
+          open_router: "minimax/minimax-m2",
+        },
       },
     ],
   },
@@ -124,23 +154,39 @@ export const MODEL_GROUPS = [
   }
 ] as const satisfies readonly ModelGroup[];
 
-export type ModelPresetKey = (typeof MODEL_GROUPS)[number]["options"][number]["value"];
+export const getModelGroups = (massType: string): ModelGroup[] => RAW_MODEL_GROUPS.map(group => ({
+  ...group,
+  options: group.options.filter(option => {
+    const modelName = getModelName(option.model, massType);
+    return !!modelName;
+  }).map(option => {
+    const modelName = getModelName(option.model, massType)!;
+    return {
+      ...option,
+      model: modelName,
+    };
+  })
+})).filter(group => group.options.length > 0);
+
+
+const maasType = process.env.MAAS_TYPE?.toLocaleLowerCase(); // server-side only
+export const MODEL_GROUPS = getModelGroups(maasType || ""); // server-side only
 
 const MODEL_PRESET_ENTRIES = MODEL_GROUPS.flatMap(group =>
   group.options.map(option => [
     option.value,
     {
       provider: group.provider,
-      model: option.model,
+      model: option.model as string,
       label: option.label,
     } satisfies ModelPreset,
   ]),
-) as Array<[ModelPresetKey, ModelPreset]>;
+) as Array<[string, ModelPreset]>;
 
-export const MODEL_PRESETS: Record<ModelPresetKey, ModelPreset> = Object.fromEntries(
+export const MODEL_PRESETS: Record<string, ModelPreset> = Object.fromEntries(
   MODEL_PRESET_ENTRIES,
-) as Record<ModelPresetKey, ModelPreset>;
+) as Record<string, ModelPreset>;
 
-export function getModelPreset(key: string) {
-  return MODEL_PRESETS[key as ModelPresetKey];
+export function getModelPreset(key: string, modelPreset?: typeof MODEL_PRESETS): ModelPreset | undefined {
+  return (modelPreset || MODEL_PRESETS)[key as string];
 }

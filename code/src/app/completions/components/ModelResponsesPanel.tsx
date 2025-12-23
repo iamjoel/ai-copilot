@@ -1,11 +1,13 @@
 import { Markdown } from "@/lib/markdown/react-markdown";
-import { getModelLabel, type ModelResponse } from "../useCompletions";
+import { type ModelResponse } from "../useCompletions";
+import { useModel } from "@/hooks/use-model";
 
 type ModelResponsesPanelProps = {
   responses: Record<string, ModelResponse>;
 };
 
 const ModelResponsesPanel = ({ responses }: ModelResponsesPanelProps) => {
+  const { getModelLabel } = useModel();
   if (Object.keys(responses).length === 0) {
     return (
       <div className="min-h-[140px] rounded-lg border border-white/10 bg-slate-950/40 px-4 py-3 text-sm text-slate-100">
@@ -62,7 +64,7 @@ const ModelResponsesPanel = ({ responses }: ModelResponsesPanelProps) => {
             ) : result.status === "error" ? (
               <p className="text-sm text-red-200">{result.error}</p>
             ) : (
-              <Markdown content={result.text ?? ""} isAnimating={result.status === "loading"} />
+              <Markdown content={result.text ?? ""} />
             )}
           </div>
         </div>

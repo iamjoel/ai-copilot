@@ -2,6 +2,7 @@
 
 import { useMemo, useState, type FormEvent } from "react";
 import { Fraunces, Space_Grotesk } from "next/font/google";
+import { useMutation } from "@tanstack/react-query";
 
 const display = Fraunces({
   subsets: ["latin"],
@@ -34,10 +35,48 @@ export default function GenImagePage() {
   const [prompt, setPrompt] = useState(samplePrompts[0]);
   const [aspectRatio, setAspectRatio] = useState<(typeof aspectOptions)[number]["value"]>("1:1");
   const [imageUrl, setImageUrl] = useState<string | null>(null);
-  const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState<string | null>(null);
 
-  const isBusy = status === "loading";
+  const genImageMutation = useMutation({
+    mutationFn: async ({
+      prompt: promptText,
+      aspectRatio: ratio,
+    }: {
+      prompt: string;
+      aspectRatio: (typeof aspectOptions)[number]["value"];
+    }) => {
+      const response = await fetch("/api/gen-image", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ prompt: promptText, aspectRatio: ratio }),
+      });
+
+      if (!response.ok) {
+        const payload = (await response.json()) as { error?: string };
+        throw new Error(payload.error ?? "Image generation failed.");
+      }
+
+      const payload = (await response.json()) as { image: string };
+      return payload;
+    },
+    onSuccess: payload => {
+      setImageUrl(payload.image);
+    },
+    onError: requestError => {
+      setError(
+        requestError instanceof Error
+          ? requestError.message
+          : "Image generation failed.",
+      );
+    },
+  });
+
+  const status: Status = genImageMutation.isPending
+    ? "loading"
+    : genImageMutation.isError
+      ? "error"
+      : "idle";
+  const isBusy = genImageMutation.isPending;
   const generatedLabel = useMemo(() => {
     if (status === "loading") {
       return "Generating...";
@@ -51,32 +90,8 @@ export default function GenImagePage() {
       return;
     }
 
-    setStatus("loading");
     setError(null);
-
-    try {
-      const response = await fetch("/api/gen-image", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ prompt, aspectRatio }),
-      });
-
-      if (!response.ok) {
-        const payload = (await response.json()) as { error?: string };
-        throw new Error(payload.error ?? "Image generation failed.");
-      }
-
-      const payload = (await response.json()) as { image: string };
-      setImageUrl(payload.image);
-      setStatus("idle");
-    } catch (requestError) {
-      setStatus("error");
-      setError(
-        requestError instanceof Error
-          ? requestError.message
-          : "Image generation failed.",
-      );
-    }
+    genImageMutation.mutate({ prompt, aspectRatio });
   };
 
   return (

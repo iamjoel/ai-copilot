@@ -1,6 +1,6 @@
 import { logger } from "@/lib/logger";
 import { commonWithContextTool, geminiWithContextTool } from "@/lib/model-factory";
-import { MODEL_GROUPS, type ModelPresetKey, getModelPreset } from "@/lib/model-presets";
+import { MODEL_GROUPS, getModelPreset } from "@/lib/model-presets";
 import { streamText } from "ai";
 import checkInput from "@/app/api/utils/check-input";
 import { promptConfigSchema, buildPrompt } from "@/app/api/completions/utils";
@@ -10,7 +10,7 @@ import { z } from "zod";
 export const runtime = "nodejs"; // 'edge' runtime does not support undici yet
 
 // Get the list of allowed models from Gemini API
-const ALLOWED_MODELS = new Set<ModelPresetKey>(
+const ALLOWED_MODELS = new Set<string>(
   MODEL_GROUPS.flatMap(group => group.options.map(option => option.value)),
 );
 
@@ -20,7 +20,7 @@ const ParamsSchema = z.object({
     .string()
     .trim()
     .min(1, "model is required")
-    .refine(value => ALLOWED_MODELS.has(value as ModelPresetKey), {
+    .refine(value => ALLOWED_MODELS.has(value as string), {
       message: "Unsupported model.",
     }),
   config: promptConfigSchema,

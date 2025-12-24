@@ -2,9 +2,10 @@
 'use client';
 
 import { FormEvent, useState } from "react";
-import { callCompletionApi } from "ai";
+import { parseJsonEventStream, readUIMessageStream, uiMessageChunkSchema } from "ai";
 import testCases from "./test-cases";
 import { useModel } from "@/hooks/use-model";
+import { type UsageDetail } from "@/lib/usage-utils";
 
 
 export const CUSTOM_PROMPT_VALUE = "__custom_prompt__";
@@ -13,6 +14,8 @@ export type ModelResponse = {
   status: "loading" | "success" | "error";
   text?: string;
   error?: string;
+  responseTimeSec?: number;
+  usage?: UsageDetail;
 };
 
 export type PromptConfig = {
@@ -102,67 +105,154 @@ export const useCompletions = (): CompletionsController => {
 
     await Promise.all(
       modelsToRun.map(async modelValue => {
+        const startedAt = Date.now();
+        const updateResponseTime = () => {
+          const responseTimeSec = Math.round((Date.now() - startedAt) / 1000);
+          setModelResponses(prev => {
+            const current = prev[modelValue];
+            if (!current) return prev;
+            return {
+              ...prev,
+              [modelValue]: {
+                ...current,
+                responseTimeSec,
+              },
+            };
+          });
+        };
+        const updateUsageFromMetadata = (metadata?: {
+          inputTokens?: number;
+          outputTokens?: number;
+          urlTokens?: number;
+          totalTokens?: number;
+        }) => {
+          if (!metadata) return;
+          const hasAny =
+            metadata.inputTokens !== undefined ||
+            metadata.outputTokens !== undefined ||
+            metadata.urlTokens !== undefined ||
+            metadata.totalTokens !== undefined;
+          if (!hasAny) return;
+          const totalTokens =
+            metadata.totalTokens ??
+            (metadata.inputTokens !== undefined &&
+              metadata.outputTokens !== undefined &&
+              metadata.urlTokens !== undefined
+              ? metadata.inputTokens + metadata.outputTokens + metadata.urlTokens
+              : undefined);
+          const usageDetail: UsageDetail = {
+            inputTokens: metadata.inputTokens,
+            outputTokens: metadata.outputTokens,
+            urlTokens: metadata.urlTokens,
+            totalTokens,
+            raw: metadata,
+          };
+          setModelResponses(prev => {
+            const current = prev[modelValue];
+            if (!current) return prev;
+            return {
+              ...prev,
+              [modelValue]: {
+                ...current,
+                usage: usageDetail,
+              },
+            };
+          });
+        };
+
         try {
-          const result = await callCompletionApi({
-            api: "/api/completions",
-            prompt,
-            body: {
+          const response = await fetch("/api/completions", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              prompt,
               model: modelValue,
               config: {
                 applyOutputRules: promptConfig.applyOutputRules,
                 language: promptConfig.language.trim() || undefined,
               },
-            },
-            setCompletion: (completion: string) => {
+            }),
+          });
+
+          if (!response.ok) {
+            const payload = await response.json().catch(() => null);
+            throw new Error(payload?.error ?? "请求失败");
+          }
+
+          if (!response.body) {
+            throw new Error("响应体为空");
+          }
+
+          const parsedStream = parseJsonEventStream({
+            stream: response.body,
+            schema: uiMessageChunkSchema,
+          });
+          const chunkStream = parsedStream.pipeThrough(
+            new TransformStream({
+              transform(part, controller) {
+                if (!part?.success) return;
+                const chunk = part.value;
+                if (chunk?.messageMetadata) {
+                  updateUsageFromMetadata(chunk.messageMetadata as {
+                    inputTokens?: number;
+                    outputTokens?: number;
+                    urlTokens?: number;
+                    totalTokens?: number;
+                  });
+                }
+                controller.enqueue(chunk);
+              },
+            }),
+          );
+
+          let completionText = "";
+          for await (const message of readUIMessageStream({ stream: chunkStream })) {
+            const latestText = (message.parts ?? [])
+              .filter(part => part.type === "text")
+              .map(part => part.text)
+              .join("");
+            if (latestText !== completionText) {
+              completionText = latestText;
               setModelResponses(prev => {
                 const current = prev[modelValue];
-                if (!current || current.status === "error" || current.text === completion) {
+                if (!current || current.status === "error") {
                   return prev;
                 }
                 return {
                   ...prev,
                   [modelValue]: {
+                    ...current,
                     status: "loading",
-                    text: completion,
+                    text: completionText,
                   },
                 };
               });
-            },
-            setLoading: () => undefined,
-            setError: (err: Error) => {
-              if (!err) return;
-              setModelResponses(prev => ({
-                ...prev,
-                [modelValue]: {
-                  status: "error",
-                  error: err instanceof Error ? err.message : "请求失败",
-                },
-              }));
-            },
-            setAbortController: () => undefined,
-          } as any);
-
-          if (typeof result === "string") {
-            setModelResponses(prev => ({
-              ...prev,
-              [modelValue]: {
-                status: "success",
-                text: result,
-              },
-            }));
-          } else if (result === null) {
-            setModelResponses(prev => ({
-              ...prev,
-              [modelValue]: {
-                status: "error",
-                error: "请求已取消",
-              },
-            }));
+            }
+            if (message.metadata) {
+              updateUsageFromMetadata(message.metadata as {
+                inputTokens?: number;
+                outputTokens?: number;
+                urlTokens?: number;
+                totalTokens?: number;
+              });
+            }
           }
-        } catch (err) {
+
+          updateResponseTime();
           setModelResponses(prev => ({
             ...prev,
             [modelValue]: {
+              ...prev[modelValue],
+              status: "success",
+              text: completionText,
+            },
+          }));
+        } catch (err) {
+          updateResponseTime();
+          setModelResponses(prev => ({
+            ...prev,
+            [modelValue]: {
+              ...prev[modelValue],
               status: "error",
               error: err instanceof Error ? err.message : "请求失败",
             },

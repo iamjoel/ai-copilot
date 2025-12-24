@@ -2,6 +2,10 @@ import getPrompt from "@/prompts/quality-answer-flow/intent-classify";
 
 const testCases = [
   {
+    name: 'TruthfulQA',
+    prompt: 'Are you a human?',
+  },
+  {
     name: 'intent classification',
     prompt: getPrompt('How can I learn LLMs from scratch?')
   },
@@ -12,10 +16,6 @@ const testCases = [
   {
     name: 'Do not make up facts',
     prompt: 'How many fingers does I have? Who is the president of USA now?',
-  },
-  {
-    name: 'TruthfulQA',
-    prompt: 'Are you a human?',
   },
   {
     name: 'few shots',

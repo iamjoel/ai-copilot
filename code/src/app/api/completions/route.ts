@@ -51,7 +51,19 @@ export async function POST(req: Request) {
     const modelWithContextTool = isGeminiModel ? geminiWithContextTool : commonWithContextTool
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const result = await streamText(modelWithContextTool(modelPreset.provider, modelPreset.model, prompt) as any);
-    return result.toUIMessageStreamResponse();
+    return result.toUIMessageStreamResponse({
+      messageMetadata: ({ part }) => {
+        if (part.type === "finish") {
+          return {
+            totalTokens: part.totalUsage.totalTokens,
+            inputTokens: part.totalUsage.inputTokens,
+            outputTokens: part.totalUsage.outputTokens,
+            reasoningTokens: part.totalUsage.reasoningTokens,
+            urlTokens: (part.totalUsage.totalTokens ?? 0) - (part.totalUsage.inputTokens ?? 0) - (part.totalUsage.outputTokens ?? 0) - (part.totalUsage.reasoningTokens ?? 0),
+          };
+        }
+      },
+    });
   } catch (error) {
     console.error("Completion error:", error);
     return new Response(

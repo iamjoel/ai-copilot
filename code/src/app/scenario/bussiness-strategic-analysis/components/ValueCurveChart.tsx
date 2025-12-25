@@ -34,6 +34,52 @@ const decodeLevel = (value: string) => {
 
 const palette = ["#f97316", "#22d3ee", "#a855f7", "#ec4899", "#22c55e"];
 
+const wrapDimensionLabel = (label: string, maxChars = 12) => {
+  if (!label) {
+    return [""];
+  }
+
+  const lines: string[] = [];
+  let currentLine = "";
+
+  const pushCurrentLine = () => {
+    if (currentLine) {
+      lines.push(currentLine);
+      currentLine = "";
+    }
+  };
+
+  label.split(/\s+/).forEach((segment) => {
+    if (!segment) {
+      return;
+    }
+
+    if (segment.length > maxChars) {
+      pushCurrentLine();
+      for (let i = 0; i < segment.length; i += maxChars) {
+        lines.push(segment.slice(i, i + maxChars));
+      }
+      return;
+    }
+
+    const combined = currentLine ? `${currentLine} ${segment}` : segment;
+    if (combined.length <= maxChars) {
+      currentLine = combined;
+    } else {
+      pushCurrentLine();
+      currentLine = segment;
+    }
+  });
+
+  pushCurrentLine();
+
+  if (!lines.length) {
+    return [label];
+  }
+
+  return lines;
+};
+
 const ValueCurveChart = ({ data }: ValueCurveChartProps) => {
   const { dimensions, curves } = data;
   if (!dimensions.length || !curves.length) {
@@ -63,7 +109,7 @@ const ValueCurveChart = ({ data }: ValueCurveChartProps) => {
   };
 
   return (
-    <div className="grid w-full gap-6 rounded-3xl border border-white/10 bg-slate-950/60 p-5 lg:grid-cols-[1.4fr_0.9fr]">
+    <div className="grid w-full gap-6 rounded-3xl border border-white/10 bg-slate-950/60 p-5 lg:grid-cols-[1.4fr_0.6fr]">
       <div>
         <div className="flex items-center justify-between text-sm text-slate-400">
           <p className="font-semibold text-base text-white">Strategic Mapping Canvas</p>
@@ -101,6 +147,7 @@ const ValueCurveChart = ({ data }: ValueCurveChartProps) => {
             })}
             {dimensions.map((dimension, idx) => {
               const x = padding + (xStep * idx);
+              const labelLines = wrapDimensionLabel(dimension, 16);
               return (
                 <g key={dimension}>
                   <line
@@ -113,13 +160,18 @@ const ValueCurveChart = ({ data }: ValueCurveChartProps) => {
                   />
                   <text
                     x={x}
-                    y={chartHeight + 16}
+                    y={chartHeight + 12}
                     textAnchor="middle"
                     fill="rgba(255,255,255,0.65)"
                     fontSize="11"
                     fontWeight={600}
+                    dominantBaseline="hanging"
                   >
-                    {dimension}
+                    {labelLines.map((line, lineIndex) => (
+                      <tspan key={`${dimension}-${lineIndex}`} x={x} dy={lineIndex === 0 ? 0 : 14}>
+                        {line}
+                      </tspan>
+                    ))}
                   </text>
                 </g>
               );
@@ -163,7 +215,7 @@ const ValueCurveChart = ({ data }: ValueCurveChartProps) => {
             <div key={curve.name} className="rounded-2xl border border-white/5 bg-slate-950/40 p-3">
               <div className="flex items-start justify-between gap-3">
                 <span
-                  className="h-2.5 w-12 rounded-full"
+                  className="h-2.5 w-6 rounded-full"
                   style={{ backgroundColor: palette[index % palette.length] }}
                 />
                 <div className="flex-1">

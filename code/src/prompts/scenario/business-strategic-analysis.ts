@@ -35,25 +35,29 @@ const OUTPUT_TEMPLATE = `
 Please return a single JSON object (without additional commentary) that feeds the two custom components.
 The JSON must follow this structure:
 ${CODE_SAMPLE}
-- Provide ~5 concise items for each of jobs, pains, and gains (no numbered lists) describing the customer context.
-- Define five core dimensions for the value curve such as "Customer Insight", "Operational Speed", etc.
-- Include five curves, each representing a meaningful competitor or strategic archetype (one entry should reflect the customer's focus offering).
-- Each values array must align with dimensions length and use the letters [O,F,S,W,X] where O=over-delivery, F=strong satisfaction, S=industry standard, W=weak coverage, X=abandoned.
-- Supply a userTag like "Tesla: 极客先锋" and a single-sentence userNote for every curve to capture the representative user group.
-- Value Curve is a linear line chart; avoid any smoothing.
-- Customer Profile values will render inside a segmented circular canvas (right half for jobs, left bottom quadrant for pains, left top quadrant for gains).
-- Token: stay focused on the current customer goal and keep the JSON clean.
-- Make sure the JSON object is the only content in the response.
-- Do not add extra Markdown beyond the code block.
-- Use the provided customer goal literally when framing recommendations.
-- Tag the customer's focus offering by naming the first curve "Your Focus Offering" with a distinct userTag.
+
+Customer Profile guidance:
+- Provide ~5 concise entries for each of the \`jobs\`, \`pains\`, and \`gains\` arrays; avoid numbered lists.
+- Keep each description extremely tight. Use short nouns or verbs that convey the core item.
+- Focus every entry on the current customer goal you were given.
+
+Value Curve guidance:
+- Define exactly five core \`dimensions\` such as "Customer Insight", "Operational Speed", etc.
+- Include five \`curves\`, each representing a meaningful competitor or strategic archetype; the first curve must be named "Your Focus Offering" and feature a unique \`userTag\`.
+- Each \`values\` array must match the \`dimensions\` length and use the letters [O,F,S,W,X] where O=over-delivery, F=strong satisfaction, S=industry standard, W=weak coverage, X=abandoned.
+- Supply a \`userTag\` like "Tesla: Geek Pioneer" and a single-sentence \`userNote\` for every curve to capture who the curve represents.
+- Treat the value curve as a linear line chart; avoid any smoothing.
+
+General rules:
+- Stay focused on the customer goal and keep the JSON clean.
+- Use the provided customer goal literally when framing responses.
+- Make sure the JSON object is the only content in the response; no extra Markdown or explanations.
 - Summary: capture the promised data for the two UI components above.
-- Output is for parsing only; no explanations.
 `.trim();
 
 const buildStrategicPrompt = (goal: string) => {
-  const normalizedGoal = goal.trim() || "客户希望在竞争激烈的市场中找出差异化增长机会";
-  const userQuery = `客户目标：${normalizedGoal}\n\n${OUTPUT_TEMPLATE}`;
+  const normalizedGoal = goal.trim() || "Customer aims to identify differentiated growth opportunities in a highly competitive market";
+  const userQuery = `Customer Objective: ${normalizedGoal}\n\n${OUTPUT_TEMPLATE}`;
   return composeFinalPrompt({
     ...BASE_CONTEXT,
     userQuery,

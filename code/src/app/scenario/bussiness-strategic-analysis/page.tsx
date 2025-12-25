@@ -110,10 +110,8 @@ export default function Page() {
   const [customerProfile, setCustomerProfile] = useState<CustomerProfileData | null>(null);
   const [valueCurveData, setValueCurveData] = useState<ValueCurveData | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [rawOutput, setRawOutput] = useState<string | null>(null);
 
-  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+  const handleSubmit = async () => {
     const trimmedGoal = goal.trim();
     if (!trimmedGoal) {
       setError("Please enter a customer objective first.");
@@ -123,7 +121,6 @@ export default function Page() {
     setError(null);
     setCustomerProfile(null);
     setValueCurveData(null);
-    setRawOutput(null);
 
     try {
       const prompt = buildStrategicPrompt(trimmedGoal);
@@ -150,7 +147,6 @@ export default function Page() {
         throw new Error("LLM did not return any content.");
       }
 
-      setRawOutput(completionText);
       const { customerProfile, valueCurve } = parseStructuredOutput(completionText);
       setCustomerProfile(customerProfile);
       setValueCurveData(valueCurve);
@@ -163,13 +159,13 @@ export default function Page() {
   };
 
   return (
-    <main className="mx-auto max-w-6xl space-y-8 px-5 py-10">
+    <main className="mx-auto max-w-[90vw] space-y-8 px-5 py-10">
       <Card>
         <CardHeader>
           <CardTitle>Business Strategic Analysis</CardTitle>
         </CardHeader>
         <CardContent>
-          <form onSubmit={handleSubmit}>
+          <div>
             <Label className="mb-2">Customer Objective</Label>
             <Textarea
               value={goal}
@@ -177,12 +173,13 @@ export default function Page() {
               rows={4}
               placeholder="Describe a core objective the customer hopes to achieve, for example: increasing brand loyalty and boosting online conversion in emerging markets."
             />
-          </form>
+          </div>
         </CardContent>
         <CardFooter>
           <Button
             type="submit"
             disabled={loading}
+            onClick={handleSubmit}
           >
             {loading ? (
               <span className="flex items-center gap-2">

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { z } from "zod";
+import { z } from 'zod/v3';
 const checkInput = (obj: Record<string, any>, schema: z.ZodObject<any>) => {
   const result = schema.safeParse(obj);
   if (!result.success) {

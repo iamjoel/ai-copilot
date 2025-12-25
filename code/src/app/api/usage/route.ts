@@ -42,7 +42,7 @@ export async function POST(req: Request) {
         responseTimeMs,
         usage: usageDetail,
         cost: costDetail,
-        groundingMetadata: result.providerMetadata?.google?.groundingMetadata,
+        groundingMetadata: result.providerOptions?.google?.groundingMetadata,
       }),
       { status: 200, headers: { "Content-Type": "application/json" } },
     );

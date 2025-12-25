@@ -2,14 +2,14 @@
 import { readdir } from "node:fs/promises";
 import path from "node:path";
 import { tool } from "ai";
-import { z } from "zod";
+import { z } from 'zod/v3';
 
 const workspaceRoot = path.resolve(process.cwd());
 
 export const toolSpec = {
   name: "list_directory",
   description: "List files and folders under a workspace path, mimicking the `ls` command.",
-  parameters: {
+  inputSchema: {
     type: "object",
     properties: {
       path: {

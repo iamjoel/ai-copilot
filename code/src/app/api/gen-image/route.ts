@@ -1,6 +1,6 @@
 import { experimental_generateImage as generateImage } from "ai";
 import { createGoogleGenerativeAI } from "@ai-sdk/google";
-import { z } from "zod";
+import { z } from 'zod/v3';
 import checkInput from "@/app/api/utils/check-input";
 
 export const runtime = "nodejs";

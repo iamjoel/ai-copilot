@@ -12,7 +12,7 @@ type TokenUsage = {
 };
 
 type TokenUsageToastProps = {
-  usage?: TokenUsage;
+  usage?: LanguageModelUsage;
   children?: ReactNode;
 };
 

@@ -4,7 +4,7 @@ import { MODEL_GROUPS, getModelPreset } from "@/lib/model-presets";
 import { streamText } from "ai";
 import checkInput from "@/app/api/utils/check-input";
 import { promptConfigSchema, buildPrompt } from "@/app/api/completions/utils";
-import { z } from "zod";
+import { z } from 'zod/v3';
 
 
 export const runtime = "nodejs"; // 'edge' runtime does not support undici yet
@@ -50,7 +50,7 @@ export async function POST(req: Request) {
 
     const modelWithContextTool = isGeminiModel ? geminiWithContextTool : commonWithContextTool
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const result = await streamText(modelWithContextTool(modelPreset.provider, modelPreset.model, prompt) as any);
+    const result = streamText(modelWithContextTool(modelPreset.provider, modelPreset.model, prompt) as any);
     return result.toUIMessageStreamResponse({
       messageMetadata: ({ part }) => {
         if (part.type === "finish") {

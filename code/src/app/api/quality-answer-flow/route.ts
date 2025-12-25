@@ -5,7 +5,7 @@ import composeFinalPrompt from "@/prompts/quality-answer-flow/final-prompt";
 import getIntentPrompt from "@/prompts/quality-answer-flow/intent-classify";
 import SYSTEM_CONFIG from "@/prompts/quality-answer-flow/strategy-libs";
 import { generateObject, generateText } from "ai";
-import { z } from "zod";
+import { z } from 'zod/v3';
 
 export const runtime = "nodejs";
 

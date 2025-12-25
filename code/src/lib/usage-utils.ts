@@ -44,8 +44,8 @@ export function computeUsageDetail(rawUsage: unknown): UsageDetail | undefined {
     urlTokens?: number;
   };
 
-  const inputTokens = usage.promptTokens ?? usage.inputTokens;
-  const outputTokens = usage.completionTokens ?? usage.outputTokens;
+  const inputTokens = usage.inputTokens ?? usage.inputTokens;
+  const outputTokens = usage.outputTokens ?? usage.outputTokens;
   const totalTokens = usage.totalTokens;
   const urlTokens =
     usage.urlTokens ??

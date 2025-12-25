@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { tool } from 'ai';
-import { z } from 'zod';
+import { z } from 'zod/v3';
 import { logger } from '../logger';
 
 const InputSchema = z.object({

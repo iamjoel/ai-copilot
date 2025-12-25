@@ -1,13 +1,29 @@
-# AI Copilot Playground
+# AI Copilot
+## Overview
+1.	Push the boundaries of LLM capabilities
+2.	Automate high-frequency daily workflows
+3.	Deliver practical, LLM-driven solutions to users
 
-A Next.js 16 playground for comparing model completions, running prompt flows, and testing AI utilities with the Vercel AI SDK v5.
+## LLM capabilities
+### /prompt-engineer
+Text generation. 
 
-## Features
-- Multi-model completion playground with side-by-side responses
-- Quality Answer Flow debug panel
-- Image generation demo (Gemini)
-- Model capability test runner
-- Usage/latency inspection and tool demos
+- Support different models.
+- Support use tools.
+- Todo: render customer components.
+
+### /chat
+Chat.
+
+### /generate-image 
+Image generation.
+
+## Scenario
+### /scenario/quality-answer-flow
+Input question. Generate high-quality answer with world class strategy.
+
+### /scenario/business-strategic-analysis
+Input customer Objective. Generate Customer Profile and Value Curve Chart.
 
 ## Requirements
 - Node.js 18+ (recommended 20+)

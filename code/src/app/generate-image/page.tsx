@@ -3,6 +3,7 @@
 import { useMemo, useState, type FormEvent } from "react";
 import { Fraunces, Space_Grotesk } from "next/font/google";
 import { useMutation } from "@tanstack/react-query";
+import { Button } from "@/components/ui/button";
 
 const display = Fraunces({
   subsets: ["latin"],
@@ -45,7 +46,7 @@ export default function GenImagePage() {
       prompt: string;
       aspectRatio: (typeof aspectOptions)[number]["value"];
     }) => {
-      const response = await fetch("/api/gen-image", {
+      const response = await fetch("/api/generate-image", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt: promptText, aspectRatio: ratio }),
@@ -76,7 +77,10 @@ export default function GenImagePage() {
     : genImageMutation.isError
       ? "error"
       : "idle";
+
   const isBusy = genImageMutation.isPending;
+  const isLoading = status === "loading";
+
   const generatedLabel = useMemo(() => {
     if (status === "loading") {
       return "Generating...";
@@ -175,17 +179,13 @@ export default function GenImagePage() {
               </div>
 
               <div className="flex flex-wrap items-center gap-4">
-                <button
+                <Button
                   type="submit"
-                  disabled // Not worked currently
+                  disabled={isLoading} // Not worked currently
                   className="rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:-translate-y-0.5 hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-60"
                 >
-                  {/* {generatedLabel} */}
-                  Not work currently
-                </button>
-                <span className="text-xs text-slate-500">
-                  Powered by Gemini image generation (banana).
-                </span>
+                  {generatedLabel}
+                </Button>
               </div>
 
               {error ? (

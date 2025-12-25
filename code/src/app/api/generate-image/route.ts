@@ -1,7 +1,10 @@
-import { experimental_generateImage as generateImage } from "ai";
-import { createGoogleGenerativeAI } from "@ai-sdk/google";
+import { generateText } from "ai";
+import { createGoogleGenerativeAI, google } from "@ai-sdk/google";
 import { z } from 'zod/v3';
 import checkInput from "@/app/api/utils/check-input";
+import { get } from "http";
+import { getModel } from "@/lib/model-factory";
+import { image } from "@markdoc/markdoc/dist/src/schema";
 
 export const runtime = "nodejs";
 
@@ -12,9 +15,7 @@ const ParamsSchema = z.object({
 
 type Params = z.infer<typeof ParamsSchema>;
 
-const google = createGoogleGenerativeAI({
-  apiKey: process.env.GOOGLE_GENERATIVE_AI_API_KEY!,
-});
+const model = getModel("google", "models/gemini-2.5-flash-image");
 
 export async function POST(req: Request) {
   try {
@@ -27,20 +28,29 @@ export async function POST(req: Request) {
 
     const { prompt, aspectRatio } = data as Params;
 
-    const { image } = await generateImage({
-      model: google.image("gemini-2.5-flash-image"), // have some problems
-      prompt,
-      aspectRatio: aspectRatio ?? "1:1",
+    const { files } = await generateText({
+      model,
+      prompt: `${prompt}`,
+      // prompt: `${prompt}. Aspect ratio: ${aspectRatio || "1:1"}.`,
       providerOptions: {
-        google: {
-          personGeneration: "dont_allow",
+        google: { // aspectRatio not worked currently, always generates 1:1
+          imageGeneration: {
+            aspectRatio: aspectRatio || "1:1",
+          },
         },
-      },
+      }
     });
+    const file = files.at(0)
+
+    if (!file?.base64) {
+      throw new Error('Failed to generate image');
+    }
+    // Format as a data URI with the proper media type for use in img src
+    const mediaType = file.mediaType || 'image/png';
 
     return Response.json({
-      image: `data:${image.mediaType};base64,${image.base64}`,
-      mediaType: image.mediaType,
+      image: `data:${mediaType};base64,${file.base64}`,
+      mediaType,
     });
   } catch (error) {
     console.error("Image generation error:", error);

@@ -3,7 +3,7 @@
 
 import { FormEvent, useEffect, useMemo, useState } from "react";
 import { useMutation } from "@tanstack/react-query";
-import ModelSelector from "@/app/completions/components/ModelSelector";
+import ModelSelector from "@/app/prompt-engineer/components/ModelSelector";
 import {
   ResizableHandle,
   ResizablePanel,

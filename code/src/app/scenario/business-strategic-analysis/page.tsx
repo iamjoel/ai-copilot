@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 import { parseJsonEventStream, readUIMessageStream, uiMessageChunkSchema } from "ai";
 import CustomerProfileCanvas, { type CustomerProfileData } from "./components/CustomerProfileCanvas";
 import ValueCurveChart, { type ValueCurveData } from "./components/ValueCurveChart";

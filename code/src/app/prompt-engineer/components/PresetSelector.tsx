@@ -17,18 +17,18 @@ type PresetSelectorProps = {
 };
 
 const PresetSelector = ({ selectedPreset, onChange, presets }: PresetSelectorProps) => (
-  <div className="space-y-2">
-    <Label className="text-slate-200">提示词模版</Label>
+  <div className="flex items-center space-x-1">
+    <Label className="text-slate-200">Templates</Label>
     <Select value={selectedPreset} onValueChange={onChange}>
       <SelectTrigger className="h-11 border-white/10 bg-slate-950/60 text-slate-100 focus:ring-blue-500 focus:ring-offset-0">
-        <SelectValue placeholder="选择一个示例提示词" />
+        <SelectValue placeholder="Choose a prompt example" />
       </SelectTrigger>
       <SelectContent className="border-white/10 bg-slate-900 text-slate-100">
         <SelectItem
           value={CUSTOM_PROMPT_VALUE}
           className="pl-8 pr-3 text-slate-100 focus:bg-slate-800 focus:text-white"
         >
-          自定义输入
+          Custom input
         </SelectItem>
         <SelectSeparator className="bg-white/10" />
         {presets.map(testCase => (

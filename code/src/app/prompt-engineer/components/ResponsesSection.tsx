@@ -8,7 +8,7 @@ type ResponsesSectionProps = {
 
 const ResponsesSection = ({ responses }: ResponsesSectionProps) => (
   <div className="space-y-2">
-    <Label className="text-slate-200">接口返回</Label>
+    <Label className="text-slate-200">API responses</Label>
     <ModelResponsesPanel responses={responses} />
   </div>
 );

@@ -24,7 +24,7 @@ const ModelResponsesPanel = ({ responses }: ModelResponsesPanelProps) => {
     return (
       <div className="min-h-[140px] rounded-lg border border-white/10 bg-slate-950/40 px-4 py-3 text-sm text-slate-100">
         <span className="text-slate-500">
-          等待发送请求，或试试提示：&ldquo;给我一条周末出游建议&rdquo;。
+          Waiting to send a request, or try a prompt like: “Give me a weekend trip idea.”
         </span>
       </div>
     );

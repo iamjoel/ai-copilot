@@ -45,7 +45,7 @@ export const useCompletions = (): CompletionsController => {
   const [selectedModels, setSelectedModels] = useState(defaultModelValue ? [defaultModelValue] : []);
   const [promptConfig, setPromptConfig] = useState<PromptConfig>({
     applyOutputRules: true,
-    language: "中文",
+    language: "English",
   });
   const [modelResponses, setModelResponses] = useState<Record<string, ModelResponse>>({});
   const [error, setError] = useState<string | null>(null);
@@ -90,7 +90,7 @@ export const useCompletions = (): CompletionsController => {
     event.preventDefault();
     if (!prompt.trim()) return;
     if (!selectedModels.length) {
-      setError("请选择至少一个模型");
+      setError("Please select at least one model.");
       return;
     }
 
@@ -176,11 +176,11 @@ export const useCompletions = (): CompletionsController => {
 
           if (!response.ok) {
             const payload = await response.json().catch(() => null);
-            throw new Error(payload?.error ?? "请求失败");
+            throw new Error(payload?.error ?? "Request failed");
           }
 
           if (!response.body) {
-            throw new Error("响应体为空");
+            throw new Error("Response body was empty");
           }
 
           const parsedStream = parseJsonEventStream({
@@ -254,7 +254,7 @@ export const useCompletions = (): CompletionsController => {
             [modelValue]: {
               ...prev[modelValue],
               status: "error",
-              error: err instanceof Error ? err.message : "请求失败",
+              error: err instanceof Error ? err.message : "Request failed",
             },
           }));
         }

@@ -14,10 +14,6 @@ type CompletionsRequestCardProps = {
 
 const CompletionsRequestCard = ({ controller }: CompletionsRequestCardProps) => (
   <Card className="border-white/10 bg-white/5 text-white backdrop-blur">
-    <CardHeader>
-      <CardTitle>发送补全请求</CardTitle>
-      <CardDescription className="text-slate-200">自由切换模型，快速比较回复风格。</CardDescription>
-    </CardHeader>
     <CardContent className="space-y-6">
       <CompletionsForm controller={controller} />
     </CardContent>

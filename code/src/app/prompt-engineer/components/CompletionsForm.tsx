@@ -21,6 +21,7 @@ import ModelSelector from "./ModelSelector";
 import PresetSelector from "./PresetSelector";
 import ResponsesSection from "./ResponsesSection";
 import SelectedModelsSummary from "./SelectedModelsSummary";
+import { ChevronDown, ChevronRight } from "lucide-react";
 
 type CompletionsFormProps = {
   controller: CompletionsController;
@@ -43,6 +44,7 @@ const CompletionsForm = ({
   },
 }: CompletionsFormProps) => {
   const [isResizable, setIsResizable] = useState(false);
+  const [modelsExpanded, setModelsExpanded] = useState(false);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(min-width: 1024px)");
@@ -62,13 +64,32 @@ const CompletionsForm = ({
   const leftPanel = (
     <section className="space-y-6 lg:pr-4">
       <div className="space-y-4">
-        <Label className="text-slate-200">模型</Label>
-        <ModelSelector selectedModels={selectedModels} onToggle={toggleModelSelection} />
-        <SelectedModelsSummary selectedModels={selectedModels} />
+        <div className="flex flex-wrap items-center justify-between gap-3 cursor-pointer" onClick={() => setModelsExpanded(!modelsExpanded)}>
+          <div className="flex items-center space-x-0.5">
+            {modelsExpanded ?
+              <ChevronDown size={14} strokeWidth={3} /> :
+              <ChevronRight size={14} strokeWidth={3} />
+            }
+            <Label className="text-slate-200">Model</Label>
+          </div>
+
+          <SelectedModelsSummary
+            selectedModels={selectedModels}
+            className="text-right sm:text-left"
+          />
+        </div>
+        {modelsExpanded && (
+          <div
+            id="model-selector-panel"
+            className="space-y-4"
+          >
+            <ModelSelector selectedModels={selectedModels} onToggle={toggleModelSelection} />
+          </div>
+        )}
       </div>
 
       <div className="space-y-4 rounded-xl border border-white/10 bg-slate-950/30 p-4">
-        <p className="text-xs uppercase tracking-[0.2em] text-slate-400">输出配置</p>
+        <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Output settings</p>
         <div className="grid gap-4 sm:grid-cols-[180px_1fr] sm:items-center">
           <Label
             htmlFor="applyOutputRules"
@@ -83,11 +104,11 @@ const CompletionsForm = ({
               }
               className="h-4 w-4 rounded border-slate-400 bg-slate-950 text-blue-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
             />
-            应用输出规则
+            Apply output rules
           </Label>
           <div className="space-y-2">
             <Label htmlFor="outputLanguage" className="text-slate-200">
-              输出语言
+              Output language
             </Label>
             <Select
               value={promptConfig.language}
@@ -97,14 +118,14 @@ const CompletionsForm = ({
                 id="outputLanguage"
                 className="border-white/10 bg-slate-950/60 text-white"
               >
-                <SelectValue placeholder="选择语言" />
+                <SelectValue placeholder="Select language" />
               </SelectTrigger>
               <SelectContent className="border-white/10 bg-slate-950 text-white">
                 <SelectItem
-                  value="中文"
+                  value="Chinese"
                   className="pl-8 pr-3 text-white focus:bg-slate-900 focus:text-white"
                 >
-                  中文
+                  Chinese
                 </SelectItem>
                 <SelectItem
                   value="English"
@@ -123,17 +144,19 @@ const CompletionsForm = ({
   const rightPanel = (
     <section className="space-y-6 lg:pl-4">
       <div className="space-y-4">
-        <PresetSelector
-          selectedPreset={selectedPreset}
-          onChange={handlePresetChange}
-          presets={testCases}
-        />
-        <Label htmlFor="prompt" className="text-slate-200">
-          输入文本
-        </Label>
+        <div className="flex items-center justify-between gap-4">
+          <Label htmlFor="prompt" className="text-slate-200">
+            Input
+          </Label>
+          <PresetSelector
+            selectedPreset={selectedPreset}
+            onChange={handlePresetChange}
+            presets={testCases}
+          />
+        </div>
         <Textarea
           id="prompt"
-          placeholder="描述你想让模型完成的内容..."
+          placeholder="Describe what you'd like the model to do..."
           value={prompt}
           onChange={event => handlePromptChange(event.target.value)}
           className="bg-slate-950/60 text-white placeholder:text-slate-400"
@@ -146,7 +169,7 @@ const CompletionsForm = ({
         className="w-full"
         disabled={loading || !prompt.trim() || selectedModels.length === 0}
       >
-        {loading ? "发送中..." : "发送请求"}
+        {loading ? "Sending..." : "Send request"}
       </Button>
 
       {error ? <ErrorNotice message={error} /> : null}

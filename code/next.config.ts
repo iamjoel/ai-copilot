@@ -1,11 +1,8 @@
-const { codeInspectorPlugin } = require('code-inspector-plugin')
+import { codeInspectorPlugin } from 'code-inspector-plugin'
+import { withWorkflow } from "workflow/next"
 
 import type { NextConfig } from "next";
 
-const allowedDevOrigins =
-  process.env.NEXT_ALLOWED_DEV_ORIGINS?.split(",")
-    .map(origin => origin.trim())
-    .filter(Boolean);
 
 const nextConfig: NextConfig = {
   reactCompiler: true,
@@ -14,9 +11,6 @@ const nextConfig: NextConfig = {
       bundler: 'turbopack'
     })
   },
-  // experimental: {
-  //   ...(allowedDevOrigins?.length ? { allowedDevOrigins } : {}),
-  // },
 };
 
-export default nextConfig;
+export default withWorkflow(nextConfig);

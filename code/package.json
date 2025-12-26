@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "workflow": "npx workflow web"
   },
   "dependencies": {
     "@ai-sdk/google": "^2.0.44",
@@ -58,6 +59,7 @@
     "unified": "^11.0.5",
     "unist-util-visit": "^5.0.0",
     "use-stick-to-bottom": "^1.1.1",
+    "workflow": "4.0.1-beta.36",
     "zod": "^3.23.8"
   },
   "devDependencies": {

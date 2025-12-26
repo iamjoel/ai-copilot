@@ -83,16 +83,39 @@ const commonSettings = {
 export const gemini25FlashLiteModel = getModel("google", "models/gemini-2.5-flash-lite");
 export const gemini25FlashModel = getModel("google", "models/gemini-2.5-flash");
 
-export const geminiWithContextTool = (provider: Provider, modelName: string, prompt: string) => {
-  return {
+export type GeminiToolOptions = {
+  browseWeb?: boolean;
+  googleSearch?: boolean;
+};
+
+export const geminiWithContextTool = (
+  provider: Provider,
+  modelName: string,
+  prompt: string,
+  toolOptions?: GeminiToolOptions,
+) => {
+  const tools: Record<string, unknown> = {};
+
+  if (toolOptions?.browseWeb) {
+    tools.url_context = google.tools.urlContext({});
+  }
+
+  if (toolOptions?.googleSearch) {
+    tools.google_search = google.tools.googleSearch({});
+  }
+
+  const request = {
     model: getModel(provider, modelName),
     prompt,
-    tools: {
-      url_context: google.tools.urlContext({}),
-    },
-    ...commonSettings
+    ...commonSettings,
+  };
+
+  if (Object.keys(tools).length) {
+    return { ...request, tools };
   }
-}
+
+  return request;
+};
 
 // OpenAI
 export const gpt4oMiniModel = getModel("openai", "gpt-4o-mini");

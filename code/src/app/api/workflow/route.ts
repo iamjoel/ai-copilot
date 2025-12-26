@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import { start } from "workflow/api"
 import { processWorkflow } from './use-do-something';
 

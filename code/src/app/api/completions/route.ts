@@ -3,7 +3,7 @@ import { commonWithContextTool, geminiWithContextTool } from "@/lib/model-factor
 import { MODEL_GROUPS, getModelPreset } from "@/lib/model-presets";
 import { streamText } from "ai";
 import checkInput from "@/app/api/utils/check-input";
-import { promptConfigSchema, buildPrompt } from "@/app/api/completions/utils";
+import { promptConfigSchema, buildPrompt, toolSelectionSchema } from "@/app/api/completions/utils";
 import { z } from 'zod/v3';
 
 
@@ -24,6 +24,7 @@ const ParamsSchema = z.object({
       message: "Unsupported model.",
     }),
   config: promptConfigSchema,
+  tools: toolSelectionSchema,
 });
 
 type Params = z.infer<typeof ParamsSchema>;
@@ -37,7 +38,7 @@ export async function POST(req: Request) {
       return response;
     }
 
-    const { prompt: rawPrompt, model, config } = data as Params;
+    const { prompt: rawPrompt, model, config, tools } = data as Params;
 
     const prompt = buildPrompt(rawPrompt, config);
     const modelPreset = getModelPreset(model);
@@ -48,9 +49,11 @@ export async function POST(req: Request) {
     const isGeminiModel = modelPreset.provider === "google";
     logger.info(`LLM info: ${JSON.stringify(modelPreset, null, 2)}`);
 
-    const modelWithContextTool = isGeminiModel ? geminiWithContextTool : commonWithContextTool
+    const requestOptions = isGeminiModel
+      ? geminiWithContextTool(modelPreset.provider, modelPreset.model, prompt, tools)
+      : commonWithContextTool(modelPreset.provider, modelPreset.model, prompt);
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const result = streamText(modelWithContextTool(modelPreset.provider, modelPreset.model, prompt) as any);
+    const result = streamText(requestOptions as any);
     return result.toUIMessageStreamResponse({
       messageMetadata: ({ part }) => {
         if (part.type === "finish") {

@@ -8,6 +8,13 @@ export const promptConfigSchema = z
   })
   .default({});
 
+export const toolSelectionSchema = z
+  .object({
+    browseWeb: z.boolean().optional(),
+    googleSearch: z.boolean().optional(),
+  })
+  .default({});
+
 type PromptConfig = z.infer<typeof promptConfigSchema>;
 
 export const buildPrompt = (rawPrompt: string, config?: PromptConfig) => {

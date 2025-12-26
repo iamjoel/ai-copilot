@@ -22,7 +22,8 @@ import PresetSelector from "./PresetSelector";
 import ResponsesSection from "./ResponsesSection";
 import SelectedModelsSummary from "./SelectedModelsSummary";
 import { ChevronDown, ChevronRight } from "lucide-react";
-import { Checkbox } from "@/components/ui/checkbox"
+import { Checkbox } from "@/components/ui/checkbox";
+import { getModelPreset } from "@/lib/model-presets";
 
 type CompletionsFormProps = {
   controller: CompletionsController;
@@ -40,10 +41,16 @@ const CompletionsForm = ({
     handlePromptConfigChange,
     loading,
     handleSubmit,
+    toolSelection,
+    toggleToolSelection,
     error,
     modelResponses,
   },
 }: CompletionsFormProps) => {
+  const hasGeminiModelSelected = selectedModels.some(value => {
+    const preset = getModelPreset(value);
+    return preset?.provider === "google";
+  });
   const [isResizable, setIsResizable] = useState(false);
   const [modelsExpanded, setModelsExpanded] = useState(false);
 
@@ -133,6 +140,50 @@ const CompletionsForm = ({
             </Select>
           </div>
         </div>
+      </div>
+      <div className="space-y-4">
+        <Label className="pb-2 border-b">Tools</Label>
+        <div className="space-y-2">
+          <Label
+            htmlFor="browseWeb"
+            className="flex items-center justify-between gap-3 rounded-lg border border-white/10 bg-slate-950/30 px-3 py-2 text-sm text-slate-200"
+          >
+            <div>
+              <p className="text-sm font-medium text-white">Browse web</p>
+              <span className="text-xs text-slate-400">
+                Provide a browsing context so Gemini models can refer to live web content.
+              </span>
+            </div>
+            <Checkbox
+              id="browseWeb"
+              checked={toolSelection.browseWeb}
+              disabled={!hasGeminiModelSelected}
+              onCheckedChange={() => toggleToolSelection("browseWeb")}
+            />
+          </Label>
+          <Label
+            htmlFor="googleSearch"
+            className="flex items-center justify-between gap-3 rounded-lg border border-white/10 bg-slate-950/30 px-3 py-2 text-sm text-slate-200"
+          >
+            <div>
+              <p className="text-sm font-medium text-white">Google search</p>
+              <span className="text-xs text-slate-400">
+                Give Gemini models access to Google Search results (Gemini models only).
+              </span>
+            </div>
+            <Checkbox
+              id="googleSearch"
+              checked={toolSelection.googleSearch}
+              disabled={!hasGeminiModelSelected}
+              onCheckedChange={() => toggleToolSelection("googleSearch")}
+            />
+          </Label>
+        </div>
+        {!hasGeminiModelSelected && (
+          <p className="text-xs text-slate-400">
+            Select a Gemini model to enable browsing and searching tools.
+          </p>
+        )}
       </div>
     </section>
   );

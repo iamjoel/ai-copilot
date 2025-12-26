@@ -1,11 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import { parseJsonEventStream, readUIMessageStream, uiMessageChunkSchema } from "ai";
 import testCases from "./test-cases";
 import { useModel } from "@/hooks/use-model";
 import { type UsageDetail } from "@/lib/usage-utils";
+import { getModelPreset } from "@/lib/model-presets";
 
 
 export const CUSTOM_PROMPT_VALUE = "__custom_prompt__";
@@ -23,6 +24,11 @@ export type PromptConfig = {
   language: string;
 };
 
+export type ToolSelection = {
+  browseWeb: boolean;
+  googleSearch: boolean;
+ };
+
 export type CompletionsController = {
   prompt: string;
   handlePromptChange: (value: string) => void;
@@ -36,6 +42,8 @@ export type CompletionsController = {
   error: string | null;
   loading: boolean;
   handleSubmit: (event: FormEvent<HTMLFormElement>) => Promise<void>;
+  toolSelection: ToolSelection;
+  toggleToolSelection: (tool: keyof ToolSelection) => void;
 };
 
 export const useCompletions = (): CompletionsController => {
@@ -50,6 +58,40 @@ export const useCompletions = (): CompletionsController => {
   const [modelResponses, setModelResponses] = useState<Record<string, ModelResponse>>({});
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+  const [toolSelection, setToolSelection] = useState<ToolSelection>({
+    browseWeb: false,
+    googleSearch: false,
+  });
+
+  const isGeminiModel = (value: string) => {
+    const preset = getModelPreset(value);
+    return preset?.provider === "google";
+  };
+  const hasGeminiModelSelected = selectedModels.some(isGeminiModel);
+
+  useEffect(() => {
+    if (!hasGeminiModelSelected) {
+      setToolSelection(prev => {
+        if (!prev.browseWeb && !prev.googleSearch) {
+          return prev;
+        }
+        return {
+          browseWeb: false,
+          googleSearch: false,
+        };
+      });
+    }
+  }, [hasGeminiModelSelected]);
+
+  const toggleToolSelection = (tool: keyof ToolSelection) => {
+    if (!hasGeminiModelSelected) {
+      return;
+    }
+    setToolSelection(prev => ({
+      ...prev,
+      [tool]: !prev[tool],
+    }));
+  };
 
   const handlePresetChange = (value: string) => {
     if (value === CUSTOM_PROMPT_VALUE) {
@@ -171,6 +213,7 @@ export const useCompletions = (): CompletionsController => {
                 applyOutputRules: promptConfig.applyOutputRules,
                 language: promptConfig.language.trim() || undefined,
               },
+              tools: toolSelection,
             }),
           });
 
@@ -277,5 +320,7 @@ export const useCompletions = (): CompletionsController => {
     error,
     loading,
     handleSubmit,
+    toolSelection,
+    toggleToolSelection,
   };
 };

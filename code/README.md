@@ -52,3 +52,8 @@ Input customer Objective. Generate Customer Profile and Value Curve Chart.
 - `npm run build` — Build for production
 - `npm run start` — Start the production server
 - `npm run lint` — Run ESLint
+
+## Resources
+- [AI SDK](https://ai-sdk.dev/docs/introduction)
+- [Workflow SDK](https://useworkflow.dev/docs/getting-started)
+- [Shadcn UI components](https://ui.shadcn.com/docs/components/alert)

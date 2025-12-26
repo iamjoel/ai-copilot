@@ -22,6 +22,7 @@ import PresetSelector from "./PresetSelector";
 import ResponsesSection from "./ResponsesSection";
 import SelectedModelsSummary from "./SelectedModelsSummary";
 import { ChevronDown, ChevronRight } from "lucide-react";
+import { Checkbox } from "@/components/ui/checkbox"
 
 type CompletionsFormProps = {
   controller: CompletionsController;
@@ -64,7 +65,7 @@ const CompletionsForm = ({
   const leftPanel = (
     <section className="space-y-6 lg:pr-4">
       <div className="space-y-4">
-        <div className="flex flex-wrap items-center justify-between gap-3 cursor-pointer" onClick={() => setModelsExpanded(!modelsExpanded)}>
+        <div className="flex flex-wrap items-center justify-between gap-3 cursor-pointer pb-2 border-b" onClick={() => setModelsExpanded(!modelsExpanded)}>
           <div className="flex items-center space-x-0.5">
             {modelsExpanded ?
               <ChevronDown size={14} strokeWidth={3} /> :
@@ -81,34 +82,29 @@ const CompletionsForm = ({
         {modelsExpanded && (
           <div
             id="model-selector-panel"
-            className="space-y-4"
+            className="space-y-4 max-h-[300px] overflow-y-auto"
           >
             <ModelSelector selectedModels={selectedModels} onToggle={toggleModelSelection} />
           </div>
         )}
       </div>
 
-      <div className="space-y-4 rounded-xl border border-white/10 bg-slate-950/30 p-4">
-        <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Output settings</p>
-        <div className="grid gap-4 sm:grid-cols-[180px_1fr] sm:items-center">
+      <div className="mt-8 space-y-4">
+        {/* <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Output settings</p> */}
+        <Label className="pb-2 border-b">Output settings</Label>
+        <div className="space-y-2">
           <Label
             htmlFor="applyOutputRules"
             className="flex items-center gap-3 text-sm text-slate-200"
           >
-            <input
-              id="applyOutputRules"
-              type="checkbox"
-              checked={promptConfig.applyOutputRules}
-              onChange={event =>
-                handlePromptConfigChange({ applyOutputRules: event.target.checked })
-              }
-              className="h-4 w-4 rounded border-slate-400 bg-slate-950 text-blue-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
-            />
             Apply output rules
+            <Checkbox checked={promptConfig.applyOutputRules} onCheckedChange={(checked) => {
+              handlePromptConfigChange({ applyOutputRules: !!checked });
+            }} />
           </Label>
-          <div className="space-y-2">
+          <div className="flex items-center space-x-3">
             <Label htmlFor="outputLanguage" className="text-slate-200">
-              Output language
+              Language
             </Label>
             <Select
               value={promptConfig.language}

@@ -26,6 +26,7 @@
   - Clear layering
   - Dependencies flow inward
 - Keep each module focused on a **single responsibility**.
+- Keep **one component per file**.
 - Do not create or grow **god files** (large files mixing UI markup, business logic, and data access)
   - If a file exceeds **more than 300 lines** (excluding types/imports) or has more than **one primary responsibility** → refactor into smaller modules. UI components, hooks, and utility functions are exceptions.
 - **TypeScript (strict)**:

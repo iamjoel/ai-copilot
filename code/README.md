@@ -25,6 +25,9 @@ Input question. Generate high-quality answer with world class strategy.
 ### /scenario/business-strategic-analysis
 Input customer Objective. Generate Customer Profile and Value Curve Chart.
 
+### /scenario/figma-mcp
+Generate UI from Figma design file link.
+
 ## Requirements
 - Node.js 18+ (recommended 20+)
 - npm, pnpm, or yarn
@@ -60,3 +63,26 @@ Input customer Objective. Generate Customer Profile and Value Curve Chart.
 
 ## Code Copilot
 * [Agents.md](https://developers.openai.com/codex/guides/agents-md/) `codex --ask-for-approval never "Summarize the current instructions."`
+
+## Suggest Codex Config
+`~/config.toml`:
+```toml
+model = "gpt-5.2-codex"
+model_reasoning_effort = "medium"
+
+[features]
+web_search_request = true
+rmcp_client = true
+experimental_use_rmcp_client = true # for figma mcp server
+
+[mcp_servers.context7]
+command = "npx"
+args = ["-y", "@upstash/context7-mcp"]
+
+[mcp_servers.chrome-devtools]
+command = "npx"
+args = ["chrome-devtools-mcp@latest"]
+
+[mcp_servers.figma]
+url = "https://mcp.figma.com/mcp"
+```

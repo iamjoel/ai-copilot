@@ -1,8 +1,8 @@
 # AI Copilot
-## Overview
-1.	Push the boundaries of LLM capabilities
-2.	Automate high-frequency daily workflows
-3.	Deliver practical, LLM-driven solutions to users
+## Project Overview
+1. Push the boundaries of LLM capabilities.
+2. Automate high-frequency daily workflows.
+3. Deliver practical, LLM-driven solutions to users.
 
 ## LLM capabilities
 ### /prompt-engineer
@@ -57,3 +57,6 @@ Input customer Objective. Generate Customer Profile and Value Curve Chart.
 - [AI SDK](https://ai-sdk.dev/docs/introduction)
 - [Workflow SDK](https://useworkflow.dev/docs/getting-started)
 - [Shadcn UI components](https://ui.shadcn.com/docs/components/alert)
+
+## Code Copilot
+* [Agents.md](https://developers.openai.com/codex/guides/agents-md/) `codex --ask-for-approval never "Summarize the current instructions."`

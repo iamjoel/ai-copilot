@@ -6,6 +6,10 @@ const testCases = [
     prompt: 'Are you a human?',
   },
   {
+    name: '使用 Google',
+    prompt: '用 google 搜索工具搜索 2025/12/25 的 LLM 行业最热门的5条新闻，提供标题，主要内容，并附上原文链接'
+  },
+  {
     name: 'intent classification',
     prompt: getPrompt('How can I learn LLMs from scratch?')
   },

@@ -1,12 +1,11 @@
 # AI Copilot
-## Project Overview
-1. Push the boundaries of LLM capabilities.
-2. Automate high-frequency daily workflows.
-3. Deliver practical, LLM-driven solutions to users.
-
-## LLM capabilities
-### /prompt-engineer
+## Prompt Engineer
+### Debug prompt
+Select the most suitable LLM to accomplish the task.
 Text generation. 
+
+path: `/prompt-engineer`
+
 
 - Support different models.
 - Support use tools.
@@ -30,13 +29,11 @@ Generate UI from Figma design file link.
 
 ## Requirements
 - Node.js 18+ (recommended 20+)
-- npm, pnpm, or yarn
+- pnpm
 
 ## Getting Started
 1) Install dependencies:
    ```bash
-   npm install
-   # or
    pnpm install
    ```
 2) Create your environment file:
@@ -46,15 +43,15 @@ Generate UI from Figma design file link.
 3) Fill in the required API keys in `.env`.
 4) Start the dev server:
    ```bash
-   npm run dev
+   pnpm  dev
    ```
 5) Open http://localhost:3000
 
 ## Useful Scripts
-- `npm run dev` — Start the dev server
-- `npm run build` — Build for production
-- `npm run start` — Start the production server
-- `npm run lint` — Run ESLint
+- `pnpm dev` — Start the dev server
+- `pnpm build` — Build for production
+- `pnpm start` — Start the production server
+- `pnpm lint` — Run ESLint
 
 ## Resources
 - [AI SDK](https://ai-sdk.dev/docs/introduction)
@@ -63,6 +60,13 @@ Generate UI from Figma design file link.
 
 ## Code Copilot
 * [Agents.md](https://developers.openai.com/codex/guides/agents-md/) `codex --ask-for-approval never "Summarize the current instructions."`
+
+
+## Suggest Skills
+* [plan](https://github.com/openai/skills/blob/main/skills/.experimental/create-plan/SKILL.md) Create for a complex task.
+
+* Awesome Skills
+   * [Awesome Skills](https://github.com/ComposioHQ/awesome-claude-skills)
 
 ## Suggest Codex Config
 `~/config.toml`:

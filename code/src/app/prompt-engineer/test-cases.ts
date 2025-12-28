@@ -6,8 +6,8 @@ const testCases = [
     prompt: 'Are you a human?',
   },
   {
-    name: '使用 Google',
-    prompt: '用 google 搜索工具搜索 2025/12/25 的 LLM 行业最热门的5条新闻，提供标题，主要内容，并附上原文链接'
+    name: 'use Google',
+    prompt: 'Use the Google search tool to find the top 5 most popular news articles in the LLM industry on 2025/12/25, providing the title, main content, and original link.'
   },
   {
     name: 'intent classification',

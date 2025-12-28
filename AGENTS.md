@@ -25,6 +25,7 @@
 - Follow **Clean Architecture principles**:
   - Clear layering
   - Dependencies flow inward
+- In backend, log meaningful events and errors.
 - Keep each module focused on a **single responsibility**.
 - Keep **one component per file**.
 - Do not create or grow **god files** (large files mixing UI markup, business logic, and data access)
@@ -39,6 +40,7 @@
 ### Backend / Server
 - **LLM interactions** → AI SDK
 - **Workflow orchestration** → Workflow SDK
+- **Log** → pino(`code/src/app/api/completions/route.ts`)
 
 ### Frontend / UI
 - **Styling** → Tailwind CSS

@@ -16,8 +16,8 @@ const ModelResponsesPanel = ({ responses }: ModelResponsesPanelProps) => {
   const formatSeconds = (value?: number) => (value === undefined ? "--s" : `${value}s`);
   const getTimeClassName = (value?: number) => {
     if (value === undefined) return "text-slate-400";
-    if (value < 2) return "text-emerald-300";
-    if (value < 10) return "text-amber-300";
+    if (value < 10) return "text-emerald-300";
+    if (value < 20) return "text-amber-300";
     return "text-red-300";
   };
   if (Object.keys(responses).length === 0) {

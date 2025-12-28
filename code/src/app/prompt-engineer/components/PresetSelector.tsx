@@ -17,7 +17,7 @@ type PresetSelectorProps = {
 };
 
 const PresetSelector = ({ selectedPreset, onChange, presets }: PresetSelectorProps) => (
-  <div className="flex items-center space-x-1">
+  <div className="flex items-center space-x-2">
     <Label className="text-slate-200">Templates</Label>
     <Select value={selectedPreset} onValueChange={onChange}>
       <SelectTrigger className="h-11 border-white/10 bg-slate-950/60 text-slate-100 focus:ring-blue-500 focus:ring-offset-0">

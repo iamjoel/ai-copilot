@@ -1,23 +1,42 @@
 # AI Copilot
-## Prompt Engineer
-### Debug prompt
-Select the most suitable LLM to accomplish the task.
-Text generation. 
+## LLM capabilities
+### Prompt Engineer
+Select the most suitable LLM to accomplish the task.Then debug the prompt to improve the output quality.
 
 path: `/prompt-engineer`
 
-
+Features:
 - Support different models.
 - Support use tools.
 - Todo: render customer components.
 
-### /chat
-Chat.
+### Chat(Alpha)
+path: `/chat`
 
-### /generate-image 
-Image generation.
+### Generate image(Alpha)
+path: `/generate-image`
 
-## Scenario
+## Daily
+### Efficient Coding
+1. Tools: Coding Agents with good configurations.
+2. SOP
+
+### High-Quality LLM news(TODO)
+1. Tools: Web scraping
+2. LLM processing. Summarization, categorization, ask questions, etc.
+
+### Learning Assistant(TODO)
+Learning SOP.
+
+### Generate awesome presentation(TODO)
+Find the suitable way to present the different content.
+
+1. Input: topic, slide count, style, etc.
+2. Output: complete presentation file.
+
+
+
+## Solution
 ### /scenario/quality-answer-flow
 Input question. Generate high-quality answer with world class strategy.
 

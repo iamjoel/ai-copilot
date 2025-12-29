@@ -51,7 +51,7 @@ export const TokenUsageToast = ({ usage, children }: TokenUsageToastProps) => {
           {rows.map(row => (
             <div key={row.label} className="flex items-center justify-between text-left">
               <span className="text-muted-foreground">{row.label}</span>
-              <span className="font-semibold text-white">{formatValue(row.value)}</span>
+              <span className="font-semibold">{formatValue(row.value)}</span>
             </div>
           ))}
         </TooltipContent>

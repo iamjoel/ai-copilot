@@ -102,15 +102,27 @@ const RAW_MODEL_GROUPS = [
   {
     provider: "qwen",
     providerLabel: "Qwen",
+    // https://help.aliyun.com/zh/model-studio/models?spm=a2c4g.11186623.0.0.f4d25e66GQKVJB#9f8890ce29g5u
     options: [
       {
-        label: "Qwen Turbo",
-        value: "qwen-turbo",
-        model: {
-          qiniu: "qwen-turbo",
-          open_router: "qwen/qwen-turbo",
-        },
+        label: "Qwen Flash",
+        value: "qwen-flash",
+        model: 'qwen-flash',
+        // model: {
+        //   qiniu: "qwen-turbo",
+        //   open_router: "qwen/qwen-turbo",
+        // },
       },
+      {
+        label: "Qwen Plus",
+        value: "qwen-plus",
+        model: 'qwen-plus',
+      },
+      {
+        label: "Qwen3 max",
+        value: "qwen3-max",
+        model: 'qwen3-max',
+      }
     ],
   },
   {

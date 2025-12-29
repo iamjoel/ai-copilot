@@ -47,6 +47,14 @@ export function getModel(provider: Provider, modelName: string) {
   }
 
   if (provider === "qwen") {
+    if (process.env.QWEN_API_KEY) {
+      const client = createOpenAI({
+        apiKey: process.env.QWEN_API_KEY!,
+        baseURL: 'https://dashscope.aliyuncs.com/compatible-mode/v1',
+        name: modelName,
+      });
+      return client.chat(modelName);
+    }
     return getMaaSChatModel("qwen", modelName);
   }
 

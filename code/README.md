@@ -8,10 +8,18 @@ path: `/prompt-engineer`
 Features:
 - Support different models.
 - Support use tools.
-- Todo: render customer components.
+
+Todo:
+- [High]Render customer components.
+- [High]Prompt engineer skills.
+- [Medium]Support upload files as context.
+- [Medium]Support RAG. Use file embeddings as context.
 
 ### Chat(Alpha)
 path: `/chat`
+
+Todo:
+- [Low]Support render thought of chain.
 
 ### Generate image(Alpha)
 path: `/generate-image`
@@ -20,20 +28,6 @@ path: `/generate-image`
 ### Efficient Coding
 1. Tools: Coding Agents with good configurations.
 2. SOP
-
-### High-Quality LLM news(TODO)
-1. Tools: Web scraping
-2. LLM processing. Summarization, categorization, ask questions, etc.
-
-### Learning Assistant(TODO)
-Learning SOP.
-
-### Generate awesome presentation(TODO)
-Find the suitable way to present the different content.
-
-1. Input: topic, slide count, style, etc.
-2. Output: complete presentation file.
-
 
 
 ## Solution

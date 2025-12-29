@@ -36,7 +36,6 @@ type ArcApiResponse = {
 };
 
 type RunResponse = {
-  prediction: string;
   raw: string;
   model: string;
 };
@@ -191,13 +190,8 @@ export default function ArcBrowser() {
                           </Button>
                           {runResult ? (
                             <div className="text-xs text-muted-foreground">
-                              <div>
-                                Prediction:{" "}
-                                <span className="font-semibold text-foreground">
-                                  {runResult.prediction}
-                                </span>
-                              </div>
-                              <div className="line-clamp-2">{runResult.raw}</div>
+                              <div className="line-clamp-2">Result: <span className="font-semibold text-foreground">
+                                {runResult.raw}</span></div>
                             </div>
                           ) : null}
                         </div>

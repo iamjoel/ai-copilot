@@ -30,7 +30,7 @@ export async function POST(request: Request) {
     runLogger.info({ step: "arc_run_start", choiceCount: choices.length });
 
     const result = await generateText({
-      model: getModel("qwen", "qwen-turbo"),
+      model: getModel("qwen", "qwen/qwen-turbo"),
       prompt,
     });
 

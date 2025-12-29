@@ -11,9 +11,9 @@ Benchmake
 - Humanity's Last Exam
 
 ### Agent Reasoning framework/ Autonomous Agent Frameworks
-The target of learn agent framework is to know the way to handle complex tasks. 
+The target of learn agent framework is to know the way to handle complex tasks. Like planning, decomposition the tasks, divide and conquer, etc.
 
-CoT, ReAct, Reflexion, ToT, Role based agent, etc.
+CoT, ReAct, Reflexion, ReACT ToT, Role based agent, etc.
 
 AI employee:
 - NocoBase: A no-code/low-code platform centered on AI employees, embedding AI directly into data modeling, business analytics, and CRM workflows.
@@ -45,8 +45,6 @@ Crawl web pages and extract structured data.
 
 Input: url, topic, keywords, etc.
 Output: structured data about the topic.
-
-### 
 
 ### Learning Assistant
 Learning SOP.

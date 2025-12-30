@@ -976,7 +976,7 @@ prompt,outputs/image-batch/image-513-1767103062059.png,done,
 印象派艺术：色彩并置。,outputs/image-batch/image-975-1767104617319.png,done,
 印象派艺术：瞬间感受。,outputs/image-batch/image-976-1767104627796.png,done,
 印象派艺术：花园与自然。,outputs/image-batch/image-977-1767104646317.png,done,
-印象派艺术：气氛优先。,,error,No image data returned by provider.
+印象派艺术：气氛优先。,outputs/image-batch/image-978-1767116586194.png,done,
 印象派艺术：轮廓模糊。,outputs/image-batch/image-979-1767104657353.png,done,
 后印象派艺术：结构化色块。,outputs/image-batch/image-980-1767104665860.png,done,
 后印象派艺术：情绪化色彩。,outputs/image-batch/image-981-1767104675651.png,done,
@@ -1117,7 +1117,7 @@ prompt,outputs/image-batch/image-513-1767103062059.png,done,
 当代艺术：观众参与式。,outputs/image-batch/image-1116-1767107357624.png,done,
 当代艺术：公共空间艺术。,outputs/image-batch/image-1117-1767106275523.png,done,
 当代艺术：档案与记录。,outputs/image-batch/image-1118-1767106294372.png,done,
-当代艺术：跨学科融合。,,error,No image data returned by provider.
+当代艺术：跨学科融合。,outputs/image-batch/image-1119-1767116710852.png,done,
 数字艺术：算法生成图像。,outputs/image-batch/image-1120-1767106314078.png,done,
 数字艺术：程序化美学。,outputs/image-batch/image-1121-1767106324108.png,done,
 数字艺术：数据可视化。,outputs/image-batch/image-1122-1767106332730.png,done,
@@ -1215,7 +1215,7 @@ A high-quality photorealistic portrait of a young woman sitting on the edge of a
 ​Shot on a DSLR with an 85mm lens (or similar) for a shallow depth of field. Features HDR lighting with a strong, warm, orange-toned dapple backlight illuminating her hair and shoulder, contrasting sharply with the soft blue ambient light of the background. The scene includes dreamy, dramatic bokeh from distant lights, a subtle lens flare (a faint horizontal light streak near the left), high-contrast shadows, and a subtle atmospheric haze. The overall mood is poetic, dreamy, and romantic, with an ultra-clean, professional Photoshop-quality finish.",outputs/image-batch/image-1161-1767108142725.png,done,
 "A young man with dark hair (keep the exact face and skin tone with sharp features) wearing a black hoodie sits in a rustic wooden booth, staring intensely at the camera with one hand supporting his chin and the other reaching forward as if performing telekinesis. Dozens of playing cards float around him in mid-air, captured in dynamic slow motion with subtle motion blur. The background features vertical wooden panels and a framed photo of a man playing cards",outputs/image-batch/image-1162-1767108154775.png,done,
 "{""prompt"":""A young woman with long, softly curled dark hair takes a cinematic mirror selfie in a bathroom lit by warm golden-hour light streaming through a small window. She wears a fitted charcoal tank top, and her silhouette glows with warm rim-light. Steam from a recent shower adds a hazy, atmospheric layer. The bathroom features tan stone tiles, a backlit mirror, and soft dust particles glowing in the light. The overall vibe is dramatic, moody, and film-like with rich contrast."",""negative_prompt"":""blurry, grainy, flat lighting, low detail, bad reflections, distorted hands, cartoon, watercolor, overexposed highlights, washed-out colors"",""steps"":50,""sampler"":""DPM++ 2M Karras"",""cfg_scale"":8,""seed"":-1,""width"":512,""height"":768,""model"":""realisticVisionV60B1""}",outputs/image-batch/image-1163-1767108164468.png,done,
-"{""Objective"":""Transform the user's descriptive scene prompt into a structured JSON format for clarity, reusability, or integration into other systems (e.g., AI image generation, project planning, scene documentation)."",""Persona_Details"":{""Character"":""Man wearing glasses"",""Clothing"":{""Outerwear"":""Orange winter clothing"",""Footwear"":""Dark red and black ice boots"",""Accessories"":""Glasses""},""Behavior"":""Ice fishing with a research-focused approach"",""Actions"":[""Sits outside a light brown tent"",""Tent opens toward the ice pond"",""Checks the black front cover"",""Surveys the ice pond"",""Observes small items near him""]},""Environment_Details"":{""Setting"":""Frozen ice pond"",""Tent_Color"":""Light brown"",""Sky"":""White, cloudy, heavy atmosphere"",""Weather"":""Very cold"",""Lighting"":""Natural, diffused due to cloud cover"",""Scene_Composition"":{""Subject_Position"":""Slightly right of center"",""Purpose"":""Emphasize ice landscape"",""Framing"":""Ice and white sky close off the blue center and disperse outward""}},""Objects_and_Props"":{""Ice_Fishing_Equipment"":[""Black front cover"",""Fishing tools (implied)""],""Observed_Items"":[""Small objects placed near the tent entrance"",""Two stainless steel water bottles""]},""Technical_Attributes"":{""Style"":""High-resolution realism"",""Resolution"":""4K"",""Detail_Emphasis"":[""Folds of tent fabric"",""Texture of the ice"",""Fine environmental details""]},""Task_Instructions"":{""Intended_Usage"":""Use this structured JSON to recreate, refine, or expand upon the scene described in the prompt."",""Editable_Fields"":[""Persona_Details"",""Environment_Details"",""Objects_and_Props"",""Technical_Attributes""],""Guidance"":""Users can modify values to adjust imagery, realism, character placement, weather, or style.""},""Response_Format"":{""Type"":""Structured Scene JSON"",""Consistency_Requirements"":[""Maintain clarity and modularity"",""Allow easy editing for new scenarios"",""Preserve user intent and descriptive accuracy""]}}",,error,No image data returned by provider.
+"{""Objective"":""Transform the user's descriptive scene prompt into a structured JSON format for clarity, reusability, or integration into other systems (e.g., AI image generation, project planning, scene documentation)."",""Persona_Details"":{""Character"":""Man wearing glasses"",""Clothing"":{""Outerwear"":""Orange winter clothing"",""Footwear"":""Dark red and black ice boots"",""Accessories"":""Glasses""},""Behavior"":""Ice fishing with a research-focused approach"",""Actions"":[""Sits outside a light brown tent"",""Tent opens toward the ice pond"",""Checks the black front cover"",""Surveys the ice pond"",""Observes small items near him""]},""Environment_Details"":{""Setting"":""Frozen ice pond"",""Tent_Color"":""Light brown"",""Sky"":""White, cloudy, heavy atmosphere"",""Weather"":""Very cold"",""Lighting"":""Natural, diffused due to cloud cover"",""Scene_Composition"":{""Subject_Position"":""Slightly right of center"",""Purpose"":""Emphasize ice landscape"",""Framing"":""Ice and white sky close off the blue center and disperse outward""}},""Objects_and_Props"":{""Ice_Fishing_Equipment"":[""Black front cover"",""Fishing tools (implied)""],""Observed_Items"":[""Small objects placed near the tent entrance"",""Two stainless steel water bottles""]},""Technical_Attributes"":{""Style"":""High-resolution realism"",""Resolution"":""4K"",""Detail_Emphasis"":[""Folds of tent fabric"",""Texture of the ice"",""Fine environmental details""]},""Task_Instructions"":{""Intended_Usage"":""Use this structured JSON to recreate, refine, or expand upon the scene described in the prompt."",""Editable_Fields"":[""Persona_Details"",""Environment_Details"",""Objects_and_Props"",""Technical_Attributes""],""Guidance"":""Users can modify values to adjust imagery, realism, character placement, weather, or style.""},""Response_Format"":{""Type"":""Structured Scene JSON"",""Consistency_Requirements"":[""Maintain clarity and modularity"",""Allow easy editing for new scenarios"",""Preserve user intent and descriptive accuracy""]}}",outputs/image-batch/image-1164-1767116586201.png,done,
 "{""description"":{""scene"":""A glamorous woman posing dramatically in a hotel corridor, framed inside an elevator."",""appearance"":{""hair"":""Light brown hair styled in soft waves."",""makeup"":""Bold red lipstick with a darker eye makeup look."",""accessories"":""Layered pearl necklaces cascading over her décolletage."",""outfit"":{""dress"":""Floor-length white or ivory satin slip dress with a glossy finish, V-neckline, thin straps, form-fitting drape, possible lace details or slit."",""coat"":""Ankle-length luxurious white coat with long delicate feathery texture, worn open."",""bag"":""Small structured black handbag with gold chain strap, quilted style.""}},""pose"":{""body"":""Slightly angled posture, one foot stepping out of the elevator."",""arms"":""Right arm extended upward, resting on the door frame."",""head"":""Head tilted down and to the right, eyes looking downward with a seductive expression.""},""composition"":{""framing"":""She fills the majority of the frame inside the elevator."",""elevator"":""Dark muted gold or bronze reflective panel walls with vertical lines and dark trim."",""lighting"":""Warm overhead elevator light illuminating her hair, dress sheen, and feather texture, creating highlights on metallic surfaces."",""mood"":""High fashion, vintage glamour, luxurious and dramatic atmosphere.""},""allowed_changes"":{""makeup"":""You may change makeup."",""attire"":""You may change outfit."",""pose"":""You may change the pose.""}}}",outputs/image-batch/image-1165-1767108177178.png,done,
 "{""scene_description"":""A surreal, monumental wide shot of a celestial railway station suspended in the clouds, featuring a transparent glass train on golden rails."",""subject"":{""type"":""Futuristic Steam Train"",""features"":{""material"":""solid carved crystal and glass chassis"",""details"":""intricate gold filigree gears, visible internal mechanics"",""wagons"":""translucent compartments filled with soft warm light""},""attire"":""N/A"",""position"":""gliding smoothly along a curving white marble viaduct""},""action"":{""primary"":""traveling through the sky"",""secondary"":""emitting steam that turns into actual clouds"",""effect"":""refracting sunlight through the glass train body""},""environment"":{""setting"":""High-altitude cloudscape"",""foreground_elements"":[""Monumental Corinthian columns supporting the tracks"",""Polished white marble platform with tiny passengers for scale"",""Golden railings""],""background_elements"":[""The track spiraling upwards towards a pale visible moon"",""Miniature cities far below in the valley gap.""]},""lighting"":{""style"":""Magical Golden Hour"",""key_light"":{""type"":""Low sun"",""color"":""Warm amber/gold"",""illuminates"":[""The gold tracks"",""The edges of the glass train"",""The marble texture""]},""shadows"":""Long, dramatic shadows cast by the columns onto the clouds""},""style"":{""medium"":""3D Conceptual Art"",""aesthetic"":""Neo-Classical Sci-Fi, Surrealism"",""quality"":""8k resolution, hyper-detailed"",""details"":""architectural precision, atmospheric depth""},""scene_composition"":{""subject_action"":""Train moving away from camera around a bend"",""camera_behavior"":""Drone shot, high angle, vertigo-inducing"",""depth_layering"":""Sharp foreground railing -> Glass Train -> Hazy distant world""},""camera_and_lens"":{""focal_length_feel"":""14mm Ultra-Wide"",""aperture_effect"":""Deep depth of field (f/11)"",""camera_angle"":""High-angle looking down into the abyss"",""lens_type"":""Rectilinear"",""bokeh_style"":""None""}}",outputs/image-batch/image-1166-1767108185598.png,done,
 "Create a drawing from this photo without changing the face.
@@ -1234,7 +1234,7 @@ Lighting: Dark. The only light source is the flash of a 35mm analog camera shoot
 "{""title"":""Hyper-Realistic Portrait: Suited Woman in Mugshot Pose"",""description"":""A high-resolution hyper-realistic 8K HD portrait photograph captured with a professional DSLR camera using a 50mm lens for natural depth of field and razor-sharp focus. Full-body composition mimicking an old-fashioned mugshot/police booking photo."",""subject"":{""type"":""woman"",""features"":{""likeness_reference"":""attached image"",""height"":""tall"",""build"":""elegant"",""facial_features"":{""jawline"":""sharp"",""eyes"":""intense"",""expression"":""confident, slightly smug smirk""},""pose"":""leaning against wall, one knee bent""},""hair"":{""style"":""neat, straight, wavy or elegant updo"",""appearance"":""natural and well-groomed""},""clothing"":{""jacket"":""vintage-style tailored dark pinstripe suit jacket"",""inner_garment"":""none"",""tie"":""slightly loosened, dark shade matching jacket"",""accessories"":[{""type"":""mugshot board"",""text"":{""name"":""MIRA"",""date"":""17/5/62""}},{""type"":""shoe"",""description"":""single shiny dark-colored high-heeled shoe in right hand"",""material"":""patent leather""}]}},""background"":{""style"":""naturally blurred bokeh"",""texture"":""slightly gritty studio wall"",""details"":{""height_chart"":""vertical lines with numerical markings 2'0\"" to 6'6\"""",""color_tone"":""desaturated, slightly sepia-toned archival photograph aesthetic""}},""lighting"":{""type"":""clean, soft, balanced"",""shadow"":""accurate shadows and highlights"",""direction"":""strong overhead or frontal lighting emphasizing dramatic shadows and height chart lines""},""framing"":{""resolution"":""1080x1350px (4:5)"",""focus"":""sharp subject focus"",""composition"":""full figure and mugshot details"",""color_accuracy"":""professional, natural tones""},""style"":""Hyper-realistic photography, 8K clarity, DSLR quality, accurate color grading, natural lens blur, vintage photo aesthetic, true-to-life detail"",""watermark"":""© xmiiru"",""negative_prompt"":[""No anime"",""No cartoon"",""No digital painting"",""No illustration"",""No 3D render"",""No CGI"",""No stylized features"",""No plastic/doll-like skin"",""No fantasy glow"",""No cinematic effects"",""No airbrushed smoothing"",""No overexposure"",""No unnatural blur"",""No video-game/Unreal Engine style"",""No sketch"",""No artificial lighting effects"",""No unrealistic proportions/textures"",""No multiple shoes"",""No modern background elements""]}",outputs/image-batch/image-1175-1767108267673.png,done,
 "{""prompt"":""Ultra-close-up portrait of a stunning young East Asian woman with flawless porcelain skin, large sparkling dark brown eyes with long lashes, subtle pink blush, glossy red-tinted lips, long straight silky dark brown hair with subtle highlights, making a playful finger-frame gesture around one eye with both hands, extremely detailed long almond-shaped nails with glossy purple-marble and silver chrome galaxy nail art with tiny rhinestones, wearing black-and-white horizontal striped oversized knit sweater with ribbed cuffs, layered delicate silver necklaces with crystal pendants and small pink gems, soft studio lighting with bright white seamless background, high-fashion beauty editorial style, razor-sharp details, perfect skin texture with natural glow, shallow depth of field, shot on 85mm lens f/1.4, ultra-realistic photorealism, 8k, masterpiece, best quality"",""negative_prompt"":""blurry, low resolution, deformed hands, extra fingers, missing fingers, bad anatomy, ugly nails, cheap makeup, overexposed, underexposed, text, watermark, logo, cartoon, 3d render, plastic skin, doll face, cross-eyed, distorted proportions, old, child"",""steps"":60,""cfg_scale"":7.5,""sampler"":""DPM++ 2M Karras"",""width"":832,""height"":1216,""seed"":-1}",outputs/image-batch/image-1176-1767108277382.png,done,
 "{""subject"":{""description"":""A male boxer sitting in the corner of a ring between rounds, heavy breathing"",""mirror_rules"":""N/A"",""age"":""early 30s"",""expression"":""exhausted, bruised but determined, mouthguard visible"",""hair"":{""color"":""dark brown"",""style"":""buzz cut, drenched in sweat""},""clothing"":{""top"":{""type"":""none (shirtless)"",""color"":""skin tone"",""details"":""heavy sweat sheen, muscle definition, veins visible""},""bottom"":{""type"":""boxing trunks"",""color"":""satin white with gold trim"",""details"":""blood smear on waistband""}},""face"":{""preserve_original"":true,""makeup"":""swollen eye, cut on eyebrow, vaseline smeared on cheeks""}},""accessories"":{""headwear"":{""type"":""none"",""details"":""towel draped over head""},""jewelry"":{""earrings"":""none"",""necklace"":""none"",""wrist"":""red boxing gloves"",""rings"":""none""},""device"":{""type"":""none"",""details"":""N/A""},""prop"":{""type"":""water bottle"",""details"":""being squeezed into mouth by a trainer's hand (off-screen)""}},""photography"":{""camera_style"":""Sports documentary style, 85mm portrait lens"",""angle"":""low angle looking up at seated fighter"",""shot_type"":""close up on face and chest"",""aspect_ratio"":""16:9"",""texture"":""sharp pores, gritty noise, dramatic shadows""},""background"":{""setting"":""boxing ring corner"",""wall_color"":""dark arena background"",""elements"":[""ring ropes blurred in foreground"",""haze from crowd heat"",""camera flashes popping in distance"",""trainer's shoulder blurred in foreground""],""atmosphere"":""tense, visceral, dramatic"",""lighting"":""single harsh overhead spotlight, deep shadows on face (chiaroscuro)""}}",outputs/image-batch/image-1177-1767108286807.png,done,
-"Create a clean 45° isometric miniature diorama scene of [LOCATION], designed like a premium weather-card. Use high-fidelity 3D modeling, soft PBR materials, crisp global illumination, and a minimal solid background. Display the location name at the top with modern, bold typography, plus a weather icon, temperature, and date. Make the environment packed with small storytelling details that match the climate and vibe of the place, atmospheric effects, structures, natural elements, tiny props, and subtle shadows. Keep everything polished, coherent, and visually satisfying.",,error,No image data returned by provider.
+"Create a clean 45° isometric miniature diorama scene of [LOCATION], designed like a premium weather-card. Use high-fidelity 3D modeling, soft PBR materials, crisp global illumination, and a minimal solid background. Display the location name at the top with modern, bold typography, plus a weather icon, temperature, and date. Make the environment packed with small storytelling details that match the climate and vibe of the place, atmospheric effects, structures, natural elements, tiny props, and subtle shadows. Keep everything polished, coherent, and visually satisfying.",,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
 "Hyper-detailed, ultra-realistic illustration of an owl emerging from dense jungle foliage. The owl has glowing amber eyes, sharp intricate feather textures, and an intense forward gaze. Surrounding leaves are stylized in deep blacks and greys with bright orange accents that create a dramatic contrast. Close-up composition with the owl partially hidden between the foliage. Cinematic lighting, high contrast shadows, surreal orange–black color palette, moody atmosphere, fantasy wildlife art, extremely sharp details, 8K quality.",outputs/image-batch/image-1179-1767108298958.png,done,
 "{""subject"":""Class photo featuring famous manga characters such as Goku, Naruto, Luffy, Ichigo, Sailor Moon, Deku, and other iconic anime heroes"",""scene"":""School gym or classroom setting with all characters standing in rows like a traditional class picture"",""camera"":""Straight-on group shot, wide angle, everyone visible and well-framed"",""style"":""Colorful anime illustration, clean lines, bright tones"",""lighting"":""Soft even lighting like a real school photo"",""mood"":""Fun, friendly, energetic group atmosphere""}",outputs/image-batch/image-1180-1767108309455.png,done,
 "{""prompt"":""Edit this photo without changing the face a beautiful woman with fair skin lit by bright morning sunlight from a strong golden directional light source creating clear shadows on her face and hair"",""details"":{""hair"":{""color"":""dark brown"",""shine"":""natural"",""style"":""loose messy bun on top of the head"",""wet_strands"":""a few wet look strands curving on the forehead in an aesthetically neat random pattern"",""side_strands"":""two long straight strands on both sides softly framing the face"",""volume"":""back section lifted into the bun looking thick and voluminous""},""makeup"":{""eyes"":{""lens_color"":""light grey"",""pupil_visibility"":""clear"",""eyeshadow"":""highly reflective silver glitter with tiny sparkling particles""}}}}",outputs/image-batch/image-1181-1767110426367.png,done,
@@ -1350,7 +1350,7 @@ Quality_Tags=Lifelike lighting, 8k realism, ultra-detailed",outputs/image-batch/
 "Create this photo into a photorealistic image with a strong nostalgic and melancholic atmosphere, without altering the face in any way (maintain 100% likeness to the reference photo). The subject is a young Asian woman with an ideal figure, styled with a distinctly 1980s aesthetic. She is sitting casually on a floral-patterned rattan chair. She wears a mustard-yellow blouse with fine checkered patterns and dramatic balloon sleeves that give a glamorous, vintage feel. She pairs it with a black satin skirt featuring delicate pleated textures and raised floral motifs. Her thick black hair is left down—naturally wavy, long, and voluminous in true 80s fashion. Her bangs are styled transparently and swept to the right. She sits in a relaxed, slightly reclined position, leaning a bit to the right. Her legs are crossed, and her left hand rests on her thigh, adding a candid, unposed impression. The background is an old-fashioned living room with a minimalist arrangement: aged cream walls decorated with a landscape-style painting typical of the 80s and several family photos; vintage items such as a CRT television, a rattan table with a white ceramic vase of flowers, and an old-school biscuit tin. The floor is covered with yellowish-brown ceramic tiles in a retro pattern. The moment is captured with a 1980s analog point-and-shoot camera, producing warm-faded analog tones with internal flash: strong highlights on the face, soft contrast, dense/sharp subject shadows, and a darker background—especially around the frame edges. The image has soft sharpness, natural film grain, light vignetting, and slight overexposure on the clothing. Low contrast with slightly muted saturation. Fine grain indicates it’s a scanned analog film photo or a retro-style filter. Overall mood: vintage glam, rebellious, artsy, and casual. Add old-photo aging effects: a bluish-magenta color fade, thin white lines along the edges typical of old film, subtle horizontal scratches like worn folded paper, a faint orange burn effect around the borders, and handwritten cursive text made with a faded black marker: Nov 1988.",outputs/image-batch/image-1224-1767110657196.png,done,
 "{""image_generation_request"":{""constraints"":{""preservation_instruction"":""Please keep my face 100% the same, do not change any facial details."",""strictness"":""Critical""},""technical_specifications"":{""camera_device"":""Canon IXY/IXUS digital camera"",""aesthetic_style"":[""Y2K Digital Aesthetic"",""Cyber Ulzzang"",""Retro Japan–Korea look"",""Early 2000s digital photograph""],""lighting"":{""source"":""Strong front flash"",""target"":""Directly on face"",""characteristics"":""Bright white"",""effect_on_skin"":[""Radiant"",""Shiny"",""Bright""]},""visual_grading"":{""contrast"":""High"",""color_tone"":""Slight cool blue"",""atmosphere"":[""Mysterious"",""Sharp""]}},""composition"":{""type"":""Portrait"",""meta_scene_element"":""A reflection in the mirror shows another woman's hand taking the photo of the model""},""subject_details"":{""demographics"":""Teenage girl"",""physical_appearance"":{""hair"":{""color"":""Dark brown"",""texture"":[""Long"",""Soft"",""Wavy""],""accessory"":""Sanrio Kuromi hair clip""},""eyes"":{""description"":""Bright"",""contacts"":""Blue-grey contact lenses""},""skin"":{""base_tone"":""Fair"",""undertone"":""Slightly pink toned"",""complexion"":[""Rosy glow"",""Smooth""]},""body_features"":""Clear, shapely waistline""},""attire_and_accessories"":{""top"":""Dark grey spaghetti strap crop top"",""belt"":{""style"":""Waist belt"",""material"":""Silver chain"",""details"":""Dangling moon charms""}},""makeup"":{""general_style"":""Light pink makeup"",""lashes"":""Long eyelashes"",""additional_descriptors"":""thin and""}}}}",outputs/image-batch/image-1225-1767110667889.png,done,
 "{""narrativeIntent"":{""message"":""Share the Magic of Christmas"",""emotion"":""Warmth, nostalgia, joy"",""concept"":""A cinematic Christmas Coca-Cola scene filled with festive lights, snow, and holiday magic.""},""subject"":{""primary"":""Classic Coca-Cola glass bottle covered in cold condensation"",""secondary"":""Warm glowing lights and soft falling snow highlighting the product"",""focus"":""Crystal clarity on the bottle, iconic red label glowing""},""scene"":{""environment"":""Outdoor Christmas village setting at dusk"",""elements"":""Twinkling fairy lights, decorated trees, gentle snowfall, warm festive atmosphere"",""tone"":""Magical and nostalgic holiday spirit""},""camera"":{""angle"":""Low-angle hero product shot"",""lens"":""50mm DSLR lens with shallow depth of field"",""focus"":""Bottle perfectly sharp, background soft and glowing""},""lighting"":{""type"":""Warm Christmas lighting"",""direction"":""Soft golden backlight with red highlights"",""effects"":""Bokeh from holiday lights, subtle rim light on bottle""},""fx"":{""stylizations"":""Cinematic bloom and soft glow"",""atmosphere"":[""Soft falling snowflakes"",""Warm misty breath effect in cold air""]},""textDesign"":{""headline"":""HOLIDAY MAGIC"",""subheadline"":""Open Happiness"",""font"":""Bold festive serif with soft glow"",""placement"":""Top left headline, Coca-Cola logo bottom right"",""color"":""White with golden sparkle""}}",outputs/image-batch/image-1226-1767110680834.png,done,
-"Chiaroscuro is an artistic technique using strong light-dark contrasts to create depth and volume in two-dimensional works. The Italian term means “light-dark.” While used throughout art history, it became especially prominent during the Renaissance and Baroque periods in works by Caravaggio, Rembrandt, and Leonardo da Vinci, who employed it for dramatic effect and atmosphere.",,error,No image data returned by provider.
+"Chiaroscuro is an artistic technique using strong light-dark contrasts to create depth and volume in two-dimensional works. The Italian term means “light-dark.” While used throughout art history, it became especially prominent during the Renaissance and Baroque periods in works by Caravaggio, Rembrandt, and Leonardo da Vinci, who employed it for dramatic effect and atmosphere.",,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
 "{""project_settings"":{""title"":""The Femme Fatale Contact Sheet"",""grid_structure"":""3x3"",""aspect_ratio"":""16:9"",""film_stock"":""Ilford Delta 3200 (Black & White) OR Kodak Vision3 500T (Muted Color)"",""global_aesthetic"":""High-Contrast Noir with Luxury Fashion undertones""},""core_elements"":{""subject"":""A sophisticated Asian woman with sleek, long straight black hair. She features sharp, dramatic winged eyeliner and matte lipstick. She is wearing a form-fitting black scoop-neck bodysuit."",""environment"":""A dimly lit, opulent penthouse suite with large windows overlooking a rainy city skyline at night."",""lighting_style"":""Dramatic Rim Lighting (hair light) to separate subject from background, soft fill on face, deep velvet shadows.""},""composition_grid"":{""row_1"":{""narrative_beat"":""The Isolation (Establishing the Atmosphere)"",""lens_choice"":""24mm Wide Angle"",""color_grade"":""Monochromatic or Desaturated Cold Tones"",""panels"":[{""shot_type"":""Extreme Long Shot (ELS)"",""description"":""The subject stands as a silhouette against a massive floor-to-ceiling window. The city lights blur behind her. Emphasizes her solitude.""},{""shot_type"":""Long Shot (LS)"",""description"":""Full body profile view. She is standing near a velvet armchair. The lighting catches the sleek texture of her hair. Elegant posture.""},{""shot_type"":""American Shot (3/4 View)"",""description"":""Framed from knees up. She turns slightly towards the camera, arms crossed or adjusting a bracelet. The background is dark and out of focus.""}]},""row_2"":{""narrative_beat"":""The Engagement (The Character Study)"",""lens_choice"":""50mm Prime Lens (Standard)"",""color_grade"":""High Contrast / Chiaroscuro"",""panels"":[{""shot_type"":""Medium Shot (MS)"",""description"":""Waist up. She is looking slightly off-camera. The scoop neckline of her black top is prominent. Lighting highlights her collarbones.""},{""shot_type"":""Medium Close-Up (MCU)"",""description"":""Chest up. Direct eye contact with the lens. Her expression is unreadable and mysterious. The winged eyeliner is sharp and focal.""},{""shot_type"":""Close-Up (CU)"",""description"":""Face framing. Shallow depth of field (f/1.4). The background dissolves into bokeh. Focus is entirely on her eyes and the texture of her skin.""}]},""row_3"":{""narrative_beat"":""The Intimacy (The Texture & Power)"",""lens_choice"":""85mm & 100mm Macro"",""color_grade"":""Deep Blacks and Stark Highlights"",""panels"":[{""shot_type"":""Extreme Close-Up (ECU)"",""description"":""Macro detail focusing intensely on the sharp winged eyeliner and the catchlight in her eye. High-fashion makeup texture.""},{""shot_type"":""Low Angle (Power Shot)"",""description"":""Looking up at her. She looks down imperiously. The lighting creates a 'halo' effect on her hair (Rim Light). She looks dominant.""},{""shot_type"":""High Angle (Vulnerability)"",""description"":""Looking down at her seated. She looks up through her lashes. The angle emphasizes the geometry of her face and the sleekness of her hair.""}]}},""technical_modifiers"":[""Photorealistic Skin Texture"",""Volumetric Lighting"",""Film Grain"",""8k Resolution"",""Fashion Photography Aesthetic"",""Sharp Focus""]}",outputs/image-batch/image-1228-1767110690277.png,done,
 "Design a high-fashion magazine cover from the year 2099 titled ""VOGUE NEON"". The model is a gender-fluid humanoid with bioluminescent skin, wearing an outfit made of programmable fabric that shifts patterns. The background is a clean, glossy white studio with floating AR interface elements. Use sleek typography, QR-style elements, and a minimal layout. Add fake barcodes and futuristic headlines.",outputs/image-batch/image-1229-1767110703726.png,done,
 "Show the behind the scenes view of this movie set of this exact scene. Keeping the characters in position, but showing the technical equipment, lighting, and ambient motion of the crew. Denoise and crisp the image.",outputs/image-batch/image-1230-1767110714439.png,done,
@@ -1444,8 +1444,8 @@ Camera angle: shot from inside the car, close and intimate, focusing primarily o
 Photorealistic Hong Kong retro portrait with authentic 1990s film look."
 Use image [0] as face reference. Half-body. Subject leaning against newspaper-covered wall, gaze soft and melancholic. Cropped bralette top embroidered with pearls and sequins Loose high-waisted trousers with elastic waistband, typical 1990s street style. Hair messy, strands falling across face. Makeup glossy lips
 Create a stylish, modern look with voluminous dark silky hair flowing naturally. She is wearing a yellow hoodie with a white hood, and square rimless gradient yellow sunglasses.,
-Single accessory: a sleek wristwatch.,,error,exception TypeError: fetch failed sending request
-She gives a confident attitude look.,,error,exception TypeError: fetch failed sending request
+Single accessory: a sleek wristwatch.,outputs/image-batch/image-1271-1767111963436.png,done,
+She gives a confident attitude look.,outputs/image-batch/image-1272-1767111966349.png,done,
 The hoodie features a small Shivay logo on the front. The background is soft, minimal," and subtly blurred to emphasize
 {subject:{gender:female",age:young adult
 A visual explosion in the middle of a fast-moving street. Frozen faces, sweeping movements, and a palpable noir atmosphere. Everything is planned," yet the results are always wild and raw.
@@ -1456,29 +1456,29 @@ A tiny black handbag hangs on her shoulder, and she holds a coffee cup.,,
 "Soft cinematic lighting highlights outfit textures with a slightly blurred background.
 {",outputs/image-batch/image-1278-1767111966512.png,done,
   description: A low-angle, full-body cinematic portrait.,,
-  subject: {,,error,exception TypeError: fetch failed sending request
-    description: A young woman (face identical to the reference photo).,,error,exception TypeError: fetch failed sending request
+  subject: {,outputs/image-batch/image-1280-1767111966624.png,done,
+    description: A young woman (face identical to the reference photo).,outputs/image-batch/image-1281-1767111967085.png,done,
     position: Sitting directly on the hood of an old, rusty car.,,
     gaze: Gazes directly into the camera.,outputs/image-batch/image-1283-1767111968256.png,done,
     expression: Serious, intense expression.,,
     hands: Rest on his knees or are clasped loosely in his lap.,outputs/image-batch/image-1285-1767111969353.png,done,
     legs: Slightly apart, with his feet visible on the damp, oxidized surface of the car hood, above the windshield wipers.
-  },,error,exception TypeError: fetch failed sending request
-  attire: {,,error,No image data returned by provider.
+  },outputs/image-batch/image-1287-1767111969552.png,done,
+  attire: {,outputs/image-batch/image-1288-1767116667314.png,done,
     style: Dark, monochromatic street style.,,
-    jacket: A black or charcoal zip-up or bomber jacket.,,error,exception TypeError: fetch failed sending request
+    jacket: A black or charcoal zip-up or bomber jacket.,outputs/image-batch/image-1290-1767111970846.png,done,
     layering: Layered over a light gray hoodie, the collar subtly visible beneath the jacket.,,
-    trousers: Loose-fitting dark gray trousers.,,error,exception TypeError: fetch failed sending request
-    footwear: Dark sneakers.,,error,exception TypeError: fetch failed sending request
-  },,error,No image data returned by provider.
-  composition: {,,error,No image data returned by provider.
+    trousers: Loose-fitting dark gray trousers.,outputs/image-batch/image-1292-1767111971149.png,done,
+    footwear: Dark sneakers.,outputs/image-batch/image-1293-1767111971277.png,done,
+  },,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
+  composition: {,outputs/image-batch/image-1295-1767116667314.png,done,
     shot_type: Low-angle, full-body.,,
-    perspective: Shot from a low perspective that makes the viewer look up at him.,,error,No image data returned by provider.
+    perspective: Shot from a low perspective that makes the viewer look up at him.,outputs/image-batch/image-1297-1767116586203.png,done,
 "    framing:
 A disposable camera picture with the classic harsh flash", capturing a messy living room after a chaotic party night. The mood is silly, slightly drunk, chaotic
 In the center of the scene is a low wooden coffee table completely cluttered with party leftovers: half-full bottles of Bacardi, whiskey bottles, several red plastic cups (one tipped over spilling liquor), scattered cigarettes
 On the couch behind the table sit five Breaking Bad characters, all behaving in a funny, slightly drunk, in-character way:
-The Characters & Their Actions on the Couch (Left to Right):,,error,No image data returned by provider.
+The Characters & Their Actions on the Couch (Left to Right):,,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
 1.  Hank Schrader: (Sitting on the left end of the couch, awake) His face is bright red and covered in sweat, with an expression of pure shock and disbelief. He is holding open a worn copy of Walt Whitman's Leaves of Grass notebook, staring intently at the handwritten inscription inside (To my other favorite W.W.).
 2.  Walter White: (Standing just behind Hank) He is captured in a dynamic, mid-swing motion, holding a plastic flyswatter. His face shows intense, determined focus and seriousness
 3.  Saul Goodman: (Next to Hank, leaning towards Gus) Passed out slumped sideways against Gus's shoulder. Someone has drawn a thick, curly mustache and glasses on his face with a black marker. A piece of paper is taped to his chest that crookedly reads: FREE LEGAL ADVICE - WAKE ME UP!.,
@@ -1487,34 +1487,34 @@ The Characters & Their Actions on the Couch (Left to Right):,,error,No image dat
 The Floor: Jesse Pinkman: (On the floor in front of the couch) Wearing multiple party hats stacked on his head, tangled in a blanket. He is trying to take a selfie with an old flip phone held out at arm's length, making a ridiculous face with a slice of pizza hanging out of his mouth.,
 Everything feels authentically chaotic, funny, and candid.,
 Shot on disposable camera film, harsh flash, slightly off-center framing, realistic 90s timestamp in the corner (OCT 31 ’98). Grainy
-  Objective: Generate an 8K ultra-realistic hyper-detailed cinematic portrait based on the user's reference image.,,error,No image data returned by provider.
-  Scene_Description: {,,error,No image data returned by provider.
-    Environment: {,,error,No image data returned by provider.
-      Setting: Modern luxury office interior,,error,exception TypeError: fetch failed sending request
-      Props: {,,error,No image data returned by provider.
-        Desk: Elegant wooden desk,,error,exception TypeError: fetch failed sending request
-        Laptop: Sleek modern laptop placed on the desk,,error,exception TypeError: fetch failed sending request
+  Objective: Generate an 8K ultra-realistic hyper-detailed cinematic portrait based on the user's reference image.,,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
+  Scene_Description: {,outputs/image-batch/image-1311-1767116586203.png,done,
+    Environment: {,outputs/image-batch/image-1312-1767116586203.png,done,
+      Setting: Modern luxury office interior,outputs/image-batch/image-1313-1767111974373.png,done,
+      Props: {,outputs/image-batch/image-1314-1767116710854.png,done,
+        Desk: Elegant wooden desk,outputs/image-batch/image-1315-1767111974698.png,done,
+        Laptop: Sleek modern laptop placed on the desk,outputs/image-batch/image-1316-1767111975099.png,done,
         Plants: Minimal premium indoor plants for aesthetic balance,outputs/image-batch/image-1317-1767111975784.png,done,
-      },,error,No image data returned by provider.
+      },outputs/image-batch/image-1318-1767116667315.png,done,
       Atmosphere: Premium, cinematic, high-end corporate style,
-      Lighting: {,,error,No image data returned by provider.
-        Type: Cinematic professional lighting setup,,error,exception TypeError: fetch failed sending request
-        Effects: [,,error,No image data returned by provider.
+      Lighting: {,,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
+        Type: Cinematic professional lighting setup,outputs/image-batch/image-1321-1767111979560.png,done,
+        Effects: [,outputs/image-batch/image-1322-1767116586206.png,done,
           Ultra-boost clarity,outputs/image-batch/image-1323-1767111980495.png,done,
-          Soft controlled highlights,,error,exception TypeError: fetch failed sending request
-          Sharp subject-background separation,,error,exception TypeError: fetch failed sending request
-        ],,error,No image data returned by provider.
-      },,error,No image data returned by provider.
-    },,error,No image data returned by provider.
-    Subject: {,,error,No image data returned by provider.
-      Identity: Maintain facial features consistent with the provided reference image,,error,No image data returned by provider.
-      Type: Stylish man,,error,exception TypeError: fetch failed sending request
-      Pose: {,,error,No image data returned by provider.
-        Stance: Leaning casually on the wooden desk,,error,exception TypeError: fetch failed sending request
+          Soft controlled highlights,outputs/image-batch/image-1324-1767111980750.png,done,
+          Sharp subject-background separation,outputs/image-batch/image-1325-1767111980998.png,done,
+        ],outputs/image-batch/image-1326-1767116710854.png,done,
+      },,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
+    },,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
+    Subject: {,outputs/image-batch/image-1329-1767116587195.png,done,
+      Identity: Maintain facial features consistent with the provided reference image,,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
+      Type: Stylish man,outputs/image-batch/image-1331-1767111987755.png,done,
+      Pose: {,outputs/image-batch/image-1332-1767116667315.png,done,
+        Stance: Leaning casually on the wooden desk,outputs/image-batch/image-1333-1767111989491.png,done,
         Expression: Confident, composed, luxury-editorial attitude,
-      },,error,No image data returned by provider.
-      Appearance: {,,error,exception TypeError: fetch failed sending request
-        Accessories: [,,error,No image data returned by provider.
+      },,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
+      Appearance: {,outputs/image-batch/image-1336-1767111991552.png,done,
+        Accessories: [,outputs/image-batch/image-1337-1767116587254.png,done,
           Blue sunglasses,"
 {pose:{description:She holds the camera with her left hand", positioned slightly below eye level, capturing her face from a confident upward angle; lips softly parted
 Top panel: Direct gaze, standing in tall dark grass, sky overcast, dramatic contrast
@@ -1522,55 +1522,55 @@ Middle panel: Profile view, looking up at the cloudy sky, hair blowing dramatica
 Bottom panel: Close-up of his face, sharp attractive eyes," hairs moving in the wind. DON'T CHANGE FACE
 Created with nano banana pro:",
 Cinematic high grain 90s portrait Dutch angle tilted shot, 23-year-old woman leaning against tree taking picture dynamic composition, wearing oversized flannel shirt layers winter, long hair hanging sideways
-  subject: {,,error,No image data returned by provider.
-    type: female_model,,error,exception TypeError: fetch failed sending request
-    ethnicity: western,,error,exception TypeError: fetch failed sending request
-    hair: {,,error,exception TypeError: fetch failed sending request
-      length: long,,error,exception TypeError: fetch failed sending request
-      texture: straight,,error,exception TypeError: fetch failed sending request
-      bangs: wispy,,error,exception TypeError: fetch failed sending request
-    },,error,exception TypeError: fetch failed sending request
-    skin: flawless,,error,exception TypeError: fetch failed sending request
-    tattoo: {,,error,exception TypeError: fetch failed sending request
-      location: upper left arm,,error,exception TypeError: fetch failed sending request
-      style: fine-line floral tattoo,,error,exception TypeError: fetch failed sending request
-      visibility: subtle but clear,,error,exception TypeError: fetch failed sending request
-    },,error,exception TypeError: fetch failed sending request
-  },,error,exception TypeError: fetch failed sending request
-  pose: {,,error,exception TypeError: fetch failed sending request
-    position: reclining on the floor,,error,exception TypeError: fetch failed sending request
-    support: elbow propping her head,,error,exception TypeError: fetch failed sending request
-    expression: intense eye contact,,error,exception TypeError: fetch failed sending request
-    mood: seductive high-fashion,,error,exception TypeError: fetch failed sending request
-  },,error,exception TypeError: fetch failed sending request
-  wardrobe: {,,error,exception TypeError: fetch failed sending request
-    outfit: deep wine-red semi-sheer halter dress,,error,exception TypeError: fetch failed sending request
-    details: [,,error,exception TypeError: fetch failed sending request
-      intricate knit patterns,,error,exception TypeError: fetch failed sending request
-      revealing artistic cutouts,,error,exception TypeError: fetch failed sending request
-      luxury editorial vibe,,error,exception TypeError: fetch failed sending request
-    ],,error,exception TypeError: fetch failed sending request
-  },,error,exception TypeError: fetch failed sending request
-  lighting: {,,error,exception TypeError: fetch failed sending request
-    type: soft Rembrandt lighting,,error,exception TypeError: fetch failed sending request
-    effect: dimensional facial highlights,,error,exception TypeError: fetch failed sending request
-  },,error,exception TypeError: fetch failed sending request
-  camera: {,,error,exception TypeError: fetch failed sending request
-    lens: 85mm,,error,exception TypeError: fetch failed sending request
-    depth_of_field: shallow,,error,exception TypeError: fetch failed sending request
-    style: hyperrealistic editorial shot,,error,exception TypeError: fetch failed sending request
-  },,error,exception TypeError: fetch failed sending request
-  environment: {,,error,exception TypeError: fetch failed sending request
-    background: {,,error,exception TypeError: fetch failed sending request
-      type: stylized,,error,exception TypeError: fetch failed sending request
+  subject: {,outputs/image-batch/image-1343-1767116667316.png,done,
+    type: female_model,outputs/image-batch/image-1344-1767111994587.png,done,
+    ethnicity: western,,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
+    hair: {,outputs/image-batch/image-1346-1767111996098.png,done,
+      length: long,outputs/image-batch/image-1347-1767111997488.png,done,
+      texture: straight,outputs/image-batch/image-1348-1767111998318.png,done,
+      bangs: wispy,outputs/image-batch/image-1349-1767111999107.png,done,
+    },,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
+    skin: flawless,outputs/image-batch/image-1351-1767116587522.png,done,
+    tattoo: {,outputs/image-batch/image-1352-1767112000869.png,done,
+      location: upper left arm,outputs/image-batch/image-1353-1767116587526.png,done,
+      style: fine-line floral tattoo,outputs/image-batch/image-1354-1767112001302.png,done,
+      visibility: subtle but clear,outputs/image-batch/image-1355-1767112002453.png,done,
+    },,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
+  },outputs/image-batch/image-1357-1767112003225.png,done,
+  pose: {,outputs/image-batch/image-1358-1767112003636.png,done,
+    position: reclining on the floor,outputs/image-batch/image-1359-1767112005108.png,done,
+    support: elbow propping her head,outputs/image-batch/image-1360-1767112005554.png,done,
+    expression: intense eye contact,outputs/image-batch/image-1361-1767112005877.png,done,
+    mood: seductive high-fashion,outputs/image-batch/image-1362-1767112007068.png,done,
+  },outputs/image-batch/image-1363-1767116710856.png,done,
+  wardrobe: {,outputs/image-batch/image-1364-1767116587937.png,done,
+    outfit: deep wine-red semi-sheer halter dress,outputs/image-batch/image-1365-1767112009598.png,done,
+    details: [,outputs/image-batch/image-1366-1767116587982.png,done,
+      intricate knit patterns,outputs/image-batch/image-1367-1767112012214.png,done,
+      revealing artistic cutouts,outputs/image-batch/image-1368-1767112012227.png,done,
+      luxury editorial vibe,outputs/image-batch/image-1369-1767112013452.png,done,
+    ],,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
+  },outputs/image-batch/image-1371-1767116742428.png,done,
+  lighting: {,outputs/image-batch/image-1372-1767112014048.png,done,
+    type: soft Rembrandt lighting,outputs/image-batch/image-1373-1767112014320.png,done,
+    effect: dimensional facial highlights,outputs/image-batch/image-1374-1767112015507.png,done,
+  },outputs/image-batch/image-1375-1767116668313.png,done,
+  camera: {,outputs/image-batch/image-1376-1767116588619.png,done,
+    lens: 85mm,outputs/image-batch/image-1377-1767116588758.png,done,
+    depth_of_field: shallow,outputs/image-batch/image-1378-1767112017824.png,done,
+    style: hyperrealistic editorial shot,outputs/image-batch/image-1379-1767112019466.png,done,
+  },outputs/image-batch/image-1380-1767116668316.png,done,
+  environment: {,outputs/image-batch/image-1381-1767112019735.png,done,
+    background: {,outputs/image-batch/image-1382-1767112021951.png,done,
+      type: stylized,outputs/image-batch/image-1383-1767116589344.png,done,
 "      details: sof
 {image_specifications:{format:photograph",style:highly detailed, Y2K-inspired, gritty
-Shot with direct flash at night.,,error,exception TypeError: fetch failed sending request
+Shot with direct flash at night.,outputs/image-batch/image-1385-1767112027180.png,done,
 The photo has a soft white-pink cast, bright skin tones, slight grain, sharp skin details
 A grainy digital photo shows a young woman in a trench coat holding a clear umbrella, looking up at neon signs in a busy," rain-slicked crosswalk. Hundreds of blurred figures surround her.
 London Underground Station",
 "A digital snapshot captures a student with a backpack and headphones waiting on a crowded subway platform. The blurred image shows a train pulling in and other commuters.
-Hiking Trail in the Rockies",,error,exception TypeError: fetch failed sending request
+Hiking Trail in the Rockies",outputs/image-batch/image-1388-1767112027437.png,done,
 A slightly blurry digital photo from 2006 shows a hiker with a large backpack pausing on a dirt path," looking out over a mountain range under a cloudy sky.
 Seattle Coffee Shop",,
 A candid digital photo from 2006 shows a man with a beard and a striped shirt reading a newspaper at a worn wooden table. Rain streaks the window behind him," obscuring the street view.
@@ -1578,16 +1578,16 @@ Christmas Market in Chicago",,
 A low-resolution digital picture focuses on a woman in a thick winter coat holding a mug of hot cocoa," laughing. Festive lights and blurred market stalls with holiday decorations fill the background under a light snowfall.
 Parisian Cafe Terrace",,
 "A digital photograph captures an older woman with sunglasses and a scarf sipping coffee at a small outdoor table. A blurred waiter and pedestrians stroll past classic Haussmann buildings in the background
-Beach Bonfire in California",,error,exception TypeError: fetch failed sending request
+Beach Bonfire in California",outputs/image-batch/image-1392-1767112027550.png,done,
 "A low-light digital picture captures a group of friends laughing around a bonfire on a sandy beach at night. The firelight illuminates their faces while the ocean is dark in the background
-Santa Monica Pier at Sunset",,error,exception TypeError: fetch failed sending request
+Santa Monica Pier at Sunset",outputs/image-batch/image-1393-1767112028086.png,done,
 A slightly pixelated digital photo captures a young couple in hoodies embracing on a wooden pier at dusk. The setting sun casts a warm," orange glow over the blurred Ferris wheel and distant beachgoers.
 Generate a photorealistic image of Time Square on a saturday in Fall 2006", it's a beautiful late October day, people are busy. in focus should be a young blonde - rest can be blurred. the photo should be reminiscent of that a digital camera from 2006 would take
 Dress the person in the clothing from the uploaded clothing image, preserving the style, color, and details of the garment.
 Pose the person in a cute and natural pose, looking towards the camera.,,
 Realistic photo style, natural lighting, high resolution.,
 Background optional, neutral or Tokyo street setting.,,
-左: 合成結果（Nano Banana Pro）,,error,exception TypeError: fetch failed sending request
+左: 合成結果（Nano Banana Pro）,outputs/image-batch/image-1399-1767116668357.png,done,
 "右: 参照画像（人物＋着せたい服）
 添付画像のイラストをキャラにして。LINEスタンプを作成。表情・ポーズ別・セリフ入で16種類。
 Amateur photograph from 1998 of a middle-aged artist copying an image by hand from a computer screen to an oil painting on stretched canvas"," but the image is itself the photo of the artist painting the recursive image.
@@ -1597,75 +1597,75 @@ That’s literally all I typed. And it produced something insanely strange. I ma
 Prompt on Nano Banana Pro with image reference : Make this person do the expression of emoji [EMOJI]"
 ": 🤪🤣😱😁
 {scene:{location:Venetian canal",elements:{couple:{pose:sitting closely,mood:romantic},gondola:{position:on the canal
-Label format: ,,error,exception TypeError: fetch failed sending request
-- First line: English word ,,error,exception TypeError: fetch failed sending request
-- Second line: IPA pronunciation ,,error,exception TypeError: fetch failed sending request
+Label format: ,outputs/image-batch/image-1403-1767116589652.png,done,
+- First line: English word ,outputs/image-batch/image-1404-1767112031507.png,done,
+- Second line: IPA pronunciation ,outputs/image-batch/image-1405-1767116742429.png,done,
 "- Third line: {Chinese} translation
 A highly detailed 8k digital illustration of a person", presented as a close-up, eye-level headshot, facing directly forward against a clean white background. The composition is centered
-**Objective:**,,error,exception TypeError: fetch failed sending request
+**Objective:**,,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
 Act as a professional set designer and director of photography. Given a short narrative description, generate a single, hyper-realistic image that perfectly captures the scene's mood, atmosphere
-**Input Parameters:**,,error,exception TypeError: fetch failed sending request
+**Input Parameters:**,,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
 1.  **Scene Description:** (e.g., A lone detective sits in a dimly lit, rain-streaked diner booth at 3 AM, the neon sign outside casting a harsh red glow on his face.)
 2.  **Visual Style/Era:** (e.g., Neo-Noir, Cyberpunk, 1950s Technicolor
 3.  **Camera/Lens:** (e.g., Wide-angle shot, Close-up, 85mm lens
-**Core Deliverables:**,,error,exception TypeError: fetch failed sending request
+**Core Deliverables:**,outputs/image-batch/image-1413-1767112036991.png,done,
 1.  **Photorealistic Render:** A single, high-resolution image that is indistinguishable from a photograph.,,
 2.  **Atmospheric Lighting:** The lighting must be the primary driver of the mood, utilizing complex techniques (e.g., volumetric fog, rim lighting
-3.  **Compositional Storytelling:** The composition must guide the viewer's eye and convey the narrative tension or emotion of the scene description.,,error,exception TypeError: fetch failed sending request
+3.  **Compositional Storytelling:** The composition must guide the viewer's eye and convey the narrative tension or emotion of the scene description.,outputs/image-batch/image-1416-1767116711777.png,done,
 4.  **Detail & Texture:** Extreme attention to surface detail (e.g., wet asphalt, worn leather, reflections in glass).
-**Workflow:**,,error,exception TypeError: fetch failed sending request
+**Workflow:**,outputs/image-batch/image-1418-1767112037421.png,done,
 1.  **Analyze:** Deconstruct the narrative brief into its core emotional, environmental, and lighting components.,
-2.  **Design:** Select the optimal camera angle and lighting setup to maximize the cinematic impact.,,error,exception TypeError: fetch failed sending request
+2.  **Design:** Select the optimal camera angle and lighting setup to maximize the cinematic impact.,outputs/image-batch/image-1420-1767116591474.png,done,
 3.  **Render:** Generate the final image," ensuring the specified Visual Style/Era is authentically represented.
 {generation_constraints:{identity_preservation:Strict full identity lock on both subjects from reference photo",facial_features:Do not alter faces, proportions
-Scale ratio: 4:5 vertical,,error,exception TypeError: fetch failed sending request
-Camera: compact digital camera simulation,,error,exception TypeError: fetch failed sending request
-Lens: equivalent to 28–35mm,,error,exception TypeError: fetch failed sending request
-Aperture: f/2.8,,error,exception TypeError: fetch failed sending request
-ISO: 400,,error,exception TypeError: fetch failed sending request
-Shutter speed: 1/60 with flash,,error,exception TypeError: fetch failed sending request
-White balance: auto flash,,error,exception TypeError: fetch failed sending request
+Scale ratio: 4:5 vertical,outputs/image-batch/image-1422-1767116591567.png,done,
+Camera: compact digital camera simulation,outputs/image-batch/image-1423-1767116591969.png,done,
+Lens: equivalent to 28–35mm,outputs/image-batch/image-1424-1767112045688.png,done,
+Aperture: f/2.8,outputs/image-batch/image-1425-1767112047639.png,done,
+ISO: 400,outputs/image-batch/image-1426-1767116592054.png,done,
+Shutter speed: 1/60 with flash,outputs/image-batch/image-1427-1767112049486.png,done,
+White balance: auto flash,outputs/image-batch/image-1428-1767116608971.png,done,
 Lighting: harsh direct flash on subject, ambient low light in the background,,
 Color grading: nostalgic digital-camera tones, high contrast flash, subtle display grain," authentic screen glow
 {photo:{type:cinematic_full_body_vintage_film"
 Cinematic lighting, realistic, vibrant, vertical 1080*1440 ratio
-​Pose: She is leaning forward resting her chin in her hands with her elbows on the table looking directly at the camera with a soft calm expression.,,error,exception TypeError: fetch failed sending request
+​Pose: She is leaning forward resting her chin in her hands with her elbows on the table looking directly at the camera with a soft calm expression.,outputs/image-batch/image-1432-1767112049756.png,done,
 "​Lighting & Atmosphere: Warm golden hour sunlight creates strong shadows and highlights on her face. The lighting is cinematic and cozy. There is a white ceramic coffee mug on the table in the foreground. The background is a soft warm-toned blur (bokeh) suggesting a cozy room interior. High quality 8k soft focus aesthetic
 {prompt:A realistic black and white photograph of a young woman with long", dark hair, closely resembling the facial features, structure
 She stands in a modern, slightly dynamic pose: upper body leaning subtly forward as if engaging directly with the viewer, one hand casually gripping the top edge of the Instagram frame, while one leg steps gracefully outward through the frame
 Give her a high-fashion model expression—eyes locked onto the viewer with calm, magnetic intensity; lips relaxed and neutral; jawline softly defined. No smile or smirk—just a strong, clean, modern editorial gaze with subtle freshness and quiet power.
 She wears a ribbed knit sweater in hex color #18091D, high-waisted straight-fit white trousers, and sleek white-grey low-top sneakers, creating a crisp
-The Instagram frame is ultra-realistic with:,,error,exception TypeError: fetch failed sending request
-username “miilesus”,,error,exception TypeError: fetch failed sending request
-verified badge,,error,exception TypeError: fetch failed sending request
-display name “AI Generation”,,error,exception TypeError: fetch failed sending request
-caption “nano banana pro”,,error,exception TypeError: fetch failed sending request
-hashtags under the caption: “#gemini #nanobanana #ai”,,error,exception TypeError: fetch failed sending request
+The Instagram frame is ultra-realistic with:,outputs/image-batch/image-1437-1767112049864.png,done,
+username “miilesus”,outputs/image-batch/image-1438-1767116742430.png,done,
+verified badge,outputs/image-batch/image-1439-1767112050287.png,done,
+display name “AI Generation”,outputs/image-batch/image-1440-1767112051145.png,done,
+caption “nano banana pro”,outputs/image-batch/image-1441-1767112052446.png,done,
+hashtags under the caption: “#gemini #nanobanana #ai”,,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
 authentic Instagram UI icons (like, comment, share, save)
-a circular profile picture identical to the reference photo of her,,error,exception TypeError: fetch failed sending request
-Background:,,error,exception TypeError: fetch failed sending request
+a circular profile picture identical to the reference photo of her,outputs/image-batch/image-1444-1767112052475.png,done,
+Background:,outputs/image-batch/image-1445-1767116612842.png,done,
 Use a solid background in the deep tone #18091D, with no gradients clean, smooth, modern
 Lighting should be clean and high-end, accentuating the structure of her face, the ribbed texture of the knit sweater, and the 3D breakout effect. The final result should feel modern
-Premium Chinese noodle restaurant food poster featuring deconstructed layers of Dan Dan Noodles / Spicy Sichuan Noodles floating in vertical stack on pure black background (#000000). Seven distinct layers from top to bottom (below the main gold title) with extra spacing before the final dish:,,error,exception TypeError: fetch failed sending request
- * Top layer: pile of bright red dried chili flakes and golden-brown Sichuan peppercorn powder,,error,exception TypeError: fetch failed sending request
- * Second layer: light yellow crushed peanuts and vibrant green chopped scallions scattered,,error,exception TypeError: fetch failed sending request
+Premium Chinese noodle restaurant food poster featuring deconstructed layers of Dan Dan Noodles / Spicy Sichuan Noodles floating in vertical stack on pure black background (#000000). Seven distinct layers from top to bottom (below the main gold title) with extra spacing before the final dish:,outputs/image-batch/image-1448-1767112052886.png,done,
+ * Top layer: pile of bright red dried chili flakes and golden-brown Sichuan peppercorn powder,outputs/image-batch/image-1449-1767112053170.png,done,
+ * Second layer: light yellow crushed peanuts and vibrant green chopped scallions scattered,outputs/image-batch/image-1450-1767112053636.png,done,
  * Third layer: coiled handmade alkaline noodles in pale yellow, showing clear texture and strands,,
- * Fourth layer: yellow bean sprouts (yacai) and bright green peas scattered - these vegetables would be placed in the bowl first,,error,exception TypeError: fetch failed sending request
+ * Fourth layer: yellow bean sprouts (yacai) and bright green peas scattered - these vegetables would be placed in the bowl first,outputs/image-batch/image-1452-1767112053777.png,done,
  * Fifth layer: transparent glass bowl filled with deep red spicy chili oil broth, floating chili pieces visible, glossy surface with reflections - this soup base is poured over the vegetables, so it appears BELOW the vegetables in the vertical stack
  * Sixth layer: EMPTY SPACE - a larger gap with only subtle floating oil droplets, steam wisps, and small ingredient particles drifting down, creating visual separation and breathing room
  * Bottom/Final layer (with significantly larger gap above): a complete finished Dan Dan Noodles dish in a traditional dark brown ceramic bowl, viewed from the same 45-degree angled perspective as all other layers above. The bowl contains all ingredients combined - pale yellow noodles coated in glossy red chili oil, topped with crushed peanuts, bright green chopped scallions
 Each layer separated with gaps revealing textures and details. Layers 1-5 have normal spacing between them. Layer 6 is an intentional empty transition space with double or triple the normal gap distance. Layer 7 (finished dish) sits at the bottom with clear visual separation. Chinese and English bilingual labels with elegant arrows pointing to each component: 辣椒油&花椒粉 Chili Oil & Sichuan Pepper Powder, 麻辣风味 Numbing & Spicy Flavor, 花生碎&葱花 Crushed Peanuts & Scallions, 手工碱面 Handmade Noodles
 NO white pedestal, NO platform base. All layers float freely in space against pure black background. Dramatic studio lighting from 45-degree angle, rim lighting highlighting textures and glass bowl transparency. All layers including the finished bowl and the top gold title share identical lighting, perspective angle
 Arrange the images in a 4x6 layout, featuring common chat phrases or relevant humorous memes.,,
-Use handwritten-style fonts for text.,,error,exception TypeError: fetch failed sending request
-Output must be original—avoid direct copying of the reference image.,,error,exception TypeError: fetch failed sending request
+Use handwritten-style fonts for text.,,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
+Output must be original—avoid direct copying of the reference image.,outputs/image-batch/image-1460-1767116711922.png,done,
 Final image should be in 4K resolution," 16:9 aspect ratio.
 completing the look with a chunky silver chain around his neck", dark round frame sunglasses and a wristwatch. The subject holds a metallic baseball bat and poses with one hand in his pocket, displaying a confident
 The upper two-thirds of the image is dominated by a dramatic, tempestuous sky. The clouds are dark, heavy, and moody
 The composition is highly dynamic. The immense orange form acts as a dominant leading line, sweeping from the bottom right, curving through the center, and peaking near the top left. The figure grounds the entire structure. The composition utilizes the rule of thirds
-Ratio: portrait orientation 8:10 aspect ratio.,,error,exception TypeError: fetch failed sending request
+Ratio: portrait orientation 8:10 aspect ratio.,,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
 The lighting is dramatic and high-contrast. A strong light source illuminates the orange fabric, highlighting the texture and creating deep shadows within the folds, which enhances the dimensionality. The light appears to be coming from the front-left, illuminating the woman's right side. 
-Camera,,error,exception TypeError: fetch failed sending request
+Camera,outputs/image-batch/image-1466-1767112054944.png,done,
 "High-Resolution Full-Frame Digital SLR or Mirrorless Camera ( Canon R). A medium telephoto prime lens ( 85mm or 105mm).  Aperture : Moderately wide (f/4 to f/5.6). Shutter Speed: Fast (1/200 to 1/500 sec). ISO: Low (ISO100).
 A list of eight color names is written in crayons of the corresponding color"," but four are wrong. These four are marked with a red-ink rubber stamp that says “Wrong!”
 Make a 4×4 grid starting with the 1880s. In each section", I should appear styled according to that decade (clothing, hairstyle
@@ -1676,7 +1676,7 @@ Make a 4×4 grid starting with the 1880s. In each section", I should appear styl
  She is looking into a rustic, antique mirror framed with decorative tiles and surrounded by lush green foliage that grows around and over it, suggesting an indoor space with an outdoor feel or a sunroom.  The background is gently blurred," emphasiz
 A photorealistic ESC keycap scene shows a miniature cozy living room from 90s.. Inside: a glowing nostalgic of 90s screen with a video game playing"
 This is a very popular style in modern Indian digital art. The artist likely started with a photograph and digitally painted over it, smudging the pixels to remove skin texture and adding brush strokes to the hair and clothes.,,
-Lighting:,,error,exception TypeError: fetch failed sending request
+Lighting:,outputs/image-batch/image-1474-1767112054990.png,done,
 The lighting is soft and diffuse (studio style). The shadows under the chin and along the side of the neck are soft, avoiding harsh contrast.Background:,,
 The background is a textured, abstract blend of brown and sepia tones.,,
 This neutral, earthy backdrop ensures that the viewer's focus remains entirely on the subject's face.,,
@@ -1684,8 +1684,8 @@ The painting evokes a sense of divinity, tradition, and serenity.,
 The direct gaze of the subject combined with the traditional attire creates a respectful and dignified portrait, often used for matrimonial profiles, memorial portraits," or commemorative gifts
 浮世絵師・葛飾北斎が描いたような和風インフォグラフィックにして。波や雲の装飾を入れ、文字は江戸文字（勘亭流）で。カラーパレットは墨・藍・朱・淡黄のみ。現代のデータを侍や町娘が解説している構図で。
 Create a PlayStation 5 game cover in the style of GTA VI. Use the man from the provided photo as the main character"
-乔布斯的一生就是一场史诗：车库创业、被驱逐、流亡、归来、改变世界。这种起伏和张力，用中土世界的框架来呈现，竟然意外地契合。,,error,exception TypeError: fetch failed sending request
-每个人心中都有一座中土世界，而真正的冒险从来不是征服已知，而是怀着敬畏之心，踏入未知的迷雾。,,error,exception TypeError: fetch failed sending request
+乔布斯的一生就是一场史诗：车库创业、被驱逐、流亡、归来、改变世界。这种起伏和张力，用中土世界的框架来呈现，竟然意外地契合。,outputs/image-batch/image-1480-1767112055165.png,done,
+每个人心中都有一座中土世界，而真正的冒险从来不是征服已知，而是怀着敬畏之心，踏入未知的迷雾。,outputs/image-batch/image-1481-1767112055278.png,done,
 Stay hungry," stay foolish.
 {image_generation_parameters:{resolution:1200x1200px",aspect_ratio:1:1,reference_usage:Preserve facial features from reference image strictly}
 Michael Jackson is in the foreground, mid-dance, with sweat on his skin, a white sequined jacket reflecting the flash intensely. Prince is behind him
@@ -1717,24 +1717,24 @@ Top Right: The woman is holding a small white pot with a green plant, smiling wa
 Bottom Left: The woman is holding a pink plush teddy bear, looking directly at the camera with a serene expression. She is wearing a white top and fuzzy pink sleeves.,,
 Bottom Right: The woman is posing with one hand gently touching her chin, looking directly at the camera with a thoughtful expression. She is wearing a white top and fuzzy pink sleeves, with her left sleeve draped over her hand.,
 All four images maintain consistent soft, warm lighting and a cozy, inviting atmosphere. The background is a blurred indoor setting with light, neutral tones
-画中描绘着一位绝美的卡通风女子正面特写头像，她神态柔美而宁静。墙体顶部被一大片盛开的蔷薇花覆盖，茂密的绿叶与繁盛的花朵向外舒展，部分枝条从墙顶垂落而下，与女子的头发巧妙融合，使她的秀发宛如由层层叠叠的蔷薇花组成。这些繁密的花朵簇拥着女子的头部，形成了一顶瑰丽的花冠，视觉效果华美浪漫。,,error,exception TypeError: fetch failed sending request
+画中描绘着一位绝美的卡通风女子正面特写头像，她神态柔美而宁静。墙体顶部被一大片盛开的蔷薇花覆盖，茂密的绿叶与繁盛的花朵向外舒展，部分枝条从墙顶垂落而下，与女子的头发巧妙融合，使她的秀发宛如由层层叠叠的蔷薇花组成。这些繁密的花朵簇拥着女子的头部，形成了一顶瑰丽的花冠，视觉效果华美浪漫。,outputs/image-batch/image-1510-1767112056952.png,done,
 "背景中蓝天澄澈，点缀着朵朵白云；地面为一条细节真实的沥青街道，上面散落着缤纷多彩的花瓣，行人悠然漫步其间。整体场景细节精致入微，光影明亮柔和，营造出犹如现实般的梦幻街景氛围。
 {subject:{description:A young woman taking a mirror selfie with very long voluminous dark waves and soft wispy bangs",age:young adult,expression:confident and slightly playful,hair:{color:dark
-画面为黄昏时分，天空云霞绚丽，大片留白凸显意境；,,error,exception TypeError: fetch failed sending request
-刘备、关羽、张飞三人乘坐一辆疾驰的红色双排座宝马轿车在尘土飞扬的古代战场急转漂移——,,error,exception TypeError: fetch failed sending request
-刘备坐在驾驶位，双手紧握方向盘，神情专注严肃；,,error,exception TypeError: fetch failed sending request
-关羽坐在副驾驶，神情悠然，手持梳子对着后视镜悠闲梳理垂胸长髯，胡须飘逸夸张；,,error,exception TypeError: fetch failed sending request
+画面为黄昏时分，天空云霞绚丽，大片留白凸显意境；,outputs/image-batch/image-1512-1767112057127.png,done,
+刘备、关羽、张飞三人乘坐一辆疾驰的红色双排座宝马轿车在尘土飞扬的古代战场急转漂移——,outputs/image-batch/image-1513-1767112058304.png,done,
+刘备坐在驾驶位，双手紧握方向盘，神情专注严肃；,outputs/image-batch/image-1514-1767116614299.png,done,
+关羽坐在副驾驶，神情悠然，手持梳子对着后视镜悠闲梳理垂胸长髯，胡须飘逸夸张；,outputs/image-batch/image-1515-1767112059852.png,done,
 张飞在后排表情嚣张，朝身后追赶者从窗户竖起中指，姿势夸张，喜剧效果明显；,outputs/image-batch/image-1516-1767111805503.png,done,
 宝马轿车的车体与轮胎透视夸张拉伸，明显体现高速飘逸带来的强烈动感；,outputs/image-batch/image-1517-1767111805510.png,done,
 后方远处吕布头戴雉翎金冠、身穿古代铠甲，头盔飘带飞扬，骑着一辆复古红色哈雷摩托，奋力追赶宝马车，高举方天画戟怒吼，动作与神情极为夸张，充满戏剧冲突；,outputs/image-batch/image-1518-1767111805515.png,done,
-整体采用传统写意水墨笔触配合淡彩晕染，颜色柔和典雅，墨色层次丰富细腻；,,error,No image data returned by provider.
+整体采用传统写意水墨笔触配合淡彩晕染，颜色柔和典雅，墨色层次丰富细腻；,outputs/image-batch/image-1519-1767116711928.png,done,
 "保留传统朱印（“寶玉印”）题款于画面适当位置，结合适度的留白处理，营造出强烈的古典幽默感与现代元素的奇妙融合效果。
 {image_generation_data:{title:Femme Fatale in Film Noir - Structured",version:2.0,components:{meta_quality_and_style:{overall_quality:[Masterpiece,best quality
 Her hair, highlighted subtly with shades of purple and brown, catches the sunlight as she gently holds one of the roses between her fingers. Her expression is serene, peaceful
 She holds a shiny red apple near her lips with a soft, enchanting smile, giving a warm and inviting expression. Her long, silky
 Soft diffused sunlight filters through the background, adding a dreamy golden glow and enhancing the depth of field. Bokeh highlights sparkle gently around the flowers, giving a cinematic, storybook look. Ultra-detailed textures on the dress fabric
 卡片上方以红黑相间、对比鲜明的大号毛笔草书字体突出标题，吸引视觉焦点。文字内容均采用中文草书，整体布局分为2至4个清晰的小节，每节以简短、精炼的中文短语表达核心要点。字体保持草书流畅的韵律感，既清晰可读又富有艺术气息。,outputs/image-batch/image-1524-1767111805524.png,done,
-卡片中点缀简单、有趣的手绘插画或图标，例如人物或象征符号，以增强视觉吸引力，引发读者思考与共鸣。整体布局注意视觉平衡，预留足够的空白空间，确保画面简洁明了，易于阅读和理解。,,error,No image data returned by provider.
+卡片中点缀简单、有趣的手绘插画或图标，例如人物或象征符号，以增强视觉吸引力，引发读者思考与共鸣。整体布局注意视觉平衡，预留足够的空白空间，确保画面简洁明了，易于阅读和理解。,outputs/image-batch/image-1525-1767116615473.png,done,
 "主题是：“做IP是长期复利，坚持每日出摊，持续做，肯定会有结果，因为99%都坚持不住的。”
 {prompt:{positive:High-resolution vertical portrait", 4K quality. A woman with wavy black hair, slightly damp. Dreamy soft gaze looking up toward the camera. Wearing an oversized slate grey/teal hoodie. Leaning against a wall covered with messy posters, flyers
 ・上半身のみ使用、ポーズと表情を楽しげに,outputs/image-batch/image-1527-1767111805535.png,done,
@@ -1752,7 +1752,7 @@ Retro starship-style backpack thrusters, with magenta and teal plasma vents,,
 Arm-mounted “Funk Cannons” (Captain HaHaa signature),outputs/image-batch/image-1534-1767111805550.png,done,
 Legs with mirrored chrome panels reflecting cosmic colours,outputs/image-batch/image-1535-1767111805552.png,done,
 Foot stabilizers shaped like mini hover-skids,outputs/image-batch/image-1536-1767111805554.png,done,
-10 labels describing each unique feature:,,error,No image data returned by provider.
+10 labels describing each unique feature:,outputs/image-batch/image-1537-1767116743360.png,done,
 HaHaa-Crest Antenna (boomerang-shape),outputs/image-batch/image-1538-1767111805562.png,done,
 CRT Chest Display Plates,outputs/image-batch/image-1539-1767111805564.png,done,
 Core-Funk Block Unit,outputs/image-batch/image-1540-1767111805567.png,done,
@@ -1785,13 +1785,13 @@ Use my image in Hyper-ultra realistic 8K cinematic portrait"
 1/7フィギュアです。,outputs/image-batch/image-1561-1767111837942.png,done,
 メーカー名は「TENNEN」です。,outputs/image-batch/image-1562-1767111838639.png,done,
 ロゴは角丸青色正方形にTENNENの文字,outputs/image-batch/image-1563-1767111839346.png,done,
-「TEN」で改行、文頭揃えて「NEN」,,error,No image data returned by provider.
+「TEN」で改行、文頭揃えて「NEN」,,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
 角丸青色正方形内に最大配置。,outputs/image-batch/image-1565-1767111842778.png,done,
 部分拡大図等を配置して製品紹介らしく,outputs/image-batch/image-1566-1767111842909.png,done,
 見栄え良くプロっぽくデザインしてください。,outputs/image-batch/image-1567-1767111846053.png,done,
 「失恋ガールズ」もロゴっぽくしてください。,outputs/image-batch/image-1568-1767111849216.png,done,
 製品紹介ページらしくしてください。,outputs/image-batch/image-1569-1767111849324.png,done,
-2025年冬発売予定,,error,No image data returned by provider.
+2025年冬発売予定,outputs/image-batch/image-1570-1767116616280.png,done,
 "原型製作：てんねん
 {image_request:{prompt:Photorealistic portrait of a young woman with dark brown hair styled in a half-updo with pearl accents. She is leaning back against a rustic dark wooden doorframe. She is wearing a white lace bralette and a sheer white ruffled skirt. Her left arm is raised with her hand lightly touching the top of her head", gazing thoughtfully upwards to the side. She holds a woven gold clutch in her right hand near her hip. Soft, elegant lighting. Text overlay signature in the bottom corner: 'Shreya Yadav',negative_prompt:cartoon
 **Composition:** She is positioned centrally, her hand gently resting on the braided bridle of a magnificent, muscular **purebred black Arabian horse**. The horse's coat is gleaming, contrasting sharply with the environment.
@@ -1808,71 +1808,71 @@ The field is filled with these flowers in every direction, stretching toward the
 She has medium-length wavy light brown hair, softly tousled by the wind, and a calm, introspective gaze directed slightly over her shoulder at the camera.
 Her skin glows naturally under the warm sunlight," with realistic soft shadows emphasizing he
 {subject:{description:A young woman in an HD editorial fashion portrait",age:young adult,expression:soft
- Visual_Concept: {,,error,No image data returned by provider.
+ Visual_Concept: {,outputs/image-batch/image-1584-1767112066545.png,done,
  Theme: Connection between human emotion and nature,outputs/image-batch/image-1585-1767111851585.png,done,
- Tone: Cinematic realism blending raw authenticity with poetic serenity,,error,No image data returned by provider.
+ Tone: Cinematic realism blending raw authenticity with poetic serenity,outputs/image-batch/image-1586-1767116669190.png,done,
  Lighting: Soft, diffused natural daylight under overcast conditions,,
  Color_Style: {,outputs/image-batch/image-1588-1767111852837.png,done,
 "Signature: Shreya Yadav
 {prompt:Hyper-realistic environmental portrait of a stylish young woman standing in a dense tropical bamboo forest. She is wearing a wide-brimmed black fedora hat", round dark sunglasses with thin metal frames, a plain black crew-neck t-shirt tucked in, and dark grey high-waisted trousers. She stands with a confident posture
-  image_description: {,,error,No image data returned by provider.
+  image_description: {,outputs/image-batch/image-1590-1767116616945.png,done,
     overall_composition: A moody, cinematic 2x2 collage featuring the same young woman,,
-    subject: {,,error,No image data returned by provider.
-      appearance: {,,error,No image data returned by provider.
+    subject: {,outputs/image-batch/image-1592-1767116616956.png,done,
+      appearance: {,outputs/image-batch/image-1593-1767116617397.png,done,
         hair: Short, tousled,,
         makeup: Bold red lipstick,outputs/image-batch/image-1595-1767111854393.png,done,
         style: Striking, androgynous editorial look,,
-      },,error,No image data returned by provider.
+      },,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
       attire: {,outputs/image-batch/image-1598-1767111854872.png,done,
         suit: Oversized black suit,shirt: Loose white dress shirt with an open collar,,
         tie: Patterned tie hanging untied around her neck,outputs/image-batch/image-1600-1767111854904.png,done,
-      },,error,No image data returned by provider.
-    },,error,No image data returned by provider.
+      },outputs/image-batch/image-1601-1767116618059.png,done,
+    },outputs/image-batch/image-1602-1767116712036.png,done,
     environment: {,outputs/image-batch/image-1603-1767111855458.png,done,
       setting: Old stairway in a dimly lit interior,outputs/image-batch/image-1604-1767111855541.png,done,
       lighting: Warm, amber-toned lighting,,
-      details: [,,error,No image data returned by provider.
+      details: [,outputs/image-batch/image-1606-1767116618770.png,done,
         Worn black railings,outputs/image-batch/image-1607-1767111856052.png,done,
         Textured walls,outputs/image-batch/image-1608-1767111856256.png,done,
         Soft ambient glow,outputs/image-batch/image-1609-1767111856527.png,done,
-      ],,error,No image data returned by provider.
-    },,error,No image data returned by provider.
+      ],outputs/image-batch/image-1610-1767116619989.png,done,
+    },,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
     frames: {,outputs/image-batch/image-1612-1767111857262.png,done,
-      top_left: {,,error,No image data returned by provider.
+      top_left: {,outputs/image-batch/image-1613-1767116669600.png,done,
         pose: Sitting on the steps, leaning forward with chin resting on hand,lighting: Warm low-key lighting,
       texture: Textured shadows, slight grain,,
       depth: Cinematic depth,outputs/image-batch/image-1616-1767111857513.png,done,
       aspect_ratio: 1:1 per frame, arranged in a 2x2 grid,,
-      camera_settings: {,,error,No image data returned by provider.
-        lens: 35mm,,error,No image data returned by provider.
-        aperture: f/1.8,,error,No image data returned by provider.
-        iso: 400,,error,No image data returned by provider.
-        shutter_speed: 1/160s,,error,No image data returned by provider.
-      },,error,No image data returned by provider.
+      camera_settings: {,outputs/image-batch/image-1618-1767112075136.png,done,
+        lens: 35mm,outputs/image-batch/image-1619-1767116620473.png,done,
+        aperture: f/1.8,outputs/image-batch/image-1620-1767116669700.png,done,
+        iso: 400,outputs/image-batch/image-1621-1767116743437.png,done,
+        shutter_speed: 1/160s,,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
+      },,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
       overall_look: Moody editorial collage with vintage tones, expressive posing, and rich atmosphere,
-    },,error,No image data returned by provider.
-  },,error,No image data returned by provider.
+    },outputs/image-batch/image-1625-1767116621960.png,done,
+  },,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
 }pose: Face slightly tilted toward the camera,outputs/image-batch/image-1627-1767111859576.png,done,
-        details: [,,error,No image data returned by provider.
+        details: [,outputs/image-batch/image-1628-1767116669782.png,done,
           Red lipstick contrasting with the dark suit,outputs/image-batch/image-1629-1767111860361.png,done,
           Hair falling freely across her cheeks,outputs/image-batch/image-1630-1767111860418.png,done,
         ],outputs/image-batch/image-1631-1767111860961.png,done,
-      },,error,No image data returned by provider.
-      bottom_right: {,,error,No image data returned by provider.
+      },outputs/image-batch/image-1632-1767112078354.png,done,
+      bottom_right: {,,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
         pose: Sitting with legs apart, elbow resting on knee, one hand lightly touching her lips,
         expression: Edgy, confident,,
         background: Railings and background blur softly behind her,outputs/image-batch/image-1636-1767111862982.png,done,
-      },,error,No image data returned by provider.
-    },,error,No image data returned by provider.
+      },outputs/image-batch/image-1637-1767116669874.png,done,
+    },,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
     visual_style: {gaze: Angled to the side,outputs/image-batch/image-1639-1767111864147.png,done,
         lighting_effect: Warm shadows sculpting her features and highlighting messy hair texture,outputs/image-batch/image-1640-1767111864167.png,done,
-      },,error,No image data returned by provider.
-      top_right: {,,error,No image data returned by provider.
+      },outputs/image-batch/image-1641-1767116712689.png,done,
+      top_right: {,,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
         pose: Gripping her hair with both hands, elbows wide, leaning forward with intensity,
-        lighting_effect: Emphasizes her eyes and dramatic expression,,error,No image data returned by provider.
-        clothing_detail: Suit drapes loosely around her,,error,No image data returned by provider.
-      },,error,No image data returned by provider.
-      bottom_left: {,,error,No image data returned by provider.
+        lighting_effect: Emphasizes her eyes and dramatic expression,outputs/image-batch/image-1644-1767112079814.png,done,
+        clothing_detail: Suit drapes loosely around her,outputs/image-batch/image-1645-1767112080119.png,done,
+      },outputs/image-batch/image-1646-1767116670524.png,done,
+      bottom_left: {,outputs/image-batch/image-1647-1767112081220.png,done,
         perspective: Close-up from a lower angle,"
 {description:A dramatic black-and-white close-up portrait of a woman standing in the rain.",subject:{gender:female,pose:side profile
 Story: A young man has a two-block haircut, parted slightly down the middle (70:30 ratio). He wears an oversized, washed black denim jacket over a plain white crew-neck t-shirt, paired with faded blue cargo jeans. His accessories consist of simple silver rings on his middle and ring fingers
@@ -1880,12 +1880,12 @@ He sat on a wooden bench outdoors in front of a coffee shop with a blurred sign 
 He poses casually, but still in a high-fashion way, and he looks directly into the camera with a calm and neutral expression.,
 Natural cosmetics, natural lip color, use soft, natural evening light
 intense shadow,outputs/image-batch/image-1653-1767111867968.png,done,
-Area 1,,error,No image data returned by provider.
+Area 1,outputs/image-batch/image-1654-1767112081224.png,done,
 Camera settings: f/1.8, ISO 200, 85mm lens,"
 A cinematic"
 location = his_room,outputs/image-batch/image-1656-1767111869737.png,done,
 time = cold winter morning,outputs/image-batch/image-1657-1767111870325.png,done,
-subject = same man as reference,,error,No image data returned by provider.
+subject = same man as reference,outputs/image-batch/image-1658-1767116670561.png,done,
 pose = sitting on bed, holding a warm cup of tea,,
 outfit = cozy winter outfit, soft textures, warm layers,
 lighting = minimal, soft natural morning light through window, full focus on him,
@@ -1911,34 +1911,34 @@ Story: A young man has a two-block haircut, parted slightly down the middle (70:
 He sat on a wooden bench outdoors in front of a coffee shop with a blurred sign that said BLACK COFFEE.He poses casually, but still in a high-fashion way, and he looks directly into the camera with a calm and neutral expression.,
 Natural cosmetics, natural lip color, use soft, natural evening light
 intense shadow,outputs/image-batch/image-1677-1767111877918.png,done,
-Area 1,,error,No image data returned by provider.
+Area 1,outputs/image-batch/image-1678-1767112081899.png,done,
 Camera settings: f/1.8, ISO 200, 85mm lens,"
 {"
   title: High-Contrast Monochrome Side-Profile Rim-Lit Portrait (use user face reference),outputs/image-batch/image-1680-1767111878777.png,done,
-  model: stable-diffusion-xl-v1-0, ,error,No image data returned by provider.
-  size: 2048x3072,,error,No image data returned by provider.
+  model: stable-diffusion-xl-v1-0, ,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
+  size: 2048x3072,outputs/image-batch/image-1682-1767116670794.png,done,
   reference_image: face.jpg,outputs/image-batch/image-1683-1767111882790.png,done,
   use_reference_for: [face, hairstyle, skin_tone, facial_proportions]
   prompt: Use the provided face reference (preserve identity and same short hairstyle, no face-morphing). Create a stark, high-contrast black-and-white side-profile portrait (monochrome). Subject: gender-neutral / slightly masculine, short hair
   negative_prompt: no color, no makeup exaggeration, no glasses, no jewelry
   sampling: {,outputs/image-batch/image-1687-1767111883777.png,done,
-    sampler: Euler a,,error,No image data returned by provider.
+    sampler: Euler a,,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
     steps: 28,outputs/image-batch/image-1689-1767111884141.png,done,
-    cfg_scale: 7.5,,error,No image data returned by provider.
-    seed: -1,,error,No image data returned by provider.
-  },,error,No image data returned by provider.
-  postprocessing: {,,error,No image data returned by provider.
+    cfg_scale: 7.5,,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
+    seed: -1,outputs/image-batch/image-1691-1767116671163.png,done,
+  },outputs/image-batch/image-1692-1767116671437.png,done,
+  postprocessing: {,outputs/image-batch/image-1693-1767116623999.png,done,
     convert_to_monochrome: true,outputs/image-batch/image-1694-1767111888000.png,done,
-    contrast_boost: 1.4,,error,No image data returned by provider.
-    sharpen_edges: true,,error,No image data returned by provider.
+    contrast_boost: 1.4,outputs/image-batch/image-1695-1767116712938.png,done,
+    sharpen_edges: true,outputs/image-batch/image-1696-1767112083468.png,done,
     add_film_grain: subtle,outputs/image-batch/image-1697-1767111891017.png,done,
-  },,error,No image data returned by provider.
-  safety: {,,error,No image data returned by provider.
-    preserve_identity: true,,error,No image data returned by provider.
-    allow_face_reference: true,,error,No image data returned by provider.
-    consent_required: user_provided_reference,,error,No image data returned by provider.
+  },outputs/image-batch/image-1698-1767116624154.png,done,
+  safety: {,outputs/image-batch/image-1699-1767116671889.png,done,
+    preserve_identity: true,,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
+    allow_face_reference: true,outputs/image-batch/image-1701-1767116624707.png,done,
+    consent_required: user_provided_reference,,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
     face_editing_rules: do not alter identity, maintain hairstyle, no age or gender shifting beyond subtle photorealistic lighting effects,
-  },,error,No image data returned by provider.
+  },,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
   notes_for_operator: Attach the user's reference image as 'face.jpg' before running. Verify the generator uses the reference only for face & hairstyle; enforce strict negative prompts to prevent stylization or background artifacts. Output requested: one high-resolution PNG," monochrome.
 {Objective:Generate a structured JSON version of a cinematic portrait prompt describing a young man in a modern art gallery.",Scene_Details:{Environment:Modern art gallery with polished concrete floors, soft reflected lighting
 Her upper body and arms are covered in detailed black-and-grey tattoos: large floral pieces, bold linework, realistic shading, and a coiled dragon tattoo across her lower abdomen. Her neck features layered ornamental motifs. Tattoos look slightly textured.
@@ -1974,27 +1974,27 @@ The model wears a thick wool or felt coat, with richly defined textures atop the
   title: Evening Cityscape Portrait on a Bridge,outputs/image-batch/image-1733-1767111896779.png,done,
   prompt_text: A full-body portrait of a young adult female model standing on an ornate stone bridge railing at dusk. She has wavy, shoulder-length dark brown hair, styled with volume. Her makeup is glamorous with bold red lipstick and defined eyes. She is wearing a short, form-fitting black mini-dress with a slight ruching effect
   negative_prompt: blurry, low quality, deformed, disfigured
-  model_tags: [,,error,No image data returned by provider.
-    Dusk Photography,,error,No image data returned by provider.
+  model_tags: [,,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
+    Dusk Photography,outputs/image-batch/image-1737-1767112084884.png,done,
     Cityscape Portrait,outputs/image-batch/image-1738-1767111897205.png,done,
     Glamour Shot,outputs/image-batch/image-1739-1767111897271.png,done,
     Street Photography (styled),outputs/image-batch/image-1740-1767111897322.png,done,
   ],outputs/image-batch/image-1741-1767111899592.png,done,
   camera_and_composition: {,outputs/image-batch/image-1742-1767111899937.png,done,
     shot_type: Full Body Shot,outputs/image-batch/image-1743-1767111900708.png,done,
-    angle: Eye-level perspective with a slight upward tilt to capture the sky and background architecture.,,error,No image data returned by provider.
+    angle: Eye-level perspective with a slight upward tilt to capture the sky and background architecture.,outputs/image-batch/image-1744-1767112084945.png,done,
     framing: Vertical orientation, subject positioned slightly to the left, following the rule of thirds, with the background cityscape filling the right side and upper half of the frame.
-    focal_length_mm: 35,,error,No image data returned by provider.
+    focal_length_mm: 35,,error,"{""error"":{""code"":429,""message"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_requests_per_model_per_day, limit: 0"",""status"":""RESOURCE_EXHAUSTED"",""details"":[{""@type"":""type.googleapis.com/google.rpc.Help"",""links"":[{""description"":""Learn more about Gemini API quotas"",""url"":""https://ai.google.dev/gemini-api/docs/rate-limits""}]},{""@type"":""type.googleapis.com/google.rpc.QuotaFailure"",""violations"":[{""quotaMetric"":""generativelanguage.googleapis.com/generate_requests_per_model_per_day"",""quotaId"":""GenerateRequestsPerDayPerProjectPerModel""}]}]}}"
     depth_of_field: Moderate, ensuring both the subject and the immediate background (bridge, close city lights) are in focus, with a slight softness on the most distant elements.
-    implied_aperture: f/4.0 - f/5.6,,error,No image data returned by provider.
-  },,error,No image data returned by provider.
-  lighting_and_atmosphere: {,,error,No image data returned by provider.
+    implied_aperture: f/4.0 - f/5.6,outputs/image-batch/image-1748-1767116677887.png,done,
+  },outputs/image-batch/image-1749-1767116626402.png,done,
+  lighting_and_atmosphere: {,outputs/image-batch/image-1750-1767112085783.png,done,
     lighting_type: Natural ambient light (dusk) mixed with artificial city lights.,outputs/image-batch/image-1751-1767111903089.png,done,
-    light_source_position: Ambient twilight light from above and behind; warm artificial lights from the city architecture and bridge provide highlights.,,error,No image data returned by provider.
+    light_source_position: Ambient twilight light from above and behind; warm artificial lights from the city architecture and bridge provide highlights.,outputs/image-batch/image-1752-1767116685149.png,done,
     shadow_detail: Soft, diffused shadows appropriate for dusk, with brighter highlights on the subject's face and shoulders from ambient light and reflections.,
     color_grading: Cool tones in the sky and water, warm golden tones from the city lights, creating a balanced and rich twilight palette.,
-  },,error,No image data returned by provider.
-  pose_and_expression: {,,error,No image data returned by provider.
+  },outputs/image-batch/image-1755-1767112085966.png,done,
+  pose_and_expression: {,outputs/image-batch/image-1756-1767116626819.png,done,
     pose_key_points: One hand gently touching her hair on the right side of her head; the other arm relaxed, resting on the bridge railing. Body slightly turned towards the camera, leaning against the railing.,
     expression: Soft, direct gaze at the camera with a subtle, confident expression; slightly parted lips.,
     body_language: Relaxed and elegant, showcasing the outfit and the scenic backdrop.,,

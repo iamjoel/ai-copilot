@@ -62,6 +62,27 @@ const RAW_MODEL_GROUPS = [
     ],
   },
   {
+    provider: "anthropic",
+    providerLabel: "Claude",
+    options: [
+      {
+        label: "Claude Sonnet 4.5",
+        value: "claude-sonnet-4-5",
+        model: "claude-sonnet-4-5",
+      },
+      {
+        label: "Claude Haiku 4.5",
+        value: "claude-haiku-4-5",
+        model: "claude-haiku-4-5",
+      },
+      {
+        label: "Claude Opus 4.5",
+        value: "claude-opus-4-5",
+        model: "claude-opus-4-5",
+      },
+    ],
+  },
+  {
     provider: "openai",
     providerLabel: "OpenAI",
     options: [

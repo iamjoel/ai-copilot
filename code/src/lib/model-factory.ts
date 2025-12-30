@@ -1,5 +1,6 @@
 import "@/lib/add-proxy";
 import { createGoogleGenerativeAI, google } from "@ai-sdk/google";
+import { createAnthropic } from "@ai-sdk/anthropic";
 import { createOpenAI } from "@ai-sdk/openai";
 import { createOpenRouter } from '@openrouter/ai-sdk-provider'
 import { jinaUrlContext } from "./tools/jina-reader";
@@ -7,7 +8,15 @@ import { stepCountIs } from "ai";
 import { QINIU_BASE_URL } from "@/config";
 import jinaReader from "@/prompts/jina-reader";
 
-export type Provider = "google" | "openai" | "deepseek" | "qwen" | "kimi" | "minimax" | "xiaomi";
+export type Provider =
+  | "google"
+  | "openai"
+  | "deepseek"
+  | "qwen"
+  | "kimi"
+  | "minimax"
+  | "xiaomi"
+  | "anthropic";
 
 
 function getQiniuChatModel(providerName: string, modelName: string) {
@@ -38,6 +47,13 @@ export function getModel(provider: Provider, modelName: string) {
   if (provider === "google") {
     const client = createGoogleGenerativeAI({
       apiKey: process.env.GOOGLE_GENERATIVE_AI_API_KEY!,
+    });
+    return client(modelName);
+  }
+
+  if (provider === "anthropic") {
+    const client = createAnthropic({
+      apiKey: process.env.ANTHROPIC_API_KEY!,
     });
     return client(modelName);
   }

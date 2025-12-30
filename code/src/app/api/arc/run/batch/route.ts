@@ -4,10 +4,8 @@ import {
   readArcCsv,
   writeArcCsv,
   withDatasetLock,
-  QWEN_RESULT_COLUMNS,
   type ArcDatasetType,
   type ArcChoice,
-  type ArcModelKey,
 } from "@/lib/arc-dataset";
 import { getModel } from "@/lib/model-factory";
 import { generateText } from "ai";
@@ -16,31 +14,61 @@ export const runtime = "nodejs";
 
 type BatchRunRequest = {
   n?: number;
-  model?: ArcModelKey;
+  model?: BatchModelKey;
   datasetType?: ArcDatasetType;
 };
 
 type ModelColumn = {
-  model: ArcModelKey;
+  model: BatchModelKey;
+  provider: "qwen" | "anthropic";
   columnName: string;
   modelName: string;
 };
 
+type BatchModelKey =
+  | "qwen-flash"
+  | "qwen-plus"
+  | "qwen3-max"
+  | "claude-sonnet-4-5"
+  | "claude-haiku-4-5"
+  | "claude-opus-4-5";
+
 const MODEL_COLUMNS: ModelColumn[] = [
   {
     model: "qwen-flash",
-    columnName: QWEN_RESULT_COLUMNS["qwen-flash"],
+    provider: "qwen",
+    columnName: "Qwen Flash",
     modelName: "qwen-flash",
   },
   {
     model: "qwen-plus",
-    columnName: QWEN_RESULT_COLUMNS["qwen-plus"],
+    provider: "qwen",
+    columnName: "Qwen Plus",
     modelName: "qwen-plus",
   },
   {
     model: "qwen3-max",
-    columnName: QWEN_RESULT_COLUMNS["qwen3-max"],
+    provider: "qwen",
+    columnName: "Qwen3 max",
     modelName: "qwen3-max",
+  },
+  {
+    model: "claude-sonnet-4-5",
+    provider: "anthropic",
+    columnName: "Claude Sonnet 4.5",
+    modelName: "claude-sonnet-4-5",
+  },
+  {
+    model: "claude-haiku-4-5",
+    provider: "anthropic",
+    columnName: "Claude Haiku 4.5",
+    modelName: "claude-haiku-4-5",
+  },
+  {
+    model: "claude-opus-4-5",
+    provider: "anthropic",
+    columnName: "Claude Opus 4.5",
+    modelName: "claude-opus-4-5",
   },
 ];
 
@@ -116,7 +144,7 @@ export async function POST(request: Request) {
 
       const startTime = Date.now();
       const result = await generateText({
-        model: getModel("qwen", modelConfig.modelName),
+        model: getModel(modelConfig.provider, modelConfig.modelName),
         prompt: buildArcPrompt(question, choices),
       });
       const elapsedSeconds = (Date.now() - startTime) / 1000;
@@ -138,9 +166,10 @@ export async function POST(request: Request) {
       });
 
       processed += 1;
-      logger.info({
-        result: `Completed row ${index + 1}/${runCount}`,
-      });
+      // logger.info({
+      //   result: `Completed row ${index + 1}/${runCount}`,
+      // });
+      console.log(`Completed row ${index + 1}/${runCount}`)
 
       writeArcCsv(datasetType, header, rows);
     }

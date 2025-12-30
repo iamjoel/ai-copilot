@@ -166,10 +166,9 @@ export async function POST(request: Request) {
       });
 
       processed += 1;
-      // logger.info({
-      //   result: `Completed row ${index + 1}/${runCount}`,
-      // });
-      console.log(`Completed row ${index + 1}/${runCount}`)
+      logger.info({
+        result: `Completed row ${index + 1}/${runCount}`,
+      });
 
       writeArcCsv(datasetType, header, rows);
     }

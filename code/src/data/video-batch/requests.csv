@@ -1,0 +1,13 @@
+input,output,status,error
+Panning wide shot of a calico kitten sleeping in the sunshine,outputs/video-batch/video-1-1767082517496.mp4,done,
+A close up of two people staring at a cryptic drawing on a wall,outputs/video-batch/video-2-1767082925176.mp4,done,
+生成一段30秒的视频，风格为电影级纪实风，主题是清晨的城市苏醒。画面包含日出、街道、行人，镜头节奏由慢到快，整体色调偏冷，情绪克制而真实。,outputs/video-batch/video-3-1767083003313.mp4,done,
+生成一段20秒的产品宣传视频，主题为AI写作助手。画面以UI界面演示为主，穿插使用场景，风格现代、干净、科技感强，无夸张特效。,,,
+生成一段15秒的视频，用于解释什么是AI Agent。要求使用抽象图形和流程动画，避免真人出镜，整体风格偏教育向、清晰、理性。,,,
+生成一段30秒的旅行视频，主题为江南水乡。要求画面柔和、慢节奏，包含小桥、流水、白墙黑瓦，氛围安静、有生活气息。,,,
+生成一段10秒的短视频，用于社交媒体开场。主题是“未来工作方式”，风格偏未来感，快速剪辑，包含文字叠加和动态图形。,,,
+Generate a 30-second cinematic video introducing an AI-powered workflow platform. Use clean motion graphics, abstract system diagrams, and a calm narrator tone. No human faces.,
+Generate a 20-second explainer video about large language models for beginners. Use simple animations, icons, and clear visual metaphors. Educational and friendly style.,
+Generate a 15-second product demo video showing how an AI agent completes tasks automatically. Focus on screen interactions, smooth transitions, and a modern SaaS aesthetic.,
+Generate a 30-second inspirational video about building technology from zero to one. Use dramatic lighting, slow camera movements, and minimal text overlays.,
+Generate a 10-second looping background video for a website hero section. Abstract shapes, subtle motion, neutral colors, and no text.

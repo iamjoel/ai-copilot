@@ -119,11 +119,11 @@ token: 76, 75, 1
 time: 0.5s","answer: right
 token: 76, 75, 1
 time: 0.8s"
-NYSEDREGENTS_2015_8_28,All living and nonliving material is composed of,"{'text': array(['air', 'elements', 'water', 'soil'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",2,"answer: wrong (B)
+NYSEDREGENTS_2015_8_28,All living and nonliving material is composed of,"{'text': array(['air', 'elements', 'water', 'soil'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",B,"answer: right(B)
 token: 74, 73, 1
-time: 0.3s","answer: wrong (B)
+time: 0.3s","answer: right(B)
 token: 74, 73, 1
-time: 0.7s","answer: wrong (B)
+time: 0.7s","answer: right(B)
 token: 74, 73, 1
 time: 1.5s"
 Mercury_SC_401777,Which process best explains how the Grand Canyon became so wide?,"{'text': array(['folding', 'erosion', 'deposition', 'sedimentation'], dtype=object), 'label': array(['A', 'B', 'C', 'D'], dtype=object)}",B,"answer: right
@@ -222,11 +222,11 @@ time: 0.5s","answer: right
 token: 116, 115, 1
 time: 1.6s"
 NYSEDREGENTS_2015_8_21,Which factor is most likely to cause the number of rabbits living in an area to increase?,"{'text': array(['less water', 'fewer predators', 'lack of shelter', 'limited food'],
-      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",2,"answer: wrong (B)
+      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",B,"answer: right(B)
 token: 87, 86, 1
-time: 0.2s","answer: wrong (B)
+time: 0.2s","answer: right(B)
 token: 87, 86, 1
-time: 0.5s","answer: wrong (B)
+time: 0.5s","answer: right(B)
 token: 87, 86, 1
 time: 2.1s"
 VASoL_2008_5_12,"Seeds that remain inactive until the right conditions of light, water, and soil are present are called ___.","{'text': array(['pollen', 'dormant', 'flowers', 'recycled'], dtype=object), 'label': array(['A', 'B', 'C', 'D'], dtype=object)}",B,"answer: right
@@ -531,18 +531,18 @@ time: 0.5s","answer: right
 token: 122, 121, 1
 time: 0.7s"
 NYSEDREGENTS_2010_8_2,A student examined a rock sample and described it as having particles of various colors that were 1 millimeter to 12 millimeters in size. The student was making,"{'text': array(['an inference', 'a hypothesis', 'a prediction', 'an observation'],
-      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",4,"answer: wrong (D)
+      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",D,"answer: right(D)
 token: 103, 102, 1
-time: 0.2s","answer: wrong (D)
+time: 0.2s","answer: right(D)
 token: 103, 102, 1
-time: 0.5s","answer: wrong (D)
+time: 0.5s","answer: right(D)
 token: 103, 102, 1
 time: 0.9s"
-NYSEDREGENTS_2010_8_13,What are genes composed of?,"{'text': array(['offspring', 'DNA', 'cells', 'traits'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",2,"answer: wrong (B)
+NYSEDREGENTS_2010_8_13,What are genes composed of?,"{'text': array(['offspring', 'DNA', 'cells', 'traits'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",B,"answer: right(B)
 token: 70, 69, 1
-time: 0.2s","answer: wrong (B)
+time: 0.2s","answer: right(B)
 token: 70, 69, 1
-time: 0.9s","answer: wrong (B)
+time: 0.9s","answer: right(B)
 token: 70, 69, 1
 time: 1.7s"
 Mercury_177223,"In a classroom demonstration, a teacher pours sulfuric acid on some granulated sugar in a beaker. The sugar turns yellow and then black. Smoke rises and a strong smell is released. This demonstration is an example of what kind of change?","{'text': array(['chemical', 'physical', 'magnetic', 'electric'], dtype=object), 'label': array(['A', 'B', 'C', 'D'], dtype=object)}",A,"answer: right
@@ -775,19 +775,19 @@ time: 1.1s","answer: right
 token: 99, 98, 1
 time: 0.8s"
 NYSEDREGENTS_2010_8_14,An organism is born with a genetic abnormality not present in any of its ancestors. This abnormality is most likely the result of,"{'text': array(['circulation', 'competition', 'mutation', 'respiration'],
-      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",3,"answer: wrong (C)
+      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",C,"answer: right(C)
 token: 92, 91, 1
-time: 0.2s","answer: wrong (C)
+time: 0.2s","answer: right(C)
 token: 92, 91, 1
-time: 2.4s","answer: wrong (C)
+time: 2.4s","answer: right(C)
 token: 92, 91, 1
 time: 1.3s"
 NYSEDREGENTS_2015_8_24,The length of one day on Earth is determined by how long it takes,"{'text': array(['the Moon to revolve once', 'the Moon to rotate once',
-       'Earth to rotate once', 'Earth to revolve once'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",3,"answer: wrong (C)
+       'Earth to rotate once', 'Earth to revolve once'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",C,"answer: right(C)
 token: 95, 94, 1
-time: 0.2s","answer: wrong (C)
+time: 0.2s","answer: right(C)
 token: 95, 94, 1
-time: 0.7s","answer: wrong (C)
+time: 0.7s","answer: right(C)
 token: 95, 94, 1
 time: 2.3s"
 NYSEDREGENTS_2008_4_6,"When a rock is placed in a graduated cylinder containing water, the height of the water will","{'text': array(['decrease', 'increase', 'remain the same'], dtype=object), 'label': array(['A', 'B', 'C'], dtype=object)}",B,"answer: right
@@ -1281,11 +1281,11 @@ token: 96, 95, 1
 time: 0.5s","answer: right
 token: 96, 95, 1
 time: 0.5s"
-NYSEDREGENTS_2013_8_12,A cell's chromosomes contain,"{'text': array(['genes', 'chlorophyll', 'sperm', 'eggs'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",1,"answer: wrong (A)
+NYSEDREGENTS_2013_8_12,A cell's chromosomes contain,"{'text': array(['genes', 'chlorophyll', 'sperm', 'eggs'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",A,"answer: right(A)
 token: 72, 71, 1
-time: 0.2s","answer: wrong (A)
+time: 0.2s","answer: right(A)
 token: 72, 71, 1
-time: 0.5s","answer: wrong (A)
+time: 0.5s","answer: right(A)
 token: 72, 71, 1
 time: 0.8s"
 Mercury_7222845,Which of these events is an example of a change in climate?,"{'text': array(['Afternoon clouds form and block the sunlight.',
@@ -1476,11 +1476,11 @@ time: 0.4s","answer: right
 token: 111, 110, 1
 time: 0.6s"
 NYSEDREGENTS_2008_8_15,A broken bone heals through the process of,"{'text': array(['adaptation', 'mutation', 'cell division', 'chemical digestion'],
-      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",3,"answer: wrong (C)
+      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",C,"answer: right(C)
 token: 75, 74, 1
-time: 0.2s","answer: wrong (C)
+time: 0.2s","answer: right(C)
 token: 75, 74, 1
-time: 0.5s","answer: wrong (C)
+time: 0.5s","answer: right(C)
 token: 75, 74, 1
 time: 1.7s"
 ACTAAP_2015_5_7,Which is the best example of an object with kinetic energy?,"{'text': array(['a plate sitting on a table', 'a bird perching in a tree',
@@ -2271,11 +2271,11 @@ token: 100, 99, 1
 time: 0.7s","answer: right
 token: 100, 99, 1
 time: 0.4s"
-NYSEDREGENTS_2012_8_5,Which human organ system produces most of the hormones that regulate body functions?,"{'text': array(['digestive', 'nervous', 'muscular', 'endocrine'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",4,"answer: wrong (D)
+NYSEDREGENTS_2012_8_5,Which human organ system produces most of the hormones that regulate body functions?,"{'text': array(['digestive', 'nervous', 'muscular', 'endocrine'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",D,"answer: right(D)
 token: 79, 78, 1
-time: 0.2s","answer: wrong (D)
+time: 0.2s","answer: right(D)
 token: 79, 78, 1
-time: 0.7s","answer: wrong (D)
+time: 0.7s","answer: right(D)
 token: 79, 78, 1
 time: 0.5s"
 Mercury_7239138,"The complex, three-dimensional structure of a protein is sensitive to heat because the structure is maintained by","{'text': array(['hydrogen bonds.', 'covalent bonds.', 'Brownian motion.',
@@ -2505,11 +2505,11 @@ time: 0.6s"
 NYSEDREGENTS_2013_8_9,Which human body systems work directly together to allow locomotion?,"{'text': array(['circulatory, excretory, and respiratory',
        'circulatory, endocrine, and reproductive',
        'skeletal, muscular, and nervous',
-       'skeletal, digestive, and respiratory'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",3,"answer: wrong (C)
+       'skeletal, digestive, and respiratory'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",C,"answer: right(C)
 token: 101, 100, 1
-time: 0.2s","answer: wrong (C)
+time: 0.2s","answer: right(C)
 token: 101, 100, 1
-time: 0.6s","answer: wrong (C)
+time: 0.6s","answer: right(C)
 token: 101, 100, 1
 time: 0.8s"
 MCAS_2000_8_24,Which is the best evidence for the theory of continental drift?,"{'text': array(['the appearance of volcanoes at the boundaries where plates collide',
@@ -2859,11 +2859,11 @@ token: 98, 97, 1
 time: 0.7s","answer: right
 token: 98, 97, 1
 time: 0.9s"
-NYSEDREGENTS_2012_8_9,"In living things, traits are passed on from one generation to the next by the transfer of","{'text': array(['blood', 'minerals', 'Calories', 'DNA'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",4,"answer: wrong (D)
+NYSEDREGENTS_2012_8_9,"In living things, traits are passed on from one generation to the next by the transfer of","{'text': array(['blood', 'minerals', 'Calories', 'DNA'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",D,"answer: right(D)
 token: 83, 82, 1
-time: 0.2s","answer: wrong (D)
+time: 0.2s","answer: right(D)
 token: 83, 82, 1
-time: 0.6s","answer: wrong (D)
+time: 0.6s","answer: right(D)
 token: 83, 82, 1
 time: 0.9s"
 Mercury_SC_405783,Every organism in an ecosystem receives energy from another source. Which of these organisms receives its energy directly from the Sun?,"{'text': array(['deer', 'fungus', 'grass', 'hawk'], dtype=object), 'label': array(['A', 'B', 'C', 'D'], dtype=object)}",C,"answer: right
@@ -3119,11 +3119,11 @@ time: 0.9s"
 NYSEDREGENTS_2015_8_33,Heat transfer by conduction occurs when molecules,"{'text': array(['flow as currents through liquids',
        'form waves that travel through space',
        'become less dense and rise', 'collide with other molecules'],
-      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",4,"answer: wrong (D)
+      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",D,"answer: right(D)
 token: 89, 88, 1
-time: 0.2s","answer: wrong (D)
+time: 0.2s","answer: right(D)
 token: 89, 88, 1
-time: 0.6s","answer: wrong (D)
+time: 0.6s","answer: right(D)
 token: 89, 88, 1
 time: 1.1s"
 TIMSS_2007_8_pg34,The color of an object such as an apple is the same as the color the light waves,"{'text': array(['that travel through the object',
@@ -3168,11 +3168,11 @@ time: 0.6s","answer: right
 token: 119, 118, 1
 time: 0.7s"
 NYSEDREGENTS_2010_8_12,Cancer is most often the result of,"{'text': array(['abnormal cell division', 'natural selection',
-       'bacterial infection', 'biological adaptation'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",1,"answer: wrong (A)
+       'bacterial infection', 'biological adaptation'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",A,"answer: right(A)
 token: 77, 76, 1
-time: 0.3s","answer: wrong (A)
+time: 0.3s","answer: right(A)
 token: 77, 76, 1
-time: 0.5s","answer: wrong (A)
+time: 0.5s","answer: right(A)
 token: 77, 76, 1
 time: 0.6s"
 MDSA_2011_4_16,All organisms need food to survive. Which statement best describes the purpose of food for organisms?,"{'text': array(['Food provides skin color.', 'Food provides oxygen for life.',
@@ -3237,11 +3237,11 @@ time: 1.0s","answer: right
 token: 86, 85, 1
 time: 0.7s"
 NYSEDREGENTS_2008_8_10,A scientist crosses two different varieties of corn to produce a single variety that has traits from both parents. This technique is an example of,"{'text': array(['competition', 'natural selection', 'selective breeding',
-       'ecological succession'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",3,"answer: wrong (C)
+       'ecological succession'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",C,"answer: right(C)
 token: 94, 93, 1
-time: 0.3s","answer: wrong (C)
+time: 0.3s","answer: right(C)
 token: 94, 93, 1
-time: 0.7s","answer: wrong (C)
+time: 0.7s","answer: right(C)
 token: 94, 93, 1
 time: 0.8s"
 Mercury_SC_415584,A class measures the time it takes for two different trucks to drive across the parking lot. How can they tell which truck is faster?,"{'text': array(['The truck that starts moving first is faster.',
@@ -3378,11 +3378,11 @@ token: 88, 87, 1
 time: 0.5s","answer: right
 token: 88, 87, 1
 time: 0.9s"
-NYSEDREGENTS_2015_8_2,"A student viewing a cell with a microscope observes a cell wall, a cell membrane, and a nucleus. The presence of these structures indicates that the student is looking at a cell from a","{'text': array(['rabbit', 'carrot', 'worm', 'fly'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",2,"answer: wrong (B)
+NYSEDREGENTS_2015_8_2,"A student viewing a cell with a microscope observes a cell wall, a cell membrane, and a nucleus. The presence of these structures indicates that the student is looking at a cell from a","{'text': array(['rabbit', 'carrot', 'worm', 'fly'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",B,"answer: right(B)
 token: 102, 101, 1
-time: 0.2s","answer: wrong (B)
+time: 0.2s","answer: right(B)
 token: 102, 101, 1
-time: 0.7s","answer: wrong (B)
+time: 0.7s","answer: right(B)
 token: 102, 101, 1
 time: 0.8s"
 Mercury_407259,Which action results in a chemical change?,"{'text': array(['apples being cut into slices', 'wood burning in a fireplace',
@@ -3573,11 +3573,11 @@ token: 135, 134, 1
 time: 0.7s","answer: right
 token: 135, 134, 1
 time: 0.5s"
-NYSEDREGENTS_2012_8_26,A bright object with a long tail of glowing gases is in orbit around the Sun. This object is most likely,"{'text': array(['a planet', 'a star', 'an asteroid', 'a comet'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",4,"answer: wrong (D)
+NYSEDREGENTS_2012_8_26,A bright object with a long tail of glowing gases is in orbit around the Sun. This object is most likely,"{'text': array(['a planet', 'a star', 'an asteroid', 'a comet'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",D,"answer: right(D)
 token: 91, 90, 1
-time: 0.2s","answer: wrong (D)
+time: 0.2s","answer: right(D)
 token: 91, 90, 1
-time: 0.7s","answer: wrong (D)
+time: 0.7s","answer: right(D)
 token: 91, 90, 1
 time: 0.8s"
 MCAS_8_2015_17,"A hearing aid is a small device that contains an amplifier, a battery, a microphone, and a speaker. Which part of a hearing aid functions to detect sounds in the user's environment?","{'text': array(['the amplifier', 'the battery', 'the microphone', 'the speaker'],
@@ -3681,11 +3681,11 @@ time: 0.7s","answer: right
 token: 93, 92, 1
 time: 0.7s"
 NYSEDREGENTS_2015_8_20,All of the different organisms interacting in a pond make up,"{'text': array(['a community', 'a population', 'the water cycle', 'the habitat'],
-      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",1,"answer: wrong (A)
+      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",A,"answer: right(A)
 token: 81, 80, 1
-time: 0.2s","answer: wrong (A)
+time: 0.2s","answer: right(A)
 token: 81, 80, 1
-time: 0.6s","answer: wrong (A)
+time: 0.6s","answer: right(A)
 token: 81, 80, 1
 time: 0.8s"
 Mercury_407359,"If a lake is polluted, which organisms would most likely accumulate the highest concentration of contaminants?","{'text': array(['bass', 'minnows', 'aquatic plants', 'fish-eating birds'],
@@ -3869,11 +3869,11 @@ token: 80, 79, 1
 time: 0.8s","answer: right
 token: 80, 79, 1
 time: 2.3s"
-NYSEDREGENTS_2013_8_27,Which geologic process occurs when the acid in precipitation dissolves certain types of rock?,"{'text': array(['faulting', 'tilting', 'weathering', 'erupting'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",3,"answer: wrong (C)
+NYSEDREGENTS_2013_8_27,Which geologic process occurs when the acid in precipitation dissolves certain types of rock?,"{'text': array(['faulting', 'tilting', 'weathering', 'erupting'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",C,"answer: right(C)
 token: 85, 84, 1
-time: 0.2s","answer: wrong (C)
+time: 0.2s","answer: right(C)
 token: 85, 84, 1
-time: 0.6s","answer: wrong (C)
+time: 0.6s","answer: right(C)
 token: 85, 84, 1
 time: 0.5s"
 Mercury_SC_400871,Water evaporates mostly from,"{'text': array(['land.', 'snow.', 'clouds.', 'oceans.'], dtype=object), 'label': array(['A', 'B', 'C', 'D'], dtype=object)}",D,"answer: right
@@ -3892,11 +3892,11 @@ token: 83, 82, 1
 time: 0.5s"
 NYSEDREGENTS_2013_8_36,"Because copper is a metal, it is","{'text': array(['liquid at room temperature', 'nonreactive with other substances',
        'a poor conductor of electricity', 'a good conductor of heat'],
-      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",4,"answer: wrong (D)
+      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",D,"answer: right(D)
 token: 89, 88, 1
-time: 0.2s","answer: wrong (D)
+time: 0.2s","answer: right(D)
 token: 89, 88, 1
-time: 0.5s","answer: wrong (D)
+time: 0.5s","answer: right(D)
 token: 89, 88, 1
 time: 2.2s"
 Mercury_LBS10523,What process makes it possible for the nutrients from organic material to be added to soil?,"{'text': array(['weathering', 'erosion', 'decomposition', 'succession'],
@@ -4072,11 +4072,11 @@ time: 0.5s","answer: right
 token: 80, 79, 1
 time: 1.1s"
 NYSEDREGENTS_2012_8_6,The fur of the snowshoe rabbit changes to a lighter color in the winter. This allows the rabbit to blend in with its surroundings. This change is an example of,"{'text': array(['extinction', 'competition', 'biological adaptation',
-       'ecological succession'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",3,"answer: wrong (C)
+       'ecological succession'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",C,"answer: right(C)
 token: 101, 100, 1
-time: 0.2s","answer: wrong (C)
+time: 0.2s","answer: right(C)
 token: 101, 100, 1
-time: 0.8s","answer: wrong (C)
+time: 0.8s","answer: right(C)
 token: 101, 100, 1
 time: 0.6s"
 Mercury_SC_407227,What does a plant need to make sugar through photosynthesis?,"{'text': array(['soil, water, and oxygen', 'oxygen, sunlight, and soil',
@@ -4153,11 +4153,11 @@ time: 0.6s"
 NYSEDREGENTS_2010_8_34,Most scientists agree that an increase in the amount of greenhouse gases entering Earth's atmosphere causes,"{'text': array(['a decrease in sea level',
        'a decrease in average surface temperatures',
        'an increase in melting of polar ice caps',
-       'an increase in crustal plate movement'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",3,"answer: wrong (C)
+       'an increase in crustal plate movement'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",C,"answer: right(C)
 token: 104, 103, 1
-time: 0.3s","answer: wrong (C)
+time: 0.3s","answer: right(C)
 token: 104, 103, 1
-time: 0.4s","answer: wrong (C)
+time: 0.4s","answer: right(C)
 token: 104, 103, 1
 time: 0.7s"
 Mercury_7202125,Scientists determined that cabbages grown using Fertilizer A grew bigger than cabbages grown using Fertilizer B or no fertilizer at all. The scientists repeated the investigation and produced the same results. Which best explains the purpose of repeating this investigation?,"{'text': array(['to ensure that the cabbages are safe for human consumption',
@@ -4456,11 +4456,11 @@ time: 0.5s","answer: right
 token: 102, 101, 1
 time: 0.7s"
 NYSEDREGENTS_2012_8_27,The thin layer of rock on Earth's surface is the,"{'text': array(['atmosphere', 'hemisphere', 'hydrosphere', 'lithosphere'],
-      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",4,"answer: wrong (D)
+      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",D,"answer: right(D)
 token: 80, 79, 1
-time: 0.2s","answer: wrong (D)
+time: 0.2s","answer: right(D)
 token: 80, 79, 1
-time: 0.5s","answer: wrong (D)
+time: 0.5s","answer: right(D)
 token: 80, 79, 1
 time: 0.7s"
 Mercury_7264145,Which type of radiation provides astronomers with the most useful information about high-energy events such as stars colliding?,"{'text': array(['gamma radiation', 'infrared radiation', 'radio waves',
@@ -4692,11 +4692,11 @@ token: 123, 122, 1
 time: 0.4s","answer: right
 token: 123, 122, 1
 time: 1.0s"
-NYSEDREGENTS_2015_8_31,Which type of energy is transferred by vibrational waves?,"{'text': array(['nuclear', 'light', 'chemical', 'sound'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",4,"answer: wrong (D)
+NYSEDREGENTS_2015_8_31,Which type of energy is transferred by vibrational waves?,"{'text': array(['nuclear', 'light', 'chemical', 'sound'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",D,"answer: right(D)
 token: 75, 74, 1
-time: 0.3s","answer: wrong (D)
+time: 0.3s","answer: right(D)
 token: 75, 74, 1
-time: 0.7s","answer: wrong (D)
+time: 0.7s","answer: right(D)
 token: 75, 74, 1
 time: 0.7s"
 Mercury_7228078,The process of gene regulation directly impacts,"{'text': array(['how much DNA is stored.', 'how much DNA is replicated.',
@@ -4735,11 +4735,11 @@ time: 0.4s","answer: right
 token: 102, 101, 1
 time: 1.2s"
 NYSEDREGENTS_2010_8_9,What model is used to show the pattern of traits that are passed from one generation to the next in a family?,"{'text': array(['pedigree chart', 'dichotomous key', 'energy pyramid',
-       'line graph'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",1,"answer: wrong (A)
+       'line graph'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",A,"answer: right(A)
 token: 94, 93, 1
-time: 0.2s","answer: wrong (A)
+time: 0.2s","answer: right(A)
 token: 94, 93, 1
-time: 0.7s","answer: wrong (A)
+time: 0.7s","answer: right(A)
 token: 94, 93, 1
 time: 0.6s"
 Mercury_SC_LBS10906,Tiny droplets of water seen floating in the air can give scientists a clue about the weather. What are groups of these droplets called?,"{'text': array(['hail', 'rain', 'a front', 'a cloud'], dtype=object), 'label': array(['A', 'B', 'C', 'D'], dtype=object)}",D,"answer: right
@@ -4965,11 +4965,11 @@ time: 0.6s","answer: right
 token: 90, 89, 1
 time: 0.9s"
 NYSEDREGENTS_2015_8_45,A student writes in a laboratory notebook: I placed a piece of iron in a beaker of water and the iron sank to the bottom of the beaker. What the student wrote in the laboratory notebook is an example of a(n),"{'text': array(['observation', 'prediction', 'inference', 'hypothesis'],
-      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",1,"answer: wrong (A)
+      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",A,"answer: right(A)
 token: 111, 110, 1
-time: 0.2s","answer: wrong (A)
+time: 0.2s","answer: right(A)
 token: 111, 110, 1
-time: 1.4s","answer: wrong (A)
+time: 1.4s","answer: right(A)
 token: 111, 110, 1
 time: 0.7s"
 Mercury_412625,Which series correctly represents the levels of organization in an organism?,"{'text': array(['cells -> organs -> organ system -> tissue',
@@ -5435,11 +5435,11 @@ token: 133, 132, 1
 time: 0.4s","answer: right
 token: 133, 132, 1
 time: 0.9s"
-NYSEDREGENTS_2010_8_28,"A full Moon is observed in Buffalo, New York, on June 1. Approximately when will the next full Moon be observed in Buffalo?","{'text': array(['June 7', 'June 15', 'July 1', 'July 7'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",3,"answer: wrong (B)
+NYSEDREGENTS_2010_8_28,"A full Moon is observed in Buffalo, New York, on June 1. Approximately when will the next full Moon be observed in Buffalo?","{'text': array(['June 7', 'June 15', 'July 1', 'July 7'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",C,"answer: wrong (B)
 token: 101, 100, 1
-time: 0.2s","answer: wrong (C)
+time: 0.2s","answer: right(C)
 token: 101, 100, 1
-time: 0.5s","answer: wrong (C)
+time: 0.5s","answer: right(C)
 token: 101, 100, 1
 time: 0.7s"
 Mercury_400799,A computer model of an insect population takes into account the following parameters: * available food resources * annual temperature variation * timing of insect reproductive cycles Which additional parameter would most significantly improve the model's accuracy when predicting the insect population size?,"{'text': array(['decomposers recycling dead insects',
@@ -5528,11 +5528,11 @@ time: 0.6s"
 NYSEDREGENTS_2008_8_24,Which information would probably be most helpful to someone trying to identify a mineral sample?,"{'text': array(['location and mass of the sample',
        'shape and texture of the sample',
        'hardness and streak of the sample',
-       'color and size of the sample'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",3,"answer: wrong (C)
+       'color and size of the sample'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",C,"answer: right(C)
 token: 100, 99, 1
-time: 0.2s","answer: wrong (C)
+time: 0.2s","answer: right(C)
 token: 100, 99, 1
-time: 0.8s","answer: wrong (C)
+time: 0.8s","answer: right(C)
 token: 100, 99, 1
 time: 0.7s"
 Mercury_7091858,Which of these is most likely an effect of releasing carbon dioxide pollution into the atmosphere?,"{'text': array(['a reduction in the ozone layer', 'a reduction in photosynthesis',
@@ -5758,11 +5758,11 @@ NYSEDREGENTS_2012_8_3,Which statement is an inference?,"{'text': array(['A therm
        'A mineral sample of galena produced a gray-black streak when tested.',
        'Based on previous data, ten hurricanes may occur in the year 2013.',
        'A weather vane indicates the wind is coming from the west.'],
-      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",3,"answer: wrong (C)
+      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",C,"answer: right(C)
 token: 120, 119, 1
-time: 0.3s","answer: wrong (C)
+time: 0.3s","answer: right(C)
 token: 120, 119, 1
-time: 0.6s","answer: wrong (C)
+time: 0.6s","answer: right(C)
 token: 120, 119, 1
 time: 1.0s"
 Mercury_7008383,Which process moves water from the oceans to the atmosphere?,"{'text': array(['condensation', 'transpiration', 'evaporation', 'precipitation'],
@@ -5791,11 +5791,11 @@ token: 90, 89, 1
 time: 0.5s","answer: right
 token: 90, 89, 1
 time: 0.5s"
-NYSEDREGENTS_2010_8_30,On which date does North America usually experience the longest period of daylight?,"{'text': array(['March 21', 'June 21', 'September 21', 'December 21'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",2,"answer: wrong (B)
+NYSEDREGENTS_2010_8_30,On which date does North America usually experience the longest period of daylight?,"{'text': array(['March 21', 'June 21', 'September 21', 'December 21'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",B,"answer: right(B)
 token: 90, 89, 1
-time: 0.3s","answer: wrong (B)
+time: 0.3s","answer: right(B)
 token: 90, 89, 1
-time: 0.5s","answer: wrong (B)
+time: 0.5s","answer: right(B)
 token: 90, 89, 1
 time: 0.8s"
 TIMSS_2011_4_pg102,What causes an object to fall to the ground when you let it drop from your hand?,"{'text': array(['magnetism', 'gravity', 'air resistance',
@@ -5831,11 +5831,11 @@ token: 82, 81, 1
 time: 0.5s","answer: right
 token: 82, 81, 1
 time: 0.6s"
-NYSEDREGENTS_2010_8_15,"When the environment changes more quickly than a species can adapt, the species may become","{'text': array(['extinct', 'dominant', 'diverse', 'overpopulated'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",1,"answer: wrong (A)
+NYSEDREGENTS_2010_8_15,"When the environment changes more quickly than a species can adapt, the species may become","{'text': array(['extinct', 'dominant', 'diverse', 'overpopulated'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",A,"answer: right(A)
 token: 83, 82, 1
-time: 0.2s","answer: wrong (A)
+time: 0.2s","answer: right(A)
 token: 83, 82, 1
-time: 1.2s","answer: wrong (A)
+time: 1.2s","answer: right(A)
 token: 83, 82, 1
 time: 1.0s"
 Mercury_SC_400676,A student hears on the radio that the outside temperature is 32°C. What type of weather will the student most likely expect when she steps outside?,"{'text': array(['cool, rainy fall weather', 'cold, snowy winter weather',
@@ -6017,11 +6017,11 @@ token: 77, 76, 1
 time: 1.7s","answer: right
 token: 77, 76, 1
 time: 0.8s"
-NYSEDREGENTS_2015_8_19,Which type of organism converts wastes and dead materials into nutrients that can be used by plants?,"{'text': array(['carnivore', 'herbivore', 'decomposer', 'producer'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",3,"answer: wrong (C)
+NYSEDREGENTS_2015_8_19,Which type of organism converts wastes and dead materials into nutrients that can be used by plants?,"{'text': array(['carnivore', 'herbivore', 'decomposer', 'producer'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",C,"answer: right(C)
 token: 86, 85, 1
-time: 1.2s","answer: wrong (C)
+time: 1.2s","answer: right(C)
 token: 86, 85, 1
-time: 0.6s","answer: wrong (C)
+time: 0.6s","answer: right(C)
 token: 86, 85, 1
 time: 0.6s"
 Mercury_7148208,Biochemical reactions that require high temperatures to proceed are able to take place at body temperature within the cells of living organisms. Which factor is mainly responsible for allowing biochemical reactions to proceed at body temperature?,"{'text': array(['The cellular enzymes act as catalysts.',
@@ -6267,11 +6267,11 @@ time: 0.5s","answer: right
 token: 97, 96, 1
 time: 1.3s"
 NYSEDREGENTS_2010_8_7,Which human organ system eliminates liquid and gaseous wastes from the body?,"{'text': array(['circulatory', 'endocrine', 'excretory', 'reproductive'],
-      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",3,"answer: wrong (C)
+      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",C,"answer: right(C)
 token: 83, 82, 1
-time: 0.4s","answer: wrong (C)
+time: 0.4s","answer: right(C)
 token: 83, 82, 1
-time: 1.0s","answer: wrong (C)
+time: 1.0s","answer: right(C)
 token: 83, 82, 1
 time: 0.5s"
 Mercury_7174668,"When visiting the beach, Felicity observed that a breeze blew in from the ocean during the day and out toward the ocean at night. Which factor is most responsible for the direction of land and sea breezes in coastal regions?","{'text': array(['the revolution of Earth around the Sun',
@@ -6289,11 +6289,11 @@ NYSEDREGENTS_2013_8_16,Which pathway do most nutrients take after a person takes
        'circulatory system -> body cells -> digestive system',
        'digestive system -> body cells -> circulatory system',
        'circulatory system -> digestive system -> body cells'],
-      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",1,"answer: wrong (A)
+      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",A,"answer: right(A)
 token: 111, 110, 1
-time: 0.3s","answer: wrong (A)
+time: 0.3s","answer: right(A)
 token: 111, 110, 1
-time: 0.8s","answer: wrong (A)
+time: 0.8s","answer: right(A)
 token: 111, 110, 1
 time: 0.6s"
 MCAS_2005_5_33,Sound reaches our ears because sound makes air particles,"{'text': array(['heat up.', 'cool down.', 'slow down.', 'vibrate.'], dtype=object), 'label': array(['A', 'B', 'C', 'D'], dtype=object)}",D,"answer: right
@@ -6313,11 +6313,11 @@ token: 111, 110, 1
 time: 0.5s","answer: right
 token: 111, 110, 1
 time: 1.3s"
-NYSEDREGENTS_2013_8_43,Which type of energy is transferred from one object to another by simple machines?,"{'text': array(['mechanical', 'chemical', 'nuclear', 'electrical'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",1,"answer: wrong (A)
+NYSEDREGENTS_2013_8_43,Which type of energy is transferred from one object to another by simple machines?,"{'text': array(['mechanical', 'chemical', 'nuclear', 'electrical'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",A,"answer: right(A)
 token: 79, 78, 1
-time: 0.2s","answer: wrong (A)
+time: 0.2s","answer: right(A)
 token: 79, 78, 1
-time: 0.5s","answer: wrong (A)
+time: 0.5s","answer: right(A)
 token: 79, 78, 1
 time: 0.8s"
 AKDE&ED_2008_8_50,Which statement best describes how energy transfer within Earth's atmosphere can affect a weather condition?,"{'text': array(['During radiation, objects directly transfer heat to each other which affects the air temperature.',
@@ -6350,11 +6350,11 @@ NYSEDREGENTS_2013_8_23,"If an ecosystem's balance is disturbed by a volcanic eru
        'The ecosystem will eventually become balanced again.',
        'The consumers in the ecosystem will begin to consume carbon dioxide.',
        'The consumers in the ecosystem will begin to produce more oxygen.'],
-      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",2,"answer: wrong (B)
+      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",B,"answer: right(B)
 token: 116, 115, 1
-time: 0.8s","answer: wrong (B)
+time: 0.8s","answer: right(B)
 token: 116, 115, 1
-time: 0.5s","answer: wrong (B)
+time: 0.5s","answer: right(B)
 token: 116, 115, 1
 time: 0.6s"
 TAKS_2009_5_20,One example of a trait passed from a parent plant to its offspring is ___.,"{'text': array([""the amount of water in the plant's environment"",
@@ -6376,19 +6376,19 @@ time: 0.9s","answer: right
 token: 88, 87, 1
 time: 0.9s"
 NYSEDREGENTS_2013_8_13,The human respiratory system is responsible for removing,"{'text': array(['fat from cells', 'carbon dioxide from blood',
-       'hormones from glands', 'nutrients from food'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",2,"answer: wrong (B)
+       'hormones from glands', 'nutrients from food'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",B,"answer: right(B)
 token: 82, 81, 1
-time: 0.2s","answer: wrong (B)
+time: 0.2s","answer: right(B)
 token: 82, 81, 1
-time: 0.5s","answer: wrong (B)
+time: 0.5s","answer: right(B)
 token: 82, 81, 1
 time: 0.6s"
 NYSEDREGENTS_2013_8_8,Humans are protected from some infections by specialized cells which produce chemicals that,"{'text': array(['destroy microbes', 'recycle nutrients', 'allow locomotion',
-       'coordinate movement'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",1,"answer: wrong (A)
+       'coordinate movement'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",A,"answer: right(A)
 token: 83, 82, 1
-time: 0.2s","answer: wrong (A)
+time: 0.2s","answer: right(A)
 token: 83, 82, 1
-time: 0.6s","answer: wrong (A)
+time: 0.6s","answer: right(A)
 token: 83, 82, 1
 time: 0.7s"
 MCAS_2011_5_10,Which two forms of energy could best be used to increase the temperature of a sheet of copper?,"{'text': array(['heat and light', 'heat and sound', 'light and magnetism',
@@ -6428,11 +6428,11 @@ time: 0.4s","answer: right
 token: 114, 113, 1
 time: 0.8s"
 NYSEDREGENTS_2015_8_25,"When Earth's shadow falls on the Moon, the shadow causes a","{'text': array(['high tide', 'low tide', 'lunar eclipse', 'Moon phase'],
-      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",3,"answer: wrong (C)
+      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",C,"answer: right(C)
 token: 82, 81, 1
-time: 0.2s","answer: wrong (C)
+time: 0.2s","answer: right(C)
 token: 82, 81, 1
-time: 0.4s","answer: wrong (C)
+time: 0.4s","answer: right(C)
 token: 82, 81, 1
 time: 0.6s"
 MCAS_2004_8_20,"A class conducts an experiment to determine the best color to paint a solar water heater that they plan to build. For their experimental test, the students have four identical cans. They paint one black, one green, one red, and one white. Each can is filled with 500 mL of 22°C water, and is allowed to sit in the sun for two hours. Which color can will have the greatest increase in water temperature?","{'text': array(['black', 'green', 'red', 'white'], dtype=object), 'label': array(['A', 'B', 'C', 'D'], dtype=object)}",A,"answer: right
@@ -6461,11 +6461,11 @@ time: 0.9s","answer: right
 token: 92, 91, 1
 time: 0.6s"
 NYSEDREGENTS_2008_8_33,Which process is an example of a physical change?,"{'text': array(['wood burning', 'iron rusting', 'ice melting', 'milk souring'],
-      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",3,"answer: wrong (C)
+      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",C,"answer: right(C)
 token: 80, 79, 1
-time: 0.2s","answer: wrong (C)
+time: 0.2s","answer: right(C)
 token: 80, 79, 1
-time: 0.6s","answer: wrong (C)
+time: 0.6s","answer: right(C)
 token: 80, 79, 1
 time: 0.8s"
 MSA_2012_5_13,The water cycle requires energy. The main source of energy for the water cycle is,"{'text': array(['wind', 'gravity', 'the sun', 'the moon'], dtype=object), 'label': array(['A', 'B', 'C', 'D'], dtype=object)}",C,"answer: right
@@ -6697,11 +6697,11 @@ token: 92, 91, 1
 time: 0.4s","answer: right
 token: 92, 91, 1
 time: 0.8s"
-NYSEDREGENTS_2010_8_8,"Which human organ system produces hormones to regulate growth, development, and reproduction?","{'text': array(['circulatory', 'digestive', 'nervous', 'endocrine'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",4,"answer: wrong (D)
+NYSEDREGENTS_2010_8_8,"Which human organ system produces hormones to regulate growth, development, and reproduction?","{'text': array(['circulatory', 'digestive', 'nervous', 'endocrine'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",D,"answer: right(D)
 token: 81, 80, 1
-time: 0.6s","answer: wrong (D)
+time: 0.6s","answer: right(D)
 token: 81, 80, 1
-time: 0.6s","answer: wrong (D)
+time: 0.6s","answer: right(D)
 token: 81, 80, 1
 time: 0.6s"
 Mercury_7219030,"As some organisms die, their remains become buried by mud and are eventually compressed into a type of rock. Which of these is a rock type that forms from this process?","{'text': array(['igneous', 'sedimentary', 'magma', 'metamorphic'], dtype=object), 'label': array(['A', 'B', 'C', 'D'], dtype=object)}",B,"answer: right
@@ -6913,11 +6913,11 @@ token: 116, 115, 1
 time: 0.6s","answer: right
 token: 116, 115, 1
 time: 0.8s"
-NYSEDREGENTS_2008_8_18,What are produced in both the male and female reproductive systems in humans?,"{'text': array(['sperm', 'nutrients', 'fertilized eggs', 'sex cells'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",4,"answer: wrong (D)
+NYSEDREGENTS_2008_8_18,What are produced in both the male and female reproductive systems in humans?,"{'text': array(['sperm', 'nutrients', 'fertilized eggs', 'sex cells'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",D,"answer: right(D)
 token: 81, 80, 1
-time: 0.2s","answer: wrong (D)
+time: 0.2s","answer: right(D)
 token: 81, 80, 1
-time: 0.4s","answer: wrong (D)
+time: 0.4s","answer: right(D)
 token: 81, 80, 1
 time: 0.9s"
 Mercury_7026810,The burning of fossil fuels in cities results in high levels of air pollution. Which urban design would best help reduce air pollution?,"{'text': array(['numerous park areas', 'frequent trash recycling',
@@ -7017,11 +7017,11 @@ time: 2.5s"
 NYSEDREGENTS_2015_8_1,Which sequence identifies the levels of organization of body structures in a human from simplest to most complex?,"{'text': array(['cell -> organ -> tissue -> organ system',
        'organ system -> cell -> tissue -> organ',
        'tissue -> organ -> organ system -> cell',
-       'cell -> tissue -> organ -> organ system'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",4,"answer: wrong (D)
+       'cell -> tissue -> organ -> organ system'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",D,"answer: right(D)
 token: 111, 110, 1
-time: 0.3s","answer: wrong (D)
+time: 0.3s","answer: right(D)
 token: 111, 110, 1
-time: 0.6s","answer: wrong (D)
+time: 0.6s","answer: right(D)
 token: 111, 110, 1
 time: 0.7s"
 Mercury_7238893,A cell completes the synthesization of a protein by adding a carbohydrate to the protein's structure. At which site in the cell is the carbohydrate added?,"{'text': array(['the nucleus', 'a ribosome', 'a mitochondrion',
@@ -7198,11 +7198,11 @@ time: 0.9s","answer: right
 token: 88, 87, 1
 time: 0.5s"
 NYSEDREGENTS_2008_8_26,Studies of earthquake waves have helped scientists determine the,"{'text': array([""structure of Earth's interior"", 'depth of the oceans',
-       'cause of dinosaur extinction', 'age of Earth'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",1,"answer: wrong (A)
+       'cause of dinosaur extinction', 'age of Earth'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",A,"answer: right(A)
 token: 86, 85, 1
-time: 0.2s","answer: wrong (A)
+time: 0.2s","answer: right(A)
 token: 86, 85, 1
-time: 0.6s","answer: wrong (A)
+time: 0.6s","answer: right(A)
 token: 86, 85, 1
 time: 1.2s"
 MCAS_1999_4_15,Needles on a cactus plant are actually leaves. This needle shape helps the plant survive by,"{'text': array(['catching food.', 'preventing water loss.', 'staying in place.',
@@ -7417,11 +7417,11 @@ token: 74, 73, 1
 time: 1.5s","answer: right
 token: 74, 73, 1
 time: 0.6s"
-NYSEDREGENTS_2015_8_34,Which energy source is nonrenewable?,"{'text': array(['sunlight', 'biomass', 'wind', 'fossil fuel'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",4,"answer: wrong (D)
+NYSEDREGENTS_2015_8_34,Which energy source is nonrenewable?,"{'text': array(['sunlight', 'biomass', 'wind', 'fossil fuel'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",D,"answer: right(D)
 token: 74, 73, 1
-time: 0.2s","answer: wrong (D)
+time: 0.2s","answer: right(D)
 token: 74, 73, 1
-time: 0.4s","answer: wrong (D)
+time: 0.4s","answer: right(D)
 token: 74, 73, 1
 time: 0.4s"
 Mercury_402102,The Moon is in orbit around Earth. What keeps the Moon from changing its orbit?,"{'text': array(['friction', 'gravity', 'weight', 'rotation'], dtype=object), 'label': array(['A', 'B', 'C', 'D'], dtype=object)}",B,"answer: right
@@ -7800,11 +7800,11 @@ time: 0.5s","answer: right
 token: 118, 117, 1
 time: 0.6s"
 NYSEDREGENTS_2010_8_6,A student fails to eat a balanced diet over a period of time. This lack of a balanced diet can lead to,"{'text': array(['selective breeding', 'dynamic equilibrium', 'extinction',
-       'disease'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",4,"answer: wrong (D)
+       'disease'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",D,"answer: right(D)
 token: 90, 89, 1
-time: 0.2s","answer: wrong (D)
+time: 0.2s","answer: right(D)
 token: 90, 89, 1
-time: 0.5s","answer: wrong (D)
+time: 0.5s","answer: right(D)
 token: 90, 89, 1
 time: 0.7s"
 Mercury_411027,"In 1989, an oil spill off the coast of Alaska led to a decline in the population of many organisms. Which other population was most likely affected by the drop in population of the fish, otters, and seals?","{'text': array(['deer', 'eagles', 'frogs', 'snakes'], dtype=object), 'label': array(['A', 'B', 'C', 'D'], dtype=object)}",B,"answer: right
@@ -8329,11 +8329,11 @@ time: 0.6s","answer: right
 token: 99, 98, 1
 time: 0.8s"
 NYSEDREGENTS_2013_8_19,Abnormal cell division may result in,"{'text': array(['disease prevention', 'tissue repair', 'metamorphosis', 'cancer'],
-      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",4,"answer: wrong (D)
+      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",D,"answer: right(D)
 token: 76, 75, 1
-time: 0.2s","answer: wrong (D)
+time: 0.2s","answer: right(D)
 token: 76, 75, 1
-time: 0.6s","answer: wrong (D)
+time: 0.6s","answer: right(D)
 token: 76, 75, 1
 time: 0.8s"
 LEAP__7_10345,What is the main reason humans need nitrogen to survive?,"{'text': array(['Nitrogen is used in respiration to generate energy.',
@@ -9698,11 +9698,11 @@ time: 0.5s","answer: right
 token: 93, 92, 1
 time: 0.7s"
 NYSEDREGENTS_2013_8_7,In which part of a plant cell does photosynthesis occur?,"{'text': array(['nucleus', 'chloroplast', 'cell membrane', 'cell wall'],
-      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",2,"answer: wrong (B)
+      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",B,"answer: right(B)
 token: 79, 78, 1
-time: 0.2s","answer: wrong (B)
+time: 0.2s","answer: right(B)
 token: 79, 78, 1
-time: 0.4s","answer: wrong (B)
+time: 0.4s","answer: right(B)
 token: 79, 78, 1
 time: 0.6s"
 Mercury_SC_415454,Which alternative energy resource adds carbon dioxide to the atmosphere?,"{'text': array(['nuclear energy', 'biofuel energy', 'wind energy',
@@ -9829,11 +9829,11 @@ time: 0.6s"
 NYSEDREGENTS_2010_8_31,Earth's hydrosphere is best described as the,"{'text': array([""relatively thin layer of rock found above Earth's mantle"",
        ""relatively thin layer of water covering most of Earth's crust"",
        ""hot liquid rock located in Earth's outer core"",
-       ""very dense rock located in Earth's inner core""], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",2,"answer: wrong (B)
+       ""very dense rock located in Earth's inner core""], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",B,"answer: right(B)
 token: 111, 110, 1
-time: 0.2s","answer: wrong (B)
+time: 0.2s","answer: right(B)
 token: 111, 110, 1
-time: 0.5s","answer: wrong (B)
+time: 0.5s","answer: right(B)
 token: 111, 110, 1
 time: 0.5s"
 Mercury_7044713,"When riding a roller coaster, an electric motor pulls the roller coaster to the top of the first hill. What force pulls the roller coaster down the hill?","{'text': array(['friction', 'speed', 'gravity', 'mass'], dtype=object), 'label': array(['A', 'B', 'C', 'D'], dtype=object)}",C,"answer: right
@@ -10149,11 +10149,11 @@ token: 86, 85, 1
 time: 0.5s","answer: right
 token: 86, 85, 1
 time: 0.7s"
-NYSEDREGENTS_2013_8_40,People often wear sunglasses in polar regions because most of the sunlight that strikes a snow-covered surface is,"{'text': array(['reflected', 'absorbed', 'refracted', 'transmitted'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",1,"answer: wrong (A)
+NYSEDREGENTS_2013_8_40,People often wear sunglasses in polar regions because most of the sunlight that strikes a snow-covered surface is,"{'text': array(['reflected', 'absorbed', 'refracted', 'transmitted'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",A,"answer: right(A)
 token: 85, 84, 1
-time: 0.4s","answer: wrong (A)
+time: 0.4s","answer: right(A)
 token: 85, 84, 1
-time: 1.0s","answer: wrong (A)
+time: 1.0s","answer: right(A)
 token: 85, 84, 1
 time: 0.9s"
 Mercury_7216913,A plant is discolored and has large brown blotches on its leaves. This condition is most likely caused by,"{'text': array(['pollination.', 'photosynthesis.', 'nourishment.', 'disease.'],
@@ -10172,11 +10172,11 @@ token: 80, 79, 1
 time: 0.5s","answer: right
 token: 80, 79, 1
 time: 0.6s"
-NYSEDREGENTS_2013_8_11,Which gas is transported by the circulatory system in humans and is used by cells during respiration to release energy stored in food?,"{'text': array(['carbon dioxide', 'nitrogen', 'hydrogen', 'oxygen'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",4,"answer: wrong (D)
+NYSEDREGENTS_2013_8_11,Which gas is transported by the circulatory system in humans and is used by cells during respiration to release energy stored in food?,"{'text': array(['carbon dioxide', 'nitrogen', 'hydrogen', 'oxygen'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",D,"answer: right(D)
 token: 91, 90, 1
-time: 0.2s","answer: wrong (D)
+time: 0.2s","answer: right(D)
 token: 91, 90, 1
-time: 0.5s","answer: wrong (D)
+time: 0.5s","answer: right(D)
 token: 91, 90, 1
 time: 0.6s"
 MCAS_2004_8_35,Which of the following planets has the shortest orbit around the Sun?,"{'text': array(['Earth', 'Mars', 'Mercury', 'Venus'], dtype=object), 'label': array(['A', 'B', 'C', 'D'], dtype=object)}",C,"answer: right
@@ -10648,11 +10648,11 @@ time: 0.5s","answer: right
 token: 113, 112, 1
 time: 0.6s"
 NYSEDREGENTS_2015_8_8,The hereditary material in corn plants can be altered by scientists so the plants produce more corn. Which term identifies this process?,"{'text': array(['environmental degradation', 'ecological succession',
-       'natural selection', 'genetic engineering'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",4,"answer: wrong (D)
+       'natural selection', 'genetic engineering'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",D,"answer: right(D)
 token: 93, 92, 1
-time: 0.3s","answer: wrong (D)
+time: 0.3s","answer: right(D)
 token: 93, 92, 1
-time: 0.4s","answer: wrong (D)
+time: 0.4s","answer: right(D)
 token: 93, 92, 1
 time: 0.6s"
 TIMSS_2003_8_pg40,What is the main function of red blood cells?,"{'text': array(['To fight disease in the body',
@@ -10947,11 +10947,11 @@ token: 111, 110, 1
 time: 0.5s","answer: right
 token: 111, 110, 1
 time: 0.6s"
-NYSEDREGENTS_2013_8_35,The amount of which greenhouse gas in the air will increase the most if large forests are cut down to be used for building materials without planting new trees in their place?,"{'text': array(['ozone', 'methane', 'water vapor', 'carbon dioxide'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",4,"answer: wrong (D)
+NYSEDREGENTS_2013_8_35,The amount of which greenhouse gas in the air will increase the most if large forests are cut down to be used for building materials without planting new trees in their place?,"{'text': array(['ozone', 'methane', 'water vapor', 'carbon dioxide'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",D,"answer: right(D)
 token: 99, 98, 1
-time: 0.2s","answer: wrong (D)
+time: 0.2s","answer: right(D)
 token: 99, 98, 1
-time: 0.5s","answer: wrong (D)
+time: 0.5s","answer: right(D)
 token: 99, 98, 1
 time: 1.4s"
 Mercury_7141733,"A carpenter rubs sandpaper on a wooden bench to make the bench smoother. The sandpaper will get warm as it is rubbed on the bench. As a result of the friction between the sandpaper and the bench, thermal energy is converted to","{'text': array(['chemical energy that is stored by the sandpaper.',
@@ -11088,11 +11088,11 @@ time: 0.6s","answer: right
 token: 158, 157, 1
 time: 0.6s"
 NYSEDREGENTS_2013_8_21,Herbivores obtain most of their energy by,"{'text': array(['consuming animals', 'consuming plants', 'producing sugar',
-       'absorbing sunlight'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",2,"answer: wrong (B)
+       'absorbing sunlight'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",B,"answer: right(B)
 token: 78, 77, 1
-time: 0.4s","answer: wrong (B)
+time: 0.4s","answer: right(B)
 token: 78, 77, 1
-time: 0.5s","answer: wrong (B)
+time: 0.5s","answer: right(B)
 token: 78, 77, 1
 time: 0.8s"
 Mercury_7220465,Which factor has the greatest effect on a community's stores of freshwater?,"{'text': array(['the location of the nearest ocean', 'the average annual rainfall',
@@ -11177,11 +11177,11 @@ token: 93, 92, 1
 time: 0.5s","answer: right
 token: 93, 92, 1
 time: 0.8s"
-NYSEDREGENTS_2008_8_37,All matter is made up of,"{'text': array(['cells', 'atoms', 'molecules', 'compounds'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",2,"answer: wrong (B)
+NYSEDREGENTS_2008_8_37,All matter is made up of,"{'text': array(['cells', 'atoms', 'molecules', 'compounds'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",B,"answer: right(B)
 token: 71, 70, 1
-time: 0.3s","answer: wrong (B)
+time: 0.3s","answer: right(B)
 token: 71, 70, 1
-time: 0.7s","answer: wrong (B)
+time: 0.7s","answer: right(B)
 token: 71, 70, 1
 time: 0.6s"
 NYSEDREGENTS_2008_4_20,Which physical change would most likely help an animal survive during the winter?,"{'text': array(['tail gets longer', 'fur gets thicker', 'feathers are shed',
@@ -11498,11 +11498,11 @@ time: 0.7s","answer: right
 token: 83, 82, 1
 time: 3.2s"
 NYSEDREGENTS_2015_8_30,Elements on the Periodic Table of the Elements are classified into categories such as,"{'text': array(['rocks and minerals', 'molecules and atoms',
-       'mixtures and compounds', 'metals and nonmetals'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",4,"answer: wrong (D)
+       'mixtures and compounds', 'metals and nonmetals'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",D,"answer: right(D)
 token: 91, 90, 1
-time: 0.2s","answer: wrong (D)
+time: 0.2s","answer: right(D)
 token: 91, 90, 1
-time: 0.5s","answer: wrong (D)
+time: 0.5s","answer: right(D)
 token: 91, 90, 1
 time: 0.7s"
 Mercury_411782,"In a genetics investigation, students used two red straws to represent male parent DNA. They used two green straws to represent female parent DNA. The offspring in this activity are best represented by","{'text': array(['either one red straw or one green straw.', 'two green straws.',
@@ -11715,11 +11715,11 @@ token: 98, 97, 1
 time: 1.5s"
 NYSEDREGENTS_2015_8_32,Which device directly converts chemical energy into electrical energy?,"{'text': array(['solar-powered calculator', 'wood-burning stove',
        'battery-powered flashlight', 'wind-powered sailboat'],
-      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",3,"answer: wrong (C)
+      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",C,"answer: right(C)
 token: 84, 83, 1
-time: 0.2s","answer: wrong (C)
+time: 0.2s","answer: right(C)
 token: 84, 83, 1
-time: 0.4s","answer: wrong (C)
+time: 0.4s","answer: right(C)
 token: 84, 83, 1
 time: 1.5s"
 Mercury_SC_400679,Some students have gathered a collection of rock samples from the school yard to study. They scraped the rocks against a piece of quartz from the school lab. Which property of minerals are the students investigating?,"{'text': array(['texture', 'hardness', 'color', 'streak'], dtype=object), 'label': array(['A', 'B', 'C', 'D'], dtype=object)}",B,"answer: right
@@ -11780,11 +11780,11 @@ token: 78, 77, 1
 time: 1.3s"
 NYSEDREGENTS_2008_8_2,Running to escape danger is an action that requires the nervous system to coordinate the interaction of which two body systems?,"{'text': array(['digestive and endocrine', 'muscular and skeletal',
        'reproductive and excretory', 'circulatory and digestive'],
-      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",2,"answer: wrong (B)
+      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",B,"answer: right(B)
 token: 98, 97, 1
-time: 0.2s","answer: wrong (B)
+time: 0.2s","answer: right(B)
 token: 98, 97, 1
-time: 0.5s","answer: wrong (B)
+time: 0.5s","answer: right(B)
 token: 98, 97, 1
 time: 0.7s"
 MCAS_2003_5_20,What causes day and night on Earth?,"{'text': array([""Earth's rotation on its axis"",
@@ -12097,11 +12097,11 @@ token: 140, 139, 1
 time: 0.8s"
 NYSEDREGENTS_2008_8_12,Which event is the best example of competition between species in a pond environment?,"{'text': array(['dragonflies landing on lily pads', 'frogs and toads eating flies',
        'lizards and snakes lying in the sun', 'hawks eating mice'],
-      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",2,"answer: wrong (B)
+      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",B,"answer: right(B)
 token: 100, 99, 1
-time: 0.3s","answer: wrong (4)
+time: 0.3s","answer: wrong(D)
 token: 100, 99, 1
-time: 0.4s","answer: wrong (B)
+time: 0.4s","answer: right(B)
 token: 100, 99, 1
 time: 0.6s"
 Mercury_7016363,What is the most likely effect of a drought on a population of frogs that live in a shallow swamp?,"{'text': array(['only younger frogs will survive',
@@ -12275,11 +12275,11 @@ time: 0.6s"
 NYSEDREGENTS_2015_8_6,The primary role of the endocrine system is to,"{'text': array(['produce hormones that regulate body functions',
        'form chemicals that destroy microbes',
        'break down food to release nutrients',
-       'supply red blood cells to carry oxygen'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",1,"answer: wrong (A)
+       'supply red blood cells to carry oxygen'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",A,"answer: right(A)
 token: 95, 94, 1
-time: 0.2s","answer: wrong (A)
+time: 0.2s","answer: right(A)
 token: 95, 94, 1
-time: 1.0s","answer: wrong (A)
+time: 1.0s","answer: right(A)
 token: 95, 94, 1
 time: 0.4s"
 TIMSS_1995_8_P4,What happens when an animal hibernates?,"{'text': array(['There is no life in any of its parts.', 'It stops breathing.',
@@ -12392,19 +12392,19 @@ time: 0.7s"
 NYSEDREGENTS_2013_8_22,A biological community is made up of all the,"{'text': array(['populations living in an area',
        'natural resources present in an area',
        'members of a species on Earth', 'environments on Earth'],
-      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",1,"answer: wrong (A)
+      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",A,"answer: right(A)
 token: 90, 89, 1
-time: 0.2s","answer: wrong (A)
+time: 0.2s","answer: right(A)
 token: 90, 89, 1
-time: 1.1s","answer: wrong (A)
+time: 1.1s","answer: right(A)
 token: 90, 89, 1
 time: 0.8s"
 NYSEDREGENTS_2012_8_31,Which temperature and moisture conditions describe an air mass that originates over the Atlantic Ocean near the equator?,"{'text': array(['warm and dry', 'warm and humid', 'cool and dry', 'cool and humid'],
-      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",2,"answer: wrong (B)
+      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",B,"answer: right(B)
 token: 92, 91, 1
-time: 0.2s","answer: wrong (B)
+time: 0.2s","answer: right(B)
 token: 92, 91, 1
-time: 0.6s","answer: wrong (B)
+time: 0.6s","answer: right(B)
 token: 92, 91, 1
 time: 0.5s"
 MCAS_2000_4_32,The parts of plants that make seeds are the,"{'text': array(['roots.', 'stems.', 'flowers.', 'leaves.'], dtype=object), 'label': array(['A', 'B', 'C', 'D'], dtype=object)}",C,"answer: right
@@ -12454,11 +12454,11 @@ token: 107, 106, 1
 time: 0.6s"
 NYSEDREGENTS_2012_8_30,"Rocks are classified as sedimentary, metamorphic, or igneous on the basis of the","{'text': array(['age of the rocks', 'way the rocks were formed',
        'types of fossils the rocks contain',
-       'number of minerals found in the rocks'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",2,"answer: wrong (B)
+       'number of minerals found in the rocks'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",B,"answer: right(B)
 token: 101, 100, 1
-time: 0.2s","answer: wrong (B)
+time: 0.2s","answer: right(B)
 token: 101, 100, 1
-time: 0.7s","answer: wrong (B)
+time: 0.7s","answer: right(B)
 token: 101, 100, 1
 time: 0.9s"
 Mercury_7222303,Which basic units of matter have the same properties as an element?,"{'text': array(['protons', 'electrons', 'atoms', 'neutrons'], dtype=object), 'label': array(['A', 'B', 'C', 'D'], dtype=object)}",C,"answer: right
@@ -12976,11 +12976,11 @@ time: 0.6s","answer: right
 token: 86, 85, 1
 time: 1.1s"
 NYSEDREGENTS_2012_8_15,"Which process involves choosing certain organisms to reproduce with one another in order to pass on specific, desirable traits to their offspring?","{'text': array(['selective breeding', 'asexual reproduction',
-       'resource acquisition', 'natural selection'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",1,"answer: wrong (A)
+       'resource acquisition', 'natural selection'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",A,"answer: right(A)
 token: 93, 92, 1
-time: 0.2s","answer: wrong (A)
+time: 0.2s","answer: right(A)
 token: 93, 92, 1
-time: 0.7s","answer: wrong (A)
+time: 0.7s","answer: right(A)
 token: 93, 92, 1
 time: 0.6s"
 Mercury_404900,During which process are nuclei duplicated?,"{'text': array(['mitosis', 'respiration', 'photosynthesis', 'fertilization'],
@@ -13048,11 +13048,11 @@ time: 0.7s"
 NYSEDREGENTS_2012_8_13,Which pair of terms describes the usual location for fertilization and the first stages of development in human reproduction?,"{'text': array(['external fertilization and external development',
        'external fertilization and internal development',
        'internal fertilization and external development',
-       'internal fertilization and internal development'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",4,"answer: wrong (D)
+       'internal fertilization and internal development'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",D,"answer: right(D)
 token: 105, 104, 1
-time: 0.3s","answer: wrong (D)
+time: 0.3s","answer: right(D)
 token: 105, 104, 1
-time: 0.6s","answer: wrong (D)
+time: 0.6s","answer: right(D)
 token: 105, 104, 1
 time: 0.6s"
 Mercury_7025025,In the rock cycle an igneous rock forms from,"{'text': array(['cooling temperatures', 'high pressure and heat',
@@ -13155,11 +13155,11 @@ token: 83, 82, 1
 time: 0.4s","answer: right
 token: 83, 82, 1
 time: 0.5s"
-NYSEDREGENTS_2008_8_16,Which substance do all living things require to survive?,"{'text': array(['blood', 'water', 'carbon dioxide', 'organic soil'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",2,"answer: wrong (B)
+NYSEDREGENTS_2008_8_16,Which substance do all living things require to survive?,"{'text': array(['blood', 'water', 'carbon dioxide', 'organic soil'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",B,"answer: right(B)
 token: 76, 75, 1
-time: 0.2s","answer: wrong (B)
+time: 0.2s","answer: right(B)
 token: 76, 75, 1
-time: 0.8s","answer: wrong (B)
+time: 0.8s","answer: right(B)
 token: 76, 75, 1
 time: 0.8s"
 Mercury_7027388,A student plans to measure the thermal expansion of a strip of metal as it is heated from 0ºC to 50ºC. Which piece of equipment should he use to measure the expansion?,"{'text': array(['a ruler', 'a balance', 'a compass', 'a protractor'], dtype=object), 'label': array(['A', 'B', 'C', 'D'], dtype=object)}",A,"answer: right
@@ -13296,11 +13296,11 @@ time: 0.7s","answer: right
 token: 127, 126, 1
 time: 0.8s"
 NYSEDREGENTS_2013_8_14,Which process is a cause of variation in a species?,"{'text': array(['metamorphosis', 'cellular respiration', 'sexual reproduction',
-       'regulation'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",3,"answer: wrong (C)
+       'regulation'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",C,"answer: right(C)
 token: 80, 79, 1
-time: 0.2s","answer: wrong (C)
+time: 0.2s","answer: right(C)
 token: 80, 79, 1
-time: 1.0s","answer: wrong (C)
+time: 1.0s","answer: right(C)
 token: 80, 79, 1
 time: 0.6s"
 NYSEDREGENTS_2008_4_21,The leaves of a tree change color in the fall. This is an example of a tree,"{'text': array(['completing its life cycle', 'preparing for migration',
@@ -13358,11 +13358,11 @@ time: 0.5s","answer: right
 token: 98, 97, 1
 time: 0.8s"
 NYSEDREGENTS_2010_8_27,The Moon's surface is visible to an observer on Earth because the Moon,"{'text': array(['reflects sunlight', 'absorbs light from Earth',
-       'produces its own light', 'transmits sunlight'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",1,"answer: wrong (A)
+       'produces its own light', 'transmits sunlight'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",A,"answer: right(A)
 token: 88, 87, 1
-time: 0.2s","answer: wrong (A)
+time: 0.2s","answer: right(A)
 token: 88, 87, 1
-time: 0.6s","answer: wrong (A)
+time: 0.6s","answer: right(A)
 token: 88, 87, 1
 time: 0.7s"
 Mercury_183925,Why do trees like oaks and walnuts depend upon squirrels?,"{'text': array(['to control population size', 'to pollinate their flowers',
@@ -13467,11 +13467,11 @@ token: 71, 70, 1
 time: 0.6s","answer: right
 token: 71, 70, 1
 time: 0.8s"
-NYSEDREGENTS_2013_8_37,"A student placed a rock in a graduated cylinder containing water, causing the water level in the cylinder to increase by 20 mL. This increase represents the rock's","{'text': array(['mass', 'volume', 'solubility', 'temperature'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",2,"answer: wrong (B)
+NYSEDREGENTS_2013_8_37,"A student placed a rock in a graduated cylinder containing water, causing the water level in the cylinder to increase by 20 mL. This increase represents the rock's","{'text': array(['mass', 'volume', 'solubility', 'temperature'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",B,"answer: right(B)
 token: 100, 99, 1
-time: 0.2s","answer: wrong (B)
+time: 0.2s","answer: right(B)
 token: 100, 99, 1
-time: 0.5s","answer: wrong (B)
+time: 0.5s","answer: right(B)
 token: 100, 99, 1
 time: 1.0s"
 Mercury_7144498,Researchers are investigating whether dinosaurs were endothermic like birds. Which evidence from the fossil record could be effectively compared with modern day evidence to support this hypothesis?,"{'text': array(['similarities in bone structure', 'seasonal shifts in food supply',
@@ -13563,11 +13563,11 @@ time: 1.1s","answer: right
 token: 83, 82, 1
 time: 2.1s"
 NYSEDREGENTS_2013_8_5,What eventually happens to a species when the environment changes and the organisms do not adapt?,"{'text': array(['classification', 'development', 'extinction', 'regulation'],
-      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",3,"answer: wrong (C)
+      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",C,"answer: right(C)
 token: 81, 80, 1
-time: 0.2s","answer: wrong (C)
+time: 0.2s","answer: right(C)
 token: 81, 80, 1
-time: 0.4s","answer: wrong (C)
+time: 0.4s","answer: right(C)
 token: 81, 80, 1
 time: 1.5s"
 Mercury_182928,Similar types of cells form tissues. What is the next level of complexity formed from the grouping of tissues?,"{'text': array(['organs', 'organelles', 'organisms', 'organ systems'], dtype=object), 'label': array(['A', 'B', 'C', 'D'], dtype=object)}",A,"answer: right
@@ -13577,11 +13577,11 @@ token: 88, 87, 1
 time: 0.6s","answer: right
 token: 88, 87, 1
 time: 0.6s"
-NYSEDREGENTS_2013_8_41,Which form of energy is produced when a rubber band vibrates?,"{'text': array(['chemical', 'light', 'electrical', 'sound'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",4,"answer: wrong (D)
+NYSEDREGENTS_2013_8_41,Which form of energy is produced when a rubber band vibrates?,"{'text': array(['chemical', 'light', 'electrical', 'sound'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",D,"answer: right(D)
 token: 77, 76, 1
-time: 0.2s","answer: wrong (D)
+time: 0.2s","answer: right(D)
 token: 77, 76, 1
-time: 0.5s","answer: wrong (D)
+time: 0.5s","answer: right(D)
 token: 77, 76, 1
 time: 0.8s"
 Mercury_SC_LBS10940,Which discovery was necessary before radio could be invented?,"{'text': array(['reflection', 'radiation', 'electricity', 'gravity'], dtype=object), 'label': array(['A', 'B', 'C', 'D'], dtype=object)}",C,"answer: right
@@ -13595,11 +13595,11 @@ NYSEDREGENTS_2008_8_28,Which statement would most likely be included in a news r
        'Install snow tires and check the antifreeze in the car radiator.',
        'Evacuate low-lying areas near the coast.',
        'Expect wind speed to decrease for the next several hours.'],
-      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",3,"answer: wrong (C)
+      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",C,"answer: right(C)
 token: 117, 116, 1
-time: 0.2s","answer: wrong (C)
+time: 0.2s","answer: right(C)
 token: 117, 116, 1
-time: 0.6s","answer: wrong (C)
+time: 0.6s","answer: right(C)
 token: 117, 116, 1
 time: 0.9s"
 Mercury_SC_405784,The energy produced by a burner on a gas stove is primarily,"{'text': array(['electrical.', 'heat.', 'mechanical.', 'sound.'], dtype=object), 'label': array(['A', 'B', 'C', 'D'], dtype=object)}",B,"answer: right
@@ -14157,21 +14157,21 @@ time: 0.6s","answer: right
 token: 88, 87, 1
 time: 1.5s"
 NYSEDREGENTS_2015_8_5,Which process is responsible for the growth and repair of human tissue?,"{'text': array(['evolution', 'germination', 'cell division', 'natural selection'],
-      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",3,"answer: wrong (C)
+      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",C,"answer: right(C)
 token: 80, 79, 1
-time: 0.2s","answer: wrong (C)
+time: 0.2s","answer: right(C)
 token: 80, 79, 1
-time: 0.5s","answer: wrong (C)
+time: 0.5s","answer: right(C)
 token: 80, 79, 1
 time: 0.5s"
 NYSEDREGENTS_2013_8_6,Which sequence represents the correct levels of organization for multicellular organisms?,"{'text': array(['cell -> tissue -> organ -> organ system',
        'tissue -> organ -> cell -> organ system',
        'organ system -> organ -> cell -> tissue',
-       'cell -> organ -> tissue -> organ system'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",1,"answer: wrong (A)
+       'cell -> organ -> tissue -> organ system'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",A,"answer: right(A)
 token: 105, 104, 1
-time: 0.3s","answer: wrong (A)
+time: 0.3s","answer: right(A)
 token: 105, 104, 1
-time: 0.6s","answer: wrong (A)
+time: 0.6s","answer: right(A)
 token: 105, 104, 1
 time: 1.5s"
 Mercury_7175735,Convection currents in the mantle are thought to be the driving force behind tectonic movement. At which location do the convection currents cause the plates to diverge?,"{'text': array(['strike-slip fault', 'subduction zone', 'mid-ocean ridges',
@@ -14278,11 +14278,11 @@ time: 0.4s","answer: right
 token: 82, 81, 1
 time: 0.7s"
 NYSEDREGENTS_2015_8_16,Nutrients enter the bloodstream during the process of,"{'text': array(['locomotion', 'respiration', 'elimination', 'absorption'],
-      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",4,"answer: wrong (D)
+      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",D,"answer: right(D)
 token: 76, 75, 1
-time: 0.2s","answer: wrong (D)
+time: 0.2s","answer: right(D)
 token: 76, 75, 1
-time: 0.5s","answer: wrong (D)
+time: 0.5s","answer: right(D)
 token: 76, 75, 1
 time: 0.8s"
 Mercury_412695,Which set of elements have chemical properties similar to those of phosphorus?,"{'text': array(['nitrogen, arsenic, and antimony', 'carbon, selenium, and iodine',
@@ -14393,11 +14393,11 @@ time: 0.6s","answer: right
 token: 93, 92, 1
 time: 0.6s"
 NYSEDREGENTS_2012_8_18,The sum of all chemical reactions that take place within an organism is known as,"{'text': array(['evolution', 'metabolism', 'circulation', 'reproduction'],
-      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",2,"answer: wrong (B)
+      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",B,"answer: right(B)
 token: 80, 79, 1
-time: 0.2s","answer: wrong (B)
+time: 0.2s","answer: right(B)
 token: 80, 79, 1
-time: 1.5s","answer: wrong (B)
+time: 1.5s","answer: right(B)
 token: 80, 79, 1
 time: 0.6s"
 NYSEDREGENTS_2013_4_10,The appearance of the Moon as observed from Earth changes over time because of the Moon's,"{'text': array(['path around Earth', 'length of daylight', 'gravity',
@@ -14408,11 +14408,11 @@ token: 86, 85, 1
 time: 0.6s","answer: right
 token: 86, 85, 1
 time: 1.2s"
-NYSEDREGENTS_2012_8_17,The basic life functions of an organism are carried on by,"{'text': array(['cells', 'nutrients', 'atoms', 'hormones'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",1,"answer: wrong (A)
+NYSEDREGENTS_2012_8_17,The basic life functions of an organism are carried on by,"{'text': array(['cells', 'nutrients', 'atoms', 'hormones'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",A,"answer: right(A)
 token: 76, 75, 1
-time: 0.2s","answer: wrong (A)
+time: 0.2s","answer: right(A)
 token: 76, 75, 1
-time: 0.5s","answer: wrong (A)
+time: 0.5s","answer: right(A)
 token: 76, 75, 1
 time: 1.2s"
 Mercury_7268993,What keeps stars such as the Sun from collapsing from their own self-gravity?,"{'text': array(['the centrifugal force created by rapid rotation',
@@ -14895,11 +14895,11 @@ token: 94, 93, 1
 time: 0.5s","answer: right
 token: 94, 93, 1
 time: 0.5s"
-NYSEDREGENTS_2015_8_26,Earth's hydrosphere is a layer of,"{'text': array(['rock', 'air', 'lava', 'water'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",4,"answer: wrong (D)
+NYSEDREGENTS_2015_8_26,Earth's hydrosphere is a layer of,"{'text': array(['rock', 'air', 'lava', 'water'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",D,"answer: right(D)
 token: 75, 74, 1
-time: 0.2s","answer: wrong (D)
+time: 0.2s","answer: right(D)
 token: 75, 74, 1
-time: 0.5s","answer: wrong (D)
+time: 0.5s","answer: right(D)
 token: 75, 74, 1
 time: 0.6s"
 Mercury_7171763,Riding a bicycle produces several forms of energy. Which form of energy is produced in the greatest amount by pedaling a bicycle down the sidewalk?,"{'text': array(['chemical', 'radiant', 'kinetic', 'sound'], dtype=object), 'label': array(['A', 'B', 'C', 'D'], dtype=object)}",C,"answer: right
@@ -15226,11 +15226,11 @@ time: 2.3s"
 NYSEDREGENTS_2012_8_11,Which health condition is an infectious disease?,"{'text': array(['pneumonia caused by microorganisms',
        'heart problem caused by a high-fat diet',
        'lung cancer caused by smoking',
-       'eye damage caused by ultraviolet light'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",1,"answer: wrong (A)
+       'eye damage caused by ultraviolet light'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",A,"answer: right(A)
 token: 93, 92, 1
-time: 0.2s","answer: wrong (A)
+time: 0.2s","answer: right(A)
 token: 93, 92, 1
-time: 0.7s","answer: wrong (A)
+time: 0.7s","answer: right(A)
 token: 93, 92, 1
 time: 0.6s"
 Mercury_7216615,Which statement describes a characteristic of both sexual and asexual reproduction?,"{'text': array(['The processes require egg cells.', 'New cells are produced.',
@@ -15463,11 +15463,11 @@ token: 80, 79, 1
 time: 0.5s","answer: right
 token: 80, 79, 1
 time: 0.5s"
-NYSEDREGENTS_2008_8_14,"Grasses, shrubs, and trees are called producers because they make","{'text': array(['water', 'carbon dioxide', 'minerals', 'food'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",4,"answer: wrong (D)
+NYSEDREGENTS_2008_8_14,"Grasses, shrubs, and trees are called producers because they make","{'text': array(['water', 'carbon dioxide', 'minerals', 'food'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",D,"answer: right(D)
 token: 80, 79, 1
-time: 0.3s","answer: wrong (D)
+time: 0.3s","answer: right(D)
 token: 80, 79, 1
-time: 0.6s","answer: wrong (D)
+time: 0.6s","answer: right(D)
 token: 80, 79, 1
 time: 0.7s"
 Mercury_7016695,How does the buying and selling of a popular species of rainforest animal as pets have a negative effect on the rainforest ecosystem?,"{'text': array(['The rate of photosynthesis may decrease.',
@@ -15919,11 +15919,11 @@ token: 77, 76, 1
 time: 0.8s","answer: right
 token: 77, 76, 1
 time: 1.0s"
-NYSEDREGENTS_2012_8_43,Sound waves are not able to travel through,"{'text': array(['a cloud', 'a vacuum', 'metal', 'water'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",2,"answer: wrong (B)
+NYSEDREGENTS_2012_8_43,Sound waves are not able to travel through,"{'text': array(['a cloud', 'a vacuum', 'metal', 'water'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",B,"answer: right(B)
 token: 75, 74, 1
-time: 0.2s","answer: wrong (B)
+time: 0.2s","answer: right(B)
 token: 75, 74, 1
-time: 0.6s","answer: wrong (B)
+time: 0.6s","answer: right(B)
 token: 75, 74, 1
 time: 0.6s"
 Mercury_SC_405197,Scientists study fossils to learn about extinct plants and animals. Which of these is the best example of a fossil?,"{'text': array(['a footprint in a rock', 'a seashell under water',
@@ -16075,11 +16075,11 @@ token: 80, 79, 1
 time: 1.7s"
 NYSEDREGENTS_2015_8_35,Scientists have created trains that use magnets to make the trains float above the tracks as they travel. These trains float because,"{'text': array(['the track is waxed', 'the like poles repel',
        'the train has a low density', 'a chemical change occurs'],
-      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",2,"answer: wrong (B)
+      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",B,"answer: right(B)
 token: 104, 103, 1
-time: 0.2s","answer: wrong (B)
+time: 0.2s","answer: right(B)
 token: 104, 103, 1
-time: 0.5s","answer: wrong (B)
+time: 0.5s","answer: right(B)
 token: 104, 103, 1
 time: 0.7s"
 NYSEDREGENTS_2008_4_23,One role of a producer in a food chain is to provide,"{'text': array(['water for plants', 'sunlight for plants', 'nutrients for animals',
@@ -16141,11 +16141,11 @@ time: 0.5s","answer: wrong (B)
 token: 86, 85, 1
 time: 0.7s"
 NYSEDREGENTS_2012_8_32,Which property of a substance indicates whether the substance is a liquid or a solid at room temperature?,"{'text': array(['melting point', 'electrical conductivity', 'flexibility',
-       'solubility'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",1,"answer: wrong (A)
+       'solubility'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",A,"answer: right(A)
 token: 87, 86, 1
-time: 0.3s","answer: wrong (A)
+time: 0.3s","answer: right(A)
 token: 87, 86, 1
-time: 0.5s","answer: wrong (A)
+time: 0.5s","answer: right(A)
 token: 87, 86, 1
 time: 0.6s"
 Mercury_7216790,Which organelle converts glucose to energy for cellular work?,"{'text': array(['nucleus', 'mitochondrion', 'vacuole', 'chloroplast'], dtype=object), 'label': array(['A', 'B', 'C', 'D'], dtype=object)}",B,"answer: right
@@ -16473,11 +16473,11 @@ token: 98, 97, 1
 time: 0.5s","answer: right
 token: 98, 97, 1
 time: 0.6s"
-NYSEDREGENTS_2010_8_18,Which structure is found in a plant cell but not in an animal cell?,"{'text': array(['cell wall', 'cell membrane', 'cytoplasm', 'nucleus'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",1,"answer: wrong (A)
+NYSEDREGENTS_2010_8_18,Which structure is found in a plant cell but not in an animal cell?,"{'text': array(['cell wall', 'cell membrane', 'cytoplasm', 'nucleus'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",A,"answer: right(A)
 token: 83, 82, 1
-time: 0.2s","answer: wrong (A)
+time: 0.2s","answer: right(A)
 token: 83, 82, 1
-time: 0.4s","answer: wrong (A)
+time: 0.4s","answer: right(A)
 token: 83, 82, 1
 time: 0.7s"
 Mercury_SC_LBS10611,Which of these best describes a fossil?,"{'text': array(['a geometric pattern formed by a mineral',
@@ -16596,11 +16596,11 @@ token: 91, 90, 1
 time: 0.6s","answer: right
 token: 91, 90, 1
 time: 0.7s"
-NYSEDREGENTS_2010_8_41,Which energy source is considered nonrenewable?,"{'text': array(['moving water', 'fossil fuel', 'wind', 'biomass'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",2,"answer: wrong (B)
+NYSEDREGENTS_2010_8_41,Which energy source is considered nonrenewable?,"{'text': array(['moving water', 'fossil fuel', 'wind', 'biomass'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",B,"answer: right(B)
 token: 76, 75, 1
-time: 0.2s","answer: wrong (B)
+time: 0.2s","answer: right(B)
 token: 76, 75, 1
-time: 0.4s","answer: wrong (B)
+time: 0.4s","answer: right(B)
 token: 76, 75, 1
 time: 0.6s"
 TIMSS_2003_4_pg34,A renewable energy source is a source that will not run out. Which is an example of the use of such a source?,"{'text': array(['A coal furnace heating a house',
@@ -16715,11 +16715,11 @@ time: 0.5s","answer: right
 token: 87, 86, 1
 time: 0.9s"
 NYSEDREGENTS_2012_8_16,During which process do cells use oxygen to release stored energy?,"{'text': array(['photosynthesis', 'respiration', 'circulation', 'digestion'],
-      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",2,"answer: wrong (B)
+      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",B,"answer: right(B)
 token: 78, 77, 1
-time: 0.2s","answer: wrong (B)
+time: 0.2s","answer: right(B)
 token: 78, 77, 1
-time: 0.5s","answer: wrong (B)
+time: 0.5s","answer: right(B)
 token: 78, 77, 1
 time: 2.1s"
 Mercury_SC_402614,Which of the following has the ability to change the state of matter?,"{'text': array(['heat', 'wind', 'light', 'sound'], dtype=object), 'label': array(['A', 'B', 'C', 'D'], dtype=object)}",A,"answer: right
@@ -16821,11 +16821,11 @@ token: 119, 111, 8
 time: 0.6s","answer: right
 token: 112, 111, 1
 time: 1.4s"
-NYSEDREGENTS_2008_8_25,In which type of rock is the fossil imprint of a fern leaf most likely to be found?,"{'text': array(['igneous', 'metamorphic', 'sedimentary', 'volcanic'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",3,"answer: wrong (C)
+NYSEDREGENTS_2008_8_25,In which type of rock is the fossil imprint of a fern leaf most likely to be found?,"{'text': array(['igneous', 'metamorphic', 'sedimentary', 'volcanic'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",C,"answer: right(C)
 token: 86, 85, 1
-time: 0.2s","answer: wrong (C)
+time: 0.2s","answer: right(C)
 token: 86, 85, 1
-time: 0.6s","answer: wrong (C)
+time: 0.6s","answer: right(C)
 token: 86, 85, 1
 time: 1.1s"
 TAKS_2009_8_38,"At certain times of the year, meteor showers can be observed from Earth. Why are these objects from space usually harmless?","{'text': array(['They are always microscopic.',
@@ -17533,11 +17533,11 @@ token: 84, 83, 1
 time: 0.5s"
 NYSEDREGENTS_2012_8_40,Fossil fuels are considered nonrenewable because they,"{'text': array(['produce pollution', 'are no longer used by humans',
        'often contain microscopic animals',
-       'take millions of years to form'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",4,"answer: wrong (D)
+       'take millions of years to form'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",D,"answer: right(D)
 token: 90, 89, 1
-time: 0.3s","answer: wrong (D)
+time: 0.3s","answer: right(D)
 token: 90, 89, 1
-time: 0.6s","answer: wrong (D)
+time: 0.6s","answer: right(D)
 token: 90, 89, 1
 time: 0.6s"
 Mercury_SC_406718,A baby bird must eat a lot of food to grow. During which stage of its life cycle is a butterfly most similar to a baby bird?,"{'text': array(['egg', 'larva', 'pupa', 'adult'], dtype=object), 'label': array(['A', 'B', 'C', 'D'], dtype=object)}",B,"answer: right
@@ -17641,11 +17641,11 @@ time: 0.5s","answer: right
 token: 154, 153, 1
 time: 0.8s"
 NYSEDREGENTS_2013_8_26,The layered mixture of gases surrounding Earth is called the,"{'text': array(['atmosphere', 'hydrosphere', 'lithosphere', 'hemisphere'],
-      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",1,"answer: wrong (A)
+      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",A,"answer: right(A)
 token: 79, 78, 1
-time: 0.2s","answer: wrong (A)
+time: 0.2s","answer: right(A)
 token: 79, 78, 1
-time: 0.6s","answer: wrong (A)
+time: 0.6s","answer: right(A)
 token: 79, 78, 1
 time: 0.4s"
 Mercury_SC_409576,Paul listens to music through his radio. Which best explains the sound Paul hears?,"{'text': array(['Sounds are fluids that travel through air.',
@@ -17848,11 +17848,11 @@ time: 1.0s","answer: right
 token: 107, 106, 1
 time: 0.8s"
 NYSEDREGENTS_2008_8_4,Which system produces most of the hormones in the human body?,"{'text': array(['circulatory', 'digestive', 'endocrine', 'respiratory'],
-      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",3,"answer: wrong (C)
+      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",C,"answer: right(C)
 token: 78, 77, 1
-time: 0.2s","answer: wrong (C)
+time: 0.2s","answer: right(C)
 token: 78, 77, 1
-time: 0.6s","answer: wrong (C)
+time: 0.6s","answer: right(C)
 token: 78, 77, 1
 time: 0.6s"
 NYSEDREGENTS_2012_4_4,Which tool should a student use to see the patterns on a small object?,"{'text': array(['balance', 'hand lens', 'thermometer', 'graduated cylinder'],
@@ -17896,11 +17896,11 @@ token: 106, 102, 4
 time: 0.6s","answer: right
 token: 103, 102, 1
 time: 0.6s"
-NYSEDREGENTS_2010_8_32,Which physical property is used to identify a mineral based on its resistance to being scratched?,"{'text': array(['hardness', 'density', 'color', 'streak'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",1,"answer: wrong (A)
+NYSEDREGENTS_2010_8_32,Which physical property is used to identify a mineral based on its resistance to being scratched?,"{'text': array(['hardness', 'density', 'color', 'streak'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",A,"answer: right(A)
 token: 81, 80, 1
-time: 0.2s","answer: wrong (A)
+time: 0.2s","answer: right(A)
 token: 81, 80, 1
-time: 0.8s","answer: wrong (A)
+time: 0.8s","answer: right(A)
 token: 81, 80, 1
 time: 1.7s"
 MCAS_2006_9_28,A negatively charged rubber rod was brought near some small pieces of paper. The rod's charges repelled the negative charges in the pieces. Which of the following caused the repulsion of the negative charges?,"{'text': array(['conduction', 'gravitation', 'induction', 'insulation'],
@@ -18281,11 +18281,11 @@ token: 76, 75, 1
 time: 0.6s","answer: right
 token: 76, 75, 1
 time: 1.1s"
-NYSEDREGENTS_2008_8_7,Which unit is used to express the amount of energy in food?,"{'text': array(['Calorie', 'degree Celsius', 'milliliter', 'gram'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",1,"answer: wrong (A)
+NYSEDREGENTS_2008_8_7,Which unit is used to express the amount of energy in food?,"{'text': array(['Calorie', 'degree Celsius', 'milliliter', 'gram'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",A,"answer: right(A)
 token: 81, 80, 1
-time: 0.3s","answer: wrong (A)
+time: 0.3s","answer: right(A)
 token: 81, 80, 1
-time: 0.4s","answer: wrong (A)
+time: 0.4s","answer: right(A)
 token: 81, 80, 1
 time: 0.5s"
 MSA_2012_5_1,A student measured how quickly a car rolled down a hill. Which tool should the student have used to measure how quickly the car rolled down the hill?,"{'text': array(['a hand lens', 'a stopwatch', 'a thermometer',
@@ -18708,11 +18708,11 @@ token: 88, 87, 1
 time: 0.6s","answer: right
 token: 88, 87, 1
 time: 0.8s"
-NYSEDREGENTS_2012_8_12,A structure that carries a single unit of hereditary information is a,"{'text': array(['gene', 'tissue', 'sex cell', 'pedigree chart'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",1,"answer: wrong (A)
+NYSEDREGENTS_2012_8_12,A structure that carries a single unit of hereditary information is a,"{'text': array(['gene', 'tissue', 'sex cell', 'pedigree chart'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",A,"answer: right(A)
 token: 80, 79, 1
-time: 0.2s","answer: wrong (A)
+time: 0.2s","answer: right(A)
 token: 80, 79, 1
-time: 0.4s","answer: wrong (A)
+time: 0.4s","answer: right(A)
 token: 80, 79, 1
 time: 1.4s"
 MCAS_2013_8_29434,"Muscle cells need to quickly convert energy from food molecules into a usable form. For this reason, which of the following do muscle cells have in greater numbers than most other types of cells?","{'text': array(['chromosomes', 'mitochondria', 'nuclei', 'vacuoles'], dtype=object), 'label': array(['A', 'B', 'C', 'D'], dtype=object)}",B,"answer: right
@@ -19040,11 +19040,11 @@ token: 98, 97, 1
 time: 0.5s"
 NYSEDREGENTS_2015_8_22,One positive effect of recycling aluminum cans to manufacture new beverage containers is,"{'text': array([""conserving Earth's resources"", 'creating acid rain',
        ""warming Earth's atmosphere"", 'increasing the ozone layer'],
-      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",1,"answer: wrong (A)
+      dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",A,"answer: right(A)
 token: 90, 89, 1
-time: 0.3s","answer: wrong (A)
+time: 0.3s","answer: right(A)
 token: 90, 89, 1
-time: 0.6s","answer: wrong (A)
+time: 0.6s","answer: right(A)
 token: 90, 89, 1
 time: 0.6s"
 Mercury_SC_402112,Students are conducting an investigation to see how sunlight affects the speed of plant growth. They measure the growth of the plant at the end of two weeks. What would be the best way to communicate the results of this investigation?,"{'text': array(['draw a picture', 'make some notes', 'make a chart or graph',
@@ -19126,11 +19126,11 @@ time: 0.5s","answer: right
 token: 94, 93, 1
 time: 0.7s"
 NYSEDREGENTS_2012_8_14,Abnormal cell division in humans may result in,"{'text': array(['cancer', 'fertilization', 'asexual reproduction',
-       'dynamic equilibrium'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",1,"answer: wrong (A)
+       'dynamic equilibrium'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",A,"answer: right(A)
 token: 78, 77, 1
-time: 0.2s","answer: wrong (A)
+time: 0.2s","answer: right(A)
 token: 78, 77, 1
-time: 0.6s","answer: wrong (A)
+time: 0.6s","answer: right(A)
 token: 78, 77, 1
 time: 0.5s"
 MEA_2011_8_16,A donkey and a horse can be bred to produce a mule. Which observation is evidence that donkeys and horses are two different species?,"{'text': array(['They have different body sizes.',
@@ -19364,11 +19364,11 @@ token: 92, 91, 1
 time: 0.6s","answer: right
 token: 92, 91, 1
 time: 0.6s"
-NYSEDREGENTS_2008_8_29,The surface of Earth is covered mostly by,"{'text': array(['solid rock', 'molten rock', 'ice', 'water'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",4,"answer: wrong (D)
+NYSEDREGENTS_2008_8_29,The surface of Earth is covered mostly by,"{'text': array(['solid rock', 'molten rock', 'ice', 'water'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",D,"answer: right(D)
 token: 76, 75, 1
-time: 0.2s","answer: wrong (D)
+time: 0.2s","answer: right(D)
 token: 76, 75, 1
-time: 0.6s","answer: wrong (D)
+time: 0.6s","answer: right(D)
 token: 76, 75, 1
 time: 0.7s"
 Mercury_7013825,Which pair of systems is responsible for the flow of blood in the human body?,"{'text': array(['circulatory and skeletal systems',
@@ -19580,11 +19580,11 @@ time: 0.5s","answer: right
 token: 98, 97, 1
 time: 0.8s"
 NYSEDREGENTS_2010_8_17,Some one-celled organisms can reproduce by the process of,"{'text': array(['hormone secretion', 'metamorphosis', 'fertilization',
-       'cell division'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",4,"answer: wrong (D)
+       'cell division'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",D,"answer: right(D)
 token: 81, 80, 1
-time: 0.3s","answer: wrong (D)
+time: 0.3s","answer: right(D)
 token: 81, 80, 1
-time: 0.6s","answer: wrong (D)
+time: 0.6s","answer: right(D)
 token: 81, 80, 1
 time: 0.7s"
 Mercury_405140,One important use of coal is to produce energy for homes. Coal can be burned and converted to,"{'text': array(['wind energy.', 'nuclear energy.', 'electrical energy.',
@@ -19791,11 +19791,11 @@ time: 1.0s","answer: right
 token: 97, 96, 1
 time: 0.6s"
 NYSEDREGENTS_2010_8_39,"Compared to the particles in a hardened lava sample, the particles in a liquid lava sample","{'text': array(['have a lower temperature', 'have less kinetic energy',
-       'are moving faster', 'are closer together'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",3,"answer: wrong (C)
+       'are moving faster', 'are closer together'], dtype=object), 'label': array(['1', '2', '3', '4'], dtype=object)}",C,"answer: right(C)
 token: 92, 91, 1
-time: 0.2s","answer: wrong (C)
+time: 0.2s","answer: right(C)
 token: 92, 91, 1
-time: 0.5s","answer: wrong (C)
+time: 0.5s","answer: right(C)
 token: 92, 91, 1
 time: 0.9s"
 Mercury_402286,Which characteristic do both the Moon and Earth share?,"{'text': array(['They both have rocky surfaces.',

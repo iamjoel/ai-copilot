@@ -2,12 +2,32 @@ input,output,status,error
 Panning wide shot of a calico kitten sleeping in the sunshine,outputs/video-batch/video-1-1767082517496.mp4,done,
 A close up of two people staring at a cryptic drawing on a wall,outputs/video-batch/video-2-1767082925176.mp4,done,
 生成一段30秒的视频，风格为电影级纪实风，主题是清晨的城市苏醒。画面包含日出、街道、行人，镜头节奏由慢到快，整体色调偏冷，情绪克制而真实。,outputs/video-batch/video-3-1767083003313.mp4,done,
-生成一段20秒的产品宣传视频，主题为AI写作助手。画面以UI界面演示为主，穿插使用场景，风格现代、干净、科技感强，无夸张特效。,,,
-生成一段15秒的视频，用于解释什么是AI Agent。要求使用抽象图形和流程动画，避免真人出镜，整体风格偏教育向、清晰、理性。,,,
-生成一段30秒的旅行视频，主题为江南水乡。要求画面柔和、慢节奏，包含小桥、流水、白墙黑瓦，氛围安静、有生活气息。,,,
-生成一段10秒的短视频，用于社交媒体开场。主题是“未来工作方式”，风格偏未来感，快速剪辑，包含文字叠加和动态图形。,,,
+生成一段20秒的产品宣传视频，主题为AI写作助手。画面以UI界面演示为主，穿插使用场景，风格现代、干净、科技感强，无夸张特效。,outputs/video-batch/video-4-1767083105953.mp4,done,
+生成一段15秒的视频，用于解释什么是AI Agent。要求使用抽象图形和流程动画，避免真人出镜，整体风格偏教育向、清晰、理性。,outputs/video-batch/video-5-1767083172728.mp4,done,
+生成一段30秒的旅行视频，主题为江南水乡。要求画面柔和、慢节奏，包含小桥、流水、白墙黑瓦，氛围安静、有生活气息。,outputs/video-batch/video-6-1767083251799.mp4,done,
+生成一段10秒的短视频，用于社交媒体开场。主题是“未来工作方式”，风格偏未来感，快速剪辑，包含文字叠加和动态图形。,outputs/video-batch/video-7-1767083335898.mp4,done,
 Generate a 30-second cinematic video introducing an AI-powered workflow platform. Use clean motion graphics, abstract system diagrams, and a calm narrator tone. No human faces.,
 Generate a 20-second explainer video about large language models for beginners. Use simple animations, icons, and clear visual metaphors. Educational and friendly style.,
 Generate a 15-second product demo video showing how an AI agent completes tasks automatically. Focus on screen interactions, smooth transitions, and a modern SaaS aesthetic.,
 Generate a 30-second inspirational video about building technology from zero to one. Use dramatic lighting, slow camera movements, and minimal text overlays.,
 Generate a 10-second looping background video for a website hero section. Abstract shapes, subtle motion, neutral colors, and no text.
+清晨森林里一位徒步者走在林间小径上，镜头缓慢跟随，光线从树叶间洒下，伴随鸟鸣和轻风声。,outputs/video-batch/video-13-1767083648922.mp4,done,
+海边礁石上潮水涨落的细节镜头，伴随着海浪冲击声和远处鸥鸟鸣叫。,outputs/video-batch/video-14-1767083730785.mp4,done,
+日落时分草原上一头鹿抬头凝视远方，金色余晖照亮草地，背景有缓慢音乐和自然音效。,outputs/video-batch/video-15-1767083822489.mp4,done,
+雨后山间小溪流淌的特写镜头，水滴落在石头上的清脆声与背景雨声交织。
+秋日湖畔，独自划船的人划开宁静湖水，湖面倒映远山，配以轻柔背景音乐。
+夜幕降临下的沙漠景象，星空璀璨，风吹起细沙，伴随低沉环境音效。
+山顶迎风站立的登山者俯瞰云海，画面慢慢推进，加入深呼吸和轻音乐。,
+热带雨林中猴群跳跃穿梭，镜头快速切换，加入自然丛林声与节奏感音乐。
+清晨薄雾中的稻田，蜘蛛网上的露珠闪闪发光，背景是轻柔鸟鸣与微风声。
+湖面上天鹅游弋，镜头跟随其优雅动作，配以宁静钢琴背景音。
+秋天山谷中枫叶飘落的视频，慢动作捕捉每片叶子的旋转和落地声。
+白雪覆盖的森林里松鼠寻食，镜头细致捕捉雪地足迹与呼啸冷风。
+傍晚风吹过金黄麦田的俯拍镜头，麦浪起伏，配背景自然风声与柔和音乐。
+清澈溪流上彩虹出现的瞬间，水汽与阳光折射，加入清新水声和鸟鸣。
+山间瀑布从高处俯冲而下的动态镜头，水花溅起，伴随洪亮水声与自然环境音。
+草原上野马奔腾，镜头低角度跟随，背景是呼啸风声与节奏感音乐。
+礁湖中海龟缓慢游动，镜头平稳推进，配合水下泡泡声与舒缓音乐。
+春天花田中的蜜蜂采蜜特写，镜头切换花瓣上的露珠及蜂鸣声。
+湖边露营者生火准备晚餐，火光跳动，加入自然夜晚音效与轻音乐。
+悬崖边观看日出的人群，云海翻腾，温暖光线照亮脸庞，背景是柔和音乐与自然声。

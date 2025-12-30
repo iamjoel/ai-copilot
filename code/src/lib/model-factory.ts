@@ -16,7 +16,8 @@ export type Provider =
   | "kimi"
   | "minimax"
   | "xiaomi"
-  | "anthropic";
+  | "anthropic"
+  | "xai";
 
 
 function getQiniuChatModel(providerName: string, modelName: string) {
@@ -91,6 +92,15 @@ export function getModel(provider: Provider, modelName: string) {
       apiKey: process.env.XIAOMI_API_KEY!,
       baseURL: 'https://api.xiaomimimo.com/v1',
       name: 'xiaomi',
+    });
+    return client.chat(modelName);
+  }
+
+  if (provider === "xai") {
+    const client = createOpenAI({
+      apiKey: process.env.XAI_API_KEY!,
+      baseURL: 'https://api.x.ai/v1',
+      name: 'xai',
     });
     return client.chat(modelName);
   }

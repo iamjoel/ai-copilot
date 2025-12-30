@@ -101,6 +101,22 @@ const RAW_MODEL_GROUPS = [
     ],
   },
   {
+    provider: "xai",
+    providerLabel: "xAI",
+    options: [
+      {
+        label: "Grok 4.1 Fast Reasoning",
+        value: "grok-4-1-fast-reasoning",
+        model: "grok-4-1-fast-reasoning",
+      },
+      {
+        label: "Grok 4.1 Fast Non-Reasoning",
+        value: "grok-4-1-fast-non-reasoning",
+        model: "grok-4-1-fast-non-reasoning",
+      },
+    ],
+  },
+  {
     provider: "deepseek",
     providerLabel: "DeepSeek",
     options: [

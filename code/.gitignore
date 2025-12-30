@@ -44,6 +44,7 @@ next-env.d.ts
 # Prisma
 generated/prisma/
 pgdata/
+data/arc-batch-results.db
 
 src/app/api/national-parks/datas
 src/app/api/national-parks/results

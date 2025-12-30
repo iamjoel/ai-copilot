@@ -1,14 +1,22 @@
 import { logger } from "@/lib/logger";
 import {
-  parseArcChoices,
-  readArcCsv,
-  writeArcCsv,
   withDatasetLock,
+  writeArcCsv,
   type ArcDatasetType,
-  type ArcChoice,
 } from "@/lib/arc-dataset";
-import { getModel } from "@/lib/model-factory";
-import { generateText } from "ai";
+import {
+  ArcBatchInputError,
+  getArcModelConfig,
+  runArcBatch,
+  type BatchModelKey,
+} from "@/lib/arc-batch";
+import {
+  ARC_BATCH_MODULE_NAME,
+  ensureArcBatchTable,
+  fetchArcBatchResults,
+  getLibSqlClient,
+  upsertArcBatchResult,
+} from "@/lib/arc-batch-libsql";
 
 export const runtime = "nodejs";
 
@@ -17,60 +25,6 @@ type BatchRunRequest = {
   model?: BatchModelKey;
   datasetType?: ArcDatasetType;
 };
-
-type ModelColumn = {
-  model: BatchModelKey;
-  provider: "qwen" | "anthropic";
-  columnName: string;
-  modelName: string;
-};
-
-type BatchModelKey =
-  | "qwen-flash"
-  | "qwen-plus"
-  | "qwen3-max"
-  | "claude-sonnet-4-5"
-  | "claude-haiku-4-5"
-  | "claude-opus-4-5";
-
-const MODEL_COLUMNS: ModelColumn[] = [
-  {
-    model: "qwen-flash",
-    provider: "qwen",
-    columnName: "Qwen Flash",
-    modelName: "qwen-flash",
-  },
-  {
-    model: "qwen-plus",
-    provider: "qwen",
-    columnName: "Qwen Plus",
-    modelName: "qwen-plus",
-  },
-  {
-    model: "qwen3-max",
-    provider: "qwen",
-    columnName: "Qwen3 max",
-    modelName: "qwen3-max",
-  },
-  {
-    model: "claude-sonnet-4-5",
-    provider: "anthropic",
-    columnName: "Claude Sonnet 4.5",
-    modelName: "claude-sonnet-4-5",
-  },
-  {
-    model: "claude-haiku-4-5",
-    provider: "anthropic",
-    columnName: "Claude Haiku 4.5",
-    modelName: "claude-haiku-4-5",
-  },
-  {
-    model: "claude-opus-4-5",
-    provider: "anthropic",
-    columnName: "Claude Opus 4.5",
-    modelName: "claude-opus-4-5",
-  },
-];
 
 export async function POST(request: Request) {
   const body = (await request.json()) as BatchRunRequest;
@@ -85,7 +39,76 @@ export async function POST(request: Request) {
     return createErrorResponse("Missing model.");
   }
 
-  const modelConfig = MODEL_COLUMNS.find(entry => entry.model === modelKey);
+  if (!getArcModelConfig(modelKey)) {
+    return createErrorResponse("Unsupported model.");
+  }
+
+  const nValue = body.n;
+  const limit = nValue && nValue > 0 ? Math.floor(nValue) : null;
+
+  return withDatasetLock(datasetType, async () => {
+    try {
+      const result = await runArcBatch({
+        datasetType,
+        modelKey,
+        limit,
+        handlers: {
+          onRowSkip(info, context) {
+            logger.info({
+              result: `skipped: row ${info.rowIndex}/${context.total}`,
+              datasetType,
+              model: modelKey,
+              rowIndex: info.rowIndex,
+              id: info.rowId,
+            });
+          },
+          async onRowResult(info, context) {
+            logger.info({
+              result: `Completed row ${info.rowIndex}/${context.total}`,
+              datasetType,
+              model: modelKey,
+              rowIndex: info.rowIndex,
+              id: info.rowId,
+            });
+            writeArcCsv(datasetType, context.header, context.rows);
+          },
+        },
+      });
+
+      return new Response(
+        JSON.stringify({
+          datasetType,
+          model: modelKey,
+          processed: result.processed,
+          skipped: result.skipped,
+          total: result.total,
+        }),
+        { status: 200, headers: { "Content-Type": "application/json" } },
+      );
+    } catch (error) {
+      if (error instanceof ArcBatchInputError) {
+        return createErrorResponse(error.message);
+      }
+      logger.error({ error }, "Arc batch failed");
+      return createErrorResponse("Unable to run batch right now.", 500);
+    }
+  });
+}
+
+export async function PUT(request: Request) {
+  const body = (await request.json()) as BatchRunRequest;
+  const datasetType = body.datasetType;
+  const modelKey = body.model;
+
+  if (!datasetType) {
+    return createErrorResponse("Missing datasetType.");
+  }
+
+  if (!modelKey) {
+    return createErrorResponse("Missing model.");
+  }
+
+  const modelConfig = getArcModelConfig(modelKey);
   if (!modelConfig) {
     return createErrorResponse("Unsupported model.");
   }
@@ -94,153 +117,78 @@ export async function POST(request: Request) {
   const limit = nValue && nValue > 0 ? Math.floor(nValue) : null;
 
   return withDatasetLock(datasetType, async () => {
-    const { header, rows } = readArcCsv(datasetType);
-    if (!header.length) {
-      return createErrorResponse("Dataset file is empty.");
-    }
+    try {
+      const client = getLibSqlClient();
+      await ensureArcBatchTable(client);
 
-    const ensuredHeader = ensureHeaderColumns(header, MODEL_COLUMNS.map(entry => entry.columnName));
+      const result = await runArcBatch({
+        datasetType,
+        modelKey,
+        limit,
+        handlers: {
+          onRowSkip(info, context) {
+            logger.info({
+              result: `skipped: row ${info.rowIndex}/${context.total}`,
+              datasetType,
+              model: modelKey,
+              rowIndex: info.rowIndex,
+              id: info.rowId,
+            });
+          },
+          async onRowResult(info, context) {
+            await upsertArcBatchResult(client, {
+              moduleName: ARC_BATCH_MODULE_NAME,
+              datasetType,
+              modelKey,
+              rowIndex: info.rowIndex,
+              rowId: info.rowId,
+              result: info.result,
+            });
+            logger.info({
+              result: `queued: row ${info.rowIndex}/${context.total}`,
+              datasetType,
+              model: modelKey,
+              rowIndex: info.rowIndex,
+              id: info.rowId,
+            });
+          },
+        },
+      });
 
-    if (ensuredHeader !== header) {
-      header.length = 0;
-      header.push(...ensuredHeader);
-    }
+      const dbResults = await fetchArcBatchResults(
+        client,
+        ARC_BATCH_MODULE_NAME,
+        datasetType,
+        modelKey,
+      );
+      dbResults.forEach(entry => {
+        const row = result.rows[entry.rowIndex - 1];
+        if (row) {
+          row[modelConfig.columnName] = entry.result;
+        }
+      });
 
-    const totalRows = rows.length;
-    const runCount = limit ? Math.min(limit, totalRows) : totalRows;
+      writeArcCsv(datasetType, result.header, result.rows);
 
-    let processed = 0;
-    let skipped = 0;
-
-    for (let index = 0; index < runCount; index += 1) {
-      const row = rows[index];
-      const rowId = row.id ?? `row-${index + 1}`;
-      const existing = row[modelConfig.columnName]?.trim();
-
-      if (existing) {
-        skipped += 1;
-        logger.info({
-          result: `skipped: row ${index + 1}/${runCount}`,
+      return new Response(
+        JSON.stringify({
           datasetType,
           model: modelKey,
-          rowIndex: index + 1,
-          id: rowId,
-        });
-        continue;
+          processed: result.processed,
+          skipped: result.skipped,
+          total: result.total,
+          synced: dbResults.length,
+        }),
+        { status: 200, headers: { "Content-Type": "application/json" } },
+      );
+    } catch (error) {
+      if (error instanceof ArcBatchInputError) {
+        return createErrorResponse(error.message);
       }
-
-      const question = row.question ?? "";
-      const choices = parseArcChoices(row.choices ?? "");
-      const answerKey = row.answerKey ?? "";
-
-      if (!question || !choices.length) {
-        row[modelConfig.columnName] = "answer: wrong()\n" +
-          "token: 0, 0, 0\n" +
-          "time: 0.0s";
-        processed += 1;
-        writeArcCsv(datasetType, header, rows);
-        continue;
-      }
-
-      const startTime = Date.now();
-      const result = await generateText({
-        model: getModel(modelConfig.provider, modelConfig.modelName),
-        prompt: buildArcPrompt(question, choices),
-      });
-      const elapsedSeconds = (Date.now() - startTime) / 1000;
-
-      const prediction = extractChoiceLabel(result.text);
-      const correctness = prediction === answerKey ? "right" : "wrong";
-      const usage = result.usage ?? {};
-      const totalTokens = usage.totalTokens ?? 0;
-      const inputTokens = usage.inputTokens ?? 0;
-      const outputTokens = usage.outputTokens ?? 0;
-
-      row[modelConfig.columnName] = formatResult({
-        correctness,
-        prediction,
-        totalTokens,
-        inputTokens,
-        outputTokens,
-        elapsedSeconds,
-      });
-
-      processed += 1;
-      logger.info({
-        result: `Completed row ${index + 1}/${runCount}`,
-      });
-
-      writeArcCsv(datasetType, header, rows);
-    }
-
-    return new Response(
-      JSON.stringify({
-        datasetType,
-        model: modelKey,
-        processed,
-        skipped,
-        total: runCount,
-      }),
-      { status: 200, headers: { "Content-Type": "application/json" } },
-    );
-  });
-}
-
-function ensureHeaderColumns(header: string[], columns: string[]) {
-  const updated = [...header];
-  columns.forEach(column => {
-    if (!updated.includes(column)) {
-      updated.push(column);
+      logger.error({ error }, "Arc batch (LibSQL) failed");
+      return createErrorResponse("Unable to run batch right now.", 500);
     }
   });
-  return updated;
-}
-
-function buildArcPrompt(question: string, choices: ArcChoice[]) {
-  const choiceLines = choices
-    .map(choice => `${choice.label}. ${choice.text}`)
-    .join("\n");
-
-  return [
-    "You are answering a multiple-choice question from the ARC dataset.",
-    "Pick the best answer and reply with only the option label (A, B, C, or D).",
-    "",
-    `Question: ${question}`,
-    "Choices:",
-    choiceLines,
-    "",
-    "Answer:",
-  ].join("\n");
-}
-
-function extractChoiceLabel(text: string) {
-  const match = text.match(/\b([A-D])\b/i);
-  if (match?.[1]) {
-    return match[1].toUpperCase();
-  }
-  return text.trim().slice(0, 20);
-}
-
-function formatResult({
-  correctness,
-  prediction,
-  totalTokens,
-  inputTokens,
-  outputTokens,
-  elapsedSeconds,
-}: {
-  correctness: "right" | "wrong";
-  prediction: string;
-  totalTokens: number;
-  inputTokens: number;
-  outputTokens: number;
-  elapsedSeconds: number;
-}) {
-  return [
-    `answer: ${correctness}${correctness === 'wrong' ? ` (${prediction})` : ''}`,
-    `token: ${totalTokens}, ${inputTokens}, ${outputTokens}`,
-    `time: ${elapsedSeconds.toFixed(1)}s`,
-  ].join("\n");
 }
 
 function createErrorResponse(message: string, status = 400) {

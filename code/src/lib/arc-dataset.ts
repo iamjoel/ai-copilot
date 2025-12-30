@@ -16,7 +16,12 @@ export type ArcRecord = {
   datasetType: ArcDatasetType;
 };
 
-type CsvRow = Record<string, string>;
+export type CsvRow = Record<string, string>;
+
+export type ArcCsvData = {
+  header: string[];
+  rows: CsvRow[];
+};
 
 let cachedRecords: ArcRecord[] | null = null;
 
@@ -38,7 +43,7 @@ function loadCsvFile(fileName: string, datasetType: ArcDatasetType): ArcRecord[]
   const rows = parseCsv(content);
 
   return rows.map(row => {
-    const choices = parseChoices(row.choices ?? "");
+    const choices = parseArcChoices(row.choices ?? "");
     return {
       id: row.id ?? "",
       question: row.question ?? "",
@@ -47,6 +52,38 @@ function loadCsvFile(fileName: string, datasetType: ArcDatasetType): ArcRecord[]
       datasetType,
     };
   });
+}
+
+export function getArcDatasetFilePath(datasetType: ArcDatasetType) {
+  const fileName =
+    datasetType === "ARC-Challenge" ? "ARC-Challenge_test.csv" : "ARC-Easy_test.csv";
+  return path.resolve(process.cwd(), "src/data/ai2 arc", fileName);
+}
+
+export function readArcCsv(datasetType: ArcDatasetType): ArcCsvData {
+  const filePath = getArcDatasetFilePath(datasetType);
+  const content = fs.readFileSync(filePath, "utf-8");
+  const rows = parseCsvRows(content);
+  if (!rows.length) {
+    return { header: [], rows: [] };
+  }
+  const [header, ...dataRows] = rows;
+  const records = dataRows
+    .filter(row => row.some(cell => cell.trim() !== ""))
+    .map(row => {
+      const record: CsvRow = {};
+      header.forEach((key, index) => {
+        record[key] = row[index] ?? "";
+      });
+      return record;
+    });
+  return { header, rows: records };
+}
+
+export function writeArcCsv(datasetType: ArcDatasetType, header: string[], rows: CsvRow[]) {
+  const filePath = getArcDatasetFilePath(datasetType);
+  const content = serializeCsv(header, rows);
+  fs.writeFileSync(filePath, content, "utf-8");
 }
 
 function parseCsv(content: string): CsvRow[] {
@@ -116,7 +153,25 @@ function parseCsvRows(content: string): string[][] {
   return rows;
 }
 
-function parseChoices(value: string): ArcChoice[] {
+function serializeCsv(header: string[], rows: CsvRow[]) {
+  const lines = [
+    header.map(escapeCsvValue).join(","),
+    ...rows.map(row => header.map(key => escapeCsvValue(row[key] ?? "")).join(",")),
+  ];
+  return `${lines.join("\n")}\n`;
+}
+
+function escapeCsvValue(value: string) {
+  if (value.includes("\"")) {
+    return `"${value.replace(/\"/g, "\"\"")}"`;
+  }
+  if (value.includes(",") || value.includes("\n")) {
+    return `"${value}"`;
+  }
+  return value;
+}
+
+export function parseArcChoices(value: string): ArcChoice[] {
   const textItems = extractArrayValues(value, "text");
   const labelItems = extractArrayValues(value, "label");
 

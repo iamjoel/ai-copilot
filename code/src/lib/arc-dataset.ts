@@ -2,6 +2,13 @@ import fs from "node:fs";
 import path from "node:path";
 
 export type ArcDatasetType = "ARC-Challenge" | "ARC-Easy";
+export type ArcModelKey = "qwen-flash" | "qwen-plus" | "qwen3-max";
+
+export const QWEN_RESULT_COLUMNS: Record<ArcModelKey, string> = {
+  "qwen-flash": "Qwen Flash",
+  "qwen-plus": "Qwen Plus",
+  "qwen3-max": "Qwen3 max",
+};
 
 export type ArcChoice = {
   label: string;
@@ -14,6 +21,9 @@ export type ArcRecord = {
   choices: ArcChoice[];
   answerKey: string;
   datasetType: ArcDatasetType;
+  qwenFlashResult?: string;
+  qwenPlusResult?: string;
+  qwen3MaxResult?: string;
 };
 
 export type CsvRow = Record<string, string>;
@@ -24,6 +34,7 @@ export type ArcCsvData = {
 };
 
 let cachedRecords: ArcRecord[] | null = null;
+const datasetLocks = new Map<ArcDatasetType, Promise<void>>();
 
 export function loadArcDatasets(): ArcRecord[] {
   if (cachedRecords) {
@@ -42,16 +53,7 @@ function loadCsvFile(fileName: string, datasetType: ArcDatasetType): ArcRecord[]
   const content = fs.readFileSync(filePath, "utf-8");
   const rows = parseCsv(content);
 
-  return rows.map(row => {
-    const choices = parseArcChoices(row.choices ?? "");
-    return {
-      id: row.id ?? "",
-      question: row.question ?? "",
-      choices,
-      answerKey: row.answerKey ?? "",
-      datasetType,
-    };
-  });
+  return rows.map(row => buildArcRecord(row, datasetType));
 }
 
 export function getArcDatasetFilePath(datasetType: ArcDatasetType) {
@@ -84,6 +86,24 @@ export function writeArcCsv(datasetType: ArcDatasetType, header: string[], rows:
   const filePath = getArcDatasetFilePath(datasetType);
   const content = serializeCsv(header, rows);
   fs.writeFileSync(filePath, content, "utf-8");
+}
+
+export async function withDatasetLock<T>(datasetType: ArcDatasetType, action: () => Promise<T>) {
+  const current = datasetLocks.get(datasetType) ?? Promise.resolve();
+  let release: () => void = () => undefined;
+  const next = new Promise<void>(resolve => {
+    release = resolve;
+  });
+  datasetLocks.set(datasetType, current.then(() => next));
+  await current;
+  try {
+    return await action();
+  } finally {
+    release();
+    if (datasetLocks.get(datasetType) === next) {
+      datasetLocks.delete(datasetType);
+    }
+  }
 }
 
 function parseCsv(content: string): CsvRow[] {
@@ -187,6 +207,20 @@ export function parseArcChoices(value: string): ArcChoice[] {
     label: labels[index] ?? String.fromCharCode(65 + index),
     text,
   }));
+}
+
+export function buildArcRecord(row: CsvRow, datasetType: ArcDatasetType): ArcRecord {
+  const choices = parseArcChoices(row.choices ?? "");
+  return {
+    id: row.id ?? "",
+    question: row.question ?? "",
+    choices,
+    answerKey: row.answerKey ?? "",
+    datasetType,
+    qwenFlashResult: row[QWEN_RESULT_COLUMNS["qwen-flash"]] ?? "",
+    qwenPlusResult: row[QWEN_RESULT_COLUMNS["qwen-plus"]] ?? "",
+    qwen3MaxResult: row[QWEN_RESULT_COLUMNS["qwen3-max"]] ?? "",
+  };
 }
 
 function extractArrayValues(value: string, key: "text" | "label"): string[] {

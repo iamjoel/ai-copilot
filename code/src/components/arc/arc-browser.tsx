@@ -1,10 +1,11 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { useMutation, useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   Select,
   SelectContent,
@@ -14,6 +15,7 @@ import {
 } from "@/components/ui/select";
 
 type ArcDatasetType = "ARC-Challenge" | "ARC-Easy";
+type ArcModelKey = "qwen-flash" | "qwen-plus" | "qwen3-max";
 
 type ArcChoice = {
   label: string;
@@ -26,6 +28,9 @@ type ArcRecord = {
   choices: ArcChoice[];
   answerKey: string;
   datasetType: ArcDatasetType;
+  qwenFlashResult?: string;
+  qwenPlusResult?: string;
+  qwen3MaxResult?: string;
 };
 
 type ArcApiResponse = {
@@ -36,19 +41,30 @@ type ArcApiResponse = {
 };
 
 type RunResponse = {
+  formatted?: string;
   raw: string;
-  model: string;
+  model: ArcModelKey;
 };
 
 const PAGE_SIZE = 10;
+const MODEL_COLUMNS: Array<{ key: ArcModelKey; label: string }> = [
+  { key: "qwen-flash", label: "Qwen Flash" },
+  { key: "qwen-plus", label: "Qwen Plus" },
+  { key: "qwen3-max", label: "Qwen3 max" },
+];
 
 export default function ArcBrowser() {
+  const queryClient = useQueryClient();
   const [datasetType, setDatasetType] = useState<ArcDatasetType | "all">("all");
   const [page, setPage] = useState(1);
+  const [onlyWrong, setOnlyWrong] = useState(false);
   const [runResults, setRunResults] = useState<Record<string, RunResponse>>({});
-  const [runningId, setRunningId] = useState<string | null>(null);
+  const [runningKey, setRunningKey] = useState<string | null>(null);
 
-  const queryKey = useMemo(() => ["arc", datasetType, page], [datasetType, page]);
+  const queryKey = useMemo(
+    () => ["arc", datasetType, page, onlyWrong],
+    [datasetType, page, onlyWrong],
+  );
 
   const { data, isLoading, isFetching, error } = useQuery<ArcApiResponse>({
     queryKey,
@@ -60,6 +76,9 @@ export default function ArcBrowser() {
       if (datasetType !== "all") {
         params.set("type", datasetType);
       }
+      if (onlyWrong) {
+        params.set("onlyWrong", "true");
+      }
       const response = await fetch(`/api/arc?${params.toString()}`);
       if (!response.ok) {
         throw new Error("Failed to load ARC datasets.");
@@ -69,13 +88,18 @@ export default function ArcBrowser() {
   });
 
   const runMutation = useMutation({
-    mutationFn: async (record: ArcRecord) => {
+    mutationFn: async (payload: { record: ArcRecord; model: ArcModelKey }) => {
+      const { record, model } = payload;
       const response = await fetch("/api/arc/run", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
+          id: record.id,
+          datasetType: record.datasetType,
+          model,
           question: record.question,
           choices: record.choices,
+          answerKey: record.answerKey,
         }),
       });
       if (!response.ok) {
@@ -83,14 +107,18 @@ export default function ArcBrowser() {
       }
       return response.json() as Promise<RunResponse>;
     },
-    onMutate: record => {
-      setRunningId(record.id);
+    onMutate: ({ record, model }) => {
+      setRunningKey(`${record.id}:${model}`);
     },
-    onSuccess: (result, record) => {
-      setRunResults(prev => ({ ...prev, [record.id]: result }));
+    onSuccess: (result, payload) => {
+      setRunResults(prev => ({
+        ...prev,
+        [`${payload.record.id}:${payload.model}`]: result,
+      }));
+      queryClient.invalidateQueries({ queryKey: ["arc"] });
     },
     onSettled: () => {
-      setRunningId(null);
+      setRunningKey(null);
     },
   });
 
@@ -102,6 +130,20 @@ export default function ArcBrowser() {
   const handleDatasetChange = (value: string) => {
     setDatasetType(value as ArcDatasetType | "all");
     setPage(1);
+  };
+
+  const getResultValue = (record: ArcRecord, model: ArcModelKey) => {
+    const override = runResults[`${record.id}:${model}`]?.formatted;
+    if (override) {
+      return override;
+    }
+    if (model === "qwen-flash") {
+      return record.qwenFlashResult ?? "";
+    }
+    if (model === "qwen-plus") {
+      return record.qwenPlusResult ?? "";
+    }
+    return record.qwen3MaxResult ?? "";
   };
 
   return (
@@ -125,6 +167,16 @@ export default function ArcBrowser() {
                 <SelectItem value="ARC-Easy">ARC-Easy</SelectItem>
               </SelectContent>
             </Select>
+            <label className="flex items-center gap-2 text-sm text-muted-foreground">
+              <Checkbox
+                checked={onlyWrong}
+                onCheckedChange={value => {
+                  setOnlyWrong(Boolean(value));
+                  setPage(1);
+                }}
+              />
+              Only wrong results
+            </label>
           </div>
         </div>
       </Card>
@@ -138,26 +190,28 @@ export default function ArcBrowser() {
                 <th className="px-4 py-3 text-left font-medium">Question</th>
                 <th className="px-4 py-3 text-left font-medium">Choices</th>
                 <th className="px-4 py-3 text-left font-medium">Answer Key</th>
-                <th className="px-4 py-3 text-left font-medium">Run</th>
+                {MODEL_COLUMNS.map(model => (
+                  <th key={model.key} className="px-4 py-3 text-left font-medium">
+                    {model.label}
+                  </th>
+                ))}
               </tr>
             </thead>
             <tbody>
               {isLoading ? (
                 <tr>
-                  <td className="px-4 py-6 text-center text-muted-foreground" colSpan={5}>
+                  <td className="px-4 py-6 text-center text-muted-foreground" colSpan={7}>
                     Loading ARC data...
                   </td>
                 </tr>
               ) : error ? (
                 <tr>
-                  <td className="px-4 py-6 text-center text-destructive" colSpan={5}>
+                  <td className="px-4 py-6 text-center text-destructive" colSpan={7}>
                     Failed to load dataset rows.
                   </td>
                 </tr>
               ) : data?.items.length ? (
                 data.items.map(record => {
-                  const runResult = runResults[record.id];
-                  const isRunning = runningId === record.id;
                   return (
                     <tr key={`${record.datasetType}-${record.id}`} className="border-t">
                       <td className="px-4 py-4 align-top">
@@ -179,29 +233,36 @@ export default function ArcBrowser() {
                       <td className="px-4 py-4 align-top">
                         <span className="font-semibold text-foreground">{record.answerKey}</span>
                       </td>
-                      <td className="px-4 py-4 align-top">
-                        <div className="space-y-2">
-                          <Button
-                            size="sm"
-                            disabled={isRunning}
-                            onClick={() => runMutation.mutate(record)}
-                          >
-                            {isRunning ? "Running..." : "Run"}
-                          </Button>
-                          {runResult ? (
-                            <div className="text-xs text-muted-foreground">
-                              <div className="line-clamp-2">Result: <span className="font-semibold text-foreground">
-                                {runResult.raw}</span></div>
+                      {MODEL_COLUMNS.map(model => {
+                        const resultValue = getResultValue(record, model.key);
+                        const isRunning = runningKey === `${record.id}:${model.key}`;
+                        return (
+                          <td key={model.key} className="px-4 py-4 align-top">
+                            <div className="space-y-2">
+                              {resultValue ? (
+                                <pre className="whitespace-pre-wrap text-xs text-muted-foreground">
+                                  {resultValue}
+                                </pre>
+                              ) : (
+                                <span className="text-xs text-muted-foreground">No result</span>
+                              )}
+                              <Button
+                                size="sm"
+                                disabled={isRunning}
+                                onClick={() => runMutation.mutate({ record, model: model.key })}
+                              >
+                                {isRunning ? "Running..." : "Run"}
+                              </Button>
                             </div>
-                          ) : null}
-                        </div>
-                      </td>
+                          </td>
+                        );
+                      })}
                     </tr>
                   );
                 })
               ) : (
                 <tr>
-                  <td className="px-4 py-6 text-center text-muted-foreground" colSpan={5}>
+                  <td className="px-4 py-6 text-center text-muted-foreground" colSpan={7}>
                     No records found.
                   </td>
                 </tr>

@@ -3,8 +3,11 @@ import {
   parseArcChoices,
   readArcCsv,
   writeArcCsv,
+  withDatasetLock,
+  QWEN_RESULT_COLUMNS,
   type ArcDatasetType,
   type ArcChoice,
+  type ArcModelKey,
 } from "@/lib/arc-dataset";
 import { getModel } from "@/lib/model-factory";
 import { generateText } from "ai";
@@ -13,23 +16,33 @@ export const runtime = "nodejs";
 
 type BatchRunRequest = {
   n?: number;
-  model?: "qwen-flash" | "qwen-plus" | "qwen3-max";
+  model?: ArcModelKey;
   datasetType?: ArcDatasetType;
 };
 
 type ModelColumn = {
-  model: BatchRunRequest["model"];
+  model: ArcModelKey;
   columnName: string;
   modelName: string;
 };
 
 const MODEL_COLUMNS: ModelColumn[] = [
-  { model: "qwen-flash", columnName: "Qwen Flash", modelName: "qwen-flash" },
-  { model: "qwen-plus", columnName: "Qwen Plus", modelName: "qwen-plus" },
-  { model: "qwen3-max", columnName: "Qwen3 max", modelName: "qwen3-max" },
+  {
+    model: "qwen-flash",
+    columnName: QWEN_RESULT_COLUMNS["qwen-flash"],
+    modelName: "qwen-flash",
+  },
+  {
+    model: "qwen-plus",
+    columnName: QWEN_RESULT_COLUMNS["qwen-plus"],
+    modelName: "qwen-plus",
+  },
+  {
+    model: "qwen3-max",
+    columnName: QWEN_RESULT_COLUMNS["qwen3-max"],
+    modelName: "qwen3-max",
+  },
 ];
-
-const datasetLocks = new Map<ArcDatasetType, Promise<void>>();
 
 export async function POST(request: Request) {
   const body = (await request.json()) as BatchRunRequest;
@@ -143,24 +156,6 @@ export async function POST(request: Request) {
       { status: 200, headers: { "Content-Type": "application/json" } },
     );
   });
-}
-
-async function withDatasetLock<T>(datasetType: ArcDatasetType, action: () => Promise<T>) {
-  const current = datasetLocks.get(datasetType) ?? Promise.resolve();
-  let release: () => void = () => undefined;
-  const next = new Promise<void>(resolve => {
-    release = resolve;
-  });
-  datasetLocks.set(datasetType, current.then(() => next));
-  await current;
-  try {
-    return await action();
-  } finally {
-    release();
-    if (datasetLocks.get(datasetType) === next) {
-      datasetLocks.delete(datasetType);
-    }
-  }
 }
 
 function ensureHeaderColumns(header: string[], columns: string[]) {

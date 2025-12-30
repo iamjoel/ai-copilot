@@ -34,6 +34,7 @@ type BatchResult = {
 const REQUIRED_COLUMNS = ["input", "output", "status", "error"];
 const DEFAULT_MODEL = "gemini-2.5-flash-image"; // Nano Banana
 // const DEFAULT_MODEL = "gemini-3-pro-image-preview"; // Nano Banana Pro
+const MAX_CONCURRENCY = 20;
 
 const ai = new GoogleGenAI({
   apiKey: process.env.GOOGLE_GENERATIVE_AI_API_KEY,
@@ -97,59 +98,68 @@ async function runBatch(csvPath: string, limit: number | null): Promise<BatchRes
   let processed = 0;
   let skipped = 0;
 
-  for (let index = 0; index < runCount; index += 1) {
-    const row = rows[index];
-    const existing = row.output?.trim();
+  let writeQueue = Promise.resolve();
+  const enqueueWrite = () => {
+    writeQueue = writeQueue.then(() => writeImageBatchCsv(csvPath, header, rows));
+    return writeQueue;
+  };
 
-    if (existing) {
-      skipped += 1;
-      logger.info({
-        result: `skipped: row ${index + 1}/${runCount}`,
-        rowIndex: index + 1,
-      });
-      continue;
-    }
+  await runWithConcurrency(
+    rows.slice(0, runCount).map((row, index) => ({ row, index })),
+    Math.min(MAX_CONCURRENCY, runCount),
+    async ({ row, index }) => {
+      const existing = row.output?.trim();
 
-    const input = row.input?.trim() ?? "";
-    if (!input) {
-      updateRow(row, {
-        status: "error",
-        error: "Missing input prompt.",
-      });
-      processed += 1;
-      writeImageBatchCsv(csvPath, header, rows);
-      continue;
-    }
+      if (existing) {
+        skipped += 1;
+        logger.info({
+          result: `skipped: row ${index + 1}/${runCount}`,
+          rowIndex: index + 1,
+        });
+        return;
+      }
 
-    try {
-      const outputPath = buildOutputPath(index + 1);
-      await generateImage(input, outputPath);
-      updateRow(row, {
-        output: toWorkspaceRelativePath(outputPath),
-        status: "done",
-        error: "",
-      });
-      processed += 1;
-      logger.info({
-        result: `completed: row ${index + 1}/${runCount}`,
-        rowIndex: index + 1,
-        output: row.output,
-      });
-    } catch (error) {
-      updateRow(row, {
-        status: "error",
-        error: error instanceof Error ? error.message : "Unknown error",
-      });
-      processed += 1;
-      logger.error({
-        error,
-        result: `failed: row ${index + 1}/${runCount}`,
-        rowIndex: index + 1,
-      });
-    }
+      const input = row.input?.trim() ?? "";
+      if (!input) {
+        updateRow(row, {
+          status: "error",
+          error: "Missing input prompt.",
+        });
+        processed += 1;
+        await enqueueWrite();
+        return;
+      }
 
-    writeImageBatchCsv(csvPath, header, rows);
-  }
+      try {
+        const outputPath = buildOutputPath(index + 1);
+        await generateImage(input, outputPath);
+        updateRow(row, {
+          output: toWorkspaceRelativePath(outputPath),
+          status: "done",
+          error: "",
+        });
+        processed += 1;
+        logger.info({
+          result: `completed: row ${index + 1}/${runCount}`,
+          rowIndex: index + 1,
+          output: row.output,
+        });
+      } catch (error) {
+        updateRow(row, {
+          status: "error",
+          error: error instanceof Error ? error.message : "Unknown error",
+        });
+        processed += 1;
+        logger.error({
+          error,
+          result: `failed: row ${index + 1}/${runCount}`,
+          rowIndex: index + 1,
+        });
+      }
+
+      await enqueueWrite();
+    },
+  );
 
   return {
     processed,
@@ -196,4 +206,25 @@ class BatchInputError extends Error {
     super(message);
     this.name = "BatchInputError";
   }
+}
+
+async function runWithConcurrency<T>(
+  items: T[],
+  limit: number,
+  worker: (item: T) => Promise<void>,
+) {
+  if (!items.length) {
+    return;
+  }
+
+  let cursor = 0;
+  const workers = Array.from({ length: Math.max(1, limit) }, async () => {
+    while (cursor < items.length) {
+      const current = items[cursor];
+      cursor += 1;
+      await worker(current);
+    }
+  });
+
+  await Promise.all(workers);
 }

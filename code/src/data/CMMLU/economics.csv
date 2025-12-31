@@ -1,4 +1,4 @@
-,Question,A,B,C,D,Answer,Qwen Flash,Qwen Plus,Qwen3 max,Gemini 2.5 Flash Lite,Gemini 3 Flash,Gemini 3 Pro,Claude Sonnet 4.5,Claude Haiku 4.5,Claude Opus 4.5
+,Question,A,B,C,D,Answer,Qwen Flash,Qwen Plus,Qwen3 max,Gemini 2.5 Flash Lite,Gemini 3 Flash,Gemini 3 Pro,Claude Sonnet 4.5,Claude Haiku 4.5,Claude Opus 4.5,Grok 4.1 Fast Reasoning,Grok 4.1 Fast Non Reasoning
 0,一种产品价格的大幅度减少，导致另一种产品销售量的提高，这两种产品属于,独立品,互补品,替代品,低档品,B,"answer: wrong (C)
 token: 99, 93, 6
 time: 0.3s",,"answer: wrong (C)
@@ -7,7 +7,9 @@ time: 0.8s","answer: wrong (C)
 token: 88, 87, 1
 time: 0.7s",,,,,"answer: wrong (C)
 token: 119, 115, 4
-time: 2.7s"
+time: 2.7s","answer: wrong (C)
+token: 673, 237, 1
+time: 3.6s",
 1,风险补偿率是,加在无风险的贴现率上，以便在决策中把风险考虑进去,只供风险决策者决策时用,B和C都对,要从无风险贴现率减去，以便在决策中考虑风险,A,"answer: right
 token: 116, 115, 1
 time: 0.3s",,"answer: right
@@ -16,7 +18,9 @@ time: 1.3s","answer: right
 token: 108, 107, 1
 time: 0.7s",,,,,"answer: right
 token: 143, 139, 4
-time: 2.5s"
+time: 2.5s","answer: right
+token: 597, 256, 1
+time: 3.0s",
 2,如果其他因素保持不变，下列哪种情况一定会使需求减少,收入减少，同时互补品的价格下降,收入增加，同时替代品的价格上涨,收入减少，同时互补品的价格上涨,收入增加，同时替代品的价格下降,C,"answer: right
 token: 112, 111, 1
 time: 0.2s",,"answer: right
@@ -25,7 +29,9 @@ time: 2.5s","answer: right
 token: 108, 107, 1
 time: 0.7s",,,,,"answer: wrong (A)
 token: 374, 156, 218
-time: 5.5s"
+time: 5.5s","answer: right
+token: 1058, 254, 1
+time: 7.9s",
 3,一个行业有很多企业，每个企业销售的产品与其他企业的产品略有差别，这样的市场结构被称为,垄断竞争,完全竞争,寡头,垄断,A,"answer: right
 token: 95, 94, 1
 time: 0.2s",,"answer: right
@@ -34,7 +40,9 @@ time: 2.1s","answer: right
 token: 88, 87, 1
 time: 0.7s",,,,,"answer: right
 token: 131, 127, 4
-time: 2.7s"
+time: 2.7s","answer: right
+token: 462, 235, 1
+time: 2.4s",
 4,垄断竞争企业的竞争方式不包括,产品差异化竞争,价格竞争,专利竞争,广告和促销竞争,C,"answer: right
 token: 85, 84, 1
 time: 0.2s",,"answer: right
@@ -43,7 +51,9 @@ time: 0.6s","answer: right
 token: 80, 79, 1
 time: 0.5s",,,,,"answer: right
 token: 115, 111, 4
-time: 2.4s"
+time: 2.4s","answer: right
+token: 635, 231, 1
+time: 4.0s",
 5,提出消费倾向递减心理规律的经济学家是,西斯蒙第,配第,魁奈,凯恩斯,D,"answer: right
 token: 91, 85, 6
 time: 0.3s",,"answer: right
@@ -52,7 +62,9 @@ time: 0.5s","answer: right
 token: 81, 80, 1
 time: 0.7s",,,,,"answer: right
 token: 110, 106, 4
-time: 3.0s"
+time: 3.0s","answer: right
+token: 476, 231, 1
+time: 2.8s",
 6,需求的收入弹性是指,收入对需求变化的反应程度,需求对收入变化的反应程度,需求和收入的相容性,需求和收入的相关程度,B,"answer: right
 token: 104, 103, 1
 time: 0.2s",,"answer: right
@@ -61,7 +73,9 @@ time: 1.3s","answer: right
 token: 89, 88, 1
 time: 1.1s",,,,,"answer: right
 token: 125, 121, 4
-time: 2.0s"
+time: 2.0s","answer: right
+token: 487, 241, 1
+time: 1.9s",
 7,如果投资方案未来全部净现金效益量的现值大于期初投资，企业就应该,还需要再研究,接受该方案,无法确定,拒绝该方案,B,"answer: right
 token: 103, 96, 7
 time: 0.3s",,"answer: right
@@ -70,7 +84,9 @@ time: 1.9s","answer: right
 token: 90, 89, 1
 time: 0.4s",,,,,"answer: right
 token: 125, 121, 4
-time: 2.4s"
+time: 2.4s","answer: right
+token: 451, 239, 1
+time: 2.0s",
 8,在完全竞争市场上，一个企业的需求曲线是,与横轴平行的线,向右下方倾斜的线,与横轴垂直的线,与纵轴平行的线,A,"answer: right
 token: 97, 96, 1
 time: 0.2s",,"answer: right
@@ -79,7 +95,9 @@ time: 0.7s","answer: right
 token: 91, 90, 1
 time: 0.6s",,,,,"answer: right
 token: 202, 125, 77
-time: 3.9s"
+time: 3.9s","answer: right
+token: 457, 240, 1
+time: 2.4s",
 9,最常用的三种投资方案评价方法是,返本期法、成本法、内部回报率法,返本期法、净现值法、内部回报率法,返本期法、净现值法、成本法,成本法、净现值法、内部回报率法,B,"answer: right
 token: 118, 117, 1
 time: 0.2s",,"answer: right
@@ -88,7 +106,9 @@ time: 0.7s","answer: right
 token: 115, 114, 1
 time: 0.7s",,,,,"answer: right
 token: 146, 142, 4
-time: 2.7s"
+time: 2.7s","answer: right
+token: 578, 268, 1
+time: 2.6s",
 10,投资方案甲头三年的净现金效益量分别为l00元、100元和100元，投资方案乙头三年的现金效益量分别为80元、100元和120元,乙方案现值大,甲方案现值大,两个方案的现值相等,必须作贴现计算，才能确定哪个方案现值大,D,"answer: right
 token: 145, 144, 1
 time: 0.2s",,"answer: right
@@ -97,7 +117,9 @@ time: 0.6s","answer: right
 token: 138, 137, 1
 time: 0.6s",,,,,"answer: wrong (A)
 token: 463, 167, 296
-time: 7.0s"
+time: 7.0s","answer: wrong (B)
+token: 1617, 279, 1
+time: 11.0s",
 11,以下现象属于市场失灵的是,收入不平等,以上全是,市场控制,自然垄断,B,"answer: right
 token: 83, 82, 1
 time: 0.2s",,"answer: right
@@ -106,7 +128,9 @@ time: 0.7s","answer: right
 token: 75, 74, 1
 time: 0.7s",,,,,"answer: right
 token: 103, 99, 4
-time: 2.4s"
+time: 2.4s","answer: right
+token: 3989, 227, 1
+time: 28.3s",
 12,当长期均衡时，完全竞争企业总是,经济利润大于零,正常利润为零,经济利润小于零,经济利润为零,D,"answer: right
 token: 92, 91, 1
 time: 0.2s",,"answer: right
@@ -115,7 +139,9 @@ time: 0.7s","answer: right
 token: 85, 84, 1
 time: 0.6s",,,,,"answer: right
 token: 115, 111, 4
-time: 3.0s"
+time: 3.0s","answer: right
+token: 566, 234, 1
+time: 2.9s",
 13,有风险条件下的决策，其决策条件是,决策的可能结果有多个，但不知道每种结果发生的概率,决策的可能结果有多个，且每种结果的发生概率为已知,决策的可能结果有多个,决策的可能结果只有一个,B,"answer: right
 token: 119, 118, 1
 time: 0.2s",,"answer: right
@@ -124,7 +150,9 @@ time: 0.6s","answer: right
 token: 111, 110, 1
 time: 0.6s",,,,,"answer: right
 token: 157, 153, 4
-time: 2.1s"
+time: 2.1s","answer: right
+token: 473, 259, 1
+time: 2.3s",
 14,以下可用于衡量一个国家金融发展水平的指标是,净金融资产,国民生产总值,金融比率,流动性金融资产,C,"answer: right
 token: 92, 87, 5
 time: 0.2s",,"answer: right
@@ -133,7 +161,9 @@ time: 1.0s","answer: right
 token: 86, 85, 1
 time: 0.7s",,,,,"answer: right
 token: 116, 112, 4
-time: 2.6s"
+time: 2.6s","answer: right
+token: 788, 234, 1
+time: 5.5s",
 15,下列治理通货膨胀的宏观经济政策中，属于紧缩性货币政策的是,政府削减财政支出,中央银行在公开市场上出售政府债券,控制集团购买力,政府确定工资—物价指导线,B,"answer: right
 token: 105, 104, 1
 time: 0.3s",,"answer: right
@@ -142,7 +172,9 @@ time: 0.9s","answer: right
 token: 102, 101, 1
 time: 0.7s",,,,,"answer: right
 token: 148, 144, 4
-time: 1.6s"
+time: 1.6s","answer: right
+token: 460, 254, 1
+time: 2.0s",
 16,实施“次级进口替代”战略的基础是,更多的自然资源,更多的劳动力,先进的科学技术,发达的金融市场,A,"answer: wrong (C)
 token: 93, 86, 7
 time: 0.2s",,"answer: wrong (C)
@@ -151,7 +183,9 @@ time: 1.3s","answer: wrong (D)
 token: 85, 84, 1
 time: 0.5s",,,,,"answer: wrong (C)
 token: 116, 112, 4
-time: 1.7s"
+time: 1.7s","answer: wrong (C)
+token: 494, 232, 1
+time: 2.8s",
 17,假定名义货币供给量不变，价格总水平上升将导致一条向右上方倾斜的LM曲线上的一点,沿原LM曲线向下方移动,沿原LM曲线向上方移动,向左移动到另一条LM曲线上,向右移动到另一条LM曲线上,C,"answer: right
 token: 124, 123, 1
 time: 0.2s",,"answer: right
@@ -160,7 +194,9 @@ time: 0.8s","answer: wrong (B)
 token: 118, 117, 1
 time: 0.9s",,,,,"answer: right
 token: 460, 164, 296
-time: 7.3s"
+time: 7.3s","answer: right
+token: 892, 268, 1
+time: 5.4s",
 18,下列关于恩格尔系数的表述，正确的是,个别年份我国恩格尔系数上升，说明恩格尔定律在我国不适用,随收入水平提高，恩格尔系数有逐渐增加的趋势,恩格尔系数是食品支出占消费总支出的比重,恩格尔系数随收入增加总是下降的,C,"answer: right
 token: 126, 125, 1
 time: 0.4s",,"answer: right
@@ -169,7 +205,9 @@ time: 1.1s","answer: right
 token: 129, 128, 1
 time: 0.7s",,,,,"answer: wrong (A)
 token: 488, 182, 306
-time: 6.7s"
+time: 6.7s","answer: right
+token: 604, 273, 1
+time: 2.6s",
 19,一种商品价格下降对其互补品最直接的影响是,互补品的需求曲线向右移动,互补品的价格下降,互补品的供给曲线向右移动,互补品的需求曲线向左移动,A,"answer: right
 token: 101, 100, 1
 time: 0.2s",,"answer: right
@@ -178,7 +216,9 @@ time: 2.1s","answer: wrong (D)
 token: 102, 101, 1
 time: 0.8s",,,,,"answer: right
 token: 139, 135, 4
-time: 3.0s"
+time: 3.0s","answer: right
+token: 553, 252, 1
+time: 2.7s",
 20,下列属于二级价格歧视的是,私人诊所根据不同的人收取不同的价格,去公园，老人与小孩的门票低,到超市同时买两块香皂比单独买一个香皂单价低,坐火车，学生半价买火车票,C,"answer: right
 token: 114, 113, 1
 time: 0.3s",,"answer: right
@@ -187,7 +227,9 @@ time: 1.4s","answer: wrong (B)
 token: 111, 110, 1
 time: 0.8s",,,,,"answer: right
 token: 153, 149, 4
-time: 2.6s"
+time: 2.6s","answer: right
+token: 635, 264, 1
+time: 3.7s",
 21,有限责任公司签发给股东的出资证明书是一种,非流通证券,证明文书,有价证券,无价证券,B,"answer: wrong (A)
 token: 93, 86, 7
 time: 0.3s",,"answer: right
@@ -196,7 +238,9 @@ time: 1.5s","answer: right
 token: 81, 80, 1
 time: 0.9s",,,,,"answer: right
 token: 109, 105, 4
-time: 1.5s"
+time: 1.5s","answer: wrong (C)
+token: 1061, 231, 1
+time: 8.3s",
 22,完全竞争市场上，单个厂商的生产要素需求曲线向右下方倾斜的原因是,要素的边际产量递减,等产量曲线向右下方倾斜,要素所生产产品的边际效用递减,生产的规模收益递减,A,"answer: right
 token: 116, 115, 1
 time: 0.3s",,"answer: right
@@ -205,7 +249,9 @@ time: 0.8s","answer: right
 token: 106, 105, 1
 time: 0.8s",,,,,"answer: right
 token: 492, 150, 342
-time: 8.9s"
+time: 8.9s","answer: right
+token: 602, 255, 1
+time: 3.9s",
 23,供给的变动是指（）不变条件下，其他因素变动所引起的供给的变动。,本身的价格,偏好,技术,产量,A,"answer: right
 token: 89, 88, 1
 time: 0.2s",,"answer: right
@@ -214,7 +260,9 @@ time: 0.7s","answer: right
 token: 87, 86, 1
 time: 0.7s",,,,,"answer: right
 token: 115, 111, 4
-time: 2.4s"
+time: 2.4s","answer: right
+token: 524, 233, 1
+time: 3.1s",
 24,发行对象事先指定，在小范围内发行的债券是,抵押债券,公募债券,私募债券,无抵押债券,C,"answer: right
 token: 92, 86, 6
 time: 0.4s",,"answer: right
@@ -223,7 +271,9 @@ time: 0.7s","answer: right
 token: 83, 82, 1
 time: 0.8s",,,,,"answer: right
 token: 111, 107, 4
-time: 2.4s"
+time: 2.4s","answer: right
+token: 415, 231, 1
+time: 1.9s",
 25,长期生产函数的概念是,生产函数中所有投入要素的投入量都是不可变的,生产函数中仅有一种投入要素的投入量是可变的,生产函数中有的投入要素的投入量是可变的，有的固定不变,生产函数中所有投入要素的投入量都是可变的,D,"answer: right
 token: 128, 127, 1
 time: 0.2s",,"answer: right
@@ -232,7 +282,9 @@ time: 3.0s","answer: right
 token: 119, 118, 1
 time: 1.4s",,,,,"answer: right
 token: 171, 167, 4
-time: 1.5s"
+time: 1.5s","answer: right
+token: 542, 268, 1
+time: 2.4s",
 26,边际效用递减规律表明，随着消费者对某种商品消费量的增加,该商品的总效用趋于递减,该商品的效用总量趋于递减,该商品的效用增量趋于递减,该商品的平均效用趋于递减,C,"answer: right
 token: 118, 117, 1
 time: 0.3s",,"answer: right
@@ -241,7 +293,9 @@ time: 1.5s","answer: right
 token: 111, 110, 1
 time: 0.9s",,,,,"answer: right
 token: 150, 146, 4
-time: 2.3s"
+time: 2.3s","answer: right
+token: 556, 263, 1
+time: 2.6s",
 27,住房投资依赖于,实际利率,以上全部,成年人口的规模,住房的相对价格,B,"answer: right
 token: 80, 79, 1
 time: 0.3s",,"answer: right
@@ -250,7 +304,9 @@ time: 0.6s","answer: right
 token: 76, 75, 1
 time: 0.6s",,,,,"answer: right
 token: 102, 98, 4
-time: 1.6s"
+time: 1.6s","answer: right
+token: 476, 227, 1
+time: 2.3s",
 28,在完全垄断市场上，对于任何产量，厂商的平均收益总等于,市场价格,边际收益,边际成本,平均成本,A,"answer: right
 token: 91, 90, 1
 time: 0.2s",,"answer: right
@@ -259,7 +315,9 @@ time: 1.6s","answer: right
 token: 85, 84, 1
 time: 1.3s",,,,,"answer: right
 token: 200, 112, 88
-time: 4.1s"
+time: 4.1s","answer: right
+token: 700, 234, 1
+time: 4.4s",
 29,不受决策影响的非相关成本，称为,社会成本,增量成本,沉没成本,机会成本,C,"answer: right
 token: 92, 85, 7
 time: 0.3s",,"answer: right
@@ -268,7 +326,9 @@ time: 1.0s","answer: right
 token: 79, 78, 1
 time: 0.7s",,,,,"answer: right
 token: 104, 100, 4
-time: 2.5s"
+time: 2.5s","answer: right
+token: 435, 230, 1
+time: 1.9s",
 30,如果竞争模型是经济的准确描述，那么,经济运行在生产可能性曲线上,经济运行在效用可能性曲线上,以上说法都正确,资源的配置是帕累托有效的,C,"answer: wrong (D)
 token: 104, 103, 1
 time: 0.3s",,"answer: right
@@ -277,7 +337,9 @@ time: 0.5s","answer: wrong (D)
 token: 95, 94, 1
 time: 0.8s",,,,,"answer: wrong (D)
 token: 138, 134, 4
-time: 3.5s"
+time: 3.5s","answer: wrong (D)
+token: 2465, 244, 1
+time: 19.8s",
 31,强调发展中国家经济中特有的市场不完全性、刚性、短缺、过剩、低供给弹性等固有经济特点，这正是发展中国家经济现实与西方传统经济理论的,基本相同之处,重要区别,毫不相干的论述,内在联系的表现,B,"answer: right
 token: 123, 122, 1
 time: 0.2s",,"answer: right
@@ -286,7 +348,9 @@ time: 0.7s","answer: right
 token: 116, 115, 1
 time: 0.7s",,,,,"answer: right
 token: 165, 161, 4
-time: 2.8s"
+time: 2.8s","answer: right
+token: 482, 266, 1
+time: 2.0s",
 32,差别定价存在所需要的条件不包括,产品的市场必须是被分割的,不同市场的价格弹性必须不同,不同市场的边际收入必须不同,企业对价格要有一定控制能力,C,"answer: right
 token: 98, 97, 1
 time: 0.2s",,"answer: right
@@ -295,7 +359,9 @@ time: 5.4s","answer: right
 token: 92, 91, 1
 time: 0.7s",,,,,"answer: right
 token: 139, 135, 4
-time: 2.9s"
+time: 2.9s","answer: right
+token: 899, 245, 1
+time: 5.3s",
 33,净出口是指,出口加政府转移支付,出口减进口,出口加进口,进口减出口,B,"answer: right
 token: 85, 84, 1
 time: 0.3s",,"answer: right
@@ -304,7 +370,9 @@ time: 0.6s","answer: right
 token: 78, 77, 1
 time: 0.6s",,,,,"answer: right
 token: 101, 97, 4
-time: 3.2s"
+time: 3.2s","answer: right
+token: 385, 228, 1
+time: 2.1s",
 34,当政府用某些资源去修建一条大坝时，这些资源就不能用于修建高速公路。这说明了,微观经济学的研究对象,机会成本的概念,最优化的概念,宏观经济学的研究对象,B,"answer: right
 token: 100, 99, 1
 time: 0.3s",,"answer: right
@@ -313,7 +381,9 @@ time: 1.7s","answer: right
 token: 101, 100, 1
 time: 0.7s",,,,,"answer: right
 token: 144, 140, 4
-time: 2.3s"
+time: 2.3s","answer: right
+token: 469, 246, 1
+time: 2.1s",
 35,如果中央银行提高目标通货膨胀率，那么,货币政策规则将变得更陡峭,均衡点将沿着货币政策规则线移动,货币政策规则线将向上移动,货币政策规则线将向下移动,D,"answer: wrong (C)
 token: 111, 110, 1
 time: 0.2s",,"answer: wrong (C)
@@ -322,7 +392,9 @@ time: 1.2s","answer: wrong (C)
 token: 103, 102, 1
 time: 2.4s",,,,,"answer: wrong (A)
 token: 372, 143, 229
-time: 7.3s"
+time: 7.3s","answer: right
+token: 1711, 252, 1
+time: 13.0s",
 36,生产函数的长期是指,1年以内,5年以上,1年以上,所有投入都可以调整的时间,D,"answer: right
 token: 82, 81, 1
 time: 0.3s",,"answer: right
@@ -331,7 +403,9 @@ time: 0.8s","answer: right
 token: 76, 75, 1
 time: 0.7s",,,,,"answer: right
 token: 105, 101, 4
-time: 2.8s"
+time: 2.8s","answer: right
+token: 436, 228, 1
+time: 2.2s",
 37,下列投资工具中，流动性最强的是,不动产投资,债券,股票,银行存款,D,"answer: right
 token: 91, 84, 7
 time: 0.3s",,"answer: right
@@ -340,7 +414,9 @@ time: 0.9s","answer: right
 token: 78, 77, 1
 time: 1.0s",,,,,"answer: right
 token: 100, 96, 4
-time: 2.6s"
+time: 2.6s","answer: right
+token: 556, 227, 1
+time: 3.2s",
 38,下列关于风险大小的的表述，正确的是,预期收益小的风险就大,预期收益大的风险就小,预期收益相同，方差大的风险大,预期收益相同，方差大的风险小,C,"answer: right
 token: 112, 111, 1
 time: 0.4s",,"answer: right
@@ -349,7 +425,9 @@ time: 1.2s","answer: right
 token: 101, 100, 1
 time: 1.0s",,,,,"answer: right
 token: 137, 133, 4
-time: 2.8s"
+time: 2.8s","answer: right
+token: 482, 249, 1
+time: 2.0s",
 39,新古典主义回潮理论建立在两种理论基础之上，这两种理论基础是,公共选择理论和市场失灵理论,新增长理论和公共选择理论,传统的自由市场经济理论和新增长理论,传统的自由市场经济理论和公共选择理论,D,"answer: right
 token: 111, 110, 1
 time: 0.3s",,"answer: right
@@ -358,7 +436,9 @@ time: 0.8s","answer: right
 token: 110, 109, 1
 time: 0.9s",,,,,"answer: right
 token: 163, 159, 4
-time: 2.6s"
+time: 2.6s","answer: right
+token: 854, 258, 1
+time: 5.4s",
 40,在垄断性竞争条件下，企业长期均衡时的条件是,P＝AC和MR＝MC,P＝AC＝MC,P＝MR＝MC,MR＝MC,A,"answer: right
 token: 92, 91, 1
 time: 0.3s",,"answer: right
@@ -367,7 +447,9 @@ time: 1.1s","answer: right
 token: 89, 88, 1
 time: 0.9s",,,,,"answer: right
 token: 129, 125, 4
-time: 2.2s"
+time: 2.2s","answer: right
+token: 553, 237, 1
+time: 2.7s",
 41,消费者行为的基本准则是,成本最小化,支出最小化,收入最大化,效用最大化,D,"answer: right
 token: 89, 83, 6
 time: 0.3s",,"answer: right
@@ -376,7 +458,9 @@ time: 1.6s","answer: right
 token: 79, 78, 1
 time: 1.0s",,,,,"answer: right
 token: 103, 99, 4
-time: 2.5s"
+time: 2.5s","answer: right
+token: 432, 229, 1
+time: 2.1s",
 42,企业应当接受一个投资方案，只要它的回报率,等于它的平均资金成本,大于它的边际资金成本,大于它的平均资金成本,大于它在股票市场将来可能的回报,B,"answer: right
 token: 104, 103, 1
 time: 0.4s",,"answer: wrong (C)
@@ -385,7 +469,9 @@ time: 1.4s","answer: wrong (C)
 token: 96, 95, 1
 time: 0.9s",,,,,"answer: right
 token: 137, 133, 4
-time: 2.5s"
+time: 2.5s","answer: right
+token: 1234, 245, 1
+time: 7.8s",
 43,长期平均成本曲线成为U形的原因与,规模报酬有关,要素的边际生产率有关,外部经济与不经济有关,固定成本与可变成本所占比重有关,A,"answer: right
 token: 105, 104, 1
 time: 0.2s",,"answer: right
@@ -394,7 +480,9 @@ time: 1.1s","answer: wrong (B)
 token: 95, 94, 1
 time: 0.5s",,,,,"answer: right
 token: 131, 127, 4
-time: 2.6s"
+time: 2.6s","answer: right
+token: 600, 247, 1
+time: 2.9s",
 44,寡头垄断的一个显著特征是,有一条弹性的供给曲线,企业之间互相依存,有一条非弹性的需求曲线,不存在市场进入障碍,B,"answer: right
 token: 93, 92, 1
 time: 0.2s",,"answer: right
@@ -403,7 +491,9 @@ time: 1.5s","answer: right
 token: 87, 86, 1
 time: 0.7s",,,,,"answer: right
 token: 129, 125, 4
-time: 2.5s"
+time: 2.5s","answer: right
+token: 471, 239, 1
+time: 2.1s",
 45,根据经济法调整的特定经济关系的要求，经济法主体包括哪四类,国家机关、企业和其他社会组织、农户和个体经营户及公民、公司,法人、公司、公民、联营企业,有限责任公司、股份有限公司、私人企业、个体工商户,国家机关、企业和其他社会组织、企业的内部组织和有关人员、农户和个体经营户及公民,D,"answer: right
 token: 143, 142, 1
 time: 0.3s",,"answer: right
@@ -412,7 +502,9 @@ time: 1.4s","answer: right
 token: 136, 135, 1
 time: 0.8s",,,,,"answer: right
 token: 206, 202, 4
-time: 1.6s"
+time: 1.6s","answer: right
+token: 703, 284, 1
+time: 3.6s",
 46,下列投资策略中，最明智的策略是,将资金全部用于购买风险最小的一种资产,选择适当的资产组合,选择购买一种最好的政府债券,将资金全部用于购买可能收益最高的一种资产,B,"answer: right
 token: 103, 102, 1
 time: 0.4s",,"answer: right
@@ -421,7 +513,9 @@ time: 1.5s","answer: right
 token: 98, 97, 1
 time: 0.7s",,,,,"answer: right
 token: 147, 143, 4
-time: 2.5s"
+time: 2.5s","answer: right
+token: 519, 249, 1
+time: 3.1s",
 47,如果管理者能够预测出执行决策将来可能会得出几种结果和每种结果的概率是多少，这种条件下的决策叫做,不确定条件下的决策,有风险条件下的决策,确定条件下的决策,无风险条件下的决策,B,"answer: right
 token: 107, 106, 1
 time: 0.3s",,"answer: right
@@ -430,7 +524,9 @@ time: 1.0s","answer: right
 token: 101, 100, 1
 time: 0.5s",,,,,"answer: right
 token: 155, 151, 4
-time: 1.6s"
+time: 1.6s","answer: right
+token: 463, 251, 1
+time: 2.0s",
 48,经济全球化的基础是,战后科学技术的迅猛发展,战后多边贸易的迅速发展,布雷顿森林会议体系崩溃,战后金融市场的迅速发展,A,"answer: right
 token: 98, 97, 1
 time: 0.3s",,"answer: right
@@ -439,7 +535,9 @@ time: 0.8s","answer: right
 token: 93, 92, 1
 time: 1.0s",,,,,"answer: right
 token: 134, 130, 4
-time: 1.6s"
+time: 1.6s","answer: right
+token: 706, 244, 1
+time: 4.3s",
 49,股份有限公司注册资本的最低限额为（）。股份有限公司注册资本最低限额需高于上述所定限额的，由法律、行政法规另行规定。,人民币2000万元,人民币500万元,人民币4000万元,人民币1000万元,B,"answer: right
 token: 125, 117, 8
 time: 1.0s",,"answer: right
@@ -448,7 +546,9 @@ time: 0.8s","answer: wrong (D)
 token: 122, 121, 1
 time: 0.7s",,,,,"answer: right
 token: 156, 152, 4
-time: 2.6s"
+time: 2.6s","answer: wrong (D)
+token: 5775, 258, 1
+time: 44.7s",
 50,管理经济学的理论支柱不包括,需求弹性理论,价格理论,边际分析法,机会成本原理,B,"answer: wrong (A)
 token: 87, 86, 1
 time: 0.3s",,"answer: wrong (A)
@@ -457,7 +557,9 @@ time: 1.4s","answer: right
 token: 80, 79, 1
 time: 0.8s",,,,,"answer: wrong (A)
 token: 108, 104, 4
-time: 2.5s"
+time: 2.5s","answer: right
+token: 883, 231, 1
+time: 5.7s",
 51,下列选项中，影响消费倾向的客观因素是,投机,谨慎,利息率变化,贪婪,C,"answer: right
 token: 93, 86, 7
 time: 0.3s",,"answer: right
@@ -466,7 +568,9 @@ time: 1.5s","answer: right
 token: 80, 79, 1
 time: 0.8s",,,,,"answer: right
 token: 106, 102, 4
-time: 2.2s"
+time: 2.2s","answer: right
+token: 508, 231, 1
+time: 2.6s",
 52,会导致生产可能性边界向外移动的是,失业,有用性资源增加或技术进步,通货膨胀,消费品生产增加,B,"answer: right
 token: 88, 87, 1
 time: 0.2s",,"answer: right
@@ -475,7 +579,9 @@ time: 0.7s","answer: right
 token: 84, 83, 1
 time: 0.9s",,,,,"answer: right
 token: 115, 111, 4
-time: 2.3s"
+time: 2.3s","answer: right
+token: 474, 233, 1
+time: 2.1s",
 53,假定生产一种产品的固定成本为1800元，产品价格为23元一件，变动成本为13元，要求利润为600元，产量至少应达到,340件,580件,240件,460件,C,"answer: right
 token: 128, 121, 7
 time: 0.3s",,"answer: right
@@ -484,7 +590,9 @@ time: 0.8s","answer: wrong (D)
 token: 119, 118, 1
 time: 0.8s",,,,,"answer: wrong (A)
 token: 297, 127, 170
-time: 4.3s"
+time: 4.3s","answer: right
+token: 546, 253, 1
+time: 2.3s",
 54,生产可能性曲线向外凸出的原因是,两种产品的边际替代率递增,两种产品的边际替代率递减,两种产品的边际转换率递增,两种产品的边际转换率递减,C,"answer: right
 token: 100, 99, 1
 time: 0.3s",,"answer: right
@@ -493,7 +601,9 @@ time: 1.3s","answer: wrong (B)
 token: 101, 100, 1
 time: 0.7s",,,,,"answer: right
 token: 137, 133, 4
-time: 1.7s"
+time: 1.7s","answer: right
+token: 764, 251, 1
+time: 4.3s",
 55,支持价格与市场均衡价格相比,等于价格,高于均衡价格,低于均衡价格,都可以,B,"answer: right
 token: 91, 84, 7
 time: 0.3s",,"answer: right
@@ -502,7 +612,9 @@ time: 1.5s","answer: right
 token: 76, 75, 1
 time: 0.3s",,,,,"answer: right
 token: 107, 103, 4
-time: 1.8s"
+time: 1.8s","answer: right
+token: 448, 226, 1
+time: 2.1s",
 56,下列说法中错误的是,随着某种生产要素投入量的增加，边际产量和平均产量增加到一定程度将趋于下降，其中边际产量的下降一定先于平均产量,只要边际产量减少，总产量一定也减少,边际产量曲线一定在平均产量曲线的最高点与之相交,只要总产量减少，边际产量一定是负数,B,"answer: right
 token: 140, 139, 1
 time: 0.3s",,"answer: right
@@ -511,7 +623,9 @@ time: 0.9s","answer: right
 token: 137, 136, 1
 time: 0.6s",,,,,"answer: right
 token: 195, 191, 4
-time: 1.7s"
+time: 1.7s","answer: right
+token: 561, 285, 1
+time: 2.8s",
 57,下列关于消费水平对消费结构的影响的说法中，正确的是,耐用消费品支出比重随消费水平提高持续提高,消费水平较低时，食品支出比重较高，随消费水平提高，食品支出比重有下降趋势,住房医疗等支出项目随消费水平提高呈下降趋势,低收入国家劳务支出比重高，高收入国家劳务支出比重低,B,"answer: right
 token: 138, 137, 1
 time: 0.2s",,"answer: right
@@ -520,7 +634,9 @@ time: 1.2s","answer: right
 token: 140, 139, 1
 time: 0.6s",,,,,"answer: wrong (A)
 token: 470, 202, 268
-time: 7.4s"
+time: 7.4s","answer: right
+token: 705, 285, 1
+time: 3.9s",
 58,如果某投资方案未来全部净现金效益量的现值大于期初投资，则对该方案企业,应接受,无法确定,还需要再研究,应拒绝,A,"answer: right
 token: 94, 93, 1
 time: 0.2s",,"answer: right
@@ -529,7 +645,9 @@ time: 0.8s","answer: right
 token: 89, 88, 1
 time: 0.5s",,,,,"answer: right
 token: 124, 120, 4
-time: 2.5s"
+time: 2.5s","answer: right
+token: 438, 240, 1
+time: 2.1s",
 59,当单一可变投入要素的价格等于它的边际产量收入时，可变投入要素的投入量可使,企业的总利润最大,企业的平均产量最大,企业的总产量最大,企业的生产成本最低,A,"answer: right
 token: 102, 101, 1
 time: 0.2s",,"answer: right
@@ -538,7 +656,9 @@ time: 0.6s","answer: right
 token: 100, 99, 1
 time: 0.6s",,,,,"answer: right
 token: 323, 138, 185
-time: 5.8s"
+time: 5.8s","answer: right
+token: 562, 249, 1
+time: 2.9s",
 60,若一个管理机构对一个垄断企业的限价正好使经济利润消失，则价格要等于,平均成本,平均可变成本,边际收益,边际成本,A,"answer: right
 token: 95, 94, 1
 time: 0.3s",,"answer: right
@@ -547,7 +667,9 @@ time: 0.6s","answer: right
 token: 91, 90, 1
 time: 0.6s",,,,,"answer: right
 token: 124, 120, 4
-time: 2.5s"
+time: 2.5s","answer: right
+token: 555, 241, 1
+time: 3.4s",
 61,您认为企业的最优可变投入要素在哪一阶段是合理的,第二阶段,第四阶段\,第三阶段,第一阶段,A,"answer: right
 token: 85, 84, 1
 time: 0.3s",,"answer: right
@@ -556,7 +678,9 @@ time: 0.8s","answer: right
 token: 80, 79, 1
 time: 0.6s",,,,,"answer: right
 token: 118, 114, 4
-time: 2.6s"
+time: 2.6s","answer: right
+token: 516, 233, 1
+time: 2.6s",
 62,线性规划方法是确定多种产品产量最优组合决策的有效方法之一。而求解线性规划问题的方法包括,图解法、代数法、单纯形法,代数法、单纯形法、微分法,图解法、代数法、微分法,图解法、单纯形法、微分法,D,"answer: wrong (A)
 token: 131, 130, 1
 time: 0.2s",,"answer: wrong (A)
@@ -565,7 +689,9 @@ time: 0.9s","answer: wrong (A)
 token: 121, 120, 1
 time: 0.5s",,,,,"answer: wrong (A)
 token: 165, 161, 4
-time: 1.6s"
+time: 1.6s","answer: wrong (A)
+token: 727, 275, 1
+time: 3.7s",
 63,在实行差别定价时，为使利润最大，应当使,每个市场的边际成本相等,每个市场的边际收入都等于产品的边际成本,企业的边际收入等于每个市场的边际成本,各个市场的边际收入之和等于产品的边际成本,B,"answer: right
 token: 114, 113, 1
 time: 0.3s",,"answer: right
@@ -574,7 +700,9 @@ time: 0.6s","answer: right
 token: 110, 109, 1
 time: 0.4s",,,,,"answer: right
 token: 159, 155, 4
-time: 2.6s"
+time: 2.6s","answer: right
+token: 679, 262, 1
+time: 3.2s",
 64,等成本线的斜率取决于,劳动投入的数量,劳动与资本要素的价格,资本投入的数量,科技投入的数量,B,"answer: right
 token: 91, 90, 1
 time: 0.2s",,"answer: right
@@ -583,7 +711,9 @@ time: 1.3s","answer: right
 token: 80, 79, 1
 time: 0.6s",,,,,"answer: right
 token: 116, 112, 4
-time: 2.5s"
+time: 2.5s","answer: right
+token: 427, 230, 1
+time: 2.2s",
 65,消费者将其个人可支配收入在消费和储蓄之间分配，是消费者的,资源再分配选择,购买选择,资源初次分配选择,资源消费,C,"answer: right
 token: 109, 100, 9
 time: 0.3s",,"answer: wrong (A)
@@ -592,7 +722,9 @@ time: 0.9s","answer: wrong (A)
 token: 91, 90, 1
 time: 0.8s",,,,,"answer: wrong (A)
 token: 125, 121, 4
-time: 2.4s"
+time: 2.4s","answer: right
+token: 826, 239, 1
+time: 5.0s",
 66,如果某消费者最初处于均衡状态，当其货币收入增加时，,会使其新的均衡点移向更高水平的无差异曲线,会使其无差异曲线变得更陡，但不会改变均衡点的位置,由于商品价格未发生变化，因此对均衡点的位置没影响,会使其新的均衡点移向更低水平的无差异曲线,A,"answer: right
 token: 130, 129, 1
 time: 0.2s",,"answer: right
@@ -601,7 +733,9 @@ time: 1.0s","answer: right
 token: 127, 126, 1
 time: 0.4s",,,,,"answer: right
 token: 194, 190, 4
-time: 2.8s"
+time: 2.8s","answer: right
+token: 499, 272, 1
+time: 2.6s",
 67,消费经济学研究消费方式问题主要研究,消费的技术方式,消费的社会实现范围,消费的自然方式,消费的社会实现方式,D,"answer: right
 token: 99, 91, 8
 time: 0.3s",,"answer: right
@@ -610,7 +744,9 @@ time: 0.7s","answer: wrong (B)
 token: 87, 86, 1
 time: 0.5s",,,,,"answer: right
 token: 121, 117, 4
-time: 2.7s"
+time: 2.7s","answer: right
+token: 508, 234, 1
+time: 2.7s",
 68,一种商品的价格下降会导致其替代品的需求量,增加,减少,不变,不确定,B,"answer: right
 token: 85, 80, 5
 time: 0.3s",,"answer: right
@@ -619,7 +755,9 @@ time: 0.7s","answer: wrong (A)
 token: 75, 74, 1
 time: 0.6s",,,,,"answer: right
 token: 101, 97, 4
-time: 2.3s"
+time: 2.3s","answer: right
+token: 415, 225, 1
+time: 1.8s",
 69,某商品的需求收入弹性很小几乎为零，则该商品属于,奢侈品,次级品,必需品,替代品,C,"answer: right
 token: 92, 91, 1
 time: 0.2s",,"answer: right
@@ -628,7 +766,9 @@ time: 0.5s","answer: right
 token: 84, 83, 1
 time: 0.6s",,,,,"answer: right
 token: 111, 107, 4
-time: 2.7s"
+time: 2.7s","answer: right
+token: 495, 233, 1
+time: 2.3s",
 70,下列选项中，符合我国当前处于工业化加速时期的产业结构特点的是,技术知识密集型产业占第二产业比重迅速上升,城市化基本结束,制造业处于成长期,制造业处于结构高变换率时期,D,"answer: right
 token: 111, 110, 1
 time: 0.2s",,"answer: right
@@ -637,7 +777,9 @@ time: 0.6s","answer: right
 token: 104, 103, 1
 time: 0.7s",,,,,"answer: right
 token: 151, 147, 4
-time: 2.3s"
+time: 2.3s","answer: wrong (C)
+token: 626, 253, 1
+time: 3.7s",
 71,如果A物品价格上升引起B物品需求曲线向左方移动，那么,两者是互补品,B是低档品,A是正常品,两者是替代品,A,"answer: right
 token: 94, 93, 1
 time: 0.2s",,"answer: right
@@ -646,7 +788,9 @@ time: 1.1s","answer: right
 token: 92, 91, 1
 time: 0.6s",,,,,"answer: right
 token: 245, 115, 130
-time: 5.2s"
+time: 5.2s","answer: right
+token: 460, 241, 1
+time: 2.6s",
 72,下列价格变动中，哪种变动使销售收入不变,当需求是单元弹性时，价格下降,当需求是弹性时，价格上升,当需求是非弹性时，价格上升,当需求是弹性时，价格下降,B,"answer: wrong (A)
 token: 103, 102, 1
 time: 0.7s",,"answer: wrong (A)
@@ -655,7 +799,9 @@ time: 0.9s","answer: wrong (A)
 token: 104, 103, 1
 time: 0.6s",,,,,"answer: wrong (A)
 token: 147, 143, 4
-time: 1.6s"
+time: 1.6s","answer: wrong (A)
+token: 717, 252, 1
+time: 3.9s",
 73,市场经济体制下，制定和实施消费政策时应遵循的基本原则是,解决社会收入分配不公,鼓励消费,尊重消费者的自主选择权,限制消费,C,"answer: right
 token: 100, 99, 1
 time: 0.6s",,"answer: right
@@ -664,7 +810,9 @@ time: 1.8s","answer: right
 token: 93, 92, 1
 time: 0.6s",,,,,"answer: right
 token: 132, 128, 4
-time: 2.3s"
+time: 2.3s","answer: right
+token: 491, 242, 1
+time: 2.4s",
 74,在生产决策分析中，“长期生产函数”是指生产函数中,所有投入要素的投入量都是固定的,所有投入要素的投入量都是可变的,至少有一种投入要素的投入量是固定的,至少等于或大于5年,B,"answer: right
 token: 114, 113, 1
 time: 0.6s",,"answer: right
@@ -673,7 +821,9 @@ time: 1.3s","answer: right
 token: 106, 105, 1
 time: 0.7s",,,,,"answer: right
 token: 152, 148, 4
-time: 2.2s"
+time: 2.2s","answer: right
+token: 519, 258, 1
+time: 2.2s",
 75,可以采取薄利多销政策的情况是,价格弹性小于1时,收入弹性大于1时,价格弹性大于1时,任何时候都可以薄利多销,C,"answer: right
 token: 96, 95, 1
 time: 0.5s",,"answer: right
@@ -682,7 +832,9 @@ time: 0.8s","answer: right
 token: 91, 90, 1
 time: 0.7s",,,,,"answer: right
 token: 126, 122, 4
-time: 1.5s"
+time: 1.5s","answer: right
+token: 494, 241, 1
+time: 2.2s",
 76,无差异曲线是一条凸向原点的曲线，这是由（）决定的。,边际成本递减,总效用递减,边际替代率递减,边际效用递减,C,"answer: right
 token: 104, 103, 1
 time: 0.3s",,"answer: right
@@ -691,7 +843,9 @@ time: 0.9s","answer: right
 token: 99, 98, 1
 time: 0.6s",,,,,"answer: right
 token: 124, 120, 4
-time: 2.4s"
+time: 2.4s","answer: right
+token: 537, 248, 1
+time: 2.8s",
 77,经济学分析中所说的短期是指,只能调整一年生产要素的时期,一年之内,全部生产要素都可随产量调整的时期,至少有一种生产要素不能调整的时期,D,"answer: right
 token: 102, 101, 1
 time: 0.2s",,"answer: right
@@ -700,7 +854,9 @@ time: 0.5s","answer: right
 token: 94, 93, 1
 time: 0.4s",,,,,"answer: right
 token: 134, 130, 4
-time: 3.0s"
+time: 3.0s","answer: right
+token: 485, 244, 1
+time: 2.1s",
 78,下列各种行为中，不属于投资性质的是,做广告,培训本企业职工,买股票,买家具,D,"answer: right
 token: 90, 85, 5
 time: 0.3s",,"answer: right
@@ -709,7 +865,9 @@ time: 1.0s","answer: right
 token: 78, 77, 1
 time: 0.7s",,,,,"answer: right
 token: 105, 101, 4
-time: 1.6s"
+time: 1.6s","answer: wrong (A)
+token: 1613, 230, 1
+time: 11.3s",
 79,由职业和收入的稳定性引起的工资差别是,效用均等化的补偿性工资差别,人力资本投资的补偿性工资差别,竞争性工资差别,垄断性工资差别,A,"answer: right
 token: 103, 102, 1
 time: 0.2s",,"answer: right
@@ -718,7 +876,9 @@ time: 0.8s","answer: wrong (C)
 token: 96, 95, 1
 time: 0.7s",,,,,"answer: right
 token: 136, 132, 4
-time: 2.6s"
+time: 2.6s","answer: right
+token: 583, 246, 1
+time: 3.3s",
 80,当洛伦兹曲线和绝对不平均线所夹面积为零时，基尼系数,无法确定,等于零,等于一,等于无穷大,C,"answer: right
 token: 104, 97, 7
 time: 0.3s",,"answer: right
@@ -727,7 +887,9 @@ time: 1.0s","answer: wrong (B)
 token: 89, 88, 1
 time: 0.7s",,,,,"answer: wrong (A)
 token: 267, 116, 151
-time: 5.0s"
+time: 5.0s","answer: right
+token: 1407, 239, 1
+time: 8.6s",
 81,以下列哪份文字或图形申请商标注册将会被批准,“健康”牌香烟,“保暖”牌毛毯,“菊花”牌回形针,“杭州”牌豆腐皮,C,"answer: right
 token: 98, 97, 1
 time: 0.2s",,"answer: right
@@ -736,7 +898,9 @@ time: 0.8s","answer: right
 token: 95, 94, 1
 time: 0.7s",,,,,"answer: right
 token: 133, 129, 4
-time: 2.8s"
+time: 2.8s","answer: right
+token: 815, 248, 1
+time: 7.3s",
 82,下面最有可能成为稀缺物品的是,阳光,空气,运送到郑州的海水,夏威夷的海水,C,"answer: right
 token: 87, 86, 1
 time: 0.2s",,"answer: right
@@ -745,7 +909,9 @@ time: 0.6s","answer: right
 token: 81, 80, 1
 time: 0.6s",,,,,"answer: right
 token: 110, 106, 4
-time: 2.5s"
+time: 2.5s","answer: right
+token: 504, 231, 1
+time: 2.9s",
 83,下列措施不可以用于矫正外部性问题的是,运用科斯定理，通过明晰产权来实现,对负外部性行为收费,政府的直接控制，如实施社会性管制,依靠市场机制自行解决,D,"answer: right
 token: 106, 105, 1
 time: 0.2s",,"answer: right
@@ -754,7 +920,9 @@ time: 0.9s","answer: right
 token: 100, 99, 1
 time: 0.6s",,,,,"answer: right
 token: 145, 141, 4
-time: 2.5s"
+time: 2.5s","answer: right
+token: 477, 251, 1
+time: 2.5s",
 84,下列对无差异曲线的特征表述正确的是,即使主体偏好不同，无差异曲线的形状也不会有区别,无差异曲线斜率为正值、凸向原点,同一平面上任意两条无差异曲线不会相交,离原点越远的无差异曲线所表示的效用越低,C,"answer: right
 token: 128, 127, 1
 time: 0.3s",,"answer: right
@@ -763,7 +931,9 @@ time: 0.9s","answer: right
 token: 123, 122, 1
 time: 0.6s",,,,,"answer: right
 token: 172, 168, 4
-time: 2.4s"
+time: 2.4s","answer: right
+token: 567, 271, 1
+time: 2.9s",
 85,根据罗斯托的经济增长阶段理论，经济发展中最困难的阶段是,高额群众消费阶段,起飞阶段,为起飞创造条件的阶段,向成熟推进阶段,B,"answer: right
 token: 104, 97, 7
 time: 0.4s",,"answer: right
@@ -772,7 +942,9 @@ time: 1.0s","answer: wrong (C)
 token: 90, 89, 1
 time: 0.4s",,,,,"answer: right
 token: 139, 135, 4
-time: 2.3s"
+time: 2.3s","answer: wrong (C)
+token: 641, 240, 1
+time: 4.5s",
 86,与边际储蓄倾向提高相对应的情况是,可支配收入水平减少,边际消费倾向上升,边际消费倾向下降,平均储蓄倾向下降,C,"answer: right
 token: 100, 92, 8
 time: 0.3s",,"answer: right
@@ -781,7 +953,9 @@ time: 0.7s","answer: right
 token: 90, 89, 1
 time: 0.5s",,,,,"answer: right
 token: 129, 125, 4
-time: 2.4s"
+time: 2.4s","answer: right
+token: 525, 240, 1
+time: 2.4s",
 87,消费函数的斜率取决于,由于收入变化引起的投资量,与可支配收入无关的消费量,边际消费倾向,平均消费倾向,C,"answer: right
 token: 93, 92, 1
 time: 0.3s",,"answer: right
@@ -790,7 +964,9 @@ time: 0.8s","answer: right
 token: 84, 83, 1
 time: 0.7s",,,,,"answer: right
 token: 121, 117, 4
-time: 2.3s"
+time: 2.3s","answer: right
+token: 468, 237, 1
+time: 2.1s",
 88,如果发展中国家政府采纳现代微观经济学家庭理论分析所得出的政策建议，就可能,降低生育率,减少死亡率,提高生育的质量,实现人口优化,A,"answer: right
 token: 96, 95, 1
 time: 0.4s",,"answer: right
@@ -799,7 +975,9 @@ time: 0.8s","answer: right
 token: 94, 93, 1
 time: 0.8s",,,,,"answer: right
 token: 134, 130, 4
-time: 2.8s"
+time: 2.8s","answer: right
+token: 1080, 242, 1
+time: 6.7s",
 89,甲、乙两人现有的效用水平分别为10和20，资源的再配置使得两人的效用发生了变化，属于帕累托改进的一种变动是,甲的效用变为10，乙的效用变为30,甲的效用变为10，乙的效用变为15,甲的效用变为8，乙的效用变为30,甲的效用变为8，乙的效用变为25,A,"answer: right
 token: 157, 156, 1
 time: 0.4s",,"answer: right
@@ -808,7 +986,9 @@ time: 2.5s","answer: right
 token: 150, 149, 1
 time: 0.5s",,,,,"answer: right
 token: 514, 190, 324
-time: 5.5s"
+time: 5.5s","answer: right
+token: 483, 295, 1
+time: 2.1s",
 90,就消费者投资而言，下列选项中流动性最强的是,金融投资,实物投资,不动产投资,教育投资,A,"answer: right
 token: 85, 84, 1
 time: 0.3s",,"answer: right
@@ -817,7 +997,9 @@ time: 0.9s","answer: right
 token: 81, 80, 1
 time: 0.8s",,,,,"answer: right
 token: 110, 106, 4
-time: 2.8s"
+time: 2.8s","answer: right
+token: 452, 233, 1
+time: 3.2s",
 91,经济学家提出，企业的长期目标应是,企业利润最大化,企业的社会效应和经济效益最大化,企业价值最大化,企业成本最低化,C,"answer: right
 token: 95, 89, 6
 time: 0.5s",,"answer: right
@@ -826,7 +1008,9 @@ time: 0.7s","answer: right
 token: 87, 86, 1
 time: 0.6s",,,,,"answer: right
 token: 124, 120, 4
-time: 2.3s"
+time: 2.3s","answer: right
+token: 548, 240, 1
+time: 3.5s",
 92,摩擦性失业产生于,转换工作面临的暂时困难,经济萧条,社会矛盾激化,技术进步,A,"answer: right
 token: 90, 89, 1
 time: 0.3s",,"answer: right
@@ -835,7 +1019,9 @@ time: 0.7s","answer: right
 token: 80, 79, 1
 time: 0.6s",,,,,"answer: right
 token: 111, 107, 4
-time: 3.0s"
+time: 3.0s","answer: right
+token: 425, 230, 1
+time: 2.7s",
 93,已知边际消费倾向为80％，则投资乘数为,5,8,4,2,A,"answer: right
 token: 83, 82, 1
 time: 0.3s",,"answer: right
@@ -844,7 +1030,9 @@ time: 0.8s","answer: right
 token: 79, 78, 1
 time: 1.0s",,,,,"answer: right
 token: 178, 92, 86
-time: 2.4s"
+time: 2.4s","answer: right
+token: 401, 229, 1
+time: 2.2s",
 94,如果边际收入大于边际成本，那么减少产量就会使,对利润无影响,总利润增加,总利润减少,单位利润减少,C,"answer: right
 token: 93, 87, 6
 time: 0.3s",,"answer: right
@@ -853,7 +1041,9 @@ time: 0.8s","answer: wrong (B)
 token: 83, 82, 1
 time: 0.9s",,,,,"answer: right
 token: 210, 112, 98
-time: 4.5s"
+time: 4.5s","answer: right
+token: 516, 235, 1
+time: 2.4s",
 95,经营者提供商品或者服务有欺诈行为的，应当按照消费者的要求增加赔偿其受到的损失，增加赔偿的金额为消费者购买商品的价款或接受服务的费用的多少倍,4倍,3倍,1倍,2倍,C,"answer: right
 token: 118, 113, 5
 time: 0.3s",,"answer: wrong (B)
@@ -862,7 +1052,9 @@ time: 0.5s","answer: wrong (D)
 token: 112, 111, 1
 time: 0.7s",,,,,"answer: wrong (B)
 token: 160, 156, 4
-time: 2.5s"
+time: 2.5s","answer: wrong (B)
+token: 489, 259, 1
+time: 4.0s",
 96,采用最高奖超过（）元的抽奖式为不正当有奖销售。,5000,4000,2000,6000,A,"answer: right
 token: 96, 95, 1
 time: 0.2s",,"answer: right
@@ -871,7 +1063,9 @@ time: 0.8s","answer: wrong (C)
 token: 94, 93, 1
 time: 0.8s",,,,,"answer: right
 token: 107, 103, 4
-time: 2.6s"
+time: 2.6s","answer: right
+token: 713, 235, 1
+time: 4.3s",
 97,如果边际收入大于边际成本，那么减少产量就会,使总利润增加,使单位利润不变,使总利润减少,对利润无影响,C,"answer: right
 token: 95, 88, 7
 time: 0.5s",,"answer: right
@@ -880,7 +1074,9 @@ time: 0.7s","answer: wrong (A)
 token: 85, 84, 1
 time: 0.7s",,,,,"answer: right
 token: 209, 114, 95
-time: 3.3s"
+time: 3.3s","answer: right
+token: 515, 237, 1
+time: 3.7s",
 98,消费者的预算线反映了,消费者的需求,消费者效用最大化状态,消费者的偏好,消费者的收入约束,D,"answer: right
 token: 90, 89, 1
 time: 0.3s",,"answer: right
@@ -889,7 +1085,9 @@ time: 1.4s","answer: right
 token: 84, 83, 1
 time: 0.8s",,,,,"answer: right
 token: 113, 109, 4
-time: 2.5s"
+time: 2.5s","answer: right
+token: 439, 230, 1
+time: 2.2s",
 99,在维持相同的产量水平时，减少一种生产要素的数量与增加的另一种生产要素的数量之比被称为,技术系数,弹性系数,边际技术替代率,恩格尔系数,C,"answer: right
 token: 107, 99, 8
 time: 0.3s",,"answer: right
@@ -898,7 +1096,9 @@ time: 1.0s","answer: right
 token: 94, 93, 1
 time: 0.7s",,,,,"answer: right
 token: 137, 133, 4
-time: 2.5s"
+time: 2.5s","answer: right
+token: 556, 244, 1
+time: 3.2s",
 100,平均总成本减去平均可变成本等于,固定成本,边际成本,可变成本,平均固定成本,D,"answer: right
 token: 94, 87, 7
 time: 0.3s",,"answer: right
@@ -907,7 +1107,9 @@ time: 1.2s","answer: right
 token: 78, 77, 1
 time: 1.1s",,,,,"answer: right
 token: 105, 101, 4
-time: 2.5s"
+time: 2.5s","answer: right
+token: 441, 231, 1
+time: 2.4s",
 101,消费者收入变化对消费者预算约束线的影响是,使预算约束线保持不变,使预算约束线发生旋转,使预算约束线斜率改变,使预算约束线发生平移,D,"answer: right
 token: 102, 101, 1
 time: 0.3s",,"answer: right
@@ -916,7 +1118,9 @@ time: 0.7s","answer: right
 token: 93, 92, 1
 time: 0.8s",,,,,"answer: right
 token: 134, 130, 4
-time: 2.5s"
+time: 2.5s","answer: right
+token: 549, 247, 1
+time: 2.6s",
 102,下列行为中最接近于完全竞争模式的一项是,烟草业,飞机制造业,日用小商品制造业,汽车制造业,C,"answer: right
 token: 96, 89, 7
 time: 0.3s",,"answer: right
@@ -925,7 +1129,9 @@ time: 2.2s","answer: right
 token: 83, 82, 1
 time: 0.6s",,,,,"answer: right
 token: 116, 112, 4
-time: 3.2s"
+time: 3.2s","answer: right
+token: 537, 232, 1
+time: 3.3s",
 103,经济利润是指,企业总收入减去会计利润,销售收入减去会计利润,企业总收入减去会计成本,销售收入减去机会成本,D,"answer: right
 token: 103, 93, 10
 time: 0.3s",,"answer: right
@@ -934,7 +1140,9 @@ time: 0.7s","answer: wrong (C)
 token: 88, 87, 1
 time: 0.4s",,,,,"answer: right
 token: 120, 116, 4
-time: 2.5s"
+time: 2.5s","answer: right
+token: 2585, 240, 1
+time: 18.9s",
 104,企业通过卖出额外一单位产品所获得的收益叫做,分摊成本,净利润,平均收益,边际收益,D,"answer: right
 token: 91, 85, 6
 time: 0.5s",,"answer: right
@@ -943,7 +1151,9 @@ time: 0.7s","answer: right
 token: 80, 79, 1
 time: 0.7s",,,,,"answer: right
 token: 111, 107, 4
-time: 2.5s"
+time: 2.5s","answer: right
+token: 411, 231, 1
+time: 2.0s",
 105,在风险投资决策中，术语“结果”是指,特定的策略和自然状态相结合所产生的得或失,将来可能存在的环境条件,用来实现管理目标的行动方案,将来可能的方案,A,"answer: right
 token: 104, 103, 1
 time: 0.2s",,"answer: right
@@ -952,7 +1162,9 @@ time: 0.6s","answer: right
 token: 96, 95, 1
 time: 0.8s",,,,,"answer: right
 token: 140, 136, 4
-time: 2.8s"
+time: 2.8s","answer: right
+token: 564, 248, 1
+time: 3.7s",
 106,下列因素中属于非系统风险的是,工人罢工,新政出台,利率变化,战争爆发,A,"answer: right
 token: 84, 83, 1
 time: 0.2s",,"answer: right
@@ -961,7 +1173,9 @@ time: 0.8s","answer: right
 token: 79, 78, 1
 time: 0.7s",,,,,"answer: right
 token: 104, 100, 4
-time: 2.7s"
+time: 2.7s","answer: right
+token: 466, 228, 1
+time: 3.0s",
 107,下列表述中，属于凯恩斯的消费函数理论观点的是,消费者的消费支出不仅受自身收入影响，还受周围人的消费行为影响,消费支出变化往往落后于收入变化,持久收入和持久消费之间存在固定比例关系,短期内消费倾向基本稳定,D,"answer: right
 token: 124, 123, 1
 time: 0.2s",,"answer: right
@@ -970,7 +1184,9 @@ time: 0.7s","answer: wrong (A)
 token: 116, 115, 1
 time: 0.6s",,,,,"answer: right
 token: 175, 171, 4
-time: 2.7s"
+time: 2.7s","answer: right
+token: 738, 263, 1
+time: 3.7s",
 108,生产要素的边际产量是,产量除以企业所使用的生产要素的量,产量除以总生产成本,平均产量的变化除以企业所使用的生产要素的量的变化,最后一单位的生产要素引起的产量的变化,D,"answer: right
 token: 109, 108, 1
 time: 0.2s",,"answer: right
@@ -979,7 +1195,9 @@ time: 0.9s","answer: right
 token: 106, 105, 1
 time: 0.7s",,,,,"answer: right
 token: 149, 145, 4
-time: 1.5s"
+time: 1.5s","answer: right
+token: 526, 256, 1
+time: 2.6s",
 109,下列选项中，属于紧缩性的货币政策是,增加政府财政支出,增税,提高法定准备金率,确定工资—物价指导线,C,"answer: right
 token: 96, 95, 1
 time: 0.2s",,"answer: right
@@ -988,7 +1206,9 @@ time: 0.6s","answer: right
 token: 90, 89, 1
 time: 0.7s",,,,,"answer: right
 token: 119, 115, 4
-time: 2.7s"
+time: 2.7s","answer: right
+token: 486, 240, 1
+time: 2.4s",
 110,在消费者达到均衡时，最后一单位商品给消费者带来的效用取决于,消费者的收入和价格,商品的价格,商品的质量,消费者的收入,B,"answer: right
 token: 90, 89, 1
 time: 0.2s",,"answer: right
@@ -997,7 +1217,9 @@ time: 0.6s","answer: wrong (A)
 token: 86, 85, 1
 time: 0.4s",,,,,"answer: right
 token: 127, 123, 4
-time: 2.5s"
+time: 2.5s","answer: right
+token: 1068, 233, 1
+time: 8.3s",
 111,从全社会角度看，占主导地位的消费方式是,公共消费,个人消费,家庭消费,国家消费,B,"answer: right
 token: 90, 85, 5
 time: 0.3s",,"answer: right
@@ -1006,7 +1228,9 @@ time: 1.5s","answer: right
 token: 80, 79, 1
 time: 0.7s",,,,,"answer: wrong (C)
 token: 108, 104, 4
-time: 2.6s"
+time: 2.6s","answer: wrong (C)
+token: 728, 231, 1
+time: 4.2s",
 112,根据合同当事人是否互相享有权利负有义务，可将合同分为,有名合同与无名合同,单务合同与双务合同,有偿合同与无偿合同,要式合同与实践合同,B,"answer: right
 token: 106, 105, 1
 time: 0.3s",,"answer: right
@@ -1015,7 +1239,9 @@ time: 0.8s","answer: right
 token: 99, 98, 1
 time: 0.7s",,,,,"answer: right
 token: 136, 132, 4
-time: 2.4s"
+time: 2.4s","answer: right
+token: 500, 247, 1
+time: 2.4s",
 113,下列选项中，可以用于控制利率风险的措施是,加强对客户信用审查,抵押贷款证券化,实施固定利率,实施浮动利率,D,"answer: wrong (C)
 token: 97, 91, 6
 time: 0.3s",,"answer: wrong (C)
@@ -1024,7 +1250,9 @@ time: 0.6s","answer: wrong (C)
 token: 90, 89, 1
 time: 0.6s",,,,,"answer: wrong (C)
 token: 123, 119, 4
-time: 2.5s"
+time: 2.5s","answer: right
+token: 2439, 237, 1
+time: 21.4s",
 114,资本市场是,长期资金市场,货币市场,短期资金市场,期货市场,A,"answer: right
 token: 85, 84, 1
 time: 0.3s",,"answer: right
@@ -1033,7 +1261,9 @@ time: 3.3s","answer: right
 token: 74, 73, 1
 time: 0.6s",,,,,"answer: right
 token: 97, 93, 4
-time: 3.0s"
+time: 3.0s","answer: right
+token: 402, 223, 1
+time: 2.0s",
 115,在预期收益相同的条件下，风险高的项目对某人更有吸引力，则此人对待风险的态度是,风险中立,风险偏好,风险厌恶,风险无关,B,"answer: right
 token: 106, 99, 7
 time: 0.3s",,"answer: right
@@ -1042,7 +1272,9 @@ time: 1.3s","answer: right
 token: 94, 93, 1
 time: 0.6s",,,,,"answer: right
 token: 130, 126, 4
-time: 2.2s"
+time: 2.2s","answer: right
+token: 465, 242, 1
+time: 2.5s",
 116,菲利普斯曲线的基本含义是,失业率的变动与通货膨胀率的变动无关,失为率和通货膨胀率同时下降,失业率和通货膨胀率同时上升,失业率上升，通货膨胀率下降,D,"answer: right
 token: 116, 115, 1
 time: 0.3s",,"answer: right
@@ -1051,7 +1283,9 @@ time: 0.8s","answer: right
 token: 114, 113, 1
 time: 0.5s",,,,,"answer: right
 token: 151, 147, 4
-time: 2.8s"
+time: 2.8s","answer: right
+token: 486, 257, 1
+time: 2.1s",
 117,下列陈述中最好地描述了支出平衡的定义的一项是,消费和支出相等，居民的消费由消费函数定义,收入和支出相等，居民的消费由消费函数定义,消费和收入相等，居民的消费由消费函数定义,消费者的消费由消费函数定义,B,"answer: right
 token: 127, 126, 1
 time: 0.4s",,"answer: right
@@ -1060,7 +1294,9 @@ time: 0.6s","answer: right
 token: 119, 118, 1
 time: 0.7s",,,,,"answer: right
 token: 169, 165, 4
-time: 2.4s"
+time: 2.4s","answer: right
+token: 675, 270, 1
+time: 3.2s",
 118,甲与乙签订了一份合同，约定由丙向甲履行债务，现丙履行债务的行为不符合合同的约定，甲有权请求谁承担违约责任,乙和丙,乙或者丙,丙,乙,D,"answer: right
 token: 107, 103, 4
 time: 0.4s",,"answer: right
@@ -1069,7 +1305,9 @@ time: 1.3s","answer: right
 token: 104, 103, 1
 time: 0.8s",,,,,"answer: right
 token: 146, 142, 4
-time: 3.3s"
+time: 3.3s","answer: wrong (B)
+token: 1173, 253, 1
+time: 7.4s",
 119,在完全竞争的市场条件下，决定工资的基础是,劳动力供给弹性,劳动力需求弹性,劳动价值,劳动力价值,D,"answer: right
 token: 93, 87, 6
 time: 0.3s",,"answer: right
@@ -1078,7 +1316,9 @@ time: 0.7s","answer: wrong (C)
 token: 83, 82, 1
 time: 0.4s",,,,,"answer: wrong (A)
 token: 234, 118, 116
-time: 5.1s"
+time: 5.1s","answer: right
+token: 1949, 230, 1
+time: 13.5s",
 120,下列选项中，关于消费观念的表述正确的是,消费观念是指支配和调节人们消费行为的思想意识,消费观念对交换没有影响,消费观念是指人们向往高消费的倾向,消费观念对储蓄没有影响,A,"answer: right
 token: 111, 110, 1
 time: 0.3s",,"answer: right
@@ -1087,7 +1327,9 @@ time: 1.9s","answer: right
 token: 107, 106, 1
 time: 0.6s",,,,,"answer: right
 token: 154, 150, 4
-time: 2.9s"
+time: 2.9s","answer: right
+token: 554, 256, 1
+time: 2.5s",
 121,人口老龄化对消费结构带来的影响是,劳务消费支出比重快速上升,耐用消费品支出比重快速上升,食品支出比重快速上升,教育支出比重快速上升,A,"answer: right
 token: 100, 99, 1
 time: 0.3s",,"answer: right
@@ -1096,7 +1338,9 @@ time: 1.3s","answer: wrong (B)
 token: 97, 96, 1
 time: 0.7s",,,,,"answer: right
 token: 136, 132, 4
-time: 2.5s"
+time: 2.5s","answer: right
+token: 510, 246, 1
+time: 2.9s",
 122,给消费者带来相同满足程度的商品组合集中在,预算约束曲线上,需求曲线上,生产可能性曲线上,无差异曲线上,D,"answer: right
 token: 92, 91, 1
 time: 0.4s",,"answer: right
@@ -1105,7 +1349,9 @@ time: 2.9s","answer: right
 token: 85, 84, 1
 time: 0.8s",,,,,"answer: right
 token: 122, 118, 4
-time: 2.4s"
+time: 2.4s","answer: right
+token: 418, 234, 1
+time: 2.2s",
 123,所有下列因素除哪一种以外，都会使需求曲线移动,商品价格下降,消费者偏好变化,购买者收入变化,其他有关商品价格下降,A,"answer: right
 token: 98, 97, 1
 time: 0.3s",,"answer: right
@@ -1114,7 +1360,9 @@ time: 0.7s","answer: right
 token: 87, 86, 1
 time: 0.7s",,,,,"answer: right
 token: 127, 123, 4
-time: 3.0s"
+time: 3.0s","answer: right
+token: 506, 239, 1
+time: 2.6s",
 124,下列关于吉芬商品需求曲线的表述，正确的是,平行于横坐标,向右下方倾斜,向右上方倾斜,垂直于横坐标,C,"answer: right
 token: 101, 94, 7
 time: 0.3s",,"answer: right
@@ -1123,7 +1371,9 @@ time: 0.6s","answer: right
 token: 90, 89, 1
 time: 0.9s",,,,,"answer: wrong (A)
 token: 229, 122, 107
-time: 3.9s"
+time: 3.9s","answer: right
+token: 531, 239, 1
+time: 2.6s",
 125,一个在垄断竞争市场上的企业在短期内能获得经济利润但长期不能，原因是,规模报酬递减,广告费用增加,政府增加税收,新的企业加入,D,"answer: right
 token: 96, 95, 1
 time: 0.2s",,"answer: right
@@ -1132,7 +1382,9 @@ time: 0.6s","answer: right
 token: 93, 92, 1
 time: 0.4s",,,,,"answer: right
 token: 132, 128, 4
-time: 2.6s"
+time: 2.6s","answer: right
+token: 498, 242, 1
+time: 2.2s",
 126,在风险投资决策中，术语“结果”是指,决策是否被接受,将来可能存在的环境条件,特定的自然状态和策略相结合会产生多大的得或失,用来实现管理目标的行动方案,C,"answer: right
 token: 106, 105, 1
 time: 0.2s",,"answer: right
@@ -1141,7 +1393,9 @@ time: 0.7s","answer: right
 token: 99, 98, 1
 time: 0.7s",,,,,"answer: right
 token: 142, 138, 4
-time: 2.5s"
+time: 2.5s","answer: right
+token: 519, 251, 1
+time: 2.4s",
 127,短期决策中常使用的“贡献”的概念是指,增量收入减去增量成本,销售收入减去会计成本,销售收入减去沉没成本,增量收入减去总成本,A,"answer: right
 token: 107, 106, 1
 time: 0.4s",,"answer: right
@@ -1150,7 +1404,9 @@ time: 1.5s","answer: right
 token: 99, 98, 1
 time: 0.7s",,,,,"answer: right
 token: 131, 127, 4
-time: 2.4s"
+time: 2.4s","answer: right
+token: 824, 249, 1
+time: 4.3s",
 128,贴现率的大小对现金流的现值的影响，说法正确的是,贴现率越小，现值越小,贴现率的大小会怎样影响现值，要视具体数据而定,贴现率越大，现值越小,贴现率的大小会影响现金流未来的价值，但不影响其现值,C,"answer: right
 token: 135, 134, 1
 time: 0.2s",,"answer: right
@@ -1159,7 +1415,9 @@ time: 1.8s","answer: right
 token: 127, 126, 1
 time: 0.5s",,,,,"answer: right
 token: 168, 164, 4
-time: 2.7s"
+time: 2.7s","answer: right
+token: 610, 273, 1
+time: 3.4s",
 129,消费经济学和市场营销学,都是属于宏观经济学,学科内容相同,都是属于微观经济学,都是研究消费者行为,D,"answer: right
 token: 96, 88, 8
 time: 0.5s",,"answer: right
@@ -1168,7 +1426,9 @@ time: 0.9s","answer: right
 token: 87, 86, 1
 time: 0.4s",,,,,"answer: right
 token: 117, 113, 4
-time: 2.6s"
+time: 2.6s","answer: right
+token: 810, 233, 1
+time: 4.8s",
 130,下列说法中正确的是,厂房设备投资的利息是可变成本,商标注册费是可变成本,购买原材料的支出为不变成本和可变成本,补偿机器设备无形损耗的折旧费是不变成本,D,"answer: right
 token: 113, 112, 1
 time: 0.3s",,"answer: right
@@ -1177,7 +1437,9 @@ time: 0.5s","answer: right
 token: 109, 108, 1
 time: 0.5s",,,,,"answer: right
 token: 146, 142, 4
-time: 1.9s"
+time: 1.9s","answer: right
+token: 621, 258, 1
+time: 4.2s",
 131,对一种新产品定价，应遵循的决策规则是,新产品的利润率应当与其他产品的利润率大致相同,销售收入至少应足以补偿新产品的增量成本,销售收入应足以补偿新产品的增量成本和公司分摊下来的固定成本,销售收入足以补偿新产品的会计成本,B,"answer: right
 token: 119, 118, 1
 time: 0.3s",,"answer: right
@@ -1186,7 +1448,9 @@ time: 0.6s","answer: wrong (C)
 token: 118, 117, 1
 time: 0.9s",,,,,"answer: right
 token: 181, 177, 4
-time: 2.4s"
+time: 2.4s","answer: right
+token: 858, 267, 1
+time: 5.2s",
 132,下列选项中，属于经济起飞阶段显著特征的是,第三产业比重大幅度提高,第一产业比重大幅度提高,消费率提高,第二产业比重大幅度提高,D,"answer: right
 token: 96, 95, 1
 time: 0.2s",,"answer: right
@@ -1195,7 +1459,9 @@ time: 0.9s","answer: right
 token: 91, 90, 1
 time: 0.7s",,,,,"answer: right
 token: 135, 131, 4
-time: 2.6s"
+time: 2.6s","answer: right
+token: 526, 243, 1
+time: 3.0s",
 133,几种不同形式的平衡增长理论共同强调的是,大规模投资的重要性和全面平衡的增长,经济增长率是第一位的,通过引致投资最大化项目带动其它项目,不采取国家干预,A,"answer: right
 token: 101, 100, 1
 time: 0.2s",,"answer: right
@@ -1204,7 +1470,9 @@ time: 2.8s","answer: right
 token: 98, 97, 1
 time: 0.6s",,,,,"answer: right
 token: 144, 140, 4
-time: 3.1s"
+time: 3.1s","answer: right
+token: 511, 245, 1
+time: 2.9s",
 134,20世纪50年代，舒尔茨发现，促使美国农业生产的产量迅速增加的主要因素是,资本存量的增加,土地的增加,劳动力数量增加,人的知识、能力和技术水平提高,D,"answer: right
 token: 106, 105, 1
 time: 0.4s",,"answer: right
@@ -1213,7 +1481,9 @@ time: 0.8s","answer: right
 token: 104, 103, 1
 time: 0.9s",,,,,"answer: right
 token: 145, 141, 4
-time: 2.0s"
+time: 2.0s","answer: right
+token: 557, 248, 1
+time: 3.4s",
 135,发展中国家税收中的征收成本较低的税是,农业税,进口关税,所得税,土地税,B,"answer: right
 token: 92, 86, 6
 time: 0.2s",,"answer: right
@@ -1222,7 +1492,9 @@ time: 0.6s","answer: wrong (A)
 token: 83, 82, 1
 time: 0.3s",,,,,"answer: right
 token: 103, 99, 4
-time: 2.0s"
+time: 2.0s","answer: right
+token: 571, 229, 1
+time: 3.3s",
 136,下列价格变动中，能使销售收入增加的是,当需求是非弹性时，价格下降,当需求是单元弹性时，价格下降,当需求是弹性时，价格上升,当需求是弹性时，价格下降,D,"answer: right
 token: 102, 101, 1
 time: 0.2s",,"answer: right
@@ -1231,7 +1503,9 @@ time: 1.9s","answer: right
 token: 102, 101, 1
 time: 0.7s",,,,,"answer: wrong (A)
 token: 366, 141, 225
-time: 5.0s"
+time: 5.0s","answer: right
+token: 542, 250, 1
+time: 3.0s",
 137,下列选项中，属于调整消费结构变化的消费政策是,消费品产业政策,收入分配政策,福利政策,社会保障政策,A,"answer: wrong (B)
 token: 100, 93, 7
 time: 0.3s",,"answer: right
@@ -1240,7 +1514,9 @@ time: 0.6s","answer: wrong (B)
 token: 84, 83, 1
 time: 0.8s",,,,,"answer: right
 token: 117, 113, 4
-time: 3.0s"
+time: 3.0s","answer: right
+token: 1009, 236, 1
+time: 8.8s",
 138,对经济学家来讲，非理性意味着,人们无意识的伤害自己,人们没有花费足够的时间加以考虑，从而做出反常的选择,人们故意采取与自己的最大利益相悖的行为,人们采取恶毒的行为,C,"answer: wrong (B)
 token: 104, 103, 1
 time: 0.2s",,"answer: right
@@ -1249,7 +1525,9 @@ time: 0.6s","answer: wrong (B)
 token: 102, 101, 1
 time: 0.7s",,,,,"answer: wrong (B)
 token: 155, 151, 4
-time: 1.6s"
+time: 1.6s","answer: right
+token: 1868, 251, 1
+time: 14.3s",
 139,规范研究方法要说明的是,研究对象或现象“是什么”的问题,研究对象或现象“应该是什么”的问题,如何认识研究对象或现象的客观事实,揭示研究对象或现象内在构成要素及其之间的普遍联系,B,"answer: right
 token: 114, 113, 1
 time: 0.3s",,"answer: right
@@ -1258,7 +1536,9 @@ time: 0.7s","answer: wrong (C)
 token: 103, 102, 1
 time: 0.4s",,,,,"answer: right
 token: 157, 153, 4
-time: 4.0s"
+time: 4.0s","answer: right
+token: 558, 254, 1
+time: 3.1s",
 140,在需求不变的情况下，供给增加会使得均衡数量,不能确定,不变,下降,上升,D,"answer: right
 token: 82, 78, 4
 time: 0.2s",,"answer: right
@@ -1267,7 +1547,9 @@ time: 1.2s","answer: right
 token: 75, 74, 1
 time: 0.6s",,,,,"answer: right
 token: 104, 100, 4
-time: 2.6s"
+time: 2.6s","answer: right
+token: 365, 226, 1
+time: 1.6s",
 141,“由俭入奢易，由奢入俭难”，表明消费者行为具有的特征是,不可逆性,复杂性,示范性,习惯性,A,"answer: right
 token: 93, 92, 1
 time: 0.2s",,"answer: right
@@ -1276,7 +1558,9 @@ time: 1.3s","answer: right
 token: 89, 88, 1
 time: 0.6s",,,,,"answer: right
 token: 219, 114, 105
-time: 3.2s"
+time: 3.2s","answer: right
+token: 539, 240, 1
+time: 3.1s",
 142,杜生贝的消费函数理论被称为,相对收入假定,边际效用递减,绝对收入假定,生命周期假定,A,"answer: right
 token: 90, 89, 1
 time: 0.3s",,"answer: right
@@ -1285,7 +1569,9 @@ time: 1.0s","answer: wrong (C)
 token: 85, 84, 1
 time: 0.5s",,,,,"answer: right
 token: 112, 108, 4
-time: 2.4s"
+time: 2.4s","answer: right
+token: 425, 236, 1
+time: 2.0s",
 143,决定消费者的劳动供给行为的是,劳动和闲暇的选择替代,劳动和低档商品的选择替代,劳动和消费的选择替代,劳动和正常商品的选择替代,A,"answer: right
 token: 99, 98, 1
 time: 0.2s",,"answer: right
@@ -1294,7 +1580,9 @@ time: 0.5s","answer: right
 token: 92, 91, 1
 time: 0.7s",,,,,"answer: right
 token: 137, 133, 4
-time: 1.9s"
+time: 1.9s","answer: right
+token: 650, 241, 1
+time: 3.7s",
 144,某企业在自己生产的商品上注册了“牡丹”，又注册了“白牡丹”、“红牡丹”、“黑牡丹”，这种商标称为,集体商标,组合商标,联合商标,防御商标,C,"answer: right
 token: 115, 108, 7
 time: 0.3s",,"answer: right
@@ -1303,7 +1591,9 @@ time: 0.6s","answer: wrong (D)
 token: 98, 97, 1
 time: 0.8s",,,,,"answer: right
 token: 145, 141, 4
-time: 2.5s"
+time: 2.5s","answer: wrong (D)
+token: 643, 250, 1
+time: 3.6s",
 145,功能分配也叫要素分配，它最注重的是在总体国民收入中,每种要素获得的收入所占的百分比,各个个人从某个要素中获得收入是多少,各个个人从各要素中获得收入是多少,各个个人从某个要素收入中所占的百分比,A,"answer: right
 token: 125, 124, 1
 time: 0.2s",,"answer: right
@@ -1312,7 +1602,9 @@ time: 1.4s","answer: right
 token: 114, 113, 1
 time: 0.7s",,,,,"answer: right
 token: 164, 160, 4
-time: 2.4s"
+time: 2.4s","answer: right
+token: 578, 267, 1
+time: 2.7s",
 146,一种价格变动使消费者沿着一条既定的无差异曲线移动到新一点时所引起的消费变动是,收入效应,替代效应,财富效用,总效应,B,"answer: right
 token: 105, 99, 6
 time: 0.3s",,"answer: right
@@ -1321,7 +1613,9 @@ time: 1.1s","answer: right
 token: 93, 92, 1
 time: 0.6s",,,,,"answer: right
 token: 127, 123, 4
-time: 2.6s"
+time: 2.6s","answer: right
+token: 456, 242, 1
+time: 2.3s",
 147,经济学可定义为,企业取得利润的活动,政府对市场制度的干预,人们靠收入生活,研究如何最合理的配置资源,D,"answer: right
 token: 94, 93, 1
 time: 0.2s",,"answer: right
@@ -1330,7 +1624,9 @@ time: 0.8s","answer: right
 token: 85, 84, 1
 time: 0.7s",,,,,"answer: right
 token: 118, 114, 4
-time: 2.5s"
+time: 2.5s","answer: right
+token: 458, 235, 1
+time: 2.3s",
 148,下列变化中，哪种变化不会导致需求曲线的位移,产品的价格,人们的偏好和爱好,相关产品的价格,消费者的收入,A,"answer: right
 token: 91, 90, 1
 time: 0.3s",,"answer: right
@@ -1339,7 +1635,9 @@ time: 2.0s","answer: right
 token: 87, 86, 1
 time: 0.7s",,,,,"answer: right
 token: 123, 119, 4
-time: 2.4s"
+time: 2.4s","answer: right
+token: 453, 237, 1
+time: 2.1s",
 149,如果其他因素保持不变，下列四种情况一定会使需求减少的是,收入增加，同时替代品的价格下降,收入减少，同时互补品的价格下降,收入增加，同时替代品的价格上涨,收入减少，同时互补品的价格上涨,D,"answer: right
 token: 113, 112, 1
 time: 0.3s",,"answer: right
@@ -1348,7 +1646,9 @@ time: 1.6s","answer: wrong (B)
 token: 109, 108, 1
 time: 0.8s",,,,,"answer: wrong (A)
 token: 470, 157, 313
-time: 6.3s"
+time: 6.3s","answer: right
+token: 976, 255, 1
+time: 6.4s",
 150,股份有限公司创立大会必须有（），方可举行。,全体认股人出席,代表股份总数过半数的发起人、认股人出席,发起人、认股人出席人数占总人数三分之二以上,全体发起人出席,B,"answer: right
 token: 116, 115, 1
 time: 0.2s",,"answer: right
@@ -1357,7 +1657,9 @@ time: 0.8s","answer: right
 token: 109, 108, 1
 time: 0.6s",,,,,"answer: right
 token: 146, 142, 4
-time: 2.5s"
+time: 2.5s","answer: right
+token: 569, 258, 1
+time: 2.8s",
 151,以下哪个是宏观经济学的研究对象,消费者,企业,消费需求,货币政策,D,"answer: right
 token: 88, 81, 7
 time: 0.3s",,"answer: right
@@ -1366,7 +1668,9 @@ time: 1.6s","answer: right
 token: 74, 73, 1
 time: 0.4s",,,,,"answer: right
 token: 102, 98, 4
-time: 1.9s"
+time: 1.9s","answer: wrong (C)
+token: 682, 224, 1
+time: 4.6s",
 152,一种产品的市场处于均衡状态是指,消费者想要购买的数量恰好等于供给者想要出售的数量,需求曲线向右下方倾斜，供给曲线向右上方倾斜,整个社会的总需求等于整个社会的总供给,买和卖的量相等,A,"answer: right
 token: 118, 117, 1
 time: 0.3s",,"answer: right
@@ -1375,7 +1679,9 @@ time: 1.1s","answer: right
 token: 109, 108, 1
 time: 0.7s",,,,,"answer: right
 token: 442, 162, 280
-time: 6.4s"
+time: 6.4s","answer: right
+token: 740, 259, 1
+time: 3.7s",
 153,下列造成搭便车问题的物品是,收学费的学校,收费的高速公路,路灯,私人经营的商店,C,"answer: right
 token: 94, 88, 6
 time: 0.3s",,"answer: right
@@ -1384,7 +1690,9 @@ time: 1.8s","answer: right
 token: 82, 81, 1
 time: 0.7s",,,,,"answer: right
 token: 109, 105, 4
-time: 2.5s"
+time: 2.5s","answer: right
+token: 515, 234, 1
+time: 2.9s",
 154,均衡是指供给和需求达到了（）状态。,不平衡,平衡,最小量,最大量,B,"answer: right
 token: 81, 80, 1
 time: 0.3s",,"answer: right
@@ -1393,7 +1701,9 @@ time: 0.8s","answer: right
 token: 76, 75, 1
 time: 0.7s",,,,,"answer: right
 token: 103, 99, 4
-time: 2.6s"
+time: 2.6s","answer: right
+token: 335, 226, 1
+time: 8.6s",
 155,下列各项中会导致一国生产可能性曲线向外移动的一项是,消费品生产增加，资本品生产下降,失业,价格总水平提高,技术进步,D,"answer: right
 token: 96, 95, 1
 time: 0.2s",,"answer: right
@@ -1402,7 +1712,9 @@ time: 0.6s","answer: right
 token: 91, 90, 1
 time: 0.8s",,,,,"answer: right
 token: 126, 122, 4
-time: 2.5s"
+time: 2.5s","answer: right
+token: 511, 241, 1
+time: 2.6s",
 156,如果某产品需求曲线是一条垂直的直线，则该需求曲线上每一点的价格弹性,都大于1,都等于1,不等,都等于0,D,"answer: right
 token: 92, 91, 1
 time: 0.2s",,"answer: right
@@ -1411,7 +1723,9 @@ time: 2.5s","answer: right
 token: 87, 86, 1
 time: 0.7s",,,,,"answer: right
 token: 272, 119, 153
-time: 4.5s"
+time: 4.5s","answer: right
+token: 500, 240, 1
+time: 2.6s",
 157,糖尿病人对胰岛素这种药品的需求属于,缺乏弹性,完全无弹性,无限弹性,单位弹性,B,"answer: wrong (A)
 token: 93, 87, 6
 time: 0.3s",,"answer: right
@@ -1420,7 +1734,9 @@ time: 2.5s","answer: right
 token: 78, 77, 1
 time: 0.8s",,,,,"answer: right
 token: 116, 112, 4
-time: 2.2s"
+time: 2.2s","answer: right
+token: 480, 231, 1
+time: 2.6s",
 158,有完全竞争外部市场的中间产品的转移价格应当,等于边际成本,等于平均成本,等于市场价格,等于平均成本加目标利润,C,"answer: right
 token: 102, 95, 7
 time: 0.3s",,"answer: right
@@ -1429,4 +1745,6 @@ time: 0.8s","answer: right
 token: 86, 85, 1
 time: 0.5s",,,,,"answer: right
 token: 123, 119, 4
-time: 4.1s"
+time: 4.1s","answer: right
+token: 469, 236, 1
+time: 7.9s",

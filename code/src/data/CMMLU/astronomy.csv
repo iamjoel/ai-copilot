@@ -623,7 +623,9 @@ time: 8.8s","answer: right
 token: 528, 123, 405
 time: 4.3s","answer: wrong (C)
 token: 127, 123, 4
-time: 1.6s",,
+time: 1.6s","answer: wrong (C)
+token: 7266, 248, 1
+time: 62.6s",
 37,以下哪个深空天体在天球上离天津四最近,M35,NGC7000,NGC7293,M27,B,"answer: right
 token: 99, 91, 8
 time: 0.4s",,"answer: right
@@ -655,7 +657,9 @@ time: 6.3s","answer: right
 token: 448, 116, 332
 time: 5.6s","answer: wrong (A)
 token: 331, 116, 215
-time: 5.9s",,
+time: 5.9s","answer: right
+token: 8444, 250, 3
+time: 56.6s",
 39,在观测场地，你会看到有的爱好者像海盗一样用眼罩挡着一只惯用眼，他们是在,锻炼眼睛的对焦能力,在各处走动时保护暗夜视力,观测途中让眼睛放松休息,在玩角色扮演游戏,B,"answer: right
 token: 112, 111, 1
 time: 0.2s",,"answer: right
@@ -704,7 +708,9 @@ time: 2.6s","answer: wrong (B)
 token: 380, 90, 290
 time: 3.5s","answer: right
 token: 94, 90, 4
-time: 4.2s",,
+time: 4.2s","answer: right
+token: 4923, 228, 1
+time: 37.8s",
 42,两个天体之间万有引力的大小，与它们的质量,成平方反比,成正比,成平方正比,成反比,B,"answer: right
 token: 91, 86, 5
 time: 0.3s",,"answer: right
@@ -855,7 +861,9 @@ time: 9.4s","answer: wrong (D)
 token: 668, 204, 464
 time: 4.2s","answer: right
 token: 642, 204, 438
-time: 9.4s",,
+time: 9.4s","answer: wrong (C)
+token: 5011, 306, 3
+time: 40.1s",
 51,如果一颗周年视差为0.0111角秒的恒星在5年内在星空中移动了0.1个角秒。那么它的切向速度最可能为（）km/s,2.8,8.5,6.1,4.3,B,"answer: right
 token: 119, 118, 1
 time: 0.2s",,"answer: wrong (D)
@@ -887,7 +895,9 @@ time: 7.9s","answer: right
 token: 462, 131, 331
 time: 3.2s","answer: right
 token: 481, 131, 350
-time: 6.9s",,
+time: 6.9s","answer: right
+token: 5027, 255, 1
+time: 40.4s",
 53,以下哪项描述最不准确,中国计划2024年发射小行星采样返回器，一次性造访2-3颗太阳系小天体,俄罗斯将在2022年发射月球-27探测器，这将是时隔46年俄罗斯再次发射月球探测器,2022年1月，一个研究小组在《自然·天文学》杂志上公布他们在开普勒-1708b附近发现了一个系外卫星候选体,2021年年底，C/2021A1(Leonard)彗星突然爆发，增亮至3.5等,B,"answer: right
 token: 196, 195, 1
 time: 0.2s",,"answer: wrong (A)
@@ -1004,7 +1014,9 @@ time: 2.3s","answer: right
 token: 327, 98, 229
 time: 2.9s","answer: right
 token: 102, 98, 4
-time: 2.5s",,
+time: 2.5s","answer: right
+token: 9670, 232, 158
+time: 72.3s",
 60,卡西尼号探测器预计在2017年晚些时候结束自己土星系统的探测任务。按照计划，它将以何种方式结束自己的探索任务,直接飞离太阳系,坠入土星,飞跃天王星，然后飞离太阳系,坠入土卫六,B,"answer: right
 token: 128, 127, 1
 time: 0.2s",,"answer: right
@@ -1053,7 +1065,9 @@ time: 2.3s","answer: wrong (A)
 token: 434, 105, 329
 time: 4.7s","answer: wrong (B)
 token: 109, 105, 4
-time: 1.8s",,
+time: 1.8s","answer: wrong (D)
+token: 4326, 238, 1
+time: 32.6s",
 63,2019年5月，SpaceX公司通过一箭60星的方式将首批（）卫星送入太空，IAU表示这会对天文观测产生严重的影响,Starlink,Telesat,立方星,OneWeb,A,"answer: right
 token: 109, 108, 1
 time: 0.2s",,"answer: right
@@ -1085,7 +1099,9 @@ time: 9.2s","answer: wrong (A)
 token: 699, 214, 485
 time: 4.4s","answer: wrong (A)
 token: 711, 214, 497
-time: 17.7s",,
+time: 17.7s","answer: right
+token: 5994, 315, 1
+time: 39.6s",
 65,以下恒星无法在3月24日晚观测到的是,大角星,天狼星,织女星,北落师门,D,"answer: wrong (C)
 token: 93, 88, 5
 time: 0.2s",,"answer: wrong (C)
@@ -1100,7 +1116,9 @@ time: 2.7s","answer: wrong (A)
 token: 401, 101, 300
 time: 3.5s","answer: right
 token: 105, 101, 4
-time: 2.8s",,
+time: 2.8s","answer: right
+token: 5150, 233, 1
+time: 37.6s",
 66,哈雷彗星最远可以到达,土星与天王星轨道之间,天王星与海王星轨道之间,木星与土星轨道之间,海王星轨道外侧,D,"answer: right
 token: 111, 102, 9
 time: 0.3s",,"answer: wrong (B)
@@ -1234,7 +1252,9 @@ time: 8.4s","answer: right
 token: 712, 167, 545
 time: 5.0s","answer: right
 token: 171, 167, 4
-time: 2.5s",,
+time: 2.5s","answer: right
+token: 4509, 273, 1
+time: 33.6s",
 74,天体周日视运动过程中达到“上中天”时，它一定,方位角为180°,在地平线以上,赤经为0,地平高度达到最大值,D,"answer: right
 token: 103, 102, 1
 time: 0.2s",,"answer: right
@@ -1317,7 +1337,9 @@ time: 4.4s","answer: wrong (D)
 token: 539, 183, 356
 time: 3.3s","answer: wrong (D)
 token: 187, 183, 4
-time: 2.9s",,
+time: 2.9s","answer: wrong (D)
+token: 1179, 284, 1
+time: 8.5s",
 79,某个望远镜的极限星等是20等，那么它能探测到的类太阳恒星的最远距离是,520光年,8400光年,450000光年,36000光年,D,"answer: wrong (B)
 token: 128, 119, 9
 time: 0.2s",,"answer: right
@@ -1349,7 +1371,9 @@ time: 2.8s","answer: wrong (C)
 token: 370, 115, 255
 time: 2.6s","answer: right
 token: 388, 115, 273
-time: 7.5s",,
+time: 7.5s","answer: wrong (C)
+token: 1687, 249, 1
+time: 13.5s",
 81,最大的折射式望远镜的口径是,8.0m,5.4m,1.0m,2.4m,C,"answer: right
 token: 95, 88, 7
 time: 0.2s",,"answer: right
@@ -1449,7 +1473,9 @@ time: 5.5s","answer: wrong (C)
 token: 466, 107, 359
 time: 2.4s","answer: right
 token: 111, 107, 4
-time: 2.6s",,
+time: 2.6s","answer: right
+token: 769, 236, 1
+time: 4.5s",
 87,银河系到仙女座大星系的距离约245万光年，这相当于,5.05×10^{7}AU,799Mpc,0.75Mpc,8×10^{9}AU,C,"answer: right
 token: 123, 114, 9
 time: 0.3s",,"answer: right
@@ -1464,7 +1490,9 @@ time: 7.7s","answer: wrong (D)
 token: 593, 120, 473
 time: 4.0s","answer: right
 token: 484, 120, 364
-time: 7.2s",,
+time: 7.2s","answer: right
+token: 1147, 253, 1
+time: 6.3s",
 88,2016年，天文学家利用欧洲南方天文台的望远镜和其他设施，在距离我们太阳系最近的恒星（）周围，发现了一颗位于宜居带内的行星,天狼星,WISE1049-5319,巴纳德星,比邻星,D,"answer: right
 token: 126, 125, 1
 time: 0.2s",,"answer: right
@@ -1479,7 +1507,9 @@ time: 2.2s","answer: right
 token: 158, 154, 4
 time: 0.7s","answer: right
 token: 158, 154, 4
-time: 2.4s",,
+time: 2.4s","answer: right
+token: 515, 265, 1
+time: 2.2s",
 89,以下哪个太阳耀斑X射线分级是不存在的,B,X,D,M,C,"answer: right
 token: 76, 75, 1
 time: 0.3s",,"answer: right
@@ -1494,7 +1524,9 @@ time: 2.3s","answer: wrong (A)
 token: 190, 90, 100
 time: 1.5s","answer: right
 token: 94, 90, 4
-time: 3.7s",,
+time: 3.7s","answer: right
+token: 549, 223, 1
+time: 2.5s",
 90,中国古代发展出自己独特的星空划分和命名体系，古人把天空划分为三垣二十八宿，下列不属于“三垣”的是,军市垣,紫微垣,太微垣,天市垣,A,"answer: right
 token: 106, 105, 1
 time: 0.2s",,"answer: right
@@ -1509,7 +1541,9 @@ time: 3.1s","answer: right
 token: 240, 136, 104
 time: 1.4s","answer: right
 token: 140, 136, 4
-time: 2.7s",,
+time: 2.7s","answer: right
+token: 737, 252, 1
+time: 3.5s",
 91,在半影月食发生期间，如果站在月面上的半影区域，你会看到什么现象,日全食,没有发生日食,日偏食,看不到太阳,C,"answer: right
 token: 102, 97, 5
 time: 0.2s",,"answer: right
@@ -1524,7 +1558,9 @@ time: 2.3s","answer: right
 token: 369, 118, 251
 time: 3.1s","answer: right
 token: 122, 118, 4
-time: 2.6s",,
+time: 2.6s","answer: right
+token: 1056, 240, 1
+time: 7.1s",
 92,M42与以下哪个天体光谱最接近,M57,M31,太阳,双子座流星雨群内流星,A,"answer: wrong (B)
 token: 93, 88, 5
 time: 0.3s",,"answer: right
@@ -1539,7 +1575,9 @@ time: 7.6s","answer: right
 token: 455, 99, 356
 time: 4.0s","answer: right
 token: 340, 99, 241
-time: 6.7s",,
+time: 6.7s","answer: right
+token: 686, 233, 1
+time: 4.1s",
 93,位于北京（东经116°20'，北纬39°56'）的一位天文爱好者，当面向正南方向观测时，在以下哪个星座范围内能够看到地球同步轨道卫星,天琴座,盾牌座,海豚座,南鱼座,B,"answer: right
 token: 126, 120, 6
 time: 0.2s",,"answer: right
@@ -1554,7 +1592,9 @@ time: 10.5s","answer: right
 token: 542, 152, 390
 time: 4.3s","answer: wrong (A)
 token: 390, 152, 238
-time: 5.7s",,
+time: 5.7s","answer: right
+token: 12194, 262, 1
+time: 96.1s",
 94,以下哪一项是2018年辞世的理论物理学家斯蒂芬·霍金最著名的理论,黑洞辐射理论,宇宙大爆炸理论,提出希格斯粒子,量子纠缠理论,A,"answer: right
 token: 105, 104, 1
 time: 0.2s",,"answer: right
@@ -1569,7 +1609,9 @@ time: 2.4s","answer: right
 token: 146, 142, 4
 time: 0.7s","answer: right
 token: 146, 142, 4
-time: 1.6s",,
+time: 1.6s","answer: right
+token: 479, 249, 1
+time: 2.1s",
 95,“七月流火”是《诗经·豳风·七月》中的第一句，描述的是古人对天象的观察结果，其中的“火”是指,某种大气现象,火流星,大火星,火星,C,"answer: right
 token: 115, 110, 5
 time: 0.2s",,"answer: right
@@ -1584,7 +1626,9 @@ time: 4.8s","answer: right
 token: 133, 129, 4
 time: 0.8s","answer: right
 token: 133, 129, 4
-time: 2.7s",,
+time: 2.7s","answer: right
+token: 744, 254, 1
+time: 5.3s",
 96,织女星是一颗位于主序带上的典型的AO型恒星，其绝对星等约为0.7等，在不考虑消光的前提下，一颗视星等为15等的同类型恒星距离我们大约多远？（）,8000秒差距,20000秒差距,500秒差距,3000秒差距,A,"answer: right
 token: 139, 138, 1
 time: 0.2s",,"answer: wrong (B)
@@ -1599,7 +1643,9 @@ time: 5.3s","answer: wrong (D)
 token: 424, 167, 257
 time: 2.8s","answer: right
 token: 445, 167, 278
-time: 5.4s",,
+time: 5.4s","answer: right
+token: 1683, 275, 1
+time: 9.8s",
 97,土司空（鲸鱼座β）的视星等为2等，绝对星等为-0.35等，它的距离为,224pc,29.5pc,21.4pc,96.2pc,B,"answer: right
 token: 121, 113, 8
 time: 0.3s",,"answer: wrong (D)
@@ -1614,7 +1660,9 @@ time: 5.0s","answer: wrong (D)
 token: 320, 120, 200
 time: 2.3s","answer: wrong (D)
 token: 303, 120, 183
-time: 4.5s",,
+time: 4.5s","answer: right
+token: 493, 254, 1
+time: 2.1s",
 98,根据赫罗图上的信息判断，一般红超巨星、蓝超巨星和红巨星相比，半径更大的是,无法判断,蓝超巨星,红巨星,红超巨星,D,"answer: right
 token: 109, 102, 7
 time: 0.2s",,"answer: right
@@ -1629,7 +1677,9 @@ time: 3.0s","answer: right
 token: 436, 131, 305
 time: 3.2s","answer: right
 token: 358, 131, 227
-time: 5.6s",,
+time: 5.6s","answer: right
+token: 694, 250, 1
+time: 3.5s",
 99,参宿四位于,猎户座,大犬座,小犬座,御夫座,A,"answer: right
 token: 81, 80, 1
 time: 0.2s",,"answer: right
@@ -1644,7 +1694,9 @@ time: 2.2s","answer: right
 token: 129, 90, 39
 time: 1.3s","answer: right
 token: 94, 90, 4
-time: 2.6s",,
+time: 2.6s","answer: right
+token: 381, 225, 1
+time: 1.6s",
 100,在一个双星系统中，主星与伴星的温度相差不多，主星的光度约为伴星的82倍，光度差异主要源于两颗星半径的差异。根据以上信息，估算主星与伴星的半径之比约为,8.5,9.1,9.7,10.3,B,"answer: right
 token: 135, 134, 1
 time: 0.3s",,"answer: right
@@ -1659,7 +1711,9 @@ time: 7.9s","answer: right
 token: 531, 158, 373
 time: 2.6s","answer: right
 token: 162, 158, 4
-time: 3.2s",,
+time: 3.2s","answer: right
+token: 1139, 275, 1
+time: 5.9s",
 101,暗物质粒子探测器（）基于在轨运行的前530天共采集了约28亿个高能宇宙射线，成功获取了目前国际上精度最高的TeV电子宇宙射线探测结果,ALMA,南极AST-3,悟空,Gaia,C,"answer: right
 token: 121, 120, 1
 time: 0.2s",,"answer: right
@@ -1674,7 +1728,9 @@ time: 2.2s","answer: right
 token: 154, 150, 4
 time: 0.7s","answer: right
 token: 154, 150, 4
-time: 2.7s",,
+time: 2.7s","answer: right
+token: 609, 261, 1
+time: 3.0s",
 102,一颗位于某星系（约1000kpc）中的超巨星的绝对星等为-8，那么在地球上观测其视星等为,18,20,8,10,A,"answer: wrong (B)
 token: 109, 104, 5
 time: 0.2s",,"answer: right
@@ -1689,7 +1745,9 @@ time: 6.0s","answer: wrong (D)
 token: 310, 116, 194
 time: 2.0s","answer: right
 token: 443, 116, 327
-time: 7.1s",,
+time: 7.1s","answer: right
+token: 3985, 248, 1
+time: 28.1s",
 103,以下梅西叶天体中距离我们最远的是,M13,M104,M42,M78,B,"answer: right
 token: 89, 83, 6
 time: 0.2s",,"answer: right
@@ -1704,7 +1762,9 @@ time: 7.9s","answer: right
 token: 242, 90, 152
 time: 1.9s","answer: right
 token: 94, 90, 4
-time: 2.8s",,
+time: 2.8s","answer: right
+token: 546, 227, 1
+time: 2.7s",
 104,2022年全球范围内，会出现几次日食和月食,2次日食，1次月食,3次日食，2次月食,2次日食，2次月食,3次日食，1次月食,C,"answer: right
 token: 126, 114, 12
 time: 0.3s",,,"answer: right
@@ -1717,7 +1777,9 @@ time: 2.5s","answer: right
 token: 127, 123, 4
 time: 0.7s","answer: right
 token: 127, 123, 4
-time: 2.5s",,
+time: 2.5s","answer: right
+token: 620, 260, 1
+time: 3.0s",
 105,以下哪个参数用于度量大气扰动对天体影像的影响,极限星等,云遮率,透明度,视宁度,D,"answer: right
 token: 95, 89, 6
 time: 0.3s",,,"answer: right
@@ -1730,7 +1792,9 @@ time: 2.7s","answer: right
 token: 246, 107, 139
 time: 1.9s","answer: right
 token: 111, 107, 4
-time: 2.3s",,
+time: 2.3s","answer: right
+token: 504, 235, 1
+time: 2.8s",
 106,在国家天文台兴隆观测基地进行观测，以下哪个时间的夜空与除夕夜（2017年1月27日）21时的夜空最接近,2017年2月27日19时,2017年3月29日23时,2017年3月29日20时,2016年12月27日19时,A,"answer: wrong (C)
 token: 156, 155, 1
 time: 0.3s",,"answer: wrong (B)
@@ -1745,7 +1809,9 @@ time: 10.3s","answer: right
 token: 552, 158, 394
 time: 3.8s","answer: right
 token: 705, 158, 547
-time: 10.8s",,
+time: 10.8s","answer: right
+token: 3673, 282, 1
+time: 24.5s",
 107,在南半球中纬度地区观测，现在是恒星时7h，已知某恒星再经过2h30m后上中天，请问该恒星的赤经为,6h30m,9h30m,0h30m,3h30,B,"answer: right
 token: 132, 124, 8
 time: 0.3s",,"answer: right
@@ -1760,7 +1826,9 @@ time: 5.8s","answer: right
 token: 360, 135, 225
 time: 2.3s","answer: right
 token: 253, 135, 118
-time: 3.5s",,
+time: 3.5s","answer: right
+token: 673, 265, 1
+time: 3.9s",
 108,以下关于2018年即将发射的凌星系外行星巡天望远镜（TESS）说法错误的是,它将在椭圆轨道上绕地球运行,除了观测系外行星，它还将被广泛应用于观测其他类型的目标,它将对开普勒望远镜之前发现的岩态行星进行进一步探测,它的目标是1到2倍地球大小的系外行星,D,"answer: wrong (A)
 token: 146, 145, 1
 time: 0.3s",,"answer: wrong (C)
@@ -1775,7 +1843,9 @@ time: 8.3s","answer: wrong (A)
 token: 565, 197, 368
 time: 3.3s","answer: wrong (C)
 token: 201, 197, 4
-time: 2.5s",,
+time: 2.5s","answer: wrong (C)
+token: 861, 295, 1
+time: 5.9s",
 109,太阳绕银心运动的轨道速度是,210km/s,7.9km/s,52km/s,16.7km/s,A,"answer: right
 token: 94, 93, 1
 time: 0.3s",,"answer: right
@@ -1790,7 +1860,9 @@ time: 2.5s","answer: wrong (C)
 token: 108, 104, 4
 time: 0.8s","answer: right
 token: 108, 104, 4
-time: 1.8s",,
+time: 1.8s","answer: right
+token: 517, 236, 1
+time: 2.6s",
 110,五一劳动节当天的月相是,上弦月,蛾眉月,下弦月,新月,D,"answer: right
 token: 84, 80, 4
 time: 0.2s",,"answer: right
@@ -1805,7 +1877,9 @@ time: 7.1s","answer: wrong (A)
 token: 287, 96, 191
 time: 3.4s","answer: wrong (A)
 token: 100, 96, 4
-time: 2.3s",,
+time: 2.3s","answer: wrong (B)
+token: 5465, 228, 1
+time: 37.4s",
 111,火星在2018年大冲时位于哪个星座天区内,狮子座,摩羯座,天秤座,巨蟹座,B,"answer: right
 token: 101, 94, 7
 time: 0.3s",,"answer: right
@@ -1820,7 +1894,9 @@ time: 2.3s","answer: right
 token: 111, 107, 4
 time: 0.7s","answer: right
 token: 111, 107, 4
-time: 2.7s",,
+time: 2.7s","answer: right
+token: 2326, 239, 3
+time: 18.0s",
 112,下列哪个天体今天与太阳的角距离最小,北落师门,斗宿四,娄宿三,心宿二,C,"answer: wrong (D)
 token: 94, 88, 6
 time: 0.3s",,"answer: right
@@ -1835,7 +1911,9 @@ time: 8.5s","answer: wrong (A)
 token: 503, 105, 398
 time: 3.9s","answer: wrong (A)
 token: 551, 105, 446
-time: 9.5s",,
+time: 9.5s","answer: right
+token: 4127, 235, 1
+time: 28.4s",
 113,2022年2月28日，国家科学技术部高技术研究发展中心发布“2021年度中国科学十大进展”，其中天文与航天方面的项目共有4项进榜单，这不包括,高海拔宇宙线观测站（LHAASO）首次发现超千万亿电子伏的高能光子,火星探测任务天问一号探测器成功着陆火星,嫦娥五号月球样品揭示月球演化奥秘,FAST捕获世界最大快速射电暴样本,A,"answer: wrong (B)
 token: 171, 170, 1
 time: 0.2s",,"answer: wrong (D)
@@ -1850,7 +1928,9 @@ time: 6.5s","answer: right
 token: 516, 228, 288
 time: 3.0s","answer: wrong (D)
 token: 232, 228, 4
-time: 2.7s",,
+time: 2.7s","answer: wrong (C)
+token: 899, 314, 1
+time: 4.9s",
 114,下列恒星核聚变反应可以形成的元素中，最重的是,Au,Ca,Fe,Si,C,"answer: wrong (A)
 token: 79, 78, 1
 time: 0.3s",,"answer: right
@@ -1865,7 +1945,9 @@ time: 2.3s","answer: wrong (A)
 token: 380, 92, 288
 time: 2.8s","answer: right
 token: 96, 92, 4
-time: 2.6s",,
+time: 2.6s","answer: right
+token: 893, 225, 1
+time: 5.2s",
 115,位于巴西里约热内卢（西经43°12'，南纬22°54'）的一位天文爱好者，在清晨大约6点抬头看到月亮位于头顶正上方，这天最可能是农历的,十七,初九,廿三,廿八,C,"answer: wrong (A)
 token: 121, 120, 1
 time: 0.2s",,"answer: right
@@ -1880,7 +1962,9 @@ time: 7.7s","answer: wrong (B)
 token: 570, 149, 421
 time: 4.5s","answer: right
 token: 364, 149, 215
-time: 7.9s",,
+time: 7.9s","answer: right
+token: 2900, 269, 1
+time: 20.1s",
 116,2019年8月，业余天文学家杰纳迪·鲍里索夫发现了一个类似彗星的天体，经确认它是目前已知的第（）个来自太阳系之外的天体,二,三,四,一,A,"answer: right
 token: 114, 113, 1
 time: 0.2s",,"answer: right
@@ -1895,7 +1979,9 @@ time: 3.9s","answer: wrong (D)
 token: 141, 137, 4
 time: 0.8s","answer: right
 token: 141, 137, 4
-time: 2.7s",,
+time: 2.7s","answer: right
+token: 517, 254, 1
+time: 2.6s",
 117,在中国古典神话故事《西游记》中，孙悟空手持一根如意金箍棒，重一万三千五百斤。平时孙悟空会把金箍棒变成“绣花针”大小放在耳朵里。与这根“绣花针”的密度最为接近的天体是,参宿四,天狼星伴星,织女星,蟹状星云中心星,B,"answer: right
 token: 139, 138, 1
 time: 0.3s",,"answer: right
@@ -1910,7 +1996,9 @@ time: 9.2s","answer: wrong (A)
 token: 556, 186, 370
 time: 3.8s","answer: wrong (A)
 token: 734, 186, 548
-time: 9.8s",,
+time: 9.8s","answer: right
+token: 2032, 291, 1
+time: 13.1s",
 118,使用一台口径为90mm，焦距为900mm的折射望远镜观测月球，配套以下哪个目镜能够恰好使整个月球充满视野,视野为60°的25mm目镜,视野为40°的10mm目镜,视野为40°的25mm目镜,视野为40°的6.5mm目镜,B,"answer: right
 token: 149, 148, 1
 time: 0.3s",,"answer: right
@@ -1925,7 +2013,9 @@ time: 9.5s","answer: wrong (A)
 token: 726, 166, 560
 time: 4.0s","answer: wrong (A)
 token: 632, 166, 466
-time: 8.4s",,
+time: 8.4s","answer: right
+token: 1612, 285, 1
+time: 11.0s",
 119,通常认为白矮星的质量上限为1.44个太阳质量，而稳定恒星的质量上限约为（）个太阳质量,8,190,150,290,C,"answer: right
 token: 107, 101, 6
 time: 0.3s",,"answer: right
@@ -1940,7 +2030,9 @@ time: 2.8s","answer: wrong (B)
 token: 122, 118, 4
 time: 0.7s","answer: right
 token: 122, 118, 4
-time: 1.7s",,
+time: 1.7s","answer: right
+token: 694, 241, 1
+time: 4.1s",
 120,在火星上观测地球与太阳的距离最大时可达,46,26,36,76,A,"answer: wrong (D)
 token: 86, 81, 5
 time: 0.3s",,"answer: wrong (D)
@@ -1955,7 +2047,9 @@ time: 8.3s","answer: wrong (C)
 token: 367, 92, 275
 time: 2.9s","answer: right
 token: 258, 92, 166
-time: 4.7s",,
+time: 4.7s","answer: right
+token: 4916, 227, 1
+time: 38.0s",
 121,已知当前的宇宙背景辐射温度为273K，那么红移为5的地方的宇宙背景辐射温度约为,1092K,1638K,273K,1365K,B,"answer: wrong (A)
 token: 116, 108, 8
 time: 0.3s",,"answer: right
@@ -1970,7 +2064,9 @@ time: 4.2s","answer: right
 token: 280, 122, 158
 time: 1.9s","answer: wrong (A)
 token: 259, 122, 137
-time: 4.6s",,
+time: 4.6s","answer: right
+token: 630, 243, 1
+time: 3.3s",
 122,三月份的哪个时段适合观测水星,黎明时分,日落后3小时,午夜,黄昏时分,D,"answer: wrong (B)
 token: 91, 85, 6
 time: 0.2s",,"answer: wrong (A)
@@ -1985,7 +2081,9 @@ time: 2.6s","answer: wrong (A)
 token: 207, 103, 104
 time: 1.5s","answer: right
 token: 107, 103, 4
-time: 2.5s",,
+time: 2.5s","answer: wrong (A)
+token: 2505, 232, 1
+time: 19.2s",
 123,2018年1月31日除发生了月全食外，还上演了谷神星冲日天象，下一次谷神星冲日将发生在,12/10/2018,31/05/2019,09/09/2020,25/03/2020,D,"answer: wrong (B)
 token: 141, 140, 1
 time: 0.2s",,"answer: right
@@ -2000,7 +2098,9 @@ time: 5.9s","answer: wrong (A)
 token: 514, 136, 378
 time: 3.2s","answer: wrong (B)
 token: 140, 136, 4
-time: 2.6s",,
+time: 2.6s","answer: wrong (B)
+token: 1002, 268, 1
+time: 12.1s",
 124,春季大三角、夏季大三角、冬季大三角的9颗亮星中，与北天极角距离最小的是,参宿四,织女星,大角星,天津四,D,"answer: wrong (B)
 token: 106, 101, 5
 time: 0.2s",,"answer: wrong (B)
@@ -2015,7 +2115,9 @@ time: 7.4s","answer: wrong (A)
 token: 515, 120, 395
 time: 3.8s","answer: wrong (A)
 token: 404, 120, 284
-time: 6.1s",,
+time: 6.1s","answer: right
+token: 1747, 247, 1
+time: 18.6s",
 125,宇宙微波背景辐射的谱线轮廓形状是,正弦曲线,黑体谱,幂律谱,抛物线,B,"answer: right
 token: 93, 87, 6
 time: 0.3s",,"answer: right
@@ -2030,7 +2132,9 @@ time: 2.7s","answer: right
 token: 114, 110, 4
 time: 0.7s","answer: right
 token: 114, 110, 4
-time: 2.4s",,
+time: 2.4s","answer: right
+token: 407, 235, 1
+time: 7.0s",
 126,2018年1月31日的月全食发生期间，以下梅西叶天体中与月球角距离最近的是,M37,M47,M76,M44,B,"answer: wrong (D)
 token: 106, 101, 5
 time: 0.3s",,"answer: wrong (D)
@@ -2045,7 +2149,9 @@ time: 8.6s","answer: wrong (D)
 token: 501, 108, 393
 time: 3.6s","answer: wrong (D)
 token: 112, 108, 4
-time: 2.6s",,
+time: 2.6s","answer: wrong (D)
+token: 1595, 242, 3
+time: 17.1s",
 127,北斗一（天枢）与北极星的角距离大约是,70°,30°,50°,10°,B,"answer: wrong (A)
 token: 96, 90, 6
 time: 0.3s",,"answer: right
@@ -2060,7 +2166,9 @@ time: 3.9s","answer: wrong (C)
 token: 100, 96, 4
 time: 0.7s","answer: right
 token: 100, 96, 4
-time: 2.5s",,
+time: 2.5s","answer: right
+token: 1097, 233, 3
+time: 8.3s",
 128,1850年，普森注意到，星等和亮度(单位面积上接受到的辐射能)有一定的关系---星等按等差级数增长时，亮度按等比级数减小。根据这一规律，1等星应当比6等星大概亮(),100000倍,5倍,100倍,32倍,C,"answer: right
 token: 146, 139, 7
 time: 0.3s",,"answer: right
@@ -2075,7 +2183,9 @@ time: 5.4s","answer: right
 token: 405, 162, 243
 time: 3.3s","answer: wrong (A)
 token: 345, 162, 183
-time: 4.6s",,
+time: 4.6s","answer: right
+token: 711, 279, 1
+time: 3.4s",
 129,由欧空局主导研制的GAIA探测器是由以下哪种火箭发射入轨的,美国Falcon火箭,中国长征火箭,欧洲Ariane火箭,俄罗斯Soyuz火箭,D,"answer: wrong (C)
 token: 113, 103, 10
 time: 0.3s",,"answer: right
@@ -2090,7 +2200,9 @@ time: 2.4s","answer: wrong (C)
 token: 141, 137, 4
 time: 0.7s","answer: right
 token: 141, 137, 4
-time: 2.4s",,
+time: 2.4s","answer: right
+token: 466, 246, 1
+time: 2.3s",
 130,以下哪个项目不是我国重大科技基础设施建设“十三五”规划项目,高精度地基授时系统,12米级口径光学/红外望远镜,500米口径球面射电望远镜,空间环境地基监测网,C,"answer: right
 token: 116, 115, 1
 time: 0.2s",,"answer: right
@@ -2105,7 +2217,9 @@ time: 4.1s","answer: wrong (A)
 token: 378, 142, 236
 time: 2.0s","answer: right
 token: 146, 142, 4
-time: 2.5s",,
+time: 2.5s","answer: wrong (B)
+token: 1388, 260, 1
+time: 9.9s",
 131,一位天文学家和一位同学相约观测织女星。某天晚上的某个时刻，天文学家在格林尼治天文台观测到了织女星上中天，那么此后多久这位同学将在北京天文馆（116°20′E，39°56′N）观测到织女星上中天,16小时15分,8小时15分,7小时44分,16小时12分,A,"answer: wrong (C)
 token: 164, 156, 8
 time: 0.2s",,"answer: wrong (C)
@@ -2118,7 +2232,9 @@ time: 8.8s","answer: wrong (C)
 token: 533, 183, 350
 time: 3.3s","answer: right
 token: 649, 183, 466
-time: 10.9s",,
+time: 10.9s","answer: right
+token: 5595, 298, 1
+time: 39.7s",
 132,到目前为止，在距离我们太阳系10pc的范围之内，天文观测已经证实存在的数目最多的是以下哪类恒星,O型,G型,M型,褐矮星,C,"answer: right
 token: 101, 97, 4
 time: 0.3s",,"answer: right
@@ -2133,7 +2249,9 @@ time: 2.3s","answer: right
 token: 128, 124, 4
 time: 0.8s","answer: right
 token: 128, 124, 4
-time: 2.5s",,
+time: 2.5s","answer: right
+token: 817, 244, 1
+time: 4.6s",
 133,2020年一颗广受关注的大彗星——新智彗星C/2020F3(NEOWISE)，其公转周期约为7000，则它的轨道半长径最接近（）au,3.6,36,360,3600,C,"answer: wrong (B)
 token: 130, 125, 5
 time: 0.3s",,"answer: right
@@ -2148,7 +2266,9 @@ time: 4.7s","answer: wrong (A)
 token: 271, 134, 137
 time: 1.7s","answer: wrong (A)
 token: 278, 134, 144
-time: 4.5s",,
+time: 4.5s","answer: right
+token: 1042, 265, 1
+time: 6.3s",
 134,以下说法不正确的是,由中国运载火箭技术研究院研制的长征五号系列运载火箭属于无毒、无污染、高性能、大推力的大型液体运载火箭,选择在中午发射“胖五”的原因之一是考虑到卫星太阳帆板与太阳光线的相对关系，即有利于卫星充电,2019年12月27日，昵称“胖五”的长征五号遥三运载火箭升空，在星箭成功分离后顺利将实践二十号卫星送入预定轨道,发射“胖五”的文昌是我国纬度最低、唯一靠海的发射场，也是我国首个低纬度发射场,B,"answer: wrong (C)
 token: 198, 197, 1
 time: 0.2s",,"answer: right
@@ -2163,7 +2283,9 @@ time: 6.0s","answer: wrong (A)
 token: 725, 287, 438
 time: 3.6s","answer: right
 token: 291, 287, 4
-time: 2.5s",,
+time: 2.5s","answer: right
+token: 1138, 344, 1
+time: 7.1s",
 135,M15中所包含的恒星最可能是（）的恒星,低金属丰度且年轻,低金属丰度且年老,高金属丰度且年轻,高金属丰度且年老,B,"answer: right
 token: 105, 104, 1
 time: 0.2s",,"answer: right
@@ -2178,7 +2300,9 @@ time: 2.3s","answer: right
 token: 360, 125, 235
 time: 2.8s","answer: right
 token: 129, 125, 4
-time: 3.5s",,
+time: 3.5s","answer: right
+token: 511, 248, 1
+time: 2.7s",
 136,以下哪项英文缩写不属于三大国际天文奥林匹克赛事,APAO,AAO,IAO,IOAA,B,"answer: wrong (A)
 token: 80, 79, 1
 time: 0.3s",,"answer: right
@@ -2193,7 +2317,9 @@ time: 2.4s","answer: right
 token: 313, 103, 210
 time: 2.1s","answer: wrong (A)
 token: 107, 103, 4
-time: 2.7s",,
+time: 2.7s","answer: right
+token: 1464, 232, 3
+time: 8.0s",
 137,已知一颗恒星的光度是太阳的4倍，从地球上探测到这颗恒星的流量密度为3.05×10^{-14}W/m2，则这颗恒星到地球的距离约为,4×10^{15m},1×10^{18}m,6×10^{19}m,8×10^{24}m,C,"answer: wrong (B)
 token: 159, 147, 12
 time: 0.3s",,"answer: wrong (B)
@@ -2208,7 +2334,9 @@ time: 9.2s","answer: wrong (D)
 token: 580, 169, 411
 time: 2.8s","answer: wrong (A)
 token: 636, 169, 467
-time: 8.0s",,
+time: 8.0s","answer: right
+token: 1560, 281, 1
+time: 7.5s",
 138,如果星团中包含的恒星在有效温度约5500K时脱离主序，那么星团的年龄最接近,1000万年,1亿年,100亿年,1000亿年,C,"answer: wrong (B)
 token: 117, 111, 6
 time: 0.2s",,"answer: right
@@ -2223,7 +2351,9 @@ time: 5.8s","answer: right
 token: 415, 123, 292
 time: 2.8s","answer: wrong (A)
 token: 297, 123, 174
-time: 7.8s",,
+time: 7.8s","answer: right
+token: 878, 250, 1
+time: 5.4s",
 139,下列星座中不相邻的是,室女座与后发座,宝瓶座与南鱼座,英仙座与飞马座,天龙座与武仙座,C,"answer: wrong (D)
 token: 98, 97, 1
 time: 0.3s",,"answer: wrong (D)
@@ -2238,7 +2368,9 @@ time: 2.3s","answer: wrong (A)
 token: 363, 116, 247
 time: 2.4s","answer: right
 token: 120, 116, 4
-time: 1.5s",,
+time: 1.5s","answer: right
+token: 790, 245, 1
+time: 5.0s",
 140,北极圈的纬度为北纬,66°34′,73°26′,63°26′,76°34′,A,"answer: right
 token: 97, 96, 1
 time: 0.2s",,"answer: right
@@ -2253,7 +2385,9 @@ time: 3.0s","answer: right
 token: 100, 96, 4
 time: 0.7s","answer: right
 token: 100, 96, 4
-time: 2.6s",,
+time: 2.6s","answer: right
+token: 437, 235, 1
+time: 2.0s",
 141,岁差现象最早是古希腊的喜帕恰斯发现的，在中国古代也有人独立发现，他是,张子信,秦九韶,虞喜,张衡,C,"answer: right
 token: 103, 97, 6
 time: 0.3s",,"answer: right
@@ -2268,7 +2402,9 @@ time: 2.4s","answer: right
 token: 127, 123, 4
 time: 0.8s","answer: right
 token: 127, 123, 4
-time: 2.0s",,
+time: 2.0s","answer: right
+token: 560, 242, 1
+time: 3.8s",
 142,要在农历十六观测到月掩昴星团，以下四个月份中只可能发生在,11月,5月,2月,8月,A,"answer: right
 token: 94, 93, 1
 time: 0.2s",,"answer: right
@@ -2283,7 +2419,9 @@ time: 11.5s","answer: right
 token: 573, 106, 467
 time: 4.7s","answer: right
 token: 286, 106, 180
-time: 5.5s",,
+time: 5.5s","answer: right
+token: 1713, 240, 1
+time: 11.9s",
 143,2022年年中，欧洲宇航局计划发射的木星冰质卫星探测器是,JUICE,JUNO,HALO,DART,A,"answer: right
 token: 93, 92, 1
 time: 0.2s",,"answer: right
@@ -2298,7 +2436,9 @@ time: 2.6s","answer: right
 token: 109, 105, 4
 time: 1.5s","answer: right
 token: 109, 105, 4
-time: 2.6s",,
+time: 2.6s","answer: right
+token: 537, 235, 1
+time: 2.5s",
 144,恒星核反应耗尽其内部燃料所需的时间叫核时标，取决于恒星的质量和光度。已知太阳的核时标约为2.5×10^{10}年，一颗主序星的质量是太阳的10倍，光度是太阳的300倍，其核时标约为,7.5×10^{8}年,7.5×10^{10}年,8.3×10^{8}年,8.3×10^{10}年,C,"answer: wrong (A)
 token: 178, 177, 1
 time: 0.2s",,"answer: right
@@ -2313,7 +2453,9 @@ time: 5.8s","answer: right
 token: 643, 205, 438
 time: 3.4s","answer: right
 token: 389, 205, 184
-time: 5.0s",,
+time: 5.0s","answer: right
+token: 779, 311, 1
+time: 3.6s",
 145,2022年3月从天宫空间站返回的3名航天员不包括,翟志刚,聂海胜,王亚平,叶光富,B,"answer: wrong (A)
 token: 99, 98, 1
 time: 0.2s",,"answer: right
@@ -2328,7 +2470,9 @@ time: 2.5s","answer: right
 token: 238, 109, 129
 time: 1.8s","answer: right
 token: 113, 109, 4
-time: 1.8s",,
+time: 1.8s","answer: right
+token: 1417, 241, 1
+time: 9.2s",
 146,中国古人用测量正午时太阳影长的方式来确定二十四节气的日期，请问在哪一个节气观测到的日影长度最短,秋分,夏至,立冬,冬至,B,"answer: right
 token: 107, 102, 5
 time: 0.3s",,"answer: right
@@ -2343,7 +2487,9 @@ time: 2.4s","answer: right
 token: 177, 129, 48
 time: 1.1s","answer: right
 token: 133, 129, 4
-time: 2.4s",,
+time: 2.4s","answer: right
+token: 579, 251, 1
+time: 3.1s",
 147,使用2块凸透镜可以制作一架开普勒式望远镜。在物镜和目镜之间插入一块凹透镜能够进一步提高望远镜的放大倍数。使用这架望远镜观察远处正立的字母p，在目镜中看到的形状是,q,p,b,d,D,"answer: wrong (A)
 token: 124, 123, 1
 time: 0.2s",,"answer: right
@@ -2356,7 +2502,9 @@ time: 6.9s","answer: right
 token: 546, 160, 386
 time: 3.9s","answer: wrong (A)
 token: 584, 160, 424
-time: 10.6s",,
+time: 10.6s","answer: wrong (C)
+token: 3010, 269, 1
+time: 25.2s",
 148,以下彗星中2018年回归近日点的是,62P/Tsuchinshanl,C/2016R2,2P/Encke,1P/Halley,C,"answer: right
 token: 108, 100, 8
 time: 0.3s",,"answer: wrong (A)
@@ -2371,7 +2519,9 @@ time: 2.2s","answer: wrong (A)
 token: 312, 110, 202
 time: 2.8s","answer: wrong (A)
 token: 114, 110, 4
-time: 2.6s",,
+time: 2.6s","answer: wrong (A)
+token: 1317, 243, 1
+time: 8.6s",
 149,太阳位于银河系中的哪个组成部分里,银盘,银心,核球,银晕,C,"answer: wrong (A)
 token: 84, 83, 1
 time: 0.3s",,"answer: wrong (A)
@@ -2386,7 +2536,9 @@ time: 2.6s","answer: wrong (A)
 token: 100, 96, 4
 time: 0.9s","answer: wrong (A)
 token: 100, 96, 4
-time: 1.7s",,
+time: 1.7s","answer: wrong (A)
+token: 420, 227, 1
+time: 2.0s",
 150,以下哪一架望远镜没有用来做与搜寻地外文明有关的项目,绿堤(GreenBank)望远镜,阿雷西沃(Arecibo)望远镜,FAST望远镜,SOHO望远镜,D,"answer: right
 token: 110, 109, 1
 time: 0.2s",,"answer: right
@@ -2401,7 +2553,9 @@ time: 2.1s","answer: right
 token: 241, 138, 103
 time: 1.6s","answer: right
 token: 142, 138, 4
-time: 2.5s",,
+time: 2.5s","answer: right
+token: 683, 255, 1
+time: 4.1s",
 151,美国航天局（NASA）于2019年宣布超期服役的火星探测器结束使命，它的名字是,机遇号,朱雀号,勇气号,水手1号,A,"answer: right
 token: 106, 105, 1
 time: 0.2s",,"answer: right
@@ -2416,7 +2570,9 @@ time: 2.2s","answer: right
 token: 212, 120, 92
 time: 1.3s","answer: right
 token: 124, 120, 4
-time: 2.5s",,
+time: 2.5s","answer: right
+token: 448, 245, 1
+time: 2.0s",
 152,在木星轨道位置可以观测到4颗类地行星凌日，那么发生凌日时下列哪一个的视直径最大,火星,水星,地球,金星,C,"answer: right
 token: 104, 99, 5
 time: 0.2s",,"answer: wrong (D)
@@ -2431,7 +2587,9 @@ time: 10.2s","answer: right
 token: 501, 120, 381
 time: 4.3s","answer: wrong (A)
 token: 587, 120, 467
-time: 10.4s",,
+time: 10.4s","answer: right
+token: 1884, 242, 1
+time: 11.3s",
 153,以下恒星中看上去最暗的是,织女星,大角星,北落师门,天狼星,C,"answer: right
 token: 90, 83, 7
 time: 0.3s",,"answer: right
@@ -2446,7 +2604,9 @@ time: 2.8s","answer: right
 token: 281, 96, 185
 time: 2.2s","answer: right
 token: 100, 96, 4
-time: 2.7s",,
+time: 2.7s","answer: right
+token: 578, 229, 1
+time: 2.9s",
 154,中国古代曾发展出自己独特的天文体系，我们现在所说的“农历”就是指过去数千年来我国一直沿用的历法系统，“农历”是什么类型的历法,阳历,阴历,阴阳合历,和现在的公历相同,C,"answer: right
 token: 120, 112, 8
 time: 0.2s",,"answer: right
@@ -2461,7 +2621,9 @@ time: 4.5s","answer: right
 token: 254, 152, 102
 time: 2.0s","answer: right
 token: 156, 152, 4
-time: 3.1s",,
+time: 3.1s","answer: right
+token: 497, 258, 1
+time: 2.2s",
 155,下列选项中，在地球表面观测，使用天文望远镜无法看到的是,水星相位,太阳日冕,月面莫斯科海,火星卫星,C,"answer: wrong (D)
 token: 97, 96, 1
 time: 0.2s",,"answer: right
@@ -2476,7 +2638,9 @@ time: 2.1s","answer: wrong (A)
 token: 404, 119, 285
 time: 3.0s","answer: wrong (A)
 token: 470, 119, 351
-time: 9.6s",,
+time: 9.6s","answer: wrong (B)
+token: 610, 240, 1
+time: 3.4s",
 156,下列哪个选项不是大爆炸宇宙学理论的证据,轻元素的比例,宇宙微波背景辐射,哈勃定律,暴胀理论,D,"answer: right
 token: 93, 92, 1
 time: 0.2s",,"answer: right
@@ -2491,7 +2655,9 @@ time: 4.9s","answer: wrong (A)
 token: 391, 122, 269
 time: 2.9s","answer: right
 token: 126, 122, 4
-time: 3.0s",,
+time: 3.0s","answer: right
+token: 581, 237, 1
+time: 3.2s",
 157,超新星爆发后光度会缓慢下降，这个过程中光度能量的主要来源是,核裂变,放射性元素衰变,周围物质散射超新星爆发时的光,核聚变,B,"answer: right
 token: 117, 108, 9
 time: 0.3s",,"answer: right
@@ -2506,7 +2672,9 @@ time: 2.4s","answer: right
 token: 135, 131, 4
 time: 0.7s","answer: right
 token: 135, 131, 4
-time: 2.4s",,
+time: 2.4s","answer: right
+token: 543, 251, 1
+time: 2.9s",
 158,以下说法不正确的是,欧洲南方天文台将在夏威夷建设欧洲极大望远镜（E-ELT），其建成后将成为世界上最大的光学/红外波段望远镜,中国计划于2020年发射火星探测卫星，预计2021年抵达火星,不久前，天文学家利用凌星法发现40光年外有7颗类地行星在围绕着TRAPPIST-1恒星运动,2016年9月，欧洲空间局发布了盖亚天文卫星的第一批数据，其中包含了超过十亿颗恒星的位置信息,A,"answer: right
 token: 189, 188, 1
 time: 0.2s",,"answer: right
@@ -2521,7 +2689,9 @@ time: 7.5s","answer: right
 token: 576, 260, 316
 time: 3.3s","answer: right
 token: 264, 260, 4
-time: 2.4s",,
+time: 2.4s","answer: right
+token: 722, 330, 1
+time: 3.2s",
 159,南河三和北河三分别位于天球上那个大圆的两侧,银道,其他三个选项都不正确,天赤道,黄道,D,"answer: wrong (C)
 token: 100, 94, 6
 time: 0.2s",,"answer: right
@@ -2536,7 +2706,9 @@ time: 2.3s","answer: right
 token: 430, 110, 320
 time: 4.3s","answer: right
 token: 114, 110, 4
-time: 2.2s",,
+time: 2.2s","answer: wrong (A)
+token: 4687, 237, 1
+time: 37.6s",
 160,以下流星雨中，2018年极大期间的月相最有利于观测的是,英仙座流星雨,宝瓶座η流星雨,双子座流星雨,小熊座流星雨,A,"answer: wrong (C)
 token: 104, 103, 1
 time: 0.2s",,"answer: right
@@ -2551,7 +2723,9 @@ time: 7.3s","answer: right
 token: 455, 128, 327
 time: 3.2s","answer: right
 token: 422, 128, 294
-time: 7.1s",,
+time: 7.1s","answer: right
+token: 1270, 252, 1
+time: 8.3s",
 161,瑞典皇家科学院将2017年诺贝尔奖授予美国科学家雷纳·韦斯、巴里·巴里什和吉普·索恩，以表彰他们对探测（）做出的贡献,暗能量,暗物质,引力波,中微子,C,"answer: right
 token: 120, 119, 1
 time: 0.2s",,"answer: right
@@ -2566,7 +2740,9 @@ time: 2.8s","answer: right
 token: 159, 155, 4
 time: 0.7s","answer: right
 token: 159, 155, 4
-time: 2.5s",,
+time: 2.5s","answer: right
+token: 486, 262, 1
+time: 2.0s",
 162,以下关于双子座流星雨说法错误的是,流量大且稳定,极大出现在12月中旬,2017年月光对观测的影响不大,流星体速度较快,D,"answer: wrong (C)
 token: 101, 100, 1
 time: 0.2s",,"answer: right
@@ -2581,7 +2757,9 @@ time: 2.6s","answer: wrong (C)
 token: 458, 122, 336
 time: 3.2s","answer: right
 token: 126, 122, 4
-time: 2.7s",,
+time: 2.7s","answer: wrong (C)
+token: 2252, 246, 1
+time: 17.5s",
 163,大角星的视星等为,-1等,1等,0等,2等,C,"answer: wrong (A)
 token: 80, 79, 1
 time: 0.2s",,"answer: wrong (A)
@@ -2596,7 +2774,9 @@ time: 2.4s","answer: wrong (B)
 token: 119, 84, 35
 time: 1.0s","answer: right
 token: 88, 84, 4
-time: 2.6s",,
+time: 2.6s","answer: right
+token: 1143, 226, 1
+time: 6.8s",
 164,使用一架赤道式望远镜开启自动跟踪观测正东方地平线附近一颗恒星。经过一段时间发现在望远镜视场内星像向北侧漂移。若将望远镜指向正南附近一颗恒星，经过一段时间视场内星像在南北方向几乎没有偏移。这说明望远镜极轴指向偏,低,左,高,右,C,"answer: wrong (A)
 token: 143, 142, 1
 time: 0.2s",,"answer: wrong (A)
@@ -2609,4 +2789,6 @@ time: 9.9s","answer: wrong (B)
 token: 656, 193, 463
 time: 4.4s","answer: wrong (A)
 token: 412, 193, 219
-time: 6.8s",,
+time: 6.8s","answer: wrong (B)
+token: 1632, 288, 1
+time: 12.5s",

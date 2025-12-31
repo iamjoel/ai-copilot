@@ -5,7 +5,9 @@ time: 0.2s",,"answer: right
 token: 205, 204, 1
 time: 3.1s","answer: right
 token: 210, 209, 1
-time: 0.7s",,,"answer: wrong (A)
+time: 0.7s","answer: right
+token: 2404, 209, 1
+time: 14.3s",,"answer: wrong (A)
 token: 797, 291, 506
 time: 11.5s","answer: wrong (A)
 token: 717, 291, 426
@@ -18,7 +20,9 @@ time: 0.2s",,"answer: right
 token: 100, 99, 1
 time: 2.7s","answer: right
 token: 92, 91, 1
-time: 0.8s",,,"answer: right
+time: 0.8s","answer: right
+token: 489, 91, 1
+time: 3.2s",,"answer: right
 token: 128, 124, 4
 time: 2.4s","answer: right
 token: 128, 124, 4
@@ -31,7 +35,9 @@ time: 0.2s",,"answer: right
 token: 203, 202, 1
 time: 0.8s","answer: right
 token: 212, 211, 1
-time: 0.8s",,,"answer: right
+time: 0.8s","answer: right
+token: 706, 211, 0
+time: 4.0s",,"answer: right
 token: 760, 318, 442
 time: 8.4s","answer: right
 token: 771, 318, 453
@@ -44,7 +50,9 @@ time: 0.3s",,"answer: right
 token: 151, 150, 1
 time: 0.8s","answer: right
 token: 153, 152, 1
-time: 0.8s",,,"answer: right
+time: 0.8s","answer: right
+token: 617, 152, 1
+time: 3.6s",,"answer: right
 token: 285, 214, 71
 time: 3.8s","answer: wrong (A)
 token: 531, 214, 317
@@ -57,7 +65,9 @@ time: 0.2s",,"answer: right
 token: 168, 167, 1
 time: 0.8s","answer: right
 token: 169, 168, 1
-time: 0.7s",,,"answer: right
+time: 0.7s","answer: right
+token: 473, 168, 1
+time: 2.4s",,"answer: right
 token: 232, 228, 4
 time: 2.3s","answer: right
 token: 487, 228, 259
@@ -70,7 +80,9 @@ time: 0.2s",,"answer: right
 token: 128, 127, 1
 time: 0.9s","answer: wrong (C)
 token: 125, 124, 1
-time: 0.8s",,,"answer: right
+time: 0.8s","answer: right
+token: 554, 124, 1
+time: 3.2s",,"answer: right
 token: 425, 167, 258
 time: 6.5s","answer: wrong (A)
 token: 506, 167, 339
@@ -83,7 +95,9 @@ time: 0.2s",,"answer: right
 token: 205, 204, 1
 time: 0.6s","answer: right
 token: 202, 201, 1
-time: 0.6s",,,"answer: right
+time: 0.6s","answer: right
+token: 1230, 201, 1
+time: 6.6s",,"answer: right
 token: 295, 291, 4
 time: 2.3s","answer: wrong (A)
 token: 712, 291, 421
@@ -96,7 +110,9 @@ time: 0.2s",,"answer: right
 token: 180, 179, 1
 time: 0.7s","answer: wrong (D)
 token: 192, 191, 1
-time: 0.8s",,,"answer: right
+time: 0.8s","answer: right
+token: 1299, 191, 1
+time: 7.2s",,"answer: right
 token: 637, 276, 361
 time: 8.0s","answer: wrong (A)
 token: 684, 276, 408
@@ -109,7 +125,9 @@ time: 0.5s",,"answer: right
 token: 148, 147, 1
 time: 1.4s","answer: right
 token: 157, 156, 1
-time: 0.8s",,,"answer: right
+time: 0.8s","answer: right
+token: 592, 156, 1
+time: 3.8s",,"answer: right
 token: 235, 231, 4
 time: 2.4s","answer: wrong (A)
 token: 608, 231, 377
@@ -122,7 +140,9 @@ time: 0.4s",,"answer: right
 token: 235, 234, 1
 time: 0.5s","answer: wrong (B)
 token: 246, 245, 1
-time: 0.4s",,,"answer: right
+time: 0.4s","answer: right
+token: 2095, 245, 0
+time: 12.1s",,"answer: right
 token: 361, 357, 4
 time: 3.2s","answer: wrong (A)
 token: 747, 357, 390
@@ -135,7 +155,9 @@ time: 0.3s",,"answer: right
 token: 132, 131, 1
 time: 0.9s","answer: right
 token: 136, 135, 1
-time: 0.6s",,,"answer: right
+time: 0.6s","answer: right
+token: 689, 135, 1
+time: 4.1s",,"answer: right
 token: 197, 193, 4
 time: 2.2s","answer: wrong (A)
 token: 516, 193, 323
@@ -148,7 +170,9 @@ time: 0.5s",,"answer: right
 token: 84, 83, 1
 time: 1.2s","answer: wrong (C)
 token: 81, 80, 1
-time: 0.6s",,,"answer: wrong (C)
+time: 0.6s","answer: right
+token: 1581, 80, 1
+time: 9.2s",,"answer: wrong (C)
 token: 108, 104, 4
 time: 2.9s","answer: wrong (C)
 token: 108, 104, 4
@@ -161,7 +185,9 @@ time: 0.4s",,"answer: right
 token: 152, 151, 1
 time: 1.2s","answer: right
 token: 153, 152, 1
-time: 0.6s",,,"answer: right
+time: 0.6s","answer: right
+token: 726, 152, 1
+time: 4.4s",,"answer: right
 token: 625, 232, 393
 time: 7.4s","answer: right
 token: 654, 232, 422
@@ -174,7 +200,9 @@ time: 0.4s",,"answer: right
 token: 133, 132, 1
 time: 2.7s","answer: wrong (B)
 token: 136, 135, 1
-time: 0.6s",,,"answer: wrong (B)
+time: 0.6s","answer: right
+token: 2673, 135, 1
+time: 15.5s",,"answer: wrong (B)
 token: 202, 198, 4
 time: 2.7s","answer: right
 token: 577, 198, 379
@@ -187,7 +215,9 @@ time: 0.4s",,"answer: right
 token: 105, 104, 1
 time: 1.5s","answer: right
 token: 100, 99, 1
-time: 0.4s",,,"answer: right
+time: 0.4s","answer: right
+token: 577, 99, 1
+time: 3.6s",,"answer: right
 token: 138, 134, 4
 time: 2.2s","answer: right
 token: 138, 134, 4
@@ -200,7 +230,9 @@ time: 0.4s",,"answer: right
 token: 149, 148, 1
 time: 1.3s","answer: right
 token: 148, 147, 1
-time: 0.5s",,,"answer: right
+time: 0.5s","answer: right
+token: 580, 147, 1
+time: 3.2s",,"answer: right
 token: 226, 222, 4
 time: 2.6s","answer: right
 token: 532, 222, 310
@@ -213,7 +245,9 @@ time: 0.3s",,"answer: right
 token: 97, 96, 1
 time: 1.8s","answer: right
 token: 92, 91, 1
-time: 0.7s",,,"answer: right
+time: 0.7s","answer: right
+token: 360, 91, 1
+time: 2.3s",,"answer: right
 token: 130, 126, 4
 time: 2.6s","answer: right
 token: 130, 126, 4
@@ -226,7 +260,9 @@ time: 0.3s",,"answer: right
 token: 126, 125, 1
 time: 1.6s","answer: wrong (B)
 token: 140, 139, 1
-time: 0.6s",,,"answer: wrong (A)
+time: 0.6s","answer: right
+token: 1354, 139, 1
+time: 7.6s",,"answer: wrong (A)
 token: 558, 183, 375
 time: 9.2s","answer: wrong (A)
 token: 576, 183, 393
@@ -239,7 +275,9 @@ time: 0.3s",,"answer: right
 token: 141, 140, 1
 time: 1.8s","answer: right
 token: 141, 140, 1
-time: 0.9s",,,"answer: right
+time: 0.9s","answer: right
+token: 687, 140, 1
+time: 3.9s",,"answer: right
 token: 569, 198, 371
 time: 9.1s","answer: right
 token: 559, 198, 361
@@ -252,7 +290,9 @@ time: 0.3s",,"answer: right
 token: 87, 86, 1
 time: 2.4s","answer: right
 token: 83, 82, 1
-time: 0.8s",,,"answer: right
+time: 0.8s","answer: right
+token: 359, 82, 1
+time: 2.5s",,"answer: right
 token: 114, 110, 4
 time: 3.1s","answer: right
 token: 114, 110, 4
@@ -265,7 +305,9 @@ time: 0.4s",,"answer: right
 token: 154, 153, 1
 time: 0.9s","answer: right
 token: 163, 162, 1
-time: 0.6s",,,"answer: wrong (B)
+time: 0.6s","answer: right
+token: 567, 162, 1
+time: 3.1s",,"answer: wrong (B)
 token: 507, 220, 287
 time: 8.7s","answer: right
 token: 595, 220, 375
@@ -278,7 +320,9 @@ time: 0.3s",,"answer: right
 token: 95, 94, 1
 time: 0.8s","answer: wrong (C)
 token: 88, 87, 1
-time: 0.4s",,,"answer: right
+time: 0.4s","answer: right
+token: 556, 87, 1
+time: 3.8s",,"answer: right
 token: 132, 128, 4
 time: 2.8s","answer: right
 token: 132, 128, 4
@@ -291,7 +335,9 @@ time: 0.3s",,"answer: right
 token: 161, 160, 1
 time: 0.9s","answer: right
 token: 160, 159, 1
-time: 0.7s",,,"answer: right
+time: 0.7s","answer: right
+token: 661, 159, 0
+time: 4.0s",,"answer: right
 token: 529, 235, 294
 time: 8.3s","answer: wrong (A)
 token: 561, 235, 326
@@ -304,7 +350,9 @@ time: 0.3s",,"answer: right
 token: 129, 128, 1
 time: 2.7s","answer: right
 token: 125, 124, 1
-time: 0.7s",,,"answer: right
+time: 0.7s","answer: right
+token: 751, 124, 1
+time: 4.5s",,"answer: right
 token: 199, 195, 4
 time: 2.8s","answer: wrong (A)
 token: 557, 195, 362
@@ -317,7 +365,9 @@ time: 0.3s",,"answer: right
 token: 144, 143, 1
 time: 0.7s","answer: right
 token: 144, 143, 1
-time: 0.7s",,,"answer: wrong (A)
+time: 0.7s","answer: right
+token: 569, 143, 1
+time: 3.4s",,"answer: wrong (A)
 token: 494, 196, 298
 time: 7.9s","answer: wrong (A)
 token: 536, 196, 340
@@ -330,7 +380,9 @@ time: 0.3s",,"answer: right
 token: 105, 104, 1
 time: 0.8s","answer: right
 token: 103, 102, 1
-time: 0.7s",,,"answer: right
+time: 0.7s","answer: right
+token: 459, 102, 1
+time: 3.5s",,"answer: right
 token: 142, 138, 4
 time: 3.7s","answer: right
 token: 142, 138, 4
@@ -343,7 +395,9 @@ time: 0.3s",,"answer: right
 token: 152, 151, 1
 time: 1.1s","answer: right
 token: 156, 155, 1
-time: 0.4s",,,"answer: right
+time: 0.4s","answer: right
+token: 1044, 155, 1
+time: 5.9s",,"answer: right
 token: 572, 208, 364
 time: 10.3s","answer: right
 token: 482, 208, 274
@@ -356,7 +410,9 @@ time: 0.3s",,"answer: right
 token: 102, 101, 1
 time: 0.7s","answer: right
 token: 100, 99, 1
-time: 0.4s",,,"answer: right
+time: 0.4s","answer: wrong (A)
+token: 6522, 99, 1
+time: 36.8s",,"answer: right
 token: 139, 135, 4
 time: 2.2s","answer: right
 token: 139, 135, 4
@@ -369,7 +425,9 @@ time: 0.3s",,"answer: right
 token: 90, 89, 1
 time: 2.2s","answer: right
 token: 80, 79, 1
-time: 0.7s",,,"answer: right
+time: 0.7s","answer: right
+token: 500, 79, 1
+time: 3.2s",,"answer: right
 token: 110, 106, 4
 time: 2.1s","answer: right
 token: 110, 106, 4
@@ -382,7 +440,9 @@ time: 0.6s",,"answer: right
 token: 168, 167, 1
 time: 0.7s","answer: wrong (D)
 token: 174, 173, 1
-time: 0.7s",,,"answer: right
+time: 0.7s","answer: wrong (D)
+token: 10155, 173, 1
+time: 57.6s",,"answer: right
 token: 586, 226, 360
 time: 10.2s","answer: right
 token: 230, 226, 4
@@ -395,7 +455,9 @@ time: 0.4s",,"answer: right
 token: 158, 157, 1
 time: 1.0s","answer: right
 token: 157, 156, 1
-time: 0.6s",,,"answer: right
+time: 0.6s","answer: right
+token: 1147, 156, 1
+time: 6.8s",,"answer: right
 token: 234, 230, 4
 time: 3.0s","answer: wrong (A)
 token: 624, 230, 394
@@ -408,7 +470,9 @@ time: 0.6s",,"answer: right
 token: 151, 150, 1
 time: 1.2s","answer: wrong (A)
 token: 146, 145, 1
-time: 0.6s",,,"answer: right
+time: 0.6s","answer: right
+token: 862, 145, 1
+time: 5.1s",,"answer: right
 token: 224, 220, 4
 time: 2.5s","answer: wrong (A)
 token: 649, 220, 429
@@ -421,7 +485,9 @@ time: 0.6s",,"answer: right
 token: 168, 167, 1
 time: 3.0s","answer: right
 token: 166, 165, 1
-time: 0.7s",,,"answer: right
+time: 0.7s","answer: right
+token: 682, 165, 1
+time: 3.9s",,"answer: right
 token: 243, 239, 4
 time: 2.8s","answer: right
 token: 627, 239, 388
@@ -434,7 +500,9 @@ time: 0.5s",,"answer: right
 token: 149, 148, 1
 time: 2.9s","answer: wrong (D)
 token: 152, 151, 1
-time: 0.7s",,,"answer: wrong (A)
+time: 0.7s","answer: right
+token: 821, 151, 1
+time: 4.8s",,"answer: wrong (A)
 token: 587, 199, 388
 time: 13.1s","answer: wrong (A)
 token: 527, 199, 328
@@ -447,7 +515,9 @@ time: 0.4s",,"answer: right
 token: 113, 112, 1
 time: 0.4s","answer: right
 token: 107, 106, 1
-time: 0.5s",,,"answer: right
+time: 0.5s","answer: right
+token: 320, 106, 1
+time: 2.1s",,"answer: right
 token: 160, 156, 4
 time: 2.8s","answer: right
 token: 160, 156, 4
@@ -460,7 +530,9 @@ time: 0.5s",,"answer: right
 token: 142, 141, 1
 time: 0.6s","answer: wrong (A)
 token: 136, 135, 1
-time: 0.5s",,,"answer: wrong (A)
+time: 0.5s","answer: right
+token: 968, 135, 1
+time: 5.5s",,"answer: wrong (A)
 token: 480, 183, 297
 time: 10.4s","answer: wrong (A)
 token: 480, 183, 297
@@ -473,7 +545,9 @@ time: 0.5s",,"answer: right
 token: 142, 141, 1
 time: 1.3s","answer: right
 token: 140, 139, 1
-time: 0.6s",,,"answer: right
+time: 0.6s","answer: right
+token: 670, 139, 1
+time: 3.8s",,"answer: right
 token: 209, 205, 4
 time: 4.6s","answer: right
 token: 575, 205, 370
@@ -486,7 +560,9 @@ time: 0.5s",,"answer: right
 token: 108, 107, 1
 time: 1.0s","answer: right
 token: 107, 106, 1
-time: 0.7s",,,"answer: right
+time: 0.7s","answer: right
+token: 424, 106, 1
+time: 2.7s",,"answer: right
 token: 146, 142, 4
 time: 3.8s","answer: right
 token: 146, 142, 4
@@ -499,7 +575,9 @@ time: 0.9s",,"answer: right
 token: 153, 152, 1
 time: 1.3s","answer: right
 token: 154, 153, 1
-time: 0.7s",,,"answer: wrong (A)
+time: 0.7s","answer: right
+token: 2757, 153, 1
+time: 15.9s",,"answer: wrong (A)
 token: 598, 227, 371
 time: 11.5s","answer: wrong (A)
 token: 678, 227, 451
@@ -512,7 +590,9 @@ time: 0.2s",,"answer: right
 token: 118, 117, 1
 time: 0.7s","answer: wrong (B)
 token: 114, 113, 1
-time: 0.7s",,,"answer: right
+time: 0.7s","answer: right
+token: 612, 113, 1
+time: 3.8s",,"answer: right
 token: 513, 164, 349
 time: 11.2s","answer: right
 token: 468, 164, 304
@@ -525,7 +605,9 @@ time: 0.4s",,"answer: wrong (B)
 token: 158, 157, 1
 time: 1.2s","answer: wrong (B)
 token: 160, 159, 1
-time: 0.4s",,,"answer: wrong (B)
+time: 0.4s","answer: wrong (B)
+token: 2366, 159, 1
+time: 14.5s",,"answer: wrong (B)
 token: 244, 240, 4
 time: 3.2s","answer: wrong (A)
 token: 593, 240, 353
@@ -538,7 +620,9 @@ time: 0.4s",,"answer: right
 token: 183, 182, 1
 time: 0.6s","answer: right
 token: 193, 192, 1
-time: 0.7s",,,"answer: right
+time: 0.7s","answer: right
+token: 711, 192, 1
+time: 4.1s",,"answer: right
 token: 274, 270, 4
 time: 3.3s","answer: wrong (A)
 token: 709, 270, 439
@@ -551,7 +635,9 @@ time: 0.2s",,"answer: right
 token: 91, 90, 1
 time: 1.7s","answer: right
 token: 85, 84, 1
-time: 0.6s",,,"answer: right
+time: 0.6s","answer: right
+token: 472, 84, 1
+time: 2.8s",,"answer: right
 token: 113, 109, 4
 time: 3.2s","answer: right
 token: 113, 109, 4
@@ -564,7 +650,9 @@ time: 0.2s",,"answer: right
 token: 84, 83, 1
 time: 0.8s","answer: right
 token: 76, 75, 1
-time: 0.7s",,,"answer: right
+time: 0.7s","answer: right
+token: 350, 75, 1
+time: 2.3s",,"answer: right
 token: 103, 99, 4
 time: 3.1s","answer: right
 token: 103, 99, 4
@@ -577,7 +665,9 @@ time: 0.3s",,"answer: right
 token: 115, 114, 1
 time: 1.5s","answer: right
 token: 112, 111, 1
-time: 0.8s",,,"answer: right
+time: 0.8s","answer: right
+token: 672, 111, 1
+time: 4.6s",,"answer: right
 token: 438, 161, 277
 time: 10.0s","answer: wrong (A)
 token: 448, 161, 287
@@ -590,7 +680,9 @@ time: 0.2s",,"answer: right
 token: 127, 126, 1
 time: 0.6s","answer: right
 token: 125, 124, 1
-time: 0.9s",,,"answer: right
+time: 0.9s","answer: right
+token: 608, 124, 1
+time: 3.6s",,"answer: right
 token: 181, 177, 4
 time: 3.3s","answer: wrong (A)
 token: 599, 177, 422
@@ -603,7 +695,9 @@ time: 0.3s",,"answer: right
 token: 88, 87, 1
 time: 0.8s","answer: wrong (B)
 token: 78, 77, 1
-time: 0.7s",,,"answer: right
+time: 0.7s","answer: right
+token: 355, 77, 1
+time: 2.3s",,"answer: right
 token: 105, 101, 4
 time: 6.5s","answer: right
 token: 105, 101, 4
@@ -616,7 +710,9 @@ time: 0.3s",,"answer: right
 token: 137, 136, 1
 time: 1.7s","answer: right
 token: 135, 134, 1
-time: 0.6s",,,"answer: right
+time: 0.6s","answer: right
+token: 593, 134, 1
+time: 3.5s",,"answer: right
 token: 518, 199, 319
 time: 8.5s","answer: wrong (A)
 token: 562, 199, 363
@@ -629,7 +725,9 @@ time: 0.6s",,"answer: right
 token: 170, 169, 1
 time: 0.8s","answer: wrong (D)
 token: 170, 169, 1
-time: 0.6s",,,"answer: wrong (D)
+time: 0.6s","answer: right
+token: 951, 169, 1
+time: 5.5s",,"answer: wrong (D)
 token: 262, 258, 4
 time: 6.4s","answer: wrong (A)
 token: 701, 258, 443
@@ -642,7 +740,9 @@ time: 0.5s",,"answer: right
 token: 135, 134, 1
 time: 0.7s","answer: right
 token: 129, 128, 1
-time: 0.6s",,,"answer: wrong (B)
+time: 0.6s","answer: right
+token: 1064, 128, 1
+time: 7.3s",,"answer: wrong (B)
 token: 521, 186, 335
 time: 8.5s","answer: right
 token: 622, 186, 436
@@ -655,7 +755,9 @@ time: 0.6s",,"answer: right
 token: 112, 111, 1
 time: 2.0s","answer: right
 token: 105, 104, 1
-time: 0.4s",,,"answer: right
+time: 0.4s","answer: right
+token: 457, 104, 1
+time: 3.1s",,"answer: right
 token: 151, 147, 4
 time: 5.7s","answer: right
 token: 151, 147, 4
@@ -668,7 +770,9 @@ time: 0.5s",,"answer: right
 token: 136, 135, 1
 time: 0.9s","answer: right
 token: 139, 138, 1
-time: 0.6s",,,"answer: right
+time: 0.6s","answer: right
+token: 670, 138, 1
+time: 4.1s",,"answer: right
 token: 220, 216, 4
 time: 5.9s","answer: wrong (A)
 token: 612, 216, 396
@@ -681,7 +785,9 @@ time: 0.4s",,"answer: right
 token: 144, 143, 1
 time: 1.0s","answer: right
 token: 147, 146, 1
-time: 0.4s",,,"answer: wrong (A)
+time: 0.4s","answer: right
+token: 1795, 146, 1
+time: 11.0s",,"answer: wrong (A)
 token: 569, 214, 355
 time: 8.4s","answer: wrong (A)
 token: 574, 214, 360
@@ -694,7 +800,9 @@ time: 0.4s",,"answer: right
 token: 158, 157, 1
 time: 0.6s","answer: right
 token: 156, 155, 1
-time: 0.6s",,,"answer: right
+time: 0.6s","answer: right
+token: 883, 155, 1
+time: 5.3s",,"answer: right
 token: 582, 222, 360
 time: 11.2s","answer: right
 token: 603, 222, 381
@@ -707,7 +815,9 @@ time: 0.3s",,"answer: wrong (D)
 token: 176, 175, 1
 time: 0.5s","answer: right
 token: 178, 177, 1
-time: 0.8s",,,"answer: right
+time: 0.8s","answer: right
+token: 7344, 177, 291
+time: 41.3s",,"answer: right
 token: 666, 280, 386
 time: 8.2s","answer: right
 token: 602, 280, 322
@@ -720,7 +830,9 @@ time: 0.3s",,"answer: right
 token: 160, 159, 1
 time: 2.0s","answer: right
 token: 164, 163, 1
-time: 0.7s",,,"answer: right
+time: 0.7s","answer: right
+token: 918, 163, 1
+time: 5.2s",,"answer: right
 token: 230, 226, 4
 time: 6.3s","answer: wrong (A)
 token: 490, 226, 264
@@ -733,7 +845,9 @@ time: 0.4s",,"answer: right
 token: 172, 171, 1
 time: 1.1s","answer: right
 token: 174, 173, 1
-time: 0.6s",,,"answer: right
+time: 0.6s","answer: right
+token: 655, 173, 1
+time: 4.0s",,"answer: right
 token: 233, 229, 4
 time: 7.0s","answer: wrong (A)
 token: 662, 229, 433
@@ -746,7 +860,9 @@ time: 0.3s",,"answer: right
 token: 163, 162, 1
 time: 0.7s","answer: right
 token: 171, 170, 1
-time: 0.7s",,,"answer: right
+time: 0.7s","answer: right
+token: 788, 170, 1
+time: 4.2s",,"answer: right
 token: 663, 229, 434
 time: 10.9s","answer: right
 token: 612, 229, 383
@@ -759,7 +875,9 @@ time: 0.3s",,"answer: right
 token: 165, 164, 1
 time: 0.6s","answer: right
 token: 152, 151, 1
-time: 0.7s",,,"answer: wrong (A)
+time: 0.7s","answer: right
+token: 773, 151, 1
+time: 4.5s",,"answer: wrong (A)
 token: 571, 244, 327
 time: 7.3s","answer: wrong (A)
 token: 645, 244, 401
@@ -772,7 +890,9 @@ time: 0.4s",,"answer: right
 token: 144, 143, 1
 time: 1.2s","answer: right
 token: 147, 146, 1
-time: 0.8s",,,"answer: wrong (A)
+time: 0.8s","answer: right
+token: 771, 146, 1
+time: 4.0s",,"answer: wrong (A)
 token: 454, 213, 241
 time: 8.4s","answer: wrong (A)
 token: 611, 213, 398
@@ -785,7 +905,9 @@ time: 0.2s",,"answer: right
 token: 189, 188, 1
 time: 3.3s","answer: right
 token: 194, 193, 1
-time: 0.8s",,,"answer: right
+time: 0.8s","answer: right
+token: 1097, 193, 1
+time: 6.2s",,"answer: right
 token: 295, 291, 4
 time: 4.8s","answer: wrong (A)
 token: 641, 291, 350
@@ -798,7 +920,9 @@ time: 0.2s",,"answer: right
 token: 141, 140, 1
 time: 2.8s","answer: right
 token: 137, 136, 1
-time: 0.8s",,,"answer: right
+time: 0.8s","answer: right
+token: 686, 136, 1
+time: 4.4s",,"answer: right
 token: 192, 188, 4
 time: 5.8s","answer: right
 token: 562, 188, 374
@@ -811,7 +935,9 @@ time: 0.2s",,"answer: right
 token: 155, 154, 1
 time: 2.8s","answer: wrong (A)
 token: 153, 152, 1
-time: 0.6s",,,"answer: wrong (A)
+time: 0.6s","answer: right
+token: 2354, 152, 1
+time: 13.5s",,"answer: wrong (A)
 token: 538, 221, 317
 time: 7.3s","answer: wrong (A)
 token: 680, 221, 459
@@ -824,7 +950,9 @@ time: 0.2s",,"answer: right
 token: 89, 88, 1
 time: 2.2s","answer: right
 token: 84, 83, 1
-time: 0.8s",,,"answer: right
+time: 0.8s","answer: right
+token: 314, 83, 1
+time: 1.9s",,"answer: right
 token: 111, 107, 4
 time: 4.5s","answer: right
 token: 111, 107, 4
@@ -833,7 +961,9 @@ token: 111, 107, 4
 time: 1.5s"
 64,下表所示为1956~1959年中国部分外交活动。中国政府坚决支持埃及人民收回苏伊士运河主权的正义斗争。中国除了给予柬埔寨经济援助外，还与尼泊尔、锡兰、缅甸、印尼等国签订经济援助的正式协定。中国先后与挪威、荷兰、南斯拉夫、阿富汗、尼泊尔、埃及、叙利亚、也门、锡兰等国建立了大使级外交关系，同芬兰、瑞士、丹麦由公使级升格为大使级外交关系。这可用于说明，此时期的中国,迎来第一次建交高潮,积极团结发展中国家,坚持“一边倒”的外交方针,外交领域打开新局面,B,,,,"answer: wrong (D)
 token: 225, 224, 1
-time: 0.6s",,,"answer: wrong (A)
+time: 0.6s","answer: wrong (D)
+token: 1468, 224, 1
+time: 8.3s",,"answer: wrong (A)
 token: 675, 325, 350
 time: 10.6s","answer: wrong (A)
 token: 788, 325, 463
@@ -846,7 +976,9 @@ time: 0.2s",,"answer: right
 token: 135, 134, 1
 time: 1.0s","answer: right
 token: 136, 135, 1
-time: 0.7s",,,"answer: right
+time: 0.7s","answer: right
+token: 683, 135, 1
+time: 4.1s",,"answer: right
 token: 198, 194, 4
 time: 4.8s","answer: wrong (A)
 token: 588, 194, 394
@@ -859,7 +991,9 @@ time: 0.3s",,"answer: right
 token: 174, 173, 1
 time: 0.6s","answer: right
 token: 174, 173, 1
-time: 0.4s",,,"answer: right
+time: 0.4s","answer: right
+token: 641, 173, 1
+time: 3.7s",,"answer: right
 token: 580, 248, 332
 time: 8.5s","answer: wrong (A)
 token: 565, 248, 317
@@ -872,7 +1006,9 @@ time: 0.3s",,"answer: right
 token: 204, 203, 1
 time: 0.7s","answer: wrong (C)
 token: 208, 207, 1
-time: 0.7s",,,"answer: right
+time: 0.7s","answer: right
+token: 1047, 207, 1
+time: 6.2s",,"answer: right
 token: 733, 302, 431
 time: 8.4s","answer: right
 token: 744, 302, 442
@@ -885,7 +1021,9 @@ time: 1.2s",,"answer: right
 token: 179, 178, 1
 time: 0.6s","answer: right
 token: 182, 181, 1
-time: 0.7s",,,"answer: right
+time: 0.7s","answer: right
+token: 1289, 181, 1
+time: 7.5s",,"answer: right
 token: 269, 265, 4
 time: 3.8s","answer: wrong (A)
 token: 706, 265, 441
@@ -898,7 +1036,9 @@ time: 0.2s",,"answer: right
 token: 90, 89, 1
 time: 0.8s","answer: right
 token: 83, 82, 1
-time: 0.6s",,,"answer: right
+time: 0.6s","answer: right
+token: 402, 82, 1
+time: 2.7s",,"answer: right
 token: 112, 108, 4
 time: 3.6s","answer: right
 token: 112, 108, 4
@@ -911,7 +1051,9 @@ time: 0.2s",,"answer: right
 token: 153, 152, 1
 time: 1.0s","answer: right
 token: 155, 154, 1
-time: 0.7s",,,"answer: wrong (B)
+time: 0.7s","answer: right
+token: 890, 154, 1
+time: 4.5s",,"answer: wrong (B)
 token: 415, 206, 209
 time: 5.9s","answer: right
 token: 606, 206, 400
@@ -924,7 +1066,9 @@ time: 0.3s",,"answer: right
 token: 104, 103, 1
 time: 0.8s","answer: right
 token: 106, 105, 1
-time: 0.8s",,,"answer: right
+time: 0.8s","answer: right
+token: 428, 105, 1
+time: 2.5s",,"answer: right
 token: 147, 143, 4
 time: 3.6s","answer: right
 token: 147, 143, 4
@@ -937,7 +1081,9 @@ time: 0.2s",,"answer: right
 token: 169, 168, 1
 time: 1.2s","answer: right
 token: 169, 168, 1
-time: 1.4s",,,"answer: right
+time: 1.4s","answer: right
+token: 754, 168, 1
+time: 4.5s",,"answer: right
 token: 244, 240, 4
 time: 3.3s","answer: wrong (A)
 token: 618, 240, 378
@@ -950,7 +1096,9 @@ time: 0.2s",,"answer: right
 token: 173, 172, 1
 time: 0.6s","answer: right
 token: 181, 180, 1
-time: 1.2s",,,"answer: wrong (A)
+time: 1.2s","answer: right
+token: 623, 180, 1
+time: 3.2s",,"answer: wrong (A)
 token: 680, 259, 421
 time: 8.1s","answer: wrong (A)
 token: 642, 259, 383
@@ -963,7 +1111,9 @@ time: 0.2s",,"answer: right
 token: 173, 172, 1
 time: 1.2s","answer: wrong (D)
 token: 173, 172, 1
-time: 1.0s",,,"answer: right
+time: 1.0s","answer: right
+token: 683, 172, 1
+time: 3.5s",,"answer: right
 token: 263, 259, 4
 time: 3.0s","answer: right
 token: 263, 259, 4
@@ -976,7 +1126,9 @@ time: 0.3s",,"answer: wrong (A)
 token: 201, 200, 1
 time: 0.8s","answer: wrong (D)
 token: 213, 212, 1
-time: 0.5s",,,"answer: wrong (A)
+time: 0.5s","answer: right
+token: 885, 212, 1
+time: 4.5s",,"answer: wrong (A)
 token: 732, 290, 442
 time: 11.1s","answer: wrong (A)
 token: 762, 290, 472
@@ -989,7 +1141,9 @@ time: 0.4s",,"answer: right
 token: 145, 144, 1
 time: 0.8s","answer: wrong (D)
 token: 140, 139, 1
-time: 0.8s",,,"answer: right
+time: 0.8s","answer: right
+token: 881, 139, 1
+time: 5.3s",,"answer: right
 token: 197, 193, 4
 time: 3.2s","answer: right
 token: 450, 193, 257
@@ -1002,7 +1156,9 @@ time: 0.3s",,"answer: right
 token: 104, 103, 1
 time: 0.5s","answer: right
 token: 100, 99, 1
-time: 0.6s",,,"answer: right
+time: 0.6s","answer: right
+token: 399, 99, 1
+time: 2.3s",,"answer: right
 token: 137, 133, 4
 time: 3.0s","answer: right
 token: 137, 133, 4
@@ -1015,7 +1171,9 @@ time: 0.3s",,"answer: right
 token: 88, 87, 1
 time: 0.6s","answer: right
 token: 77, 76, 1
-time: 0.4s",,,"answer: right
+time: 0.4s","answer: right
+token: 300, 76, 1
+time: 2.0s",,"answer: right
 token: 101, 97, 4
 time: 2.5s","answer: right
 token: 101, 97, 4
@@ -1028,7 +1186,9 @@ time: 0.2s",,"answer: wrong (C)
 token: 182, 181, 1
 time: 4.1s","answer: right
 token: 180, 179, 1
-time: 1.3s",,,"answer: right
+time: 1.3s","answer: wrong (A)
+token: 1231, 179, 1
+time: 7.4s",,"answer: right
 token: 279, 275, 4
 time: 2.3s","answer: wrong (A)
 token: 690, 275, 415
@@ -1041,7 +1201,9 @@ time: 0.3s",,"answer: right
 token: 118, 117, 1
 time: 1.1s","answer: right
 token: 110, 109, 1
-time: 0.8s",,,"answer: wrong (A)
+time: 0.8s","answer: right
+token: 741, 109, 1
+time: 5.0s",,"answer: wrong (A)
 token: 538, 152, 386
 time: 9.0s","answer: wrong (A)
 token: 463, 152, 311
@@ -1054,7 +1216,9 @@ time: 0.2s",,"answer: right
 token: 106, 105, 1
 time: 6.7s","answer: right
 token: 100, 99, 1
-time: 1.2s",,,"answer: right
+time: 1.2s","answer: right
+token: 502, 99, 1
+time: 2.8s",,"answer: right
 token: 144, 140, 4
 time: 2.8s","answer: right
 token: 144, 140, 4
@@ -1067,7 +1231,9 @@ time: 0.2s",,"answer: right
 token: 88, 87, 1
 time: 2.5s","answer: wrong (D)
 token: 82, 81, 1
-time: 1.2s",,,"answer: wrong (D)
+time: 1.2s","answer: wrong (D)
+token: 3057, 81, 146
+time: 17.7s",,"answer: wrong (D)
 token: 110, 106, 4
 time: 2.5s","answer: right
 token: 110, 106, 4
@@ -1080,7 +1246,9 @@ time: 0.3s",,"answer: right
 token: 94, 93, 1
 time: 0.8s","answer: right
 token: 90, 89, 1
-time: 1.0s",,,"answer: right
+time: 1.0s","answer: right
+token: 367, 89, 1
+time: 2.3s",,"answer: right
 token: 131, 127, 4
 time: 2.7s","answer: right
 token: 131, 127, 4
@@ -1093,7 +1261,9 @@ time: 0.5s",,"answer: right
 token: 103, 102, 1
 time: 0.7s","answer: right
 token: 104, 103, 1
-time: 1.4s",,,"answer: right
+time: 1.4s","answer: right
+token: 437, 103, 1
+time: 2.7s",,"answer: right
 token: 140, 136, 4
 time: 2.5s","answer: right
 token: 140, 136, 4
@@ -1106,7 +1276,9 @@ time: 0.4s",,"answer: right
 token: 130, 129, 1
 time: 0.7s","answer: right
 token: 128, 127, 1
-time: 1.2s",,,"answer: right
+time: 1.2s","answer: right
+token: 777, 127, 1
+time: 4.8s",,"answer: right
 token: 523, 182, 341
 time: 8.8s","answer: right
 token: 543, 182, 361
@@ -1119,7 +1291,9 @@ time: 0.9s",,"answer: right
 token: 97, 96, 1
 time: 1.8s","answer: right
 token: 90, 89, 1
-time: 0.8s",,,"answer: right
+time: 0.8s","answer: right
+token: 342, 89, 1
+time: 2.3s",,"answer: right
 token: 126, 122, 4
 time: 2.4s","answer: right
 token: 126, 122, 4
@@ -1132,7 +1306,9 @@ time: 0.5s",,"answer: right
 token: 109, 108, 1
 time: 1.1s","answer: right
 token: 110, 109, 1
-time: 0.4s",,,"answer: right
+time: 0.4s","answer: right
+token: 509, 109, 1
+time: 3.4s",,"answer: right
 token: 158, 154, 4
 time: 3.5s","answer: wrong (A)
 token: 433, 154, 279
@@ -1145,7 +1321,9 @@ time: 0.5s",,"answer: right
 token: 206, 205, 1
 time: 4.3s","answer: right
 token: 214, 213, 1
-time: 0.6s",,,"answer: right
+time: 0.6s","answer: right
+token: 735, 213, 1
+time: 3.7s",,"answer: right
 token: 333, 329, 4
 time: 2.6s","answer: wrong (A)
 token: 774, 329, 445
@@ -1158,7 +1336,9 @@ time: 0.4s",,"answer: right
 token: 180, 179, 1
 time: 1.6s","answer: wrong (B)
 token: 187, 186, 1
-time: 0.9s",,,"answer: wrong (A)
+time: 0.9s","answer: right
+token: 2070, 186, 1
+time: 12.0s",,"answer: wrong (A)
 token: 671, 262, 409
 time: 8.3s","answer: wrong (A)
 token: 652, 262, 390
@@ -1171,7 +1351,9 @@ time: 0.5s",,"answer: right
 token: 131, 130, 1
 time: 0.7s","answer: right
 token: 138, 137, 1
-time: 0.7s",,,"answer: right
+time: 0.7s","answer: right
+token: 389, 137, 1
+time: 2.4s",,"answer: right
 token: 213, 209, 4
 time: 2.5s","answer: right
 token: 475, 209, 266
@@ -1184,7 +1366,9 @@ time: 0.9s",,"answer: right
 token: 123, 122, 1
 time: 0.8s","answer: right
 token: 122, 121, 1
-time: 0.6s",,,"answer: right
+time: 0.6s","answer: right
+token: 614, 121, 1
+time: 3.5s",,"answer: right
 token: 177, 173, 4
 time: 2.8s","answer: wrong (A)
 token: 482, 173, 309
@@ -1197,7 +1381,9 @@ time: 0.5s",,"answer: right
 token: 133, 132, 1
 time: 1.3s","answer: right
 token: 135, 134, 1
-time: 0.6s",,,"answer: wrong (B)
+time: 0.6s","answer: right
+token: 633, 134, 1
+time: 4.4s",,"answer: wrong (B)
 token: 521, 202, 319
 time: 8.6s","answer: right
 token: 528, 202, 326
@@ -1210,7 +1396,9 @@ time: 0.6s",,"answer: right
 token: 141, 140, 1
 time: 1.2s","answer: right
 token: 142, 141, 1
-time: 0.8s",,,"answer: right
+time: 0.8s","answer: wrong (D)
+token: 2493, 141, 1
+time: 15.1s",,"answer: right
 token: 197, 193, 4
 time: 2.4s","answer: wrong (A)
 token: 586, 193, 393
@@ -1223,7 +1411,9 @@ time: 0.5s",,"answer: wrong (D)
 token: 173, 172, 1
 time: 1.3s","answer: wrong (D)
 token: 178, 177, 1
-time: 0.7s",,,"answer: wrong (A)
+time: 0.7s","answer: wrong (D)
+token: 1164, 177, 1
+time: 6.9s",,"answer: wrong (A)
 token: 563, 236, 327
 time: 6.6s","answer: wrong (A)
 token: 598, 236, 362
@@ -1236,7 +1426,9 @@ time: 0.5s",,"answer: right
 token: 164, 163, 1
 time: 0.9s","answer: right
 token: 168, 167, 1
-time: 0.7s",,,"answer: wrong (A)
+time: 0.7s","answer: right
+token: 1131, 167, 1
+time: 6.1s",,"answer: wrong (A)
 token: 557, 230, 327
 time: 7.5s","answer: wrong (A)
 token: 642, 230, 412
@@ -1249,7 +1441,9 @@ time: 0.5s",,"answer: right
 token: 120, 119, 1
 time: 2.3s","answer: wrong (D)
 token: 112, 111, 1
-time: 0.7s",,,"answer: right
+time: 0.7s","answer: right
+token: 489, 111, 1
+time: 2.6s",,"answer: right
 token: 165, 161, 4
 time: 2.3s","answer: wrong (A)
 token: 165, 161, 4
@@ -1262,7 +1456,9 @@ time: 0.5s",,"answer: right
 token: 172, 171, 1
 time: 1.6s","answer: right
 token: 182, 181, 1
-time: 0.6s",,,"answer: wrong (A)
+time: 0.6s","answer: right
+token: 623, 181, 1
+time: 3.3s",,"answer: wrong (A)
 token: 599, 260, 339
 time: 6.7s","answer: wrong (A)
 token: 633, 260, 373
@@ -1271,7 +1467,9 @@ token: 524, 260, 264
 time: 6.1s"
 98,1971年9月22日，美国和日本等国家提出“关于代表权的决议草案”时指出：“（一）兹确认中华人民共和国的代表权，并且建议它得到安全理事会常任理事国之一的席位；（二）确认“中华民国”继续拥有代表权；（三）建议联合国～切组织和专门机构在决定中国代 表权时考虑本决议的条款。”这一“决议草案”主要反映了美日,反对中华人民共和国取代台湾在联合国的席位,反对中华人民共和国和台湾同时参加联合国,尊重联合国国际组织的权力和地位,主张恢复新中国在联合国的合法席位,A,,,,"answer: wrong (B)
 token: 200, 199, 1
-time: 0.8s",,,"answer: right
+time: 0.8s","answer: right
+token: 5014, 199, 1
+time: 29.0s",,"answer: right
 token: 295, 291, 4
 time: 2.2s","answer: right
 token: 650, 291, 359
@@ -1284,7 +1482,9 @@ time: 0.5s",,"answer: right
 token: 187, 186, 1
 time: 1.8s","answer: right
 token: 185, 184, 1
-time: 0.4s",,,"answer: wrong (A)
+time: 0.4s","answer: right
+token: 1574, 184, 1
+time: 9.0s",,"answer: wrong (A)
 token: 674, 274, 400
 time: 7.2s","answer: wrong (A)
 token: 681, 274, 407
@@ -1293,7 +1493,9 @@ token: 278, 274, 4
 time: 2.5s"
 100,1972年中日建交，数年后小泉六次参拜靖国神社，中日关系走入低谷。2006年10月安倍晋三来华访问，最近因日本“国有化”钓鱼岛使中日关系再次走入低谷。以上事实说明,中日关系的发展前景不容乐观,日本与中国有着共同的经济利益,资本主义国家和社会主义国家的矛盾不可调和,日本对外政策因国内外形势的改变而改变,D,,,,"answer: right
 token: 161, 160, 1
-time: 0.6s",,,"answer: right
+time: 0.6s","answer: right
+token: 1158, 160, 1
+time: 7.9s",,"answer: right
 token: 227, 223, 4
 time: 2.6s","answer: wrong (A)
 token: 598, 223, 375
@@ -1306,7 +1508,9 @@ time: 0.2s",,"answer: wrong (A)
 token: 191, 190, 1
 time: 1.3s","answer: wrong (A)
 token: 194, 193, 1
-time: 0.7s",,,"answer: wrong (A)
+time: 0.7s","answer: wrong (A)
+token: 3071, 193, 1
+time: 17.2s",,"answer: wrong (A)
 token: 679, 259, 420
 time: 8.9s","answer: wrong (A)
 token: 645, 259, 386
@@ -1319,7 +1523,9 @@ time: 0.2s",,"answer: wrong (B)
 token: 134, 133, 1
 time: 1.4s","answer: wrong (B)
 token: 135, 134, 1
-time: 0.6s",,,"answer: wrong (B)
+time: 0.6s","answer: wrong (B)
+token: 698, 134, 1
+time: 4.2s",,"answer: wrong (B)
 token: 194, 190, 4
 time: 3.5s","answer: wrong (A)
 token: 602, 190, 412
@@ -1332,7 +1538,9 @@ time: 0.2s",,"answer: right
 token: 167, 166, 1
 time: 0.9s","answer: right
 token: 169, 168, 1
-time: 0.7s",,,"answer: wrong (A)
+time: 0.7s","answer: right
+token: 739, 168, 1
+time: 3.8s",,"answer: wrong (A)
 token: 570, 234, 336
 time: 8.0s","answer: wrong (A)
 token: 617, 234, 383
@@ -1345,7 +1553,9 @@ time: 0.2s",,"answer: right
 token: 167, 166, 1
 time: 1.7s","answer: right
 token: 166, 165, 1
-time: 0.7s",,,"answer: wrong (A)
+time: 0.7s","answer: right
+token: 896, 165, 0
+time: 4.8s",,"answer: wrong (A)
 token: 608, 227, 381
 time: 7.4s","answer: right
 token: 583, 227, 356
@@ -1358,7 +1568,9 @@ time: 0.3s",,"answer: right
 token: 151, 150, 1
 time: 2.0s","answer: right
 token: 157, 156, 1
-time: 0.6s",,,"answer: right
+time: 0.6s","answer: right
+token: 755, 156, 1
+time: 4.8s",,"answer: right
 token: 223, 219, 4
 time: 2.3s","answer: wrong (A)
 token: 579, 219, 360
@@ -1371,7 +1583,9 @@ time: 0.2s",,"answer: right
 token: 101, 100, 1
 time: 1.6s","answer: right
 token: 95, 94, 1
-time: 0.7s",,,"answer: right
+time: 0.7s","answer: right
+token: 359, 94, 1
+time: 2.7s",,"answer: right
 token: 129, 125, 4
 time: 2.4s","answer: right
 token: 129, 125, 4

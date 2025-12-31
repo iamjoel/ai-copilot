@@ -1211,7 +1211,9 @@ time: 0.2s",,"answer: right
 token: 168, 167, 1
 time: 0.9s","answer: wrong (D)
 token: 157, 156, 1
-time: 0.9s",,,,,
+time: 0.9s",,,,,"answer: right
+token: 666, 194, 472
+time: 9.9s"
 135,下列各组物理量中，全部是矢量的是,速度、平均速度、位移、加速度、摩擦力,质量、路程、速率、时间、弹力,位移、时间、速度、加速度、重力,位移、路程、时间、加速度、平均速率,A,"answer: right
 token: 125, 124, 1
 time: 0.3s",,"answer: right
@@ -1308,11 +1310,15 @@ time: 0.2s",,"answer: right
 token: 178, 177, 1
 time: 0.6s","answer: wrong (B)
 token: 173, 172, 1
-time: 0.8s",,,,,
+time: 0.8s",,,,,"answer: right
+token: 853, 228, 625
+time: 10.9s"
 146,下列说法正确的是,电源的电动势跟电源内非静电力做的功成正比，跟通过电源的电荷量成反比,通电导线在某点不受磁场力的作用，则该点的磁感应强度一定为零,库仑在研究电荷间相互作用时，提出了“电场”的概念,将正点电荷从场强为零的一点移动到场强为零的另一点，电场力做功不一定为零,D,"answer: right
 token: 161, 160, 1
 time: 8.8s",,"answer: right
 token: 161, 160, 1
 time: 0.6s","answer: right
 token: 160, 159, 1
-time: 1.2s",,,,,
+time: 1.2s",,,,,"answer: wrong (A)
+token: 650, 205, 445
+time: 8.4s"

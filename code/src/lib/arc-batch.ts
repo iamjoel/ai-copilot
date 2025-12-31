@@ -12,6 +12,8 @@ export type BatchModelKey =
   | "qwen-flash"
   | "qwen-plus"
   | "qwen3-max"
+  | "grok-4-1-fast-reasoning"
+  | "grok-4-1-fast-non-reasoning"
   | "gemini-2.5-flash-lite"
   | "gemini-3-flash-preview"
   | "gemini-3-pro-preview"
@@ -44,6 +46,18 @@ export const MODEL_COLUMNS: ModelColumn[] = [
     provider: "qwen",
     columnName: "Qwen3 max",
     modelName: "qwen3-max",
+  },
+  {
+    model: "grok-4-1-fast-reasoning",
+    provider: "xai",
+    columnName: "Grok 4.1 Fast Reasoning",
+    modelName: "grok-4-1-fast-reasoning",
+  },
+  {
+    model: "grok-4-1-fast-non-reasoning",
+    provider: "xai",
+    columnName: "Grok 4.1 Fast Non Reasoning",
+    modelName: "grok-4-1-fast-non-reasoning",
   },
   {
     model: "gemini-2.5-flash-lite",

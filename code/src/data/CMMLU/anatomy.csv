@@ -15,7 +15,9 @@ time: 1.4s","answer: right
 token: 98, 94, 4
 time: 1.7s","answer: right
 token: 391, 225, 1
-time: 1.8s",
+time: 1.8s","answer: right
+token: 238, 237, 1
+time: 0.8s"
 1,直接和语言活动有关的中枢,额中回后分,顶上小叶缘上回,额下回后分,角回,C,"answer: right
 token: 101, 92, 9
 time: 0.3s",,"answer: right
@@ -32,7 +34,9 @@ time: 0.8s","answer: right
 token: 107, 103, 4
 time: 2.6s","answer: right
 token: 562, 237, 1
-time: 3.1s",
+time: 3.1s","answer: right
+token: 250, 249, 1
+time: 0.7s"
 2,甲状腺的动脉来自,颈内动脉,颈外动脉,锁骨下动脉的分支,颈总动脉,D,"answer: wrong (B)
 token: 92, 85, 7
 time: 0.3s",,"answer: wrong (B)
@@ -49,7 +53,9 @@ time: 2.1s","answer: wrong (B)
 token: 112, 108, 4
 time: 2.7s","answer: wrong (B)
 token: 3352, 237, 1
-time: 24.3s",
+time: 24.3s","answer: wrong (B)
+token: 250, 249, 1
+time: 0.7s"
 3,脑膜中动脉直接起于,大脑中动脉,颈内动脉,颈外动脉,上颌动脉,D,"answer: right
 token: 90, 85, 5
 time: 0.3s",,"answer: right
@@ -66,7 +72,9 @@ time: 0.8s","answer: right
 token: 109, 105, 4
 time: 2.4s","answer: right
 token: 492, 235, 1
-time: 2.2s",
+time: 2.2s","answer: right
+token: 248, 247, 1
+time: 0.6s"
 4,听觉中枢位于,角回,颞横回,中央后回,中央前回,B,"answer: right
 token: 80, 79, 1
 time: 0.2s",,"answer: right
@@ -83,7 +91,9 @@ time: 0.8s","answer: right
 token: 94, 90, 4
 time: 2.7s","answer: right
 token: 428, 228, 1
-time: 2.2s",
+time: 2.2s","answer: right
+token: 241, 240, 1
+time: 0.7s"
 5,卵圆窝位于,右心室,左心房,左心室,右心房,D,"answer: right
 token: 85, 79, 6
 time: 0.3s",,"answer: right
@@ -100,7 +110,9 @@ time: 1.7s","answer: right
 token: 92, 88, 4
 time: 2.0s","answer: right
 token: 434, 227, 1
-time: 1.9s",
+time: 1.9s","answer: right
+token: 240, 239, 1
+time: 0.8s"
 6,关于膀胱说法正确的是,膀胱尖处为尿道内口,属于腹膜内位器官,膀胱颈的后方有前列腺,空虚时位于小骨盆腔内,D,"answer: right
 token: 106, 105, 1
 time: 0.3s",,"answer: right
@@ -117,7 +129,9 @@ time: 1.6s","answer: right
 token: 135, 131, 4
 time: 2.4s","answer: right
 token: 793, 252, 1
-time: 5.5s",
+time: 5.5s","answer: right
+token: 265, 264, 1
+time: 0.7s"
 7,肱骨体后面中份有,大结节,桡神经沟,小结节,尺神经沟,B,"answer: right
 token: 91, 84, 7
 time: 0.3s",,"answer: right
@@ -134,7 +148,9 @@ time: 1.3s","answer: right
 token: 100, 96, 4
 time: 2.7s","answer: right
 token: 447, 230, 1
-time: 2.2s",
+time: 2.2s","answer: right
+token: 243, 242, 1
+time: 0.7s"
 8,肾筋膜把肾旁脂肪和肾周脂肪隔开，能防止感染扩散至下列位置，但（）除外,膈下间隙,网膜囊,腹膜腔的结肠下区,小骨盆,D,"answer: right
 token: 116, 110, 6
 time: 0.3s",,"answer: right
@@ -151,7 +167,9 @@ time: 3.8s","answer: right
 token: 146, 142, 4
 time: 2.5s","answer: right
 token: 6354, 254, 1
-time: 45.4s",
+time: 45.4s","answer: wrong (C)
+token: 267, 266, 1
+time: 0.6s"
 9,唯一完整成环的喉软骨是,会厌软骨,环状软骨,勺状软骨,甲状软骨,B,"answer: right
 token: 99, 91, 8
 time: 0.2s",,"answer: right
@@ -168,7 +186,9 @@ time: 1.4s","answer: right
 token: 109, 105, 4
 time: 3.2s","answer: right
 token: 455, 236, 1
-time: 2.1s",
+time: 2.1s","answer: right
+token: 249, 248, 1
+time: 0.6s"
 10,股骨上端在体表易摸到的结构是,股骨头,小转子,股骨颈,大转子,D,"answer: right
 token: 96, 90, 6
 time: 0.3s",,"answer: right
@@ -185,7 +205,9 @@ time: 0.8s","answer: right
 token: 103, 99, 4
 time: 2.5s","answer: right
 token: 478, 233, 1
-time: 2.5s",
+time: 2.5s","answer: right
+token: 246, 245, 1
+time: 0.6s"
 11,上消化道是指,从口腔到胃,口腔和咽,从口腔到食管,从口腔到十二指肠,D,"answer: right
 token: 86, 85, 1
 time: 0.2s",,"answer: right
@@ -202,7 +224,9 @@ time: 0.7s","answer: right
 token: 108, 104, 4
 time: 1.5s","answer: right
 token: 1737, 229, 1
-time: 11.6s",
+time: 11.6s","answer: right
+token: 242, 241, 1
+time: 0.7s"
 12,心室舒张期关闭的瓣膜为,肺动脉瓣,三尖瓣,二尖瓣,主动脉瓣,B,"answer: wrong (D)
 token: 90, 85, 5
 time: 0.3s",,"answer: wrong (D)
@@ -219,7 +243,9 @@ time: 3.4s","answer: wrong (A)
 token: 115, 111, 4
 time: 1.8s","answer: wrong (D)
 token: 3927, 232, 1
-time: 24.2s",
+time: 24.2s","answer: wrong (D)
+token: 245, 244, 1
+time: 0.6s"
 13,产生脑脊液的结构是,蛛网膜粒,脉络丛,蛛网膜,脉络膜,B,"answer: right
 token: 88, 87, 1
 time: 0.3s",,"answer: right
@@ -236,7 +262,9 @@ time: 1.7s","answer: right
 token: 107, 103, 4
 time: 1.9s","answer: right
 token: 416, 231, 1
-time: 1.7s",
+time: 1.7s","answer: right
+token: 244, 243, 1
+time: 0.7s"
 14,属于腹膜外位器官是,胆囊,阑尾,升结肠,肾脏,D,"answer: right
 token: 84, 83, 1
 time: 0.2s",,"answer: right
@@ -253,7 +281,9 @@ time: 2.8s","answer: right
 token: 99, 95, 4
 time: 3.0s","answer: right
 token: 2393, 228, 1
-time: 14.6s",
+time: 14.6s","answer: right
+token: 241, 240, 1
+time: 0.7s"
 15,输尿管,起始于肾盂,可分为腹盆两段,开口于膀胱颈,为腹膜内位器官,A,"answer: right
 token: 88, 87, 1
 time: 0.2s",,"answer: right
@@ -270,7 +300,9 @@ time: 0.8s","answer: right
 token: 110, 106, 4
 time: 3.7s","answer: right
 token: 4362, 235, 1
-time: 29.9s",
+time: 29.9s","answer: right
+token: 248, 247, 1
+time: 0.8s"
 16,胆总管,由肝左、右管汇合而成,行于肝门静脉的后方,无血管营养,位于肝十二指肠韧带内,D,"answer: right
 token: 96, 95, 1
 time: 0.3s",,"answer: right
@@ -287,7 +319,9 @@ time: 0.8s","answer: right
 token: 117, 113, 4
 time: 2.6s","answer: right
 token: 986, 241, 1
-time: 5.5s",
+time: 5.5s","answer: right
+token: 254, 253, 1
+time: 0.8s"
 17,膜迷路的组成,椭圆囊、球囊、壶腹峭和蜗管,椭圆囊、球囊、膜半规管和蜗管,膜壶腹、螺旋器、蜗管和椭圆囊,椭圆囊、壶腹嵴、腹半规管和螺旋器,B,"answer: right
 token: 129, 128, 1
 time: 0.3s",,"answer: right
@@ -304,7 +338,9 @@ time: 1.7s","answer: right
 token: 173, 169, 4
 time: 2.5s","answer: right
 token: 719, 279, 1
-time: 4.2s",
+time: 4.2s","answer: right
+token: 292, 291, 1
+time: 0.8s"
 18,动脉韧带,是胎儿时期动脉导管闭锁后的遗迹,一般位于右肺动脉与主动脉弓之间,来源于动脉圆锥,由肌纤维束构成,A,"answer: right
 token: 97, 96, 1
 time: 0.2s",,"answer: right
@@ -321,7 +357,9 @@ time: 1.4s","answer: right
 token: 138, 134, 4
 time: 2.7s","answer: right
 token: 655, 249, 1
-time: 14.7s",
+time: 14.7s","answer: right
+token: 262, 261, 1
+time: 0.6s"
 19,关于输精管道不包括,输精管,尿道,精囊腺排泄管,射精管,C,"answer: wrong (B)
 token: 84, 83, 1
 time: 0.3s",,"answer: right
@@ -338,7 +376,9 @@ time: 3.8s","answer: right
 token: 99, 95, 4
 time: 1.5s","answer: wrong (B)
 token: 1155, 231, 1
-time: 6.2s",
+time: 6.2s","answer: wrong (B)
+token: 244, 243, 1
+time: 0.8s"
 20,属于腹膜外位器官的是,十二指肠水平部,肝,胆囊,胃,A,"answer: right
 token: 85, 84, 1
 time: 0.2s",,"answer: right
@@ -355,7 +395,9 @@ time: 1.7s","answer: right
 token: 100, 96, 4
 time: 1.6s","answer: right
 token: 509, 227, 1
-time: 2.4s",
+time: 2.4s","answer: wrong (B)
+token: 240, 239, 1
+time: 0.7s"
 21,含味觉纤维的脑神经,面神经,三叉神经,舌咽神经,舌下神经,D,"answer: wrong (A)
 token: 85, 84, 1
 time: 0.2s",,"answer: wrong (A)
@@ -372,7 +414,9 @@ time: 3.0s","answer: wrong (A)
 token: 103, 99, 4
 time: 2.7s","answer: wrong (C)
 token: 4641, 228, 1
-time: 31.7s",
+time: 31.7s","answer: wrong (C)
+token: 241, 240, 1
+time: 0.7s"
 22,有系膜的肠管有,横结肠,升结肠,十二指肠降部,空、回肠,C,"answer: wrong (D)
 token: 96, 88, 8
 time: 0.2s",,"answer: wrong (D)
@@ -389,7 +433,9 @@ time: 0.9s","answer: wrong (D)
 token: 101, 97, 4
 time: 2.7s","answer: wrong (D)
 token: 1503, 232, 1
-time: 10.3s",
+time: 10.3s","answer: wrong (B)
+token: 245, 244, 1
+time: 0.8s"
 23,声波从外耳道传至内耳，其传导的正确途径是,鼓膜、外耳道、中耳、耳蜗、内耳,鼓膜、锤骨、砧骨、镫骨、前庭窗,鼓膜、锤骨、砧骨、镫骨、蜗窗,鼓膜、钻骨、锤骨、前庭窗,B,"answer: right
 token: 142, 141, 1
 time: 0.3s",,"answer: right
@@ -406,7 +452,9 @@ time: 4.2s","answer: right
 token: 191, 187, 4
 time: 2.6s","answer: right
 token: 941, 285, 1
-time: 19.5s",
+time: 19.5s","answer: right
+token: 298, 297, 1
+time: 0.7s"
 24,输尿管,开口于膀胱颈,可分为腹、盆两段,为腹膜内位器官,起始于肾盂,D,"answer: right
 token: 89, 88, 1
 time: 0.2s",,"answer: right
@@ -423,7 +471,9 @@ time: 1.0s","answer: right
 token: 111, 107, 4
 time: 1.6s","answer: right
 token: 2577, 236, 1
-time: 19.4s",
+time: 19.4s","answer: right
+token: 249, 248, 1
+time: 0.7s"
 25,主动脉弓的分支有,左锁骨下动脉,右颈总动脉,右锁骨下动脉,冠状动脉,A,"answer: right
 token: 86, 85, 1
 time: 0.2s",,"answer: right
@@ -440,7 +490,9 @@ time: 1.8s","answer: right
 token: 113, 109, 4
 time: 1.8s","answer: right
 token: 617, 238, 1
-time: 2.8s",
+time: 2.8s","answer: right
+token: 251, 250, 1
+time: 0.8s"
 26,冠状动脉,发自肺动脉干起始部,只有一条,只是营养心的血管,走在前、后室间沟内,C,"answer: wrong (D)
 token: 93, 92, 1
 time: 0.2s",,"answer: wrong (D)
@@ -457,7 +509,9 @@ time: 1.1s","answer: wrong (D)
 token: 111, 107, 4
 time: 2.7s","answer: wrong (D)
 token: 4794, 237, 1
-time: 40.4s",
+time: 40.4s","answer: wrong (D)
+token: 250, 249, 1
+time: 0.8s"
 27,新纹状体是指,尾状核,豆状核,尾状核和豆状核,尾状核和壳,D,"answer: right
 token: 87, 86, 1
 time: 0.2s",,"answer: right
@@ -474,7 +528,9 @@ time: 1.6s","answer: right
 token: 103, 99, 4
 time: 2.6s","answer: wrong (C)
 token: 487, 233, 1
-time: 2.3s",
+time: 2.3s","answer: wrong (C)
+token: 246, 245, 1
+time: 0.8s"
 28,通过颈静脉孔的结构有,舌咽神经.迷走神经.副神经.颈内静脉　, 舌下神经.迷走神经.副神经.颈内静脉　,位听神经.舌咽神经.迷走神经.颈内静脉,舌下神经.舌咽神经.迷走神经.颈内静脉,A,"answer: right
 token: 135, 134, 1
 time: 0.2s",,"answer: right
@@ -491,7 +547,9 @@ time: 2.9s","answer: right
 token: 181, 177, 4
 time: 2.4s","answer: right
 token: 740, 281, 1
-time: 3.7s",
+time: 3.7s","answer: right
+token: 294, 293, 1
+time: 0.6s"
 29,心位于胸腔的,上纵隔内,前纵隔内,中纵隔内,后纵隔内,C,"answer: right
 token: 89, 83, 6
 time: 0.2s",,"answer: right
@@ -508,7 +566,9 @@ time: 1.1s","answer: right
 token: 104, 100, 4
 time: 1.8s","answer: right
 token: 405, 229, 1
-time: 1.8s",
+time: 1.8s","answer: right
+token: 242, 241, 1
+time: 0.7s"
 30,下列各骨中，不属于长骨,指骨,E.肋骨,肱骨,股骨,B,"answer: right
 token: 84, 83, 1
 time: 0.2s",,"answer: right
@@ -525,7 +585,9 @@ time: 2.1s","answer: right
 token: 100, 96, 4
 time: 2.3s","answer: right
 token: 556, 230, 1
-time: 2.7s",
+time: 2.7s","answer: right
+token: 243, 242, 1
+time: 0.6s"
 31,没有味蕾的结构是,轮廓乳头,丝状乳头,叶状乳头,菌状乳头,B,"answer: right
 token: 96, 89, 7
 time: 0.3s",,"answer: right
@@ -542,7 +604,9 @@ time: 1.3s","answer: right
 token: 107, 103, 4
 time: 2.6s","answer: right
 token: 425, 233, 1
-time: 1.7s",
+time: 1.7s","answer: right
+token: 246, 245, 1
+time: 0.6s"
 32,胃后壁溃疡穿孔后内容物首先稽留于,右肝下前间隙,胞膜后间隙,左肝下后间隙,左肝下前间隙,C,"answer: wrong (B)
 token: 105, 97, 8
 time: 0.3s",,"answer: right
@@ -559,7 +623,9 @@ time: 2.8s","answer: right
 token: 127, 123, 4
 time: 2.4s","answer: wrong (B)
 token: 1027, 249, 1
-time: 17.5s",
+time: 17.5s","answer: right
+token: 262, 261, 1
+time: 0.6s"
 33,窦房结, 由平滑肌纤维构成,为心的正常起搏点,与房室结无联系,位于心内膜深面,B,"answer: right
 token: 94, 93, 1
 time: 0.2s",,"answer: right
@@ -576,7 +642,9 @@ time: 0.7s","answer: right
 token: 111, 107, 4
 time: 1.6s","answer: right
 token: 443, 238, 1
-time: 1.9s",
+time: 1.9s","answer: right
+token: 251, 250, 1
+time: 0.7s"
 34,孤束核,与三叉神经构成有关,与面神经构成有关,与舌咽神经构成有关,与迷走神经构成有关,B,"answer: wrong (D)
 token: 90, 89, 1
 time: 0.2s",,"answer: wrong (C)
@@ -593,7 +661,9 @@ time: 2.5s","answer: wrong (C)
 token: 115, 111, 4
 time: 2.6s","answer: wrong (D)
 token: 1691, 233, 1
-time: 12.8s",
+time: 12.8s","answer: wrong (D)
+token: 246, 245, 1
+time: 0.7s"
 35,十二指肠大乳头在十二指肠的,升部,上部,降部,水平部,C,"answer: right
 token: 89, 84, 5
 time: 0.3s",,"answer: right
@@ -610,7 +680,9 @@ time: 0.7s","answer: right
 token: 97, 93, 4
 time: 2.1s","answer: right
 token: 493, 229, 1
-time: 2.4s",
+time: 2.4s","answer: right
+token: 242, 241, 1
+time: 0.7s"
 36,交感神经的低级中枢位于脊髓的,颈1-胸3节,腰1-骶2节,骶2-4节,胸1-腰3节,D,"answer: wrong (A)
 token: 102, 101, 1
 time: 0.2s",,"answer: right
@@ -627,7 +699,9 @@ time: 0.7s","answer: right
 token: 119, 115, 4
 time: 2.7s","answer: right
 token: 580, 248, 1
-time: 3.3s",
+time: 3.3s","answer: right
+token: 261, 260, 1
+time: 0.7s"
 37,颈椎特有的结构是,横突孔,棘突,横突肋凹,关节突,A,"answer: right
 token: 84, 83, 1
 time: 0.2s",,"answer: right
@@ -644,7 +718,9 @@ time: 1.8s","answer: right
 token: 98, 94, 4
 time: 3.1s","answer: right
 token: 428, 229, 1
-time: 1.9s",
+time: 1.9s","answer: right
+token: 242, 241, 1
+time: 0.6s"
 38,门静脉因肝硬化而引起高压时，可出现食管静脉曲张，此时门静脉血通过侧枝循环回流至上腔静脉，主要通过,肠系膜下静脉,肝静脉,脾静脉,奇静脉,D,"answer: right
 token: 118, 112, 6
 time: 0.3s",,"answer: right
@@ -661,7 +737,9 @@ time: 4.6s","answer: right
 token: 154, 150, 4
 time: 3.2s","answer: right
 token: 1219, 263, 1
-time: 8.5s",
+time: 8.5s","answer: right
+token: 276, 275, 1
+time: 0.9s"
 39,支配咀嚼肌的神经是,下颌神经,舌下神经,上颌神经,面神经,A,"answer: right
 token: 83, 82, 1
 time: 0.2s",,"answer: right
@@ -678,7 +756,9 @@ time: 0.7s","answer: right
 token: 103, 99, 4
 time: 2.7s","answer: right
 token: 484, 231, 1
-time: 2.5s",
+time: 2.5s","answer: right
+token: 244, 243, 1
+time: 0.6s"
 40,以下脑神经属于混合性的是,嗅神经,视神经,迷走神经,副神经,C,"answer: right
 token: 82, 81, 1
 time: 0.2s",,"answer: right
@@ -695,7 +775,9 @@ time: 1.2s","answer: right
 token: 101, 97, 4
 time: 1.9s","answer: right
 token: 529, 228, 1
-time: 3.5s",
+time: 3.5s","answer: right
+token: 241, 240, 1
+time: 0.7s"
 41,属于腹膜内位的器官是,子宫,升结肠,输尿管,阑尾,D,"answer: right
 token: 83, 82, 1
 time: 0.2s",,"answer: right
@@ -712,7 +794,9 @@ time: 1.8s","answer: right
 token: 99, 95, 4
 time: 2.3s","answer: right
 token: 3482, 228, 1
-time: 23.7s",
+time: 23.7s","answer: wrong (B)
+token: 241, 240, 1
+time: 0.9s"
 42,输尿管,属于腹膜间位器官,腹部下行于腰大肌前方,分为腹部（段）和盆部（段）,通过肾门,B,"answer: wrong (C)
 token: 95, 94, 1
 time: 0.2s",,"answer: right
@@ -729,7 +813,9 @@ time: 3.2s","answer: right
 token: 119, 115, 4
 time: 2.9s","answer: right
 token: 6938, 241, 1
-time: 52.2s",
+time: 52.2s","answer: wrong (C)
+token: 254, 253, 1
+time: 0.6s"
 43,全身最复杂的关节是,肘关节,髋关节,肩关节,膝关节,D,"answer: right
 token: 87, 81, 6
 time: 0.3s",,"answer: right
@@ -746,7 +832,9 @@ time: 1.6s","answer: right
 token: 98, 94, 4
 time: 2.6s","answer: wrong (C)
 token: 493, 226, 1
-time: 2.4s",
+time: 2.4s","answer: wrong (C)
+token: 239, 238, 1
+time: 0.6s"
 44,无名指（第四指）皮肤的神经分布,肌皮神经,正中神经,桡神经,尺神经,C,"answer: wrong (D)
 token: 87, 86, 1
 time: 0.2s",,"answer: wrong (D)
@@ -763,7 +851,9 @@ time: 1.0s","answer: wrong (B)
 token: 107, 103, 4
 time: 2.4s","answer: wrong (D)
 token: 2223, 231, 1
-time: 14.8s",
+time: 14.8s","answer: wrong (D)
+token: 244, 243, 1
+time: 0.8s"
 45,不属于骶丛的神经是,股神经,臀下神经,臀上神经,坐骨神经,A,"answer: right
 token: 83, 82, 1
 time: 0.2s",,"answer: right
@@ -780,7 +870,9 @@ time: 1.6s","answer: right
 token: 102, 98, 4
 time: 2.8s","answer: right
 token: 479, 231, 1
-time: 11.3s",
+time: 11.3s","answer: right
+token: 244, 243, 1
+time: 0.7s"
 46,心脏的静脉血回心的主要途径是,心小静脉,冠状窦,心中静脉,心前静脉,B,"answer: right
 token: 91, 85, 6
 time: 0.3s",,"answer: right
@@ -797,7 +889,9 @@ time: 0.7s","answer: right
 token: 108, 104, 4
 time: 1.6s","answer: right
 token: 543, 236, 1
-time: 3.4s",
+time: 3.4s","answer: right
+token: 249, 248, 1
+time: 0.6s"
 47,与伸膝关节有关的结构,股神经,坐骨神经,缝匠肌,股四头肌,C,"answer: wrong (D)
 token: 86, 85, 1
 time: 0.2s",,"answer: wrong (D)
@@ -814,7 +908,9 @@ time: 1.6s","answer: wrong (D)
 token: 104, 100, 4
 time: 2.7s","answer: wrong (D)
 token: 435, 229, 1
-time: 2.3s",
+time: 2.3s","answer: wrong (D)
+token: 242, 241, 1
+time: 0.6s"
 48,有囊内韧带的关节是,腕关节,髋关节,膝关节,肩关节,A,"answer: wrong (C)
 token: 89, 83, 6
 time: 0.3s",,"answer: wrong (C)
@@ -831,7 +927,9 @@ time: 1.2s","answer: wrong (C)
 token: 99, 95, 4
 time: 2.5s","answer: wrong (B)
 token: 2616, 226, 1
-time: 22.7s",
+time: 22.7s","answer: wrong (B)
+token: 239, 238, 1
+time: 0.7s"
 49,唯一连于脑干背侧的脑神经是,展神经,动眼神经,视神经,滑车神经,D,"answer: right
 token: 94, 87, 7
 time: 0.2s",,"answer: right
@@ -848,7 +946,9 @@ time: 0.7s","answer: right
 token: 105, 101, 4
 time: 3.0s","answer: right
 token: 602, 232, 1
-time: 3.3s",
+time: 3.3s","answer: wrong (C)
+token: 245, 244, 1
+time: 0.8s"
 50,内侧丘系,传导躯干、四肢意识性本体感觉,纤维来自同侧薄束核、楔束核,向上至丘脑内侧核,经斜方体外侧上行,A,"answer: right
 token: 107, 106, 1
 time: 0.2s",,"answer: right
@@ -865,7 +965,9 @@ time: 3.5s","answer: right
 token: 133, 129, 4
 time: 2.6s","answer: right
 token: 1118, 251, 1
-time: 6.2s",
+time: 6.2s","answer: wrong (C)
+token: 264, 263, 1
+time: 0.8s"
 51,小网膜包括,肝十二指肠韧带,肝胃韧带,胃结肠韧带,结肠系膜,C,"answer: wrong (A)
 token: 89, 88, 1
 time: 0.2s",,"answer: wrong (A)
@@ -882,7 +984,9 @@ time: 2.5s","answer: wrong (A)
 token: 365, 105, 260
 time: 5.5s","answer: wrong (B)
 token: 4456, 233, 1
-time: 28.2s",
+time: 28.2s","answer: wrong (D)
+token: 246, 245, 1
+time: 0.8s"
 52,属于女性生殖腺的是,子宫颈粘液腺,卵巢,前庭大腺,尿道球腺,B,"answer: right
 token: 86, 85, 1
 time: 0.2s",,"answer: right
@@ -899,7 +1003,9 @@ time: 1.6s","answer: right
 token: 109, 105, 4
 time: 2.4s","answer: right
 token: 489, 231, 1
-time: 7.5s",
+time: 7.5s","answer: right
+token: 244, 243, 1
+time: 0.6s"
 53,颈内动脉瘤发生在海绵窦段时，最先压迫的是,上颌神经,动眼神经,展神经,眼神经,C,"answer: right
 token: 92, 87, 5
 time: 0.2s",,"answer: right
@@ -916,7 +1022,9 @@ time: 3.5s","answer: right
 token: 116, 112, 4
 time: 1.7s","answer: right
 token: 652, 238, 1
-time: 3.5s",
+time: 3.5s","answer: wrong (B)
+token: 251, 250, 1
+time: 0.7s"
 54,喉腔最狭窄的部位是,声门裂,喉室,前庭裂,喉前庭,A,"answer: right
 token: 84, 83, 1
 time: 0.2s",,"answer: right
@@ -933,7 +1041,9 @@ time: 1.4s","answer: right
 token: 102, 98, 4
 time: 2.7s","answer: right
 token: 495, 229, 1
-time: 2.2s",
+time: 2.2s","answer: right
+token: 242, 241, 1
+time: 0.8s"
 55,大隐静脉经过,内踝后方,外踝后方,内踝前方,外踝前方,C,"answer: right
 token: 87, 81, 6
 time: 0.4s",,"answer: right
@@ -950,7 +1060,9 @@ time: 3.3s","answer: right
 token: 100, 96, 4
 time: 5.3s","answer: right
 token: 553, 231, 1
-time: 2.6s",
+time: 2.6s","answer: wrong (B)
+token: 244, 243, 1
+time: 0.7s"
 56,关节的辅助结构不包括,关节盘,半月板,关节面,囊内韧带,C,"answer: right
 token: 85, 80, 5
 time: 0.2s",,"answer: right
@@ -967,7 +1079,9 @@ time: 1.8s","answer: right
 token: 99, 95, 4
 time: 2.4s","answer: right
 token: 634, 228, 1
-time: 3.0s",
+time: 3.0s","answer: right
+token: 241, 240, 1
+time: 0.6s"
 57,椎间孔是,椎体间的孔,相邻椎骨的上、下切迹围成的孔,椎体与椎弓围成的孔,横突间的孔,B,"answer: right
 token: 103, 102, 1
 time: 0.2s",,"answer: right
@@ -984,7 +1098,9 @@ time: 1.2s","answer: right
 token: 123, 119, 4
 time: 3.0s","answer: right
 token: 533, 242, 1
-time: 2.6s",
+time: 2.6s","answer: right
+token: 255, 254, 1
+time: 0.6s"
 58,腰椎穿刺由浅入深依次经过,棘上韧带、棘间韧带、黄韧带,黄韧带、后纵韧带、棘间韧带,后纵韧带、棘间韧带、黄韧带,棘上韧带、后纵韧带、黄韧带,A,"answer: right
 token: 129, 128, 1
 time: 0.3s",,"answer: right
@@ -1001,7 +1117,9 @@ time: 2.2s","answer: right
 token: 165, 161, 4
 time: 2.9s","answer: right
 token: 713, 269, 1
-time: 3.5s",
+time: 3.5s","answer: right
+token: 282, 281, 1
+time: 0.8s"
 59,能感受强光、分辨颜色的是,双极细胞,视杆细胞,视锥细胞,节细胞,C,"answer: right
 token: 89, 83, 6
 time: 0.3s",,"answer: right
@@ -1018,7 +1136,9 @@ time: 3.2s","answer: right
 token: 107, 103, 4
 time: 2.8s","answer: right
 token: 384, 230, 1
-time: 1.5s",
+time: 1.5s","answer: right
+token: 243, 242, 1
+time: 0.7s"
 60,颈椎特有的结构是,棘突,椎孔,横突肋凹,横突孔,D,"answer: right
 token: 91, 84, 7
 time: 0.3s",,"answer: right
@@ -1035,7 +1155,9 @@ time: 1.3s","answer: right
 token: 99, 95, 4
 time: 2.8s","answer: right
 token: 459, 229, 1
-time: 2.1s",
+time: 2.1s","answer: right
+token: 242, 241, 1
+time: 0.7s"
 61,肱骨体后面中份有,大结节,小结节,桡神经沟,尺神经沟,C,"answer: right
 token: 85, 84, 1
 time: 0.2s",,"answer: right
@@ -1052,7 +1174,9 @@ time: 1.4s","answer: right
 token: 100, 96, 4
 time: 3.6s","answer: right
 token: 505, 230, 1
-time: 2.3s",
+time: 2.3s","answer: right
+token: 243, 242, 1
+time: 0.7s"
 62,成人脊髓下端约平对,第1腰椎下缘,第1骶椎,第2腰椎下缘,第3腰椎下缘,A,"answer: right
 token: 90, 89, 1
 time: 0.2s",,"answer: right
@@ -1069,7 +1193,9 @@ time: 0.9s","answer: right
 token: 116, 112, 4
 time: 2.5s","answer: right
 token: 519, 238, 1
-time: 2.4s",
+time: 2.4s","answer: wrong (C)
+token: 251, 250, 1
+time: 0.6s"
 63,在大脑动脉环构成中，无下列哪项结构,大脑前动脉,颈内动脉,大脑后动脉,大脑中动脉,D,"answer: right
 token: 91, 90, 1
 time: 0.2s",,"answer: right
@@ -1086,7 +1212,9 @@ time: 2.1s","answer: right
 token: 119, 115, 4
 time: 2.5s","answer: right
 token: 635, 238, 1
-time: 2.9s",
+time: 2.9s","answer: right
+token: 251, 250, 1
+time: 0.6s"
 64,卵受精的部位在,输卵管漏斗,输卵管子宫部,输卵管壶腹部,输卵管峡部,C,"answer: right
 token: 92, 85, 7
 time: 0.3s",,"answer: right
@@ -1103,7 +1231,9 @@ time: 0.7s","answer: right
 token: 112, 108, 4
 time: 2.8s","answer: right
 token: 589, 239, 1
-time: 4.8s",
+time: 4.8s","answer: right
+token: 252, 251, 1
+time: 0.7s"
 65,全身最大最复杂的关节是,肘关节,膝关节,髋关节,肩关节,B,"answer: wrong (C)
 token: 88, 82, 6
 time: 0.3s",,"answer: right
@@ -1120,7 +1250,9 @@ time: 2.0s","answer: right
 token: 100, 96, 4
 time: 2.6s","answer: right
 token: 476, 227, 1
-time: 2.6s",
+time: 2.6s","answer: wrong (D)
+token: 240, 239, 1
+time: 0.6s"
 66,输精管道不包括,输精管,射精管,尿道,精囊腺排泄管,D,"answer: right
 token: 82, 81, 1
 time: 0.2s",,"answer: right
@@ -1137,7 +1269,9 @@ time: 3.5s","answer: right
 token: 97, 93, 4
 time: 2.5s","answer: right
 token: 1084, 230, 1
-time: 6.1s",
+time: 6.1s","answer: wrong (C)
+token: 243, 242, 1
+time: 0.7s"
 67,脑膜中动脉是,上颌动脉的分支,椎动脉的分支,颈内动脉的分支,颈外动脉的一级分支,A,"answer: right
 token: 92, 91, 1
 time: 0.2s",,"answer: right
@@ -1154,7 +1288,9 @@ time: 1.4s","answer: right
 token: 118, 114, 4
 time: 3.6s","answer: right
 token: 536, 241, 1
-time: 2.6s",
+time: 2.6s","answer: right
+token: 254, 253, 1
+time: 0.8s"
 68,肺下界的体表投影，在腋中线上与,第6肋相交,第7肋相交,第9肋相交,第8肋相交,D,"answer: right
 token: 98, 91, 7
 time: 0.3s",,"answer: right
@@ -1171,7 +1307,9 @@ time: 0.7s","answer: right
 token: 113, 109, 4
 time: 2.5s","answer: right
 token: 1442, 243, 1
-time: 8.8s",
+time: 8.8s","answer: right
+token: 256, 255, 1
+time: 0.6s"
 69,肱骨外科颈骨折易损伤,桡神经,尺神经,腋神经,正中神经,C,"answer: right
 token: 83, 82, 1
 time: 0.3s",,"answer: right
@@ -1188,7 +1326,9 @@ time: 1.6s","answer: right
 token: 103, 99, 4
 time: 1.6s","answer: right
 token: 422, 230, 1
-time: 2.1s",
+time: 2.1s","answer: right
+token: 243, 242, 1
+time: 0.7s"
 70,有关膝关节的描述，错误的是,内侧半月板较大,由股骨下端、髌骨、胫骨和腓骨构成,前交叉韧带可防止胫骨前移位,两侧有副韧带,B,"answer: right
 token: 109, 108, 1
 time: 0.2s",,"answer: right
@@ -1205,7 +1345,9 @@ time: 1.5s","answer: right
 token: 142, 138, 4
 time: 3.5s","answer: right
 token: 571, 259, 1
-time: 3.3s",
+time: 3.3s","answer: right
+token: 272, 271, 1
+time: 0.8s"
 71,属于面颅骨的是,颞骨,下鼻甲,蝶骨,额骨,B,"answer: right
 token: 81, 80, 1
 time: 0.2s",,"answer: right
@@ -1222,7 +1364,9 @@ time: 1.7s","answer: right
 token: 99, 95, 4
 time: 3.7s","answer: right
 token: 564, 226, 1
-time: 2.9s",
+time: 2.9s","answer: wrong (D)
+token: 239, 238, 1
+time: 0.8s"
 72,支配三角肌的神经是,腋神经,桡神经,尺神经,肌皮神经,A,"answer: right
 token: 83, 82, 1
 time: 0.2s",,"answer: right
@@ -1239,7 +1383,9 @@ time: 0.8s","answer: right
 token: 100, 96, 4
 time: 2.9s","answer: right
 token: 419, 228, 1
-time: 2.0s",
+time: 2.0s","answer: right
+token: 241, 240, 1
+time: 0.7s"
 73,由双层腹膜形成的韧带是,子宫主韧带,骶子宫韧带,子宫圆韧带,子宫阔韧带,D,"answer: right
 token: 93, 92, 1
 time: 0.3s",,"answer: right
@@ -1256,7 +1402,9 @@ time: 0.8s","answer: right
 token: 117, 113, 4
 time: 1.6s","answer: right
 token: 491, 238, 1
-time: 2.5s",
+time: 2.5s","answer: right
+token: 251, 250, 1
+time: 0.9s"
 74,三叉丘系为,同侧三叉神经感觉核发出的纤维,对侧三叉神经半月节发出的纤维,对侧三叉神经感觉核发出的纤维,同侧三叉神经半月节发出的纤维,C,"answer: right
 token: 107, 106, 1
 time: 0.2s",,"answer: right
@@ -1273,7 +1421,9 @@ time: 2.2s","answer: right
 token: 149, 145, 4
 time: 3.1s","answer: right
 token: 964, 253, 1
-time: 7.9s",
+time: 7.9s","answer: right
+token: 266, 265, 1
+time: 0.7s"
 75,成人肾门平对,第2腰椎,第1腰椎,第11胸椎,第12胸椎,B,"answer: right
 token: 83, 82, 1
 time: 0.2s",,"answer: right
@@ -1290,7 +1440,9 @@ time: 0.7s","answer: wrong (A)
 token: 103, 99, 4
 time: 2.7s","answer: right
 token: 884, 228, 1
-time: 5.3s",
+time: 5.3s","answer: wrong (D)
+token: 241, 240, 1
+time: 0.7s"
 76,接受起始和终止旋转运动刺激的是,球囊斑,螺旋器,壶腹峭,椭圆囊斑,C,"answer: right
 token: 97, 90, 7
 time: 0.2s",,"answer: right
@@ -1307,7 +1459,9 @@ time: 0.7s","answer: right
 token: 113, 109, 4
 time: 2.8s","answer: right
 token: 624, 233, 1
-time: 3.0s",
+time: 3.0s","answer: right
+token: 246, 245, 1
+time: 0.9s"
 77,使瞳孔缩小的神经是,迷走神经,眼神经,动眼神经,视神经,C,"answer: wrong (A)
 token: 82, 81, 1
 time: 0.2s",,"answer: right
@@ -1324,7 +1478,9 @@ time: 1.0s","answer: right
 token: 102, 98, 4
 time: 1.7s","answer: right
 token: 465, 228, 1
-time: 2.9s",
+time: 2.9s","answer: right
+token: 241, 240, 1
+time: 0.6s"
 78,组成视交叉的神经纤维是,左右眼鼻侧半视网膜发出的纤维,右眼鼻侧半视网膜与右眼颞侧半视网膜发出的纤维,左眼颞侧半视网膜与右眼鼻侧半视网膜发出的纤维,左右眼颞侧半视网膜发出的纤维,A,"answer: wrong (C)
 token: 136, 135, 1
 time: 0.2s",,"answer: right
@@ -1341,7 +1497,9 @@ time: 2.3s","answer: right
 token: 188, 184, 4
 time: 2.6s","answer: right
 token: 672, 283, 1
-time: 2.5s",
+time: 2.5s","answer: wrong (C)
+token: 296, 295, 1
+time: 0.7s"
 79,颞横回是,视觉中枢,感觉性语言中枢,运动性语言中枢,听觉中枢,D,"answer: right
 token: 91, 85, 6
 time: 0.2s",,"answer: right
@@ -1358,7 +1516,9 @@ time: 0.8s","answer: right
 token: 106, 102, 4
 time: 2.8s","answer: right
 token: 428, 233, 1
-time: 1.6s",
+time: 1.6s","answer: right
+token: 246, 245, 1
+time: 0.6s"
 80,不成对的面颅骨有,泪骨,鼻骨,舌骨,腭骨,C,"answer: right
 token: 87, 81, 6
 time: 0.3s",,"answer: right
@@ -1375,7 +1535,9 @@ time: 2.0s","answer: right
 token: 99, 95, 4
 time: 2.4s","answer: right
 token: 1081, 227, 1
-time: 6.6s",
+time: 6.6s","answer: right
+token: 240, 239, 1
+time: 0.7s"
 81,下颌神经从下列何结构出颅腔,破裂孔,圆孔,茎乳孔,卵圆孔,D,"answer: right
 token: 91, 85, 6
 time: 0.2s",,"answer: right
@@ -1392,7 +1554,9 @@ time: 1.8s","answer: right
 token: 109, 105, 4
 time: 2.4s","answer: right
 token: 503, 233, 1
-time: 2.5s",
+time: 2.5s","answer: right
+token: 246, 245, 1
+time: 0.9s"
 82,只受对侧皮质核束支配的脑神经核团是,副神经核,展神经核,动眼神经核,舌下神经核,D,"answer: right
 token: 102, 94, 8
 time: 0.3s",,"answer: right
@@ -1409,7 +1573,9 @@ time: 2.8s","answer: right
 token: 112, 108, 4
 time: 1.9s","answer: right
 token: 1151, 239, 1
-time: 8.6s",
+time: 8.6s","answer: wrong (C)
+token: 252, 251, 1
+time: 0.6s"
 83,从脑干背侧出脑的脑神经是,副神经,三叉神经,舌下神经,滑车神经,D,"answer: right
 token: 95, 88, 7
 time: 0.4s",,"answer: right
@@ -1426,7 +1592,9 @@ time: 1.2s","answer: right
 token: 106, 102, 4
 time: 2.4s","answer: right
 token: 472, 231, 1
-time: 4.6s",
+time: 4.6s","answer: wrong (B)
+token: 244, 243, 1
+time: 0.8s"
 84,具有结肠带、结肠袋和肠脂垂的消化管道是,盲肠和结肠,空肠和回肠,阑尾,直肠和肛管,A,"answer: right
 token: 100, 99, 1
 time: 0.3s",,"answer: right
@@ -1443,7 +1611,9 @@ time: 1.2s","answer: right
 token: 123, 119, 4
 time: 2.3s","answer: right
 token: 632, 246, 1
-time: 3.6s",
+time: 3.6s","answer: right
+token: 259, 258, 1
+time: 0.8s"
 85,颈椎最主要特点是,横突有肋凹,棘突长，斜向后下,横突有孔,椎体较大,C,"answer: right
 token: 93, 92, 1
 time: 0.2s",,"answer: right
@@ -1460,7 +1630,9 @@ time: 0.9s","answer: right
 token: 109, 105, 4
 time: 2.4s","answer: right
 token: 650, 238, 1
-time: 6.2s",
+time: 6.2s","answer: right
+token: 251, 250, 1
+time: 0.9s"
 86,壁胸膜下界在腋中线与下列哪项相交处,第11肋,第10肋,第8肋,第6肋,B,"answer: wrong (C)
 token: 95, 90, 5
 time: 0.3s",,"answer: right
@@ -1477,7 +1649,9 @@ time: 0.7s","answer: right
 token: 110, 106, 4
 time: 1.7s","answer: right
 token: 764, 240, 1
-time: 4.5s",
+time: 4.5s","answer: wrong (C)
+token: 253, 252, 1
+time: 0.6s"
 87,穿经内囊膝的纤维束是,脊髓丘脑束,皮质核束,皮质脊髓束,内侧丘系,B,"answer: right
 token: 99, 92, 7
 time: 0.3s",,"answer: right
@@ -1494,7 +1668,9 @@ time: 1.7s","answer: right
 token: 114, 110, 4
 time: 2.6s","answer: right
 token: 629, 237, 1
-time: 2.9s",
+time: 2.9s","answer: wrong (C)
+token: 250, 249, 1
+time: 0.7s"
 88,人体最大最复杂的关节是,腕关节,肩关节,髋关节,膝关节,D,"answer: right
 token: 87, 81, 6
 time: 0.3s",,"answer: right
@@ -1511,7 +1687,9 @@ time: 1.4s","answer: right
 token: 100, 96, 4
 time: 2.4s","answer: right
 token: 541, 226, 1
-time: 2.5s",
+time: 2.5s","answer: right
+token: 239, 238, 1
+time: 0.7s"
 89,属于臂后群肌的是,肱三头肌,肱二头肌,喙肱肌,三角肌,A,"answer: right
 token: 87, 86, 1
 time: 0.2s",,"answer: right
@@ -1528,7 +1706,9 @@ time: 1.3s","answer: right
 token: 104, 100, 4
 time: 1.9s","answer: right
 token: 477, 234, 1
-time: 2.2s",
+time: 2.2s","answer: right
+token: 247, 246, 1
+time: 0.8s"
 90,下消化道是指,食管至十二指肠,口腔至胃,口腔至十二指肠,空肠以下的部分,D,"answer: right
 token: 89, 88, 1
 time: 0.2s",,"answer: right
@@ -1545,7 +1725,9 @@ time: 0.8s","answer: right
 token: 109, 105, 4
 time: 2.6s","answer: right
 token: 534, 232, 1
-time: 2.7s",
+time: 2.7s","answer: right
+token: 245, 244, 1
+time: 0.8s"
 91,属于脑干躯体运动核的是,以上均是,滑车神经核,动眼神经核,展神经核,A,"answer: right
 token: 88, 87, 1
 time: 0.2s",,"answer: right
@@ -1562,7 +1744,9 @@ time: 2.8s","answer: right
 token: 105, 101, 4
 time: 2.6s","answer: right
 token: 501, 233, 1
-time: 2.1s",
+time: 2.1s","answer: right
+token: 246, 245, 1
+time: 0.7s"
 92,脑干内的副交感神经核有,动眼神经副核、孤束核、下泌涎核、迷走神经背核,迷走神经背核、动眼神经核、上泌涎核、下泌涎核,动眼神经副核、上泌涎核、下泌涎核、迷走神经背核,疑核、动眼神经副核、上泌涎核、下泌涎核,C,"answer: right
 token: 154, 153, 1
 time: 0.4s",,"answer: right
@@ -1579,7 +1763,9 @@ time: 3.1s","answer: right
 token: 193, 189, 4
 time: 2.5s","answer: right
 token: 880, 299, 1
-time: 3.9s",
+time: 3.9s","answer: right
+token: 312, 311, 1
+time: 0.7s"
 93,黄韧带连于两个相邻的,椎弓之间,椎弓板之间,棘突之间,椎弓根之间,B,"answer: right
 token: 90, 89, 1
 time: 0.2s",,"answer: right
@@ -1596,7 +1782,9 @@ time: 1.5s","answer: right
 token: 110, 106, 4
 time: 2.6s","answer: right
 token: 500, 233, 1
-time: 2.6s",
+time: 2.6s","answer: right
+token: 246, 245, 1
+time: 0.6s"
 94,阑尾,由回肠动脉直接营养,三条结肠带均在阑尾根部集中,属于腹膜外位器官,无系膜,C,"answer: wrong (B)
 token: 94, 93, 1
 time: 0.2s",,"answer: wrong (B)
@@ -1613,7 +1801,9 @@ time: 1.3s","answer: wrong (B)
 token: 117, 113, 4
 time: 3.2s","answer: wrong (B)
 token: 616, 241, 1
-time: 3.0s",
+time: 3.0s","answer: wrong (D)
+token: 254, 253, 1
+time: 0.7s"
 95,血液中数量最多的细胞是,红细胞,中性粒细胞,单核细胞,淋巴细胞,A,"answer: right
 token: 84, 83, 1
 time: 0.2s",,"answer: right
@@ -1630,7 +1820,9 @@ time: 1.6s","answer: right
 token: 107, 103, 4
 time: 3.2s","answer: right
 token: 401, 227, 1
-time: 1.7s",
+time: 1.7s","answer: right
+token: 240, 239, 1
+time: 0.8s"
 96,上颌窦开口于,上鼻道,蝶筛隐窝,下鼻道,中鼻道,D,"answer: right
 token: 83, 78, 5
 time: 0.3s",,"answer: right
@@ -1647,7 +1839,9 @@ time: 0.7s","answer: right
 token: 104, 100, 4
 time: 2.9s","answer: right
 token: 465, 227, 1
-time: 2.3s",
+time: 2.3s","answer: right
+token: 240, 239, 1
+time: 0.6s"
 97,主动脉裂孔,迷走神经通过,在十二胸椎水平,位于中心腱内,有胸导管通过,C,"answer: wrong (D)
 token: 91, 83, 8
 time: 0.4s",,"answer: wrong (D)
@@ -1664,7 +1858,9 @@ time: 0.7s","answer: wrong (D)
 token: 110, 106, 4
 time: 2.8s","answer: wrong (B)
 token: 4112, 232, 1
-time: 27.4s",
+time: 27.4s","answer: wrong (D)
+token: 245, 244, 1
+time: 0.7s"
 98,属脑神经特殊内脏运动核的是,展神经核,舌下神经核,面神经核,动眼神经核,C,"answer: right
 token: 95, 88, 7
 time: 0.3s",,"answer: right
@@ -1681,7 +1877,9 @@ time: 3.4s","answer: right
 token: 108, 104, 4
 time: 3.0s","answer: right
 token: 639, 234, 1
-time: 12.5s",
+time: 12.5s","answer: wrong (B)
+token: 247, 246, 1
+time: 0.8s"
 99,肱骨内上髁后下方的一个浅沟是,尺神经沟,结节间沟,半月切迹,桡神经沟,A,"answer: right
 token: 90, 89, 1
 time: 0.3s",,"answer: right
@@ -1698,7 +1896,9 @@ time: 1.7s","answer: right
 token: 113, 109, 4
 time: 1.8s","answer: right
 token: 564, 239, 1
-time: 2.5s",
+time: 2.5s","answer: right
+token: 252, 251, 1
+time: 0.7s"
 100,颞横回是,视觉中枢,感觉性语言中枢,运动性语言中枢,听觉中枢,D,"answer: right
 token: 91, 85, 6
 time: 0.2s",,"answer: right
@@ -1715,7 +1915,9 @@ time: 0.8s","answer: right
 token: 106, 102, 4
 time: 2.6s","answer: right
 token: 477, 233, 1
-time: 2.2s",
+time: 2.2s","answer: right
+token: 246, 245, 1
+time: 0.7s"
 101,组成视交叉的神经纤维是,左眼题侧半视网膜与右眼鼻侧半视网膜发出的纤维,左右眼鼻侧半视网膜发出的纤维,右眼鼻侧半视网膜与右眼题侧半视网膜发出的纤维,左右眼题侧半视网膜发出的纤维,B,"answer: right
 token: 136, 135, 1
 time: 0.2s",,"answer: right
@@ -1732,7 +1934,9 @@ time: 3.2s","answer: right
 token: 185, 181, 4
 time: 2.8s","answer: right
 token: 929, 280, 1
-time: 5.4s",
+time: 5.4s","answer: right
+token: 293, 292, 1
+time: 0.6s"
 102,大隐静脉,为下肢的深静脉,起自足背静脉弓的外侧部,注入股静脉,沿小腿后面上行,C,"answer: wrong (D)
 token: 92, 91, 1
 time: 0.4s",,"answer: right
@@ -1749,7 +1953,9 @@ time: 0.7s","answer: right
 token: 116, 112, 4
 time: 2.7s","answer: right
 token: 663, 240, 1
-time: 3.3s",
+time: 3.3s","answer: right
+token: 253, 252, 1
+time: 0.6s"
 103,输卵管结扎术于输卵管（ ）进行,峡部,子宫,漏斗部,壶腹部,A,"answer: right
 token: 87, 86, 1
 time: 0.2s",,"answer: right
@@ -1766,7 +1972,9 @@ time: 2.2s","answer: right
 token: 107, 103, 4
 time: 2.5s","answer: right
 token: 519, 233, 1
-time: 2.9s",
+time: 2.9s","answer: right
+token: 246, 245, 1
+time: 0.8s"
 104,维持子宫前倾前屈的韧带是,骶子宫韧带和子宫阔韧带,子宫圆韧带和骶子宫韧带,子宫圆韧带和子宫主韧带,子宫主韧带和骶子宫韧带,B,"answer: right
 token: 115, 114, 1
 time: 0.3s",,"answer: right
@@ -1783,7 +1991,9 @@ time: 2.9s","answer: right
 token: 154, 150, 4
 time: 2.7s","answer: right
 token: 833, 266, 1
-time: 5.0s",
+time: 5.0s","answer: wrong (D)
+token: 279, 278, 1
+time: 0.6s"
 105,血液中的单核细胞进入结缔组织后成为,巨噬细胞,成纤维细胞,肥大细胞,浆细胞,A,"answer: right
 token: 87, 86, 1
 time: 0.2s",,"answer: right
@@ -1800,7 +2010,9 @@ time: 1.1s","answer: right
 token: 116, 112, 4
 time: 2.9s","answer: right
 token: 409, 233, 1
-time: 2.1s",
+time: 2.1s","answer: right
+token: 246, 245, 1
+time: 0.9s"
 106,鼓室,外侧壁为颈静脉壁,内侧壁为迷路壁,前壁为鼓膜,是与外界不通的小腔,B,"answer: right
 token: 92, 91, 1
 time: 0.2s",,"answer: right
@@ -1817,7 +2029,9 @@ time: 0.7s","answer: right
 token: 119, 115, 4
 time: 1.8s","answer: right
 token: 597, 236, 1
-time: 3.6s",
+time: 3.6s","answer: right
+token: 249, 248, 1
+time: 0.7s"
 107,右主支气管的特点是,粗而短,细而长,粗而长,细而短,A,"answer: right
 token: 85, 84, 1
 time: 0.2s",,"answer: right
@@ -1834,7 +2048,9 @@ time: 1.7s","answer: right
 token: 95, 91, 4
 time: 1.6s","answer: right
 token: 414, 230, 1
-time: 10.1s",
+time: 10.1s","answer: right
+token: 243, 242, 1
+time: 1.0s"
 108,属于腹膜外位器官的是,升结肠,阑尾,胆囊,肾脏,D,"answer: right
 token: 89, 83, 6
 time: 0.3s",,"answer: right
@@ -1851,7 +2067,9 @@ time: 1.9s","answer: right
 token: 100, 96, 4
 time: 2.8s","answer: right
 token: 3511, 228, 1
-time: 26.1s",
+time: 26.1s","answer: right
+token: 241, 240, 1
+time: 0.7s"
 109,与右主支气管相比，左主支气管,细而短,粗而长,粗而短,细而长,D,"answer: right
 token: 96, 90, 6
 time: 0.3s",,"answer: right
@@ -1868,7 +2086,9 @@ time: 1.4s","answer: right
 token: 100, 96, 4
 time: 2.6s","answer: right
 token: 477, 235, 1
-time: 2.1s",
+time: 2.1s","answer: right
+token: 248, 247, 1
+time: 0.7s"
 110,有关胸椎的说法中哪项是错误,棘突伸向后下,横突上有横突孔,椎体侧面和横突尖端的前面有助凹,共12个,B,"answer: right
 token: 104, 103, 1
 time: 0.2s",,"answer: right
@@ -1885,7 +2105,9 @@ time: 0.7s","answer: right
 token: 126, 122, 4
 time: 2.6s","answer: right
 token: 534, 250, 1
-time: 8.8s",
+time: 8.8s","answer: right
+token: 263, 262, 1
+time: 0.8s"
 111,胸导管,长1～1.5cm,起于乳糜池,收集右颈干,注入右静脉角,B,"answer: right
 token: 91, 90, 1
 time: 0.2s",,"answer: right
@@ -1902,7 +2124,9 @@ time: 2.1s","answer: right
 token: 103, 99, 4
 time: 2.6s","answer: right
 token: 564, 235, 1
-time: 2.8s",
+time: 2.8s","answer: right
+token: 248, 247, 1
+time: 0.6s"
 112,穿经内囊膝的纤维束是,内侧丘系,脊髓丘脑束,皮质核束,皮质脊髓束,C,"answer: right
 token: 99, 92, 7
 time: 0.3s",,"answer: right
@@ -1919,7 +2143,9 @@ time: 0.9s","answer: right
 token: 114, 110, 4
 time: 2.4s","answer: right
 token: 618, 237, 1
-time: 11.4s",
+time: 11.4s","answer: wrong (D)
+token: 250, 249, 1
+time: 0.9s"
 113,关于肾说法正确的是,长轴呈垂直状,位置右侧较左侧高,后面下部有第12肋斜过,位于腹膜后方,D,"answer: right
 token: 96, 95, 1
 time: 0.3s",,"answer: right
@@ -1936,7 +2162,9 @@ time: 0.7s","answer: right
 token: 121, 117, 4
 time: 2.3s","answer: right
 token: 604, 240, 1
-time: 9.3s",
+time: 9.3s","answer: right
+token: 253, 252, 1
+time: 0.8s"
 114,肱三头肌受（ ）支配,桡神经,肌皮神经,尺神经,腋神经,A,"answer: right
 token: 86, 85, 1
 time: 0.2s",,"answer: right
@@ -1953,7 +2181,9 @@ time: 1.5s","answer: right
 token: 103, 99, 4
 time: 1.6s","answer: right
 token: 425, 231, 1
-time: 1.9s",
+time: 1.9s","answer: right
+token: 244, 243, 1
+time: 0.7s"
 115,下列关于椎间孔的正确叙述是,是相邻椎骨的上、下切迹围成的孔,是椎弓和椎体围成的孔,是相邻的椎弓围成的孔,容纳脊髓,A,"answer: right
 token: 107, 106, 1
 time: 0.2s",,"answer: right
@@ -1970,7 +2200,9 @@ time: 0.7s","answer: right
 token: 143, 139, 4
 time: 2.5s","answer: right
 token: 614, 251, 1
-time: 3.7s",
+time: 3.7s","answer: right
+token: 264, 263, 1
+time: 1.1s"
 116,嗅神经穿过（ ）入颅腔,筛孔,卵圆孔,颈静脉孔,圆孔,A,"answer: right
 token: 86, 85, 1
 time: 0.2s",,"answer: right
@@ -1987,7 +2219,9 @@ time: 1.4s","answer: right
 token: 110, 106, 4
 time: 2.4s","answer: right
 token: 427, 232, 1
-time: 2.2s",
+time: 2.2s","answer: right
+token: 245, 244, 1
+time: 0.7s"
 117,接受直线加速或减速运动刺激的是,螺旋器,壶腹峭,球囊斑和椭圆囊斑,球囊斑,C,"answer: right
 token: 105, 93, 12
 time: 0.3s",,"answer: right
@@ -2004,7 +2238,9 @@ time: 0.7s","answer: right
 token: 118, 114, 4
 time: 2.8s","answer: right
 token: 691, 239, 1
-time: 3.4s",
+time: 3.4s","answer: right
+token: 252, 251, 1
+time: 1.0s"
 118,鼓室,下壁为乳突壁,内侧壁为迷路壁,前壁为鼓膜,外侧壁为颈静脉壁,B,"answer: right
 token: 92, 91, 1
 time: 0.2s",,"answer: right
@@ -2021,7 +2257,9 @@ time: 0.7s","answer: right
 token: 118, 114, 4
 time: 2.5s","answer: right
 token: 738, 236, 1
-time: 3.6s",
+time: 3.6s","answer: right
+token: 249, 248, 1
+time: 0.6s"
 119,胃左动脉,起自脾动脉,分布于胃小弯侧胃壁,来源于肝总动脉,沿胃大弯走行,B,"answer: wrong (A)
 token: 93, 92, 1
 time: 0.2s",,,"answer: right
@@ -2036,7 +2274,9 @@ time: 1.7s","answer: right
 token: 117, 113, 4
 time: 2.4s","answer: right
 token: 569, 239, 1
-time: 3.1s",
+time: 3.1s","answer: right
+token: 252, 251, 1
+time: 0.6s"
 120,双侧髂嵴最高点的连线平对,第4腰椎棘突,第5腰椎棘突,第3腰椎棘突,第1骶椎棘突,A,"answer: right
 token: 94, 93, 1
 time: 0.2s",,"answer: right
@@ -2053,7 +2293,9 @@ time: 0.7s","answer: right
 token: 124, 120, 4
 time: 2.8s","answer: right
 token: 530, 243, 1
-time: 2.8s",
+time: 2.8s","answer: wrong (B)
+token: 256, 255, 1
+time: 0.6s"
 121,支配肱二头肌的神经是,尺神经,腋神经,肌皮神经,桡神经,C,"answer: right
 token: 91, 84, 7
 time: 0.3s",,"answer: right
@@ -2070,7 +2312,9 @@ time: 1.3s","answer: right
 token: 102, 98, 4
 time: 2.3s","answer: right
 token: 437, 231, 1
-time: 1.7s",
+time: 1.7s","answer: right
+token: 244, 243, 1
+time: 0.7s"
 122,全身最复杂的关节是,膝关节,下颌关节,肩关节,肘关节,A,"answer: right
 token: 81, 80, 1
 time: 0.2s",,"answer: right
@@ -2087,7 +2331,9 @@ time: 0.7s","answer: right
 token: 99, 95, 4
 time: 1.6s","answer: wrong (B)
 token: 509, 226, 1
-time: 2.8s",
+time: 2.8s","answer: wrong (B)
+token: 239, 238, 1
+time: 0.6s"
 123,关于肋的组成下列哪项是正确的,真肋：1—5肋，假肋：6—10肋；浮肋：11—12肋,真肋：1—7肋，假肋：8—12肋,真肋：1—8肋，假肋：9—12肋,真肋：1—7肋，假肋：8—10肋；浮肋：11—12肋,D,"answer: wrong (B)
 token: 161, 160, 1
 time: 0.2s",,"answer: right
@@ -2104,7 +2350,9 @@ time: 0.7s","answer: right
 token: 186, 182, 4
 time: 2.4s","answer: right
 token: 887, 317, 1
-time: 4.6s",
+time: 4.6s","answer: right
+token: 330, 329, 1
+time: 0.8s"
 124,男性生殖腺是,前列腺,精囊腺,尿道球腺,睾丸,D,"answer: right
 token: 83, 82, 1
 time: 0.3s",,"answer: right
@@ -2121,7 +2369,9 @@ time: 0.9s","answer: right
 token: 99, 95, 4
 time: 1.6s","answer: right
 token: 365, 228, 1
-time: 1.7s",
+time: 1.7s","answer: right
+token: 241, 240, 1
+time: 0.6s"
 125,肝门静脉收集的范围包括,腹腔内除肝以外所有脏器的静脉血,腹腔内所有脏器的静脉血,胃、小肠、大肠(齿状线以下肛管除外)、胰、胆囊、脾、食道下段等脏器的静脉血,腹腔内不成对脏器的静脉血,C,"answer: right
 token: 141, 140, 1
 time: 0.2s",,"answer: right
@@ -2138,7 +2388,9 @@ time: 2.8s","answer: right
 token: 184, 180, 4
 time: 2.6s","answer: right
 token: 691, 284, 1
-time: 3.2s",
+time: 3.2s","answer: right
+token: 297, 296, 1
+time: 0.7s"
 126,射精管开口于,尿道膜部,尿道前列腺部,尿道球部,精囊腺,B,"answer: right
 token: 85, 84, 1
 time: 0.2s",,"answer: right
@@ -2155,7 +2407,9 @@ time: 0.8s","answer: right
 token: 102, 98, 4
 time: 2.9s","answer: right
 token: 485, 232, 1
-time: 2.8s",
+time: 2.8s","answer: wrong (A)
+token: 245, 244, 1
+time: 0.8s"
 127,不属于骶丛的神经是,臀下神经,股神经,坐骨神经,臀上神经,B,"answer: right
 token: 83, 82, 1
 time: 0.2s",,"answer: right
@@ -2172,7 +2426,9 @@ time: 2.0s","answer: right
 token: 102, 98, 4
 time: 3.9s","answer: right
 token: 500, 231, 1
-time: 2.5s",
+time: 2.5s","answer: right
+token: 244, 243, 1
+time: 0.7s"
 128,支配三角肌的神经是,尺神经,肌皮神经,腋神经,桡神经,C,"answer: right
 token: 88, 82, 6
 time: 0.3s",,"answer: right
@@ -2189,7 +2445,9 @@ time: 0.7s","answer: right
 token: 100, 96, 4
 time: 2.7s","answer: right
 token: 428, 228, 1
-time: 2.2s",
+time: 2.2s","answer: right
+token: 241, 240, 1
+time: 0.9s"
 129,下列哪个神经损伤出现“爪形手”,正中神经,桡神经,肌皮神经,尺神经,D,"answer: right
 token: 85, 84, 1
 time: 0.2s",,"answer: right
@@ -2206,7 +2464,9 @@ time: 1.9s","answer: right
 token: 108, 104, 4
 time: 2.9s","answer: right
 token: 478, 230, 1
-time: 2.5s",
+time: 2.5s","answer: right
+token: 243, 242, 1
+time: 0.8s"
 130,胸导管常注入,右静脉角,左静脉角,上腔静脉,左颈内静,B,"answer: right
 token: 82, 81, 1
 time: 0.2s",,"answer: right
@@ -2223,7 +2483,9 @@ time: 0.7s","answer: right
 token: 100, 96, 4
 time: 2.7s","answer: right
 token: 566, 231, 1
-time: 4.1s",
+time: 4.1s","answer: right
+token: 244, 243, 1
+time: 0.7s"
 131,甲状腺上动脉一般来自,甲状颈干,颈内动脉,颈外动脉,颈总动脉,C,"answer: right
 token: 90, 83, 7
 time: 0.2s",,"answer: right
@@ -2240,7 +2502,9 @@ time: 0.7s","answer: right
 token: 109, 105, 4
 time: 2.5s","answer: right
 token: 442, 235, 1
-time: 2.5s",
+time: 2.5s","answer: wrong (A)
+token: 248, 247, 1
+time: 0.8s"
 132,使肩关节外展的肌是,三角肌,斜方肌,背阔肌,胸大肌,A,"answer: right
 token: 85, 84, 1
 time: 0.3s",,"answer: right
@@ -2257,7 +2521,9 @@ time: 0.9s","answer: right
 token: 102, 98, 4
 time: 1.5s","answer: right
 token: 408, 230, 1
-time: 1.9s",
+time: 1.9s","answer: right
+token: 243, 242, 1
+time: 0.6s"
 133,关于食管裂孔,有迷走神经通过,平第十胸椎水平,有胸导管通过,位于中心腱上,C,"answer: wrong (A)
 token: 88, 87, 1
 time: 0.2s",,"answer: wrong (A)
@@ -2274,7 +2540,9 @@ time: 4.1s","answer: wrong (A)
 token: 111, 107, 4
 time: 1.7s","answer: wrong (B)
 token: 2879, 233, 1
-time: 21.8s",
+time: 21.8s","answer: right
+token: 246, 245, 1
+time: 0.6s"
 134,属于面颅骨的是,蝶骨,枕骨,额骨,下鼻甲,D,"answer: right
 token: 84, 79, 5
 time: 0.2s",,"answer: right
@@ -2291,7 +2559,9 @@ time: 2.2s","answer: right
 token: 99, 95, 4
 time: 2.5s","answer: right
 token: 534, 225, 1
-time: 2.8s",
+time: 2.8s","answer: wrong (A)
+token: 238, 237, 1
+time: 0.9s"
 135,下列哪块肌参与大腿后伸,臀大肌,大收肌,梨状肌,股四头肌,A,"answer: right
 token: 87, 86, 1
 time: 0.2s",,"answer: right
@@ -2308,7 +2578,9 @@ time: 3.0s","answer: right
 token: 106, 102, 4
 time: 2.7s","answer: right
 token: 561, 233, 1
-time: 2.7s",
+time: 2.7s","answer: right
+token: 246, 245, 1
+time: 0.7s"
 136,肾蒂内的主要结构从前至后依次是,肾静脉、肾盂、肾动脉,肾静脉、肾动脉、肾盂,肾动脉、肾静脉、肾盂,肾动脉、肾盂、肾静脉,B,"answer: right
 token: 111, 110, 1
 time: 0.2s",,"answer: right
@@ -2325,7 +2597,9 @@ time: 2.2s","answer: right
 token: 154, 150, 4
 time: 1.6s","answer: right
 token: 564, 266, 1
-time: 2.5s",
+time: 2.5s","answer: right
+token: 279, 278, 1
+time: 0.6s"
 137,有关小隐静脉的说法，正确的是,经外踝后方,最后注入股静脉,沿小腿外侧上行,在足背内侧缘起于足背静脉弓,A,"answer: right
 token: 99, 98, 1
 time: 0.2s",,"answer: right
@@ -2342,7 +2616,9 @@ time: 4.3s","answer: right
 token: 129, 125, 4
 time: 1.5s","answer: right
 token: 1114, 251, 1
-time: 6.0s",
+time: 6.0s","answer: wrong (D)
+token: 264, 263, 1
+time: 0.7s"
 138,输精管壶腹位于,盆部,腹股沟部,精索部,睾丸部,A,"answer: right
 token: 84, 83, 1
 time: 0.2s",,"answer: right
@@ -2359,7 +2635,9 @@ time: 1.3s","answer: right
 token: 98, 94, 4
 time: 2.4s","answer: right
 token: 457, 230, 1
-time: 3.3s",
+time: 3.3s","answer: right
+token: 243, 242, 1
+time: 0.9s"
 139,成对的脑颅骨有,蝶骨,枕骨,顶骨,颧骨,C,"answer: right
 token: 84, 79, 5
 time: 0.3s",,"answer: right
@@ -2376,7 +2654,9 @@ time: 0.8s","answer: right
 token: 99, 95, 4
 time: 3.4s","answer: right
 token: 537, 228, 1
-time: 2.9s",
+time: 2.9s","answer: right
+token: 241, 240, 1
+time: 0.8s"
 140,肺下界的体表投影在腋中线相交于,第8肋,第6肋,第5肋,第7肋,A,"answer: right
 token: 90, 85, 5
 time: 0.3s",,"answer: right
@@ -2393,7 +2673,9 @@ time: 0.7s","answer: right
 token: 105, 101, 4
 time: 2.5s","answer: right
 token: 728, 237, 1
-time: 4.5s",
+time: 4.5s","answer: wrong (D)
+token: 250, 249, 1
+time: 0.7s"
 141,不属于颈外动脉的分支是,面动脉,脑膜中动脉,舌动脉,颞浅动脉,B,"answer: right
 token: 86, 85, 1
 time: 0.3s",,"answer: right
@@ -2410,7 +2692,9 @@ time: 2.5s","answer: right
 token: 109, 105, 4
 time: 2.5s","answer: right
 token: 552, 235, 1
-time: 2.6s",
+time: 2.6s","answer: right
+token: 248, 247, 1
+time: 0.6s"
 142,右主支气管的特点是,粗而短,粗而长,细而短,细而长,A,"answer: right
 token: 85, 84, 1
 time: 0.2s",,"answer: right
@@ -2427,7 +2711,9 @@ time: 0.7s","answer: right
 token: 95, 91, 4
 time: 2.6s","answer: right
 token: 472, 230, 1
-time: 2.2s",
+time: 2.2s","answer: right
+token: 243, 242, 1
+time: 0.6s"
 143,子宫动脉在距子宫颈外侧约2cm 处行于,输尿管的前上方,输尿管的后下方,输尿管的外侧,输卵管前下方,A,"answer: right
 token: 99, 98, 1
 time: 0.2s",,"answer: right
@@ -2444,7 +2730,9 @@ time: 2.2s","answer: right
 token: 126, 122, 4
 time: 2.7s","answer: right
 token: 692, 248, 1
-time: 3.6s",
+time: 3.6s","answer: wrong (B)
+token: 261, 260, 1
+time: 0.8s"
 144,下列结构中，哪个不属于屈光装置,虹膜,晶状体,角膜,玻璃体,A,"answer: right
 token: 85, 84, 1
 time: 0.2s",,"answer: right
@@ -2461,7 +2749,9 @@ time: 1.7s","answer: right
 token: 105, 101, 4
 time: 2.7s","answer: right
 token: 543, 230, 1
-time: 2.7s",
+time: 2.7s","answer: wrong (D)
+token: 243, 242, 1
+time: 0.6s"
 145,直接注入下腔静脉的有,脾静脉,肾静脉,肠系膜下静脉,左睾丸静脉,B,"answer: right
 token: 93, 87, 6
 time: 0.3s",,"answer: right
@@ -2478,7 +2768,9 @@ time: 1.5s","answer: right
 token: 111, 107, 4
 time: 2.9s","answer: right
 token: 606, 236, 1
-time: 2.9s",
+time: 2.9s","answer: right
+token: 249, 248, 1
+time: 0.8s"
 146,听觉中枢位于,角回,颞横回,中央前回,中央后回,B,"answer: right
 token: 80, 79, 1
 time: 0.2s",,"answer: right
@@ -2495,7 +2787,9 @@ time: 1.5s","answer: right
 token: 94, 90, 4
 time: 3.1s","answer: right
 token: 365, 228, 1
-time: 2.1s",
+time: 2.1s","answer: right
+token: 241, 240, 1
+time: 0.7s"
 147,上呼吸道最狭窄处是,鼻后孔,喉口,前庭裂,声门裂,D,"answer: right
 token: 89, 82, 7
 time: 0.2s",,"answer: right
@@ -2512,4 +2806,6 @@ time: 1.5s","answer: right
 token: 103, 99, 4
 time: 2.8s","answer: right
 token: 478, 228, 1
-time: 2.9s",
+time: 2.9s","answer: right
+token: 241, 240, 1
+time: 0.7s"

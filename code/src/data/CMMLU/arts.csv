@@ -15,7 +15,9 @@ time: 0.8s","answer: right
 token: 110, 106, 4
 time: 1.8s","answer: right
 token: 533, 232, 1
-time: 3.7s",
+time: 3.7s","answer: right
+token: 245, 244, 1
+time: 0.6s"
 1,挪威剧作家易卜生的《玩偶之家》从题材内容来看属于,社会问题剧,史诗剧,童话剧,宗教剧,A,"answer: right
 token: 96, 95, 1
 time: 0.2s",,"answer: right
@@ -32,7 +34,9 @@ time: 1.6s","answer: right
 token: 121, 117, 4
 time: 1.7s","answer: right
 token: 505, 239, 1
-time: 2.9s",
+time: 2.9s","answer: right
+token: 252, 251, 1
+time: 0.6s"
 2,《红字》的作者是美国作家,奥尼尔,福克纳,爱默生,霍桑,D,"answer: right
 token: 88, 87, 1
 time: 0.2s",,"answer: right
@@ -49,7 +53,9 @@ time: 0.7s","answer: right
 token: 102, 98, 4
 time: 2.4s","answer: right
 token: 372, 228, 1
-time: 1.6s",
+time: 1.6s","answer: right
+token: 241, 240, 1
+time: 0.9s"
 3,艺术作品通过广播、网络等形式进行传播，属于,现场表演传播,展览性传播,口头传播,大众传播,D,"answer: right
 token: 97, 91, 6
 time: 0.2s",,"answer: right
@@ -66,7 +72,9 @@ time: 0.7s","answer: right
 token: 113, 109, 4
 time: 2.3s","answer: right
 token: 416, 233, 1
-time: 2.0s",
+time: 2.0s","answer: right
+token: 246, 245, 1
+time: 0.8s"
 4,在西方，首次较有系统地阐述艺术起源于模仿的理论家是,苏格拉底,康德,贺拉斯,亚里士多德,D,"answer: right
 token: 101, 93, 8
 time: 0.3s",,"answer: right
@@ -83,7 +91,9 @@ time: 0.8s","answer: right
 token: 120, 116, 4
 time: 2.4s","answer: right
 token: 669, 240, 1
-time: 4.1s",
+time: 4.1s","answer: right
+token: 253, 252, 1
+time: 0.8s"
 5,在我国近代，提出我手写我口、'我口写我心，提倡诗界革命的人是,黄遵宪,龚自珍,魏源,蔡元培,A,"answer: right
 token: 101, 100, 1
 time: 0.2s",,"answer: right
@@ -100,7 +110,9 @@ time: 1.7s","answer: right
 token: 123, 119, 4
 time: 2.6s","answer: right
 token: 588, 246, 1
-time: 3.2s",
+time: 3.2s","answer: right
+token: 259, 258, 1
+time: 0.7s"
 6,电视剧《京华烟云》根据同名小说改编，原作作者是,沈从文,林语堂,周作人,老舍,B,"answer: right
 token: 95, 94, 1
 time: 0.2s",,"answer: right
@@ -117,7 +129,9 @@ time: 1.0s","answer: right
 token: 111, 107, 4
 time: 1.5s","answer: right
 token: 504, 237, 1
-time: 2.6s",
+time: 2.6s","answer: right
+token: 250, 249, 1
+time: 0.7s"
 7,梵高是哪个国家著名画家。,英国,丹麦,荷兰,法国,C,"answer: right
 token: 80, 79, 1
 time: 0.2s",,"answer: right
@@ -134,7 +148,9 @@ time: 1.3s","answer: right
 token: 98, 94, 4
 time: 2.4s","answer: right
 token: 348, 223, 1
-time: 1.4s",
+time: 1.4s","answer: right
+token: 236, 235, 1
+time: 0.8s"
 8,提出境界论的近代文艺理论家是,鲁迅,曹雪芹,王国维,刘熙载,C,"answer: right
 token: 86, 85, 1
 time: 0.2s",,,"answer: right
@@ -149,7 +165,9 @@ time: 0.7s","answer: right
 token: 106, 102, 4
 time: 2.3s","answer: right
 token: 471, 230, 1
-time: 2.4s",
+time: 2.4s","answer: right
+token: 243, 242, 1
+time: 0.6s"
 9,被定义为“主体感受生活、欣赏艺术、体验和孕育意象的敏锐性和悟性”的是,艺术敏感,艺术想象力,艺术灵感,艺术技巧,A,"answer: right
 token: 104, 103, 1
 time: 0.4s",,"answer: right
@@ -166,7 +184,9 @@ time: 0.9s","answer: right
 token: 137, 133, 4
 time: 2.6s","answer: right
 token: 541, 245, 1
-time: 2.9s",
+time: 2.9s","answer: right
+token: 258, 257, 1
+time: 0.7s"
 10,长鼓舞是下列哪一个民族的舞蹈,鄂伦春族,满族,蒙古族,朝鲜族,D,"answer: right
 token: 91, 86, 5
 time: 0.3s",,"answer: right
@@ -183,7 +203,9 @@ time: 1.1s","answer: right
 token: 113, 109, 4
 time: 2.3s","answer: wrong (B)
 token: 437, 230, 1
-time: 2.3s",
+time: 2.3s","answer: wrong (B)
+token: 243, 242, 1
+time: 0.8s"
 11,《巴黎圣母院》的建筑形式属于,拜占庭式建筑,哥特式建筑,罗马式建筑,拉丁式建筑,B,"answer: right
 token: 95, 94, 1
 time: 0.2s",,"answer: right
@@ -200,7 +222,9 @@ time: 1.5s","answer: right
 token: 121, 117, 4
 time: 1.8s","answer: right
 token: 442, 235, 1
-time: 2.5s",
+time: 2.5s","answer: right
+token: 248, 247, 1
+time: 0.6s"
 12,我国著名的瓷都是,山东淄博,江苏宜兴,江西景德镇,广东石湾,C,"answer: right
 token: 85, 84, 1
 time: 0.2s",,"answer: right
@@ -217,7 +241,9 @@ time: 1.2s","answer: right
 token: 105, 101, 4
 time: 1.7s","answer: right
 token: 404, 229, 1
-time: 1.7s",
+time: 1.7s","answer: right
+token: 242, 241, 1
+time: 0.8s"
 13,模仿说的合理性在于,始终注重艺术的情感性因素,始终抓住艺术与现实世界的关系,始终肯定人的主体因素,始终强调艺术的形式因素,B,"answer: right
 token: 101, 100, 1
 time: 0.3s",,"answer: right
@@ -234,7 +260,9 @@ time: 1.5s","answer: right
 token: 134, 130, 4
 time: 2.7s","answer: right
 token: 508, 240, 1
-time: 2.4s",
+time: 2.4s","answer: right
+token: 253, 252, 1
+time: 0.8s"
 14,齐白石的中国画《蛙声十里出山泉》描写的是,树蛙,牛蛙,青蛙,蝌蚪,C,"answer: wrong (D)
 token: 96, 90, 6
 time: 0.3s",,"answer: wrong (D)
@@ -251,7 +279,9 @@ time: 0.8s","answer: wrong (D)
 token: 115, 111, 4
 time: 2.3s","answer: wrong (D)
 token: 2247, 240, 1
-time: 16.8s",
+time: 16.8s","answer: right
+token: 253, 252, 1
+time: 0.7s"
 15,民族舞剧《丝路花雨》中“反弹琵琶”的动作设计来源于,阿细跳月,维吾尔舞蹈,秧歌,敦煌壁画,D,"answer: right
 token: 97, 96, 1
 time: 0.2s",,"answer: right
@@ -268,7 +298,9 @@ time: 1.0s","answer: right
 token: 131, 127, 4
 time: 1.8s","answer: right
 token: 569, 244, 1
-time: 2.8s",
+time: 2.8s","answer: right
+token: 257, 256, 1
+time: 0.8s"
 16,贺拉斯最重要的美学著作是,《诗学》,《诗品》,《美学》,《诗艺》,D,"answer: right
 token: 92, 85, 7
 time: 0.3s",,"answer: right
@@ -285,7 +317,9 @@ time: 0.8s","answer: right
 token: 107, 103, 4
 time: 1.6s","answer: right
 token: 395, 227, 1
-time: 2.2s",
+time: 2.2s","answer: right
+token: 240, 239, 1
+time: 0.7s"
 17,《人间喜剧》的作者是,巴尔扎克,狄更斯,托尔斯泰,雨果,A,"answer: right
 token: 85, 84, 1
 time: 0.2s",,"answer: right
@@ -302,7 +336,9 @@ time: 1.6s","answer: right
 token: 106, 102, 4
 time: 2.4s","answer: right
 token: 406, 228, 1
-time: 1.8s",
+time: 1.8s","answer: right
+token: 241, 240, 1
+time: 0.7s"
 18,《亚威农少女》是（）绘画的代表作品。,野兽派,立体主义,达达主义,抽象主义,B,"answer: right
 token: 90, 89, 1
 time: 0.2s",,"answer: right
@@ -319,7 +355,9 @@ time: 1.5s","answer: right
 token: 109, 105, 4
 time: 2.5s","answer: right
 token: 453, 233, 1
-time: 2.1s",
+time: 2.1s","answer: right
+token: 246, 245, 1
+time: 0.7s"
 19,1886年创作的青铜圆雕《加莱义民》的作者是,意大利多纳太罗,法国罗丹,法国贝尼尼,意大利米开朗基罗,B,"answer: right
 token: 108, 107, 1
 time: 0.2s",,"answer: right
@@ -336,7 +374,9 @@ time: 1.4s","answer: right
 token: 129, 125, 4
 time: 2.4s","answer: right
 token: 472, 246, 1
-time: 2.4s",
+time: 2.4s","answer: right
+token: 259, 258, 1
+time: 0.8s"
 20,我国古代著名绘画作品《洛神赋图》的作者是,张择端,展子虔,顾恺之,阎立本,C,"answer: right
 token: 97, 91, 6
 time: 0.3s",,"answer: right
@@ -353,7 +393,9 @@ time: 0.8s","answer: right
 token: 111, 107, 4
 time: 2.7s","answer: right
 token: 508, 238, 1
-time: 2.6s",
+time: 2.6s","answer: right
+token: 251, 250, 1
+time: 0.7s"
 21,《蓝色多瑙河圆舞曲》的作者是是奥地利作曲家,李斯特,贝多芬,约翰•施特劳斯,巴赫,C,"answer: right
 token: 97, 96, 1
 time: 0.2s",,"answer: right

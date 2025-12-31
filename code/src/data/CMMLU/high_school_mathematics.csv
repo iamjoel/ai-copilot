@@ -905,7 +905,9 @@ time: 0.2s",,,"answer: right
 token: 4943, 102, 4841
 time: 17.3s",,,,"answer: right
 token: 740, 108, 632
-time: 4.8s",,,
+time: 4.8s",,"answer: wrong (C)
+token: 13531, 245, 1
+time: 98.4s",
 101,"已知集合$A=\left\{ (x,y)|x^{2}+y^{^{2}}\le 3,x\in Z,y\in Z \right\}$，则A中元素的个数为",9,5,4,8,A,"answer: right
 token: 116, 115, 1
 time: 0.3s",,,"answer: right

@@ -509,7 +509,9 @@ time: 0.3s",,,"answer: wrong (C)
 token: 110, 109, 1
 time: 0.7s",,,,"answer: right
 token: 656, 130, 526
-time: 4.5s",,,
+time: 4.5s",,"answer: right
+token: 10293, 259, 1
+time: 84.4s",
 57,起重机将质量为m的货物以恒定的加速度a竖直吊起，在上升⾼度h的过程中起重机对货物所做的功等于,m(g-a)h,m(g＋a)h,mah,mgh,B,"answer: right
 token: 107, 106, 1
 time: 0.2s",,,"answer: right
@@ -759,7 +761,9 @@ time: 0.2s",,,"answer: wrong (B)
 token: 144, 143, 1
 time: 0.8s",,,,"answer: wrong (A)
 token: 610, 199, 411
-time: 3.7s",,,
+time: 3.7s",,"answer: wrong (B)
+token: 6444, 304, 3
+time: 54.1s",
 85,⼀束单⾊光斜射到厚平板玻璃的⼀个表⾯上，经两次折射后从玻璃板另⼀个表⾯射出，出射光线相对于⼊射光线侧移了⼀段距离。在下列情况下，出射光线侧移距离最⼤的是,紫光以45度的⼊射⻆⼊射,红光以45度的⼊射⻆⼊射,红光以30度的⼊射⻆⼊射,紫光以30度的⼊射⻆⼊射,A,"answer: right
 token: 181, 180, 1
 time: 0.2s",,,"answer: right
@@ -883,7 +887,9 @@ time: 0.4s",,,"answer: wrong (D)
 token: 175, 174, 1
 time: 0.8s",,,,"answer: wrong (A)
 token: 529, 218, 311
-time: 3.4s",,,
+time: 3.4s",,"answer: wrong (C)
+token: 4208, 325, 1
+time: 32.6s",
 99,质量10g、以0.70km/s⻜⾏的⼦弹与质量60kg、以10m/s奔跑的运动员相⽐,⼦弹的动能较⼤,⼆者的动能⼀样⼤,⽆法⽐较它们的动能,运动员的动能较⼤,D,"answer: wrong (A)
 token: 128, 127, 1
 time: 0.2s",,,"answer: wrong (A)

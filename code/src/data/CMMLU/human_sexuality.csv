@@ -1,1133 +1,1133 @@
-,Question,A,B,C,D,Answer,Qwen Flash,Qwen Plus,Qwen3 max,Gemini 2.5 Flash Lite,Gemini 3 Flash,Gemini 3 Pro,Claude Sonnet 4.5,Claude Haiku 4.5,Claude Opus 4.5
+,Question,A,B,C,D,Answer,Qwen Flash,Qwen Plus,Qwen3 max,Gemini 2.5 Flash Lite,Gemini 3 Flash,Gemini 3 Pro,Claude Sonnet 4.5,Claude Haiku 4.5,Claude Opus 4.5,Grok 4.1 Fast Reasoning,Grok 4.1 Fast Non Reasoning
 0,下列选项不属于女性在生理上的三个特别时期的是,怀孕与哺乳期,月经期,绝经期,青春期,B,"answer: wrong (D)
 token: 89, 88, 1
 time: 0.2s",,,"answer: wrong (A)
 token: 84, 83, 1
-time: 0.7s","answer: wrong (D)
-token: 1686, 83, 1
-time: 10.9s",,,"answer: wrong (D)
+time: 0.7s",,,,"answer: wrong (D)
 token: 273, 110, 163
-time: 2.3s",
+time: 2.3s",,"answer: wrong (D)
+token: 536, 237, 1
+time: 3.0s",
 1,下列选项不属于中国古代性文化的典型特征的是,零散,多元化、碎片化,非中心化,系统的,D,"answer: right
 token: 94, 88, 6
 time: 0.4s",,,"answer: right
 token: 82, 81, 1
-time: 0.8s","answer: right
-token: 427, 81, 1
-time: 3.2s",,,"answer: right
+time: 0.8s",,,,"answer: right
 token: 110, 106, 4
-time: 1.5s",
+time: 1.5s",,"answer: right
+token: 649, 231, 1
+time: 5.8s",
 2,“文明建基于对性的压抑，压抑过分则造成现代人的神经症。”,弗洛伊德,林赛,马尔库赛,金西,A,"answer: right
 token: 93, 92, 1
 time: 0.2s",,,"answer: right
 token: 89, 88, 1
-time: 0.7s","answer: right
-token: 480, 88, 1
-time: 3.8s",,,"answer: wrong (C)
+time: 0.7s",,,,"answer: wrong (C)
 token: 213, 115, 98
-time: 1.6s",
+time: 1.6s",,"answer: right
+token: 589, 238, 1
+time: 3.9s",
 3,儿童在性游戏中,学习性活动,满足性欲望,学习和模仿成人榜样,享受性快感,C,"answer: right
 token: 97, 88, 9
 time: 0.3s",,,"answer: right
 token: 80, 79, 1
-time: 0.7s","answer: right
-token: 372, 79, 1
-time: 2.7s",,,"answer: right
+time: 0.7s",,,,"answer: right
 token: 108, 104, 4
-time: 0.7s",
+time: 0.7s",,"answer: right
+token: 579, 232, 1
+time: 2.8s",
 4,关于大学生性自慰行为，下列表述不正确的是,自慰方式要合理。,正确对待自慰：你不自慰，也可以很快乐，并不是每个人都自慰。,性自慰是一种正常现象，不妨碍日常生活作息，对健康无害，可以无节制而为。,自慰是一种个人隐私。要在安全的环境下进行，也不要对他人构成骚扰或攻击。,C,"answer: right
 token: 140, 139, 1
 time: 0.2s",,,"answer: right
 token: 142, 141, 1
-time: 0.7s","answer: right
-token: 501, 141, 1
-time: 3.1s",,,"answer: right
+time: 0.7s",,,,"answer: right
 token: 349, 209, 140
-time: 1.9s",
+time: 1.9s",,"answer: right
+token: 579, 286, 1
+time: 2.3s",
 5,关于心理学的性压抑理论的观点，下列表述错误的是,所有性压抑都是好的,性欲望是一种生命能量,社会人对金钱、权力的追求实质上是性欲望得不到满足的替代形式,当性欲望被压抑时，会寻找替代出口,A,"answer: right
 token: 117, 116, 1
 time: 0.2s",,,"answer: right
 token: 114, 113, 1
-time: 0.7s","answer: right
-token: 450, 113, 1
-time: 3.0s",,,"answer: right
+time: 0.7s",,,,"answer: right
 token: 531, 163, 368
-time: 3.1s",
+time: 3.1s",,"answer: right
+token: 519, 263, 1
+time: 2.4s",
 6,人的精神结构与心理发展的三维度不包括,自我认同,关系发展动力,性驱力,自我力量,A,"answer: wrong (C)
 token: 89, 83, 6
 time: 0.6s",,,"answer: wrong (C)
 token: 81, 80, 1
-time: 0.8s","answer: right
-token: 728, 80, 1
-time: 4.4s",,,"answer: wrong (C)
+time: 0.8s",,,,"answer: wrong (C)
 token: 108, 104, 4
-time: 0.8s",
+time: 0.8s",,"answer: wrong (C)
+token: 1347, 231, 1
+time: 9.7s",
 7,下列关于爱情的相关描述中，错误的是,爱情是在男女之间产生的，在狭义上，爱情不包括同性恋,是在个体心理达到相对成熟时产生的,爱情是一种感情，其中包括认知的成分，不等于低级的情绪,爱情不包括性欲和性感的成分，是一种纯粹的精神之爱。,D,"answer: right
 token: 132, 131, 1
 time: 0.3s",,,"answer: right
 token: 127, 126, 1
-time: 0.7s","answer: right
-token: 576, 126, 1
-time: 3.7s",,,"answer: right
+time: 0.7s",,,,"answer: right
 token: 273, 190, 83
-time: 1.4s",
+time: 1.4s",,"answer: right
+token: 761, 273, 1
+time: 4.0s",
 8,两性心理学侧重强调研究的是男女天然性生理构造差异所带来的成长性心理反映与,行为反映,性格反映,认知反映,气质反映,A,"answer: right
 token: 101, 95, 6
 time: 0.2s",,,"answer: right
 token: 90, 89, 1
-time: 0.7s","answer: right
-token: 448, 89, 1
-time: 3.7s",,,"answer: right
+time: 0.7s",,,,"answer: right
 token: 125, 121, 4
-time: 1.4s",
+time: 1.4s",,"answer: right
+token: 1446, 241, 1
+time: 9.7s",
 9,生理学差异性构架不同的男女因应性生理反映的性成熟有着各自特异的,心理段,时间段,年龄段,行为段,C,"answer: right
 token: 100, 94, 6
 time: 0.2s",,,"answer: wrong (B)
 token: 89, 88, 1
-time: 0.7s","answer: right
-token: 376, 88, 1
-time: 2.6s",,,"answer: right
+time: 0.7s",,,,"answer: right
 token: 117, 113, 4
-time: 1.8s",
+time: 1.8s",,"answer: right
+token: 643, 238, 1
+time: 3.4s",
 10,个体生物学性状的男女，既包括生物性个体也包括,文化性群体,社会性群体,认知性群体,生物性群体,D,"answer: wrong (A)
 token: 92, 91, 1
 time: 0.2s",,,"answer: wrong (B)
 token: 86, 85, 1
-time: 0.3s","answer: right
-token: 660, 85, 1
-time: 4.3s",,,"answer: wrong (B)
+time: 0.3s",,,,"answer: wrong (B)
 token: 114, 110, 4
-time: 0.8s",
+time: 0.8s",,"answer: right
+token: 943, 237, 1
+time: 6.1s",
 11,少女性发育早于少男，教育中应,限制少女的交友,保护少女不受性刺激,以性教育促进少女的全面发展,控制少女与异性的接触,C,"answer: right
 token: 97, 96, 1
 time: 0.2s",,,"answer: right
 token: 93, 92, 1
-time: 0.8s","answer: right
-token: 321, 92, 1
-time: 2.2s",,,"answer: right
+time: 0.8s",,,,"answer: right
 token: 126, 122, 4
-time: 2.5s",
+time: 2.5s",,"answer: right
+token: 491, 245, 1
+time: 2.9s",
 12,以下哪个不属于青少年期的主要特征与发展任务,智利发展的高峰期,开始掌握书面语言,生理、心理发展不平衡,自我同一性形成,B,"answer: right
 token: 91, 90, 1
 time: 0.3s",,,"answer: right
 token: 91, 90, 1
-time: 0.7s","answer: right
-token: 514, 90, 0
-time: 3.4s",,,"answer: right
+time: 0.7s",,,,"answer: right
 token: 281, 126, 155
-time: 1.6s",
+time: 1.6s",,"answer: right
+token: 541, 241, 1
+time: 2.8s",
 13,社会生活中的生物学男女最终反映为社会文化设定的,社会学男女,生物学男女,文化学男女,人类学男女,A,"answer: wrong (C)
 token: 93, 88, 5
 time: 0.3s",,,"answer: right
 token: 83, 82, 1
-time: 0.4s","answer: right
-token: 393, 82, 1
-time: 2.4s",,,"answer: wrong (C)
+time: 0.4s",,,,"answer: wrong (C)
 token: 115, 111, 4
-time: 0.8s",
+time: 0.8s",,"answer: right
+token: 886, 236, 1
+time: 6.2s",
 14,对于卵巢黄体形成与退化，下列哪项叙述不恰当,黄体的寿命平均14天,黄体衰退后雌激素、孕激素水平降至最低，月经来潮,排卵后7～8天黄体成熟,排卵后14～16天，黄体完成其退化全过程，形成白体,D,"answer: right
 token: 134, 133, 1
 time: 0.2s",,,"answer: wrong (B)
 token: 132, 131, 1
-time: 0.7s","answer: right
-token: 2128, 131, 1
-time: 12.0s",,,"answer: wrong (A)
+time: 0.7s",,,,"answer: wrong (A)
 token: 487, 173, 314
-time: 2.9s",
+time: 2.9s",,"answer: right
+token: 3034, 281, 1
+time: 22.0s",
 15,性别歧视者常犯的错误是以偏盖全，过分强调,社会性差别,心理性差别,环境差别,生理性差别,D,"answer: right
 token: 96, 91, 5
 time: 0.3s",,,"answer: right
 token: 85, 84, 1
-time: 0.6s","answer: right
-token: 340, 84, 1
-time: 2.4s",,,"answer: right
+time: 0.6s",,,,"answer: right
 token: 115, 111, 4
-time: 0.7s",
+time: 0.7s",,"answer: right
+token: 534, 238, 1
+time: 2.7s",
 16,性关系就是成长中的男女双方在社会化生活世界中经由交互作用而产生的价值观念与行为型态,链接关系,组合关系,分离关系,依附关系,A,"answer: wrong (D)
 token: 105, 99, 6
 time: 0.3s",,,"answer: right
 token: 94, 93, 1
-time: 0.7s","answer: right
-token: 704, 93, 1
-time: 4.5s",,,"answer: wrong (C)
+time: 0.7s",,,,"answer: wrong (C)
 token: 129, 125, 4
-time: 0.8s",
+time: 0.8s",,"answer: right
+token: 2342, 245, 1
+time: 16.9s",
 17,婚姻、恋爱及家庭构建是男女生长发展中最绕不过的,现代化主题,社会化主题,社会学主题,心理学主题,B,"answer: right
 token: 104, 97, 7
 time: 0.4s",,,"answer: right
 token: 84, 83, 1
-time: 0.5s","answer: right
-token: 605, 83, 1
-time: 4.1s",,,"answer: right
+time: 0.5s",,,,"answer: right
 token: 121, 117, 4
-time: 0.9s",
+time: 0.9s",,"answer: right
+token: 599, 236, 1
+time: 3.2s",
 18,下列哪项检查不提示排卵,阴道脱落细胞检查有较多的中层细胞和角化前细胞,宫颈黏液检查有羊齿状结晶,BBT呈双相,卵巢内有黄体形成,B,"answer: right
 token: 110, 109, 1
 time: 0.2s",,,"answer: wrong (A)
 token: 108, 107, 1
-time: 1.0s","answer: right
-token: 1765, 107, 1
-time: 10.3s",,,"answer: wrong (A)
+time: 1.0s",,,,"answer: wrong (A)
 token: 632, 142, 490
-time: 4.6s",
+time: 4.6s",,"answer: wrong (A)
+token: 3989, 258, 1
+time: 29.7s",
 19,相信性别是永久的而不管年龄、行为或外貌发生什么变化是（）的概念,性别认同,性别刻板定型,性别恒常性,性差别主义,C,"answer: right
 token: 109, 101, 8
 time: 0.3s",,,"answer: right
 token: 95, 94, 1
-time: 0.4s","answer: right
-token: 329, 94, 0
-time: 2.0s",,,"answer: right
+time: 0.4s",,,,"answer: right
 token: 127, 123, 4
-time: 0.9s",
+time: 0.9s",,"answer: right
+token: 482, 245, 1
+time: 2.1s",
 20,关于自性简单来说就是对自己身体的抚慰，下列关于自性的说法不正确的是,老年期没有自我取悦的快感,“泡脚”都是自我关怀和悦纳的方法,自性是懂得如何关爱和取悦自己,人一生的头15-20年都是自我性欲,A,"answer: right
 token: 128, 127, 1
 time: 0.2s",,,"answer: wrong (D)
 token: 123, 122, 1
-time: 0.7s","answer: right
-token: 801, 122, 1
-time: 5.0s",,,"answer: right
+time: 0.7s",,,,"answer: right
 token: 463, 169, 294
-time: 2.7s",
+time: 2.7s",,"answer: right
+token: 1657, 271, 1
+time: 11.6s",
 21,性教育是,青春期教育,婚前教育,对儿童的教育,终身教育,D,"answer: right
 token: 87, 81, 6
 time: 0.3s",,,"answer: right
 token: 75, 74, 1
-time: 0.6s","answer: right
-token: 330, 74, 1
-time: 2.2s",,,"answer: right
+time: 0.6s",,,,"answer: right
 token: 147, 93, 54
-time: 1.3s",
+time: 1.3s",,"answer: right
+token: 453, 224, 1
+time: 2.6s",
 22,青年期常见的性心理障碍不包括,窥阴癖,同性恋,恋物癖,露阴癖,B,"answer: right
 token: 89, 88, 1
 time: 0.3s",,,"answer: right
 token: 80, 79, 1
-time: 0.6s","answer: right
-token: 500, 79, 0
-time: 3.3s",,,"answer: right
+time: 0.6s",,,,"answer: right
 token: 163, 103, 60
-time: 1.1s",
+time: 1.1s",,"answer: right
+token: 494, 234, 1
+time: 2.6s",
 23,性别角色发展最容易受家庭因素影响的时期是,婴儿期,幼儿期,老年期,青春期,B,"answer: right
 token: 96, 90, 6
 time: 0.3s",,,"answer: right
 token: 81, 80, 1
-time: 0.7s","answer: right
-token: 447, 80, 1
-time: 3.3s",,,"answer: right
+time: 0.7s",,,,"answer: right
 token: 109, 105, 4
-time: 1.0s",
+time: 1.0s",,"answer: right
+token: 483, 231, 1
+time: 3.0s",
 24,以下哪种障碍不属于性心理障碍,恋物癖,易性癖,阳痿,窥阴癖,C,"answer: right
 token: 85, 84, 1
 time: 0.2s",,,"answer: wrong (B)
 token: 80, 79, 1
-time: 0.7s","answer: right
-token: 411, 79, 1
-time: 2.6s",,,"answer: right
+time: 0.7s",,,,"answer: right
 token: 233, 104, 129
-time: 1.5s",
+time: 1.5s",,"answer: right
+token: 697, 235, 1
+time: 3.7s",
 25,“十月怀胎”，是从母亲最后一次经期来计算的，这个时间约有,266天,280天,305天,300天,B,"answer: right
 token: 103, 96, 7
 time: 0.2s",,,"answer: right
 token: 96, 95, 1
-time: 0.7s","answer: right
-token: 379, 95, 1
-time: 2.3s",,,"answer: right
+time: 0.7s",,,,"answer: right
 token: 110, 106, 4
-time: 0.7s",
+time: 0.7s",,"answer: right
+token: 563, 237, 1
+time: 3.7s",
 26,大学生中需要一种有效的生活态度，有效意味着我们要跟生活定一个重要等级，以下最重要的是,体验一段美好的爱情,建立亲密关系,建立良好人际关系能力,大学学习与发展职业能力,D,"answer: right
 token: 106, 105, 1
 time: 0.2s",,,"answer: right
 token: 101, 100, 1
-time: 0.7s","answer: right
-token: 394, 100, 1
-time: 2.5s",,,"answer: right
+time: 0.7s",,,,"answer: right
 token: 153, 149, 4
-time: 0.9s",
+time: 0.9s",,"answer: right
+token: 528, 252, 1
+time: 2.5s",
 27,（）指的是对自己的生理性别强烈不满意。,异装癖,性变态,性别认同障碍,恋物癖,C,"answer: right
 token: 91, 84, 7
 time: 0.3s",,,"answer: right
 token: 83, 82, 1
-time: 0.6s","answer: right
-token: 420, 82, 1
-time: 2.8s",,,"answer: right
+time: 0.6s",,,,"answer: right
 token: 110, 106, 4
-time: 1.1s",
+time: 1.1s",,"answer: right
+token: 371, 235, 1
+time: 2.1s",
 28,婚姻里，往往因为距离太近彼此的缺点暴露无遗，因而也失去了与对方沟通的,行为动力,心理认知,基本情感,良好愿望,D,"answer: wrong (A)
 token: 107, 101, 6
 time: 0.3s",,,"answer: wrong (C)
 token: 91, 90, 1
-time: 0.6s","answer: right
-token: 1867, 90, 1
-time: 11.5s",,,"answer: right
+time: 0.6s",,,,"answer: right
 token: 130, 126, 4
-time: 1.2s",
+time: 1.2s",,"answer: right
+token: 642, 239, 1
+time: 3.5s",
 29,一个人生理上发育成熟，必然对性爱产生正常的欲望，这种欲望得到合理的满足，有利于人的,身心健康,心理健康,体魄健康,生理健康,A,"answer: right
 token: 97, 96, 1
 time: 0.3s",,,"answer: right
 token: 91, 90, 1
-time: 0.9s","answer: right
-token: 397, 90, 1
-time: 2.6s",,,"answer: right
+time: 0.9s",,,,"answer: right
 token: 241, 130, 111
-time: 1.9s",
+time: 1.9s",,"answer: right
+token: 504, 241, 1
+time: 2.7s",
 30,下列选项不属于50-80年代中期中国性文化表现的是,各种书籍、影视畏“性”如虎,关于“婚外恋”、“性生活”等一类词出现,不允许穿“奇装异服”，只穿中山服，长裙,服饰颜色主要是黑、白、灰、军绿、兰,B,"answer: right
 token: 132, 131, 1
 time: 0.3s",,,"answer: right
 token: 128, 127, 1
-time: 0.7s","answer: right
-token: 715, 127, 1
-time: 3.9s",,,"answer: wrong (A)
+time: 0.7s",,,,"answer: wrong (A)
 token: 599, 174, 425
-time: 3.6s",
+time: 3.6s",,"answer: right
+token: 613, 275, 1
+time: 3.4s",
 31,手淫,是人类标准的性行为方式之一,促进少年性心理发展,有害身体健康,影响少年健康成长,A,"answer: right
 token: 84, 83, 1
 time: 0.2s",,,"answer: wrong (B)
 token: 80, 79, 1
-time: 0.4s","answer: right
-token: 453, 79, 1
-time: 3.2s",,,"answer: right
+time: 0.4s",,,,"answer: right
 token: 111, 107, 4
-time: 1.0s",
+time: 1.0s",,"answer: right
+token: 575, 231, 1
+time: 3.3s",
 32,下面哪项为雌激素的生理作用,抑制输卵管平滑肌节律性收缩的振幅,降低循环中胆固醇水平,通过中枢神经系统产生升温作用,使宫颈口闭合,B,"answer: right
 token: 102, 101, 1
 time: 0.3s",,,"answer: wrong (A)
 token: 105, 104, 1
-time: 0.7s","answer: right
-token: 642, 104, 1
-time: 3.4s",,,"answer: wrong (A)
+time: 0.7s",,,,"answer: wrong (A)
 token: 600, 141, 459
-time: 4.4s",
+time: 4.4s",,"answer: right
+token: 831, 257, 1
+time: 5.4s",
 33,未婚同居是当事人的私生活选择,会受到严厉惩罚,彼此不需承担义务,不会遭遇侵权,不受法律保护,D,"answer: right
 token: 94, 88, 6
 time: 0.3s",,,"answer: right
 token: 88, 87, 1
-time: 0.6s","answer: right
-token: 541, 87, 1
-time: 3.8s",,,"answer: right
+time: 0.6s",,,,"answer: right
 token: 121, 117, 4
-time: 0.8s",
+time: 0.8s",,"answer: right
+token: 697, 234, 1
+time: 3.7s",
 34,理想的婚姻、恋爱及家庭构建，是一项绝对个体化的,历史演进工程,文化创意工程,社会建设工程,心理组合工程,D,"answer: right
 token: 101, 94, 7
 time: 0.3s",,,"answer: right
 token: 86, 85, 1
-time: 0.8s","answer: wrong (B)
-token: 863, 85, 1
-time: 5.6s",,,"answer: wrong (C)
+time: 0.8s",,,,"answer: wrong (C)
 token: 125, 121, 4
-time: 0.8s",
+time: 0.8s",,"answer: right
+token: 497, 239, 1
+time: 2.7s",
 35,美国金塞提出的性取向的计分法为,1-7级,0-5级,0-6级,1-5级,C,"answer: right
 token: 100, 93, 7
 time: 0.3s",,,"answer: right
 token: 88, 87, 1
-time: 0.8s","answer: right
-token: 279, 87, 0
-time: 1.6s",,,"answer: right
+time: 0.8s",,,,"answer: right
 token: 104, 100, 4
-time: 0.7s",
+time: 0.7s",,"answer: right
+token: 445, 239, 1
+time: 2.0s",
 36,初潮即,少女结婚,少女的第一次月经,表明少女性发育成熟,表明少女开始排卵,B,"answer: right
 token: 87, 86, 1
 time: 0.2s",,,"answer: right
 token: 80, 79, 1
-time: 0.6s","answer: right
-token: 271, 79, 1
-time: 2.5s",,,"answer: right
+time: 0.6s",,,,"answer: right
 token: 164, 104, 60
-time: 1.2s",
+time: 1.2s",,"answer: right
+token: 528, 231, 1
+time: 2.7s",
 37,颗粒细胞上有,睾酮,孕烯醇酮,LH受体,FSH受体,D,"answer: right
 token: 86, 80, 6
 time: 0.3s",,,"answer: right
 token: 74, 73, 1
-time: 0.7s","answer: right
-token: 681, 73, 1
-time: 4.2s",,,"answer: right
+time: 0.7s",,,,"answer: right
 token: 99, 95, 4
-time: 1.1s",
+time: 1.1s",,"answer: right
+token: 561, 227, 1
+time: 3.3s",
 38,黄体的形成、发育和功能，描述恰当的是,分泌孕激素,维持14天左右均退化,排卵后由卵泡内膜和卵泡颗粒细胞形成,排卵后由卵泡膜形成,C,"answer: wrong (A)
 token: 110, 109, 1
 time: 0.2s",,,"answer: right
 token: 103, 102, 1
-time: 0.4s","answer: right
-token: 1917, 102, 1
-time: 12.8s",,,"answer: wrong (A)
+time: 0.4s",,,,"answer: wrong (A)
 token: 533, 143, 390
-time: 3.4s",
+time: 3.4s",,"answer: right
+token: 887, 255, 1
+time: 4.7s",
 39,空巢综合症发生在,第一断乳期,中年期,第二断乳期,老年期,B,"answer: wrong (C)
 token: 90, 83, 7
 time: 0.3s",,,"answer: wrong (C)
 token: 75, 74, 1
-time: 0.7s","answer: wrong (D)
-token: 709, 74, 1
-time: 5.0s",,,"answer: wrong (C)
+time: 0.7s",,,,"answer: wrong (C)
 token: 179, 95, 84
-time: 1.5s",
+time: 1.5s",,"answer: wrong (C)
+token: 909, 227, 1
+time: 6.1s",
 40,下面哪项不提示已排卵,宫颈黏液结晶涂片可见羊齿状结晶,卵巢内黄体形成,阴道脱落细胞涂片多为中层或角化的细胞,子宫内膜呈分泌期变化,A,"answer: right
 token: 113, 112, 1
 time: 0.2s",,,"answer: right
 token: 111, 110, 1
-time: 0.8s","answer: right
-token: 782, 110, 1
-time: 4.5s",,,"answer: right
+time: 0.8s",,,,"answer: right
 token: 490, 150, 340
-time: 7.4s",
+time: 7.4s",,"answer: right
+token: 1107, 261, 1
+time: 7.1s",
 41,我们需要建立什么样性道德是情爱双方都要思考的问题，那么我们应遵循的一般的道德标准不包括,只有获得没有给予,言行一致,洁身自好,己所不欲勿施于人,A,"answer: right
 token: 111, 110, 1
 time: 0.3s",,,"answer: right
 token: 103, 102, 1
-time: 0.7s","answer: right
-token: 472, 102, 0
-time: 3.1s",,,"answer: right
+time: 0.7s",,,,"answer: right
 token: 144, 140, 4
-time: 1.5s",
+time: 1.5s",,"answer: right
+token: 554, 253, 1
+time: 3.8s",
 42,“柏拉图式的爱情”指,无婚姻的爱与性,无性无爱的婚姻,无爱的性与婚姻,无性的爱与婚姻,D,"answer: right
 token: 101, 93, 8
 time: 0.3s",,,"answer: right
 token: 85, 84, 1
-time: 0.8s","answer: right
-token: 669, 84, 1
-time: 4.1s",,,"answer: right
+time: 0.8s",,,,"answer: right
 token: 176, 120, 56
-time: 1.2s",
+time: 1.2s",,"answer: right
+token: 834, 235, 1
+time: 4.8s",
 43,作为个体生物学性状的男女在自然构造上存在着鲜明的,遗传性差异,历史性差异,自然性差异,社会性差异,C,"answer: right
 token: 100, 94, 6
 time: 0.3s",,,"answer: wrong (A)
 token: 86, 85, 1
-time: 0.6s","answer: right
-token: 498, 85, 0
-time: 3.1s",,,"answer: right
+time: 0.6s",,,,"answer: right
 token: 119, 115, 4
-time: 0.7s",
+time: 0.7s",,"answer: right
+token: 781, 238, 1
+time: 4.9s",
 44,多数人的选择与生理和心理上的缺陷无关。其实如同婚恋自由一样，独身也是个人,兴趣,追求,爱好,自由,D,"answer: right
 token: 98, 94, 4
 time: 0.2s",,,"answer: right
 token: 87, 86, 1
-time: 0.8s","answer: right
-token: 420, 86, 1
-time: 3.3s",,,"answer: right
+time: 0.8s",,,,"answer: right
 token: 123, 119, 4
-time: 0.7s",
+time: 0.7s",,"answer: right
+token: 456, 236, 1
+time: 2.0s",
 45,关于基础体温测定，哪项不恰当,基础体温曲线能反映黄体功能,基础体温测定对助孕有利,高温相持续3周以上早孕的可能性大,基础体温能反映胚胎生长情况,D,"answer: right
 token: 112, 111, 1
 time: 0.2s",,,"answer: right
 token: 109, 108, 1
-time: 0.8s","answer: right
-token: 468, 108, 1
-time: 2.9s",,,"answer: right
+time: 0.8s",,,,"answer: right
 token: 407, 143, 264
-time: 3.9s",
+time: 3.9s",,"answer: right
+token: 692, 261, 1
+time: 4.1s",
 46,性激素的靶器官是,垂体,睾丸,卵巢,性器官,D,"answer: right
 token: 84, 79, 5
 time: 0.3s",,,"answer: right
 token: 73, 72, 1
-time: 0.7s","answer: wrong (A)
-token: 2016, 72, 1
-time: 11.8s",,,"answer: right
+time: 0.7s",,,,"answer: right
 token: 95, 91, 4
-time: 0.7s",
+time: 0.7s",,"answer: right
+token: 554, 228, 1
+time: 3.8s",
 47,某男性常以穿着异性服装来达到性欲的满足。由此可以推断该男性可能患有,露阴症,恋物症,窥阴症,异装症,D,,,,"answer: right
 token: 97, 96, 1
-time: 0.8s","answer: right
-token: 347, 96, 1
-time: 2.0s",,,"answer: right
+time: 0.8s",,,,"answer: right
 token: 123, 119, 4
-time: 0.8s",
+time: 0.8s",,"answer: right
+token: 540, 248, 1
+time: 3.1s",
 48,女性的性基因是,Ｘ,ＸＹ,Ｙ,ＸＸ,D,"answer: right
 token: 80, 75, 5
 time: 0.2s",,,"answer: right
 token: 71, 70, 1
-time: 1.0s","answer: right
-token: 233, 70, 1
-time: 1.8s",,,"answer: right
+time: 1.0s",,,,"answer: right
 token: 101, 97, 4
-time: 0.8s",
+time: 0.8s",,"answer: right
+token: 369, 228, 1
+time: 1.7s",
 49,两性亲密等级划分不包括,高级亲密,一般的亲密,低级亲密,亲密关系,C,"answer: right
 token: 86, 80, 6
 time: 0.3s",,,"answer: wrong (D)
 token: 80, 79, 1
-time: 0.7s","answer: wrong (D)
-token: 2199, 79, 1
-time: 12.7s",,,"answer: wrong (D)
+time: 0.7s",,,,"answer: wrong (D)
 token: 105, 101, 4
-time: 0.7s",
+time: 0.7s",,"answer: wrong (B)
+token: 1623, 232, 1
+time: 10.7s",
 50,青春期的发展中一个突出的特征或者说是缺陷在于,心理的发展速度大大超过了生理和社会的成熟度,生理的发展速度大大超过了心理和社会的成熟度,社会的成熟度大大超过了生理和心理的发展速度,生理、心理和社会发展同步,B,"answer: right
 token: 117, 116, 1
 time: 0.2s",,,"answer: wrong (A)
 token: 112, 111, 1
-time: 0.6s","answer: right
-token: 404, 111, 1
-time: 2.3s",,,"answer: right
+time: 0.6s",,,,"answer: right
 token: 174, 170, 4
-time: 0.7s",
+time: 0.7s",,"answer: right
+token: 520, 259, 1
+time: 2.3s",
 51,一些男子为了满足一时私欲或追求感官刺激，而把情人当作临时替补，其中不乏玩弄女性的,风流情圣,道德骗子,爱情高手,轻浮浪人,B,"answer: wrong (D)
 token: 114, 106, 8
 time: 0.3s",,,"answer: wrong (D)
 token: 100, 99, 1
-time: 0.7s","answer: right
-token: 596, 99, 1
-time: 3.8s",,,"answer: right
+time: 0.7s",,,,"answer: right
 token: 139, 135, 4
-time: 0.8s",
+time: 0.8s",,"answer: wrong (D)
+token: 700, 251, 1
+time: 3.6s",
 52,按照联合国1997年的定义，( )是一种战略，将妇女和男子的关注事项和经验作为一个整体，纳入政治、经济和社会等所有领域的政策和方针的设计、落实、监测和评估，使男女都能平等受益，中止不平等现象，最终实现男女两性平等的目标。,女性主流化,社会性别意识纳入决策主流,平权行动,女权主义,B,"answer: right
 token: 157, 147, 10
 time: 0.3s",,,"answer: wrong (A)
 token: 137, 136, 1
-time: 0.6s","answer: right
-token: 764, 136, 1
-time: 4.8s",,,"answer: right
+time: 0.6s",,,,"answer: right
 token: 207, 203, 4
-time: 0.7s",
+time: 0.7s",,"answer: right
+token: 1452, 282, 1
+time: 8.4s",
 53,出现性快感时，我们的大脑会分泌一种叫做（）的神经递质。,乙酰胆碱,去甲肾上腺素,肾上腺素,多巴胺,D,"answer: right
 token: 107, 101, 6
 time: 0.2s",,,"answer: right
 token: 96, 95, 1
-time: 0.7s","answer: right
-token: 263, 95, 1
-time: 1.8s",,,"answer: right
+time: 0.7s",,,,"answer: right
 token: 130, 126, 4
-time: 0.9s",
+time: 0.9s",,"answer: right
+token: 435, 246, 1
+time: 2.0s",
 54,心理研究表明，男女在心理上有很大差别。男人重物质，女人重感情；男人长于推理，女人做事凭直觉。两人朝夕相处，必然会产生,行为冲突,情爱冲突,心理冲突,性格冲突,C,"answer: right
 token: 119, 113, 6
 time: 0.3s",,,"answer: right
 token: 108, 107, 1
-time: 0.7s","answer: right
-token: 517, 107, 1
-time: 3.2s",,,"answer: right
+time: 0.7s",,,,"answer: right
 token: 155, 151, 4
-time: 0.9s",
+time: 0.9s",,"answer: right
+token: 491, 258, 1
+time: 2.6s",
 55,人到中年，夫妻性爱表达应当是,相知默契的最佳匹配阶段,以精神之爱替代肉欲,放弃,克制节欲为主,A,"answer: right
 token: 95, 94, 1
 time: 0.2s",,,"answer: right
 token: 87, 86, 1
-time: 0.6s","answer: right
-token: 327, 86, 1
-time: 2.8s",,,"answer: right
+time: 0.6s",,,,"answer: right
 token: 125, 121, 4
-time: 0.7s",
+time: 0.7s",,"answer: right
+token: 484, 239, 1
+time: 2.6s",
 56,我国初中语文课本中男女角色比例为,3:1,2:1,5:1,4:1,D,"answer: wrong (B)
 token: 91, 85, 6
 time: 0.3s",,,"answer: wrong (B)
 token: 84, 83, 1
-time: 0.8s","answer: wrong (B)
-token: 803, 83, 1
-time: 5.0s",,,"answer: wrong (C)
+time: 0.8s",,,,"answer: wrong (C)
 token: 100, 96, 4
-time: 1.7s",
+time: 1.7s",,"answer: wrong (C)
+token: 1207, 233, 1
+time: 8.9s",
 57,两性心理学是社会心理学大类属中四大分支研究内容的一个特异的,男女性学学科,心理学专题,社会学专题,集合研究学科,D,"answer: wrong (B)
 token: 105, 98, 7
 time: 0.3s",,,"answer: wrong (B)
 token: 91, 90, 1
-time: 0.4s","answer: wrong (B)
-token: 716, 90, 1
-time: 4.2s",,,"answer: wrong (B)
+time: 0.4s",,,,"answer: wrong (B)
 token: 123, 119, 4
-time: 0.8s",
+time: 0.8s",,"answer: wrong (B)
+token: 1442, 240, 1
+time: 8.7s",
 58,青春期少女双侧卵巢含有始基卵泡,35万个,10万个,30万个,50万个,C,"answer: right
 token: 89, 88, 1
 time: 0.2s",,,"answer: right
 token: 89, 88, 1
-time: 0.6s","answer: right
-token: 3193, 88, 1
-time: 19.0s",,,"answer: right
+time: 0.6s",,,,"answer: right
 token: 104, 100, 4
-time: 0.7s",
+time: 0.7s",,"answer: right
+token: 1310, 231, 1
+time: 8.2s",
 59,儿童性游戏其实也是一种,角色扮演,性活动,宣泄,友情,A,"answer: right
 token: 80, 79, 1
 time: 0.2s",,,"answer: right
 token: 72, 71, 1
-time: 0.7s","answer: right
-token: 420, 71, 1
-time: 2.8s",,,"answer: wrong (C)
+time: 0.7s",,,,"answer: wrong (C)
 token: 99, 95, 4
-time: 0.7s",
+time: 0.7s",,"answer: right
+token: 760, 224, 1
+time: 5.3s",
 60,恋母情结，又称奥狄浦斯情结——Oedipus comples，是指儿子亲母反父的,疏离情结,依恋情结,复合情结,复仇情结,C,"answer: right
 token: 114, 107, 7
 time: 0.3s",,,"answer: wrong (B)
 token: 103, 102, 1
-time: 0.6s","answer: right
-token: 1322, 102, 1
-time: 8.0s",,,"answer: wrong (B)
+time: 0.6s",,,,"answer: wrong (B)
 token: 129, 125, 4
-time: 0.9s",
+time: 0.9s",,"answer: right
+token: 5290, 251, 1
+time: 39.2s",
 61,一夫一妻制从一开始就只是针对,被压迫阶级,女性,男性,奴隶,B,"answer: wrong (A)
 token: 84, 83, 1
 time: 0.2s",,,"answer: right
 token: 76, 75, 1
-time: 0.6s","answer: right
-token: 570, 75, 0
-time: 3.9s",,,"answer: right
+time: 0.6s",,,,"answer: right
 token: 103, 99, 4
-time: 0.7s",
+time: 0.7s",,"answer: right
+token: 632, 226, 1
+time: 3.9s",
 62,卵泡刺激素的主要作用是,促进黄体分泌雌激素和孕激素,促进排卵,促进黄体形成,促进卵泡生长发育和成熟,D,"answer: right
 token: 94, 93, 1
 time: 0.2s",,,"answer: right
 token: 91, 90, 1
-time: 1.0s","answer: right
-token: 332, 90, 1
-time: 2.0s",,,"answer: right
+time: 1.0s",,,,"answer: right
 token: 164, 125, 39
-time: 0.9s",
+time: 0.9s",,"answer: right
+token: 467, 244, 1
+time: 2.8s",
 63,性别角色的发展与男女孩子认知发展的,感知度有关,成熟度有关,情感度有关,理智度有关,B,"answer: right
 token: 96, 90, 6
 time: 0.3s",,,"answer: wrong (A)
 token: 82, 81, 1
-time: 0.8s","answer: right
-token: 376, 81, 1
-time: 2.8s",,,"answer: right
+time: 0.8s",,,,"answer: right
 token: 111, 107, 4
-time: 1.1s",
+time: 1.1s",,"answer: right
+token: 600, 232, 1
+time: 3.4s",
 64,会化男女角色存在的事实，还决定着作为社会学性状的男女，在社会组织运动中会自觉不自觉地发展演进为一支具有明显社会化权利诉求的性别,文化力量队伍,创意力量队伍,政治力量队伍,经济力量队伍,C,"answer: right
 token: 123, 116, 7
 time: 0.3s",,,"answer: right
 token: 114, 113, 1
-time: 0.4s","answer: right
-token: 455, 113, 1
-time: 3.3s",,,"answer: right
+time: 0.4s",,,,"answer: right
 token: 402, 162, 240
-time: 2.7s",
+time: 2.7s",,"answer: right
+token: 768, 262, 1
+time: 4.5s",
 65,美国心理学家斯滕伯格（Robert J. Sternberg）的爱情三角理论认为所有的爱情不包括,激情,亲密,承诺,理想,D,"answer: right
 token: 102, 96, 6
 time: 0.3s",,,"answer: right
 token: 88, 87, 1
-time: 0.7s","answer: right
-token: 221, 87, 1
-time: 1.5s",,,"answer: right
+time: 0.7s",,,,"answer: right
 token: 123, 119, 4
-time: 0.7s",
+time: 0.7s",,"answer: right
+token: 644, 240, 1
+time: 3.0s",
 66,一切性刺激必需经过（）的“社会认知”才能做出反应,脑这一最高控制中枢,性激素,生殖器官,感觉器官,A,"answer: right
 token: 93, 92, 1
 time: 0.2s",,,"answer: right
 token: 87, 86, 1
-time: 0.6s","answer: right
-token: 404, 86, 1
-time: 2.8s",,,"answer: right
+time: 0.6s",,,,"answer: right
 token: 241, 117, 124
-time: 2.0s",
+time: 2.0s",,"answer: right
+token: 485, 240, 1
+time: 2.4s",
 67,马斯洛的需求层次理论中最著名的概念是,生理需要,自我,自我实现,超我,C,"answer: right
 token: 87, 82, 5
 time: 0.3s",,,"answer: right
 token: 76, 75, 1
-time: 0.6s","answer: right
-token: 333, 75, 1
-time: 2.1s",,,"answer: right
+time: 0.6s",,,,"answer: right
 token: 104, 100, 4
-time: 0.7s",
+time: 0.7s",,"answer: right
+token: 474, 227, 1
+time: 2.1s",
 68,性别歧视者的中心主张是,男性优越于女性,性别偏扭,女性优越于男性,性别偏见,B,"answer: wrong (D)
 token: 95, 88, 7
 time: 0.3s",,,"answer: wrong (A)
 token: 83, 82, 1
-time: 0.5s","answer: wrong (A)
-token: 730, 82, 1
-time: 4.3s",,,"answer: wrong (A)
+time: 0.5s",,,,"answer: wrong (A)
 token: 109, 105, 4
-time: 1.2s",
+time: 1.2s",,"answer: wrong (A)
+token: 881, 234, 1
+time: 5.3s",
 69,从理论上讲中年性爱表达应当是,熟悉、刻板,逐步减少,最佳匹配期,迅速减少,C,"answer: right
 token: 93, 87, 6
 time: 0.2s",,,"answer: right
 token: 81, 80, 1
-time: 1.0s","answer: right
-token: 431, 80, 1
-time: 3.1s",,,"answer: right
+time: 1.0s",,,,"answer: right
 token: 113, 109, 4
-time: 0.9s",
+time: 0.9s",,"answer: right
+token: 674, 231, 1
+time: 4.2s",
 70,在社会心理层面，青年的性困惑主要表现在哪些方面？,以上全都是,性心理的压抑性,男女性心理的差异性,性心理的动荡性,A,"answer: right
 token: 96, 95, 1
 time: 0.2s",,,"answer: right
 token: 93, 92, 1
-time: 0.7s","answer: right
-token: 346, 92, 1
-time: 2.2s",,,"answer: right
+time: 0.7s",,,,"answer: right
 token: 128, 124, 4
-time: 2.1s",
+time: 2.1s",,"answer: right
+token: 559, 245, 1
+time: 2.8s",
 71,心理的矛盾性表现不包含,生理需要与社会规范的矛盾,生理成熟与心理不适的矛盾,传统性观念与开放性观念的矛盾,男女两性性心理的矛盾,D,"answer: right
 token: 102, 101, 1
 time: 0.2s",,,"answer: right
 token: 98, 97, 1
-time: 0.6s","answer: right
-token: 875, 97, 1
-time: 5.7s",,,"answer: wrong (A)
+time: 0.6s",,,,"answer: wrong (A)
 token: 432, 138, 294
-time: 2.4s",
+time: 2.4s",,"answer: right
+token: 583, 249, 1
+time: 3.4s",
 72,2016年10月28日，北京大学燕园博思心理咨询中心等机构发布了首部《中国大学生恋爱白皮书》，该调查显示：恋爱，已经成为大学生的必修课。中国在校大学生3559万，其中有过恋爱经历的比例高达,80%,50%,60%,70%,A,"answer: right
 token: 131, 130, 1
 time: 0.2s",,,"answer: wrong (D)
 token: 139, 138, 1
-time: 0.7s","answer: right
-token: 699, 138, 1
-time: 4.2s",,,"answer: wrong (D)
+time: 0.7s",,,,"answer: wrong (D)
 token: 177, 173, 4
-time: 0.7s",
+time: 0.7s",,"answer: wrong (D)
+token: 640, 271, 3
+time: 2.9s",
 73,事实证明，大多数婚姻危机的根源不是没有爱，而是不能以对方所能接受的方式表达爱。所以，男士们为了弄清楚妻子到底需要什么，应该学一点,女性心理学,社会心理学,爱情心理学,两性心理学,A,"answer: wrong (D)
 token: 120, 114, 6
 time: 0.3s",,,"answer: wrong (D)
 token: 111, 110, 1
-time: 0.9s","answer: right
-token: 929, 110, 1
-time: 5.7s",,,"answer: right
+time: 0.9s",,,,"answer: right
 token: 433, 160, 273
-time: 2.8s",
+time: 2.8s",,"answer: wrong (D)
+token: 926, 256, 1
+time: 5.2s",
 74,男孩性早熟认定的年龄是,九岁前开始性发育,没有正确答案,十岁前开始性发育,八岁前开始性发育,A,"answer: wrong (D)
 token: 103, 94, 9
 time: 0.3s",,,"answer: wrong (D)
 token: 86, 85, 1
-time: 0.8s","answer: right
-token: 245, 85, 1
-time: 1.8s",,,"answer: wrong (D)
+time: 0.8s",,,,"answer: wrong (D)
 token: 119, 115, 4
-time: 0.8s",
+time: 0.8s",,"answer: right
+token: 491, 240, 1
+time: 2.6s",
 75,()主要指的是：老人们快乐、满足、幸福地度过老化这个时期，在生理、心理和社会等方面都感到相对适应。,心老身不老,成功的老化,不成功的老化,身老心不老,B,"answer: right
 token: 109, 103, 6
 time: 0.6s",,,"answer: right
 token: 103, 102, 1
-time: 0.7s","answer: right
-token: 431, 102, 1
-time: 2.7s",,,"answer: right
+time: 0.7s",,,,"answer: right
 token: 142, 138, 4
-time: 0.9s",
+time: 0.9s",,"answer: right
+token: 501, 254, 1
+time: 2.4s",
 76,（）指的是与作为男人或作为女人相关联的行为、动机和态度等因素，也就是与作为男人或作为一个女人相关联的社会角色。,性别角色,职业角色,舞台角色,性角色,A,"answer: right
 token: 105, 104, 1
 time: 0.3s",,,"answer: right
 token: 99, 98, 1
-time: 0.7s","answer: right
-token: 655, 98, 0
-time: 4.0s",,,"answer: right
+time: 0.7s",,,,"answer: right
 token: 142, 138, 4
-time: 0.8s",
+time: 0.8s",,"answer: right
+token: 500, 247, 1
+time: 2.2s",
 77,埃里克森认为，老年期的心理危机成功解决之后会形成的品质是,智慧,坦然,博爱,关怀,A,"answer: right
 token: 96, 90, 6
 time: 0.3s",,,"answer: right
 token: 83, 82, 1
-time: 0.4s","answer: right
-token: 489, 82, 1
-time: 2.7s",,,"answer: right
+time: 0.4s",,,,"answer: right
 token: 198, 109, 89
-time: 1.7s",
+time: 1.7s",,"answer: right
+token: 524, 233, 1
+time: 3.1s",
 78,有关男女的两性心理学研究最突出的是,应用社会心理学研究,应用社会学研究,应用心理学研究,应用理论心理学研究,A,"answer: wrong (C)
 token: 99, 92, 7
 time: 0.3s",,,"answer: wrong (C)
 token: 85, 84, 1
-time: 0.6s","answer: right
-token: 503, 84, 1
-time: 3.6s",,,"answer: wrong (C)
+time: 0.6s",,,,"answer: wrong (C)
 token: 121, 117, 4
-time: 0.7s",
+time: 0.7s",,"answer: right
+token: 1293, 235, 1
+time: 8.7s",
 79,第三性征主要是指男女的社会性别，其影响因素不包括,社会不同要求,性别刻板文化,基因遗传,父母教养方式,C,"answer: right
 token: 97, 96, 1
 time: 0.2s",,,"answer: right
 token: 87, 86, 1
-time: 0.6s","answer: right
-token: 400, 86, 1
-time: 3.0s",,,"answer: right
+time: 0.6s",,,,"answer: right
 token: 120, 116, 4
-time: 0.9s",
+time: 0.9s",,"answer: right
+token: 578, 237, 1
+time: 3.4s",
 80,性生理性别的决定在于,性激素,性腺,Ｙ染色体,Ｘ染色体,C,"answer: right
 token: 88, 81, 7
 time: 0.3s",,,"answer: right
 token: 74, 73, 1
-time: 0.7s","answer: right
-token: 341, 73, 1
-time: 2.6s",,,"answer: right
+time: 0.7s",,,,"answer: right
 token: 102, 98, 4
-time: 0.7s",
+time: 0.7s",,"answer: right
+token: 460, 232, 1
+time: 2.0s",
 81,两性心理学特别研究现代社会中作为个体社会学性状的男女其集群性心理裹胁所带来的性族群的流变性社会化,机构运动,时尚运动,群体运动,个体运动,C,"answer: right
 token: 109, 102, 7
 time: 0.3s",,,"answer: right
 token: 101, 100, 1
-time: 0.7s","answer: wrong (B)
-token: 575, 100, 0
-time: 3.7s",,,"answer: right
+time: 0.7s",,,,"answer: right
 token: 139, 135, 4
-time: 0.7s",
+time: 0.7s",,"answer: right
+token: 1270, 252, 1
+time: 8.2s",
 82,性激素影响男性的,攻击性,父性,智慧性,亲和性,A,"answer: right
 token: 82, 81, 1
 time: 0.2s",,,"answer: right
 token: 73, 72, 1
-time: 0.5s","answer: right
-token: 423, 72, 1
-time: 3.3s",,,"answer: right
+time: 0.5s",,,,"answer: right
 token: 146, 90, 56
-time: 1.4s",
+time: 1.4s",,"answer: right
+token: 429, 226, 1
+time: 2.2s",
 83,大学生性心理发展特点不包括,拘谨与羞涩，患得患失,易于被本能驱使,性意识萌芽,文饰性强,C,"answer: right
 token: 95, 94, 1
 time: 0.2s",,,"answer: wrong (B)
 token: 91, 90, 1
-time: 0.7s","answer: right
-token: 595, 90, 0
-time: 4.2s",,,"answer: wrong (A)
+time: 0.7s",,,,"answer: wrong (A)
 token: 480, 115, 365
-time: 4.1s",
+time: 4.1s",,"answer: right
+token: 512, 242, 1
+time: 2.5s",
 84,提出“需求层次论”的人本主义心理学家是,罗洛梅,罗杰斯,弗兰克,马斯洛,D,"answer: right
 token: 91, 90, 1
 time: 0.2s",,,"answer: right
 token: 84, 83, 1
-time: 1.1s","answer: right
-token: 293, 83, 0
-time: 2.0s",,,"answer: right
+time: 1.1s",,,,"answer: right
 token: 113, 109, 4
-time: 1.3s",
+time: 1.3s",,"answer: right
+token: 433, 234, 1
+time: 10.0s",
 85,如果早年父母把女孩当男孩养，给男孩梳小辫，穿裙子，可能会造成孩子心理性别混乱，说明早年养育有一种,晕轮效应,异性效应,印刻效应,期望效应,C,"answer: wrong (D)
 token: 110, 105, 5
 time: 0.3s",,,"answer: right
 token: 103, 102, 1
-time: 0.6s","answer: right
-token: 817, 102, 1
-time: 4.9s",,,"answer: right
+time: 0.6s",,,,"answer: right
 token: 343, 144, 199
-time: 2.9s",
+time: 2.9s",,"answer: wrong (D)
+token: 672, 254, 1
+time: 3.8s",
 86,下列选项对同性爱的表述不正确的是,同性恋形成与早年生活遭遇有关,同性爱是一种自我性选择权,同性爱者不会有异性恋,大部分同性爱会发展出双性恋色彩,C,"answer: right
 token: 112, 111, 1
 time: 0.2s",,,"answer: right
 token: 107, 106, 1
-time: 0.7s","answer: right
-token: 6059, 106, 1
-time: 38.7s",,,"answer: wrong (A)
+time: 0.7s",,,,"answer: wrong (A)
 token: 516, 145, 371
-time: 3.5s",
+time: 3.5s",,"answer: right
+token: 3346, 255, 1
+time: 33.9s",
 87,人类对性欲产生依赖的主要因素不包括,环境因素,遗传因素,心理因素,生理因素,B,"answer: wrong (A)
 token: 87, 86, 1
 time: 0.2s",,,"answer: right
 token: 78, 77, 1
-time: 0.7s","answer: right
-token: 691, 77, 1
-time: 4.4s",,,"answer: wrong (A)
+time: 0.7s",,,,"answer: wrong (A)
 token: 398, 104, 294
-time: 3.0s",
+time: 3.0s",,"answer: right
+token: 866, 229, 1
+time: 13.6s",
 88,性周期的调节叙述不正确的是,排卵前雌激素水平达高峰,排卵在下次月经前14天,黄体萎缩，雌、孕激素量急剧减少,雌激素使子宫内膜呈分泌期变化,D,"answer: right
 token: 111, 110, 1
 time: 0.2s",,,"answer: right
 token: 108, 107, 1
-time: 0.7s","answer: right
-token: 604, 107, 1
-time: 3.6s",,,"answer: wrong (A)
+time: 0.7s",,,,"answer: wrong (A)
 token: 536, 147, 389
-time: 3.7s",
+time: 3.7s",,"answer: right
+token: 573, 266, 1
+time: 2.9s",
 89,儿童的性别身份发展具有阶段性，性别特质表达的紊乱期是在,5岁以后,5岁以前,14-18岁,20岁成年,C,"answer: wrong (A)
 token: 98, 97, 1
 time: 0.3s",,,"answer: right
 token: 94, 93, 1
-time: 0.7s","answer: wrong (B)
-token: 639, 93, 1
-time: 4.4s",,,"answer: wrong (B)
+time: 0.7s",,,,"answer: wrong (B)
 token: 123, 119, 4
-time: 0.7s",
+time: 0.7s",,"answer: wrong (B)
+token: 746, 243, 1
+time: 15.1s",
 90,性心理的核心内容是,性兴奋,性情感,性兴趣,性意识,D,"answer: right
 token: 81, 76, 5
 time: 0.3s",,,"answer: right
 token: 69, 68, 1
-time: 0.7s","answer: right
-token: 413, 68, 1
-time: 2.9s",,,"answer: wrong (B)
+time: 0.7s",,,,"answer: wrong (B)
 token: 97, 93, 4
-time: 1.5s",
+time: 1.5s",,"answer: right
+token: 526, 224, 1
+time: 2.9s",
 91,两性心理学同时也侧重强调研究男女社会文化角色构造差异所带来的社会化性心理与,性意识反映,性行为反映,性活动反映,性生理反映,B,"answer: wrong (A)
 token: 94, 93, 1
 time: 0.2s",,,"answer: right
 token: 90, 89, 1
-time: 0.4s","answer: right
-token: 562, 89, 1
-time: 3.4s",,,"answer: right
+time: 0.4s",,,,"answer: right
 token: 130, 126, 4
-time: 0.8s",
+time: 0.8s",,"answer: wrong (D)
+token: 685, 245, 1
+time: 10.6s",
 92,择偶的()理论的基本假说是：在配偶选择中，每个人都在他或她的合适人选的范围内寻找伴侣，后者给他或她的最大限度的需要满足提供了最可靠的保证。,互补需要,价值,交换,角色,A,"answer: wrong (C)
 token: 112, 108, 4
 time: 0.2s",,,"answer: wrong (C)
 token: 110, 109, 1
-time: 0.7s","answer: right
-token: 563, 109, 1
-time: 3.6s",,,"answer: right
+time: 0.7s",,,,"answer: right
 token: 413, 152, 261
-time: 3.1s",
+time: 3.1s",,"answer: wrong (C)
+token: 761, 259, 1
+time: 10.0s",
 93,女性体内少量的雄性刺激由（）分泌,肾上腺,子宫,卵巢,乳房,C,"answer: wrong (A)
 token: 86, 85, 1
 time: 0.2s",,,"answer: wrong (A)
 token: 78, 77, 1
-time: 0.6s","answer: wrong (A)
-token: 812, 77, 1
-time: 5.4s",,,"answer: right
+time: 0.6s",,,,"answer: right
 token: 106, 102, 4
-time: 1.0s",
+time: 1.0s",,"answer: wrong (A)
+token: 703, 230, 1
+time: 11.5s",
 94,女性与男性心理特点具有明显差异性，通常情况下，女性心理特点不包括,被了解,被尊重,被依赖,被关心,C,"answer: right
 token: 101, 95, 6
 time: 0.3s",,,"answer: right
 token: 82, 81, 1
-time: 0.6s","answer: right
-token: 768, 81, 0
-time: 5.5s",,,"answer: right
+time: 0.6s",,,,"answer: right
 token: 118, 114, 4
-time: 0.7s",
+time: 0.7s",,"answer: right
+token: 539, 232, 1
+time: 2.8s",
 95,美国金塞提出的性取向的计分法中0分代表,素质性同性恋,自我不和谐同性恋,绝对异性恋,双性恋,C,"answer: right
 token: 106, 99, 7
 time: 0.3s",,,"answer: right
 token: 91, 90, 1
-time: 0.6s","answer: right
-token: 379, 90, 1
-time: 2.5s",,,"answer: right
+time: 0.6s",,,,"answer: right
 token: 120, 116, 4
-time: 0.8s",
+time: 0.8s",,"answer: right
+token: 505, 243, 1
+time: 9.4s",
 96,违愿是指违背自己的意愿而发生性关系，下列表述不属于违愿的是,因为感激而发生情爱,两个相爱的人为发展婚姻关系而发生情爱,性知识匮乏情况下而发生情爱,为了获得利益而发生情爱,B,"answer: right
 token: 115, 114, 1
 time: 0.2s",,,"answer: wrong (A)
 token: 113, 112, 1
-time: 0.5s","answer: right
-token: 1010, 112, 1
-time: 6.4s",,,"answer: right
+time: 0.5s",,,,"answer: right
 token: 425, 160, 265
-time: 2.8s",
+time: 2.8s",,"answer: right
+token: 511, 264, 1
+time: 7.6s",
 97,中年期的生理变化中有一个重要的特征，那就是,精力旺盛,衰老,发育成熟,更年期,D,"answer: right
 token: 89, 84, 5
 time: 0.3s",,,"answer: right
 token: 80, 79, 1
-time: 0.7s","answer: right
-token: 466, 79, 1
-time: 3.0s",,,"answer: right
+time: 0.7s",,,,"answer: right
 token: 110, 106, 4
-time: 1.0s",
+time: 1.0s",,"answer: right
+token: 520, 230, 1
+time: 3.1s",
 98,属于性健康的话题的是,体形,手淫,性功能失调,流产,D,"answer: wrong (C)
 token: 84, 78, 6
 time: 0.3s",,,"answer: wrong (C)
 token: 73, 72, 1
-time: 0.6s","answer: wrong (C)
-token: 8255, 72, 0
-time: 49.7s",,,"answer: wrong (C)
+time: 0.6s",,,,"answer: wrong (C)
 token: 94, 90, 4
-time: 1.8s",
+time: 1.8s",,"answer: wrong (C)
+token: 1776, 226, 1
+time: 12.7s",
 99,性别恒常性的概念在儿童的,10岁,2-3岁,4-7岁,8-9岁,C,"answer: right
 token: 94, 87, 7
 time: 0.3s",,,"answer: right
 token: 84, 83, 1
-time: 0.7s","answer: right
-token: 436, 83, 1
-time: 2.8s",,,"answer: right
+time: 0.7s",,,,"answer: right
 token: 104, 100, 4
-time: 1.3s",
+time: 1.3s",,"answer: right
+token: 837, 233, 1
+time: 9.5s",
 100,生物体生长发育到一定阶段后，能够产生与自己相似的个体，称为,生殖,发育,生长,遗传,A,"answer: right
 token: 87, 86, 1
 time: 0.2s",,,"answer: right
 token: 82, 81, 1
-time: 0.6s","answer: right
-token: 364, 81, 1
-time: 2.4s",,,"answer: right
+time: 0.6s",,,,"answer: right
 token: 112, 108, 4
-time: 1.0s",
+time: 1.0s",,"answer: right
+token: 384, 233, 1
+time: 1.7s",
 101,弗洛伊德认为的俄狄浦斯情结期指的年龄阶段是,0-1岁,4-6岁,2-4岁,6-14岁,B,"answer: right
 token: 105, 98, 7
 time: 0.3s",,,"answer: wrong (C)
 token: 96, 95, 1
-time: 0.6s","answer: right
-token: 399, 95, 1
-time: 2.8s",,,"answer: right
+time: 0.6s",,,,"answer: right
 token: 205, 118, 87
-time: 2.0s",
+time: 2.0s",,"answer: right
+token: 1008, 245, 1
+time: 11.2s",
 102,作为群体社会学性状的男女在社会心理上存在着鲜明的,人类学差异,个体性差异,文化性差异,社会性差异,D,"answer: right
 token: 98, 91, 7
 time: 0.3s",,,"answer: right
 token: 86, 85, 1
-time: 0.5s","answer: wrong (C)
-token: 950, 85, 1
-time: 7.1s",,,"answer: right
+time: 0.5s",,,,"answer: right
 token: 118, 114, 4
-time: 1.3s",
+time: 1.3s",,"answer: right
+token: 649, 238, 1
+time: 7.2s",
 103,女性性激素反馈系统与男性的差异主要在于,时间持续长短,负反馈周期性功能变化,性腺不同,激素性质不同,B,"answer: right
 token: 103, 93, 10
 time: 0.4s",,,"answer: right
 token: 85, 84, 1
-time: 0.8s","answer: right
-token: 2217, 84, 1
-time: 15.5s",,,"answer: right
+time: 0.8s",,,,"answer: right
 token: 386, 116, 270
-time: 3.8s",
+time: 3.8s",,"answer: right
+token: 625, 239, 1
+time: 5.4s",
 104,两性心理学是心理学研究体系中一个特异的生活,知识研究话题,应用研究分支,科普研究专题,实用研究学科,B,"answer: right
 token: 97, 90, 7
 time: 0.3s",,,"answer: wrong (A)
 token: 85, 84, 1
-time: 0.7s","answer: right
-token: 638, 84, 1
-time: 3.9s",,,"answer: right
+time: 0.7s",,,,"answer: right
 token: 117, 113, 4
-time: 1.6s",
+time: 1.6s",,"answer: right
+token: 626, 235, 1
+time: 3.4s",
 105,两性兼具的性别角色的体现特质主要是指独立的,两性特质,中性特质,异性特质,男女特质,A,"answer: right
 token: 92, 86, 6
 time: 0.2s",,,"answer: right
 token: 86, 85, 1
-time: 0.7s","answer: wrong (D)
-token: 795, 85, 1
-time: 5.2s",,,"answer: wrong (B)
+time: 0.7s",,,,"answer: wrong (B)
 token: 110, 106, 4
-time: 1.2s",
+time: 1.2s",,"answer: right
+token: 684, 239, 1
+time: 4.3s",
 106,李子勋老师在关于“自我”的讲解中提到脂肪时所持的观点不包括,追求塑形就是想尽一切办法减少脂肪,构成大脑、神经系统、酶系统主要是脂肪,人的面容耐不耐看取决于脂肪对我们的塑形,脂肪是生命中最具灵性的组织,A,"answer: right
 token: 126, 125, 1
 time: 0.3s",,,"answer: right
 token: 122, 121, 1
-time: 0.8s","answer: right
-token: 661, 121, 1
-time: 4.3s",,,"answer: right
+time: 0.8s",,,,"answer: right
 token: 540, 183, 357
-time: 3.5s",
+time: 3.5s",,"answer: right
+token: 636, 271, 1
+time: 3.3s",
 107,韦伯的主要著作有,《社会静力学》,《新教伦理与资本主义精神》,《社会分工论》,《宗教生活的基本形式》,B,"answer: right
 token: 94, 93, 1
 time: 0.2s",,,"answer: right
 token: 90, 89, 1
-time: 0.7s","answer: right
-token: 286, 89, 1
-time: 1.6s",,,"answer: right
+time: 0.7s",,,,"answer: right
 token: 122, 118, 4
-time: 0.8s",
+time: 0.8s",,"answer: right
+token: 384, 234, 1
+time: 1.6s",
 108,两性心理学是对作为个体生物学性状的男女在社会化成长进程中所反映出来的两性心理同异演进和两性行为反映规律进行,专题研究的学问,具体分析的科学,系统研究的科学,个案研究的科学,C,"answer: right
 token: 122, 114, 8
 time: 0.3s",,,"answer: right
 token: 110, 109, 1
-time: 0.5s","answer: right
-token: 494, 109, 0
-time: 3.5s",,,"answer: right
+time: 0.5s",,,,"answer: right
 token: 153, 149, 4
-time: 2.2s",
+time: 2.2s",,"answer: right
+token: 707, 257, 1
+time: 4.0s",
 109,社会学男女的社会角色意识决定着其各自的社会化,身心发展方向,意识发展方向,文化发展方向,行为发展方向,A,"answer: wrong (D)
 token: 94, 88, 6
 time: 0.3s",,,"answer: right
 token: 85, 84, 1
-time: 0.3s","answer: wrong (D)
-token: 610, 84, 1
-time: 4.0s",,,"answer: wrong (D)
+time: 0.3s",,,,"answer: wrong (D)
 token: 118, 114, 4
-time: 2.6s",
+time: 2.6s",,"answer: wrong (D)
+token: 551, 235, 1
+time: 2.8s",
 110,胎儿在外型上可以分辨男女，形成第一性征的时期是,胚胎26周,胚胎10-16周,胚胎第1-3周,胚胎第5-8周,A,"answer: wrong (D)
 token: 122, 111, 11
 time: 0.3s",,,"answer: wrong (B)
 token: 104, 103, 1
-time: 0.7s","answer: wrong (B)
-token: 321, 103, 1
-time: 2.0s",,,"answer: wrong (B)
+time: 0.7s",,,,"answer: wrong (B)
 token: 130, 126, 4
-time: 2.3s",
+time: 2.3s",,"answer: wrong (B)
+token: 808, 254, 1
+time: 5.2s",
 111,对于雌激素的生理作用，哪项是不恰当的,有助于卵巢积储胆固醇,促进钠与水的排泄,促使子宫发育并使子宫收缩力增强,加强输卵管节律性收缩的振幅,B,"answer: wrong (C)
 token: 107, 106, 1
 time: 0.2s",,,"answer: wrong (A)
 token: 112, 111, 1
-time: 0.7s","answer: right
-token: 707, 111, 1
-time: 4.1s",,,"answer: wrong (A)
+time: 0.7s",,,,"answer: wrong (A)
 token: 419, 147, 272
-time: 3.4s",
+time: 3.4s",,"answer: right
+token: 972, 262, 1
+time: 6.2s",
 112,自我意识性别与生物学性别不一致，称为,同性恋,性取向障碍,性偏好障碍,性认同障碍,D,"answer: right
 token: 92, 86, 6
 time: 0.3s",,,"answer: right
 token: 83, 82, 1
-time: 0.9s","answer: right
-token: 314, 82, 1
-time: 2.3s",,,"answer: right
+time: 0.9s",,,,"answer: right
 token: 113, 109, 4
-time: 1.6s",
+time: 1.6s",,"answer: right
+token: 443, 235, 1
+time: 2.0s",
 113,男性优于女性的是,自信心,艺术能力,移情能力,语言推理,A,"answer: right
 token: 78, 77, 1
 time: 0.2s",,,"answer: right
 token: 73, 72, 1
-time: 0.6s","answer: right
-token: 724, 72, 1
-time: 4.7s",,,"answer: right
+time: 0.6s",,,,"answer: right
 token: 96, 92, 4
-time: 1.8s",
+time: 1.8s",,"answer: right
+token: 656, 225, 1
+time: 4.3s",
 114,更年期妇女卵巢主要分泌,孕激素,雌激素,催乳素,雄激素,B,"answer: right
 token: 85, 79, 6
 time: 0.3s",,,"answer: right
 token: 77, 76, 1
-time: 0.6s","answer: wrong (D)
-token: 1006, 76, 1
-time: 6.3s",,,"answer: right
+time: 0.6s",,,,"answer: right
 token: 292, 99, 193
-time: 3.1s",
+time: 3.1s",,"answer: wrong (D)
+token: 460, 232, 1
+time: 2.5s",
 115,以下不是心理学的性压抑理论的是,所有性压抑都是好的,社会人对金钱、权力的追求实质上是性欲望得不到满足的替代形式,当性欲望被压抑时，会寻找替代出口,性欲望是一种生命能量,A,"answer: right
 token: 112, 111, 1
 time: 0.2s",,,"answer: right
 token: 108, 107, 1
-time: 0.6s","answer: right
-token: 515, 107, 0
-time: 3.3s",,,"answer: right
+time: 0.6s",,,,"answer: right
 token: 159, 155, 4
-time: 2.1s",
+time: 2.1s",,"answer: right
+token: 559, 258, 1
+time: 2.8s",
 116,（）提出了“恋母情结”、“恋父情结”,罗伯特·默顿,弗洛伊德,涂尔干,霍华德·贝克,B,"answer: right
 token: 99, 98, 1
 time: 0.2s",,,"answer: right
 token: 93, 92, 1
-time: 0.7s","answer: right
-token: 325, 92, 1
-time: 2.3s",,,"answer: right
+time: 0.7s",,,,"answer: right
 token: 120, 116, 4
-time: 0.9s",
+time: 0.9s",,"answer: right
+token: 524, 241, 1
+time: 2.5s",
 117,形成依恋的关键时期是,儿童中期,婴幼儿期,儿童晚期,儿童早期,B,"answer: right
 token: 93, 86, 7
 time: 0.3s",,,"answer: right
 token: 74, 73, 1
-time: 0.5s","answer: right
-token: 499, 73, 1
-time: 3.3s",,,"answer: right
+time: 0.5s",,,,"answer: right
 token: 106, 102, 4
-time: 1.4s",
+time: 1.4s",,"answer: right
+token: 431, 227, 1
+time: 2.0s",
 118,性别角色的形成是模仿的结果，这是哪个学派的观点,认知心理学,行为主义,精神分析,人本主义,B,"answer: right
 token: 96, 90, 6
 time: 0.2s",,,"answer: right
 token: 84, 83, 1
-time: 0.3s","answer: right
-token: 507, 83, 0
-time: 3.1s",,,"answer: right
+time: 0.3s",,,,"answer: right
 token: 114, 110, 4
-time: 0.9s",
+time: 0.9s",,"answer: right
+token: 542, 231, 1
+time: 3.0s",
 119,天元性构造的两性生理学差异性构架决定了男女身心发展存在着客观的,差异性,同异性,同一性,统一性,A,"answer: right
 token: 94, 93, 1
 time: 0.2s",,,"answer: right
 token: 90, 89, 1
-time: 0.7s","answer: right
-token: 437, 89, 1
-time: 2.6s",,,"answer: right
+time: 0.7s",,,,"answer: right
 token: 115, 111, 4
-time: 0.8s",
+time: 0.8s",,"answer: right
+token: 638, 237, 1
+time: 3.8s",
 120,性特质指性别间展露出来的角色特性分布，是任何两性社会的一个,重要议题,特殊议题,突出议题,基础议题,D,"answer: right
 token: 101, 94, 7
 time: 0.3s",,,"answer: right
 token: 90, 89, 1
-time: 0.5s","answer: right
-token: 525, 89, 1
-time: 3.3s",,,"answer: right
+time: 0.5s",,,,"answer: right
 token: 118, 114, 4
-time: 1.4s",
+time: 1.4s",,"answer: right
+token: 520, 241, 1
+time: 2.8s",
 121,强奸属于,性目的异常,性方法异常,性欲望异常,性能力异常,A,"answer: right
 token: 84, 78, 6
 time: 0.3s",,,"answer: wrong (B)
 token: 72, 71, 1
-time: 0.4s","answer: wrong (B)
-token: 848, 71, 1
-time: 5.8s",,,"answer: wrong (B)
+time: 0.4s",,,,"answer: wrong (B)
 token: 200, 94, 106
-time: 1.9s",
+time: 1.9s",,"answer: wrong (B)
+token: 510, 226, 1
+time: 3.6s",
 122,皮亚杰两性心理发展动力理论中，个体运用已有的图式来理解新事物，以加强和丰富已有的图式，这一过程被皮亚杰称为,平衡,同化,不平衡,顺应,B,"answer: right
 token: 112, 107, 5
 time: 0.2s",,,"answer: right
 token: 103, 102, 1
-time: 0.7s","answer: right
-token: 539, 102, 1
-time: 3.0s",,,"answer: right
+time: 0.7s",,,,"answer: right
 token: 144, 140, 4
-time: 4.4s",
+time: 4.4s",,"answer: right
+token: 531, 252, 1
+time: 3.0s",
 123,联合国提出预防性病的“ABC”原则不包括,安全套：安全套对于防治性病和艾滋病，是非常有效的方法,接受性教育：科学防范性病。,节制欲望：青少年最好避免过早性行为,忠诚：固定性伴侣，不与陌生人发生性关系,B,"answer: right
 token: 128, 127, 1
 time: 0.2s",,,"answer: wrong (C)
 token: 124, 123, 1
-time: 0.4s","answer: right
-token: 404, 123, 1
-time: 2.5s",,,"answer: wrong (A)
+time: 0.4s",,,,"answer: wrong (A)
 token: 413, 169, 244
-time: 3.5s",
+time: 3.5s",,"answer: right
+token: 772, 271, 1
+time: 3.7s",
 124,大学生树立科学恋爱观不包括,摆正爱情的位置,提倡志同道合的爱情,懂得爱是一种责任和奉献,学习爱的技巧,D,"answer: right
 token: 96, 95, 1
 time: 0.3s",,,"answer: right
 token: 91, 90, 1
-time: 0.7s","answer: right
-token: 490, 90, 1
-time: 3.8s",,,"answer: right
+time: 0.7s",,,,"answer: right
 token: 129, 125, 4
-time: 2.3s",
+time: 2.3s",,"answer: right
+token: 459, 240, 1
+time: 2.1s",
 125,中国社会学者独立进行的社会调查始于 1923 年，是,费孝通的江村调查,毛泽东的农村阶级状况调查,陈达的民众生活费用调查,晏阳初、李景汉的河北定县调查,C,"answer: wrong (D)
 token: 118, 117, 1
 time: 0.2s",,,"answer: right
 token: 110, 109, 1
-time: 0.9s","answer: right
-token: 916, 109, 1
-time: 5.9s",,,"answer: right
+time: 0.9s",,,,"answer: right
 token: 149, 145, 4
-time: 1.1s",
+time: 1.1s",,"answer: right
+token: 753, 255, 1
+time: 4.1s",

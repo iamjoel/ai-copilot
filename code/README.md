@@ -1,4 +1,24 @@
 # AI Copilot
+
+## Table of Contents
+- [LLM capabilities](#llm-capabilities)
+  - [Prompt Engineer](#prompt-engineer)
+  - [Chat(Alpha)](#chatalpha)
+  - [Generate image(Alpha)](#generate-imagealpha)
+- [Daily](#daily)
+  - [Efficient Coding](#efficient-coding)
+- [Solution](#solution)
+  - [/scenario/quality-answer-flow](#scenarioquality-answer-flow)
+  - [/scenario/business-strategic-analysis](#scenariobusiness-strategic-analysis)
+  - [/scenario/figma-mcp](#scenariofigma-mcp)
+- [Requirements](#requirements)
+- [Getting Started](#getting-started)
+- [Useful Scripts](#useful-scripts)
+- [Resources](#resources)
+- [Code Copilot](#code-copilot)
+- [Suggest Skills](#suggest-skills)
+- [Suggest Codex Config](#suggest-codex-config)
+
 ## LLM capabilities
 ### Prompt Engineer
 Select the most suitable LLM to accomplish the task.Then debug the prompt to improve the output quality.

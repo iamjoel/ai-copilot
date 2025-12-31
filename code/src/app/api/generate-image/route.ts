@@ -1,10 +1,8 @@
 import { generateText } from "ai";
-import { createGoogleGenerativeAI, google } from "@ai-sdk/google";
-import { z } from 'zod/v3';
+import { z } from "zod/v3";
 import checkInput from "@/app/api/utils/check-input";
-import { get } from "http";
 import { getModel } from "@/lib/model-factory";
-import { image } from "@markdoc/markdoc/dist/src/schema";
+import { logger } from "@/lib/logger";
 
 export const runtime = "nodejs";
 
@@ -17,7 +15,29 @@ type Params = z.infer<typeof ParamsSchema>;
 
 const model = getModel("google", "models/gemini-2.5-flash-image");
 
+const MAX_CONCURRENT = 20;
+let activeCount = 0;
+const waitQueue: Array<() => void> = [];
+
+async function acquireSlot(): Promise<void> {
+  if (activeCount >= MAX_CONCURRENT) {
+    await new Promise<void>((resolve) => waitQueue.push(resolve));
+  }
+  activeCount += 1;
+  logger.info({ activeCount, max: MAX_CONCURRENT }, "Image generation concurrency");
+}
+
+function releaseSlot(): void {
+  activeCount = Math.max(0, activeCount - 1);
+  logger.info({ activeCount, max: MAX_CONCURRENT }, "Image generation concurrency");
+  const next = waitQueue.shift();
+  if (next) {
+    next();
+  }
+}
+
 export async function POST(req: Request) {
+  await acquireSlot();
   try {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const body: Record<string, any> = await req.json();
@@ -58,5 +78,7 @@ export async function POST(req: Request) {
       { error: "Unable to generate image right now." },
       { status: 500 },
     );
+  } finally {
+    releaseSlot();
   }
 }

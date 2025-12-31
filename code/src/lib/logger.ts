@@ -15,10 +15,10 @@ const prettyStream = pretty({
 
 const streams: StreamEntry[] = [
   { stream: prettyStream },
-  {
-    level: "info",
-    stream: pino.destination({ dest: "./logs/app.log", mkdir: true }),
-  },
+  // {
+  //   level: "info",
+  //   stream: pino.destination({ dest: "./logs/app.log", mkdir: true }),
+  // },
   {
     level: "error",
     stream: pino.destination({ dest: "./logs/error.log", mkdir: true }),

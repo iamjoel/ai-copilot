@@ -218,11 +218,16 @@ async function runWithConcurrency<T>(
   }
 
   let cursor = 0;
+  let activeCount = 0;
   const workers = Array.from({ length: Math.max(1, limit) }, async () => {
     while (cursor < items.length) {
       const current = items[cursor];
       cursor += 1;
+      activeCount += 1;
+      logger.info({ activeCount, max: limit }, "Image batch concurrency");
       await worker(current);
+      activeCount = Math.max(0, activeCount - 1);
+      logger.info({ activeCount, max: limit }, "Image batch concurrency");
     }
   });
 

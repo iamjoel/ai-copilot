@@ -1,0 +1,691 @@
+,Question,A,B,C,D,Answer,Qwen Flash,Qwen Plus,Qwen3 max,Gemini 2.5 Flash Lite,Gemini 3 Flash,Gemini 3 Pro,Claude Sonnet 4.5,Claude Haiku 4.5,Claude Opus 4.5
+0,"1. （5 分) 已知集合 $A=\{x|| x \mid \leqslant 2, x \in R\}, B=\{x \mid \sqrt{x} \leqslant 4, x \in Z\}$, 则 $A \cap B=(\quad)$","$(0,2)$","$[0,2]$","$\{0,2\}$","$\{0,1,2\}$",D,,,,"answer: wrong (A)
+token: 707, 134, 573
+time: 2.3s",,,,,
+1,"2. （5 分) 平面向量 $\vec{a}, \vec{b}$, 已知 $\vec{a}=(4,3), 2 \vec{a}+\vec{b}=， 3,18 ＼mathrm{~, ~ 则 ~} \vec{a}, \vec{b}$ 夹角 的余弦值等于 ( $)$",$\frac{8}{65}$,$-\frac{8}{65}$,$\frac{16}{65}$,$-\frac{16}{65}$,C,,,,"answer: wrong (A)
+token: 704, 166, 538
+time: 2.0s",,,,,
+2,"3. (5 分) 已知复数 $Z=\frac{\sqrt{3}+i}{(1-\sqrt{3} i)^{2}}$, 则 $|z|=(\quad)$",$\frac{1}{4}$,$\frac{1}{2}$,1,2,B,,,,"answer: right
+token: 113, 112, 1
+time: 0.8s",,,,,
+3,"4. (5 分) 曲线 $y=x^{3}-2 x+1$ 在点 $(1,0)$ 处的切线方程为（ $)$",$y=x-1$,$y=-x+1$,$y=2 x-2$,$y=-2 x+2$,A,,,,"answer: right
+token: 122, 121, 1
+time: 1.2s",,,,,
+4,"5. (5 分) 中心在原点, 焦点在 $\mathrm{x}$ 轴上的双曲线的一条渐近线经过点 $(4,2)$, 则它的离心率为 $(\quad)$",$\sqrt{6}$,$\sqrt{5}$,$\frac{\sqrt{6}}{2}$,$\frac{\sqrt{5}}{2}$,D,,,,"answer: wrong (A)
+token: 577, 128, 449
+time: 1.9s",,,,,
+5,"7. （5 分) 设长方体的长、宽、高分别为 $2 a 、 a 、 a$, 其顶点都在一个球面上, 则该球的表面积为 $(\quad)$",$3 \pi a^{2}$,$6 \pi a^{2}$,$12 \pi a^{2}$,$24 \pi a^{2}$,B,,,,"answer: wrong (C)
+token: 133, 132, 1
+time: 0.7s",,,,,
+6,"9. （5 分）设偶函数 $f(x)$ 满足 $f(x)=2^{x}-4(x \geqslant 0)$, 则 $\{x \mid f(x-2)>0\}=($ )",$\{x \mid x<-2$ 或 $x>4\}$,$\{x \mid x<0$ 或 $x>4\}$,$\{x \mid x<0$ 或 $x>6\}$,$\{x \mid x<-2$ 或 $x>2\}$,B,,,,"answer: wrong (A)
+token: 1003, 160, 843
+time: 3.1s",,,,,
+7,"10. (5 分) 若 $\cos \alpha=-\frac{4}{5}, \alpha$ 是第三象限的角, 则 $\sin \left(\alpha+\frac{\pi}{4}\right)=(\quad)$",$-\frac{7 \sqrt{2}}{10}$,$\frac{7 \sqrt{2}}{10}$,$\frac{\sqrt{2}}{10}$,$\frac{\sqrt{2}}{10}$,A,,,,"answer: right
+token: 776, 147, 629
+time: 2.4s",,,,,
+8,"1. （5 分）已知集合 $M=\{0,1 ， 2 ， 3 ， 4\}, N=\{1,3 ， 5\}, P=M \cap N$, 则 $P$ 的子 集共有 $(\quad)$",2 个,4 个,6 个,8 个,B,,,,"answer: right
+token: 120, 119, 1
+time: 0.6s",,,,,
+9,2. (5 分) 复数 $\frac{5 i}{1-2 i}=(\quad)$,$2-\mathrm{i}$,$1-2 \mathrm{i}$,$-2+i$,$-1+2 i$,C,,,,"answer: wrong (A)
+token: 551, 104, 447
+time: 2.3s",,,,,
+10,"3. （5 分) 下列函数中, 既是偶函数又在 $(0,+\infty)$ 上单调递增的函数是 $(\quad)$",$y=2 x^{3}$,$y=|x|+1$,$y=-x^{2}+4$,$y=2^{-|x|}$,B,,,,"answer: wrong (D)
+token: 124, 123, 1
+time: 0.4s",,,,,
+11,4. (5 分) 椭圆 $\frac{x^{2}}{16}+\frac{y^{2}}{8}=1$ 的离心率为（）,$\frac{1}{3}$,$\frac{1}{2}$,$\frac{\sqrt{3}}{3}$,$\frac{\sqrt{2}}{2}$,D,,,,"answer: wrong (C)
+token: 124, 123, 1
+time: 0.6s",,,,,
+12,"6. （5 分) 有 3 个兴趣小组, 甲、乙两位同学各自参加其中一个小组, 每位同 学参加各个小组的可能性相同, 则这两位同学参加同一个兴趣小组的概率为 ( )",$\frac{1}{3}$,$\frac{1}{2}$,$\frac{2}{3}$,$\frac{3}{4}$,A,,,,"answer: right
+token: 661, 131, 530
+time: 1.7s",,,,,
+13,"7. (5 分) 已知角 $\theta$ 的顶点与原点重合, 始边与 $\mathrm{x}$ 轴的正半轴重合, 终边在直 线 $y=2 x$ 上, 则 $\cos 2 \theta=(\quad)$",$-\frac{4}{5}$,$-\frac{3}{5}$,$\frac{3}{5}$,$\frac{4}{5}$,B,,,,"answer: wrong (C)
+token: 146, 145, 1
+time: 0.4s",,,,,
+14,"10. (5 分) 在下列区间中, 函数 $f(x)=e^{x}+4 x-3$ 的零点所在的区间为 $(\quad)$","$\left(\frac{1}{4}, \frac{1}{2}\right)$","$\left(-\frac{1}{4}, 0\right)$","$\left(0, \frac{1}{4}\right)$","$\left(\frac{1}{2}, \frac{3}{4}\right)$",A,,,,"answer: right
+token: 1254, 156, 1098
+time: 4.2s",,,,,
+15,"1. （5 分）已知集合 $A=\left\{x \mid x^{2}-x-2<0\right\}, B=\{x \mid-1<x<1\}$, 则（）",$A \subsetneq B$,$\mathrm{B} \subsetneq \mathrm{A}$,$A=B$,$A \cap B=\varnothing$,B,,,,"answer: wrong (A)
+token: 903, 130, 773
+time: 2.8s",,,,,
+16,2. (5 分) 复数 $z=\frac{-3+i}{2+i}$ 的共轭复数是（ ）,$2+i$,$2-\mathrm{i}$,$-1+i$,$-1-i$,D,,,,"answer: wrong (A)
+token: 477, 107, 370
+time: 1.9s",,,,,
+17,"8. (5 分) 平面 $\alpha$ 截球 $\mathrm{O}$ 的球面所得圆的半径为 1 , 球心 $\mathrm{O}$ 到平面 $\alpha$ 的距离为 $\sqrt{2}$ , 则此球的体积为 ( )",$\sqrt{6} \pi$,$4 \sqrt{3} \pi$,$4 \sqrt{6} \pi$,$6 \sqrt{3} \pi$,B,,,,"answer: wrong (C)
+token: 153, 152, 1
+time: 0.8s",,,,,
+18,"10. (5 分) 等轴双曲线 $C$ 的中心在原点, 焦点在 $x$ 轴上, $C$ 与抛物线 $y^{2}=16 x$ 的 准线交于点 $A$ 和点 $B,|A B|=4 \sqrt{3}$, 则 $C$ 的实轴长为（）",$\sqrt{2}$,$2 \sqrt{2}$,4,8,C,,,,"answer: wrong (B)
+token: 154, 153, 1
+time: 0.8s",,,,,
+19,"12. (5 分) 数列 $\left\{a_{n}\right\}$ 满足 $a_{n+1}+(-1){ }^{n} a_{n}=2 n-1$, 则 $\left\{a_{n}\right\}$ 的前 60 项和为 ( )",3690,3660,1845,1830,D,,,,"answer: wrong (A)
+token: 21823, 138, 21685
+time: 78.7s",,,,,
+20,"1. (5 分) 已知集合 $A=\{1,2,3,4\}, B=\left\{x \mid x=n^{2}, n \in A\right\}$, 则 $A \cap B=(\quad)$","$\{1,4\}$","$\{2,3\}$","$\{9,16\}$","$\{1,2\}$",A,,,,"answer: wrong (B)
+token: 127, 126, 1
+time: 0.7s",,,,,
+21,2. (5 分) $\frac{1+2 i}{(1-i)^{2}}=(\quad)$,$-1-\frac{1}{2} \mathrm{i}$,$-1+\frac{1}{2} \mathrm{i}$,$1+\frac{1}{2} \mathrm{i}$,$1-\frac{1}{2} \mathrm{i}$,B,,,,"answer: wrong (A)
+token: 599, 135, 464
+time: 2.5s",,,,,
+22,"3. ( 5 分) 从 $1,2,3,4$ 中任取 2 个不同的数, 则取出的 2 个数之差的绝对值 为 2 的概率是 ( $)$",$\frac{1}{2}$,$\frac{1}{3}$,$\frac{1}{4}$,$\frac{1}{6}$,B,,,,"answer: wrong (A)
+token: 794, 130, 664
+time: 3.2s",,,,,
+23,"4. (5 分) 已知双曲线 $c: \frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}=1(a>0, b>0)$ 的离心率为 $\frac{\sqrt{5}}{2}$, 则 $c$ 的渐 近线方程为 ( )",$y= \pm \frac{1}{4} x$,$y= \pm \frac{1}{3} x$,$y= \pm x$,$y= \pm \frac{1}{2} x$,D,,,,"answer: wrong (C)
+token: 685, 174, 511
+time: 2.5s",,,,,
+24,"5. (5 分) 已知命题 $p: \forall x \in R, 2^{x}<3^{x}$; 命题 $q: \exists x \in R, x^{3}=1-x^{2}$, 则下列命题 中为真命题的是 ( )",$p \wedge q$,$\neg p \wedge q$,$p \wedge \neg q$,$\neg p \wedge \neg q$,B,,,,"answer: wrong (A)
+token: 935, 150, 785
+time: 2.8s",,,,,
+25,"6. (5 分) 设首项为 1 , 公比为 $\frac{2}{3}$ 的等比数列 $\left\{a_{n}\right\}$ 的前 $n$ 项和为 $S_{n}$, 则 ( )",$S_{n}=2 a_{n}-1$,$S_{n}=3 a_{n}-2$,$S_{n}=4-3 a_{n}$,$S_{n}=3-2 a_{n}$,D,,,,"answer: right
+token: 158, 157, 1
+time: 0.6s",,,,,
+26,"10. (5 分) 已知锐角 $\triangle A B C$ 的内角 $A, B, C$ 的对边分别为 $a, b, c, 23 \cos ^{2} A+\cos 2 A=0$ , $a=7, c=6$, 则 $b=(\quad)$",10,9,8,5,D,,,,"answer: wrong (A)
+token: 2228, 136, 2092
+time: 6.8s",,,,,
+27,"1. (5 分) 已知集合 $M=\{x \mid-3<x<1, x \in R\}, N=\{-3,-2,-1,0,1\}$, 则 $M \cap N=(\quad)$","$\{-2,-1,0,1\}$","$\{-3,-2,-1,0\}$","$\{-2,-1,0\}$","$\{-3,-2,-1\}$",C,,,,"answer: right
+token: 142, 141, 1
+time: 0.7s",,,,,
+28,2. (5 分) $\left|\frac{2}{1+i}\right|=(\quad)$,$2 \sqrt{2}$,2,$\sqrt{2}$,1,C,,,,"answer: wrong (B)
+token: 95, 94, 1
+time: 0.6s",,,,,
+29,"4. (5 分) $\triangle A B C$ 的内角 $A, B, C$ 的对边分别为 $a, b, c$, 已知 $b=2, B=\frac{\pi}{6}, C=$ $\frac{\pi}{4}$, 则 $\triangle A B C$ 的面积为 $(\quad)$",$2 \sqrt{3}+2$,$\sqrt{3}+1$,$2 \sqrt{3}-2$,$\sqrt{3}-1$,B,,,,"answer: wrong (C)
+token: 159, 158, 1
+time: 0.8s",,,,,
+30,"5. (5 分) 设椭圆 C: $\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1(a>b>0)$ 的左、右焦点分别为 $F_{1} 、 F_{2}, P$ 是 C 上的点 $P F_{2} \perp F_{1} F_{2}, \angle P F_{1} F_{2}=30^{\circ}$, 则 $C$ 的离心率为 $(\quad)$",$\frac{\sqrt{6}}{6}$,$\frac{1}{3}$,$\frac{1}{2}$,$\frac{\sqrt{3}}{3}$,D,,,,"answer: wrong (C)
+token: 3357, 195, 3162
+time: 9.6s",,,,,
+31,"6. (5 分) 已知 $\sin 2 \alpha=\frac{2}{3}$, 则 $\cos ^{2}\left(\alpha+\frac{\pi}{4}\right)=(\quad)$",$\frac{1}{6}$,$\frac{1}{3}$,$\frac{1}{2}$,$\frac{2}{3}$,A,,,,"answer: wrong (C)
+token: 126, 125, 1
+time: 0.8s",,,,,
+32,"8. （5 分） 设 $a=\log _{3} 2, b=\log _{5} 2, c=\log _{2} 3$, 则（ $）$",$a>c>b$,$b>c>a$,$c>a>b$,$c>b>a$,C,,,,"answer: right
+token: 126, 125, 1
+time: 0.9s",,,,,
+33,"12. （5 分）若存在正数 $x$ 使 $2^{x}(x-a)<1$ 成立, 则 $a$ 的取值范围是（ $)$","$(-\infty,+\infty)$","$(-2,+\infty)$","$(0,+\infty)$","$(-1,+\infty)$",D,,,,"answer: wrong (A)
+token: 118, 117, 1
+time: 0.4s",,,,,
+34,"1. （5 分）已知集合 $M=\{x \mid-1<x<3\}, N=\{x \mid-2<x<1\}$, 则 $M \cap N=(\quad)$","$(-2,1)$","$(-1,1)$","$(1,3)$","$(-2,3)$",B,,,,"answer: right
+token: 119, 118, 1
+time: 0.6s",,,,,
+35,"2. (5 分) 若 $\tan \alpha>0$, 则 $(\quad)$",$\sin \alpha>0$,$\cos \alpha>0$,$\sin 2 \alpha>0$,$\cos 2 \alpha>0$,C,,,,"answer: wrong (A)
+token: 1409, 106, 1303
+time: 4.9s",,,,,
+36,"3. （5 分) 设 $z=\frac{1}{1+i}+i, \quad$ 则 $|z|=(\quad)$",$\frac{1}{2}$,$\frac{\sqrt{2}}{2}$,$\frac{\sqrt{3}}{2}$,2,B,,,,"answer: wrong (A)
+token: 788, 114, 674
+time: 3.1s",,,,,
+37,"4. (5 分）已知双曲线 $\frac{x^{2}}{a^{2}}-\frac{y^{2}}{3}=1(a>0)$ 的离心率为 2 , 则实数 $a=(\quad)$",2,$\frac{\sqrt{6}}{2}$,$\frac{\sqrt{5}}{2}$,1,D,,,,"answer: wrong (B)
+token: 128, 127, 1
+time: 0.6s",,,,,
+38,"5. （5 分) 设函数 $f(x), g(x)$ 的定义域都为 $R$, 且 $f(x)$ 是奇函数, $g(x)$ 是偶函数，则下列结论正确的是（）",$f(x) \bullet g(x)$ 是偶函数,$|f(x)| \bullet g(x)$ 是奇函数,$f(x) \bullet|g(x)|$ 是奇函数,$|f(x) \bullet g(x)|$ 是奇函数,C,,,,"answer: right
+token: 169, 168, 1
+time: 0.9s",,,,,
+39,"10. （5 分) 已知抛物线 $C: y^{2}=x$ 的焦点为 $F, A\left(x_{0}, y_{0}\right)$ 是 $C$ 上一点, $A F=\left|\frac{5}{4} x_{0}\right|$ , 则 $x_{0}=(\quad)$",1,2,4,8,A,,,,"answer: wrong (C)
+token: 1411, 139, 1272
+time: 3.0s",,,,,
+40,"12. (5 分) 已知函数 $f(x)=a x^{3}-3 x^{2}+1$, 若 $f(x)$ 存在唯一的零点 $x_{0}$, 且 $x_{0}>$ 0, 则实数 $\mathrm{a}$ 的取值范围是（ $)$","$(1,+\infty)$","$(2,+\infty)$","$(-\infty,-1)$","$(-\infty,-2)$",D,,,,"answer: wrong (A)
+token: 8683, 147, 8536
+time: 34.4s",,,,,
+41,"1. （5 分) 已知集合 $A=\{-2,0,2\}, B=\left\{x \mid x^{2}-x-2=0\right\}$, 则 $A \cap B=(\quad)$",$\varnothing$,$\{2\}$,$\{0\}$,$\{-2\}$,B,,,,"answer: wrong (A)
+token: 590, 116, 474
+time: 2.0s",,,,,
+42,2. $(5$ 分 $) \frac{1+3 i}{1-i}=(\quad)$,$1+2 \mathrm{i}$,$-1+2 i$,$1-2 i$,$-1-2 i$,B,,,,"answer: wrong (A)
+token: 105, 104, 1
+time: 0.7s",,,,,
+43,"3. （5 分) 函数 $f(x)$ 在 $x=x_{0}$ 处导数存在, 若 $p: f^{\prime}\left(x_{0}\right)=0: q: x=x_{0}$ 是 $f(x)$ 的极值点, 则 ( )",$p$ 是 $q$ 的充分必要条件,$p$ 是 $q$ 的充分条件，但不是 $q$ 的必要条件,"$p$ 是 $q$ 的必要条件, 但不是 $q$ 的充分条件","$p$ 既不是 $q$ 的充分条件, 也不是 $q$ 的必要条件",C,,,,"answer: right
+token: 193, 192, 1
+time: 0.6s",,,,,
+44,"4. （5 分）设向量 $\vec{a}, \vec{b}$ 满足 $|\vec{a}+\vec{b}|=\sqrt{10},|\vec{a}-\vec{b}|=\sqrt{6}$, 则 $\vec{a} \bullet \vec{b}=(\quad)$",1,2,3,5,A,,,,"answer: wrong (B)
+token: 129, 128, 1
+time: 1.7s",,,,,
+45,"5. (5 分) 等差数列 $\left\{a_{n}\right\}$ 的公差为 2 , 若 $a_{2}, a_{4}, a_{8}$ 成等比数列, 则 $\left\{a_{n}\right\}$ 的前 $n$ 项和 $S_{n}=(\quad)$",$n(n+1)$,$n(n-1)$,$\frac{\mathrm{n}(\mathrm{n}+1)}{2}$,$\frac{n(n-1)}{2}$,A,,,,"answer: right
+token: 1195, 164, 1031
+time: 3.5s",,,,,
+46,"7. (5 分) 正三棱柱 $A B C-A_{1} B_{1} C_{1}$ 的底面边长为 2 , 侧棱长为 $\sqrt{3}, D$ 为 $B C$ 中点, 则三棱雉 $A-B_{1} D C_{1}$ 的体积为 ( $)$",3,$\frac{3}{2}$,1,$\frac{\sqrt{3}}{2}$,C,,,,"answer: wrong (A)
+token: 7677, 153, 7524
+time: 29.1s",,,,,
+47,"10. (5 分) 设 $F$ 为抛物线 $C: y^{2}=3 x$ 的焦点, 过 $F$ 且倾斜角为 $30^{\circ}$ 的直线交于 $C$ 于 $A, B$ 两点, 则 $|A B|=$",$\frac{\sqrt{30}}{3}$,6,12,$7 \sqrt{3}$,C,,,,"answer: wrong (A)
+token: 1300, 145, 1155
+time: 3.9s",,,,,
+48,"11. （5 分) 若函数 $f(x)=k x-\ln x$ 在区间 $(1,+\infty)$ 单调递增, 则 $k$ 的取值范 围是 $(\quad)$","$(-\infty,-2]$","$(-\infty,-1]$","$[2,+\infty)$","$[1,+\infty)$",D,,,,"answer: right
+token: 1252, 124, 1128
+time: 4.5s",,,,,
+49,"1. （5 分) 已知集合 $A=\{x \mid x=3 n+2, n \in N\}, B=\{6,8,10,12,14\}$, 则集合 $A \cap$ $B$ 中元素的个数为 $(\quad)$",5,4,3,2,D,,,,"answer: wrong (C)
+token: 124, 123, 1
+time: 0.4s",,,,,
+50,"2. (5 分) 已知点 $A(0,1), B(3,2)$, 向量 $\overrightarrow{\mathrm{AC}}=(-4,-3)$, 则向量 $\overrightarrow{\mathrm{BC}}=$","$(-7,-4)$","$(7,4)$","$(-1,4)$","$(1,4)$",A,,,,"answer: right
+token: 541, 121, 420
+time: 2.1s",,,,,
+51,"3. （5 分）已知复数 $z$ 满足 $(z-1) i=1+i$, 则 $z=(\quad)$",$-2-\mathrm{i}$,$-2+i$,2- $i$,$2+i$,C,,,,"answer: wrong (B)
+token: 111, 110, 1
+time: 0.6s",,,,,
+52,"4. (5 分) 如果 3 个正整数可作为一个直角三角形三条边的边长, 则称这 3 个 数为一组勾股数. 从 $1,2,3,4,5$ 中任取 3 个不同的数, 则这 3 个数构成 一组勾股数的概率为 ( $)$",$\frac{3}{10}$,$\frac{1}{5}$,$\frac{1}{10}$,$\frac{1}{20}$,C,,,,"answer: wrong (A)
+token: 1139, 160, 979
+time: 3.6s",,,,,
+53,"5. (5 分) 已知椭圆 $E$ 的中心在坐标原点, 离心率为 $\frac{1}{2}, E$ 的右焦点与抛物线 $C$ : $y^{2}=8 x$ 的焦点重合, $A, B$ 是 $C$ 的准线与 $E$ 的两个交点, 则 $|A B|=(\quad)$",3,6,9,12,B,,,,"answer: wrong (C)
+token: 1029, 151, 878
+time: 2.5s",,,,,
+54,"7. (5 分) 已知 $\left\{a_{n}\right\}$ 是公差为 1 的等差数列, $S_{n}$ 为 $\left\{a_{n}\right\}$ 的前 $n$ 项和, 若 $S_{8}=4 S_{4}$, 则 $\mathrm{a}_{10}=(\quad)$",$\frac{17}{2}$,$\frac{19}{2}$,10,12,B,,,,"answer: wrong (A)
+token: 901, 151, 750
+time: 1.9s",,,,,
+55,"10. (5 分) 已知函数 $f(x)=\left\{\begin{array}{l}2^{x-1}-2, x \leqslant 1 \\ -\log _{2}(x+1), x>1\end{array}\right.$, 且 $f(a)=-3$, 则 $f(6-a$ )$=(\quad)$",$-\frac{7}{4}$,$-\frac{5}{4}$,$-\frac{3}{4}$,$-\frac{1}{4}$,A,,,,"answer: right
+token: 764, 161, 603
+time: 2.4s",,,,,
+56,"1. （5 分）已知集合 $A=\{x \mid-1<x<2\}, B=\{x \mid 0<x<3\}$, 则 $A \cup B=(\quad)$","$(-1,3)$","$(-1,0)$","$(0,2)$","$(2,3)$",A,,,,"answer: right
+token: 119, 118, 1
+time: 0.7s",,,,,
+57,"2. (5 分) 若为 $a$ 实数, 且 $\frac{2+a i}{1+i}=3+i$, 则 $a=(\quad)$",-4,-3,3,4,D,,,,"answer: wrong (C)
+token: 103, 102, 1
+time: 0.6s",,,,,
+58,"4. (5 分) $\vec{a}=(1,-1), \vec{b}=(-1,2)$ 则 $(2 \vec{a}+\vec{b}) \cdot \vec{a}=(\quad)$",-1,0,1,2,C,,,,"answer: right
+token: 110, 109, 1
+time: 0.7s",,,,,
+59,"5. (5 分) 已知 $S_{n}$ 是等差数列 $\left\{a_{n}\right\}$ 的前 $n$ 项和, 若 $a_{1}+a_{3}+a_{5}=3$, 则 $S_{5}=(\quad)$",5,7,9,11,A,,,,"answer: wrong (C)
+token: 124, 123, 1
+time: 0.7s",,,,,
+60,"7. (5 分) 已知三点 $A(1,0), B(0, \sqrt{3}), C(2, \sqrt{3})$ 则 $\triangle A B C$ 外接圆的 圆心到原点的距离为 ( )",$\frac{5}{3}$,$\frac{\sqrt{21}}{3}$,$\frac{2 \sqrt{5}}{3}$,$\frac{4}{3}$,B,,,,"answer: wrong (A)
+token: 1101, 146, 955
+time: 4.2s",,,,,
+61,"9. (5 分) 已知等比数列 $\left\{a_{n}\right\}$ 满足 $\left.a_{1}=\frac{1}{4}, a_{3} a_{5}=4 （ a_{4}-1\right)$, 则 $a_{2}=(\quad)$",2,1,$\frac{1}{2}$,$\frac{1}{8}$,C,,,,"answer: wrong (A)
+token: 136, 135, 1
+time: 0.5s",,,,,
+62,"12. (5 分) 设函数 $f(x)=\ln (1+|x|)-\frac{1}{1+x^{2}}$, 则使得 $f(x)>f(2 x-1)$ 成 立的 $\mathrm{x}$ 的取值范围是 ( $)$","$\left(-\infty, \frac{1}{3}\right) \cup(1,+\infty)$","$\left(\frac{1}{3}, 1\right)$","$\left(-\frac{1}{3}, \frac{1}{3}\right)$","$\left(-\infty,-\frac{1}{3},\right) \cup\left(\frac{1}{3},+\infty\right)$",B,,,,"answer: wrong (A)
+token: 5355, 199, 5156
+time: 19.6s",,,,,
+63,"1. （5 分）设集合 $A=\{1,3,5,7\}, B=\{x \mid 2 \leqslant x \leqslant 5\}$, 则 $A \cap B=(\quad)$","$\{1,3\}$","$\{3,5\}$","$\{5,7\}$","$\{1,7\}$",B,,,,"answer: wrong (A)
+token: 120, 119, 1
+time: 0.6s",,,,,
+64,"2. （5 分）设 $(1+2 i)(a+i)$ 的实部与虚部相等, 其中 $a$ 为实数, 则 $a$ 等于 $(\quad)$",-3,-2,2,3,A,,,,"answer: right
+token: 107, 106, 1
+time: 1.4s",,,,,
+65,"3. (5 分) 为美化环境, 从红、黄、白、紫 4 种颜色的花中任选 2 种花种在一 个花坛中, 余下的 2 种花种在另一个花坛中, 则红色和紫色的花不在同一花 坛的概率是 $(\quad)$",$\frac{1}{3}$,$\frac{1}{2}$,$\frac{2}{3}$,$\frac{5}{6}$,C,,,,"answer: wrong (A)
+token: 2661, 156, 2505
+time: 6.7s",,,,,
+66,"4. (5 分) $\triangle A B C$ 的内角 $A 、 B 、 C$ 的对边分别为 $a 、 b 、 c$. 已知 $a=\sqrt{5}, c=2, \cos A=$ $\frac{2}{3}$, 则 $b=(\quad)$",$\sqrt{2}$,$\sqrt{3}$,2,3,D,,,,"answer: wrong (B)
+token: 134, 133, 1
+time: 1.2s",,,,,
+67,"5. (5 分) 直线 I 经过椭圆的一个顶点和一个焦点, 若椭圆中心到 I 的距离为其 短轴长的 $\frac{1}{4}$, 则该椭圆的离心率为（）",$\frac{1}{3}$,$\frac{1}{2}$,$\frac{2}{3}$,$\frac{3}{4}$,B,,,,"answer: wrong (A)
+token: 3069, 131, 2938
+time: 12.0s",,,,,
+68,"8. （5 分） 若 $a>b>0,0<c<1$, 则（ $)$",$\log _{a} c<\log _{b} c$,$\log _{c} a<\log _{c} b$,$a^{c}<b^{c}$,$c^{a}>c^{b}$,B,,,,"answer: wrong (A)
+token: 1198, 123, 1075
+time: 3.4s",,,,,
+69,"12. (5 分) 若函数 $f(x)=x-\frac{1}{3} \sin 2 x+a \sin x$ 在 $(-\infty,+\infty)$ 单调递增, 则 $a$ 的 取值范围是 $(\quad)$","$[-1,1]$","$\left[-1, \frac{1}{3}\right]$","$\left[-\frac{1}{3}, \frac{1}{3}\right]$","$\left[-1,-\frac{1}{3}\right]$",C,,,,"answer: wrong (A)
+token: 2740, 163, 2577
+time: 8.0s",,,,,
+70,"1. （5 分）已知集合 $A=\{1,2,3\}, B=\left\{x \mid x^{2}<9\right\}$, 则 $A \cap B=（ \quad ）$","$\{-2,-1,0,1,2,3\}$","$\{-2,-1,0,1,2\}$","$\{1,2,3\}$","$\{1,2\}$",D,,,,"answer: wrong (C)
+token: 139, 138, 1
+time: 0.9s",,,,,
+71,"2. （5 分）设复数 $z$ 满足 $z+i=3-i$, 则 $\bar{z}=(\quad)$",$-1+2 i$,$1-2 i$,$3+2 i$,$3-2 i$,C,,,,"answer: wrong (A)
+token: 393, 111, 282
+time: 1.3s",,,,,
+72,"4. （5 分）体积为 8 的正方体的顶点都在同一球面上, 则该球面的表面积为（",$12 \pi$,$\frac{32}{3} \pi$,$8 \pi$,$4 \pi$,A,,,,"answer: right
+token: 559, 111, 448
+time: 1.5s",,,,,
+73,"5. (5 分) 设 $F$ 为抛物线 $C: y^{2}=4 x$ 的焦点, 曲线 $y=\frac{k}{x}(k>0)$ 与 $C$ 交于点 $P, P F$ $\perp x$ 轴, 则 $k=(\quad)$",$\frac{1}{2}$,1,$\frac{3}{2}$,2,D,,,,"answer: wrong (C)
+token: 144, 143, 1
+time: 0.8s",,,,,
+74,"6. (5 分) 圆 $x^{2}+y^{2}-2 x-8 y+13=0$ 的圆心到直线 $a x+y-1=0$ 的距离为 1 , 则 $a=($",$-\frac{4}{3}$,$-\frac{3}{4}$,$\sqrt{3}$,2,A,,,,"answer: right
+token: 861, 130, 731
+time: 2.4s",,,,,
+75,"8. (5 分) 某路口人行横道的信号灯为红灯和绿灯交替出现, 红灯持续时间为 40 秒. 若一名行人来到该路口遇到红灯, 则至少需要等待 15 秒才出现绿灯的概 率为 $(\quad)$",$\frac{7}{10}$,$\frac{5}{8}$,$\frac{3}{8}$,$\frac{3}{10}$,B,,,,"answer: wrong (A)
+token: 3167, 152, 3015
+time: 13.7s",,,,,
+76,"10. （5 分) 下列函数中, 其定义域和值域分别与函数 $y=10^{\lg x}$ 的定义域和值域相 同的是 ( )",$y=x$,$y=\lg x$,$y=2^{x}$,$y=\frac{1}{\sqrt{x}}$,D,,,,"answer: wrong (A)
+token: 843, 126, 717
+time: 2.3s",,,,,
+77,11. (5 分) 函数 $\mathrm{f}(\mathrm{x})=\cos 2 x+6 \cos \left(\frac{\pi}{2}-\mathrm{x}\right)$ 的最大值为 ( ),4,5,6,7,B,,,,"answer: wrong (C)
+token: 110, 109, 1
+time: 0.4s",,,,,
+78,"1. (5 分) 设集合 $A=\{0,2,4,6,8,10\}, B=\{4,8\}$, 则 $C_{A} B=(）$
+A. $\{4,8\}$
+B. $\{0,2,6\}$
+C. $\{0,2,6,10\}$ D. $\{0,2,4,6,8,10\}$",,,,,C,,,,"answer: wrong()
+token: 0, 0, 0
+time: 0.0s",,,,,
+79,2. (5 分) 若 $z=4+3 i$ ，则 $\frac{\bar{z}}{|z|}=(\quad)$,1,-1,$\frac{4}{5}+\frac{3}{5} i$,$\frac{4}{5}-\frac{3}{5} i$,D,,,,"answer: right
+token: 120, 119, 1
+time: 0.9s",,,,,
+80,"3. (5 分) 已知向量 $\overrightarrow{\mathrm{BA}}=\left(\frac{1}{2}, \frac{\sqrt{3}}{2}\right), \overrightarrow{\mathrm{BC}}=\left(\frac{\sqrt{3}}{2}, \frac{1}{2}\right)$, 则 $\angle \mathrm{ABC}=(\quad)$",$30^{\circ}$,$45^{\circ}$,$60^{\circ}$,$120^{\circ}$,A,,,,"answer: wrong (C)
+token: 153, 152, 1
+time: 0.7s",,,,,
+81,"5. (5 分) 小敏打开计算机时，忘记了开机密码的前两位，只记得第一位是 M, I, $\mathrm{N}$ 中的一个字母, 第二位是 $1,2,3,4,5$ 中的一个数字, 则小敏输人一 次密码能够成功开机的概率是（）",$\frac{8}{15}$,$\frac{1}{8}$,$\frac{1}{15}$,$\frac{1}{30}$,C,,,,"answer: wrong (A)
+token: 479, 159, 320
+time: 1.9s",,,,,
+82,"6. (5 分) 若 $\tan \theta=\frac{1}{3}$, 则 $\cos 2 \theta=(\quad)$",$-\frac{4}{5}$,$-\frac{1}{5}$,$\frac{1}{5}$,$\frac{4}{5}$,D,,,,"answer: wrong (A)
+token: 113, 112, 1
+time: 1.2s",,,,,
+83,"7. (5 分) 已知 $a=2^{\frac{4}{3}}, b=3^{\frac{2}{3}}, c=25^{\frac{1}{3}}$, 则 ( )",$b<a<c$,$a<b<c$,$b<c<a$,$c<a<b$,A,,,,"answer: right
+token: 616, 127, 489
+time: 2.8s",,,,,
+84,"9. (5 分) 在 $\triangle A B C$ 中, $B=\frac{\pi}{4}, B C$ 边上的高等于 $\frac{1}{3} B C$, 则 $\sin A=(\quad)$",$\frac{3}{10}$,$\frac{\sqrt{10}}{10}$,$\frac{\sqrt{5}}{5}$,$\frac{3 \sqrt{10}}{10}$,D,,,,"answer: wrong (A)
+token: 3143, 146, 2997
+time: 10.4s",,,,,
+85,"11. (5 分) 在封闭的直三棱柱 $A B C-\mathrm{A}_{1} B_{1} C_{1}$ 内有一个体积为 $\mathrm{V}$ 的球, 若 $A B \perp$ $\mathrm{BC}, \mathrm{AB}=6, \mathrm{BC}=8, A A_{1}=3$, 则 $V$ 的最大值是 $(\quad)$",$4 \pi$,$\frac{9 \pi}{2}$,$6 \pi$,$\frac{32 \pi}{3}$,B,,,,"answer: wrong (A)
+token: 175, 174, 1
+time: 1.0s",,,,,
+86,"12. (5 分) 已知 $O$ 为坐标原点, $F$ 是椭圆 $C: \frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1 \quad(a>b>0)$ 的左焦点, $A, B$ 分别为 $C$ 的左, 右顶点. $P$ 为 $C$ 上一点, 且 $P F \perp x$ 轴, 过点 $A$ 的直线 $I$ 与线段 $P F$ 交于点 $M$, 与 $y$ 轴交于点 $E$. 若直线 $B M$ 经过 $O E$ 的中点, 则 $C$ 的离心率为 $(\quad)$",$\frac{1}{3}$,$\frac{1}{2}$,$\frac{2}{3}$,$\frac{3}{4}$,A,,,,"answer: wrong (B)
+token: 247, 246, 1
+time: 1.0s",,,,,
+87,"1. （5 分）已知集合 $A=\{x \mid x<2\}, B=\{x \mid 3-2 x>0\}$, 则（）",$A \cap B=\left\{x \mid x<\frac{3}{2}\right\}$,$A \cap B=\varnothing$,$A \cup B=\left\{\mathbf{x} \mid \mathbf{x}<\frac{3}{2}\right\}$,$A \cup B=R$,A,,,,"answer: right
+token: 896, 154, 742
+time: 2.9s",,,,,
+88,"2. (5 分) 为评估一种农作物的种植效果, 选了 $\mathrm{n}$ 块地作试验田. 这 $\mathrm{n}$ 块地的 亩产量 (单位: $\mathrm{kg}$ ) 分别是 $x_{1}, x_{2}, \ldots, x_{n}$, 下面给出的指标中可以用来评估 这种农作物亩产量稳定程度的是（ $)$","$\mathrm{x}_{1}, \mathrm{x}_{2}, \ldots, \mathrm{x}_{\mathrm{n}}$ 的平均数","$x_{1}, x_{2}, \ldots, x_{n}$ 的标准差","$\mathrm{x}_{1}, \mathrm{x}_{2}, \ldots, \mathrm{x}_{\mathrm{n}}$ 的最大值","$x_{1}, x_{2}, \ldots, x_{n}$ 的中位数",B,,,,"answer: right
+token: 243, 242, 1
+time: 0.7s",,,,,
+89,3. (5 分) 下列各式的运算结果为纯虚数的是（ ）,$i(1+i)^{2}$,$i^{2}(1-i)$,$(1+\mathrm{i})^{2}$,$i(1+i)$,C,,,,"answer: wrong (A)
+token: 110, 109, 1
+time: 0.8s",,,,,
+90,"11. (5 分) $\triangle A B C$ 的内角 $A, B, C$ 的对边分别为 $a, b, c$, 已知 $\sin B+\sin A$ ( $\sin C-\cos C)=0, a=2, \quad c=\sqrt{2}$, 则 $C=(\quad)$",$\frac{\pi}{12}$,$\frac{\pi}{6}$,$\frac{\pi}{4}$,$\frac{\pi}{3}$,B,,,,"answer: right
+token: 5011, 156, 4855
+time: 16.5s",,,,,
+91,"1. （5 分） 设集合 $A=\{1,2,3\}, B=\{2,3,4\}$, 则 $A \cup B=（ ）$","$\{1,2,3,4\}$","$\{1,2,3\}$","$\{2,3,4\}$","$\{1,3,4\}$",A,,,,"answer: right
+token: 123, 122, 1
+time: 0.8s",,,,,
+92,2. $(5$ 分 $)(1+i)(2+i)=(\quad)$,$1-\mathrm{i}$,$1+3 i$,$3+i$,$3+3 i$,B,,,,"answer: wrong (D)
+token: 99, 98, 1
+time: 0.8s",,,,,
+93,3. (5 分) 函数 $f(x)=\sin \left(2 x+\frac{\pi}{3}\right)$ 的最小正周期为（ $)$,$4 \pi$,$2 \pi$,$\pi$,$\frac{\pi}{2}$,C,,,,"answer: right
+token: 111, 110, 1
+time: 0.8s",,,,,
+94,"4. (5 分) 设非零向量 $\vec{a}, \vec{b}$ 满足 $|\vec{a}+\vec{b}|=|\vec{a}-\vec{b}|$ 则（）",$\vec{a} \perp \vec{b}$,$|\overrightarrow{\mathrm{a}}|=|\overrightarrow{\mathrm{b}}|$,$\vec{a} / / \vec{b}$,$|\vec{a}|>|\vec{b}|$,A,,,,"answer: right
+token: 152, 151, 1
+time: 1.3s",,,,,
+95,"5.（5 分）若 $a>1$, 则双曲线 $\frac{x^{2}}{a^{2}}-y^{2}=1$ 的离心率的取值范围是（ ）","$(\sqrt{2},+\infty)$","$(\sqrt{2}, 2)$","$(1, \sqrt{2})$","$(1,2)$",C,,,,"answer: wrong (A)
+token: 629, 128, 501
+time: 1.9s",,,,,
+96,8. （5 分）函数 $f(x)=\ln \left(x^{2}-2 x-8 ）\right.$ 的单调递增区间是（ $)$,"$(-\infty,-2)$","$(-\infty,-1)$","$(1,+\infty)$","$(4,+\infty)$",D,,,,"answer: right
+token: 986, 115, 871
+time: 3.2s",,,,,
+97,"9. （5 分）甲、乙、丙、丁四位同学一起去问老师询问成语竞赛的成绩. 老师 说: 你们四人中有 2 位优秀, 2 位良好, 我现在给甲看乙、丙的成绩, 给乙看 丙的成绩, 给丁看甲的成绩. 看后甲对大家说：我还是不知道我的成绩. 根 据以上信息，则（）",乙可以知道四人的成绩,丁可以知道四人的成绩,乙、丁可以知道对方的成绩,乙、丁可以知道自己的成绩,D,,,,"answer: right
+token: 182, 181, 1
+time: 1.0s",,,,,
+98,"11. (5 分) 从分别写有 $1,2,3,4,5$ 的 5 张卡片中随机抽取 1 张, 放回后再 随机抽取 1 张, 则抽得的第一张卡片上的数大于第二张卡片上的数的概率为（",$\frac{1}{10}$,$\frac{1}{5}$,$\frac{3}{10}$,$\frac{2}{5}$,D,,,,"answer: wrong (A)
+token: 876, 150, 726
+time: 3.4s",,,,,
+99,"12. (5 分) 过抛物线 $C: y^{2}=4 x$ 的焦点 $F$, 且斜率为 $\sqrt{3}$ 的直线交 $C$ 于点 $M(M$ 在 $x$ 轴上方), 1 为 $C$ 的准线, 点 $N$ 在 $I$ 上, 且 $M N \perp 1$, 则 $M$ 到直线 $N F$ 的距 离为 $(\quad)$",$\sqrt{5}$,$2 \sqrt{2}$,$2 \sqrt{3}$,$3 \sqrt{3}$,C,,,,"answer: wrong (A)
+token: 1100, 186, 914
+time: 4.9s",,,,,
+100,"1. (5 分) 已知集合 $A=\{1,2,3,4\}, B=\{2,4,6,8\}$, 则 $A \cap B$ 中元素的个 数为 ( )",1,2,3,4,B,,,,"answer: right
+token: 109, 108, 1
+time: 1.3s",,,,,
+101,2. (5 分) 复平面内表示复数 $\mathrm{z}=\mathrm{i}(-2+\mathrm{i})$ 的点位于 $(\quad)$,第一象限,第二象限,第三象限,第四象限,C,,,,"answer: right
+token: 103, 102, 1
+time: 0.8s",,,,,
+102,"4. (5 分) 已知 $\sin a-\cos a=\frac{4}{3}$, 则 $\sin 2 a=(\quad)$",$-\frac{7}{9}$,$-\frac{2}{9}$,$\frac{2}{9}$,$\frac{7}{9}$,A,,,,"answer: right
+token: 115, 114, 1
+time: 0.6s",,,,,
+103,6. (5 分) 函数 $f(x)=\frac{1}{5} \sin \left(x+\frac{\pi}{3}\right)+\cos \left(x-\frac{\pi}{6}\right)$ 的最大值为 $($ ),$\frac{6}{5}$,1,$\frac{3}{5}$,$\frac{1}{5}$,A,,,,"answer: right
+token: 132, 131, 1
+time: 1.5s",,,,,
+104,"11. (5 分) 已知椭圆 C: $\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1(a>b>0)$ 的左、右顶点分别为 $A_{1}, A_{2}$, 且以线段 $A_{1} A_{2}$ 为直径的圆与直线 $b x-a y+2 a b=0$ 相切, 则 $C$ 的离心率为",$\frac{\sqrt{6}}{3}$,$\frac{\sqrt{3}}{3}$,$\frac{\sqrt{2}}{3}$,$\frac{1}{3}$,A,,,,"answer: wrong (C)
+token: 1101, 191, 910
+time: 3.3s",,,,,
+105,"12. (5 分) 已知函数 $f(x)=x^{2}-2 x+a\left(e^{x-1}+e^{-x+1}\right)$ 有唯一零点, 则 $a=(\quad)$",$-\frac{1}{2}$,$\frac{1}{3}$,$\frac{1}{2}$,"1
+
+\section{",C,,,,"answer: right
+token: 135, 134, 1
+time: 2.0s",,,,,
+106,"1. （5 分）已知集合 $A=\{0,2\}, B=\{-2,-1,0,1,2\}$, 则 $A \cap B=(）$","$\{0,2\}$","$\{1,2\}$",$\{0\}$,"$\{-2,-1,0,1,2\}$",A,,,,"answer: right
+token: 119, 118, 1
+time: 1.5s",,,,,
+107,"2. （5 分）设 $z=\frac{1-i}{1+i}+2 i$, 则 $|z|=(\quad)$",0,$\frac{1}{2}$,1,$\sqrt{2}$,C,,,,"answer: wrong (A)
+token: 570, 102, 468
+time: 3.5s",,,,,
+108,"4. (5 分) 已知椭圆 $C: \frac{x^{2}}{a^{2}}+\frac{y^{2}}{4}=1$ 的一个焦点为 $(2,0)$, 则 $C$ 的离心率为 ( )",$\frac{1}{3}$,$\frac{1}{2}$,$\frac{\sqrt{2}}{2}$,$\frac{2 \sqrt{2}}{3}$,C,,,,"answer: right
+token: 804, 143, 661
+time: 3.0s",,,,,
+109,"5. (5 分) 已知圆柱的上、下底面的中心分别为 $\mathrm{O}_{1}, \mathrm{O}_{2}$, 过直线 $\mathrm{O}_{1} \mathrm{O}_{2}$ 的平面截 该圆柱所得的截面是面积为 8 的正方形，则该圆柱的表面积为（）",$12 \sqrt{2} \pi$,$12 \pi$,$8 \sqrt{2} \pi$,$10 \pi$,B,,,,"answer: wrong (A)
+token: 1199, 165, 1034
+time: 2.9s",,,,,
+110,"6. （5 分) 设函数 $f(x)=x^{3}+(a-1) x^{2}+a x$. 若 $f(x)$ 为奇函数, 则曲线 $y=f($ $x)$ 在点 $(0,0)$ 处的切线方程为 $(\quad)$",$y=-2 x$,$y=-x$,$y=2 x$,$y=x$,D,,,,"answer: wrong (A)
+token: 935, 143, 792
+time: 3.7s",,,,,
+111,"7. (5 分) 在 $\triangle A B C$ 中, $A D$ 为 $B C$ 边上的中线, $E$ 为 $A D$ 的中点, 则 $\overrightarrow{E B}=(\quad)$",$\frac{3}{4} \overrightarrow{\mathrm{AB}}-\frac{1}{4} \overrightarrow{\mathrm{AC}}$,$\frac{1}{4} \overrightarrow{\mathrm{AB}}-\frac{3}{4} \overrightarrow{\mathrm{AC}}$,$\frac{3}{4} \overrightarrow{\mathrm{AB}}+\frac{1}{4} \overrightarrow{\mathrm{AC}}$,$\frac{1}{4} \overrightarrow{\mathrm{AB}}+\frac{3}{4} \overrightarrow{\mathrm{AC}}$,A,,,,"answer: right
+token: 793, 215, 578
+time: 2.2s",,,,,
+112,"8. （5 分）已知函数 $f(x)=2 \cos ^{2} x-\sin ^{2} x+2$, 则 $(\quad)$","$f(x)$ 的最小正周期为 $\pi$, 最大值为 3","$f(x)$ 的最小正周期为 $\pi$, 最大值为 4","$f(x)$ 的最小正周期为 $2 \pi$, 最大值为 3","$f(x)$ 的最小正周期为 $2 \pi$, 最大值为 4",B,,,,"answer: wrong (A)
+token: 997, 161, 836
+time: 2.3s",,,,,
+113,"11. (5 分) 已知角 $\alpha$ 的顶点为坐标原点, 始边与 $\mathrm{x}$ 轴的非负半轴重合, 终边上 有两点 $A(1, a), B(2, b)$, 且 $\cos 2 \alpha=\frac{2}{3}$, 则 $|a-b|=(\quad)$",$\frac{1}{5}$,$\frac{\sqrt{5}}{5}$,$\frac{2 \sqrt{5}}{5}$,1,B,,,,"answer: wrong (A)
+token: 992, 168, 824
+time: 5.3s",,,,,
+114,1. $(5$ 分 $) i(2+3 i)=(\quad)$,$3-2 i$,$3+2 i$,$-3-2 i$,$-3+2 i$,D,,,,"answer: right
+token: 97, 96, 1
+time: 1.1s",,,,,
+115,"2. （5 分）已知集合 $A=\{1,3,5,7\}, B=\{2,3,4,5\}$, 则 $A \cap B=(\quad)$",$\{3\}$,$\{5\}$,"$\{3,5\}$","$\{1,2,3,4,5,7\}$",C,,,,"answer: right
+token: 119, 118, 1
+time: 0.8s",,,,,
+116,"4. (5 分) 已知向量 $\vec{a}, \vec{b}$ 满足 $|\vec{a}|=1, \vec{a} \cdot \vec{b}=-1$, 则 $\vec{a} \cdot(2 \vec{a}-\vec{b})=(\quad)$",4,3,2,0,B,,,,"answer: wrong (C)
+token: 129, 128, 1
+time: 0.6s",,,,,
+117,"5. (5 分) 从 2 名男同学和 3 名女同学中任选 2 人参加社区服务, 则选中的 2 人都是女同学的概率为 $(\quad)$",0.6,0.5,0.4,0.3,D,,,,"answer: wrong (C)
+token: 116, 115, 1
+time: 1.0s",,,,,
+118,"6. (5 分) 双曲线 $\frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}=1(a>0, b>0)$ 的离心率为 $\sqrt{3}$, 则其渐近线方程为",$y= \pm \sqrt{2} x$,$y= \pm \sqrt{3} x$,$y= \pm \frac{\sqrt{2}}{2} x$,$y= \pm \frac{\sqrt{3}}{2} x$,A,,,,"answer: wrong (D)
+token: 168, 167, 1
+time: 1.1s",,,,,
+119,"7. (5 分) 在 $\triangle A B C$ 中, $\cos \frac{C}{2}=\frac{\sqrt{5}}{5}, B C=1, A C=5$, 则 $A B=（ ）$",$4 \sqrt{2}$,$\sqrt{30}$,$\sqrt{29}$,$2 \sqrt{5}$,A,,,,"answer: wrong (C)
+token: 133, 132, 1
+time: 1.1s",,,,,
+120,"10. （5 分）若 $f(x)=\cos x-\sin x$ 在 $[0, a]$ 是减函数, 则 $a$ 的最大值是 $(\quad)$",$\frac{\pi}{4}$,$\frac{\pi}{2}$,$\frac{3 \pi}{4}$,$\pi$,C,,,,"answer: right
+token: 123, 122, 1
+time: 0.8s",,,,,
+121,"12. (5 分) 已知 $f(x)$ 是定义域为 $(-\infty,+\infty)$ 的奇函数, 满足 $f(1-x)=f($ $1+x)$, 若 $f(1)=2$, 则 $f(1)+f(2)+f(3)+\ldots+f(50)=(\quad)$",-50,0,2,50,C,,,,"answer: wrong (A)
+token: 4268, 141, 4127
+time: 9.2s",,,,,
+122,"1. (5 分) 已知集合 $A=\{x \mid x-1 \geqslant 0\}, B=\{0,1,2\}$, 则 $A \cap B=(\quad)$",$\{0\}$,$\{1\}$,"$\{1,2\}$","$\{0,1,2\}$",C,,,,"answer: right
+token: 115, 114, 1
+time: 1.0s",,,,,
+123,2. $(5$ 分 $)(1+i)(2-i)=(\quad)$,$-3-i$,$-3+i$,$3-i$,$3+i$,D,,,,"answer: wrong (B)
+token: 95, 94, 1
+time: 0.8s",,,,,
+124,"4. (5 分) 若 $\sin a=\frac{1}{3}$, 则 $\cos 2 a=(\quad)$",$\frac{8}{9}$,$\frac{7}{9}$,$-\frac{7}{9}$,$-\frac{8}{9}$,B,,,,"answer: wrong (A)
+token: 111, 110, 1
+time: 0.6s",,,,,
+125,"5. (5 分) 若某群体中的成员只用现金支付的概率为 0.45 , 既用现金支付也用非 现金支付的概率为 0.15 , 则不用现金支付的概率为 $($ )",0.3,0.4,0.6,0.7,B,,,,"answer: wrong (C)
+token: 126, 125, 1
+time: 1.4s",,,,,
+126,6. (5 分) 函数 $\mathrm{f}(\mathrm{x})=\frac{\tan x}{1+\tan ^{2} \mathrm{x}}$ 的最小正周期为 $(\quad)$,$\frac{\pi}{4}$,$\frac{\pi}{2}$,$\pi$,$2 \pi$,C,,,,"answer: right
+token: 119, 118, 1
+time: 0.7s",,,,,
+127,"7. (5 分) 下列函数中, 其图象与函数 $y=\ln x$ 的图象关于直线 $\mathrm{x}=1$ 对称的是 ( )",$y=\ln (1-x)$,$y=\ln (2-x)$,$y=\ln (1+x)$,$y=\ln (2+x)$,B,,,,"answer: wrong (C)
+token: 1043, 131, 912
+time: 3.0s",,,,,
+128,"8. (5 分) 直线 $x+y+2=0$ 分别与 $x$ 轴, $y$ 轴交于 $A, B$ 两点, 点 $P$ 在圆 $(x-2)$ ${ }^{2}+y^{2}=2$ 上，则 $\triangle A B P$ 面积的取值范围是（）","$[2,6]$","$[4,8]$","$[\sqrt{2}, 3 \sqrt{2}]$","$[2 \sqrt{2}, 3 \sqrt{2}]$",A,,,,"answer: right
+token: 991, 172, 819
+time: 3.9s",,,,,
+129,"10. (5 分) 已知双曲线 $C: \frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}=1(a>0, b>0)$ 的离心率为 $\sqrt{2}$, 则点 $(4$,
+
+0) 到 C 的渐近线的距离为 $(\quad)$",$\sqrt{2}$,2,$\frac{3 \sqrt{2}}{2}$,$2 \sqrt{2}$,D,,,,"answer: wrong (B)
+token: 155, 154, 1
+time: 1.6s",,,,,
+130,"11. (5 分) $\triangle A B C$ 的内角 $A, B, C$ 的对边分别为 $a, b, C$. 若 $\triangle A B C$ 的面积 为 $\frac{a^{2}+b^{2}-c^{2}}{4}$, 则 $C=(\quad)$",$\frac{\pi}{2}$,$\frac{\pi}{3}$,$\frac{\pi}{4}$,$\frac{\pi}{6}$,C,,,,"answer: wrong (A)
+token: 683, 151, 532
+time: 2.8s",,,,,
+131,"1. 设 $z=\frac{3-\mathrm{i}}{1+2 \mathrm{i}}$, 则 $|z|=$",2,$\sqrt{3}$,$\sqrt{2}$,1,C,,,,"answer: wrong (D)
+token: 99, 98, 1
+time: 0.6s",,,,,
+132,"2. 已知集合 $U=\{1,2,3,4,5,6,7\}, A=\{2,3,4,5\}, B=\{2,3,6,7\}$, 则 $B \cap C_{U} A$","$\{1,6\}$","$\{1,7\}$","$\{6,7\}$","$\{1,6,7\}$",C,,,,"answer: wrong (B)
+token: 506, 131, 375
+time: 1.9s",,,,,
+133,"3.已知 $a=\log _{2} 0.2, b=2^{0.2}, c=0.2^{0.3}$ ，则",$a<b<c$,$a<c<b$,$c<a<b$,$b<c<a$,B,,,,"answer: wrong (A)
+token: 2992, 119, 2873
+time: 12.6s",,,,,
+134,"6. 某学校为了解 1000 名新生的身体素质, 将这些学生编号为 $1,2, \cdots, 1000$, 从这些新 生中用系统抽样方法等距抽取 100 名学生进行体质测验, 若 46 号学生被抽到, 则下面 4 名 学生中被抽到的是",8 号学生,200 号学生,616 号学生,"815 号
+
+学生",C,,,,"answer: right
+token: 163, 162, 1
+time: 0.8s",,,,,
+135,7.tan $255^{\circ}=$,$-2-\sqrt{3}$,$-2+\sqrt{3}$,$2-\sqrt{3}$,$2+\sqrt{3}$,D,,,,"answer: right
+token: 95, 94, 1
+time: 1.9s",,,,,
+136,"8.已知非零向量 $\boldsymbol{a}, \boldsymbol{b}$ 满足 $|a|=2|b|$, 且 $(\boldsymbol{a}-\boldsymbol{b}) \perp \boldsymbol{b}$, 则 $\boldsymbol{a}$ 与 $\boldsymbol{b}$ 的夹角为",$\frac{\pi}{6}$,$\frac{\pi}{3}$,$\frac{2 \pi}{3}$,$\frac{5 \pi}{6}$,B,,,,"answer: right
+token: 148, 147, 1
+time: 1.5s",,,,,
+137,"10. 双曲线 $C: \frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}=1(a>0, b>0)$ 的 一条渐近线的倾斜角为 $130^{\circ}$, 则 $\mathrm{C}$ 的离心率为",$2 \sin 40^{\circ}$,$2 \cos 40^{\circ}$,$\frac{1}{\sin 50^{\circ}}$,$\frac{1}{\cos 50^{\circ}}$,D,,,,"answer: wrong (C)
+token: 1155, 166, 989
+time: 3.9s",,,,,
+138,"11. $\triangle A B C$ 的内角 $A, B, C$ 的对边分别为 $a, b, c$, 已知 $a \sin A-b \sin B=4 c \sin C, \cos A=-\frac{1}{4}$, 则 $\frac{b}{c}=$",6,5,4,3,A,,,,"answer: wrong (C)
+token: 132, 131, 1
+time: 1.4s",,,,,
+139,"1.已知集合 $A=\{x \mid x>-1\}, B=\{x \mid x<2\}$, 则 $A \cap B=$","$(-1,+\infty)$","$(-\infty, 2)$","$(-1,2)$",$\varnothing$,C,,,,"answer: right
+token: 107, 106, 1
+time: 1.2s",,,,,
+140,2. 设 $z=\mathrm{i}(2+\mathrm{i})$ ，则 $\bar{z}=$,$1+2 \mathrm{i}$,$-1+2 \mathrm{i}$,$1-2 \mathrm{i}$,$-1-2 \mathrm{i}$,D,,,,"answer: wrong (A)
+token: 389, 116, 273
+time: 1.7s",,,,,
+141,"3.已知向量 $\boldsymbol{a}=(2,3), \boldsymbol{b}=(3,2)$, 则 $|\boldsymbol{a}-\boldsymbol{b}|=$",$\sqrt{2}$,2,$5 \sqrt{2}$,50,A,,,,"answer: right
+token: 107, 106, 1
+time: 0.7s",,,,,
+142,"4. 生物实验室有 5 只兔子, 其中只有 3 只测量过某项指标, 若从这 5 只兔子中随机取出 3 只, 则恰有 2 只测量过该指标的概率为",$\frac{2}{3}$,$\frac{3}{5}$,$\frac{2}{5}$,$\frac{1}{5}$,B,,,,"answer: wrong (C)
+token: 134, 133, 1
+time: 1.4s",,,,,
+143,"5. 在 “一带一路” 知识测验后, 甲、乙、丙三人对成绩进行预测.
+
+甲: 我的成绩比乙高.
+
+乙: 丙的成绩比我和甲的都高.
+
+丙: 我的成绩比乙高.
+
+成绩公布后, 三人成绩互不相同且只有一个人预测正确，那么三人按成绩由高到低的次 序为",甲、乙、丙,乙、甲、丙,丙、乙、甲,甲、丙、乙,A,,,,"answer: wrong (C)
+token: 164, 163, 1
+time: 1.4s",,,,,
+144,"6. 设 $f(x)$ 为奇函数, 且当 $x \geq 0$ 时, $f(x)=e^{x}-1$, 则当 $x<0$ 时, $f(x)=$",$e^{-x}-1$,$\mathrm{e}^{-x}+1$,$-\mathrm{e}^{-x}-1$,$-\mathrm{e}^{-x}+1$,D,,,,"answer: right
+token: 141, 140, 1
+time: 1.9s",,,,,
+145,"7. 设 $\alpha, \beta$ 为两个平面, 则 $\alpha / / \beta$ 的充要条件是",$\alpha$ 内有无数条直线与 $\beta$ 平行,$\alpha$ 内有两条相交直线与 $\beta$ 平行,"$\alpha, \beta$ 平行于同一条直线","$\alpha, \beta$ 垂直于同一平面",B,,,,"answer: right
+token: 136, 135, 1
+time: 4.0s",,,,,
+146,"8. 若 $x_{1}=\frac{\pi}{4}, x_{2}=\frac{3 \pi}{4}$ 是函数 $f(x)=\sin \omega x(\omega>0)$ 两个相邻的极值点, 则 $\omega=$",2,$\frac{3}{2}$,1,$\frac{1}{2}$,A,,,,"answer: right
+token: 129, 128, 1
+time: 1.0s",,,,,
+147,"9. 若抛物线 $y^{2}=2 p x \quad(p>0)$ 的焦点是椭圆 $\frac{x^{2}}{3 p}+\frac{y^{2}}{p}=1$ 的一个焦点, 则 $p=$",2,3,4,8,D,,,,"answer: wrong (A)
+token: 780, 118, 662
+time: 4.6s",,,,,
+148,"10.曲线 $y=2 \sin x+\cos x$ 在点 $(\pi,-1)$ 处的切线方程为",$x-y-\pi-1=0$,$2 x-y-2 \pi-1=0$,$2 x+y-2 \pi+1=0$,$x+y-\pi+1=0$,C,,,,"answer: wrong (D)
+token: 653, 134, 519
+time: 2.8s",,,,,
+149,"11.已知 $a \in\left(0, \frac{\pi}{2}\right), 2 \sin 2 \alpha=\cos 2 \alpha+1$, 则 $\sin \alpha=$",$\frac{1}{5}$,$\frac{\sqrt{5}}{5}$,$\frac{\sqrt{3}}{3}$,$\frac{2 \sqrt{5}}{5}$,B,,,,"answer: right
+token: 138, 137, 1
+time: 1.3s",,,,,
+150,"1.已知集合 $A=\{-1,0,1,2\}, B=\left\{x \mid x^{2} \leq 1\right\}$, 则 $A \cap B=(\quad)$","$\{-1,0,1\}$","$\{0,1\}$","$\{-1,1\}$","$\{0,1,2\}$",A,,,,"answer: wrong (B)
+token: 126, 125, 1
+time: 1.0s",,,,,
+151,2. 若 $z(1+\mathrm{i})=2 \mathrm{i}$ ，则 $z=(\quad)$,$-1-\mathrm{i}$,$-1+\mathrm{i}$,$1-\mathrm{i}$,$1+\mathrm{i}$,D,,,,"answer: wrong (A)
+token: 588, 109, 479
+time: 2.3s",,,,,
+152,"3.两位男同学和两位女同学随机排成一列, 则两位女同学相邻的概率是（）",$\frac{1}{6}$,$\frac{1}{4}$,$\frac{1}{3}$,$\frac{1}{2}$,D,,,,"answer: wrong (C)
+token: 110, 109, 1
+time: 0.9s",,,,,
+153,"4. 《西游记》《三国演义》《水淓传》和《红楼梦》是中国古典文学瑰宝, 并称为中国古典小 说四大名著.某中学为了解本校学生阅读四大名著的情况, 随机调查了 100 学生, 其中阅读 过《西游记》或《红楼梦》的学生共有 90 位, 阅读过《红楼梦》的学生共有 80 位, 阅读过 《西游记》且阅读过《红楼梦》的学生共有 60 位, 则该校阅读过《西游记》的学生人数与 该校学生总数比值的估计值为（）",0.5,0.6,0.7,0.8,C,,,,"answer: wrong (D)
+token: 216, 215, 1
+time: 0.9s",,,,,
+154,"5. 函数 $f(x)=2 \sin x-\sin 2 x$ 在 $[0,2 \pi]$ 的零点个数为 $(\quad)$",2,3,4,5,B,,,,"answer: wrong (C)
+token: 99, 98, 1
+time: 0.6s",,,,,
+155,"6. 已知各项均为正数的等比数列 $\left\{a_{n}\right\}$ 的前 4 项和为 15 , 且 $a_{5}=3 a_{3}+4 a_{1}$, 则 $a_{3}=(\quad)$",16,8,4,2,C,,,,"answer: wrong (A)
+token: 1124, 121, 1003
+time: 4.0s",,,,,
+156,"7. 已知曲线 $y=a \mathrm{e}^{x}+x \ln x$ 在点 $(1, a e)$ 处的切线方程为 $y=2 x+b$, 则 ( )","$a=e, b=-1$","$a=e, b=1$","$a=e^{-1}, b=1$","$a=e^{-1}, b=-1$",D,,,,"answer: wrong (A)
+token: 1003, 142, 861
+time: 3.8s",,,,,
+157,"10.已知 $F$ 是双曲线 $C: \frac{x^{2}}{4}-\frac{y^{2}}{5}=1$ 的一个焦点, 点 $P$ 在 $C$ 上, $O$ 为坐标原点, 若 $|O P|=|O F|$, 则 $\triangle O P F$ 的面积为 $($ ）",$\frac{3}{2}$,$\frac{5}{2}$,$\frac{7}{2}$,$\frac{9}{2}$,B,,,,"answer: right
+token: 159, 158, 1
+time: 1.3s",,,,,
+158,"12. 设 $f(x)$ 是定义域为 $R$ 的偶函数, 且在 $(0,+\infty)$ 单调递减, 则 $(\quad)$",$f\left(\log _{5} \frac{1}{4}\right)>f\left(2^{-\frac{3}{2}}\right)>f\left(2^{-\frac{2}{3}}\right)$,$f\left(\log _{8} \frac{1}{4}\right)>f\left(2^{-\frac{2}{3}}\right)>f\left(2^{-\frac{3}{2}}\right)$,$f\left(2^{-\frac{3}{2}}\right)>f\left(2^{-\frac{2}{3}}\right)>f\left(\log _{5} \frac{1}{4}\right)$,$f\left(2^{-\frac{2}{3}}\right)>f\left(2^{-\frac{3}{2}}\right)>f\left(\log _{5} \frac{1}{4}\right)$,C,,,,"answer: wrong (A)
+token: 4746, 278, 4468
+time: 10.2s",,,,,
+159,"1.已知集合 $A=\{1,2,3,5,7,11\}, B=\{x \mid 3<x<15\}$, 则 $A \cap B$ 中元素的个数为（）",2,3,4,5,B,,,,"answer: wrong (C)
+token: 111, 110, 1
+time: 1.0s",,,,,
+160,"2. 若 $\bar{z}(1+i)=1-i$, 则 $z=(\quad)$",$1-i$,$1+i$,$-i$,$i$,D,,,,"answer: wrong (A)
+token: 590, 94, 496
+time: 3.0s",,,,,
+161,"3. 设一组样本数据 $x_{1}, x_{2}, \ldots, x_{n}$ 的方差为 0.01 , 则数据 $10 x_{1}, 10 x_{2}, \ldots, 10 x_{n}$ 的方差为 $($ )",0.01,0.1,1,10,C,,,,"answer: right
+token: 136, 135, 1
+time: 1.0s",,,,,
+162,"4.Logistic 模型是常用数学模型之一, 可应用于流行病学领城. 有学者根据公布数据建立了某 地区新冠肺炎累计确诊病例数 $I(t)\left(t\right.$ 的单位: 天)的 Logistic 模型: $I(t)=\frac{K}{1+\mathrm{e}^{-0.23(t-53)}}$, 其中 $K$ 为最大确诊病例数. 当 $I\left(t^{*}\right)=0.95 K$ 时，标志着已初步遏制疫情, 则 $t^{*}$ 约为 $(\quad) \quad(\ln 19 \approx 3)$",60,63,66,69,C,,,,"answer: wrong (B)
+token: 207, 206, 1
+time: 1.1s",,,,,
+163,"5. 已知 $\sin \theta+\sin \left(\theta+\frac{\pi}{3}\right)=1$, 则 $\sin \left(\theta+\frac{\pi}{6}\right)=(\quad)$",$\frac{1}{2}$,$\frac{\sqrt{3}}{3}$,$\frac{2}{3}$,$\frac{\sqrt{2}}{2}$,B,,,,"answer: wrong (A)
+token: 670, 131, 539
+time: 2.8s",,,,,
+164,"7. 设 $O$ 为坐标原点, 直线 $x=2$ 与抛物线 $C: y^{2}=2 p x(p>0)$ 交于 $D, E$ 两点, 若 $O D \perp O E$, 则 $C$ 的焦点坐标为 $(\quad)$","$\left(\frac{1}{4}, 0\right)$","$\left(\frac{1}{2}, 0\right)$","$(1,0)$","$(2,0)$",B,,,,"answer: wrong (A)
+token: 706, 162, 544
+time: 4.1s",,,,,
+165,"8.点 $(0,-1)$ 到直线 $y=k(x+1)$ 距离的最大值为 $(\quad)$",1,$\sqrt{2}$,$\sqrt{3}$,2,B,,,,"answer: wrong (A)
+token: 2904, 96, 2808
+time: 11.6s",,,,,
+166,"10. 设 $a=\log _{3} 2, b=\log _{5} 3, c=\frac{2}{3}$, 则 $(\quad)$",$a<c<b$,$a<b<c$,$b<c<a$,$c<a<b$,A,,,,"answer: right
+token: 841, 120, 721
+time: 2.3s",,,,,
+167,"11. 在 $\triangle A B C$ 中, $\cos C=\frac{2}{3}, A C=4, B C=3$, 则 $\tan B=(\quad)$",$\sqrt{5}$,$2 \sqrt{5}$,$4 \sqrt{5}$,$8 \sqrt{5}$,C,,,,"answer: wrong (A)
+token: 951, 121, 830
+time: 3.9s",,,,,
+168,"12. 已知函数 $f(x)=\sin x+\frac{1}{\sin x}$, 则 $(\quad)$",$f(x)$ 的最小值为 2,$f(x)$ 的图像关于 $y$ 轴对称,$f(x)$ 的图像关于直线 $x=\pi$ 对称,$f(x)$ 的图像关于直线 $x=\frac{\pi}{2}$ 对称,D,,,,"answer: wrong (A)
+token: 142, 141, 1
+time: 0.9s",,,,,
+169,"1. 已知集合 $A=\left\{x \mid x^{2}-3 x-4<0\right\}, B=\{-4,1,3,5\}$, 则 $\left.A \cap B=（ \quad\right)$","$\{-4,1\}$","$\{1,5\}$","$\{3,5\}$","$\{1,3\}$",D,,,,"answer: wrong (A)
+token: 638, 129, 509
+time: 3.4s",,,,,
+170,2. 若 $z=1+2 i+i^{3}$ ，则 $|z|=(\quad)$,0,1,$\sqrt{2}$,2,C,,,,"answer: wrong (B)
+token: 91, 90, 1
+time: 1.4s",,,,,
+171,"6. 已知圆 $x^{2}+y^{2}-6 x=0$, 过点 $(1,2)$ 的直线被该圆所截得的弦的长度的最小值为 ( )",1,2,3,4,B,,,,"answer: wrong (C)
+token: 108, 107, 1
+time: 1.3s",,,,,
+172,8. 设 $a \log _{3} 4=2$ ，则 $4^{-a}=(\quad)$,$\frac{1}{16}$,$\frac{1}{9}$,$\frac{1}{8}$,$\frac{1}{6}$,B,,,,"answer: wrong (A)
+token: 775, 110, 665
+time: 3.2s",,,,,
+173,"10. 设 $\left\{a_{n}\right\}$ 是等比数列, 且 $a_{1}+a_{2}+a_{3}=1, a_{2}+a_{3}+a_{4}=2$, 则 $a_{6}+a_{7}+a_{8}=(\quad)$",12,24,30,32,D,,,,"answer: wrong (A)
+token: 1372, 134, 1238
+time: 6.1s",,,,,
+174,"11. 设 $F_{1}, F_{2}$ 是双曲线 $C: x^{2}-\frac{y^{2}}{3}=1$ 的两个焦点, $O$ 为坐标原点, 点 $P$ 在 $C$ 上且 $|O P|=2$, 则 $\triangle P F_{1} F_{2}$ 的面积为 ( )",$\frac{7}{2}$,3,$\frac{5}{2}$,2,B,,,,"answer: wrong (A)
+token: 1046, 153, 893
+time: 3.7s",,,,,
+175,"1.已知集合 $A=\{x|| x \mid<3, x \in Z\}, B=\{x|| x \mid>1, x \in Z\}$, 则 $A \cap B=(\quad)$",$\varnothing$,"$\{-3,-2,2,3)$","$\{-2,0,2\}$","$\{-2,2\}$",D,,,,"answer: right
+token: 128, 127, 1
+time: 1.5s",,,,,
+176,2. $(1-\mathrm{i})^{4}=(\quad)$,-4,4,$-4 i$,$4 i$,A,,,,"answer: right
+token: 82, 81, 1
+time: 0.5s",,,,,
+177,"4.在新冠肺炎疫情防控期间，某超市开通网上销售业务，每天能完成1200份订单的
+
+配货, 由于订单量大幅增加, 导致订单积压.为解决困难, 许多志愿者踊跃报名参加配货工作.已知该超市 某日积压 500 份订单末配货, 预计第二天的新订单超过 1600 份的概率为 0.05 , 志愿者每人每天能完成 50 份订 单的配货, 为使第二天完成积压订单及当日订单的配货的概率不小于 0.95 , 则至少需要志愿者（）",10 名,18 名,24名,32 名,B,,,,"answer: wrong (C)
+token: 218, 217, 1
+time: 1.3s",,,,,
+178,"5.已知单位向量 $\boldsymbol{a}, \boldsymbol{b}$ 的夹角为 $60^{\circ}$, 则在下列向量中, 与 $\boldsymbol{b}$ 垂直的是（）",$\boldsymbol{a}+2 \boldsymbol{b}$,$2 \boldsymbol{a}+\boldsymbol{b}$,$\boldsymbol{a}-2 \boldsymbol{b}$,$2 \boldsymbol{a}-\boldsymbol{b}$,D,,,,"answer: wrong (B)
+token: 864, 142, 722
+time: 2.8s",,,,,
+179,"6. 记 $S_{n}$ 为等比数列 $\left\{a_{n}\right\}$ 的前 $n$ 项和. 若 $a_{5}-a_{3}=12, a_{6}-a_{4}=24$, 则 $\frac{S_{n}}{a_{n}}=(\quad)$",$2^{n}-1$,$2-2^{1-n}$,$2-2^{n-1}$,$2^{1-n}-1$,B,,,,"answer: wrong (A)
+token: 984, 159, 825
+time: 3.0s",,,,,
+180,"8. 若过点 $(2,1)$ 的圆与两坐标轴都相切, 则圆心到直线 $2 x-y-3=0$ 的距离为 ( )",$\frac{\sqrt{5}}{5}$,$\frac{2 \sqrt{5}}{5}$,$\frac{3 \sqrt{5}}{5}$,$\frac{4 \sqrt{5}}{5}$,B,,,,"answer: wrong (A)
+token: 1225, 138, 1087
+time: 6.2s",,,,,
+181,"9. 设 $O$ 为坐标原点, 直线 $x=a$ 与双曲线 $C: \frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}=1(a>0, b>0)$ 的两条渐近线分别交于 $D, E$ 两点, 若 $\square O D E$ 的面积为 8 , 则 $C$ 的焦距的最小值为 ( )",4,8,16,32,B,,,,"answer: wrong (C)
+token: 164, 163, 1
+time: 1.3s",,,,,
+182,"10. 设函数 $f(x)=x^{3}-\frac{1}{x^{3}}$, 则 $f(x)(\quad)$","是奇函数, 且在 $(0,+\infty)$ 单调递增","是奇函数, 且在 $(0,+\infty)$ 单调递减","是偶函数, 且在 $(0,+\infty)$ 单调递增","是偶函数, 且在 $(0,+\infty)$ 单调递减",A,,,,"answer: right
+token: 152, 151, 1
+time: 0.9s",,,,,
+183,"11.已知 $\triangle A B C$ 是面积为 $\frac{9 \sqrt{3}}{4}$
+
+的等边三角形, 且其顶点都在球 $O$ 的球面上. 若球 $O$ 的表面积为 $16 \pi$, 则 $O$ 到平面 $A B C$ 的距离为（）",$\sqrt{3}$,$\frac{3}{2}$,1,$\frac{\sqrt{3}}{2}$,C,,,,"answer: wrong (A)
+token: 919, 153, 766
+time: 3.6s",,,,,
+184,12. 若 $2^{x}-2^{y}<3^{-x}-3^{-y}$ ，则 $(\quad)$,$\ln (y-x+1)>0$,$\ln (y-x+1)<0$,$\ln |x-y|>0$,$\ln |x-y|<0$,A,,,,"answer: right
+token: 8324, 122, 8202
+time: 23.9s",,,,,
+185,"1. 设集合 $M=\{1,3,5,7,9\}, N=\{x \mid 2 x>7\}$, 则 $M \cap N=(\quad)$","$\{7,9\}$","$\{5,7,9\}$","$\{3,5,7,9\}$","$\{1,3,5,7,9\}$",B,,,,"answer: right
+token: 127, 126, 1
+time: 0.6s",,,,,
+186,"3. 已知 $(1-i)^{2} z=3+2 i$, 则 $z=(\quad)$",$-1-\frac{3}{2} i$,$-1+\frac{3}{2} i$,$-\frac{3}{2}+i$,$-\frac{3}{2}-i$,B,,,,"answer: wrong (A)
+token: 551, 120, 431
+time: 1.6s",,,,,
+187,4. 下列函数中是增函数的为 $(\quad ）$,$f(x)=-x$,$f(x)=\left(\frac{2}{3}\right)^{x}$,$f(x)=x^{2}$,$f(x)=\sqrt[3]{x}$,D,,,,"answer: right
+token: 115, 114, 1
+time: 0.6s",,,,,
+188,"5. 点 $(3,0)$ 到双曲线 $\frac{x^{2}}{16}-\frac{y^{2}}{9}=1$ 的一条渐近线的距离为 $(\quad)$",$\frac{9}{5}$,$\frac{8}{5}$,$\frac{6}{5}$,$\frac{4}{5}$,A,,,,"answer: wrong (C)
+token: 126, 125, 1
+time: 0.8s",,,,,
+189,"6. 青少年视力是社会普遍关注的问题, 视力情况可借助视力表测量. 通常用五分记录法和小数记录法记录 视力数据, 五分记录法的数据 $L$ 和小数记录表的数据 $V$ 的满足 $L=5+\lg V$. 已知某同学视力的五分记录法 的数据为 4.9 , 则其视力的小数记录法的数据为 $(\quad) \quad(\sqrt[10]{10} \approx 1.259)$",1.5,1.2,0.8,0.6,C,,,,"answer: right
+token: 189, 188, 1
+time: 0.9s",,,,,
+190,"8. 在 $\triangle A B C$ 中, 已知 $B=120^{\circ}, A C=\sqrt{19}, A B=2$, 则 $B C=(\quad)$",1,$\sqrt{2}$,$\sqrt{5}$,3,D,,,,"answer: wrong (C)
+token: 113, 112, 1
+time: 0.9s",,,,,
+191,"9. 记 $S_{n}$ 为等比数列 $\left\{a_{n}\right\}$ 的前 $n$ 项和. 若 $S_{2}=4, S_{4}=6$, 则 $S_{6}=(\quad)$",7,8,9,10,A,,,,"answer: right
+token: 1755, 117, 1638
+time: 6.9s",,,,,
+192,"10. 将 3 个 1 和 2 个 0 随机排成一行, 则 2 个 0 不相邻的概率为 $($ ）",0.3,0.5,0.6,0.8,C,,,,"answer: right
+token: 107, 106, 1
+time: 0.8s",,,,,
+193,"11. 若 $a \in\left(0, \frac{\pi}{2}\right), \tan 2 a=\frac{\cos a}{2-\sin a}$, 则 $\tan a=(\quad)$",$\frac{\sqrt{15}}{15}$,$\frac{\sqrt{5}}{5}$,$\frac{\sqrt{5}}{3}$,$\frac{\sqrt{15}}{3}$,A,,,,"answer: right
+token: 2369, 140, 2229
+time: 6.3s",,,,,
+194,"12. 设 $f(x)$ 是定义域为 $\boldsymbol{R}$ 的奇函数, 且 $f(1+x)=f(-x)$. 若 $f\left(-\frac{1}{3}\right)=\frac{1}{3}$, 则 $f\left(\frac{5}{3}\right)=(\quad)$",$-\frac{5}{3}$,$-\frac{1}{3}$,$\frac{1}{3}$,$\frac{5}{3}$,C,,,,"answer: wrong (A)
+token: 1367, 156, 1211
+time: 4.5s",,,,,
+195,"3.已知命题 $p: \exists x \in R, \sin x<1$; 命题 $q: \forall x \in R, e^{|x|} \geq 1$, 则下列命题中为真命题的是 ( )",$p \wedge q$,$\neg p \wedge q$,$p \wedge \neg q$,$\neg(p \vee q)$,A,,,,"answer: right
+token: 796, 141, 655
+time: 3.8s",,,,,
+196,4.函数 $f(x)=\sin \frac{x}{3}+\cos \frac{x}{3}$ 的最小正周期和最大值分别是 $(\quad)$,$3 \pi$ 和 $\sqrt{2}$,$3 \pi$ 和 2,$6 \pi$ 和 $\sqrt{2}$,$6 \pi$ 和 2,C,,,,"answer: wrong (A)
+token: 130, 129, 1
+time: 1.4s",,,,,
+197,6. $\cos ^{2} \frac{\pi}{12}-\cos ^{2} \frac{5 \pi}{12}=(\quad)$,$\frac{1}{2}$,$\frac{\sqrt{3}}{3}$,$\frac{\sqrt{2}}{2}$,$\frac{\sqrt{3}}{2}$,D,,,,"answer: right
+token: 122, 121, 1
+time: 2.2s",,,,,
+198,"7. 在区间 $\left(0, \frac{1}{2}\right)$ 随机取 1 个数, 则取到的数小于 $\frac{1}{3}$ 的概率为 $(\quad)$",$\frac{3}{4}$,$\frac{2}{3}$,$\frac{1}{3}$,$\frac{1}{6}$,B,,,,"answer: wrong (C)
+token: 129, 128, 1
+time: 0.6s",,,,,
+199,8. 下列函数中最小值为 4 的是（ ）,$y=x^{2}+2 x+4$,$y=|\sin x|+\frac{4}{|\sin x|}$,$y=2^{x}+2^{2-x}$,$y=\ln x+\frac{4}{\ln x}$,C,,,,"answer: right
+token: 124, 123, 1
+time: 1.1s",,,,,
+200,"9. 设函数 $f(x)=\frac{1-x}{1+x}$, 则下列函数中为奇函数的是 $(\quad)$",$f(x-1)-1$,$f(x-1)+1$,$f(x+1)-1$,$f(x+1)+1$,B,,,,"answer: wrong (A)
+token: 1137, 123, 1014
+time: 3.2s",,,,,
+201,"11. 设 $B$ 是椭圆 $C: \frac{x^{2}}{5}+y^{2}=1$ 的上顶点, 点 $P$ 在 $C$ 上, 则 $|P B|$ 的最大值为",$\frac{5}{2}$,$\sqrt{6}$,$\sqrt{5}$,2,A,,,,"answer: wrong (B)
+token: 127, 126, 1
+time: 1.5s",,,,,
+202,"12. 设 $a \neq 0$, 若 $x=a$ 为函数 $f(x)=a(x-a)^{2}(x-b)$ 的极大值点, 则",$a<b$,$a>b$,$a b<a^{2}$,$a b>a^{2}$,D,,,,"answer: wrong (A)
+token: 6768, 125, 6643
+time: 26.4s",,,,,
+203,"1. 集合 $M=\{2,4,6,8,10\}, N=\{x \mid-1<x<6\}$, 则 $M \cap N=()$","$\{2,4\}$","$\{2,4,6\}$","$\{2,4,6,8\}$","$\{2,4,6,8,10\}$",A,,,,"answer: right
+token: 129, 128, 1
+time: 1.1s",,,,,
+204,"2. 设 $(1+2 \mathrm{i}) a+b=2 \mathrm{i}$, 其中 $a, b$ 为实数, 则（)","$a=1, b=-1$","$a=1, b=1$","$a=-1, b=1$","$a=-1, b=-1$",A,,,,"answer: wrong (B)
+token: 129, 128, 1
+time: 1.4s",,,,,
+205,"3. 已知向量 $\vec{a}=(2,1), \vec{b}=(-2,4)$, 则 ||$^{\prime} a-b \mid$ ()",2,3,4,5,D,,,,"answer: wrong (A)
+token: 434, 100, 334
+time: 2.0s",,,,,
+206,"4. 分别统计了甲、乙两位同学 16 周的各周课外体育运动时长 (单位: $\mathrm{h}$ ), 得如下茎叶图:
+
+\begin{tabular}{|c|c|c|}
+\hline 甲 & & 乙 \\
+\hline 61 & 5. & . \\
+\hline 8530 & 6. & 3 \\
+\hline 7532 & 7. & 46 \\
+\hline 6421 & 8. & 12256666 \\
+\hline \multirow[t]{2}{*}{42} & 9. & 0238 \\
+\hline & 10. & 1 \\
+\hline
+\end{tabular}
+
+则下列结论中错误的是 ()",甲同学周课外体育运动时长的样本中位数为 7.4,乙同学周课外体育运动时长的样本平均数大于 8,甲同学周课外体育运动时长大于 8 的概率的估计值大于 0.4,乙同学周课外体育运动时长大于 8 的概率的估计值大于 0.6,C,,,,"answer: wrong (A)
+token: 5323, 313, 5010
+time: 20.2s",,,,,
+207,"6. 设 $F$ 为抛物线 $C: y^{2}=4 x$ 的焦点, 点 $A$ 在 $C$ 上, 点 $B(3,0)$, 若 $|A F|=|B F|$, 则 $|A B|=$ ()",2,$2 \sqrt{2}$,3,$3 \sqrt{2}$,B,,,,"answer: wrong (C)
+token: 919, 131, 788
+time: 2.1s",,,,,
+208,"10. 已知等比数列 $\left\{a_{n}\right\}$ 的前 3 项和为 $168, a_{2}-a_{5}=42$, 则 $a_{6}=()$",14,12,6,3,D,,,,"answer: wrong (B)
+token: 115, 114, 1
+time: 1.2s",,,,,
+209,"11. 函数 $f(x)=\cos x+(x+1) \sin x+1$ 在区间 $[0,2 \pi]$ 的最小值、最大值分别为 ()","$-\frac{\pi}{2}, \frac{\pi}{2}$","$-\frac{3 \pi}{2}, \frac{\pi}{2}$","$-\frac{\pi}{2}, \frac{\pi}{2}+2$","$-\frac{3 \pi}{2}, \frac{\pi}{2}+2$",D,,,,"answer: right
+token: 1324, 158, 1166
+time: 4.0s",,,,,
+210,"12. 已知球 $O$ 的半径为 1 , 四棱雉的顶点为 $O$, 底面的四个顶点均在球 $O$ 的球面上, 则当该 四棱雉的体积最大时，其高为（)",$\frac{1}{3}$,$\frac{1}{2}$,$\frac{\sqrt{3}}{3}$,$\frac{\sqrt{2}}{2}$,C,,,,"answer: wrong (A)
+token: 1122, 142, 980
+time: 4.6s",,,,,
+211,"1. 设集合 $A=\{-2,-1,0,1,2\}, B=\left\{x \mid 0 \leq x<\frac{5}{2}\right\}$, 则 $A \cap B=()$","$\{0,1,2\}$","$\{-2,-1,0\}$","$\{0,1\}$","$\{1,2\}$",A,,,,"answer: right
+token: 131, 130, 1
+time: 1.1s",,,,,
+212,3. 若 $z=1+\mathrm{i}$. 则 $|\mathrm{i} z+3 \bar{z}|=()$,$4 \sqrt{5}$,$4 \sqrt{2}$,$2 \sqrt{5}$,$2 \sqrt{2}$,D,,,,"answer: wrong (C)
+token: 113, 112, 1
+time: 0.7s",,,,,
+213,"5. 将函数 $f(x)=\sin \left(\omega x+\frac{\pi}{3}\right)(\omega>0)$ 的图像向左平移 $\frac{\pi}{2}$ 个单位长度后得到曲线 $C$, 若 $C$ 关于 $y$ 轴对称，则 $\omega$ 的最小值是（)",$\frac{1}{6}$,$\frac{1}{4}$,$\frac{1}{3}$,$\frac{1}{2}$,C,,,,"answer: right
+token: 3482, 155, 3327
+time: 10.2s",,,,,
+214,"6. 从分别写有 $1,2,3,4,5,6$ 的 6 张卡片中无放回随机抽取 2 张, 则抽到的 2 张卡片上 的数字之积是 4 的倍数的概率为 ()",$\frac{1}{5}$,$\frac{1}{3}$,$\frac{2}{5}$,$\frac{2}{3}$,C,,,,"answer: wrong (A)
+token: 2291, 141, 2150
+time: 8.3s",,,,,
+215,"8. 当 $x=1$ 时, 函数 $f(x)=a \ln x+\frac{b}{x}$ 取得最大值 -2 , 则 $f^{\prime}(2)=()$",-1,$-\frac{1}{2}$,$\frac{1}{2}$,1,B,,,,"answer: wrong (A)
+token: 1012, 118, 894
+time: 2.5s",,,,,
+216,"11. 已知椭圆 $C: \frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1(a>b>0)$ 的离心率为 $\frac{1}{3}, A_{1}, A_{2}$ 分别为 $C$ 的左、右顶点, $B$ 为 $C$ 的上顶点. 若 $\overrightarrow{B A_{1}} \cdot \overrightarrow{B A_{2}}=-1$, 则 $C$ 的方程为 ()",$\frac{x^{2}}{18}+\frac{y^{2}}{16}=1$,$\frac{x^{2}}{9}+\frac{y^{2}}{8}=1$,$\frac{x^{2}}{3}+\frac{y^{2}}{2}=1$,"$$
+\frac{x^{2}}{2}+y^{2}=1
+$$",B,,,,"answer: right
+token: 244, 243, 1
+time: 1.2s",,,,,
+217,"12. 已知 $9^{m}=10, a=10^{m}-11, b=8^{m}-9$, 则 ()",$a>0>b$,$a>b>0$,$b>a>0$,$b>0>a$,A,,,,"answer: right
+token: 5325, 117, 5208
+time: 14.0s",,,,,

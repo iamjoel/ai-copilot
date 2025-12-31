@@ -9,7 +9,9 @@ time: 0.3s",,,"answer: wrong (C)
 token: 143, 139, 4
 time: 2.9s","answer: wrong (C)
 token: 143, 139, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 143, 139, 4
+time: 2.5s"
 1,制动时车轮最容易抱死的路面是,沙土路,混凝土路,土路,冰雪路面,D,"answer: right
 token: 94, 88, 6
 time: 0.3s",,"answer: right
@@ -20,7 +22,9 @@ time: 0.7s",,,"answer: right
 token: 105, 101, 4
 time: 2.5s","answer: right
 token: 105, 101, 4
-time: 0.8s",
+time: 0.8s","answer: right
+token: 105, 101, 4
+time: 2.3s"
 2,禁令标志的作用是。,禁止或限制车辆和行人交通行为,传递道路方向、地点、距离信息,指示车辆和行人行进,警告车辆和行人注意危险地点,A,"answer: right
 token: 105, 104, 1
 time: 0.3s",,"answer: right
@@ -31,7 +35,9 @@ time: 0.6s",,,"answer: right
 token: 136, 132, 4
 time: 2.3s","answer: right
 token: 136, 132, 4
-time: 0.8s",
+time: 0.8s","answer: right
+token: 136, 132, 4
+time: 2.6s"
 3,以欺骗、贿赂等不正当手段取得驾驶证被依法撤销驾驶许可的，多长时间不得重新申请驾驶许可,5年内,终身,3年内,1年内,C,"answer: right
 token: 100, 95, 5
 time: 0.2s",,"answer: right
@@ -42,7 +48,9 @@ time: 0.5s",,,"answer: right
 token: 136, 132, 4
 time: 2.2s","answer: wrong (A)
 token: 136, 132, 4
-time: 0.9s",
+time: 0.9s","answer: right
+token: 136, 132, 4
+time: 1.6s"
 4,驾驶机动车遇到沙尘、冰雹、雨、雾、结冰等气象条件如何行驶,保持匀速行驶,适当提高车速,按平常速度行驶,降低行驶速度,D,"answer: right
 token: 102, 101, 1
 time: 0.2s",,"answer: right
@@ -53,7 +61,9 @@ time: 0.6s",,,"answer: right
 token: 140, 136, 4
 time: 3.3s","answer: right
 token: 140, 136, 4
-time: 0.8s",
+time: 0.8s","answer: right
+token: 140, 136, 4
+time: 2.5s"
 5,机动车在没有限速标志、标线的道路情况下，如果同方向只有一条机动车道的城市道路规定最高时速为,40公里/小时,30公里/小时,50公里/小时,70公里/小时,C,"answer: right
 token: 118, 110, 8
 time: 0.4s",,"answer: right
@@ -64,7 +74,9 @@ time: 0.7s",,,"answer: right
 token: 141, 137, 4
 time: 2.2s","answer: right
 token: 141, 137, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 141, 137, 4
+time: 1.8s"
 6,同车道行驶的车辆前方遇到下列哪种车辆不得超车,超载大型货车,城市公交车,执行任务的警车,大型客车,C,"answer: right
 token: 94, 93, 1
 time: 0.2s",,"answer: right
@@ -75,7 +87,9 @@ time: 0.8s",,,"answer: right
 token: 121, 117, 4
 time: 2.6s","answer: right
 token: 121, 117, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 121, 117, 4
+time: 2.5s"
 7,准驾车型为小型自动挡汽车的，可以驾驶以下哪种车型,轻便自动挡载货汽车,二轮摩托车,低速载货汽车,小型汽车,A,"answer: right
 token: 98, 97, 1
 time: 0.2s",,"answer: wrong (D)
@@ -86,7 +100,9 @@ time: 0.8s",,,"answer: right
 token: 133, 129, 4
 time: 2.3s","answer: right
 token: 133, 129, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 133, 129, 4
+time: 2.4s"
 8,驾驶人连续驾驶不得超过多长时间,6小时,10小时,8小时,4小时,D,"answer: right
 token: 86, 81, 5
 time: 0.2s",,"answer: right
@@ -97,7 +113,9 @@ time: 0.5s",,,"answer: right
 token: 103, 99, 4
 time: 2.4s","answer: wrong (C)
 token: 103, 99, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 103, 99, 4
+time: 2.6s"
 9,驾驶小型载客汽车在高速公路上时速低于100公里时的最小跟车距离是多少,不得少于10米,不得少于50米,不得少于30米,不得少于20米,B,"answer: wrong (A)
 token: 113, 112, 1
 time: 0.2s",,"answer: right
@@ -108,7 +126,9 @@ time: 0.6s",,,"answer: right
 token: 132, 128, 4
 time: 3.0s","answer: wrong (C)
 token: 132, 128, 4
-time: 0.8s",
+time: 0.8s","answer: right
+token: 132, 128, 4
+time: 3.1s"
 10,车辆在雨天临时停车时，应开启什么灯,危险报警闪光灯,前后雾灯,倒车灯,前大灯,A,"answer: right
 token: 96, 95, 1
 time: 0.2s",,"answer: right
@@ -119,7 +139,9 @@ time: 0.7s",,,"answer: right
 token: 116, 112, 4
 time: 2.5s","answer: right
 token: 116, 112, 4
-time: 0.9s",
+time: 0.9s","answer: right
+token: 116, 112, 4
+time: 1.7s"
 11,遇伤者被压于车轮或货物下时，错误的方法是,拉曳伤者的肢体,搬掉货物,设法移动车辆,采取相应的救护方法,A,"answer: right
 token: 98, 97, 1
 time: 0.2s",,"answer: right
@@ -130,7 +152,9 @@ time: 0.6s",,,"answer: right
 token: 128, 124, 4
 time: 3.5s","answer: right
 token: 128, 124, 4
-time: 1.1s",
+time: 1.1s","answer: right
+token: 128, 124, 4
+time: 2.7s"
 12,驾驶机动车通过没有交通信号和管理人员的铁路道口怎样通过,停车确认安全后通过,加速尽快通过,空挡滑行通过,适当减速通过,A,"answer: right
 token: 99, 98, 1
 time: 0.2s",,"answer: right
@@ -141,7 +165,9 @@ time: 0.6s",,,"answer: right
 token: 133, 129, 4
 time: 4.2s","answer: right
 token: 133, 129, 4
-time: 1.1s",
+time: 1.1s","answer: right
+token: 133, 129, 4
+time: 2.7s"
 13,行车中遇到后方车辆要求超车时，应怎样做,保持原有车速行驶,靠右侧加速行驶,及时减速、观察后靠右行驶让行,不让行,C,"answer: right
 token: 102, 101, 1
 time: 0.2s",,"answer: right
@@ -152,7 +178,9 @@ time: 0.8s",,,"answer: right
 token: 132, 128, 4
 time: 2.5s","answer: right
 token: 132, 128, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 132, 128, 4
+time: 2.6s"
 14,前轮胎爆裂已出现转向时，驾驶人不要过度矫正，应在控制住方向的情况下，应怎样做，使车辆缓慢减速,采取紧急制动,抢挂低速挡减速后，使用驻车制动,轻踏制动踏板,迅速踏下制动踏板,C,"answer: right
 token: 130, 121, 9
 time: 0.3s",,"answer: right
@@ -163,7 +191,9 @@ time: 0.7s",,,"answer: right
 token: 175, 171, 4
 time: 3.0s","answer: wrong (A)
 token: 481, 171, 310
-time: 3.1s",
+time: 3.1s","answer: right
+token: 175, 171, 4
+time: 2.8s"
 15,驶入高速公路的收费口时，应选择怎样的入口,暂停服务,车辆多,绿灯亮,红灯亮,C,"answer: right
 token: 98, 92, 6
 time: 0.3s",,"answer: right
@@ -174,7 +204,9 @@ time: 0.7s",,,"answer: right
 token: 114, 110, 4
 time: 2.4s","answer: right
 token: 114, 110, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 114, 110, 4
+time: 3.4s"
 16,同车道行驶的车辆前方遇到下列哪种车辆不得超车,小型货车,执行任务的救护车,超载大型货车,大型客车,B,"answer: right
 token: 92, 91, 1
 time: 0.2s",,"answer: right
@@ -185,7 +217,9 @@ time: 0.8s",,,"answer: right
 token: 121, 117, 4
 time: 2.3s","answer: right
 token: 121, 117, 4
-time: 0.9s",
+time: 0.9s","answer: right
+token: 121, 117, 4
+time: 1.9s"
 17,机动车在夜间行驶如何保证安全,以超过规定的最高速度行驶,保持现有速度行驶,以设计最高速行驶,降低速度，谨慎驾驶,D,"answer: right
 token: 92, 91, 1
 time: 0.3s",,"answer: right
@@ -196,7 +230,9 @@ time: 0.4s",,,"answer: right
 token: 132, 128, 4
 time: 2.6s","answer: right
 token: 132, 128, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 132, 128, 4
+time: 3.0s"
 18,赵某（持有A2驾驶证）驾驶大型卧铺客车，行驶至叶城县境风219国道226公里加215米处转弯路段时，坠入道路一侧山沟，致16人死，26人受伤。赵某的主要违法行为是什么,疲劳驾驶,客车超员,驾驶逾期未检验的机动车,驾驶与准驾车型不符的机动车,D,"answer: right
 token: 164, 151, 13
 time: 0.4s",,"answer: right
@@ -207,7 +243,9 @@ time: 0.8s",,,"answer: right
 token: 204, 200, 4
 time: 2.4s","answer: right
 token: 399, 200, 199
-time: 2.4s",
+time: 2.4s","answer: wrong (B)
+token: 204, 200, 4
+time: 2.5s"
 19,进入左侧道路超车，无法保证与正常行驶前车的横向安全间距时，应怎样做,谨慎超越,并行一段距离后再超越,放弃超车,加速超越,C,"answer: right
 token: 109, 102, 7
 time: 0.3s",,"answer: right
@@ -218,7 +256,9 @@ time: 0.6s",,,"answer: right
 token: 133, 129, 4
 time: 2.2s","answer: right
 token: 133, 129, 4
-time: 0.9s",
+time: 0.9s","answer: right
+token: 133, 129, 4
+time: 3.1s"
 20,驾驶机动车遇有前方交叉路口交通阻塞时怎么办,依次停在路口外等候,从前车两侧穿插通过,进入路口内等候,可借对向车道通过,A,"answer: right
 token: 101, 100, 1
 time: 0.2s",,"answer: right
@@ -229,7 +269,9 @@ time: 0.5s",,,"answer: right
 token: 135, 131, 4
 time: 2.1s","answer: right
 token: 135, 131, 4
-time: 0.8s",
+time: 0.8s","answer: right
+token: 135, 131, 4
+time: 1.8s"
 21,机动车驾驶人初次申领驾驶证后的实习期是多长时间,18个月,6个月,12个月,16个月,C,"answer: right
 token: 93, 87, 6
 time: 0.4s",,"answer: right
@@ -240,7 +282,9 @@ time: 0.7s",,,"answer: right
 token: 111, 107, 4
 time: 2.8s","answer: right
 token: 111, 107, 4
-time: 0.8s",
+time: 0.8s","answer: right
+token: 111, 107, 4
+time: 3.5s"
 22,会车前选择的交会位置不理想时，应怎样做,向左占道，让对方减速让行,打开前照灯，示意对方停车让行,加速选择理想位置,减速、低速会车或停车让行,D,"answer: right
 token: 114, 113, 1
 time: 0.2s",,"answer: right
@@ -251,7 +295,9 @@ time: 0.6s",,,"answer: right
 token: 139, 135, 4
 time: 2.8s","answer: right
 token: 139, 135, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 139, 135, 4
+time: 2.9s"
 23,汽车牵引发生故障的机动车时，最高时速不准超过,40公里/小时,30公里/小时,50公里/小时,60公里/小时,B,"answer: right
 token: 106, 98, 8
 time: 0.4s",,"answer: right
@@ -262,7 +308,9 @@ time: 0.3s",,,"answer: right
 token: 120, 116, 4
 time: 2.1s","answer: right
 token: 120, 116, 4
-time: 0.8s",
+time: 0.8s","answer: right
+token: 120, 116, 4
+time: 2.3s"
 24,防抱死制动系统（ABS）在什么情况下可以最大限度发挥制动器效能,紧急制动,间歇制动,持续制动,缓踏制动踏板,A,"answer: right
 token: 98, 97, 1
 time: 0.2s",,"answer: right
@@ -273,7 +321,9 @@ time: 0.5s",,,"answer: right
 token: 127, 123, 4
 time: 2.5s","answer: right
 token: 127, 123, 4
-time: 1.1s",
+time: 1.1s","answer: right
+token: 127, 123, 4
+time: 2.7s"
 25,车辆通过凹凸路面时，应怎样做,低速缓慢平稳通过,依靠惯性加速冲过,挂空挡滑行驶过,保持原速通过,A,"answer: right
 token: 98, 97, 1
 time: 0.2s",,"answer: right
@@ -284,7 +334,9 @@ time: 0.5s",,,"answer: right
 token: 129, 125, 4
 time: 2.8s","answer: right
 token: 129, 125, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 129, 125, 4
+time: 3.8s"
 26,非法安装警报器、标志灯具的，由公安机关交通管理部门强制拆除，予以收缴，并处（）罚款。,2000元以上,100元以上200元以下,200元以上2000元以下,200元以上500元以下,C,"answer: right
 token: 128, 127, 1
 time: 0.2s",,"answer: right
@@ -295,7 +347,9 @@ time: 0.9s",,,"answer: right
 token: 148, 144, 4
 time: 2.4s","answer: right
 token: 148, 144, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 148, 144, 4
+time: 2.6s"
 27,有下列哪种违法行为的机动车驾驶人将被一次记12分,驾驶故意污损号牌的机动车上道路行驶,以隐瞒、欺骗手段补领机动车驾驶证的,驾驶机动车不按照规定避让校车的,机动车驾驶证被暂扣期间驾驶机动车的,A,"answer: right
 token: 123, 122, 1
 time: 0.2s",,"answer: right
@@ -306,7 +360,9 @@ time: 0.5s",,,"answer: right
 token: 183, 179, 4
 time: 2.3s","answer: right
 token: 454, 179, 275
-time: 2.3s",
+time: 2.3s","answer: wrong (B)
+token: 183, 179, 4
+time: 3.1s"
 28,驾驶机动车跨越双实线行驶属于什么行为,过失行为,违法行为,违章行为,违规行为,B,"answer: right
 token: 93, 87, 6
 time: 0.2s",,"answer: right
@@ -317,7 +373,9 @@ time: 0.8s",,,"answer: right
 token: 110, 106, 4
 time: 2.8s","answer: right
 token: 110, 106, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 110, 106, 4
+time: 2.7s"
 29,车辆向深沟连续翻滚时，身体应迅速躲向座椅前下方，抓住（）等将身体稳住，避免身体滚动受伤。,转向盘管,变速器操纵杆,转向盘,踏板,A,"answer: wrong (B)
 token: 121, 113, 8
 time: 0.3s",,"answer: right
@@ -328,7 +386,9 @@ time: 0.7s",,,"answer: right
 token: 147, 143, 4
 time: 2.2s","answer: right
 token: 378, 143, 235
-time: 3.3s",
+time: 3.3s","answer: wrong (C)
+token: 147, 143, 4
+time: 2.5s"
 30,驾驶机动车在雾天怎样跟车行驶,开启近光灯,适时鸣喇叭,开启远光灯,保持大距离,D,"answer: right
 token: 89, 88, 1
 time: 0.3s",,"answer: right
@@ -339,7 +399,9 @@ time: 0.8s",,,"answer: right
 token: 118, 114, 4
 time: 2.4s","answer: right
 token: 118, 114, 4
-time: 0.8s",
+time: 0.8s","answer: right
+token: 118, 114, 4
+time: 3.0s"
 31,公安机关交通管理部门对累积记分达到规定分值的驾驶人怎样处理,处15日以下拘留,依法追究刑事责任,终生禁驾,进行法律法规教育，重新考试,D,"answer: right
 token: 110, 100, 10
 time: 0.3s",,"answer: right
@@ -350,7 +412,9 @@ time: 0.7s",,,"answer: right
 token: 140, 136, 4
 time: 3.1s","answer: right
 token: 140, 136, 4
-time: 0.8s",
+time: 0.8s","answer: right
+token: 140, 136, 4
+time: 2.5s"
 32,会车中遇到对方来车行进有困难需借道时，应怎样做,不侵占对方道路，正常行驶,尽量礼让对方先行,示意对方停车让行,靠右侧加速行驶,B,"answer: right
 token: 105, 104, 1
 time: 0.3s",,"answer: right
@@ -361,7 +425,9 @@ time: 0.7s",,,"answer: right
 token: 139, 135, 4
 time: 2.4s","answer: right
 token: 139, 135, 4
-time: 1.2s",
+time: 1.2s","answer: right
+token: 139, 135, 4
+time: 2.3s"
 33,年龄在60周岁以上的驾驶人多长时间提交一次身体条件证明,每1年,每6个月,每2年,每3年,A,"answer: right
 token: 96, 95, 1
 time: 0.3s",,"answer: right
@@ -372,7 +438,9 @@ time: 0.8s",,,"answer: right
 token: 115, 111, 4
 time: 2.3s","answer: right
 token: 115, 111, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 115, 111, 4
+time: 1.6s"
 34,行车中遇列队横过道路的学生时，应怎样做,降低车速、缓慢通过,提前加速抢行,连续鸣喇叭催促,停车让行,D,"answer: right
 token: 107, 99, 8
 time: 0.4s",,"answer: right
@@ -383,7 +451,9 @@ time: 1.1s",,,"answer: right
 token: 126, 122, 4
 time: 3.5s","answer: right
 token: 126, 122, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 126, 122, 4
+time: 3.4s"
 35,在下列哪种违法行为的机动车驾驶人将被一次记6分,饮酒后驾驶机动车,驾驶与准驾车型不符的机动车,未取得校车驾驶资格驾驶校车,驾驶机动车违反道路交通信号灯,D,"answer: right
 token: 110, 109, 1
 time: 2.5s",,"answer: right
@@ -394,7 +464,9 @@ time: 0.3s",,,"answer: right
 token: 160, 156, 4
 time: 2.6s","answer: right
 token: 349, 156, 193
-time: 1.9s",
+time: 1.9s","answer: right
+token: 160, 156, 4
+time: 2.0s"
 36,机动车在机动车道与非机动车道之间设有隔离设施的路段,可以随意停车,可以临时停车,可以长时间停车,不得停车,D,"answer: right
 token: 92, 91, 1
 time: 0.2s",,"answer: right
@@ -405,7 +477,9 @@ time: 0.8s",,,"answer: right
 token: 121, 117, 4
 time: 2.4s","answer: right
 token: 121, 117, 4
-time: 0.9s",
+time: 0.9s","answer: right
+token: 121, 117, 4
+time: 2.1s"
 37,在同向3车道高速公路上行驶，最右侧车道的最低车速为每小时,100公里,40公里,60公里,80公里,C,"answer: right
 token: 101, 95, 6
 time: 0.4s",,"answer: right
@@ -416,7 +490,9 @@ time: 0.6s",,,"answer: right
 token: 114, 110, 4
 time: 4.0s","answer: right
 token: 114, 110, 4
-time: 0.8s",
+time: 0.8s","answer: right
+token: 114, 110, 4
+time: 2.7s"
 38,行驶车道绿灯亮时，但车辆前方人行横道仍有行人行走，应怎样做,直接起步通过,等行人通过后再起步,起步后从行人前方绕过,起步后从行人后方绕过,B,"answer: right
 token: 115, 114, 1
 time: 0.2s",,"answer: right
@@ -427,7 +503,9 @@ time: 0.8s",,,"answer: right
 token: 145, 141, 4
 time: 2.7s","answer: right
 token: 145, 141, 4
-time: 1.0s",
+time: 1.0s","answer: right
+token: 145, 141, 4
+time: 1.7s"
 39,驾驶人违反交通运输管理法规发生重大事故使公私财产遭受重大损失，可能会受到什么刑罚,处3年以上7年以下徒刑,处3年以下徒刑或者拘投,处5年以上徒刑,处3年以上徒刑,B,"answer: right
 token: 115, 114, 1
 time: 0.2s",,"answer: right
@@ -438,7 +516,9 @@ time: 0.7s",,,"answer: right
 token: 162, 158, 4
 time: 2.2s","answer: right
 token: 234, 158, 76
-time: 1.4s",
+time: 1.4s","answer: right
+token: 162, 158, 4
+time: 2.6s"
 40,机动车在高速公路上发生故障时错误的做法是什么,迅速报警,车上人员不能下车,开启危险报警闪光灯,按规定设置警告标志,B,"answer: right
 token: 95, 94, 1
 time: 0.3s",,"answer: right
@@ -449,7 +529,9 @@ time: 0.6s",,,"answer: right
 token: 127, 123, 4
 time: 2.2s","answer: right
 token: 127, 123, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 127, 123, 4
+time: 2.8s"
 41,液化石油气罐车在运输途中发生大量泄漏时，下列措施错误的是什么,组织人员向下风方向梳散,关闭阀门制止渗漏,切断一切电源,戴好防护面具和手套,A,"answer: right
 token: 107, 106, 1
 time: 0.2s",,"answer: right
@@ -460,7 +542,9 @@ time: 0.7s",,,"answer: right
 token: 145, 141, 4
 time: 2.2s","answer: right
 token: 214, 141, 73
-time: 1.4s",
+time: 1.4s","answer: right
+token: 145, 141, 4
+time: 2.5s"
 42,驾驶机动车在道路上追逐竞驶，情节恶劣，会受到什么处罚,处管制，并处罚金,处1年以上徒刑,处6个月徒刑,处拘役，并处罚金,D,"answer: right
 token: 102, 101, 1
 time: 0.2s",,"answer: right
@@ -471,7 +555,9 @@ time: 0.6s",,,"answer: right
 token: 142, 138, 4
 time: 2.3s","answer: right
 token: 196, 138, 58
-time: 1.4s",
+time: 1.4s","answer: right
+token: 142, 138, 4
+time: 2.5s"
 43,夜间驾驶车辆遇自行车对向驶来时，应怎样做,使用近光灯，减速或停车避让,连续变换远、近光灯,使用远光灯,不断鸣喇叭,A,"answer: right
 token: 102, 101, 1
 time: 0.3s",,"answer: right
@@ -482,7 +568,9 @@ time: 0.6s",,,"answer: right
 token: 138, 134, 4
 time: 2.1s","answer: right
 token: 138, 134, 4
-time: 0.8s",
+time: 0.8s","answer: right
+token: 138, 134, 4
+time: 3.2s"
 44,路口转弯过程中，持续开启转向灯，主要是因为什么,让其他驾驶人知道您正在超车,完成转弯动作前，关闭转向灯是习惯动作,完成转弯动作前，关闭转向灯会对车辆造成损害,让其他驾驶人知道您正在转弯,D,"answer: right
 token: 120, 119, 1
 time: 0.3s",,"answer: right
@@ -493,7 +581,9 @@ time: 0.6s",,,"answer: right
 token: 175, 171, 4
 time: 2.4s","answer: right
 token: 175, 171, 4
-time: 1.2s",
+time: 1.2s","answer: right
+token: 175, 171, 4
+time: 1.8s"
 45,行车中突遇对方车辆强行超车，占据自己车道，正确的做法是,保持原车速行驶,尽可能减速避让,加速行驶,挡住其去路,B,"answer: right
 token: 100, 99, 1
 time: 0.4s",,"answer: right
@@ -504,7 +594,9 @@ time: 0.7s",,,"answer: right
 token: 128, 124, 4
 time: 2.3s","answer: right
 token: 128, 124, 4
-time: 0.8s",
+time: 0.8s","answer: right
+token: 128, 124, 4
+time: 2.9s"
 46,车辆因故障必须在高速公路停车时，应在车后方至少多少米处设置故障警告标志，夜间还需开启示廓灯和后位灯,50,200,100,150,D,"answer: right
 token: 114, 108, 6
 time: 0.3s",,"answer: right
@@ -515,7 +607,9 @@ time: 0.6s",,,"answer: wrong (B)
 token: 130, 126, 4
 time: 2.7s","answer: right
 token: 130, 126, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 130, 126, 4
+time: 1.6s"
 47,申请小型汽车准驾车型驾驶证的人年龄条件是多少,18周岁以上60周岁以下,24周岁以上70周岁以下,21周岁以上50周岁以下,18周岁以上70周岁以下,D,"answer: right
 token: 107, 106, 1
 time: 0.5s",,"answer: right
@@ -526,7 +620,9 @@ time: 0.7s",,,"answer: right
 token: 147, 143, 4
 time: 2.5s","answer: right
 token: 147, 143, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 147, 143, 4
+time: 2.4s"
 48,行车中遇有非机动车准备绕过停放的车辆时，应怎样做,让其先行,加速绕行,紧随其后鸣喇叭,鸣喇叭示意其让道,A,"answer: right
 token: 102, 101, 1
 time: 0.3s",,"answer: right
@@ -537,7 +633,9 @@ time: 0.6s",,,"answer: right
 token: 133, 129, 4
 time: 2.5s","answer: right
 token: 133, 129, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 133, 129, 4
+time: 2.6s"
 49,机动车在高速公路上发生故障需检查时怎样停车,在最外侧行车道上停车,在内侧行车道上停车,在应急车道停车,在匝道口三角地带停车,C,"answer: right
 token: 98, 97, 1
 time: 0.6s",,"answer: right
@@ -548,7 +646,9 @@ time: 0.8s",,,"answer: right
 token: 133, 129, 4
 time: 2.3s","answer: right
 token: 133, 129, 4
-time: 0.9s",
+time: 0.9s","answer: right
+token: 133, 129, 4
+time: 2.5s"
 50,下列哪种行为会受到200元以上2000元以下罚款，并处吊销机动车驾驶证,驾车没带驾驶证,超过规定时速50%,造成交通事故后逃逸,违反道路通行规定,B,"answer: right
 token: 111, 110, 1
 time: 0.5s",,"answer: right
@@ -559,7 +659,9 @@ time: 0.5s",,,"answer: wrong (C)
 token: 145, 141, 4
 time: 2.3s","answer: right
 token: 202, 141, 61
-time: 1.1s",
+time: 1.1s","answer: right
+token: 145, 141, 4
+time: 2.4s"
 51,机动车在道路上行驶时，属于交通陋习的是什么行为,遵守交通信号,按规定使用灯光,随意向车外抛洒物品,带行驶证、驾驶证,C,"answer: right
 token: 101, 100, 1
 time: 0.5s",,"answer: right
@@ -570,7 +672,9 @@ time: 0.6s",,,"answer: right
 token: 134, 130, 4
 time: 2.6s","answer: right
 token: 134, 130, 4
-time: 0.9s",
+time: 0.9s","answer: right
+token: 134, 130, 4
+time: 3.3s"
 52,驾驶机动车在高速公路遇到能见度低于50米的气象条件时，车速不得超过20公里/小时，还应怎么做,在路肩低速行驶,进入应急车道行驶,尽快驶离高速公路,快在路边停车,C,"answer: right
 token: 121, 113, 8
 time: 0.5s",,"answer: right
@@ -581,7 +685,9 @@ time: 0.6s",,,"answer: right
 token: 218, 150, 68
 time: 3.5s","answer: right
 token: 154, 150, 4
-time: 0.8s",
+time: 0.8s","answer: right
+token: 154, 150, 4
+time: 1.6s"
 53,公安交通管理部门对驾驶人的交通违法行为除依法给予行政处罚外，实行下列哪种制度,累积记分制度,违法登记制度,强制报废制度,奖励里程制度,A,"answer: right
 token: 102, 101, 1
 time: 0.5s",,"answer: right
@@ -592,7 +698,9 @@ time: 0.4s",,,"answer: right
 token: 139, 135, 4
 time: 2.4s","answer: right
 token: 139, 135, 4
-time: 1.7s",
+time: 1.7s","answer: right
+token: 139, 135, 4
+time: 2.5s"
 54,驾驶机动车在泥泞道路行驶时，最高速度不能超过多少,40公里/小时,15公里/小时,20公里/小时,30公里/小时,D,"answer: wrong (B)
 token: 108, 100, 8
 time: 0.4s",,"answer: right
@@ -603,7 +711,9 @@ time: 0.6s",,,"answer: right
 token: 125, 121, 4
 time: 2.8s","answer: wrong (B)
 token: 125, 121, 4
-time: 1.0s",
+time: 1.0s","answer: right
+token: 125, 121, 4
+time: 2.4s"
 55,车辆驶近人行横道时，应怎样做,鸣喇叭示意行人让道,立即停车,先减速注意观察行人、非机动车动态，确认安全后再通过,加速通过,C,"answer: right
 token: 105, 104, 1
 time: 0.5s",,"answer: right
@@ -614,7 +724,9 @@ time: 0.7s",,,"answer: right
 token: 135, 131, 4
 time: 3.3s","answer: right
 token: 135, 131, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 135, 131, 4
+time: 2.6s"
 56,驾驶机动车行经市区下列哪种道路时不得超车,单向行驶路段,主要街道,交通流量大的路段,单向两条行车道,C,"answer: wrong (B)
 token: 97, 92, 5
 time: 0.5s",,"answer: right
@@ -625,7 +737,9 @@ time: 0.6s",,,"answer: wrong (B)
 token: 121, 117, 4
 time: 2.3s","answer: right
 token: 121, 117, 4
-time: 1.6s",
+time: 1.6s","answer: wrong (B)
+token: 121, 117, 4
+time: 2.0s"
 57,驾驶车辆通过无人看守的铁路道口时，应怎样做,一停、二看、三通过,匀速通过,加速通过,减速通过,A,"answer: right
 token: 97, 96, 1
 time: 0.5s",,"answer: right
@@ -636,7 +750,9 @@ time: 0.4s",,,"answer: right
 token: 120, 116, 4
 time: 3.1s","answer: right
 token: 120, 116, 4
-time: 0.8s",
+time: 0.8s","answer: right
+token: 120, 116, 4
+time: 2.5s"
 58,谨慎驾驶的三条黄金原则：集中注意力、仔细观察和,低速行车,提前预防,胆大心细,手脚麻利,B,"answer: right
 token: 97, 92, 5
 time: 0.4s",,"answer: right
@@ -647,7 +763,9 @@ time: 0.5s",,,"answer: right
 token: 120, 116, 4
 time: 2.9s","answer: right
 token: 120, 116, 4
-time: 1.0s",
+time: 1.0s","answer: right
+token: 120, 116, 4
+time: 2.5s"
 59,行人参与道路交通的主要特点是什么,行动迟缓,行走随意性大，方向多变,喜欢聚集、围观,稳定性差,B,"answer: right
 token: 95, 94, 1
 time: 0.4s",,"answer: right
@@ -658,7 +776,9 @@ time: 0.6s",,,"answer: right
 token: 120, 116, 4
 time: 2.3s","answer: right
 token: 120, 116, 4
-time: 1.0s",
+time: 1.0s","answer: right
+token: 120, 116, 4
+time: 2.4s"
 60,上道路行驶的机动车有哪种情形交通警察可依法扣留车辆,未携带机动车登记证书,未放置城市环保标志,未携带保险合同,未放置保险标志,D,"answer: right
 token: 96, 95, 1
 time: 0.3s",,"answer: right
@@ -669,7 +789,9 @@ time: 0.6s",,,"answer: right
 token: 134, 130, 4
 time: 2.5s","answer: right
 token: 134, 130, 4
-time: 0.9s",
+time: 0.9s","answer: right
+token: 134, 130, 4
+time: 1.6s"
 61,机动车在道路上发生故障，需要停车排除时，驾驶人应该怎么办,开启近光灯或雾灯,将车停在道路中间,将车停到不妨碍交通的地方,就地停车排除故障,C,"answer: right
 token: 105, 104, 1
 time: 0.4s",,"answer: right
@@ -680,7 +802,9 @@ time: 0.6s",,,"answer: right
 token: 144, 140, 4
 time: 2.7s","answer: right
 token: 144, 140, 4
-time: 1.0s",
+time: 1.0s","answer: right
+token: 144, 140, 4
+time: 2.7s"
 62,行车中遇抢救伤员的救护车从本车道逆向驶来时，应怎样做,占用其他车道行驶,在原车道内继续行驶,加速变更车道避让,靠边减速或停车让行,D,"answer: right
 token: 108, 107, 1
 time: 0.4s",,"answer: right
@@ -691,7 +815,9 @@ time: 0.5s",,,"answer: right
 token: 141, 137, 4
 time: 3.1s","answer: right
 token: 141, 137, 4
-time: 1.0s",
+time: 1.0s","answer: right
+token: 141, 137, 4
+time: 2.5s"
 63,驾驶报废机动车上路行驶的驾驶人，除按规定罚款外，还要受到哪种处理,吊销驾驶证,撤销驾驶许可,强制恢复车况,收缴驾驶证,A,"answer: right
 token: 101, 100, 1
 time: 0.4s",,"answer: right
@@ -702,7 +828,9 @@ time: 0.3s",,,"answer: right
 token: 143, 139, 4
 time: 2.2s","answer: right
 token: 143, 139, 4
-time: 0.9s",
+time: 0.9s","answer: right
+token: 143, 139, 4
+time: 2.7s"
 64,同车道行驶的车辆前方遇到下列哪种车辆不得超车,大型客车,中型客车,超载大型货车,执行任务的消防车,D,"answer: right
 token: 92, 91, 1
 time: 0.4s",,"answer: right
@@ -713,7 +841,9 @@ time: 0.5s",,,"answer: right
 token: 121, 117, 4
 time: 2.2s","answer: right
 token: 121, 117, 4
-time: 0.9s",
+time: 0.9s","answer: right
+token: 121, 117, 4
+time: 2.6s"
 65,驾驶机动车下陡坡、转弯、掉头时，最高速度不能超过多少,50公里/小时,40公里/小时,60公里/小时,30公里/小时,D,"answer: right
 token: 111, 103, 8
 time: 0.5s",,"answer: right
@@ -724,7 +854,9 @@ time: 0.6s",,,"answer: right
 token: 128, 124, 4
 time: 2.4s","answer: right
 token: 128, 124, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 128, 124, 4
+time: 2.7s"
 66,当您即将通过交叉路口的时候，才意识到要左转而不是向前，以下说法正确的是什么,以上说法都不正确,继续向前行驶,停在交叉路口，等待安全时左转,在确保安全的情况下，倒车然后左转,B,"answer: right
 token: 118, 111, 7
 time: 0.4s",,"answer: right
@@ -735,7 +867,9 @@ time: 0.6s",,,"answer: right
 token: 157, 153, 4
 time: 2.4s","answer: right
 token: 157, 153, 4
-time: 0.9s",
+time: 0.9s","answer: right
+token: 157, 153, 4
+time: 2.7s"
 67,行车中遇有非机动车准备绕过停放的车辆时，应怎样做,鸣喇叭示意其让道,紧随其后鸣喇叭,加速绕过,让其先行,D,"answer: right
 token: 102, 101, 1
 time: 0.3s",,"answer: right
@@ -746,7 +880,9 @@ time: 0.6s",,,"answer: right
 token: 133, 129, 4
 time: 2.4s","answer: right
 token: 133, 129, 4
-time: 1.0s",
+time: 1.0s","answer: right
+token: 133, 129, 4
+time: 2.5s"
 68,下列哪种证件是驾驶机动车上路行驶应当随车携带,机动车登记证,出厂合格证明,机动车行驶证,机动车保险单,C,"answer: right
 token: 90, 89, 1
 time: 0.3s",,"answer: right
@@ -757,7 +893,9 @@ time: 0.6s",,,"answer: right
 token: 124, 120, 4
 time: 2.4s","answer: right
 token: 124, 120, 4
-time: 1.0s",
+time: 1.0s","answer: right
+token: 124, 120, 4
+time: 2.5s"
 69,驾驶的车辆正在被其他车辆超越时，应怎样做,继续加速行驶,靠道路中心行驶,减速，靠右侧行驶,加速让路,C,"answer: right
 token: 99, 98, 1
 time: 0.3s",,"answer: right
@@ -768,7 +906,9 @@ time: 0.6s",,,"answer: right
 token: 128, 124, 4
 time: 2.2s","answer: right
 token: 128, 124, 4
-time: 0.9s",
+time: 0.9s","answer: right
+token: 128, 124, 4
+time: 2.6s"
 70,周某驾驶一辆轻型厢式货车（搭载22人）行驶对丙察公路79公里加150米处时，坠入道路一侧山崖，造成12人死亡、10人受伤。周某的主要违法行为是什么,超速行驶,驾驶逾期未检验的机动车,货运机动车载客,疲劳驾驶,C,"answer: right
 token: 148, 139, 9
 time: 0.4s",,"answer: right
@@ -779,7 +919,9 @@ time: 0.6s",,,"answer: right
 token: 186, 182, 4
 time: 2.3s","answer: right
 token: 404, 182, 222
-time: 2.8s",
+time: 2.8s","answer: right
+token: 186, 182, 4
+time: 2.4s"
 71,已注册登记的小型载客汽车有下列哪种情形，所有人不需要办理变更登记,改变车身颜色,更换车身或者车架,加装前后防撞装置,机动车更换发动机,C,"answer: right
 token: 106, 98, 8
 time: 0.4s",,"answer: right
@@ -790,7 +932,9 @@ time: 0.7s",,,"answer: right
 token: 138, 134, 4
 time: 3.1s","answer: right
 token: 138, 134, 4
-time: 1.2s",
+time: 1.2s","answer: right
+token: 138, 134, 4
+time: 2.8s"
 72,行车中遇儿童时，应怎样做,迅速从一侧通过,长鸣喇叭催促,加速绕行,减速慢行，必要时停车避让,D,"answer: right
 token: 98, 97, 1
 time: 0.3s",,"answer: right
@@ -801,7 +945,9 @@ time: 0.6s",,,"answer: right
 token: 124, 120, 4
 time: 2.8s","answer: right
 token: 124, 120, 4
-time: 0.9s",
+time: 0.9s","answer: right
+token: 124, 120, 4
+time: 1.7s"
 73,驾驶机动车通过窄路、窄桥时，最高速度不能超过多少,50公里/小时,30公里/小时,60公里/小时,40公里/小时,B,"answer: right
 token: 102, 101, 1
 time: 0.3s",,"answer: right
@@ -812,7 +958,9 @@ time: 0.6s",,,"answer: right
 token: 125, 121, 4
 time: 2.7s","answer: right
 token: 125, 121, 4
-time: 1.0s",
+time: 1.0s","answer: right
+token: 125, 121, 4
+time: 2.3s"
 74,对驾驶拼装机动车上路行驶的驾驶人，会受到下列哪种处罚,处200以上2000元以下罚款,依法追究刑事责任,吊销机动车行驶证,处15日以下拘留,A,"answer: right
 token: 105, 104, 1
 time: 0.4s",,"answer: right
@@ -823,7 +971,9 @@ time: 0.5s",,,"answer: wrong (D)
 token: 145, 141, 4
 time: 2.4s","answer: right
 token: 145, 141, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 145, 141, 4
+time: 1.8s"
 75,下长坡时，控制车速除了刹车制动以外还有什么有效的辅助方法,利用发动机制动,挂入空挡滑行,踏下离合器滑行,关闭发动机熄火滑行,A,"answer: right
 token: 105, 104, 1
 time: 0.3s",,"answer: right
@@ -834,7 +984,9 @@ time: 0.6s",,,"answer: right
 token: 140, 136, 4
 time: 2.5s","answer: right
 token: 140, 136, 4
-time: 0.9s",
+time: 0.9s","answer: right
+token: 140, 136, 4
+time: 2.5s"
 76,3年内有下列哪种行为的人不得申请机动车驾驶证,注射胰岛素,酒醉经历,注射毒品,吸烟成瘾,C,"answer: right
 token: 93, 88, 5
 time: 0.3s",,"answer: right
@@ -845,7 +997,9 @@ time: 0.9s",,,"answer: right
 token: 123, 119, 4
 time: 2.3s","answer: wrong (B)
 token: 123, 119, 4
-time: 1.0s",
+time: 1.0s","answer: right
+token: 123, 119, 4
+time: 2.1s"
 77,车辆驶入双向行驶隧道前，应开启什么灯,远光灯,示廓灯或近光灯,雾灯,危险报警闪光灯,B,"answer: right
 token: 95, 94, 1
 time: 0.3s",,"answer: right
@@ -856,7 +1010,9 @@ time: 0.7s",,,"answer: right
 token: 122, 118, 4
 time: 2.5s","answer: right
 token: 122, 118, 4
-time: 1.3s",
+time: 1.3s","answer: right
+token: 122, 118, 4
+time: 2.5s"
 78,行车中遇老年人骑自行车时，应,临近时鸣喇叭示意其让道,提前鸣喇叭，减速避让,迅速绕过,紧随其后行驶,B,"answer: right
 token: 99, 98, 1
 time: 0.3s",,"answer: right
@@ -867,7 +1023,9 @@ time: 0.4s",,,"answer: right
 token: 131, 127, 4
 time: 2.3s","answer: right
 token: 131, 127, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 131, 127, 4
+time: 2.4s"
 79,发现前方道路堵塞，正确的做法是什么,继续穿插绕行,按顺序停车等候,选择空当逐车超越,鸣喇叭示意前方车辆快速行驶,B,"answer: right
 token: 97, 96, 1
 time: 0.3s",,"answer: right
@@ -878,7 +1036,9 @@ time: 0.6s",,,"answer: right
 token: 135, 131, 4
 time: 2.3s","answer: right
 token: 135, 131, 4
-time: 0.8s",
+time: 0.8s","answer: right
+token: 135, 131, 4
+time: 2.5s"
 80,车辆在交叉路口有优先通行权的，遇有车辆抢行时，应怎样做,减速避让，必要时停车让行,提前加速通过,按优先权规定正常行驶不予避让,抢行通过,A,"answer: right
 token: 112, 111, 1
 time: 0.3s",,"answer: right
@@ -889,7 +1049,9 @@ time: 0.6s",,,"answer: right
 token: 143, 139, 4
 time: 3.2s","answer: right
 token: 143, 139, 4
-time: 0.9s",
+time: 0.9s","answer: right
+token: 143, 139, 4
+time: 2.4s"
 81,某日13时10分，罗某驾驶一辆中型客车从高速公路0公里处出发，下午14时10分行至该高速公路125公里加200米处时，发生追尾碰撞，机动车驶出西南侧路外边坡，造成11人死亡、2人受伤。罗某的主要违法行为是什么,超速行驶,客车超员,疲劳驾驶,不按交通标线行驶,A,"answer: wrong (C)
 token: 162, 155, 7
 time: 0.3s",,"answer: right
@@ -900,7 +1062,9 @@ time: 0.6s",,,"answer: wrong (B)
 token: 477, 202, 275
 time: 6.1s","answer: right
 token: 523, 202, 321
-time: 3.8s",
+time: 3.8s","answer: right
+token: 332, 202, 130
+time: 4.9s"
 82,驾驶机动车在进出非机动车道时，最高速度不能超过多少,60公里/小时,30公里/小时,50公里/小时,40公里/小时,B,"answer: right
 token: 108, 100, 8
 time: 0.3s",,"answer: right
@@ -911,7 +1075,9 @@ time: 0.6s",,,"answer: right
 token: 123, 119, 4
 time: 2.3s","answer: right
 token: 123, 119, 4
-time: 1.0s",
+time: 1.0s","answer: right
+token: 123, 119, 4
+time: 2.3s"
 83,下雨后路面湿滑，车辆行驶中紧急制动时，容易导致什么,发生侧滑、引发交通事故,引起发动机熄火,不被其他车辆驾驶人发现,因视线模糊而撞车,A,"answer: right
 token: 103, 102, 1
 time: 0.3s",,"answer: right
@@ -922,7 +1088,9 @@ time: 0.7s",,,"answer: right
 token: 148, 144, 4
 time: 2.4s","answer: right
 token: 148, 144, 4
-time: 0.9s",
+time: 0.9s","answer: right
+token: 148, 144, 4
+time: 2.6s"
 84,在实习期内驾驶机动车的，应当在车身后部粘贴或者悬挂哪种标志,统一式样的实习标志,注意新手标志,注意避让标志,注意车距标志,A,"answer: right
 token: 95, 94, 1
 time: 0.3s",,"answer: right
@@ -933,7 +1101,9 @@ time: 0.6s",,,"answer: right
 token: 135, 131, 4
 time: 2.7s","answer: right
 token: 135, 131, 4
-time: 0.9s",
+time: 0.9s","answer: right
+token: 135, 131, 4
+time: 3.5s"
 85,当驾驶车辆行经两侧有非机动车行驶且有积水的路面时，应怎样做,正常行驶,连续鸣喇叭,加速通过,减速慢行,D,"answer: right
 token: 102, 95, 7
 time: 0.3s",,"answer: right
@@ -944,7 +1114,9 @@ time: 0.5s",,,"answer: right
 token: 130, 126, 4
 time: 2.6s","answer: right
 token: 130, 126, 4
-time: 1.6s",
+time: 1.6s","answer: right
+token: 130, 126, 4
+time: 2.6s"
 86,大雾天行车，多鸣喇叭是为了什么,催促前车让行,催促前车提速，避免发生追尾,引起对方注意，避免发生危险,准备超越前车,C,"answer: right
 token: 103, 102, 1
 time: 0.3s",,"answer: right
@@ -955,7 +1127,9 @@ time: 0.6s",,,"answer: right
 token: 131, 127, 4
 time: 2.4s","answer: right
 token: 131, 127, 4
-time: 1.2s",
+time: 1.2s","answer: right
+token: 131, 127, 4
+time: 2.5s"
 87,驾驶人出现下列哪种情况，不得驾驶机动车,驾驶证丢失、损毁,驾驶证接近有效期,记分达到10分,记分达到6分,A,"answer: right
 token: 101, 100, 1
 time: 0.2s",,"answer: right
@@ -966,7 +1140,9 @@ time: 0.5s",,,"answer: right
 token: 130, 126, 4
 time: 2.2s","answer: right
 token: 130, 126, 4
-time: 0.8s",
+time: 0.8s","answer: right
+token: 130, 126, 4
+time: 2.4s"
 88,驾驶机动车遇到有漫水路时，要采取的正确做法是什么？a停车察明水情；b确认安全后，低速通过；c机动车涉水后，间断轻踏制动踏板；d机动车涉水后，持续轻踏制动踏板,bc,abc,cd,bcd,B,"answer: right
 token: 127, 124, 3
 time: 0.2s",,"answer: right
@@ -977,7 +1153,9 @@ time: 0.6s",,,"answer: right
 token: 163, 159, 4
 time: 2.7s","answer: wrong (A)
 token: 479, 159, 320
-time: 3.0s",
+time: 3.0s","answer: wrong (A)
+token: 365, 159, 206
+time: 4.5s"
 89,机动车发生碰撞时座椅安全带主要作用是什么,保护驾乘人员腰部,保护驾乘人员胸部,保护驾乘人员颈部,减轻驾乘人员伤害,D,"answer: right
 token: 95, 94, 1
 time: 0.3s",,"answer: right
@@ -988,7 +1166,9 @@ time: 0.8s",,,"answer: right
 token: 140, 136, 4
 time: 2.4s","answer: right
 token: 140, 136, 4
-time: 0.9s",
+time: 0.9s","answer: right
+token: 140, 136, 4
+time: 1.7s"
 90,行车中遇到对向来车占道行驶，应怎样做,紧靠道路中心行驶,用大灯警示对方,主动给对方让行,逼对方靠右行驶,C,"answer: right
 token: 100, 99, 1
 time: 0.2s",,"answer: right
@@ -999,7 +1179,9 @@ time: 0.5s",,,"answer: right
 token: 129, 125, 4
 time: 3.2s","answer: right
 token: 129, 125, 4
-time: 1.1s",
+time: 1.1s","answer: right
+token: 129, 125, 4
+time: 2.4s"
 91,水淹路面影响行车安全，不易通行的原因是什么,路面附着力增大,能见度低，视野模糊,日光反射阻挡视线,无法观察到暗坑和凸起的路面,D,"answer: right
 token: 103, 102, 1
 time: 0.2s",,"answer: right
@@ -1010,7 +1192,9 @@ time: 0.6s",,,"answer: right
 token: 137, 133, 4
 time: 2.3s","answer: right
 token: 137, 133, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 137, 133, 4
+time: 1.7s"
 92,驾驶拼装机动车上路行驶的驾驶人，除按规定接受罚款外，还要受到哪种处理,追究刑事责任,吊销驾驶证,暂扣驾驶证,处10日以下拘留,B,"answer: right
 token: 108, 102, 6
 time: 0.2s",,"answer: right
@@ -1021,7 +1205,9 @@ time: 0.4s",,,"answer: right
 token: 146, 142, 4
 time: 3.1s","answer: right
 token: 146, 142, 4
-time: 1.0s",
+time: 1.0s","answer: right
+token: 146, 142, 4
+time: 1.6s"
 93,机动车在设有最高限速标志的道路上行驶时,按规定的最高车速行驶,可以超过车辆的最高设计时速,不得超过标明的最高时速,允许超过标明最高时速的10%,C,"answer: right
 token: 108, 107, 1
 time: 0.5s",,"answer: right
@@ -1032,7 +1218,9 @@ time: 0.8s",,,"answer: right
 token: 141, 137, 4
 time: 2.5s","answer: right
 token: 141, 137, 4
-time: 0.8s",
+time: 0.8s","answer: right
+token: 141, 137, 4
+time: 2.5s"
 94,驾驶人行车中看到注意儿童标志的时候，应怎样做,加速行驶,保持正常车速行驶,谨慎选择行车速度,绕道行驶,C,"answer: right
 token: 95, 94, 1
 time: 0.2s",,"answer: right
@@ -1043,7 +1231,9 @@ time: 0.7s",,,"answer: right
 token: 128, 124, 4
 time: 2.5s","answer: right
 token: 128, 124, 4
-time: 1.2s",
+time: 1.2s","answer: right
+token: 128, 124, 4
+time: 2.4s"
 95,在堵车的交叉路口绿灯亮时，车辆应怎样做,可直接驶入交叉路口,可借对向车道通过路口,在保证安全的情况下驶入交叉路口,不能驶入交叉路口,D,"answer: wrong (C)
 token: 103, 102, 1
 time: 0.3s",,"answer: right
@@ -1054,7 +1244,9 @@ time: 0.3s",,,"answer: right
 token: 146, 142, 4
 time: 3.0s","answer: right
 token: 146, 142, 4
-time: 0.8s",
+time: 0.8s","answer: right
+token: 146, 142, 4
+time: 2.5s"
 96,驾驶汽车怎样向左安全变更车道？a观察左侧道路情况；b打开左转向灯；c不得影响正常通行车辆；d迅速向左变道,abcd,bc,bcd,abc,D,"answer: right
 token: 104, 101, 3
 time: 0.3s",,"answer: right
@@ -1065,7 +1257,9 @@ time: 0.6s",,,"answer: right
 token: 134, 130, 4
 time: 2.3s","answer: wrong (B)
 token: 399, 130, 269
-time: 2.7s",
+time: 2.7s","answer: right
+token: 134, 130, 4
+time: 2.2s"
 97,在以下路段不能倒车的是什么,交叉路口,隧道,以上皆是,急弯,C,"answer: right
 token: 86, 80, 6
 time: 0.4s",,"answer: right
@@ -1076,7 +1270,9 @@ time: 0.6s",,,"answer: right
 token: 102, 98, 4
 time: 2.5s","answer: right
 token: 102, 98, 4
-time: 1.0s",
+time: 1.0s","answer: right
+token: 102, 98, 4
+time: 1.5s"
 98,机动车经（）登记后，方可上道路行驶。,公安机关交通管理部门,道路运输管理机构,法务部门,工商部门,A,"answer: right
 token: 92, 91, 1
 time: 0.2s",,"answer: right
@@ -1087,7 +1283,9 @@ time: 0.5s",,,"answer: right
 token: 117, 113, 4
 time: 2.9s","answer: right
 token: 117, 113, 4
-time: 0.8s",
+time: 0.8s","answer: right
+token: 117, 113, 4
+time: 1.6s"
 99,在一般道路倒车时，若发现有过往车辆通过，应怎样做,加速倒车,鸣喇叭示意,主动停车避让,继续倒车,C,"answer: right
 token: 95, 94, 1
 time: 0.2s",,"answer: right
@@ -1098,7 +1296,9 @@ time: 0.7s",,,"answer: right
 token: 124, 120, 4
 time: 2.1s","answer: right
 token: 124, 120, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 124, 120, 4
+time: 4.1s"
 100,牵引发生故障的机动车时，最高车速不得超过多少,20公里/小时,50公里/小时,30公里/小时,40公里/小时,C,"answer: right
 token: 104, 96, 8
 time: 0.3s",,"answer: right
@@ -1109,7 +1309,9 @@ time: 0.7s",,,"answer: right
 token: 119, 115, 4
 time: 2.6s","answer: right
 token: 119, 115, 4
-time: 0.9s",
+time: 0.9s","answer: right
+token: 119, 115, 4
+time: 2.4s"
 101,夜间道路环境对安全行车的主要影响是什么,路面复杂多变,能见度低、不利于观察道路交通情况,驾驶人体力下降,驾驶人易产生冲动、幻觉,B,"answer: right
 token: 105, 104, 1
 time: 0.2s",,"answer: right
@@ -1120,7 +1322,9 @@ time: 0.6s",,,"answer: right
 token: 140, 136, 4
 time: 2.6s","answer: right
 token: 140, 136, 4
-time: 0.8s",
+time: 0.8s","answer: right
+token: 140, 136, 4
+time: 2.4s"
 102,驾驶机动车通过没有交通信号的交叉路口怎样行驶,左侧车辆先行,减速慢行,加速通过,大型车先行,B,"answer: right
 token: 91, 90, 1
 time: 0.2s",,"answer: right
@@ -1131,7 +1335,9 @@ time: 0.6s",,,"answer: right
 token: 121, 117, 4
 time: 2.8s","answer: right
 token: 121, 117, 4
-time: 0.9s",
+time: 0.9s","answer: right
+token: 121, 117, 4
+time: 4.7s"
 103,冰雪道路对安全行车的主要影响是什么,制动性能差，方向易跑偏,行驶阻力增大,能见度降低，视野模糊,电器设备易受潮短路,A,"answer: right
 token: 100, 99, 1
 time: 0.3s",,"answer: right
@@ -1142,7 +1348,9 @@ time: 0.4s",,,"answer: right
 token: 133, 129, 4
 time: 2.3s","answer: right
 token: 133, 129, 4
-time: 0.9s",
+time: 0.9s","answer: right
+token: 133, 129, 4
+time: 1.6s"
 104,佟某驾驶一辆大客车（乘载54人，核载55人）行至太原境内以45公里的时速通过一处泥泞路段时，机动车侧滑驶出路外坠入深沟，导致14人死亡、40人受伤。佟某的主要违法行为是什么,超速行驶,疲劳驾驶,客车超员,酒后驾驶,A,"answer: right
 token: 143, 142, 1
 time: 0.2s",,"answer: right
@@ -1153,7 +1361,9 @@ time: 0.5s",,,"answer: right
 token: 385, 188, 197
 time: 6.4s","answer: right
 token: 488, 188, 300
-time: 3.3s",
+time: 3.3s","answer: right
+token: 192, 188, 4
+time: 1.7s"
 105,制动踏板是（）的操纵装置，用以减速或停车。,驻车制动器,行车制动器,离合器,变速器,B,"answer: right
 token: 96, 95, 1
 time: 0.3s",,"answer: right
@@ -1164,7 +1374,9 @@ time: 0.7s",,,"answer: right
 token: 112, 108, 4
 time: 2.3s","answer: right
 token: 182, 108, 74
-time: 1.2s",
+time: 1.2s","answer: right
+token: 112, 108, 4
+time: 2.1s"
 106,下长坡连续使用行车制动会导致什么,会使制动器温度升高而使制动效果急剧下降,容易造成车辆倾翻,会缩短发动机寿命,增加驾驶人的劳动强度,A,"answer: right
 token: 100, 99, 1
 time: 0.2s",,"answer: right
@@ -1175,7 +1387,9 @@ time: 0.6s",,,"answer: right
 token: 143, 139, 4
 time: 2.4s","answer: right
 token: 221, 139, 82
-time: 1.4s",
+time: 1.4s","answer: right
+token: 143, 139, 4
+time: 2.6s"
 107,机动车驾驶人造成事故后逃逸构成犯罪的，吊销驾驶证且多长时间不得重新取得驾驶证,20年内,10年内,5年内,终生,D,"answer: right
 token: 100, 95, 5
 time: 0.3s",,"answer: right
@@ -1186,7 +1400,9 @@ time: 0.6s",,,"answer: right
 token: 132, 128, 4
 time: 2.4s","answer: right
 token: 132, 128, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 132, 128, 4
+time: 2.4s"
 108,驾驶人在驾驶证有效期满前多长时间申请换证,60日内,30日内,90日内,6个月内,C,"answer: right
 token: 93, 87, 6
 time: 0.3s",,"answer: right
@@ -1197,7 +1413,9 @@ time: 0.6s",,,"answer: right
 token: 109, 105, 4
 time: 2.3s","answer: right
 token: 109, 105, 4
-time: 1.4s",
+time: 1.4s","answer: right
+token: 109, 105, 4
+time: 2.3s"
 109,驾驶车辆驶入铁路道口前减速降挡，进入道口后应怎样做,可以变换挡位,可换为高挡,不能变换挡位,停车观察,C,"answer: right
 token: 103, 102, 1
 time: 0.2s",,"answer: right
@@ -1208,7 +1426,9 @@ time: 0.6s",,,"answer: right
 token: 128, 124, 4
 time: 2.4s","answer: right
 token: 128, 124, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 128, 124, 4
+time: 1.6s"
 110,在暴雨天气驾车，刮水器无法刮净雨水时，应当,立即减速靠边停驶,集中注意力谨慎驾驶,以正常速度行驶,减速行驶,A,"answer: right
 token: 99, 98, 1
 time: 0.2s",,"answer: right
@@ -1219,7 +1439,9 @@ time: 0.6s",,,"answer: right
 token: 135, 131, 4
 time: 2.5s","answer: right
 token: 135, 131, 4
-time: 1.0s",
+time: 1.0s","answer: right
+token: 135, 131, 4
+time: 2.7s"
 111,行车中遇有前方发生交通事故，需要帮助时，应怎样做,尽量绕道躲避,立即报警，停车观望,加速通过，不予理睬,协助保护现场，并立即报警,D,"answer: right
 token: 105, 104, 1
 time: 0.2s",,"answer: right
@@ -1230,7 +1452,9 @@ time: 0.6s",,,"answer: right
 token: 139, 135, 4
 time: 2.5s","answer: right
 token: 139, 135, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 139, 135, 4
+time: 1.7s"
 112,驾驶机动车需要在路边停车时怎样选择停车地点,在人行道上停放,在路边随意停放,靠左侧路边逆向停放,在停车泊位内停放,D,"answer: right
 token: 97, 96, 1
 time: 0.2s",,"answer: right
@@ -1241,7 +1465,9 @@ time: 0.7s",,,"answer: right
 token: 131, 127, 4
 time: 2.7s","answer: right
 token: 131, 127, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 131, 127, 4
+time: 2.4s"
 113,驾驶机动车行经下列哪种路段不得超车,高架路,人行横道,环城高速,主要街道,B,"answer: right
 token: 89, 88, 1
 time: 0.3s",,"answer: right
@@ -1252,7 +1478,9 @@ time: 0.6s",,,"answer: right
 token: 107, 103, 4
 time: 3.3s","answer: right
 token: 107, 103, 4
-time: 0.8s",
+time: 0.8s","answer: right
+token: 107, 103, 4
+time: 2.7s"
 114,驾驶机动车下陡坡时不得有哪些危险行为,空挡滑行,制动减速,低挡行驶,提前减挡,A,"answer: right
 token: 90, 89, 1
 time: 0.2s",,"answer: right
@@ -1263,7 +1491,9 @@ time: 0.6s",,,"answer: right
 token: 116, 112, 4
 time: 2.3s","answer: right
 token: 116, 112, 4
-time: 0.9s",
+time: 0.9s","answer: right
+token: 116, 112, 4
+time: 2.6s"
 115,未取得驾驶证的学员在道路上学习驾驶技能，下列哪种做法是正确的,使用所学车型的教练车由教练员随车指导,使用私家车由教练员随车指导,使用所学车型的教练车单独驾驶学习,使用所学车型的教练车由非教练员的驾驶人随车指导,A,"answer: right
 token: 126, 125, 1
 time: 0.2s",,"answer: right
@@ -1274,7 +1504,9 @@ time: 0.6s",,,"answer: right
 token: 181, 177, 4
 time: 3.1s","answer: right
 token: 263, 177, 86
-time: 1.2s",
+time: 1.2s","answer: right
+token: 181, 177, 4
+time: 2.9s"
 116,山区道路对安全行车的主要影响是什么,交通情况单一,坡长弯急，视距不足,道路标志少,车流密度大,B,"answer: right
 token: 95, 94, 1
 time: 0.2s",,"answer: right
@@ -1285,7 +1517,9 @@ time: 0.6s",,,"answer: right
 token: 116, 112, 4
 time: 2.9s","answer: right
 token: 116, 112, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 116, 112, 4
+time: 2.7s"
 117,在山区道路遇对向来车时，应怎样会车,不减速,减速或停车让行,紧靠道路中心,加速,B,"answer: right
 token: 90, 89, 1
 time: 0.2s",,"answer: right
@@ -1296,7 +1530,9 @@ time: 0.7s",,,"answer: right
 token: 111, 107, 4
 time: 2.8s","answer: right
 token: 111, 107, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 111, 107, 4
+time: 1.6s"
 118,机动车在道路上发生故障，难以移动时下列做法正确的是什么,禁止车上人员下车,在车前方设置警告标志,开启车上所有灯光,开启危险报警闪光灯,D,"answer: right
 token: 98, 97, 1
 time: 0.2s",,"answer: right
@@ -1307,7 +1543,9 @@ time: 0.6s",,,"answer: right
 token: 138, 134, 4
 time: 2.7s","answer: right
 token: 138, 134, 4
-time: 0.8s",
+time: 0.8s","answer: right
+token: 138, 134, 4
+time: 2.4s"
 119,高速行车中行车制动突然失灵时，驾驶人要如何制动,迅速拉紧驻车制动器操纵杆,连续踩踏制动踏板,抢挂低速挡减速后，使用驻车制动,迅速踏下离合器踏板,C,"answer: right
 token: 118, 117, 1
 time: 0.3s",,"answer: right
@@ -1318,7 +1556,9 @@ time: 0.7s",,,"answer: right
 token: 158, 154, 4
 time: 2.7s","answer: right
 token: 158, 154, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 158, 154, 4
+time: 2.5s"
 120,公安机关交通管理部门对（）的机动车，经县级以上公安机关交通管理部门批准后，予以收缴并强制报废。,交通肇事,检验未合格,超过10年使用期,扣留的拼装或达到报废标准,D,"answer: right
 token: 114, 113, 1
 time: 0.2s",,"answer: right
@@ -1329,7 +1569,9 @@ time: 0.7s",,,"answer: right
 token: 151, 147, 4
 time: 2.6s","answer: right
 token: 151, 147, 4
-time: 1.0s",
+time: 1.0s","answer: right
+token: 151, 147, 4
+time: 1.8s"
 121,提供虚假材料申领驾驶证的申请人会承担下列哪种法律责任,处20元以上200元以下罚款,1年内不得再次申领驾驶证,2年内不能再次申领驾驶证,取消申领驾驶证资格,B,"answer: right
 token: 108, 107, 1
 time: 0.2s",,"answer: wrong (D)
@@ -1340,7 +1582,9 @@ time: 0.6s",,,"answer: right
 token: 153, 149, 4
 time: 2.4s","answer: wrong (C)
 token: 153, 149, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 153, 149, 4
+time: 2.3s"
 122,危险报警闪光灯可用于下列什么场合,引领后车行驶时,机动车发生故障停车时,在道路上跟车行驶时,遇到道路拥堵时,B,"answer: right
 token: 95, 94, 1
 time: 0.2s",,"answer: right
@@ -1351,7 +1595,9 @@ time: 0.6s",,,"answer: right
 token: 129, 125, 4
 time: 2.8s","answer: right
 token: 179, 125, 54
-time: 1.2s",
+time: 1.2s","answer: right
+token: 129, 125, 4
+time: 1.7s"
 123,遇后车发出超车信号后，只要具备让超条件应怎样做,迅速减速或紧急制动,靠道路右侧加速行驶,主动减速并靠右侧行驶,让出适当空间加速行驶,C,"answer: right
 token: 108, 107, 1
 time: 0.2s",,"answer: right
@@ -1362,7 +1608,9 @@ time: 0.3s",,,"answer: right
 token: 144, 140, 4
 time: 3.4s","answer: right
 token: 144, 140, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 144, 140, 4
+time: 2.4s"
 124,救助有害气体中毒伤员，首先采取的措施是什么,将伤员转移到有新鲜空气的地方,采取保暖措施,进行胸外心脏按压,进行人工呼吸,A,"answer: right
 token: 99, 98, 1
 time: 0.2s",,"answer: right
@@ -1373,7 +1621,9 @@ time: 0.6s",,,"answer: right
 token: 137, 133, 4
 time: 3.3s","answer: right
 token: 137, 133, 4
-time: 0.8s",
+time: 0.8s","answer: right
+token: 137, 133, 4
+time: 2.5s"
 125,发动机舱的日常检查与维护的项目有,机油、冷却液、制动液量,点火正时,发动机有无异响,发动机温度,A,"answer: right
 token: 93, 92, 1
 time: 0.2s",,"answer: right
@@ -1384,7 +1634,9 @@ time: 0.3s",,,"answer: right
 token: 117, 113, 4
 time: 2.5s","answer: right
 token: 208, 113, 95
-time: 1.6s",
+time: 1.6s","answer: right
+token: 117, 113, 4
+time: 2.6s"
 126,驾驶机动车在高速公路遇到能见度低于100米的气象条件时，最高车速是多少,不得超过90公里/小时,不得超过60公里/小时,不得超过40公里/小时,不得超过80公里/小时,C,"answer: right
 token: 116, 115, 1
 time: 0.2s",,"answer: right
@@ -1395,7 +1647,9 @@ time: 0.5s",,,"answer: right
 token: 148, 144, 4
 time: 3.5s","answer: wrong (B)
 token: 148, 144, 4
-time: 0.9s",
+time: 0.9s","answer: right
+token: 148, 144, 4
+time: 1.6s"
 127,驾驶人有下列哪种违法行为一次记6分,使用其他车辆行驶证,违法占用应急车道行驶,饮酒后驾驶机动车,车速超过规定时速50%以上,B,"answer: right
 token: 103, 102, 1
 time: 0.3s",,"answer: right
@@ -1406,7 +1660,9 @@ time: 0.5s",,,"answer: right
 token: 138, 134, 4
 time: 3.3s","answer: right
 token: 138, 134, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 138, 134, 4
+time: 2.4s"
 128,在驾驶技能准考证明的有效期内，科目二和科目三道路驾驶技巧考试预约次数不得超过多少次,4次,5次,6次,3次,B,"answer: right
 token: 98, 93, 5
 time: 0.2s",,"answer: right
@@ -1417,7 +1673,9 @@ time: 1.0s",,,"answer: right
 token: 126, 122, 4
 time: 3.0s","answer: right
 token: 126, 122, 4
-time: 0.8s",
+time: 0.8s","answer: right
+token: 126, 122, 4
+time: 2.8s"
 129,驾驶机动车变更车道时，属于交通陋习的是什么行为,仔细观察后变更车道,随意并线,提前开启转向灯,不得妨碍其他车道正常行驶的车,B,"answer: right
 token: 101, 100, 1
 time: 0.2s",,"answer: right
@@ -1428,7 +1686,9 @@ time: 0.5s",,,"answer: right
 token: 137, 133, 4
 time: 2.5s","answer: right
 token: 137, 133, 4
-time: 0.7s",
+time: 0.7s","answer: right
+token: 137, 133, 4
+time: 2.5s"
 130,车辆落水后，错误的做法是,敲碎玻璃,开启车窗,让水慢慢浸满驾驶室,打电话求救,D,"answer: right
 token: 97, 90, 7
 time: 0.4s",,"answer: right
@@ -1439,4 +1699,6 @@ time: 0.5s",,,"answer: right
 token: 117, 113, 4
 time: 3.0s","answer: wrong (C)
 token: 117, 113, 4
-time: 1.5s",
+time: 1.5s","answer: right
+token: 117, 113, 4
+time: 2.4s"

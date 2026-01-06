@@ -320,8 +320,7 @@ export default function TranslatePage() {
     setIsCounting(false);
   };
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+  const startQueue = async () => {
     setError(null);
     if (!hasQueue) {
       setError("Please upload at least one .txt file.");
@@ -370,15 +369,14 @@ export default function TranslatePage() {
     }
   };
 
-  const handleDownload = () => {
-    const activeItem = queue.find(item => item.id === activeId) ?? queue[0];
-    const activeTranslation = activeItem?.translation ?? "";
+  const handleDownload = (item: QueueItem) => {
+    const activeTranslation = item.translation ?? "";
     if (!activeTranslation.trim()) {
       setError("No translation to download.");
       return;
     }
 
-    const baseName = activeItem?.fileName.replace(/\\.txt$/i, "") || "translation";
+    const baseName = item.fileName.replace(/\\.txt$/i, "") || "translation";
     const suffix = targetLanguage === "zh" ? "zh" : "en";
     const outputName = `${baseName}-${suffix}.txt`;
     const blob = new Blob([activeTranslation], { type: "text/plain;charset=utf-8" });
@@ -401,21 +399,8 @@ export default function TranslatePage() {
         </p>
       </header>
 
-      <form onSubmit={handleSubmit} className="grid gap-6 rounded-2xl border border-white/10 bg-white/5 p-6">
-        <div className="grid gap-3 md:grid-cols-[1.2fr_1fr_1fr]">
-          <div className="grid gap-2">
-            <label className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-400">
-              TXT File
-            </label>
-            <input
-              type="file"
-              accept=".txt,text/plain"
-              multiple
-              onChange={handleFileChange}
-              className="w-full cursor-pointer rounded border border-white/10 bg-white/10 px-3 py-2 text-sm text-gray-200 file:mr-3 file:rounded file:border-0 file:bg-white/20 file:px-3 file:py-1.5 file:text-xs file:font-semibold file:text-white"
-            />
-          </div>
-
+      <form onSubmit={event => event.preventDefault()} className="grid gap-6 rounded-2xl border border-white/10 bg-white/5 p-6">
+        <div className="grid gap-3 md:grid-cols-2">
           <div className="grid gap-2">
             <label className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-400">
               Model
@@ -470,26 +455,6 @@ export default function TranslatePage() {
           />
         </div>
 
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <button
-            type="submit"
-            disabled={!hasQueue || isProcessing}
-            className="inline-flex items-center justify-center rounded bg-white px-5 py-2.5 text-sm font-semibold text-gray-900 transition hover:bg-gray-200 disabled:cursor-not-allowed disabled:opacity-60"
-          >
-            {isProcessing ? "Translating..." : "Translate queue"}
-          </button>
-          <button
-            type="button"
-            onClick={handleDownload}
-            disabled={!((queue.find(item => item.id === activeId) ?? queue[0])?.translation ?? "").trim()}
-            className="inline-flex items-center justify-center rounded border border-white/20 px-5 py-2.5 text-sm font-semibold text-white transition hover:border-white/40 disabled:cursor-not-allowed disabled:opacity-50"
-          >
-            Download
-          </button>
-          <div className="flex items-center gap-4 text-xs text-gray-300">
-            <span>{isCounting ? "Counting tokens..." : "Token count ready"}</span>
-          </div>
-        </div>
       </form>
 
       {error && <p className="text-sm text-red-400">{error}</p>}
@@ -504,19 +469,59 @@ export default function TranslatePage() {
             <p className="text-sm text-gray-400">No files queued yet.</p>
           ) : (
             queue.map(item => (
-              <button
+              <div
                 key={item.id}
-                type="button"
-                onClick={() => setActiveId(item.id)}
-                className={`flex w-full items-center justify-between rounded border border-white/10 px-3 py-2 text-left text-sm transition ${
+                className={`flex w-full items-center justify-between rounded border border-white/10 px-3 py-2 text-sm ${
                   item.id === activeId ? "bg-white/10 text-white" : "bg-black/30 text-gray-200"
                 }`}
               >
-                <span className="truncate">{item.fileName}</span>
-                <span className="ml-3 text-xs text-gray-400">{item.status}</span>
-              </button>
+                <button
+                  type="button"
+                  onClick={() => setActiveId(item.id)}
+                  className="flex-1 truncate text-left"
+                >
+                  {item.fileName}
+                </button>
+                <div className="ml-3 flex items-center gap-2">
+                  <span className="text-xs text-gray-400">{item.status}</span>
+                  {item.translation?.trim() ? (
+                    <button
+                      type="button"
+                      onClick={() => handleDownload(item)}
+                      className="rounded border border-white/20 px-2 py-1 text-xs font-semibold text-white transition hover:border-white/40"
+                    >
+                      Download
+                    </button>
+                  ) : null}
+                </div>
+              </div>
             ))
           )}
+        </div>
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <span className="text-xs text-gray-300">
+            {isCounting ? "Counting tokens..." : "Token count ready"}
+          </span>
+          <div className="flex items-center gap-3">
+            <label className="inline-flex cursor-pointer items-center justify-center rounded border border-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:border-white/40">
+              Add files
+              <input
+                type="file"
+                accept=".txt,text/plain"
+                multiple
+                onChange={handleFileChange}
+                className="sr-only"
+              />
+            </label>
+            <button
+              type="button"
+              onClick={startQueue}
+              disabled={!hasQueue || isProcessing}
+              className="inline-flex items-center justify-center rounded bg-white px-4 py-2 text-sm font-semibold text-gray-900 transition hover:bg-gray-200 disabled:cursor-not-allowed disabled:opacity-60"
+            >
+              {isProcessing ? "Translating..." : "Start"}
+            </button>
+          </div>
         </div>
       </section>
 

@@ -255,8 +255,8 @@ export async function POST(req: Request) {
             }
 
             const usage = await result.totalUsage;
-            const outputTokens = usage.outputTokens ?? usage.completionTokens ?? null;
-            const usageInputTokens = usage.inputTokens ?? usage.promptTokens ?? null;
+            const outputTokens = usage.outputTokens ?? 0;
+            const usageInputTokens = usage.inputTokens ?? 0;
             const totalTokens =
               usage.totalTokens ??
               (usageInputTokens !== null && outputTokens !== null
@@ -280,8 +280,8 @@ export async function POST(req: Request) {
             const durationSeconds = (Date.now() - startTime) / 1000;
             await appendTranslationUsage({
               model,
-              inputTokens: usageInputTokens ?? inputTokens ?? null,
-              outputTokens,
+              inputTokens: usageInputTokens ?? inputTokens ?? 0,
+              outputTokens: outputTokens ?? 0,
               costUsd,
               durationSeconds,
             });

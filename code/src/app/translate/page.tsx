@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 
 const modelGroups = [
@@ -169,6 +169,8 @@ export default function TranslatePage() {
 
     const text = await file.text();
     setSourceText(text);
+    setInputTokens(null);
+    countMutation.mutate({ text, model, targetLanguage });
   };
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {

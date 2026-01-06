@@ -104,20 +104,6 @@ export default function TranslatePage() {
     },
   });
 
-  useEffect(() => {
-    if (!hasText) {
-      setInputTokens(null);
-      return;
-    }
-
-    setError(null);
-    const handle = setTimeout(() => {
-      countMutation.mutate({ text: sourceText, model, targetLanguage });
-    }, 350);
-
-    return () => clearTimeout(handle);
-  }, [hasText, model, sourceText, targetLanguage, countMutation]);
-
   const tokenSummary = useMemo(
     () => [
       { label: "Input tokens", value: inputTokens },

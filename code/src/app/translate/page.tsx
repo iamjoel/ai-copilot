@@ -48,18 +48,83 @@ type StreamEvent =
   | { type: "done"; inputTokens: number | null; outputTokens: number | null; totalTokens: number | null }
   | { type: "error"; message: string };
 
+type PricingInfo = {
+  inputPerMillion: number;
+  outputPerMillion: number;
+  inputPerMillionOver200k?: number;
+  outputPerMillionOver200k?: number;
+};
+
+type TokenSummaryItem = {
+  label: string;
+  value: number | null;
+  costUsd: number | null;
+};
+
+const MODEL_PRICING: Record<string, PricingInfo> = {
+  "gemini-3-pro-preview": {
+    inputPerMillion: 2.0,
+    outputPerMillion: 12.0,
+    inputPerMillionOver200k: 4.0,
+    outputPerMillionOver200k: 18.0,
+  },
+  "gemini-3-flash-preview": { inputPerMillion: 0.5, outputPerMillion: 3.0 },
+  "gemini-2.5-pro": {
+    inputPerMillion: 1.25,
+    outputPerMillion: 10.0,
+    inputPerMillionOver200k: 2.5,
+    outputPerMillionOver200k: 15.0,
+  },
+  "gemini-2.5-flash": { inputPerMillion: 0.3, outputPerMillion: 2.5 },
+  "gemini-2.5-flash-lite": { inputPerMillion: 0.1, outputPerMillion: 0.4 },
+  "claude-opus-4-5": { inputPerMillion: 5.0, outputPerMillion: 25.0 },
+  "claude-sonnet-4-5": { inputPerMillion: 3.0, outputPerMillion: 15.0 },
+  "claude-haiku-4-5": { inputPerMillion: 1.0, outputPerMillion: 5.0 },
+};
+
+const PER_MILLION = 1_000_000;
+const LONG_CONTEXT_THRESHOLD = 200_000;
+
 export default function TranslatePage() {
   const [sourceText, setSourceText] = useState("");
   const [fileName, setFileName] = useState<string | null>(null);
   const [model, setModel] = useState(modelGroups[0].options[0].value);
   const [targetLanguage, setTargetLanguage] = useState<"en" | "zh">("en");
   const [translation, setTranslation] = useState("");
-  const [inputTokens, setInputTokens] = useState<number | null>(null);
+  const [estimatedInputTokens, setEstimatedInputTokens] = useState<number | null>(null);
+  const [actualInputTokens, setActualInputTokens] = useState<number | null>(null);
   const [outputTokens, setOutputTokens] = useState<number | null>(null);
   const [totalTokens, setTotalTokens] = useState<number | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   const hasText = sourceText.trim().length > 0;
+  const formatUsd = (value: number | null) =>
+    value === null ? "N/A" : `$${value.toFixed(2)}`;
+
+  const formatTokens = (value: number | null) =>
+    value === null ? "N/A" : value.toLocaleString("en-US");
+
+  const getPricing = (modelKey: string, inputTokenCount: number | null) => {
+    const pricing = MODEL_PRICING[modelKey];
+    if (!pricing) {
+      return null;
+    }
+    if (
+      inputTokenCount !== null &&
+      inputTokenCount > LONG_CONTEXT_THRESHOLD &&
+      pricing.inputPerMillionOver200k !== undefined &&
+      pricing.outputPerMillionOver200k !== undefined
+    ) {
+      return {
+        inputPerToken: pricing.inputPerMillionOver200k / PER_MILLION,
+        outputPerToken: pricing.outputPerMillionOver200k / PER_MILLION,
+      };
+    }
+    return {
+      inputPerToken: pricing.inputPerMillion / PER_MILLION,
+      outputPerToken: pricing.outputPerMillion / PER_MILLION,
+    };
+  };
 
   const countMutation = useMutation({
     mutationFn: async (payload: { text: string; model: string; targetLanguage: "en" | "zh" }) => {
@@ -76,7 +141,7 @@ export default function TranslatePage() {
       return data;
     },
     onSuccess: data => {
-      setInputTokens(data.inputTokens ?? null);
+      setEstimatedInputTokens(data.inputTokens ?? null);
     },
     onError: err => {
       console.error("Token count error:", err);
@@ -124,11 +189,11 @@ export default function TranslatePage() {
           const event = JSON.parse(payload) as StreamEvent;
 
           if (event.type === "meta") {
-            setInputTokens(event.inputTokens ?? null);
+            setActualInputTokens(event.inputTokens ?? null);
           } else if (event.type === "delta") {
             setTranslation(prev => prev + event.text);
           } else if (event.type === "done") {
-            setInputTokens(event.inputTokens ?? null);
+            setActualInputTokens(event.inputTokens ?? null);
             setOutputTokens(event.outputTokens ?? null);
             setTotalTokens(event.totalTokens ?? null);
           } else if (event.type === "error") {
@@ -145,14 +210,42 @@ export default function TranslatePage() {
     },
   });
 
-  const tokenSummary = useMemo(
-    () => [
-      { label: "Input tokens", value: inputTokens },
-      { label: "Output tokens", value: outputTokens },
-      { label: "Total tokens", value: totalTokens },
-    ],
-    [inputTokens, outputTokens, totalTokens],
-  );
+  const estimatedTokenSummary = useMemo<TokenSummaryItem[]>(() => {
+    const estimatedOutputTokens = estimatedInputTokens ?? null;
+    const estimatedTotalTokens =
+      estimatedInputTokens !== null ? estimatedInputTokens + estimatedOutputTokens : null;
+    const pricing = getPricing(model, estimatedInputTokens ?? null);
+    const estimatedInputCost =
+      pricing && estimatedInputTokens !== null ? estimatedInputTokens * pricing.inputPerToken : null;
+    const estimatedOutputCost =
+      pricing && estimatedOutputTokens !== null
+        ? estimatedOutputTokens * pricing.outputPerToken
+        : null;
+    const estimatedTotalCost =
+      estimatedInputCost !== null && estimatedOutputCost !== null
+        ? estimatedInputCost + estimatedOutputCost
+        : null;
+    return [
+      { label: "Estimated input tokens", value: estimatedInputTokens, costUsd: estimatedInputCost },
+      { label: "Estimated output tokens", value: estimatedOutputTokens, costUsd: estimatedOutputCost },
+      { label: "Estimated total tokens", value: estimatedTotalTokens, costUsd: estimatedTotalCost },
+    ];
+  }, [estimatedInputTokens, model]);
+
+  const actualTokenSummary = useMemo<TokenSummaryItem[]>(() => {
+    const pricing = getPricing(model, actualInputTokens ?? null);
+    const actualInputCost =
+      pricing && actualInputTokens !== null ? actualInputTokens * pricing.inputPerToken : null;
+    const actualOutputCost =
+      pricing && outputTokens !== null ? outputTokens * pricing.outputPerToken : null;
+    const actualTotalCost =
+      actualInputCost !== null && actualOutputCost !== null ? actualInputCost + actualOutputCost : null;
+    return [
+      { label: "Actual input tokens", value: actualInputTokens, costUsd: actualInputCost },
+      { label: "Actual output tokens", value: outputTokens, costUsd: actualOutputCost },
+      { label: "Actual total tokens", value: totalTokens, costUsd: actualTotalCost },
+    ];
+  }, [actualInputTokens, model, outputTokens, totalTokens]);
 
   const handleFileChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -164,12 +257,13 @@ export default function TranslatePage() {
     setFileName(file.name);
     setError(null);
     setTranslation("");
+    setEstimatedInputTokens(null);
+    setActualInputTokens(null);
     setOutputTokens(null);
     setTotalTokens(null);
 
     const text = await file.text();
     setSourceText(text);
-    setInputTokens(null);
     countMutation.mutate({ text, model, targetLanguage });
   };
 
@@ -177,6 +271,7 @@ export default function TranslatePage() {
     event.preventDefault();
     setError(null);
     setTranslation("");
+    setActualInputTokens(null);
     setOutputTokens(null);
     setTotalTokens(null);
 
@@ -309,21 +404,44 @@ export default function TranslatePage() {
 
       <section className="grid gap-4 rounded-2xl border border-white/10 bg-white/5 p-6">
         <div>
+          <h2 className="text-lg font-semibold text-white">Tokens</h2>
+          <p className="mt-1 text-xs text-gray-400">
+            Estimated tokens are counted after upload. Actual tokens come from the model response.
+          </p>
+        </div>
+        <div className="grid gap-3">
+          <div className="grid gap-2 sm:grid-cols-3">
+            {estimatedTokenSummary.map(item => (
+              <div key={item.label} className="rounded border border-white/10 bg-black/40 p-3">
+                <div className="text-xs uppercase tracking-[0.18em] text-gray-400">{item.label}</div>
+                <div className="mt-2 text-lg font-semibold text-white">
+                  {formatTokens(item.value)}
+                </div>
+                <div className="mt-1 text-xs text-gray-400">Cost: {formatUsd(item.costUsd)}</div>
+              </div>
+            ))}
+          </div>
+          <div className="grid gap-2 sm:grid-cols-3">
+            {actualTokenSummary.map(item => (
+              <div key={item.label} className="rounded border border-white/10 bg-black/40 p-3">
+                <div className="text-xs uppercase tracking-[0.18em] text-gray-400">{item.label}</div>
+                <div className="mt-2 text-lg font-semibold text-white">
+                  {formatTokens(item.value)}
+                </div>
+                <div className="mt-1 text-xs text-gray-400">Cost: {formatUsd(item.costUsd)}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="grid gap-4 rounded-2xl border border-white/10 bg-white/5 p-6">
+        <div>
           <h2 className="text-lg font-semibold text-white">Translation</h2>
           <p className="mt-1 text-xs text-gray-400">Output text from the selected model.</p>
         </div>
         <div className="min-h-[160px] max-h-[320px] overflow-y-auto whitespace-pre-wrap rounded border border-white/10 bg-black/30 p-4 text-sm text-gray-200">
           {translation || "Translated text will appear here."}
-        </div>
-        <div className="grid gap-2 sm:grid-cols-3">
-          {tokenSummary.map(item => (
-            <div key={item.label} className="rounded border border-white/10 bg-black/40 p-3">
-              <div className="text-xs uppercase tracking-[0.18em] text-gray-400">{item.label}</div>
-              <div className="mt-2 text-lg font-semibold text-white">
-                {item.value ?? "N/A"}
-              </div>
-            </div>
-          ))}
         </div>
       </section>
     </main>

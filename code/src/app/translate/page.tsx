@@ -328,10 +328,19 @@ export default function TranslatePage() {
     }
 
     setIsProcessing(true);
-    for (const item of queue) {
-      if (item.status !== "queued") {
-        continue;
-      }
+    setQueue(items =>
+      items.map(item => ({
+        ...item,
+        status: "queued",
+        translation: "",
+        actualInputTokens: null,
+        outputTokens: null,
+        totalTokens: null,
+        error: undefined,
+      })),
+    );
+    const currentQueue = [...queue];
+    for (const item of currentQueue) {
       try {
         // eslint-disable-next-line no-await-in-loop
         await translateItem(item, model, targetLanguage);
@@ -440,19 +449,6 @@ export default function TranslatePage() {
               ))}
             </select>
           </div>
-        </div>
-
-        <div className="grid gap-2">
-          <label className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-400">
-            Source text
-          </label>
-          <textarea
-            value={(queue.find(item => item.id === activeId) ?? queue[0])?.text ?? ""}
-            readOnly
-            rows={9}
-            placeholder="Upload .txt files to load contents here."
-            className="w-full resize-y rounded border border-white/10 bg-black/30 p-4 text-sm text-gray-200 placeholder:text-gray-500"
-          />
         </div>
 
       </form>

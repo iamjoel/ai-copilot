@@ -353,18 +353,21 @@ export default function TranslatePage() {
     });
     setQueue(preparedQueue);
     for (const item of preparedQueue) {
-      for (const modelKey of selectedModels) {
-        try {
-          // eslint-disable-next-line no-await-in-loop
-          await translateItem(item, modelKey, targetLanguage);
-        } catch (translateError) {
-          updateQueueResult(item.id, modelKey, {
-            status: "error",
-            error:
-              translateError instanceof Error ? translateError.message : "Translation failed.",
-          });
-        }
-      }
+      // Run models in parallel for the same file, while keeping files in order.
+      // eslint-disable-next-line no-await-in-loop
+      await Promise.all(
+        selectedModels.map(async modelKey => {
+          try {
+            await translateItem(item, modelKey, targetLanguage);
+          } catch (translateError) {
+            updateQueueResult(item.id, modelKey, {
+              status: "error",
+              error:
+                translateError instanceof Error ? translateError.message : "Translation failed.",
+            });
+          }
+        }),
+      );
     }
     setIsProcessing(false);
   };

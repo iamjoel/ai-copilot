@@ -211,9 +211,6 @@ export default function TranslatePage() {
               onChange={handleFileChange}
               className="w-full cursor-pointer rounded border border-white/10 bg-white/10 px-3 py-2 text-sm text-gray-200 file:mr-3 file:rounded file:border-0 file:bg-white/20 file:px-3 file:py-1.5 file:text-xs file:font-semibold file:text-white"
             />
-            <span className="text-xs text-gray-400">
-              {fileName ? `Selected: ${fileName}` : "No file selected"}
-            </span>
           </div>
 
           <div className="grid gap-2">
@@ -289,7 +286,7 @@ export default function TranslatePage() {
           <h2 className="text-lg font-semibold text-white">Translation</h2>
           <p className="mt-1 text-xs text-gray-400">Output text from the selected model.</p>
         </div>
-        <div className="min-h-[160px] whitespace-pre-wrap rounded border border-white/10 bg-black/30 p-4 text-sm text-gray-200">
+        <div className="min-h-[160px] max-h-[320px] overflow-y-auto whitespace-pre-wrap rounded border border-white/10 bg-black/30 p-4 text-sm text-gray-200">
           {translation || "Translated text will appear here."}
         </div>
         <div className="grid gap-2 sm:grid-cols-3">

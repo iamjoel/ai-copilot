@@ -42,6 +42,12 @@ type TranslateResponse = {
   error?: string;
 };
 
+type StreamEvent =
+  | { type: "meta"; inputTokens: number | null }
+  | { type: "delta"; text: string }
+  | { type: "done"; inputTokens: number | null; outputTokens: number | null; totalTokens: number | null }
+  | { type: "error"; message: string };
+
 export default function TranslatePage() {
   const [sourceText, setSourceText] = useState("");
   const [fileName, setFileName] = useState<string | null>(null);
@@ -83,20 +89,55 @@ export default function TranslatePage() {
       const response = await fetch("/api/translate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...payload, mode: "translate" }),
+        body: JSON.stringify({ ...payload, mode: "stream" }),
       });
 
-      const data = (await response.json()) as TranslateResponse;
       if (!response.ok) {
+        const data = (await response.json()) as TranslateResponse;
         throw new Error(data.error ?? "Translation failed.");
       }
-      return data;
-    },
-    onSuccess: data => {
-      setTranslation(data.translation ?? "");
-      setInputTokens(data.inputTokens ?? null);
-      setOutputTokens(data.outputTokens ?? null);
-      setTotalTokens(data.totalTokens ?? null);
+
+      if (!response.body) {
+        throw new Error("Streaming response is unavailable.");
+      }
+
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
+      let buffer = "";
+
+      while (true) {
+        // eslint-disable-next-line no-await-in-loop
+        const { done, value } = await reader.read();
+        if (done) {
+          break;
+        }
+        buffer += decoder.decode(value, { stream: true });
+        const parts = buffer.split("\n\n");
+        buffer = parts.pop() ?? "";
+
+        for (const part of parts) {
+          const line = part.trim();
+          if (!line.startsWith("data:")) {
+            continue;
+          }
+          const payload = line.replace(/^data:\s*/, "");
+          const event = JSON.parse(payload) as StreamEvent;
+
+          if (event.type === "meta") {
+            setInputTokens(event.inputTokens ?? null);
+          } else if (event.type === "delta") {
+            setTranslation(prev => prev + event.text);
+          } else if (event.type === "done") {
+            setInputTokens(event.inputTokens ?? null);
+            setOutputTokens(event.outputTokens ?? null);
+            setTotalTokens(event.totalTokens ?? null);
+          } else if (event.type === "error") {
+            throw new Error(event.message);
+          }
+        }
+      }
+
+      return { translation: "streamed" };
     },
     onError: err => {
       console.error("Translation error:", err);

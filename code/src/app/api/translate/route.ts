@@ -1,5 +1,5 @@
 import { z } from "zod/v3";
-import { generateText } from "ai";
+import { generateText, streamText } from "ai";
 import { getModel } from "@/lib/model-factory";
 import { MODEL_GROUPS, getModelPreset } from "@/lib/model-presets";
 import { logger } from "@/lib/logger";
@@ -23,7 +23,7 @@ const ParamsSchema = z.object({
     .refine(value => ALLOWED_MODELS.has(value), {
       message: "Unsupported model.",
     }),
-  mode: z.enum(["count", "translate"]).optional(),
+  mode: z.enum(["count", "translate", "stream"]).optional(),
 });
 
 const languageLabels: Record<"en" | "zh", string> = {
@@ -71,6 +71,81 @@ export async function POST(req: Request) {
       return new Response(JSON.stringify({ inputTokens }), {
         status: 200,
         headers: { "Content-Type": "application/json" },
+      });
+    }
+
+    if (mode === "stream") {
+      logger.info({
+        step: "translate_stream_start",
+        model,
+        provider: modelPreset.provider,
+        targetLanguage,
+        textLength: text.length,
+      });
+
+      const result = streamText({
+        model: getModel(modelPreset.provider, modelPreset.model),
+        system: systemPrompt,
+        prompt: text,
+      });
+
+      const encoder = new TextEncoder();
+      const stream = new ReadableStream<Uint8Array>({
+        async start(controller) {
+          const send = (payload: Record<string, unknown>) => {
+            controller.enqueue(
+              encoder.encode(`data: ${JSON.stringify(payload)}\n\n`),
+            );
+          };
+
+          try {
+            send({ type: "meta", inputTokens });
+
+            for await (const delta of result.textStream) {
+              send({ type: "delta", text: delta });
+            }
+
+            const usage = await result.totalUsage;
+            const outputTokens = usage.outputTokens ?? usage.completionTokens ?? null;
+            const usageInputTokens = usage.inputTokens ?? usage.promptTokens ?? null;
+            const totalTokens =
+              usage.totalTokens ??
+              (usageInputTokens !== null && outputTokens !== null
+                ? usageInputTokens + outputTokens
+                : null);
+
+            logger.info({
+              step: "translate_stream_completed",
+              model,
+              provider: modelPreset.provider,
+              targetLanguage,
+              inputTokens,
+              outputTokens,
+              totalTokens,
+            });
+
+            send({
+              type: "done",
+              inputTokens,
+              outputTokens,
+              totalTokens,
+            });
+            controller.close();
+          } catch (error) {
+            logger.error({ step: "translate_stream_error", error });
+            send({ type: "error", message: "Unable to stream translation." });
+            controller.close();
+          }
+        },
+      });
+
+      return new Response(stream, {
+        status: 200,
+        headers: {
+          "Content-Type": "text/event-stream; charset=utf-8",
+          "Cache-Control": "no-cache, no-transform",
+          Connection: "keep-alive",
+        },
       });
     }
 

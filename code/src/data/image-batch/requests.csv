@@ -1974,7 +1974,7 @@ The model wears a thick wool or felt coat, with richly defined textures atop the
   title: Evening Cityscape Portrait on a Bridge,outputs/image-batch/image-1733-1767111896779.png,done,
   prompt_text: A full-body portrait of a young adult female model standing on an ornate stone bridge railing at dusk. She has wavy, shoulder-length dark brown hair, styled with volume. Her makeup is glamorous with bold red lipstick and defined eyes. She is wearing a short, form-fitting black mini-dress with a slight ruching effect
   negative_prompt: blurry, low quality, deformed, disfigured
-  model_tags: [,,error,No image data returned by provider.
+  model_tags: [,outputs/image-batch/image-1736-1767321904031.png,done,
     Dusk Photography,outputs/image-batch/image-1737-1767112084884.png,done,
     Cityscape Portrait,outputs/image-batch/image-1738-1767111897205.png,done,
     Glamour Shot,outputs/image-batch/image-1739-1767111897271.png,done,

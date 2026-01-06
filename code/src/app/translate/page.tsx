@@ -332,7 +332,14 @@ export default function TranslatePage() {
             </label>
             <select
               value={model}
-              onChange={event => setModel(event.target.value)}
+              onChange={event => {
+                const nextModel = event.target.value;
+                setModel(nextModel);
+                if (sourceText.trim()) {
+                  setEstimatedInputTokens(null);
+                  countMutation.mutate({ text: sourceText, model: nextModel, targetLanguage });
+                }
+              }}
               className="w-full rounded border border-white/10 bg-white/10 px-3 py-2 text-sm text-gray-200"
             >
               {modelGroups.map(group => (

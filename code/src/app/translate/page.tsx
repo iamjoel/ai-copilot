@@ -28,6 +28,10 @@ const languageOptions = [
   { label: "Chinese", value: "zh" },
 ] as const;
 
+const MODEL_LABELS = Object.fromEntries(
+  modelGroups.flatMap(group => group.options.map(option => [option.value, option.label])),
+);
+
 type CountResponse = {
   inputTokens: number | null;
   error?: string;
@@ -47,18 +51,21 @@ type StreamEvent =
   | { type: "done"; inputTokens: number | null; outputTokens: number | null; totalTokens: number | null }
   | { type: "error"; message: string };
 
-type QueueItem = {
-  id: string;
-  fileName: string;
-  text: string;
+type TranslationResult = {
   status: "queued" | "translating" | "done" | "error";
-  model?: string;
   estimatedInputTokens?: number | null;
   actualInputTokens?: number | null;
   outputTokens?: number | null;
   totalTokens?: number | null;
   translation?: string;
   error?: string;
+};
+
+type QueueItem = {
+  id: string;
+  fileName: string;
+  text: string;
+  results: Record<string, TranslationResult>;
 };
 
 type PricingInfo = {
@@ -101,7 +108,9 @@ const LONG_CONTEXT_THRESHOLD = 200_000;
 export default function TranslatePage() {
   const [queue, setQueue] = useState<QueueItem[]>([]);
   const [activeId, setActiveId] = useState<string | null>(null);
-  const [model, setModel] = useState(modelGroups[0].options[0].value);
+  const [selectedModels, setSelectedModels] = useState<string[]>([
+    modelGroups[0].options[0].value,
+  ]);
   const [targetLanguage, setTargetLanguage] = useState<"en" | "zh">("en");
   const [isProcessing, setIsProcessing] = useState(false);
   const [isCounting, setIsCounting] = useState(false);
@@ -136,19 +145,44 @@ export default function TranslatePage() {
     };
   };
 
-  const updateQueueItem = (id: string, patch: Partial<QueueItem>) => {
-    setQueue(items =>
-      items.map(item => (item.id === id ? { ...item, ...patch } : item)),
-    );
-  };
-
-  const appendTranslationDelta = (id: string, delta: string) => {
+  const updateQueueResult = (
+    id: string,
+    modelKey: string,
+    patch: Partial<TranslationResult>,
+  ) => {
     setQueue(items =>
       items.map(item =>
         item.id === id
-          ? { ...item, translation: `${item.translation ?? ""}${delta}` }
+          ? {
+              ...item,
+              results: {
+                ...item.results,
+                [modelKey]: { ...item.results[modelKey], ...patch },
+              },
+            }
           : item,
       ),
+    );
+  };
+
+  const appendTranslationDelta = (id: string, modelKey: string, delta: string) => {
+    setQueue(items =>
+      items.map(item => {
+        if (item.id !== id) {
+          return item;
+        }
+        const current = item.results[modelKey]?.translation ?? "";
+        return {
+          ...item,
+          results: {
+            ...item.results,
+            [modelKey]: {
+              ...item.results[modelKey],
+              translation: `${current}${delta}`,
+            },
+          },
+        };
+      }),
     );
   };
 
@@ -167,14 +201,13 @@ export default function TranslatePage() {
   };
 
   const translateItem = async (item: QueueItem, modelKey: string, language: "en" | "zh") => {
-    updateQueueItem(item.id, {
+    updateQueueResult(item.id, modelKey, {
       status: "translating",
       translation: "",
       actualInputTokens: null,
       outputTokens: null,
       totalTokens: null,
       error: undefined,
-      model: modelKey,
     });
     setActiveId(item.id);
 
@@ -216,11 +249,13 @@ export default function TranslatePage() {
         const event = JSON.parse(payload) as StreamEvent;
 
         if (event.type === "meta") {
-          updateQueueItem(item.id, { actualInputTokens: event.inputTokens ?? null });
+          updateQueueResult(item.id, modelKey, {
+            actualInputTokens: event.inputTokens ?? null,
+          });
         } else if (event.type === "delta") {
-          appendTranslationDelta(item.id, event.text);
+          appendTranslationDelta(item.id, modelKey, event.text);
         } else if (event.type === "done") {
-          updateQueueItem(item.id, {
+          updateQueueResult(item.id, modelKey, {
             status: "done",
             actualInputTokens: event.inputTokens ?? null,
             outputTokens: event.outputTokens ?? null,
@@ -233,48 +268,10 @@ export default function TranslatePage() {
     }
   };
 
-  const estimatedTokenSummary = useMemo<TokenSummaryItem[]>(() => {
-    const activeItem = queue.find(item => item.id === activeId) ?? queue[0];
-    const estimatedInputTokens = activeItem?.estimatedInputTokens ?? null;
-    const estimatedOutputTokens = estimatedInputTokens ?? null;
-    const estimatedTotalTokens =
-      estimatedInputTokens !== null ? estimatedInputTokens + estimatedOutputTokens : null;
-    const pricing = getPricing(activeItem?.model ?? model, estimatedInputTokens ?? null);
-    const estimatedInputCost =
-      pricing && estimatedInputTokens !== null ? estimatedInputTokens * pricing.inputPerToken : null;
-    const estimatedOutputCost =
-      pricing && estimatedOutputTokens !== null
-        ? estimatedOutputTokens * pricing.outputPerToken
-        : null;
-    const estimatedTotalCost =
-      estimatedInputCost !== null && estimatedOutputCost !== null
-        ? estimatedInputCost + estimatedOutputCost
-        : null;
-    return [
-      { label: "Estimated input tokens", value: estimatedInputTokens, costUsd: estimatedInputCost },
-      { label: "Estimated output tokens", value: estimatedOutputTokens, costUsd: estimatedOutputCost },
-      { label: "Estimated total tokens", value: estimatedTotalTokens, costUsd: estimatedTotalCost },
-    ];
-  }, [activeId, model, queue]);
-
-  const actualTokenSummary = useMemo<TokenSummaryItem[]>(() => {
-    const activeItem = queue.find(item => item.id === activeId) ?? queue[0];
-    const actualInputTokens = activeItem?.actualInputTokens ?? null;
-    const outputTokens = activeItem?.outputTokens ?? null;
-    const totalTokens = activeItem?.totalTokens ?? null;
-    const pricing = getPricing(activeItem?.model ?? model, actualInputTokens ?? null);
-    const actualInputCost =
-      pricing && actualInputTokens !== null ? actualInputTokens * pricing.inputPerToken : null;
-    const actualOutputCost =
-      pricing && outputTokens !== null ? outputTokens * pricing.outputPerToken : null;
-    const actualTotalCost =
-      actualInputCost !== null && actualOutputCost !== null ? actualInputCost + actualOutputCost : null;
-    return [
-      { label: "Actual input tokens", value: actualInputTokens, costUsd: actualInputCost },
-      { label: "Actual output tokens", value: outputTokens, costUsd: actualOutputCost },
-      { label: "Actual total tokens", value: totalTokens, costUsd: actualTotalCost },
-    ];
-  }, [activeId, model, queue]);
+  const activeItem = useMemo(
+    () => queue.find(item => item.id === activeId) ?? queue[0],
+    [activeId, queue],
+  );
 
   const handleFileChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(event.target.files ?? []);
@@ -289,12 +286,14 @@ export default function TranslatePage() {
     for (const file of files) {
       const text = await file.text();
       const id = crypto.randomUUID();
+      const results = Object.fromEntries(
+        selectedModels.map(modelKey => [modelKey, { status: "queued" } as TranslationResult]),
+      );
       newItems.push({
         id,
         fileName: file.name,
         text,
-        status: "queued",
-        model,
+        results,
       });
     }
 
@@ -304,16 +303,21 @@ export default function TranslatePage() {
     }
 
     for (const item of newItems) {
-      try {
-        // eslint-disable-next-line no-await-in-loop
-        const tokens = await countTokens({
-          text: item.text,
-          model,
-          targetLanguage,
-        });
-        updateQueueItem(item.id, { estimatedInputTokens: tokens, model });
-      } catch (countError) {
-        updateQueueItem(item.id, { status: "error", error: "Token count failed." });
+      for (const modelKey of selectedModels) {
+        try {
+          // eslint-disable-next-line no-await-in-loop
+          const tokens = await countTokens({
+            text: item.text,
+            model: modelKey,
+            targetLanguage,
+          });
+          updateQueueResult(item.id, modelKey, { estimatedInputTokens: tokens });
+        } catch (countError) {
+          updateQueueResult(item.id, modelKey, {
+            status: "error",
+            error: "Token count failed.",
+          });
+        }
       }
     }
 
@@ -326,51 +330,62 @@ export default function TranslatePage() {
       setError("Please upload at least one .txt file.");
       return;
     }
+    if (selectedModels.length === 0) {
+      setError("Please select at least one model.");
+      return;
+    }
 
     setIsProcessing(true);
-    setQueue(items =>
-      items.map(item => ({
-        ...item,
-        status: "queued",
-        translation: "",
-        actualInputTokens: null,
-        outputTokens: null,
-        totalTokens: null,
-        error: undefined,
-      })),
-    );
-    const currentQueue = [...queue];
-    for (const item of currentQueue) {
-      try {
-        // eslint-disable-next-line no-await-in-loop
-        await translateItem(item, model, targetLanguage);
-      } catch (translateError) {
-        updateQueueItem(item.id, {
-          status: "error",
-          error: translateError instanceof Error ? translateError.message : "Translation failed.",
-        });
+    const preparedQueue = queue.map(item => {
+      const results = { ...item.results };
+      for (const modelKey of selectedModels) {
+        results[modelKey] = {
+          ...results[modelKey],
+          status: "queued",
+          translation: "",
+          actualInputTokens: null,
+          outputTokens: null,
+          totalTokens: null,
+          error: undefined,
+        };
+      }
+      return { ...item, results };
+    });
+    setQueue(preparedQueue);
+    for (const item of preparedQueue) {
+      for (const modelKey of selectedModels) {
+        try {
+          // eslint-disable-next-line no-await-in-loop
+          await translateItem(item, modelKey, targetLanguage);
+        } catch (translateError) {
+          updateQueueResult(item.id, modelKey, {
+            status: "error",
+            error:
+              translateError instanceof Error ? translateError.message : "Translation failed.",
+          });
+        }
       }
     }
     setIsProcessing(false);
   };
 
-  const handleModelChange = async (nextModel: string) => {
-    setModel(nextModel);
-    if (!queue.length) {
+  const refreshEstimates = async (modelsToCount: string[]) => {
+    if (!queue.length || modelsToCount.length === 0) {
       return;
     }
     setIsCounting(true);
     try {
-      await Promise.all(
-        queue.map(async item => {
+      for (const item of queue) {
+        for (const modelKey of modelsToCount) {
+          // eslint-disable-next-line no-await-in-loop
           const tokens = await countTokens({
             text: item.text,
-            model: nextModel,
+            model: modelKey,
             targetLanguage,
           });
-          updateQueueItem(item.id, { estimatedInputTokens: tokens, model: nextModel });
-        }),
-      );
+          updateQueueResult(item.id, modelKey, { estimatedInputTokens: tokens });
+        }
+      }
     } catch (countError) {
       setError(countError instanceof Error ? countError.message : "Token count failed.");
     } finally {
@@ -378,8 +393,30 @@ export default function TranslatePage() {
     }
   };
 
-  const handleDownload = (item: QueueItem) => {
-    const activeTranslation = item.translation ?? "";
+  const handleModelToggle = async (modelKey: string) => {
+    const nextSelected = selectedModels.includes(modelKey)
+      ? selectedModels.filter(value => value !== modelKey)
+      : [...selectedModels, modelKey];
+    if (nextSelected.length === 0) {
+      return;
+    }
+    setSelectedModels(nextSelected);
+    setQueue(items =>
+      items.map(item => {
+        const results = { ...item.results };
+        for (const key of nextSelected) {
+          if (!results[key]) {
+            results[key] = { status: "queued" };
+          }
+        }
+        return { ...item, results };
+      }),
+    );
+    await refreshEstimates(nextSelected);
+  };
+
+  const handleDownload = (item: QueueItem, modelKey: string) => {
+    const activeTranslation = item.results[modelKey]?.translation ?? "";
     if (!activeTranslation.trim()) {
       setError("No translation to download.");
       return;
@@ -387,7 +424,7 @@ export default function TranslatePage() {
 
     const baseName = item.fileName.replace(/\\.txt$/i, "") || "translation";
     const suffix = targetLanguage === "zh" ? "zh" : "en";
-    const outputName = `${baseName}-${suffix}.txt`;
+    const outputName = `${baseName}-${modelKey}-${suffix}.txt`;
     const blob = new Blob([activeTranslation], { type: "text/plain;charset=utf-8" });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
@@ -397,6 +434,22 @@ export default function TranslatePage() {
     URL.revokeObjectURL(url);
   };
 
+  const getItemStatus = (item: QueueItem) => {
+    const results = selectedModels
+      .map(modelKey => item.results[modelKey])
+      .filter(Boolean);
+    if (results.some(result => result?.status === "translating")) {
+      return "translating";
+    }
+    if (results.some(result => result?.status === "error")) {
+      return "error";
+    }
+    if (results.length > 0 && results.every(result => result?.status === "done")) {
+      return "done";
+    }
+    return "queued";
+  };
+
   return (
     <main className="mx-auto flex w-full max-w-5xl flex-col gap-6 px-4 py-10 text-gray-100">
       <header>
@@ -404,7 +457,7 @@ export default function TranslatePage() {
         <h1 className="mt-2 text-3xl font-semibold text-white">Translate TXT Files</h1>
         <p className="mt-3 max-w-3xl text-sm text-gray-300">
           Upload a plain text file, choose a target language, and translate it with Claude or Gemini.
-          Input tokens are counted after upload; output tokens come from the LLM response.
+          Input tokens are counted after upload; output tokens come from the LLM responses.
         </p>
       </header>
 
@@ -412,25 +465,32 @@ export default function TranslatePage() {
         <div className="grid gap-3 md:grid-cols-2">
           <div className="grid gap-2">
             <label className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-400">
-              Model
+              Models
             </label>
-            <select
-              value={model}
-              onChange={event => {
-                void handleModelChange(event.target.value);
-              }}
-              className="w-full rounded border border-white/10 bg-white/10 px-3 py-2 text-sm text-gray-200"
-            >
+            <div className="grid gap-3 rounded border border-white/10 bg-white/5 p-3 text-sm text-gray-200">
               {modelGroups.map(group => (
-                <optgroup key={group.label} label={group.label}>
-                  {group.options.map(option => (
-                    <option key={option.value} value={option.value}>
-                      {option.label}
-                    </option>
-                  ))}
-                </optgroup>
+                <div key={group.label} className="grid gap-2">
+                  <span className="text-xs uppercase tracking-[0.16em] text-gray-400">
+                    {group.label}
+                  </span>
+                  <div className="grid gap-2 sm:grid-cols-2">
+                    {group.options.map(option => (
+                      <label key={option.value} className="flex items-center gap-2">
+                        <input
+                          type="checkbox"
+                          checked={selectedModels.includes(option.value)}
+                          onChange={() => {
+                            void handleModelToggle(option.value);
+                          }}
+                          className="size-4 rounded border-white/20 bg-black/40 text-white"
+                        />
+                        <span>{option.label}</span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
               ))}
-            </select>
+            </div>
           </div>
 
           <div className="grid gap-2">
@@ -479,16 +539,23 @@ export default function TranslatePage() {
                   {item.fileName}
                 </button>
                 <div className="ml-3 flex items-center gap-2">
-                  <span className="text-xs text-gray-400">{item.status}</span>
-                  {item.translation?.trim() ? (
-                    <button
-                      type="button"
-                      onClick={() => handleDownload(item)}
-                      className="rounded border border-white/20 px-2 py-1 text-xs font-semibold text-white transition hover:border-white/40"
-                    >
-                      Download
-                    </button>
-                  ) : null}
+                  <span className="text-xs text-gray-400">{getItemStatus(item)}</span>
+                  {selectedModels.map(modelKey => {
+                    const result = item.results[modelKey];
+                    if (!result?.translation?.trim()) {
+                      return null;
+                    }
+                    return (
+                      <button
+                        key={modelKey}
+                        type="button"
+                        onClick={() => handleDownload(item, modelKey)}
+                        className="rounded border border-white/20 px-2 py-1 text-xs font-semibold text-white transition hover:border-white/40"
+                      >
+                        {MODEL_LABELS[modelKey] ?? modelKey}
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
             ))
@@ -525,43 +592,142 @@ export default function TranslatePage() {
         <div>
           <h2 className="text-lg font-semibold text-white">Tokens</h2>
           <p className="mt-1 text-xs text-gray-400">
-            Estimated tokens are counted after upload. Actual tokens come from the model response.
+            Estimated tokens are counted after upload. Actual tokens come from the model responses.
           </p>
         </div>
-        <div className="grid gap-3">
-          <div className="grid gap-2 sm:grid-cols-3">
-            {estimatedTokenSummary.map(item => (
-              <div key={item.label} className="rounded border border-white/10 bg-black/40 p-3">
-                <div className="text-xs uppercase tracking-[0.18em] text-gray-400">{item.label}</div>
-                <div className="mt-2 text-lg font-semibold text-white">
-                  {formatTokens(item.value)}
+        {selectedModels.length === 0 ? (
+          <p className="text-sm text-gray-400">Select at least one model to see token estimates.</p>
+        ) : (
+          <div className="grid gap-4">
+            {selectedModels.map(modelKey => {
+              const result = activeItem?.results[modelKey];
+              const estimatedInputTokens = result?.estimatedInputTokens ?? null;
+              const estimatedOutputTokens = estimatedInputTokens ?? null;
+              const estimatedTotalTokens =
+                estimatedInputTokens !== null ? estimatedInputTokens + estimatedOutputTokens : null;
+              const estimatedPricing = getPricing(modelKey, estimatedInputTokens ?? null);
+              const estimatedInputCost =
+                estimatedPricing && estimatedInputTokens !== null
+                  ? estimatedInputTokens * estimatedPricing.inputPerToken
+                  : null;
+              const estimatedOutputCost =
+                estimatedPricing && estimatedOutputTokens !== null
+                  ? estimatedOutputTokens * estimatedPricing.outputPerToken
+                  : null;
+              const estimatedTotalCost =
+                estimatedInputCost !== null && estimatedOutputCost !== null
+                  ? estimatedInputCost + estimatedOutputCost
+                  : null;
+
+              const actualInputTokens = result?.actualInputTokens ?? null;
+              const outputTokens = result?.outputTokens ?? null;
+              const totalTokens = result?.totalTokens ?? null;
+              const actualPricing = getPricing(modelKey, actualInputTokens ?? null);
+              const actualInputCost =
+                actualPricing && actualInputTokens !== null
+                  ? actualInputTokens * actualPricing.inputPerToken
+                  : null;
+              const actualOutputCost =
+                actualPricing && outputTokens !== null
+                  ? outputTokens * actualPricing.outputPerToken
+                  : null;
+              const actualTotalCost =
+                actualInputCost !== null && actualOutputCost !== null
+                  ? actualInputCost + actualOutputCost
+                  : null;
+
+              const estimatedItems: TokenSummaryItem[] = [
+                {
+                  label: "Estimated input tokens",
+                  value: estimatedInputTokens,
+                  costUsd: estimatedInputCost,
+                },
+                {
+                  label: "Estimated output tokens",
+                  value: estimatedOutputTokens,
+                  costUsd: estimatedOutputCost,
+                },
+                {
+                  label: "Estimated total tokens",
+                  value: estimatedTotalTokens,
+                  costUsd: estimatedTotalCost,
+                },
+              ];
+
+              const actualItems: TokenSummaryItem[] = [
+                { label: "Actual input tokens", value: actualInputTokens, costUsd: actualInputCost },
+                { label: "Actual output tokens", value: outputTokens, costUsd: actualOutputCost },
+                { label: "Actual total tokens", value: totalTokens, costUsd: actualTotalCost },
+              ];
+
+              return (
+                <div key={modelKey} className="grid gap-3 rounded-xl border border-white/10 bg-black/20 p-4">
+                  <div className="text-sm font-semibold text-white">
+                    {MODEL_LABELS[modelKey] ?? modelKey}
+                  </div>
+                  <div className="grid gap-2 sm:grid-cols-3">
+                    {estimatedItems.map(item => (
+                      <div key={item.label} className="rounded border border-white/10 bg-black/40 p-3">
+                        <div className="text-xs uppercase tracking-[0.18em] text-gray-400">
+                          {item.label}
+                        </div>
+                        <div className="mt-2 text-lg font-semibold text-white">
+                          {formatTokens(item.value)}
+                        </div>
+                        <div className="mt-1 text-xs text-gray-400">
+                          Cost: {formatUsd(item.costUsd)}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="grid gap-2 sm:grid-cols-3">
+                    {actualItems.map(item => (
+                      <div key={item.label} className="rounded border border-white/10 bg-black/40 p-3">
+                        <div className="text-xs uppercase tracking-[0.18em] text-gray-400">
+                          {item.label}
+                        </div>
+                        <div className="mt-2 text-lg font-semibold text-white">
+                          {formatTokens(item.value)}
+                        </div>
+                        <div className="mt-1 text-xs text-gray-400">
+                          Cost: {formatUsd(item.costUsd)}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <div className="mt-1 text-xs text-gray-400">Cost: {formatUsd(item.costUsd)}</div>
-              </div>
-            ))}
+              );
+            })}
           </div>
-          <div className="grid gap-2 sm:grid-cols-3">
-            {actualTokenSummary.map(item => (
-              <div key={item.label} className="rounded border border-white/10 bg-black/40 p-3">
-                <div className="text-xs uppercase tracking-[0.18em] text-gray-400">{item.label}</div>
-                <div className="mt-2 text-lg font-semibold text-white">
-                  {formatTokens(item.value)}
-                </div>
-                <div className="mt-1 text-xs text-gray-400">Cost: {formatUsd(item.costUsd)}</div>
-              </div>
-            ))}
-          </div>
-        </div>
+        )}
       </section>
 
       <section className="grid gap-4 rounded-2xl border border-white/10 bg-white/5 p-6">
         <div>
           <h2 className="text-lg font-semibold text-white">Translation</h2>
-          <p className="mt-1 text-xs text-gray-400">Output text from the selected model.</p>
+          <p className="mt-1 text-xs text-gray-400">
+            Output text for each selected model.
+          </p>
         </div>
-        <div className="min-h-[160px] max-h-[320px] overflow-y-auto whitespace-pre-wrap rounded border border-white/10 bg-black/30 p-4 text-sm text-gray-200">
-          {(queue.find(item => item.id === activeId) ?? queue[0])?.translation || "Translated text will appear here."}
-        </div>
+        {selectedModels.length === 0 ? (
+          <p className="text-sm text-gray-400">Select models to view translations.</p>
+        ) : (
+          <div className="grid gap-3">
+            {selectedModels.map(modelKey => {
+              const translationText = activeItem?.results[modelKey]?.translation ?? "";
+              return (
+                <div key={modelKey} className="grid gap-2 rounded-xl border border-white/10 bg-black/20 p-4">
+                  <div className="text-sm font-semibold text-white">
+                    {MODEL_LABELS[modelKey] ?? modelKey}
+                  </div>
+                  <div className="min-h-[140px] max-h-[320px] overflow-y-auto whitespace-pre-wrap rounded border border-white/10 bg-black/30 p-3 text-sm text-gray-200">
+                    {translationText || "Translated text will appear here."}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        )}
       </section>
     </main>
   );

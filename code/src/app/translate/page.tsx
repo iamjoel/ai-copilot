@@ -1,7 +1,6 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { useMutation } from "@tanstack/react-query";
 
 const modelGroups = [
   {
@@ -48,6 +47,20 @@ type StreamEvent =
   | { type: "done"; inputTokens: number | null; outputTokens: number | null; totalTokens: number | null }
   | { type: "error"; message: string };
 
+type QueueItem = {
+  id: string;
+  fileName: string;
+  text: string;
+  status: "queued" | "translating" | "done" | "error";
+  model?: string;
+  estimatedInputTokens?: number | null;
+  actualInputTokens?: number | null;
+  outputTokens?: number | null;
+  totalTokens?: number | null;
+  translation?: string;
+  error?: string;
+};
+
 type PricingInfo = {
   inputPerMillion: number;
   outputPerMillion: number;
@@ -86,18 +99,15 @@ const PER_MILLION = 1_000_000;
 const LONG_CONTEXT_THRESHOLD = 200_000;
 
 export default function TranslatePage() {
-  const [sourceText, setSourceText] = useState("");
-  const [fileName, setFileName] = useState<string | null>(null);
+  const [queue, setQueue] = useState<QueueItem[]>([]);
+  const [activeId, setActiveId] = useState<string | null>(null);
   const [model, setModel] = useState(modelGroups[0].options[0].value);
   const [targetLanguage, setTargetLanguage] = useState<"en" | "zh">("en");
-  const [translation, setTranslation] = useState("");
-  const [estimatedInputTokens, setEstimatedInputTokens] = useState<number | null>(null);
-  const [actualInputTokens, setActualInputTokens] = useState<number | null>(null);
-  const [outputTokens, setOutputTokens] = useState<number | null>(null);
-  const [totalTokens, setTotalTokens] = useState<number | null>(null);
+  const [isProcessing, setIsProcessing] = useState(false);
+  const [isCounting, setIsCounting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const hasText = sourceText.trim().length > 0;
+  const hasQueue = queue.length > 0;
   const formatUsd = (value: number | null) =>
     value === null ? "N/A" : `$${value.toFixed(2)}`;
 
@@ -126,95 +136,110 @@ export default function TranslatePage() {
     };
   };
 
-  const countMutation = useMutation({
-    mutationFn: async (payload: { text: string; model: string; targetLanguage: "en" | "zh" }) => {
-      const response = await fetch("/api/translate", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...payload, mode: "count" }),
-      });
+  const updateQueueItem = (id: string, patch: Partial<QueueItem>) => {
+    setQueue(items =>
+      items.map(item => (item.id === id ? { ...item, ...patch } : item)),
+    );
+  };
 
-      const data = (await response.json()) as CountResponse;
-      if (!response.ok) {
-        throw new Error(data.error ?? "Token count failed.");
+  const appendTranslationDelta = (id: string, delta: string) => {
+    setQueue(items =>
+      items.map(item =>
+        item.id === id
+          ? { ...item, translation: `${item.translation ?? ""}${delta}` }
+          : item,
+      ),
+    );
+  };
+
+  const countTokens = async (payload: { text: string; model: string; targetLanguage: "en" | "zh" }) => {
+    const response = await fetch("/api/translate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ ...payload, mode: "count" }),
+    });
+
+    const data = (await response.json()) as CountResponse;
+    if (!response.ok) {
+      throw new Error(data.error ?? "Token count failed.");
+    }
+    return data.inputTokens ?? null;
+  };
+
+  const translateItem = async (item: QueueItem, modelKey: string, language: "en" | "zh") => {
+    updateQueueItem(item.id, {
+      status: "translating",
+      translation: "",
+      actualInputTokens: null,
+      outputTokens: null,
+      totalTokens: null,
+      error: undefined,
+      model: modelKey,
+    });
+    setActiveId(item.id);
+
+    const response = await fetch("/api/translate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text: item.text, model: modelKey, targetLanguage: language, mode: "stream" }),
+    });
+
+    if (!response.ok) {
+      const data = (await response.json()) as TranslateResponse;
+      throw new Error(data.error ?? "Translation failed.");
+    }
+
+    if (!response.body) {
+      throw new Error("Streaming response is unavailable.");
+    }
+
+    const reader = response.body.getReader();
+    const decoder = new TextDecoder();
+    let buffer = "";
+
+    while (true) {
+      // eslint-disable-next-line no-await-in-loop
+      const { done, value } = await reader.read();
+      if (done) {
+        break;
       }
-      return data;
-    },
-    onSuccess: data => {
-      setEstimatedInputTokens(data.inputTokens ?? null);
-    },
-    onError: err => {
-      console.error("Token count error:", err);
-      setError(err instanceof Error ? err.message : "Token count failed.");
-    },
-  });
+      buffer += decoder.decode(value, { stream: true });
+      const parts = buffer.split("\n\n");
+      buffer = parts.pop() ?? "";
 
-  const translateMutation = useMutation({
-    mutationFn: async (payload: { text: string; model: string; targetLanguage: "en" | "zh" }) => {
-      const response = await fetch("/api/translate", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...payload, mode: "stream" }),
-      });
-
-      if (!response.ok) {
-        const data = (await response.json()) as TranslateResponse;
-        throw new Error(data.error ?? "Translation failed.");
-      }
-
-      if (!response.body) {
-        throw new Error("Streaming response is unavailable.");
-      }
-
-      const reader = response.body.getReader();
-      const decoder = new TextDecoder();
-      let buffer = "";
-
-      while (true) {
-        // eslint-disable-next-line no-await-in-loop
-        const { done, value } = await reader.read();
-        if (done) {
-          break;
+      for (const part of parts) {
+        const line = part.trim();
+        if (!line.startsWith("data:")) {
+          continue;
         }
-        buffer += decoder.decode(value, { stream: true });
-        const parts = buffer.split("\n\n");
-        buffer = parts.pop() ?? "";
+        const payload = line.replace(/^data:\s*/, "");
+        const event = JSON.parse(payload) as StreamEvent;
 
-        for (const part of parts) {
-          const line = part.trim();
-          if (!line.startsWith("data:")) {
-            continue;
-          }
-          const payload = line.replace(/^data:\s*/, "");
-          const event = JSON.parse(payload) as StreamEvent;
-
-          if (event.type === "meta") {
-            setActualInputTokens(event.inputTokens ?? null);
-          } else if (event.type === "delta") {
-            setTranslation(prev => prev + event.text);
-          } else if (event.type === "done") {
-            setActualInputTokens(event.inputTokens ?? null);
-            setOutputTokens(event.outputTokens ?? null);
-            setTotalTokens(event.totalTokens ?? null);
-          } else if (event.type === "error") {
-            throw new Error(event.message);
-          }
+        if (event.type === "meta") {
+          updateQueueItem(item.id, { actualInputTokens: event.inputTokens ?? null });
+        } else if (event.type === "delta") {
+          appendTranslationDelta(item.id, event.text);
+        } else if (event.type === "done") {
+          updateQueueItem(item.id, {
+            status: "done",
+            actualInputTokens: event.inputTokens ?? null,
+            outputTokens: event.outputTokens ?? null,
+            totalTokens: event.totalTokens ?? null,
+          });
+        } else if (event.type === "error") {
+          throw new Error(event.message);
         }
       }
-
-      return { translation: "streamed" };
-    },
-    onError: err => {
-      console.error("Translation error:", err);
-      setError(err instanceof Error ? err.message : "Translation failed.");
-    },
-  });
+    }
+  };
 
   const estimatedTokenSummary = useMemo<TokenSummaryItem[]>(() => {
+    const activeItem = queue.find(item => item.id === activeId) ?? queue[0];
+    const estimatedInputTokens = activeItem?.estimatedInputTokens ?? null;
     const estimatedOutputTokens = estimatedInputTokens ?? null;
     const estimatedTotalTokens =
       estimatedInputTokens !== null ? estimatedInputTokens + estimatedOutputTokens : null;
-    const pricing = getPricing(model, estimatedInputTokens ?? null);
+    const pricing = getPricing(activeItem?.model ?? model, estimatedInputTokens ?? null);
     const estimatedInputCost =
       pricing && estimatedInputTokens !== null ? estimatedInputTokens * pricing.inputPerToken : null;
     const estimatedOutputCost =
@@ -230,10 +255,14 @@ export default function TranslatePage() {
       { label: "Estimated output tokens", value: estimatedOutputTokens, costUsd: estimatedOutputCost },
       { label: "Estimated total tokens", value: estimatedTotalTokens, costUsd: estimatedTotalCost },
     ];
-  }, [estimatedInputTokens, model]);
+  }, [activeId, model, queue]);
 
   const actualTokenSummary = useMemo<TokenSummaryItem[]>(() => {
-    const pricing = getPricing(model, actualInputTokens ?? null);
+    const activeItem = queue.find(item => item.id === activeId) ?? queue[0];
+    const actualInputTokens = activeItem?.actualInputTokens ?? null;
+    const outputTokens = activeItem?.outputTokens ?? null;
+    const totalTokens = activeItem?.totalTokens ?? null;
+    const pricing = getPricing(activeItem?.model ?? model, actualInputTokens ?? null);
     const actualInputCost =
       pricing && actualInputTokens !== null ? actualInputTokens * pricing.inputPerToken : null;
     const actualOutputCost =
@@ -245,54 +274,114 @@ export default function TranslatePage() {
       { label: "Actual output tokens", value: outputTokens, costUsd: actualOutputCost },
       { label: "Actual total tokens", value: totalTokens, costUsd: actualTotalCost },
     ];
-  }, [actualInputTokens, model, outputTokens, totalTokens]);
+  }, [activeId, model, queue]);
 
   const handleFileChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (!file) {
-      setFileName(null);
+    const files = Array.from(event.target.files ?? []);
+    if (!files.length) {
       return;
     }
 
-    setFileName(file.name);
     setError(null);
-    setTranslation("");
-    setEstimatedInputTokens(null);
-    setActualInputTokens(null);
-    setOutputTokens(null);
-    setTotalTokens(null);
+    setIsCounting(true);
+    const newItems: QueueItem[] = [];
 
-    const text = await file.text();
-    setSourceText(text);
-    countMutation.mutate({ text, model, targetLanguage });
+    for (const file of files) {
+      const text = await file.text();
+      const id = crypto.randomUUID();
+      newItems.push({
+        id,
+        fileName: file.name,
+        text,
+        status: "queued",
+        model,
+      });
+    }
+
+    setQueue(prev => [...prev, ...newItems]);
+    if (!activeId && newItems[0]) {
+      setActiveId(newItems[0].id);
+    }
+
+    for (const item of newItems) {
+      try {
+        // eslint-disable-next-line no-await-in-loop
+        const tokens = await countTokens({
+          text: item.text,
+          model,
+          targetLanguage,
+        });
+        updateQueueItem(item.id, { estimatedInputTokens: tokens, model });
+      } catch (countError) {
+        updateQueueItem(item.id, { status: "error", error: "Token count failed." });
+      }
+    }
+
+    setIsCounting(false);
   };
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setError(null);
-    setTranslation("");
-    setActualInputTokens(null);
-    setOutputTokens(null);
-    setTotalTokens(null);
-
-    if (!hasText) {
-      setError("Please upload a .txt file first.");
+    if (!hasQueue) {
+      setError("Please upload at least one .txt file.");
       return;
     }
 
-    translateMutation.mutate({ text: sourceText, model, targetLanguage });
+    setIsProcessing(true);
+    for (const item of queue) {
+      if (item.status !== "queued") {
+        continue;
+      }
+      try {
+        // eslint-disable-next-line no-await-in-loop
+        await translateItem(item, model, targetLanguage);
+      } catch (translateError) {
+        updateQueueItem(item.id, {
+          status: "error",
+          error: translateError instanceof Error ? translateError.message : "Translation failed.",
+        });
+      }
+    }
+    setIsProcessing(false);
+  };
+
+  const handleModelChange = async (nextModel: string) => {
+    setModel(nextModel);
+    if (!queue.length) {
+      return;
+    }
+    setIsCounting(true);
+    try {
+      await Promise.all(
+        queue.map(async item => {
+          const tokens = await countTokens({
+            text: item.text,
+            model: nextModel,
+            targetLanguage,
+          });
+          updateQueueItem(item.id, { estimatedInputTokens: tokens, model: nextModel });
+        }),
+      );
+    } catch (countError) {
+      setError(countError instanceof Error ? countError.message : "Token count failed.");
+    } finally {
+      setIsCounting(false);
+    }
   };
 
   const handleDownload = () => {
-    if (!translation.trim()) {
+    const activeItem = queue.find(item => item.id === activeId) ?? queue[0];
+    const activeTranslation = activeItem?.translation ?? "";
+    if (!activeTranslation.trim()) {
       setError("No translation to download.");
       return;
     }
 
-    const baseName = fileName?.replace(/\\.txt$/i, "") || "translation";
+    const baseName = activeItem?.fileName.replace(/\\.txt$/i, "") || "translation";
     const suffix = targetLanguage === "zh" ? "zh" : "en";
     const outputName = `${baseName}-${suffix}.txt`;
-    const blob = new Blob([translation], { type: "text/plain;charset=utf-8" });
+    const blob = new Blob([activeTranslation], { type: "text/plain;charset=utf-8" });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
@@ -321,6 +410,7 @@ export default function TranslatePage() {
             <input
               type="file"
               accept=".txt,text/plain"
+              multiple
               onChange={handleFileChange}
               className="w-full cursor-pointer rounded border border-white/10 bg-white/10 px-3 py-2 text-sm text-gray-200 file:mr-3 file:rounded file:border-0 file:bg-white/20 file:px-3 file:py-1.5 file:text-xs file:font-semibold file:text-white"
             />
@@ -333,12 +423,7 @@ export default function TranslatePage() {
             <select
               value={model}
               onChange={event => {
-                const nextModel = event.target.value;
-                setModel(nextModel);
-                if (sourceText.trim()) {
-                  setEstimatedInputTokens(null);
-                  countMutation.mutate({ text: sourceText, model: nextModel, targetLanguage });
-                }
+                void handleModelChange(event.target.value);
               }}
               className="w-full rounded border border-white/10 bg-white/10 px-3 py-2 text-sm text-gray-200"
             >
@@ -377,10 +462,10 @@ export default function TranslatePage() {
             Source text
           </label>
           <textarea
-            value={sourceText}
-            onChange={event => setSourceText(event.target.value)}
+            value={(queue.find(item => item.id === activeId) ?? queue[0])?.text ?? ""}
+            readOnly
             rows={9}
-            placeholder="Upload a .txt file to load its contents here."
+            placeholder="Upload .txt files to load contents here."
             className="w-full resize-y rounded border border-white/10 bg-black/30 p-4 text-sm text-gray-200 placeholder:text-gray-500"
           />
         </div>
@@ -388,26 +473,52 @@ export default function TranslatePage() {
         <div className="flex flex-wrap items-center justify-between gap-3">
           <button
             type="submit"
-            disabled={!hasText || translateMutation.isPending}
+            disabled={!hasQueue || isProcessing}
             className="inline-flex items-center justify-center rounded bg-white px-5 py-2.5 text-sm font-semibold text-gray-900 transition hover:bg-gray-200 disabled:cursor-not-allowed disabled:opacity-60"
           >
-            {translateMutation.isPending ? "Translating..." : "Translate"}
+            {isProcessing ? "Translating..." : "Translate queue"}
           </button>
           <button
             type="button"
             onClick={handleDownload}
-            disabled={!translation.trim()}
+            disabled={!((queue.find(item => item.id === activeId) ?? queue[0])?.translation ?? "").trim()}
             className="inline-flex items-center justify-center rounded border border-white/20 px-5 py-2.5 text-sm font-semibold text-white transition hover:border-white/40 disabled:cursor-not-allowed disabled:opacity-50"
           >
             Download
           </button>
           <div className="flex items-center gap-4 text-xs text-gray-300">
-            <span>{countMutation.isPending ? "Counting tokens..." : "Token count ready"}</span>
+            <span>{isCounting ? "Counting tokens..." : "Token count ready"}</span>
           </div>
         </div>
       </form>
 
       {error && <p className="text-sm text-red-400">{error}</p>}
+
+      <section className="grid gap-4 rounded-2xl border border-white/10 bg-white/5 p-6">
+        <div>
+          <h2 className="text-lg font-semibold text-white">Queue</h2>
+          <p className="mt-1 text-xs text-gray-400">Files are processed in order.</p>
+        </div>
+        <div className="grid gap-2">
+          {queue.length === 0 ? (
+            <p className="text-sm text-gray-400">No files queued yet.</p>
+          ) : (
+            queue.map(item => (
+              <button
+                key={item.id}
+                type="button"
+                onClick={() => setActiveId(item.id)}
+                className={`flex w-full items-center justify-between rounded border border-white/10 px-3 py-2 text-left text-sm transition ${
+                  item.id === activeId ? "bg-white/10 text-white" : "bg-black/30 text-gray-200"
+                }`}
+              >
+                <span className="truncate">{item.fileName}</span>
+                <span className="ml-3 text-xs text-gray-400">{item.status}</span>
+              </button>
+            ))
+          )}
+        </div>
+      </section>
 
       <section className="grid gap-4 rounded-2xl border border-white/10 bg-white/5 p-6">
         <div>
@@ -448,7 +559,7 @@ export default function TranslatePage() {
           <p className="mt-1 text-xs text-gray-400">Output text from the selected model.</p>
         </div>
         <div className="min-h-[160px] max-h-[320px] overflow-y-auto whitespace-pre-wrap rounded border border-white/10 bg-black/30 p-4 text-sm text-gray-200">
-          {translation || "Translated text will appear here."}
+          {(queue.find(item => item.id === activeId) ?? queue[0])?.translation || "Translated text will appear here."}
         </div>
       </section>
     </main>

@@ -188,6 +188,24 @@ export default function TranslatePage() {
     translateMutation.mutate({ text: sourceText, model, targetLanguage });
   };
 
+  const handleDownload = () => {
+    if (!translation.trim()) {
+      setError("No translation to download.");
+      return;
+    }
+
+    const baseName = fileName?.replace(/\\.txt$/i, "") || "translation";
+    const suffix = targetLanguage === "zh" ? "zh" : "en";
+    const outputName = `${baseName}-${suffix}.txt`;
+    const blob = new Blob([translation], { type: "text/plain;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = outputName;
+    link.click();
+    URL.revokeObjectURL(url);
+  };
+
   return (
     <main className="mx-auto flex w-full max-w-5xl flex-col gap-6 px-4 py-10 text-gray-100">
       <header>
@@ -272,6 +290,14 @@ export default function TranslatePage() {
             className="inline-flex items-center justify-center rounded bg-white px-5 py-2.5 text-sm font-semibold text-gray-900 transition hover:bg-gray-200 disabled:cursor-not-allowed disabled:opacity-60"
           >
             {translateMutation.isPending ? "Translating..." : "Translate"}
+          </button>
+          <button
+            type="button"
+            onClick={handleDownload}
+            disabled={!translation.trim()}
+            className="inline-flex items-center justify-center rounded border border-white/20 px-5 py-2.5 text-sm font-semibold text-white transition hover:border-white/40 disabled:cursor-not-allowed disabled:opacity-50"
+          >
+            Download
           </button>
           <div className="flex items-center gap-4 text-xs text-gray-300">
             <span>{countMutation.isPending ? "Counting tokens..." : "Token count ready"}</span>

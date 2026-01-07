@@ -21,6 +21,23 @@ const modelGroups = [
       { label: "Claude Opus 4.5", value: "claude-opus-4-5" },
     ],
   },
+  {
+    label: "xAI",
+    options: [
+      { label: "Grok 4.1 Fast Reasoning", value: "grok-4-1-fast-reasoning" },
+      { label: "Grok 4.1 Fast Non-Reasoning", value: "grok-4-1-fast-non-reasoning" },
+      { label: "Grok 3", value: "grok-3" },
+      { label: "Grok 4 (0709)", value: "grok-4-0709" },
+    ],
+  },
+  {
+    label: "Qwen",
+    options: [
+      { label: "Qwen Flash", value: "qwen-flash" },
+      { label: "Qwen Plus", value: "qwen-plus" },
+      { label: "Qwen3 Max", value: "qwen3-max" },
+    ],
+  },
 ] as const;
 
 const languageOptions = [
@@ -100,6 +117,28 @@ const MODEL_PRICING: Record<string, PricingInfo> = {
   "claude-opus-4-5": { inputPerMillion: 5.0, outputPerMillion: 25.0 },
   "claude-sonnet-4-5": { inputPerMillion: 3.0, outputPerMillion: 15.0 },
   "claude-haiku-4-5": { inputPerMillion: 1.0, outputPerMillion: 5.0 },
+  "grok-4-1-fast-reasoning": { inputPerMillion: 0.2, outputPerMillion: 0.5 },
+  "grok-4-1-fast-non-reasoning": { inputPerMillion: 0.2, outputPerMillion: 0.5 },
+  "grok-3": { inputPerMillion: 3.0, outputPerMillion: 15.0 },
+  "grok-4-0709": { inputPerMillion: 3.0, outputPerMillion: 15.0 },
+  "qwen-flash": {
+    inputPerMillion: 0.021429,
+    outputPerMillion: 0.214286,
+    inputPerMillionOver200k: 0.171429,
+    outputPerMillionOver200k: 1.714286,
+  },
+  "qwen-plus": {
+    inputPerMillion: 0.114286,
+    outputPerMillion: 0.285714,
+    inputPerMillionOver200k: 0.685714,
+    outputPerMillionOver200k: 6.857143,
+  },
+  "qwen3-max": {
+    inputPerMillion: 0.457143,
+    outputPerMillion: 1.828571,
+    inputPerMillionOver200k: 1.371429,
+    outputPerMillionOver200k: 5.485714,
+  },
 };
 
 const PER_MILLION = 1_000_000;
@@ -115,6 +154,7 @@ export default function TranslatePage() {
   const [isProcessing, setIsProcessing] = useState(false);
   const [isCounting, setIsCounting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [toastOpen, setToastOpen] = useState(false);
 
   const hasQueue = queue.length > 0;
   const formatUsd = (value: number | null) =>
@@ -326,6 +366,7 @@ export default function TranslatePage() {
 
   const startQueue = async () => {
     setError(null);
+    setToastOpen(false);
     if (!hasQueue) {
       setError("Please upload at least one .txt file.");
       return;
@@ -370,6 +411,7 @@ export default function TranslatePage() {
       );
     }
     setIsProcessing(false);
+    setToastOpen(true);
   };
 
   const refreshEstimates = async (modelsToCount: string[]) => {
@@ -459,7 +501,7 @@ export default function TranslatePage() {
         <p className="text-xs uppercase tracking-[0.25em] text-gray-400">LLM Translation</p>
         <h1 className="mt-2 text-3xl font-semibold text-white">Translate TXT Files</h1>
         <p className="mt-3 max-w-3xl text-sm text-gray-300">
-          Upload a plain text file, choose a target language, and translate it with Claude or Gemini.
+          Upload a plain text file, choose a target language, and translate it with Claude, Gemini, xAI, or Qwen.
           Input tokens are counted after upload; output tokens come from the LLM responses.
         </p>
       </header>
@@ -732,6 +774,26 @@ export default function TranslatePage() {
           </div>
         )}
       </section>
+
+      {toastOpen ? (
+        <div className="fixed bottom-6 right-6 z-50 w-full max-w-sm rounded-xl border border-white/20 bg-black/90 p-4 shadow-lg">
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <p className="text-sm font-semibold text-white">All translations completed</p>
+              <p className="mt-1 text-xs text-gray-300">
+                The current queue has finished running across all selected models.
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={() => setToastOpen(false)}
+              className="rounded border border-white/20 px-2 py-1 text-xs font-semibold text-white transition hover:border-white/40"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      ) : null}
     </main>
   );
 }

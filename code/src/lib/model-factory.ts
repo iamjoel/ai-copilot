@@ -155,13 +155,18 @@ export const geminiWithContextTool = (
 export const gpt4oMiniModel = getModel("openai", "gpt-4o-mini");
 
 // it's a little slow.
-export const commonWithContextTool = (provider: Provider, modelName: string, prompt: string) => {
+export const commonWithContextTool = (provider: Provider, modelName: string, prompt: string,
+  toolOptions?: GeminiToolOptions,
+) => {
+  const tools: Record<string, unknown> = {};
+
+  if (toolOptions?.browseWeb) {
+    tools.jina_url_context = jinaUrlContext;
+  }
   return {
     model: getModel(provider, modelName),
     prompt: `${prompt}\n${jinaReader}`,
-    tools: {
-      jina_url_context: jinaUrlContext,
-    },
+    tools,
     ...commonSettings
   }
 };

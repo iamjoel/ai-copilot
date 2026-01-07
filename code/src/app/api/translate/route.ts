@@ -9,7 +9,7 @@ import path from "node:path";
 
 export const runtime = "nodejs";
 
-const ALLOWED_PROVIDERS = new Set(["google", "anthropic"] as const);
+const ALLOWED_PROVIDERS = new Set(["google", "anthropic", "xai", "qwen"] as const);
 const ALLOWED_MODELS = new Set(
   MODEL_GROUPS.filter(group => ALLOWED_PROVIDERS.has(group.provider))
     .flatMap(group => group.options.map(option => option.value)),
@@ -59,6 +59,28 @@ const MODEL_PRICING: Record<string, PricingInfo> = {
   "claude-opus-4-5": { inputPerMillion: 5.0, outputPerMillion: 25.0 },
   "claude-sonnet-4-5": { inputPerMillion: 3.0, outputPerMillion: 15.0 },
   "claude-haiku-4-5": { inputPerMillion: 1.0, outputPerMillion: 5.0 },
+  "grok-4-1-fast-reasoning": { inputPerMillion: 0.2, outputPerMillion: 0.5 },
+  "grok-4-1-fast-non-reasoning": { inputPerMillion: 0.2, outputPerMillion: 0.5 },
+  "grok-3": { inputPerMillion: 3.0, outputPerMillion: 15.0 },
+  "grok-4-0709": { inputPerMillion: 3.0, outputPerMillion: 15.0 },
+  "qwen-flash": {
+    inputPerMillion: 0.021429,
+    outputPerMillion: 0.214286,
+    inputPerMillionOver200k: 0.171429,
+    outputPerMillionOver200k: 1.714286,
+  },
+  "qwen-plus": {
+    inputPerMillion: 0.114286,
+    outputPerMillion: 0.285714,
+    inputPerMillionOver200k: 0.685714,
+    outputPerMillionOver200k: 6.857143,
+  },
+  "qwen3-max": {
+    inputPerMillion: 0.457143,
+    outputPerMillion: 1.828571,
+    inputPerMillionOver200k: 1.371429,
+    outputPerMillionOver200k: 5.485714,
+  },
 };
 
 const PER_MILLION = 1_000_000;

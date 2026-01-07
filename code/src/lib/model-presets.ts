@@ -105,6 +105,16 @@ const RAW_MODEL_GROUPS = [
     providerLabel: "xAI",
     options: [
       {
+        label: "Grok 3",
+        value: "grok-3",
+        model: "grok-3",
+      },
+      {
+        label: "Grok 4 (0709)",
+        value: "grok-4-0709",
+        model: "grok-4-0709",
+      },
+      {
         label: "Grok 4.1 Fast Reasoning",
         value: "grok-4-1-fast-reasoning",
         model: "grok-4-1-fast-reasoning",

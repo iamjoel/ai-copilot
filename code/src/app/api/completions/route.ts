@@ -51,7 +51,7 @@ export async function POST(req: Request) {
 
     const requestOptions = isGeminiModel
       ? geminiWithContextTool(modelPreset.provider, modelPreset.model, prompt, tools)
-      : commonWithContextTool(modelPreset.provider, modelPreset.model, prompt);
+      : commonWithContextTool(modelPreset.provider, modelPreset.model, prompt, tools);
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const result = streamText(requestOptions as any);
     return result.toUIMessageStreamResponse({

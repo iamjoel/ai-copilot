@@ -76,7 +76,7 @@ export async function countInputTokens({
   text,
   systemPrompt,
 }: {
-  provider: "google" | "anthropic";
+  provider: "google" | "anthropic" | "xai" | "qwen";
   model: string;
   text: string;
   systemPrompt: string;
@@ -85,5 +85,13 @@ export async function countInputTokens({
     return countGoogleTokens(model, text);
   }
 
-  return countAnthropicTokens(model, text, systemPrompt);
+  if (provider === "anthropic") {
+    return countAnthropicTokens(model, text, systemPrompt);
+  }
+
+  if (provider === "xai") { // use gemini models token to approximate for do not have xai token counting yet
+    return countGoogleTokens("models/gemini-2.5-flash", text);
+  }
+
+  return null;
 }

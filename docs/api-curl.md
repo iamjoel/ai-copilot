@@ -86,8 +86,15 @@ curl http://localhost:3000/api/image/batch \
 curl http://localhost:3000/api/video/batch \
   --header "Content-Type: application/json" \
   --data '{
-    "inputFile": "requests.csv",
     "n": 2
+  }'
+```
+
+batch all:
+```
+curl http://localhost:3000/api/video/batch \
+  --header "Content-Type: application/json" \
+  --data '{
   }'
 ```
 
